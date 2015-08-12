@@ -1,4 +1,0 @@
-librpmbuild 4.4 librpm4.4 (>= 4.4), librpm4.4 (<< 4.5)
-librpmio 4.4 librpm4.4 (>= 4.4), librpm4.4 (<< 4.5)
-librpmdb 4.4 librpm4.4 (>= 4.4), librpm4.4 (<< 4.5)
-librpm 4.4 librpm4.4 (>= 4.4), librpm4.4 (<< 4.5)

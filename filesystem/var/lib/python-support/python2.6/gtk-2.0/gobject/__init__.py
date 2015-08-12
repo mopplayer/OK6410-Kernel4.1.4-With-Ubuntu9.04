@@ -1,1 +1,0 @@
-/usr/share/python-support/python-gobject/gtk-2.0/gobject/__init__.py

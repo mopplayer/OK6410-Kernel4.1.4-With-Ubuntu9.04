@@ -1,6 +1,0 @@
-#! /bin/sh
-set -e
-
-ucf /usr/share/gconf/default.path /etc/gconf/2/path
-
-

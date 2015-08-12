@@ -1,8 +1,0 @@
-#! /bin/sh -e
-
-case "$1" in
-    purge)
-	rm -rf /etc/python
-esac
-
-

@@ -1,2 +1,0 @@
-?package(pcmanfm):needs="X11" section="Applications/File Management"\
-  title="PCManFM" longtitle="Real Tabbed File Manager" hints="File manager" command="/usr/bin/pcmanfm"

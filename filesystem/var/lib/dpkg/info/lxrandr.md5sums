@@ -1,8 +1,0 @@
-52c8b4ebdf9c39174214f0af35291717  usr/share/applications/lxrandr.desktop
-840d1ce422d1f7d5989a2bcb4c7e6e7c  usr/share/doc/lxrandr/copyright
-ce62bd0713d77a2b960bfc70d4e577dd  usr/share/doc/lxrandr/changelog.Debian.gz
-d0d0d846af6edcec87ec29a0e8b27418  usr/share/doc/lxrandr/AUTHORS
-2d94963eb23a03106b2f6a5156615c40  usr/share/man/man1/lxrandr.1.gz
-9f33a6efc16c4e4420d6c66a4e4a1cd7  usr/share/locale/zh_TW/LC_MESSAGES/lxrandr.mo
-58c70a8822be66971543b2db24d88695  usr/share/locale/hu/LC_MESSAGES/lxrandr.mo
-cb39cbd00c6b29db261de66cad92582f  usr/bin/lxrandr

@@ -1,7 +1,0 @@
-?package(obconf):\
-  needs="x11"\
-  section="Applications/System/Administration"\
-  title="Openbox Configuration Manager"\
-  command="/usr/bin/obconf"\
-  icon="/usr/share/pixmaps/obconf.xpm"
-

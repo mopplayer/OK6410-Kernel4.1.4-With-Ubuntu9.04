@@ -1,3 +1,0 @@
-aptitude::Keep-Unused-Pattern "^linux-image.*$ | ^linux-restricted-modules.*$ | ^linux-ubuntu-modules.*$";
-aptitude::Get-Root-Command "sudo:/usr/bin/sudo";
-

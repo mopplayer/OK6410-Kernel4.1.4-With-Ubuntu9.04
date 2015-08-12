@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
-  <comment>Excel 2007 spreadsheet</comment>
-  <alias type="application/vnd.ms-excel.sheet.macroEnabled.12"/>
-  <sub-class-of type="application/zip"/>
-  <generic-icon name="x-office-document"/>
-</mime-type>

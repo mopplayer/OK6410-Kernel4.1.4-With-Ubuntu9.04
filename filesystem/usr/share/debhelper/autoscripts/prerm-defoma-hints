@@ -1,4 +1,0 @@
-FILE='/etc/defoma/hints/#PACKAGE#.hints'
-if [ "$1" = remove ]; then
-	test -x /usr/bin/defoma-font && /usr/bin/defoma-font purge-all $FILE
-fi

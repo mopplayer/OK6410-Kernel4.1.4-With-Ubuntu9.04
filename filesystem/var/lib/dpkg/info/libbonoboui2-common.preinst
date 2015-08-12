@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-if [ -d /usr/share/gtk-doc/html/libbonoboui ]; then
-    rm -r /usr/share/gtk-doc/html/libbonoboui
-fi
-
-

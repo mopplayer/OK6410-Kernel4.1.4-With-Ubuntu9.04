@@ -1,5 +1,0 @@
-if [ "$1" = "configure" ]; then
-
-  test -x /usr/bin/defoma-app && /usr/bin/defoma-app update #PACKAGE#
-
-fi

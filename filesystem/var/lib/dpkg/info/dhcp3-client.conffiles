@@ -1,6 +1,0 @@
-/etc/network/if-pre-up.d/dhclient3-apparmor
-/etc/apparmor.d/sbin.dhclient3
-/etc/dhcp3/dhclient-exit-hooks.d/rfc3442-classless-routes
-/etc/dhcp3/dhclient-exit-hooks.d/debug
-/etc/dhcp3/dhclient.conf
-/etc/dhcp3/dhclient-enter-hooks.d/debug

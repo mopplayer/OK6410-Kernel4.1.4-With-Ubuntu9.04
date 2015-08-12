@@ -1,8 +1,0 @@
-libdirectfb-1.0 0 libdirectfb-1.0-0
-libdirect-1.0 0 libdirectfb-1.0-0
-libfusion-1.0 0 libdirectfb-1.0-0
-libuniquewm-1.0 0 libdirectfb-1.0-0
-udeb: libdirectfb-1.0 0 libdirectfb-1.0-0-udeb
-udeb: libdirect-1.0 0 libdirectfb-1.0-0-udeb
-udeb: libfusion-1.0 0 libdirectfb-1.0-0-udeb
-udeb: libuniquewm-1.0 0 libdirectfb-1.0-0-udeb

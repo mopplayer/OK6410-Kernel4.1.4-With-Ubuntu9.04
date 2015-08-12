@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=org.gnome.GConf
-Exec=/usr/lib/libgconf2-4/gconfd-2

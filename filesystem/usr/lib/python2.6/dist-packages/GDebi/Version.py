@@ -1,1 +1,0 @@
-/usr/share/pyshared/GDebi/Version.py

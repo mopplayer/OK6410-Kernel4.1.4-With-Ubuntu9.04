@@ -1,9 +1,0 @@
-TYPEMAP
-
-const GnomeCanvasPathDef *	T_GPERL_GENERIC_WRAPPER
-GnomeCanvasPathDef *	T_GPERL_GENERIC_WRAPPER
-GnomeCanvasPathDef_own *	T_GPERL_GENERIC_WRAPPER
-GnomeCanvasPathDef_ornull *	T_GPERL_GENERIC_WRAPPER
-GnomeCanvasPathDef_copy *	T_GPERL_GENERIC_WRAPPER
-GnomeCanvasPathDef_own_ornull *	T_GPERL_GENERIC_WRAPPER
-

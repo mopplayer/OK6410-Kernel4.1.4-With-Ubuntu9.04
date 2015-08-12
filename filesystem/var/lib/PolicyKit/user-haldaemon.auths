@@ -1,6 +1,0 @@
-# This file lists authorizations for user haldaemon
-# 
-# File format may change at any time; do not rely on it. To manage
-# authorizations use polkit-auth(1) instead.
-
-scope=grant:action-id=org.freedesktop.policykit.read:when=1241841715:granted-by=0

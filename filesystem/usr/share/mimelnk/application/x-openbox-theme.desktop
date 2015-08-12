@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=MimeType
-Name=Openbox Theme Archive
-MimeType=application/x-openbox-theme;
-Icon=openbox
-Patterns=*.obt;
-Comment=Openbox Theme Archive

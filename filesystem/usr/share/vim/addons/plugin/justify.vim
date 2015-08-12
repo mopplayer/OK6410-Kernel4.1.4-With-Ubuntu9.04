@@ -1,1 +1,0 @@
-../../vim72/macros/justify.vim

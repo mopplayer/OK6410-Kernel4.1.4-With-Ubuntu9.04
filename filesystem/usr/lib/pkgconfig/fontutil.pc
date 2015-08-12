@@ -1,8 +1,0 @@
-prefix=/usr
-exec_prefix=${prefix}
-libdir=${exec_prefix}/lib
-mapdir=${prefix}/share/fonts/X11/util
- 
-Name: FontUtil
-Description: Font utilities dirs
-Version: 1.0.0

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Openbox Session
-Comment=Use this session to run Openbox as your desktop environment
-Exec=openbox-session
-Icon=
-Type=Application

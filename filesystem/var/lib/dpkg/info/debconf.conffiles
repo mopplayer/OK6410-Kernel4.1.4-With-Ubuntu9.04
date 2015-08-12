@@ -1,3 +1,0 @@
-/etc/debconf.conf
-/etc/apt/apt.conf.d/70debconf
-/etc/bash_completion.d/debconf

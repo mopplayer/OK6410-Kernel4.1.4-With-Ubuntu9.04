@@ -1,4 +1,0 @@
-/etc/hal/fdi/policy/preferences.fdi
-/etc/dbus-1/system.d/hal.conf
-/etc/default/hal
-/etc/init.d/hal

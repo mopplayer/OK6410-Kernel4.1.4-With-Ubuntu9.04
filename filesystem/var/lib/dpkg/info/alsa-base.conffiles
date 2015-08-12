@@ -1,3 +1,0 @@
-/etc/modprobe.d/blacklist-modem.conf
-/etc/modprobe.d/alsa-base.conf
-/etc/apm/scripts.d/alsa

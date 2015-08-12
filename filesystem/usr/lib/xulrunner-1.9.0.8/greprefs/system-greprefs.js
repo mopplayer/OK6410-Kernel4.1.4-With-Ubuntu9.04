@@ -1,1 +1,0 @@
-/etc/xulrunner-1.9/system-greprefs.js

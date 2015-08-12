@@ -1,9 +1,0 @@
-#!/bin/sh
-
-if [ "x${1}" = "xpurge" ]; then
-	rm -f /etc/initramfs-tools/conf.d/resume
-	rm -f /etc/initramfs-tools/modules
-fi
-
-
-
