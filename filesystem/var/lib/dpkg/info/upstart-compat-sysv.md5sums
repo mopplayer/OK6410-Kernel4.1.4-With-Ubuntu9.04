@@ -1,0 +1,8 @@
+d134d3b9d1d3bcc5f5918c77745b78a1  sbin/shutdown
+029e6c2f50ffc4c38a12a3154a3252e5  sbin/reboot
+f64c998a1e6ce6686936bd9f467287c5  sbin/runlevel
+50259ab8d4b02d91344072a750618931  sbin/telinit
+42575e9d7ce8389476c9b418524bb4f3  usr/share/man/man8/runlevel.8.gz
+a9ffa05ed03392b67e2cd6556f36292a  usr/share/man/man8/telinit.8.gz
+d65d7f5e832816a85a801877428d930f  usr/share/man/man8/shutdown.8.gz
+4d2005f7a9c67446744fb5968a9d216c  usr/share/man/man8/reboot.8.gz

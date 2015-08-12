@@ -1,0 +1,245 @@
+#!/usr/bin/perl
+## ----------------------------------------------------------------------
+## Debian GNU/Linux update-catalog version 0.2
+## ----------------------------------------------------------------------
+## Copyright (c) 2001-2004 Ardo van Rangelrooij
+##
+## This is free software; see the GNU General Public Licence version 2
+## or later for copying conditions.  There is NO warranty.
+## ----------------------------------------------------------------------
+
+## ----------------------------------------------------------------------
+use strict;
+
+## ----------------------------------------------------------------------
+$0 =~ m|[^/]+$|;
+
+## ----------------------------------------------------------------------
+use vars qw( $name );
+$name = $&;
+
+## ----------------------------------------------------------------------
+use vars qw( $add );
+use vars qw( $backup );
+use vars qw( $catalog );
+use vars qw( @data );
+use vars qw( $debug );
+use vars qw( $entry );
+use vars qw( $quiet );
+use vars qw( $remove );
+use vars qw( $super );
+use vars qw( $template );
+use vars qw( $type );
+
+## ----------------------------------------------------------------------
+while ( $ARGV[0] =~ m/^--/ )
+{
+    $_ = shift( @ARGV );
+    last if $_ eq '--';
+    if ( $_ eq '--add' )
+    {
+        $add = 1;
+    }
+    elsif ( $_ eq '--remove' )
+    {
+        $remove = 1;
+    }
+    elsif ( $_ eq '--quiet' )
+    {
+        $quiet = 1;
+    }
+    elsif ( $_ eq '--super' )
+    {
+        $super = 1;
+    }
+    elsif ( $_ eq '--test' )
+    {
+        $debug = 1;
+    }
+    elsif ( $_ eq '--help' )
+    {
+        &help;
+	exit -1;
+    }
+    elsif ( $_ eq '--version' )
+    {
+        &help;
+	exit -1;
+    }
+    else
+    {
+        print STDERR "$name: unknown option \`$_'\n";
+	&help;
+	exit 1;
+    }
+}
+
+## ----------------------------------------------------------------------
+if ( ! @ARGV )
+{
+    print STDERR "\n";
+    &help;
+    exit 1;
+}
+
+## ----------------------------------------------------------------------
+if ( $add || $remove )
+{
+    if ( $super )
+    {
+	$catalog = '/etc/sgml/catalog';
+    }
+    else
+    {
+	$catalog = shift( @ARGV );
+    }
+}
+
+## ----------------------------------------------------------------------
+if ( ! @ARGV )
+{
+    print STDERR "\n";
+    &help;
+    exit 1;
+}
+
+## ----------------------------------------------------------------------
+$entry = shift( @ARGV );
+
+## ----------------------------------------------------------------------
+if ( @ARGV )
+{
+    print STDERR "$name: too many arguments\n";
+    &help;
+    exit 1;
+}
+
+## ----------------------------------------------------------------------
+if ( $add == $remove )
+{
+    print "Huh? You have to use --add or --remove (not both).\n";
+    exit 1;
+}
+
+## ----------------------------------------------------------------------
+print STDERR "$name: test mode - catalog file will not be updated\n"
+    if $debug && ! $quiet;
+
+## ----------------------------------------------------------------------
+if ( $add )
+{
+    print "Adding entry $entry to catalog $catalog...\n"
+        unless $quiet;
+    
+    &read_catalog_without_entry;
+    &add_entry;
+    &write_catalog;
+}
+elsif ( $remove )
+{
+    print "Removing entry $entry from catalog $catalog...\n"
+        unless $quiet;
+    
+    &read_catalog_without_entry;
+    &write_catalog;
+}
+
+## ----------------------------------------------------------------------
+exit 0;
+
+## ----------------------------------------------------------------------
+ sub read_catalog_without_entry
+{
+    if ( -f $catalog )
+    {
+	print "Reading catalog $catalog and removing entry $entry...\n"
+	    if $debug;
+	open( CATALOG, "<$catalog" )
+	    or die "cannot open catalog $catalog for reading: $!";
+	while ( <CATALOG> )
+	{
+	    chop;
+	    push( @data, $_ ) unless m/$entry/;
+	}
+	close( CATALOG );
+    }
+    else
+    {
+	$type = $super ? 'super' : 'centralized';
+	$template = "/usr/share/sgml-base/catalog.$type";
+	print "Reading template $template...\n"
+	    if $debug;
+	open( TEMPLATE, "<$template" )
+	    or die "cannot open template $template for reading: $!";
+	while ( <TEMPLATE> )
+	{
+	    chop;
+	    s|CATALOG|$catalog| if m/CATALOG/;
+	    push( @data, $_ );
+	}
+	close( TEMPLATE );
+    }
+}
+
+## ----------------------------------------------------------------------
+sub add_entry
+{
+    print "Appending entry $entry...\n" if $debug;
+    push( @data, "CATALOG $entry" );
+}
+
+## ----------------------------------------------------------------------
+sub write_catalog
+{
+    $backup = $catalog . '.old';
+    if ( not $debug )
+    {
+	if ( -f $catalog )
+	{
+	    # remove old backup file
+	    if ( -f $backup )
+	    {
+		unlink( $backup )
+		    or die "cannot remove backup copy $backup: $!";
+	    }
+	    rename( $catalog, $backup )
+		or die "cannot rename $catalog to $backup: $!";
+	}
+	open( CATALOG, ">$catalog" )
+	    or die "cannot open catalog $catalog for writing: $!";
+	for ( @data ) { print CATALOG "$_\n"; };
+	close( CATALOG );
+    }
+    else
+    {
+	print "Writing new entry to $catalog...\n";
+	for ( @data ) { print "$_\n"; };
+    }
+}
+
+## ----------------------------------------------------------------------
+sub help
+{
+    print STDERR <<END;
+Usage:
+    $name <options> --add --super <centralized_catalog>
+    $name <options> --add <centralized_catalog> <ordinary_catalog>
+or
+    $name <options> --remove --super <centralized_catalog>
+    $name <options> --remove <centralized_catalog> <ordinary_catalog>
+
+Options:
+    --quiet         be quiet
+    --test          do not modify any files, enables debugging mode
+    --version       display version number
+    --help          display this text
+END
+}
+
+## ----------------------------------------------------------------------
+sub version
+{
+    print "Debian $name version 0.2\n";
+}
+
+## ----------------------------------------------------------------------

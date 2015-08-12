@@ -1,0 +1,34 @@
+#! /bin/sh -e
+
+# remove the python alternatives before installing our own python link
+
+update-alternatives --auto /usr/bin/python >/dev/null 2>&1 || true
+update-alternatives --remove python /usr/bin/python1.5 || true
+update-alternatives --remove python /usr/bin/python2.1 || true
+update-alternatives --remove python /usr/bin/python2.2 || true
+
+[ -L /usr/share/doc/python/html ] || rm -rf /usr/share/doc/python/html
+
+case "$1" in
+    upgrade)
+        if dpkg --compare-versions $2 lt 2.6.1-0ubuntu1; then
+	    oldv=$(echo $2 | sed 's/^\(...\).*/\1/')
+	    if [ "$DEBIAN_FRONTEND" != noninteractive ]; then
+		echo "running python pre-rtupdate hooks for python2.6..."
+	    fi
+	    for hook in /usr/share/python/runtime.d/*.rtupdate; do
+		[ -x $hook ] || continue
+		if ! $hook pre-rtupdate python$oldv python2.6; then
+		    hb=$(basename $hook .rtupdate)
+		    echo >&2 "error running python pre-rtupdate hook $hb"
+		    echo >&2 "running python failed-pre-rtupdate hook $hb"
+		    $hook failed-pre-rtupdate python$oldv python2.6
+		    errors=yes
+		    break
+		fi
+	    done
+	    [ -z "$errors" ] || exit 3
+	fi
+esac
+
+

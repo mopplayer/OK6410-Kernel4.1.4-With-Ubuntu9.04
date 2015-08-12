@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_gconf
+if [ "$1" = "configure" ]; then
+	gconf-schemas --register gksu.schemas 
+fi
+# End automatically added section
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+update-alternatives --install /usr/share/gconf/defaults/10_libgksu \
+    libgksu-gconf-defaults /usr/share/libgksu/debian/gconf-defaults.libgksu-sudo \
+    30
+
+update-alternatives --install /usr/share/gconf/defaults/10_libgksu \
+    libgksu-gconf-defaults /usr/share/libgksu/debian/gconf-defaults.libgksu-su \
+    20
+
+# hack to work-around a problem with update-gconf-defaults not being
+# able to handle dangling symlinks correctly (see prerm)
+if ! test -e /usr/share/gconf/defaults/10_libgksu; then
+    ln -fs /etc/alternatives/libgksu-gconf-defaults /usr/share/gconf/defaults/10_libgksu
+fi
+
+if which update-gconf-defaults >/dev/null 2>&1; then
+    update-gconf-defaults
+fi

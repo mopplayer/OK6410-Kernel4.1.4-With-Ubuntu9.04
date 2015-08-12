@@ -1,0 +1,7 @@
+b49b93f0d85cd3b11ad69cc60b7b1d57  usr/share/xserver-xorg/pci/r128.ids
+75da66945980a43adf1e1856271b9d4a  usr/share/doc/xserver-xorg-video-r128/copyright
+477a81449d7e22ddb15251b0b1e6712f  usr/share/doc/xserver-xorg-video-r128/changelog.gz
+d6ccbf3ca67ce48493cebcfbbc2d3184  usr/share/doc/xserver-xorg-video-r128/changelog.Debian.gz
+84b8787a6b6b454d97eb1a3bfd91cd56  usr/share/doc/xserver-xorg-video-r128/NEWS.Debian.gz
+1c39788406d71ce0f69ec722c10e7856  usr/share/man/man4/r128.4.gz
+9cbcc0e6175580edd72eb7236a726e9a  usr/lib/xorg/modules/drivers/r128_drv.so

@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libsysfs2
+/usr/share/doc/libsysfs2/NEWS.gz
+/usr/share/doc/libsysfs2/copyright
+/usr/share/doc/libsysfs2/AUTHORS
+/usr/share/doc/libsysfs2/README
+/usr/share/doc/libsysfs2/TODO
+/usr/share/doc/libsysfs2/changelog.Debian.gz
+/lib
+/lib/libsysfs.so.2.0.1
+/lib/libsysfs.so.2

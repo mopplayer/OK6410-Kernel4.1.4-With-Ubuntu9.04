@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+
+basedir=/usr/share/vim/vim72/doc
+
+rm_diversion() {
+  dpkg-divert --package vim-runtime --rename --remove "$1"
+}
+
+rm -f /usr/share/vim/addons/doc/tags
+if [ "$1" = "remove" ]; then
+  rm_diversion $basedir/help.txt
+  rm_diversion $basedir/tags
+fi
+
+
+
+exit 0

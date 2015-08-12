@@ -1,0 +1,58 @@
+esound for Debian
+-----------------
+
+When using the -tcp option
+--------------------------
+
+Q: I get the error message "unable to bind port 16001"
+
+A:	1. esd is already running, bound to port 16001.
+	2. TCP/IP networking is not configured.  You need at least the lo
+	   interface configured for esound to work.
+	   To configure the interface, try ifup lo
+	   If that does not work, try ifconfig lo 127.0.0.1
+
+Q: Applications saying they can't connect to esd?
+
+A:	1. Ensure that esd is running, or is set to autospawn.  You can
+	   set it back to autospawn by editing /etc/esound/esd.conf
+	2. Ensure that TCP wrappers allow the connection.  If a default is
+	   specified to deny all traffic, ESD will be denied.
+	3. If you are trying to do remote esd, make sure -public is specified
+	   when starting ESD on the server end (the one with sound hardware)
+	   and that TCP wrappers will allow the remote connection.
+
+Q: Why does esound not default to autospawn?
+
+A: esound used to default to autospawning, which means that programs
+would try to start the esd daemon if it wasn't running.  The problem
+is, if you don't have sound hardware correctly setup, esd would take a
+long time to try opening the sound device(s) at all possible supported
+rates, and people would think that the Gnome desktop had "hung" for
+two minutes.
+
+Q: Why don't you make it configurable, like it used to be?
+
+A: esd.conf is a conffile, and you can edit it if you want the default to be
+autospawning.  I've set up the default to work with Gnome and esound, the
+main two users of libesd.  As esd.conf is a conffile, it can't be edited
+by maintainer scripts, including debconf.  The question is also a very
+confusing one for new users, so I think it is much better if the default
+works with the users of libesd, and experts can edit the conffile to turn
+on autospawning if they like.
+
+Q: Esound should be a daemon, that's what the D is for in esd, right?
+
+A: Esound was designed mainly to be used as a "daemon" that is started on each
+login session, and ended when the user logs off, much like the other gnome
+bits (gconf, oaf, etc).  While it can be used as a system daemon and stay
+running all the time, it does open some security issues for a multi-user
+system.  The default of upstream and this packaging is for a multi-user system
+with users allowed to use audio in the audio group.
+
+Q: esddsp hangs when I use it with <blah> application!
+
+A: esddsp is a set of wrappers around libc functions, including open, fopen,
+close, and fclose.  These wrappers are NOT thread safe, so when using them
+with a threaded program, you often end up with the application hanging.
+This hasn't been fixed yet. (patches welcome)

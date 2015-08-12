@@ -1,0 +1,1 @@
+/usr/share/pyshared/GDebi/SimpleGladeApp.py

@@ -1,0 +1,163 @@
+=head1 NAME
+
+Gnome2::IconEntry
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Box
+                           +----Gtk2::VBox
+                                +----Gnome2::IconEntry
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::IconEntry-E<gt>B<new> ($history_id, $browse_dialog_title)
+
+=over
+
+=over
+
+=item * $history_id (string) 
+
+=item * $browse_dialog_title (string) 
+
+=back
+
+=back
+
+=head2 $ientry-E<gt>B<set_browse_dialog_title> ($browse_dialog_title)
+
+=over
+
+=over
+
+=item * $browse_dialog_title (string) 
+
+=back
+
+=back
+
+=head2 string = $ientry-E<gt>B<get_filename> 
+
+=over
+
+=back
+
+=head2 boolean = $ientry-E<gt>B<set_filename> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 $ientry-E<gt>B<set_history_id> ($history_id)
+
+=over
+
+=over
+
+=item * $history_id (string) 
+
+=back
+
+=back
+
+=head2 $ientry-E<gt>B<set_max_saved> ($max_saved)
+
+=over
+
+=over
+
+=item * $max_saved (integer) 
+
+=back
+
+Since: libgnomeui 2.4
+
+=back
+
+=head2 widget or undef = $ientry-E<gt>B<pick_dialog> 
+
+=over
+
+=back
+
+=head2 $ientry-E<gt>B<set_pixmap_subdir> ($subdir)
+
+=over
+
+=over
+
+=item * $subdir (string) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'browse-dialog-title' (string : readable / writable)
+
+Title for the Browse icon dialog.
+
+=item 'filename' (string : readable / writable)
+
+Filename that should be displayed in the icon entry.
+
+=item 'history-id' (string : readable / writable)
+
+Unique identifier for the icon entry.  This will be used to save the history list.
+
+=item 'pick-dialog' (Gtk2::Dialog : readable)
+
+Icon picker dialog.  You can use this property to get the GtkDialog if you need to modify or query any of its properties.
+
+=item 'pixmap-subdir' (string : readable / writable)
+
+Directory that will be searched for icons.
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<changed> (Gnome2::IconEntry)
+
+=item B<browse> (Gnome2::IconEntry)
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Box>, L<Gtk2::VBox>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

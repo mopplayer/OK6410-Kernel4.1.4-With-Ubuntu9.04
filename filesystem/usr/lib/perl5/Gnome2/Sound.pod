@@ -1,0 +1,71 @@
+=head1 NAME
+
+Gnome2::Sound
+
+
+=head1 METHODS
+
+=head2 integer = Gnome2::Sound-E<gt>B<connection_get> 
+
+=over
+
+=back
+
+=head2 Gnome2::Sound-E<gt>B<init> ($hostname="localhost")
+
+=over
+
+=over
+
+=item * $hostname (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Sound-E<gt>B<play> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 integer = Gnome2::Sound-E<gt>B<sample_load> ($sample_name, $filename)
+
+=over
+
+=over
+
+=item * $sample_name (string) 
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Sound-E<gt>B<shutdown> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

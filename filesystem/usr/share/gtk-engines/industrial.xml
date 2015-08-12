@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine schema_version="0.1" module_name="industrial" long_name="Industrial">
+
+  <metainfo>
+    <version>2.18.1</version>
+    <website>http://www.gnome.org</website>
+    <author>
+      <name>Tuomas Kuosmanen</name>
+    </author>
+    <author>
+      <name>Jakub Steiner</name>
+      <email>jimmac@novell.com</email>
+    </author>
+    <author>
+      <name>Christopher James Lahey</name>
+    </author>
+    <author>
+      <name>Benjamin Berg</name>
+      <email>benjamin@sipsolutions.net</email>
+    </author>
+  </metainfo>
+
+  <option type="real" name="contrast" default="1.0">
+    <minimum>0</minimum>
+    <maximum>5</maximum>
+    <precision>2</precision>
+    <long_name>Contrast</long_name>
+    <long_name xml:lang="ar">تباين</long_name>
+    <long_name xml:lang="as">বৈপৰিত্য</long_name>
+    <long_name xml:lang="be@latin">Kantrast</long_name>
+    <long_name xml:lang="bg">Контраст</long_name>
+    <long_name xml:lang="bn_IN">বৈপরিত্য</long_name>
+    <long_name xml:lang="ca">Contrast</long_name>
+    <long_name xml:lang="cs">Kontrast</long_name>
+    <long_name xml:lang="da">Kontrast</long_name>
+    <long_name xml:lang="de">Kontrast</long_name>
+    <long_name xml:lang="dz">ཚོན་མདངས།</long_name>
+    <long_name xml:lang="el">Αντίθεση</long_name>
+    <long_name xml:lang="en_GB">Contrast</long_name>
+    <long_name xml:lang="es">Contraste</long_name>
+    <long_name xml:lang="et">Kontrast</long_name>
+    <long_name xml:lang="eu">Kontrastea</long_name>
+    <long_name xml:lang="fi">Kontrasti</long_name>
+    <long_name xml:lang="fr">Contraste</long_name>
+    <long_name xml:lang="fur">Contrast</long_name>
+    <long_name xml:lang="gl">Contraste</long_name>
+    <long_name xml:lang="gu">કોન્ટ્રાસ્ટ</long_name>
+    <long_name xml:lang="he">Contrast</long_name>
+    <long_name xml:lang="hi">विरोधी</long_name>
+    <long_name xml:lang="hu">Kontraszt</long_name>
+    <long_name xml:lang="it">Contrasto</long_name>
+    <long_name xml:lang="ja">コントラスト</long_name>
+    <long_name xml:lang="kn">ವೈದೃಶ್ಯ</long_name>
+    <long_name xml:lang="ko">색 대비</long_name>
+    <long_name xml:lang="lt">Kontrastas</long_name>
+    <long_name xml:lang="mk">Контраст</long_name>
+    <long_name xml:lang="ml">വൈരുദ്ധ്യം</long_name>
+    <long_name xml:lang="mr">विभिन्नता</long_name>
+    <long_name xml:lang="nb">Kontrast</long_name>
+    <long_name xml:lang="nl">Contrast</long_name>
+    <long_name xml:lang="nn">Kontrast</long_name>
+    <long_name xml:lang="oc">Contrast</long_name>
+    <long_name xml:lang="or">ଆଲୋକ ପ୍ରଦର୍ଶନର ପ୍ରଭେଦ ମାତ୍ରା</long_name>
+    <long_name xml:lang="pa">ਵੱਖਰੇਵਾਂ</long_name>
+    <long_name xml:lang="pl">Kontrast</long_name>
+    <long_name xml:lang="pt">Contraste</long_name>
+    <long_name xml:lang="pt_BR">Contraste</long_name>
+    <long_name xml:lang="ro">Contrast</long_name>
+    <long_name xml:lang="ru">Контраст</long_name>
+    <long_name xml:lang="si">ප්‍රභේදනය</long_name>
+    <long_name xml:lang="sl">Kontrast</long_name>
+    <long_name xml:lang="sq">Kontrasti</long_name>
+    <long_name xml:lang="sr">Контраст</long_name>
+    <long_name xml:lang="sr@latin">Kontrast</long_name>
+    <long_name xml:lang="sv">Kontrast</long_name>
+    <long_name xml:lang="ta">வேறுபாடு</long_name>
+    <long_name xml:lang="te">కాంతితీవ్రత</long_name>
+    <long_name xml:lang="th">ความต่างระดับสี</long_name>
+    <long_name xml:lang="tr">Zıt</long_name>
+    <long_name xml:lang="uk">Контрастність</long_name>
+    <long_name xml:lang="vi">Tương phản</long_name>
+    <long_name xml:lang="zh_CN">对比度</long_name>
+    <long_name xml:lang="zh_HK">對比</long_name>
+    <long_name xml:lang="zh_TW">對比</long_name>
+    <preferred_widget>slider</preferred_widget>
+  </option>
+
+  <option type="boolean" name="rounded_buttons" default="TRUE">
+    <long_name>Rounded Buttons</long_name>
+    <long_name xml:lang="ar">أزرار شبه دائرية</long_name>
+    <long_name xml:lang="as">বৃত্তাকাৰ কোণাসহ বাটন</long_name>
+    <long_name xml:lang="be@latin">Zakruhlenyja knopki</long_name>
+    <long_name xml:lang="bg">Загладени бутони</long_name>
+    <long_name xml:lang="bn_IN">বৃত্তাকার কোণাসহ বাটন</long_name>
+    <long_name xml:lang="ca">Botons arrodonits</long_name>
+    <long_name xml:lang="cs">Zakulacená tlačítka</long_name>
+    <long_name xml:lang="da">Afrundede knapper</long_name>
+    <long_name xml:lang="de">Abgerundete Knöpfe</long_name>
+    <long_name xml:lang="dz">སྒོར་སྒོརམ་བཟོ་ཡོད་པའི་ཨེབ་རྟ་ཚུ།</long_name>
+    <long_name xml:lang="el">Στρογγυλεμένα κουμπιά</long_name>
+    <long_name xml:lang="en_GB">Rounded Buttons</long_name>
+    <long_name xml:lang="es">Botones redondeados</long_name>
+    <long_name xml:lang="et">Ümarate nurkadega nupud</long_name>
+    <long_name xml:lang="eu">Botoi biribilak</long_name>
+    <long_name xml:lang="fi">Pyöristetyt napit</long_name>
+    <long_name xml:lang="fr">Boutons arrondis</long_name>
+    <long_name xml:lang="fur">Botons tarondâts</long_name>
+    <long_name xml:lang="gl">Botóns redondeados</long_name>
+    <long_name xml:lang="gu">ગોળ કિનારીવાળા બટનો</long_name>
+    <long_name xml:lang="he">Rounded Buttons</long_name>
+    <long_name xml:lang="hi">गोल बटन</long_name>
+    <long_name xml:lang="hu">Lekerekített gombok</long_name>
+    <long_name xml:lang="it">Pulsanti arrotondati</long_name>
+    <long_name xml:lang="ja">ボタンを丸くする</long_name>
+    <long_name xml:lang="kn">ವೃತ್ತಾಕಾರದ ಗುಂಡಿಗಳು</long_name>
+    <long_name xml:lang="ko">둥그런 단추</long_name>
+    <long_name xml:lang="lt">Suapvalinti mygtukai</long_name>
+    <long_name xml:lang="mk">Кружни копчиња</long_name>
+    <long_name xml:lang="ml">വട്ടത്തിലുള്ള ബട്ടണുകള്‍</long_name>
+    <long_name xml:lang="mr">गोलाकार बटने</long_name>
+    <long_name xml:lang="nb">Avrundete knapper</long_name>
+    <long_name xml:lang="nl">Ronde knoppen</long_name>
+    <long_name xml:lang="nn">Avrundete knappar</long_name>
+    <long_name xml:lang="or">ଗୋଲାକାର ବଟନ</long_name>
+    <long_name xml:lang="pa">ਗੋਲ ਬਟਨ</long_name>
+    <long_name xml:lang="pl">Zaokrąglone przyciski</long_name>
+    <long_name xml:lang="pt">Botões Arredondados</long_name>
+    <long_name xml:lang="pt_BR">Botões Arredondados</long_name>
+    <long_name xml:lang="ro">Butoane rotunjite</long_name>
+    <long_name xml:lang="ru">Скруглённые кнопки</long_name>
+    <long_name xml:lang="si">කවාකාර් බොත්තම්</long_name>
+    <long_name xml:lang="sl">Zaobljeni gumbi</long_name>
+    <long_name xml:lang="sq">Pulsantë të rrumbullt</long_name>
+    <long_name xml:lang="sr">Заобљена дугмад</long_name>
+    <long_name xml:lang="sr@latin">Zaobljena dugmad</long_name>
+    <long_name xml:lang="sv">Rundade knappar</long_name>
+    <long_name xml:lang="ta">வட்ட பொத்தான்கள்</long_name>
+    <long_name xml:lang="te">గుండ్రని బటన్స్</long_name>
+    <long_name xml:lang="th">ปุ่มมน</long_name>
+    <long_name xml:lang="tr">Yuvarlatılmış Düğmeler</long_name>
+    <long_name xml:lang="uk">Закруглені кнопки</long_name>
+    <long_name xml:lang="vi">Nút góc tròn</long_name>
+    <long_name xml:lang="zh_CN">圆滑按钮</long_name>
+    <long_name xml:lang="zh_HK">圓角按鈕</long_name>
+    <long_name xml:lang="zh_TW">圓角按鈕</long_name>
+    <description>If set, button corners are rounded</description>
+    <description xml:lang="ar">اذا تم تحديد هذا، يتم تدوير زوايا الأزرار</description>
+    <description xml:lang="as">নিৰ্ধাৰিত হলে, বাটনেৰ কোণাগুলি বৃত্তাকাৰ হবে</description>
+    <description xml:lang="be@latin">Kali zaznačana, kuty knopak zakruhlenyja</description>
+    <description xml:lang="bg">Ако е ИСТИНА, ъглите на бутоните са загладени</description>
+    <description xml:lang="bn_IN">নির্ধারিত হলে, বাটনের কোণাগুলি বৃত্তাকার হবে</description>
+    <description xml:lang="ca">Si s'estableix, s'arrodoneixen les cantonades dels botons</description>
+    <description xml:lang="cs">Je-li zvoleno, okraje tlačítek jsou zakulacené</description>
+    <description xml:lang="da">Ved tilvalg vil knappers hjørner blive afrundet</description>
+    <description xml:lang="de">Falls aktiviert, werden die Ecken von Knöpfen abgerundet</description>
+    <description xml:lang="dz">གཞི་སྒྲིག་འབད་ཡོདཔ་ཨིན་པ་ཅིན་ཨེབ་རྟ་སྒྱིད་ཁུག་ཚུ་ཆ་མཉམ་སྒོར་སྒོརམ་བཟོ་ཡོདཔ་ཨིན།</description>
+    <description xml:lang="el">Αν καθοριστεί, οι γωνίες των πλήκτρων στρογγυλεύουν</description>
+    <description xml:lang="en_GB">If set, button corners are rounded</description>
+    <description xml:lang="es">Si está activado, las esquinas de los botones son redondeadas</description>
+    <description xml:lang="et">Määramise korral on nuppude nurgad ümarad</description>
+    <description xml:lang="eu">Ezartzen bada, botoien ertzak biribilduko dira</description>
+    <description xml:lang="fi">Jos asetettu, painikkeen kulmat on pyöristetty</description>
+    <description xml:lang="fr">Si défini, les angles des boutons sont arrondis</description>
+    <description xml:lang="fur">Se impostât, i cjantons dai botons a son tarondâts</description>
+    <description xml:lang="gl">Se está activado, as esquinas dos botóns son redondeadas</description>
+    <description xml:lang="gu">જો સુયોજિત હોય, તો બટન કિનારીઓ ગોળ કરવામાં આવે છે</description>
+    <description xml:lang="he">If set, button corners are rounded</description>
+    <description xml:lang="hu">Ha be van állítva, a gombok sarkai le lesznek kerekítve</description>
+    <description xml:lang="it">Se impostato, gli angoli dei pulsanti sono arrotondati</description>
+    <description xml:lang="ja">TRUE にすると、ボタンの隅が丸くなります</description>
+    <description xml:lang="kn">ಹೊಂದಿಸಿದಲ್ಲಿ, ಗುಂಡಿಗಳ ಅಂಚುಗಳನ್ನು ವೃತ್ತಾಕಾರಗೊಳಿಸಲಾಗುವುದು</description>
+    <description xml:lang="ko">참이면 단추의 구석 부분을 둥그렇게 만듭니다</description>
+    <description xml:lang="lt">Jei nustatyta, mygtukų kampai suapvalinami</description>
+    <description xml:lang="mk">Ако е поставено, рабовите ќе се заоблени</description>
+    <description xml:lang="ml">If set, button corners are rounded</description>
+    <description xml:lang="mr">निश्चित असल्यास, बनटांचे टोक गोलाकार असतात</description>
+    <description xml:lang="nb">Gir knapper avrundede kanter</description>
+    <description xml:lang="nl">Indien ingeschakeld worden randen van knoppen afgerond</description>
+    <description xml:lang="nn">Gjev knappar avrundede kantar</description>
+    <description xml:lang="or">ବିନ୍ଯାସ କରାଯାଇଥିଲେ, ବଟନ କୋଣ ଗୁଡିକ ଗୋଲାକାର ହୋଇଥିବେ।</description>
+    <description xml:lang="pa">ਜੇ ਸੈੱਟ ਕੀਤਾ ਤਾਂ ਬਟਨ ਕੋਨੇ ਗੋਲ ਹੋਣਗੇ</description>
+    <description xml:lang="pl">Określa, czy narożniki przycisków mają być zaokrąglone</description>
+    <description xml:lang="pt">Se definido, os cantos dos botões são arredondados</description>
+    <description xml:lang="pt_BR">Se definido, os cantos dos botões são arredondados</description>
+    <description xml:lang="ro">Dacă este definit, butoanele vor avea colțuri rotunjite</description>
+    <description xml:lang="ru">Если установлено, углы кнопок закругляются</description>
+    <description xml:lang="si">බොත්තම් මුළු කවාකාර ලෙස සැකසුව හොත්</description>
+    <description xml:lang="sl">Izbrana možnost prikaže robove zaobljene.</description>
+    <description xml:lang="sq">Nëse caktuar, këndet e pulsantit janë të rrumbullt</description>
+    <description xml:lang="sr">Ако је постављено, дугме је заобљено по ивицама</description>
+    <description xml:lang="sr@latin">Ako je postavljeno, dugme je zaobljeno po ivicama</description>
+    <description xml:lang="sv">Om inställd, rundas knappkanter av</description>
+    <description xml:lang="ta">அமைத்தால் பொத்தான்கள் வட்டமாக இருக்கும்</description>
+    <description xml:lang="te">అమర్చినట్లేతే, బటన్ మూలలు గుండ్రంగాఉంటాయి</description>
+    <description xml:lang="th">ถ้าเลือก มุมของปุ่มกดจะมน</description>
+    <description xml:lang="tr">Eğer atanmışsa, düğme köşeleri yuvarlatılmış</description>
+    <description xml:lang="uk">Якщо встановлено, кути кнопки закруглені</description>
+    <description xml:lang="vi">Đặt thì cái nút có góc tròn</description>
+    <description xml:lang="zh_CN">如果开启，按钮边缘将变得圆滑</description>
+    <description xml:lang="zh_HK">如果設定，則按鈕的角會成為圓角</description>
+    <description xml:lang="zh_TW">如果設定，則按鈕的角會成為圓角</description>
+  </option>
+
+</engine>

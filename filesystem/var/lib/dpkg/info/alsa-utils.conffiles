@@ -1,0 +1,2 @@
+/etc/alsa/modprobe-post-install.d/alsa-utils
+/etc/init.d/alsa-utils

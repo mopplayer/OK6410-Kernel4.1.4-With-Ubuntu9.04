@@ -1,0 +1,6 @@
+119e1cc9519f078d7c915e397002446e  usr/share/doc/xserver-xorg-video-savage/copyright
+4a0be1d1242edc3b8db346c911265849  usr/share/doc/xserver-xorg-video-savage/changelog.gz
+50dd3f00c4190d6d7c85af1ed87d9e79  usr/share/doc/xserver-xorg-video-savage/changelog.Debian.gz
+7736ea1b4c21cdad705670422e6efcbe  usr/share/man/man4/savage.4.gz
+59cd0b9b2c7b52a853a9b0a18b480fd7  usr/share/xserver-xorg/pci/savage.ids
+1d19a64e7b0eb35de4b655922ae5eb83  usr/lib/xorg/modules/drivers/savage_drv.so

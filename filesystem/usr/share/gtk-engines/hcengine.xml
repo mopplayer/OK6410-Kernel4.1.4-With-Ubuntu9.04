@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine schema_version="0.1" module_name="hcengine" long_name="High Contrast">
+
+  <metainfo>
+    <version>2.18.1</version>
+    <website>http://www.gnome.org</website>
+    <author>
+      <name>Bill Haneman</name>
+      <email>bill.haneman@sun.com</email>
+    </author>
+  </metainfo>
+
+  <option type="integer" name="edge_thickness" default="2">
+    <minimum>1</minimum>
+    <maximum>10</maximum>
+    <long_name>Edge Thickness</long_name>
+    <long_name xml:lang="ar">سمك الحد</long_name>
+    <long_name xml:lang="as">প্ৰান্তেৰ প্ৰস্থ</long_name>
+    <long_name xml:lang="be@latin">Taŭščynia kraju</long_name>
+    <long_name xml:lang="bg">Дебелина на ръба</long_name>
+    <long_name xml:lang="bn_IN">প্রান্তের প্রস্থ</long_name>
+    <long_name xml:lang="ca">Gruix de la vora</long_name>
+    <long_name xml:lang="cs">Síla okrajů</long_name>
+    <long_name xml:lang="da">Kanttykkelse</long_name>
+    <long_name xml:lang="de">Randstärke</long_name>
+    <long_name xml:lang="dz">མཐའམ་སྟུག་ཚད།</long_name>
+    <long_name xml:lang="el">Πάχος των άκρων</long_name>
+    <long_name xml:lang="en_GB">Edge Thickness</long_name>
+    <long_name xml:lang="es">Grosor del borde</long_name>
+    <long_name xml:lang="et">Serva paksus</long_name>
+    <long_name xml:lang="eu">Ertzen lodiera</long_name>
+    <long_name xml:lang="fi">Reunan paksuus</long_name>
+    <long_name xml:lang="fr">Largeur des bordures</long_name>
+    <long_name xml:lang="fur">Spessôr da l'ôr</long_name>
+    <long_name xml:lang="gl">Grosor do bordo</long_name>
+    <long_name xml:lang="gu">બાજુની જાડાઈ</long_name>
+    <long_name xml:lang="he">Edge Thickness</long_name>
+    <long_name xml:lang="hi">किनारा मोटाई</long_name>
+    <long_name xml:lang="hu">Szél vastagsága</long_name>
+    <long_name xml:lang="it">Spessore del bordo</long_name>
+    <long_name xml:lang="ja">エッジの太さ</long_name>
+    <long_name xml:lang="kn">ಅಂಚಿನ ದಪ್ಪ</long_name>
+    <long_name xml:lang="ko">가장자리 두께</long_name>
+    <long_name xml:lang="lt">Krašto storis</long_name>
+    <long_name xml:lang="mk">Дебелина на работ</long_name>
+    <long_name xml:lang="ml">അറ്റത്തിന്റെ വീതി</long_name>
+    <long_name xml:lang="mr">टोकांचा जाडेपणा</long_name>
+    <long_name xml:lang="nb">Tykkelse for kant</long_name>
+    <long_name xml:lang="nl">Randdikte</long_name>
+    <long_name xml:lang="nn">Tykkelse for kant</long_name>
+    <long_name xml:lang="or">ଧାର ମୋଟାଇ</long_name>
+    <long_name xml:lang="pa">ਕੋਨ ਚੌੜਾਈ</long_name>
+    <long_name xml:lang="pl">Grubość krawędzi</long_name>
+    <long_name xml:lang="pt">Espessura da Margem</long_name>
+    <long_name xml:lang="pt_BR">Espessura da Borda</long_name>
+    <long_name xml:lang="ro">Grosime margini</long_name>
+    <long_name xml:lang="ru">Толщина углов</long_name>
+    <long_name xml:lang="si">දාරයේ ඝනකම</long_name>
+    <long_name xml:lang="sl">Debelina robov</long_name>
+    <long_name xml:lang="sq">Trashësia e bordit</long_name>
+    <long_name xml:lang="sr">Дебљина ивице</long_name>
+    <long_name xml:lang="sr@latin">Debljina ivice</long_name>
+    <long_name xml:lang="sv">Kanttjockhet</long_name>
+    <long_name xml:lang="ta">விளிம்பின் தடிமன்</long_name>
+    <long_name xml:lang="te">అంచు మందం</long_name>
+    <long_name xml:lang="th">ความหนาของขอบ</long_name>
+    <long_name xml:lang="tr">Kenar Kalınlığı</long_name>
+    <long_name xml:lang="uk">Товщина рамки</long_name>
+    <long_name xml:lang="vi">Độ dày cạnh</long_name>
+    <long_name xml:lang="zh_CN">边缘厚度</long_name>
+    <long_name xml:lang="zh_HK">邊緣厚度</long_name>
+    <long_name xml:lang="zh_TW">邊緣厚度</long_name>
+    <preferred_widget>spinbutton</preferred_widget>
+  </option>
+
+  <option type="integer" name="cell_indicator_size" default="12">
+    <minimum>2</minimum>
+    <maximum>50</maximum>
+    <long_name>Cell Indicator Size</long_name>
+    <long_name xml:lang="ar">حجم مؤشر الخلايا</long_name>
+    <long_name xml:lang="as">সেল নিৰ্দেশকচিহ্নেৰ মাপ</long_name>
+    <long_name xml:lang="be@latin">Pamier indykatara jačei</long_name>
+    <long_name xml:lang="bg">Размер на индикатора за клетка</long_name>
+    <long_name xml:lang="bn_IN">সেল নির্দেশকচিহ্নের মাপ</long_name>
+    <long_name xml:lang="ca">Mida de l'indicador de la cel·la</long_name>
+    <long_name xml:lang="cs">Velikost objektů stromu</long_name>
+    <long_name xml:lang="da">Størrelse af celleindikator</long_name>
+    <long_name xml:lang="de">Zellzeigergröße</long_name>
+    <long_name xml:lang="dz">ནང་ཐིག་བརྡ་སྟོན་མིའི་ཚད།</long_name>
+    <long_name xml:lang="el">Ένδειξη μεγέθους κελιών</long_name>
+    <long_name xml:lang="en_GB">Cell Indicator Size</long_name>
+    <long_name xml:lang="es">Indicador del tamaño de celda</long_name>
+    <long_name xml:lang="et">Lahtri näidiku suurus</long_name>
+    <long_name xml:lang="eu">Gelaxka-tamainaren adierazlea</long_name>
+    <long_name xml:lang="fi">Solun ilmaisimen koko</long_name>
+    <long_name xml:lang="fr">Taille de l'indicateur de cellule</long_name>
+    <long_name xml:lang="fur">Dimension indicadôr de cele</long_name>
+    <long_name xml:lang="gl">Indicador do tamaño da cela</long_name>
+    <long_name xml:lang="gu">ખાનાં સૂચક માપ</long_name>
+    <long_name xml:lang="he">Cell Indicator Size</long_name>
+    <long_name xml:lang="hi">सेल संकेतक आकार</long_name>
+    <long_name xml:lang="hu">Cellajelző mérete</long_name>
+    <long_name xml:lang="it">Dimensione indicatore cella</long_name>
+    <long_name xml:lang="ja">セルのインジゲーターの大きさ</long_name>
+    <long_name xml:lang="kn">ಕೋಶದ ಸೂಚಕದ ಗಾತ್ರ</long_name>
+    <long_name xml:lang="ko">셀 컨트롤 크기</long_name>
+    <long_name xml:lang="lt">Langelių indikatoriaus dydis</long_name>
+    <long_name xml:lang="mk">Големина на индикаторот на ќелии</long_name>
+    <long_name xml:lang="ml">സെല്‍ സൂചന വലിപ്പം</long_name>
+    <long_name xml:lang="mr">कक्ष सूचकाचा आकार</long_name>
+    <long_name xml:lang="nb">Størrelse på celleindikator</long_name>
+    <long_name xml:lang="nl">Cel-inidicatiegrootte</long_name>
+    <long_name xml:lang="nn">Storleik på celleindikator</long_name>
+    <long_name xml:lang="or">କୋଷ ସୂଚକ ଆକାର</long_name>
+    <long_name xml:lang="pa">ਸੈੱਲ ਇੰਡੀਕੇਟਰ ਸਾਈਜ਼</long_name>
+    <long_name xml:lang="pl">Rozmiar wskaźnika komórki</long_name>
+    <long_name xml:lang="pt">Indicador do Tamanho da Célula</long_name>
+    <long_name xml:lang="pt_BR">Tamanho do Indicador de Célula</long_name>
+    <long_name xml:lang="ro">Dimensiune indicator celulă</long_name>
+    <long_name xml:lang="ru">Размер индикатора ячейки</long_name>
+    <long_name xml:lang="si">සෙල් එක දක්වන විශාලත්වය</long_name>
+    <long_name xml:lang="sl">Velikost kazalca celice</long_name>
+    <long_name xml:lang="sq">Treguesi i madhësisë së qelisë</long_name>
+    <long_name xml:lang="sr">Величина показатеља ћелије</long_name>
+    <long_name xml:lang="sr@latin">Veličina pokazatelja ćelije</long_name>
+    <long_name xml:lang="sv">Storlek för cellindikator</long_name>
+    <long_name xml:lang="ta">அறை சுட்டி அளவு</long_name>
+    <long_name xml:lang="te">అర సూచకి పరిమాణం</long_name>
+    <long_name xml:lang="th">ขนาดของช่องกาของเซลล์</long_name>
+    <long_name xml:lang="tr">Hücre Belirteç Boyutu</long_name>
+    <long_name xml:lang="uk">Розмір індикатора комірки</long_name>
+    <long_name xml:lang="vi">Cỡ chỉ thị ô</long_name>
+    <long_name xml:lang="zh_CN">单元指示器大小</long_name>
+    <long_name xml:lang="zh_HK">儲存格指標大小</long_name>
+    <long_name xml:lang="zh_TW">儲存格指標大小</long_name>
+    <description>Size of check- and radiobuttons inside treeviews. (Bug #351764)</description>
+    <description xml:lang="ar">حجم ازرار الإختيار في مظهر الشجرة</description>
+    <description xml:lang="as">ট্ৰি-ভিউয়েৰ অধীন চেক- এবং ৰেডিও-বাটনেৰ মাপ। (বাগ সংখ্যা #৩৫১৭৬৪)</description>
+    <description xml:lang="be@latin">Pamier opcyj vybaru j zaznačeńnia ŭnutry prahladu dreva. (Pamyłka #351764)</description>
+    <description xml:lang="bg">Размер на бутоните за отметка и радио бутоните в дървовидните изгледи. (доклад за грешка #351764)</description>
+    <description xml:lang="bn_IN">ট্রি-ভিউয়ের অধীন চেক- এবং রেডিও-বাটনের মাপ। (বাগ সংখ্যা #৩৫১৭৬৪)</description>
+    <description xml:lang="ca">Mida dels botons d'opció i de selecció dins de la vista d'arbre. (Bug #351764)</description>
+    <description xml:lang="cs">Velikost přepínačů a zaškrtávacích polí ve stromu. (Chyba č. 351764)</description>
+    <description xml:lang="da">Størrelse af afkrydsnings- og radioknapper i træperspektiv. (Bug #351764)</description>
+    <description xml:lang="de">Größe von Ankreuzfeldern und Auswahlknöpfen innerhalb einer Listenansicht (Fehler Nr. 351764)</description>
+    <description xml:lang="dz">བརྟག་ཞིབ་དང་རེཌིའོ་ཨེབ་རྟ་ཚུའི་ནང་ན་རྩ་འབྲེལ་མཐོང་སྣང་ཚུ་གི་ཚད (རྒྱེན་ #༣༥༡༧༦༤)</description>
+    <description xml:lang="el">Μέγεθος του check- και κουμπιών αλληλοαποκλειώμενων επιλογών μέσα στις δενδρικές προβολές. (Σφάλμα #351764)</description>
+    <description xml:lang="en_GB">Size of check- and radiobuttons inside treeviews. (Bug #351764)</description>
+    <description xml:lang="es">Tamaño de los botones de casilla y botones de radio dentro de las vistas de árbol</description>
+    <description xml:lang="et">Märkeruutude ja raadionuppude suurused puuvaadetes. (Viga #351764)</description>
+    <description xml:lang="eu">Zuhaitz-ikuspegiko kontrol- eta erradio-botoien tamaina</description>
+    <description xml:lang="fi">Valinta- ja radionappien koko puunäkymissä. (bugi #351764)</description>
+    <description xml:lang="fr">Taille des cases à cocher et des boutons radio dans les arborescences (bogue #351764).</description>
+    <description xml:lang="fur">Dimension dai botons radio/check dentri dai treeview (bug #351764).</description>
+    <description xml:lang="gl">Tamaño dos botóns de caixa de verificación e de opción dentro das visualizacións en árbore. (Bug #351764)</description>
+    <description xml:lang="gu">વૃક્ષદૃશ્યોમાં ચકાસણી- અને રેડિયોબટનોનું માપ. (Bug #351764)</description>
+    <description xml:lang="he">Size of check- and radiobuttons inside treeviews. (Bug #351764)</description>
+    <description xml:lang="hu">Jelölőnégyzetek és rádiógombok mérete fanézetekben.</description>
+    <description xml:lang="it">Dimensione dei pulsanti radio/check all'interno dei treeview (bug #351764).</description>
+    <description xml:lang="ja">ツリー・ビューの中にあるチェックボタン/ラジオボタンの大きさです (Bug #351764)</description>
+    <description xml:lang="kn">ವೃಕ್ಷನೋಟದಲ್ಲಿ ಪರಿಶೀಲನೆ- ಹಾಗು ರೇಡಿಯೋ ಗುಂಡಿಗಳ ಗಾತ್ರ. (Bug #351764)</description>
+    <description xml:lang="ko">트리뷰 안에서 확인란 및 라디오 단추의 크기. (버그 #351764)</description>
+    <description xml:lang="lt">Parinkimo ir žymimųjų laukelių dydis sąrašuose ir medžiuose (klaida #351764)</description>
+    <description xml:lang="mk">Големина на копчињата за чекирањ и кружните копчиња во прегледи како дрво. (Бубачка #351764)</description>
+    <description xml:lang="ml"> ശരി-ചിഹ്നവും (ചെക്കും)  റേഡിയൊ ബട്ടനുകളും (തിരഞ്ഞെടുക്കല്‍ ചതുരങ്ങള്‍) - ഇവയുടെ വലിപ്പം ട്രീകാഴ്ചകളില്‍ (Bug #351764)</description>
+    <description xml:lang="mr">वृक्षदृश्य मधिल चेक- व रेडिओबटन बटनांचा आकार. (बग #351764)</description>
+    <description xml:lang="nb">Størrelsen på radio- og avkryssningsknapper (Feil #351764).</description>
+    <description xml:lang="nl">Grootte van de aanvink- en keuzevakjes in boomweergaven (Bug #351764)</description>
+    <description xml:lang="nn">Storleiken på radio- og avkryssningsknapper (Feil #351764).</description>
+    <description xml:lang="or">ବୃକ୍ଷ ପ୍ରଦର୍ଶନ ମାନଙ୍କ ମଧ୍ଯରେ ଚିହ୍ନିତ- ଏବଂ ରେଡିଓ ବଟନ ମାନଙ୍କର ଆକାର। (ତୃଟି #351764)</description>
+    <description xml:lang="pa">ਲੜੀ-ਝਲਕ ਵਿੱਚ ਚੈੱਕ- ਅਤੇ ਰੇਡੀਓ ਬਟਨ ਦਾ ਆਕਾਰ ਹੈ। (ਬੱਗ #351764)</description>
+    <description xml:lang="pl">Rozmiar pól wyboru wewnątrz widoku drzewa. (Błąd #351764)</description>
+    <description xml:lang="pt">Tamanho dos botões de selecção exclusiva e caixas de selecção dentro das vistas em árvore. (Bug #351764)</description>
+    <description xml:lang="pt_BR">Tamanho dos botões de verificação e de seleção dentro das visões de árvore ("treeviews"). (Bug #351764)</description>
+    <description xml:lang="ru">Размер отметок и кнопок выбора в деревьях и списках. (Bug #351764)</description>
+    <description xml:lang="si">ට්‍රීවීව්‍ තුළ චෙක්-සහ රේඩියො බොත්තම් වල විශාලත්වය. (Bug #351764)</description>
+    <description xml:lang="sl">Velikost elementov programa znotraj drevesnega pogleda</description>
+    <description xml:lang="sq">Madhësia e pulsantëve radio dhe të zgjedhjes tek paraqitja e degëzuar.</description>
+    <description xml:lang="sr">Величина радио и дугмади за потврду унутар разгранатог стабла (Грешка #351764)</description>
+    <description xml:lang="sr@latin">Veličina radio i dugmadi za potvrdu unutar razgranatog stabla (Greška #351764)</description>
+    <description xml:lang="sv">Storlek för kryss- och radioknappar inne i trädvyer. (Felrapport #351764)</description>
+    <description xml:lang="ta">கிளைக்காட்சியில் குறியீட்டு மற்றும் ரேடியோ பொத்தான்களின் அளவு (உள் பிழை #351764)</description>
+    <description xml:lang="te">వృక్షదర్శనం లో ఉన్న చెక్ మరియు రెడియో బటన్సు యొక్క పరిమాణం (Bug #351764)</description>
+    <description xml:lang="th">ขนาดของช่องกาและปุ่มวิทยุภายในแผนภาพต้นไม้ (บั๊ก #351764)</description>
+    <description xml:lang="tr">Ağaç görünümlerinde seçim ve radyo düğmeleri boyutu (Hata #351764)</description>
+    <description xml:lang="uk">Розмір полів з відміткою та радіокнопок при перегляді дерева. (Помилка #351764)</description>
+    <description xml:lang="vi">Kích cỡ của các cái nút chọn một và cái nút kiểm bên trong ô xem cây. (Lỗi #351764)</description>
+    <description xml:lang="zh_CN">树状显示中多选按钮和单选按钮的大小。(Bug #351764)</description>
+    <description xml:lang="zh_HK">核取方塊及樹狀檢視中的單選圓鈕大小。(Bug #351764)</description>
+    <description xml:lang="zh_TW">核取方塊及樹狀檢視中的單選圓鈕大小。(Bug #351764)</description>
+    <preferred_widget>spinbutton</preferred_widget>
+  </option>
+  
+</engine>

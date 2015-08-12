@@ -1,0 +1,6 @@
+e2db3e2e5c75dc8084660fb30a2e2203  usr/share/doc/xserver-xorg-video-neomagic/copyright
+a5053e3d7b63017fc41dd000380fc2cb  usr/share/doc/xserver-xorg-video-neomagic/changelog.gz
+089b55b6915f32de77680b22a884943e  usr/share/doc/xserver-xorg-video-neomagic/changelog.Debian.gz
+fa23ce5b64ad096d01674a4aa2576d0e  usr/share/man/man4/neomagic.4.gz
+2a41bb70cdca3389ea06577786d649c2  usr/share/xserver-xorg/pci/neomagic.ids
+6820e652d2edd0ce1202827fb5bdf4bc  usr/lib/xorg/modules/drivers/neomagic_drv.so

@@ -1,0 +1,25 @@
+ 
+ The powermanagement callouts in the default hal config
+ (org.freedesktop.Hal.Device.SystemPowerManagement and
+ org.freedesktop.Hal.Device.LaptopPanel) and the storage callouts
+ (org.freedesktop.Hal.Device.Volume.*) can be used by users on a local
+ physical console.
+
+ The acpi addon won't use the kernel acpi events interface but the acpid's
+ event  socket if acpid is installed. If acpid is removed, hal needs to be
+ restarted to enable monitoring of acpi events again. And if apci is installed,
+ hal needs a restart to free the kernels acpi events interface for acpid.
+
+
+ Some CD and DVD drives, such as the GDR8162B model found in some Dell 
+ laptops, do not correctly handle media status inquiries and incorrectly
+ spin up the drive when they should not.  Since hal regularly polls CD
+ drives for media changes, this results in increased power consumption and
+ mechanical wear and tear on such drives, which remain spinning constantly
+ while hal is running.
+
+ If you have a CD/DVD drive exhibiting this problem, you can copy
+ /usr/share/doc/hal/examples/no-cd-media-check.fdi to /etc/hal/fdi/policy/ to
+ disable media checks for your drive.  This file disables media checks for
+ all CD drives on the system, and also includes an example config for
+ disabling media checks only on a specific drive.

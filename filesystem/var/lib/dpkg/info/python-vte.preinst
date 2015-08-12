@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# doc dir is now a symlink to python-vte
+if [ "$1" = upgrade ] && [ ! -L /usr/share/doc/python-vte ]; then
+    rm -rf /usr/share/doc/python-vte
+fi

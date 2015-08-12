@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>aptsources.distinfo &#8212; provide meta information for distro repositories &mdash; python-apt v0.7.9~exp2 documentation</title>
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.7.9~exp2',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="python-apt v0.7.9~exp2 documentation" href="../index.html" />
+    <link rel="up" title="aptsources &#8212; Working with sources.list" href="index.html" />
+    <link rel="next" title="aptsources.distro &#8212; Distribution abstraction of the sources.list" href="distro.html" />
+    <link rel="prev" title="aptsources &#8212; Working with sources.list" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="distro.html" title="aptsources.distro &#8212; Distribution abstraction of the sources.list"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="aptsources &#8212; Working with sources.list"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">python-apt v0.7.9~exp2 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal"><span class="pre">aptsources</span></tt> &#8212; Working with sources.list</a> &raquo;</li> 
+      </ul>
+    </div>  
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="module-aptsources.distinfo">
+<h1><tt class="xref docutils literal"><span class="pre">aptsources.distinfo</span></tt> &#8212; provide meta information for distro repositories<a class="headerlink" href="#module-aptsources.distinfo" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This part of the documentation is created automatically.</p>
+</div>
+<dl class="class">
+<dt id="aptsources.distinfo.Component">
+<!--[aptsources.distinfo.Component]-->class <tt class="descclassname">aptsources.distinfo.</tt><tt class="descname">Component</tt><big>(</big><em>name</em>, <em>desc=None</em>, <em>long_desc=None</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Component" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="aptsources.distinfo.Component.get_description">
+<!--[aptsources.distinfo.Component.get_description]--><tt class="descname">get_description</tt><big>(</big><big>)</big><a class="headerlink" href="#aptsources.distinfo.Component.get_description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Component.get_description_long">
+<!--[aptsources.distinfo.Component.get_description_long]--><tt class="descname">get_description_long</tt><big>(</big><big>)</big><a class="headerlink" href="#aptsources.distinfo.Component.get_description_long" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Component.set_description">
+<!--[aptsources.distinfo.Component.set_description]--><tt class="descname">set_description</tt><big>(</big><em>desc</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Component.set_description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Component.set_description_long">
+<!--[aptsources.distinfo.Component.set_description_long]--><tt class="descname">set_description_long</tt><big>(</big><em>desc</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Component.set_description_long" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aptsources.distinfo.DistInfo">
+<!--[aptsources.distinfo.DistInfo]-->class <tt class="descclassname">aptsources.distinfo.</tt><tt class="descname">DistInfo</tt><big>(</big><em>dist=None</em>, <em>base_dir='/usr/share/python-apt/templates'</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.DistInfo" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="aptsources.distinfo.DistInfo.finish_template">
+<!--[aptsources.distinfo.DistInfo.finish_template]--><tt class="descname">finish_template</tt><big>(</big><em>template</em>, <em>component</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.DistInfo.finish_template" title="Permalink to this definition">¶</a></dt>
+<dd>finish the current tempalte</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aptsources.distinfo.Mirror">
+<!--[aptsources.distinfo.Mirror]-->class <tt class="descclassname">aptsources.distinfo.</tt><tt class="descname">Mirror</tt><big>(</big><em>proto</em>, <em>hostname</em>, <em>dir</em>, <em>location=None</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Storage for mirror related information</p>
+<dl class="method">
+<dt id="aptsources.distinfo.Mirror.add_repository">
+<!--[aptsources.distinfo.Mirror.add_repository]--><tt class="descname">add_repository</tt><big>(</big><em>proto</em>, <em>dir</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror.add_repository" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Mirror.get_location">
+<!--[aptsources.distinfo.Mirror.get_location]--><tt class="descname">get_location</tt><big>(</big><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror.get_location" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Mirror.get_repo_urls">
+<!--[aptsources.distinfo.Mirror.get_repo_urls]--><tt class="descname">get_repo_urls</tt><big>(</big><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror.get_repo_urls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Mirror.get_repositories_for_proto">
+<!--[aptsources.distinfo.Mirror.get_repositories_for_proto]--><tt class="descname">get_repositories_for_proto</tt><big>(</big><em>proto</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror.get_repositories_for_proto" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Mirror.has_repository">
+<!--[aptsources.distinfo.Mirror.has_repository]--><tt class="descname">has_repository</tt><big>(</big><em>proto</em>, <em>dir</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror.has_repository" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Mirror.set_location">
+<!--[aptsources.distinfo.Mirror.set_location]--><tt class="descname">set_location</tt><big>(</big><em>location</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Mirror.set_location" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aptsources.distinfo.Repository">
+<!--[aptsources.distinfo.Repository]-->class <tt class="descclassname">aptsources.distinfo.</tt><tt class="descname">Repository</tt><big>(</big><em>proto</em>, <em>dir</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Repository" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="aptsources.distinfo.Repository.get_info">
+<!--[aptsources.distinfo.Repository.get_info]--><tt class="descname">get_info</tt><big>(</big><big>)</big><a class="headerlink" href="#aptsources.distinfo.Repository.get_info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Repository.get_url">
+<!--[aptsources.distinfo.Repository.get_url]--><tt class="descname">get_url</tt><big>(</big><em>hostname</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Repository.get_url" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aptsources.distinfo.Template">
+<!--[aptsources.distinfo.Template]-->class <tt class="descclassname">aptsources.distinfo.</tt><tt class="descname">Template</tt><a class="headerlink" href="#aptsources.distinfo.Template" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="aptsources.distinfo.Template.has_component">
+<!--[aptsources.distinfo.Template.has_component]--><tt class="descname">has_component</tt><big>(</big><em>comp</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Template.has_component" title="Permalink to this definition">¶</a></dt>
+<dd>Check if the distribution provides the given component</dd></dl>
+
+<dl class="method">
+<dt id="aptsources.distinfo.Template.is_mirror">
+<!--[aptsources.distinfo.Template.is_mirror]--><tt class="descname">is_mirror</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.Template.is_mirror" title="Permalink to this definition">¶</a></dt>
+<dd>Check if a given url of a repository is a valid mirror</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aptsources.distinfo.split_url">
+<!--[aptsources.distinfo.split_url]--><tt class="descclassname">aptsources.distinfo.</tt><tt class="descname">split_url</tt><big>(</big><em>url</em><big>)</big><a class="headerlink" href="#aptsources.distinfo.split_url" title="Permalink to this definition">¶</a></dt>
+<dd>split a given URL into the protocoll, the hostname and the dir part</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="index.html" title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">aptsources</span></tt> &#8212; Working with sources.list</a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="distro.html" title="next chapter"><tt class="docutils literal"><span class="pre">aptsources.distro</span></tt> &#8212; Distribution abstraction of the sources.list</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/aptsources/distinfo.txt">Show Source</a></li>
+            </ul>
+          <h3>Quick search</h3>
+            <form class="search" action="../search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="distro.html" title="aptsources.distro &#8212; Distribution abstraction of the sources.list"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="aptsources &#8212; Working with sources.list"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">python-apt v0.7.9~exp2 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U"><tt class="docutils literal docutils literal docutils literal"><span class="pre">aptsources</span></tt> &#8212; Working with sources.list</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009, Julian Andres Klode &lt;jak@debian.org&gt;.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.5.1.
+    </div>
+  </body>
+</html>

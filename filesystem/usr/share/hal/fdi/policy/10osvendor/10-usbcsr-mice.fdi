@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deviceinfo version="0.2">
+  <device>
+    <match key="battery.type" string="mouse">
+      <append key="info.addons" type="strlist">hald-addon-usb-csr</append>
+    </match>
+  </device>
+</deviceinfo>

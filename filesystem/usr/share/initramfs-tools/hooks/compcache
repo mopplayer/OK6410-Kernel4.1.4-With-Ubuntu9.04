@@ -1,0 +1,69 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = prereqs ]; then
+  exit 0
+fi
+
+. /usr/share/initramfs-tools/hook-functions
+
+number=
+suffix=
+eval $(printf "%s" "$COMPCACHE_SIZE" | \
+       sed -nre 's/^ *([1-9][0-9]*) *([%KMGT]) *$/number="\1"; suffix="\2";/p')
+
+if [ -z "$number" ] || [ -z "$suffix" ]; then
+  exit 0
+fi
+
+manual_add_modules compcache
+
+copy_exec /sbin/swapon
+
+mkdir -p "$DESTDIR"/etc/udev/rules.d
+cat >"$DESTDIR"/etc/udev/rules.d/80-compcache.rules <<EOF
+KERNEL=="ramzswap0", ACTION=="add", \\
+  RUN+="/sbin/swapon -p 100 /dev/ramzswap0 2>/dev/null"
+EOF
+
+mem_total="\$(sed -nre 's/^MemTotal:\\s*([0-9]+) kB\$/\\1/p' /proc/meminfo)"
+
+case "$suffix" in
+%) kbytes="\$(($mem_total * $number / 100))" ;;
+K) kbytes=$(($number))                       ;;
+M) kbytes=$(($number * 1024))                ;;
+G) kbytes=$(($number * 1024 * 1024))         ;;
+T) kbytes=$(($number * 1024 * 1024 * 1024))  ;;
+esac
+
+cat >"$DESTDIR"/scripts/init-top/compcache <<EOF
+#!/bin/sh
+
+PREREQ=""
+prereqs()
+{
+     echo "\$PREREQ"
+}
+
+case \$1 in
+prereqs)
+     prereqs
+     exit 0
+     ;;
+esac
+
+# find total amount of available ram
+TOTAL_RAM=\$( grep MemTotal /proc/meminfo |tr -d ': [A-Z][a-z]')
+
+# Do not use compcache on the liveCD if we have more than 512M
+if [ "\${BOOT}" = "casper" ]; then
+    if [ "\${TOTAL_RAM}" -gt 524288 ]; then
+        exit 0
+    fi
+fi
+
+modprobe -q --ignore-install compcache compcache_size_kbytes="$kbytes"
+EOF
+chmod 0755 "$DESTDIR"/scripts/init-top/compcache
+
+# vim:set et sw=2 sts=2:

@@ -1,0 +1,52 @@
+=head1 NAME
+
+Glib::Param::UInt64 -  Wrapper for uint64 parameters in GLib
+
+=for object Glib::Param::UInt64 Wrapper for uint64 parameters in GLib
+
+=head1 DESCRIPTION
+
+This page documents the extra accessors available for the unsigned 64 bit
+integer type paramspecs.  On 32 bit machines and even on some 64 bit machines,
+perl really only supports 32 bit integers, so all of these methods convert the
+values to and from Perl strings if necessary.
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 uint64 = $pspec-E<gt>B<get_default_value> 
+
+=over
+
+=back
+
+=head2 uint64 = $pspec-E<gt>B<get_maximum> 
+
+=over
+
+=back
+
+=head2 uint64 = $pspec-E<gt>B<get_minimum> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

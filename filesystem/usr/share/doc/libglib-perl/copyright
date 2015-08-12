@@ -1,0 +1,25 @@
+This is the debian package for the Glib module.
+It was created by Marc Brockschmidt <he@debian.org>.
+
+The sources were downloaded from http://gtk2-perl.sourceforge.net/.
+
+The upstream authors are  muppet <scott@asofyet.org>
+                          Ross McFarland <rwmcfa1@neces.com>
+                          Jörn Reder <joern@zyn.de>
+                          Göran Thyni <gthyni@kirra.net>
+                          Chas Owens <alas@wilma.widomaker dot com>
+                          Guillaume Cottenceau <gc@mandrakesoft.com>
+                          Marc Lehmann <pcg@goof.com>
+                          Jacek Konieczny <jajcus@bnet.pl>
+                          [the gtk2-perl team]
+
+Copyright (C) 2003-2008 by the gtk2-perl team
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Library General Public License as published by the Free
+Software Foundation; either version 2.1 of the License, or (at your option) any
+later version.
+
+A copy of the LGPL-2 can be found at /usr/share/common-licenses/LGPL-2 on
+any Debian system.
+

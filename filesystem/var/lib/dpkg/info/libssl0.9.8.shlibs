@@ -1,0 +1,4 @@
+libssl 0.9.8 libssl0.9.8 (>= 0.9.8f-5)
+libcrypto 0.9.8 libssl0.9.8 (>= 0.9.8f-5)
+udeb: libssl 0.9.8 libcrypto0.9.8-udeb (>= 0.9.8f-5)
+udeb: libcrypto 0.9.8 libcrypto0.9.8-udeb (>= 0.9.8f-5)

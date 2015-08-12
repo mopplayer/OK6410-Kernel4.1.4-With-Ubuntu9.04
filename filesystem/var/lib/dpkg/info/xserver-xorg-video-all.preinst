@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# doc dir is now a symlink to xserver-xorg-video-all
+if [ "$1" = upgrade ] && [ ! -L /usr/share/doc/xserver-xorg-video-all ]; then
+    rm -rf /usr/share/doc/xserver-xorg-video-all
+fi

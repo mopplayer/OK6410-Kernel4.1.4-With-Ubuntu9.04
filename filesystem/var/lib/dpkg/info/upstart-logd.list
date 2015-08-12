@@ -1,0 +1,13 @@
+/.
+/sbin
+/sbin/logd
+/usr
+/usr/share
+/usr/share/man
+/usr/share/man/man8
+/usr/share/man/man8/logd.8.gz
+/usr/share/doc
+/etc
+/etc/event.d
+/etc/event.d/logd
+/usr/share/doc/upstart-logd

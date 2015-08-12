@@ -1,0 +1,52 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          udev-finish
+# Required-Start:    mountall-bootclean udev
+# Required-Stop:
+# Should-Start:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Finish up udev.
+# Description:       Copies the udev log into /var/log and copies any rules
+#                    generated while the root filesystem was read-only into
+#                    /etc/udev/rules.d
+### END INIT INFO
+
+# init script to finish up udev
+
+# Check the package is still installed
+[ -x /sbin/udevd ] || exit 0
+
+# Get LSB functions
+. /lib/lsb/init-functions
+. /etc/default/rcS
+
+
+case "$1" in
+    start)
+    	# Save udev log in /var/log/udev
+	if [ -e /dev/.udev.log ]; then
+	    mv -f /dev/.udev.log /var/log/udev
+	fi
+
+	# Make sure the root filesystem is actually writable
+	# (script is set -e, so this will abort)
+	touch /etc/udev/rules.d
+
+	# Copy any rules generated while the root filesystem was read-only
+	for file in /dev/.udev/tmp-rules--*; do
+	    dest=${file##*tmp-rules--}
+	    [ "$dest" = '*' ] && break
+	    cat $file >> /etc/udev/rules.d/$dest
+	    rm -f $file
+	done
+	;;
+    stop|restart|reload|force-reload)
+	;;
+*)
+	echo "Usage: /etc/init.d/udev {start|stop|restart|reload|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Martin K. Petersen)</creator>
+    <creator>(George Lebl)</creator>
+    <creator>(Brian Cameron)</creator>
+    <creator>(Bill Haneman)</creator>
+    <maintainer>(Brian Cameron)</maintainer>
+    <title>Посібник з менеджера дисплїв середовища Gnome</title>
+    <date>2007-01</date>
+    <version identifier="0.0" date="2007-01"/>
+    <subject category="GNOME|System"/>
+    <description>
+      GDM - менеджер дисплеїв GNOME, графічна програма входу у сеанс.
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gdm/uk/gdm.xml"/>
+    <language code="uk"/>
+    <relation seriesid="61d86786-ba0d-11d7-9eda-8a77bf52d52a"/>
+    <rights type="GNU FDL" license.version="1.1" holder="George Lebl and Martin K. Petersen"/>
+  </resource>
+</omf>

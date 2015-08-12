@@ -1,0 +1,6 @@
+a895e60497f06d663828e68f0a087816  usr/lib/xorg/modules/drivers/siliconmotion_drv.so
+7a43de6df06dc7e95673294666950209  usr/share/man/man4/siliconmotion.4.gz
+49171f4375d9078e8ddbc03307bf8a68  usr/share/doc/xserver-xorg-video-siliconmotion/changelog.Debian.gz
+22b6440d9f84e14359ba69b2f2f1d17b  usr/share/doc/xserver-xorg-video-siliconmotion/changelog.gz
+c6642abee7648874f8766e7c0c43054b  usr/share/doc/xserver-xorg-video-siliconmotion/copyright
+e819bd530ce17ed89642bf9ee8ca5daf  usr/share/xserver-xorg/pci/siliconmotion.ids

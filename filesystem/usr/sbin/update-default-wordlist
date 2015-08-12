@@ -1,0 +1,168 @@
+#!/usr/bin/perl -w
+
+use Debian::DictionariesCommon q(:all);
+use Debconf::Client::ConfModule q(:all);
+use Getopt::Long;
+
+dico_checkroot ();
+
+my $rebuild = '';
+my $ignoresymlinks = '';
+
+GetOptions ('rebuild'         => \$rebuild,
+	    'ignore-symlinks' => \$ignoresymlinks);
+
+version ('2.0');
+
+my $class     = "wordlist";
+my $libdir    = "/usr/share/dict";
+my $question  = "dictionaries-common/default-$class";
+my $iquestion = "dictionaries-common/invalid_debconf_value";
+my $linkdir   = "/etc/dictionaries-common";
+my $manual    = '';
+my $program   = "update-default-$class";
+my $debug     = 1 if exists $ENV{'DICT_COMMON_DEBUG'};
+my $newflag   = "/var/cache/dictionaries-common/flag-$class-new";
+#
+
+# This flag is intended for remove-default-$class. If we are here we do not
+# need it any longer, so we reset for future apt runs by cleaning it.
+if ( -f $newflag ){
+  print STDERR "$program: Removing $newflag\n" if $debug;
+  unlink $newflag
+    or print STDERR " $program: Warning: could not remove $newflag\n";
+}
+
+($ret, $value)  = get ($question);
+
+if ($ret == 0 && $value ){
+  updatedb ($class);
+  my $dictionaries = loaddb ($class);
+
+  # Set value to Manual if no elements are present for given class
+  unless ( %$dictionaries ) {
+    print STDERR "$program: No $class elements installed. Manual forced\n" if $debug;
+    $value = "Manual forced (No $class elements installed)";
+    set($question,$value);
+    go();
+  }
+
+  # Check if we are in manual mode
+  if ( $value =~ m/^Manual.*/i ){
+    $ignoresymlinks = "yes";
+    $manual         = "yes";
+  }
+
+  if ( not $ignoresymlinks ) {
+
+    # Handle invalid debconf values
+    if ( not exists $dictionaries->{$value} ){
+      my @available_keys = ();
+      foreach ( split (/\s*,\s*/, metaget ($question, "choices")) ){
+	# strip leading/trailing whitespace and create a list of available keys
+	s/^\s+//;
+	s/\s+$//;
+	push (@available_keys,$_) if ( exists $dictionaries->{$_} );
+      }
+      my $choices    = join (', ', sort {lc $a cmp lc $b} @available_keys);
+      my $forced_key = $available_keys[0] ||
+	die "Selected wordlist:\n" .
+	" $value \n" .
+	"does not correspond to any installed package in the system\n" .
+	"and no alternative wordlist could be selected.\n";
+      subst($iquestion,"value",$value);
+      fset ($iquestion,"seen","false");
+      input("high",$iquestion);                # Warn about what happened
+      subst ($question, "choices", $choices);  # Put sane values in debconf choices field
+      subst ($question, "echoices", $choices); # Put sane values in debconf echoices field
+      set ($question, $forced_key);            # Set debconf value to a sane one
+      fset ($question,"seen","false");
+      input ("critical", $question);
+      title ("dictionaries-common: wordlists");
+      go ();
+      ($ret, $value) = get ($question);
+      die "\n Could not get a valid value for debconf question:\n" .
+	"$question\n"
+	if ( $ret != 0 ); # This should never be reached
+    }
+
+    # Check if links are possible and complain otherwise
+    if ( exists $dictionaries->{$value}{"hash-name"} ){
+      my $hash   = "$libdir/" . $dictionaries->{$value}{"hash-name"};
+      foreach my $i ("") {
+	if (-e "$hash$i") {
+	  system "ln -fs $hash$i $linkdir/words$i";
+	} else {
+	  die "
+When trying to make the default link to a wordlist
+the file to link [$hash$i] was not found. Please report this as a bug to the
+maintainer of the wordlist package you tried to
+select.
+In the meantime select other default value for your wordlist.\n";
+	}
+      }
+    } else {
+      die "Selected wordlist:\n" .
+	" $value \n" .
+	"does not contain a hash name entry in the database.\n";
+    }
+  }
+
+#
+}
+
+#
+
+if ($rebuild) {
+
+  updatedb ($class);
+
+  # (nothing to do for wordlists)
+}
+
+# Local Variables:
+#  perl-indent-level: 2
+# End:
+
+__END__
+
+=head1 NAME
+
+update-default-wordlist - update default wordlist
+
+=head1 SYNOPSIS
+
+ update-default-wordlist [--rebuild] [--ignore-symlinks]
+
+=head1 DESCRIPTION
+
+WARNING: Not to be used from the command line unless you know very well what you are doing.
+
+This program is intended to be called from package postinst
+(with B<--rebuild>), from B<select-default-wordlist> or
+from dictionaries-common
+postinst (with B<--ignore-symlinks>).
+
+Reads the system default from the debconf database and set default links in
+F</etc/dictionaries-common> pointing to the appropriate files in
+F</usr/share/dict/>. 
+If option B<--rebuild> is given, rebuilds the
+F</var/cache/dictionaries-common/wordlist.db>  from the files in
+F</var/lib/dictionaries-common/wordlist>
+
+
+=head1 OPTIONS
+
+--rebuild          Rebuild database, emacsen and jed stuff
+--ignore-symlinks  Do not set symlinks
+
+
+=head1 SEE ALSO
+
+The dictionaries-common policy document
+
+=head1 AUTHORS
+
+Rafael Laboissiere
+
+=cut

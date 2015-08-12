@@ -1,0 +1,4 @@
+/etc/default/ntpdate
+/etc/network/if-up.d/ntpdate
+/etc/logcheck/ignore.d.server/ntpdate
+/etc/dhcp3/dhclient-exit-hooks.d/ntpdate

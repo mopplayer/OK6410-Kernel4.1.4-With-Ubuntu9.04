@@ -1,0 +1,8 @@
+45f2ddcde473d3b15313933147d33a04  usr/sbin/avivotool
+aa97c970371d4de5c859cb1cb9f82831  usr/sbin/radeontool
+a95da4cfb0d7119b57630c692f828eb9  usr/share/doc/radeontool/README.Debian
+bda66585df535069bed65e7d54f8448f  usr/share/doc/radeontool/copyright
+7049cb58a4f547e2a3f3082ea1357a9e  usr/share/doc/radeontool/changelog.gz
+a4b8de5134c0e86d63aa29b4e90f2291  usr/share/doc/radeontool/lightwatch.pl
+45494f1fd1ec2e2d9fb79e6f41ea0b3f  usr/share/doc/radeontool/changelog.Debian.gz
+9098c0c84d9e91eb79b291636d9e1fc4  usr/share/man/man7/radeontool.7.gz

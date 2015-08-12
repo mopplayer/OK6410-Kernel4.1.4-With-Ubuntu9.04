@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Sun Java Desktop System Documentation Team)</creator>
+    <creator>(Glynn Foster)</creator>
+    <maintainer>(Glynn Foster)</maintainer>
+    <contributor>(Nicholas Curran)</contributor>
+    <title>Руководство Zenity</title>
+    <date>Январь 2003</date>
+    <version identifier="Руководство Zenity В1.0" date="Январь 2003"/>
+    <subject category="GNOME|Utilities"/>
+    <description>
+            Zenity это обновлённая версия gdialog, адаптация программы dialog для среды GNOME. Это приложение позволяет вам изображать диалоговые окна с помощью команд из командной строки и сценариев оболочки.
+    </description>
+    <type>
+       user's guide
+     </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/zenity/ru/zenity.xml"/>
+    <language code="ru"/>
+    <relation seriesid="1e4f989c-287a-11d7-84e2-b1f3b939ba73"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Sun Microsystems"/>
+  </resource>
+</omf>

@@ -1,0 +1,16 @@
+1ce196f7cadc5459ea5c78769b66e801  usr/share/doc/libgnomevfs2-0/copyright
+e31ce1f502aea7fca213a7d0c9958089  usr/share/doc/libgnomevfs2-0/changelog.Debian.gz
+4e29670356c53960a6f3ca2507b51c3c  usr/share/doc/libgnomevfs2-0/TODO
+c8edd543f959766c0f9a1a5c59edc548  usr/share/doc/libgnomevfs2-0/README
+07d4b78777b83586a14349f4a5744b82  usr/share/doc/libgnomevfs2-0/NEWS.gz
+5f795a393e6a398218e4679b7827e834  usr/share/doc/libgnomevfs2-0/AUTHORS
+e21e1387bca501497b45fc650d4b22cf  usr/lib/libgnomevfs-2.so.0.2400.1
+6a8fcab250f31cb33ffe6334b48b2a2b  usr/lib/gnome-vfs-2.0/modules/libgzip.so
+fc7e2e575f3a2081159f991c4ac6b1b5  usr/lib/gnome-vfs-2.0/modules/libcomputer.so
+cae175f45cab9db90f8c7911e69a24ec  usr/lib/gnome-vfs-2.0/modules/libfile.so
+62a4223d686f8ee27854c278337aed47  usr/lib/gnome-vfs-2.0/modules/libvfs-test.so
+82f738d0055bb218fd2908e9190d381e  usr/lib/gnome-vfs-2.0/modules/libdns-sd.so
+87aed6a9393bb4c4bea7e78c22358871  usr/lib/gnome-vfs-2.0/modules/libsftp.so
+e7ccd2c5c64066f0507ab1c7bdc3f035  usr/lib/gnome-vfs-2.0/modules/libnetwork.so
+fa2abec7d2644073a79195d4d7ea732c  usr/lib/gnome-vfs-2.0/modules/libtar.so
+381a2800a38f2641c86546ef9da80b06  usr/lib/gnome-vfs-2.0/gnome-vfs-daemon

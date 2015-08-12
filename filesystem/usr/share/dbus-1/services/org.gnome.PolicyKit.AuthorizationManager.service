@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.gnome.PolicyKit.AuthorizationManager
+Exec=/usr/bin/polkit-gnome-authorization

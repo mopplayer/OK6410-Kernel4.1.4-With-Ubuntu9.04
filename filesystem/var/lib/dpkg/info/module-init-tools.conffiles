@@ -1,0 +1,7 @@
+/etc/init.d/module-init-tools
+/etc/depmod.d/ubuntu.conf
+/etc/modprobe.d/blacklist-framebuffer.conf
+/etc/modprobe.d/blacklist-ath_pci.conf
+/etc/modprobe.d/blacklist.conf
+/etc/modprobe.d/blacklist-watchdog.conf
+/etc/modprobe.d/blacklist-firewire.conf

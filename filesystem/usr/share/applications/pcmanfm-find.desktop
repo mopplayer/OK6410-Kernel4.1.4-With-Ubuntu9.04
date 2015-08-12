@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Search for Files or Folders
+Categories=Application;Utility;GTK;
+Name[zh_TW]=尋找檔案或資料夾
+Exec=pcmanfm --find-files %F
+Icon=gtk-find
+StartupNotify=true
+Type=Application
+Terminal=false
+MimeType=x-directory/normal;inode/directory;
+Comment=Search for files and folders in disks
+Comment[zh_TW]=在磁碟中尋找檔案或資料夾
+

@@ -1,0 +1,213 @@
+=head1 NAME
+
+Gnome2::ColorPicker
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gtk2::Button
+                                +----Gnome2::ColorPicker
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::ColorPicker-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 (r, g, b, a) = $cp-E<gt>B<get_d> 
+
+=over
+
+=back
+
+=head2 $cp-E<gt>B<set_d> ($r, $g, $b, $a)
+
+=over
+
+=over
+
+=item * $r (double) 
+
+=item * $g (double) 
+
+=item * $b (double) 
+
+=item * $a (double) 
+
+=back
+
+=back
+
+=head2 boolean = $cp-E<gt>B<get_dither> 
+
+=over
+
+=back
+
+=head2 $cp-E<gt>B<set_dither> ($dither)
+
+=over
+
+=over
+
+=item * $dither (boolean) 
+
+=back
+
+=back
+
+=head2 (r, g, b, a) = $cp-E<gt>B<get_i16> 
+
+=over
+
+=back
+
+=head2 $cp-E<gt>B<set_i16> ($r, $g, $b, $a)
+
+=over
+
+=over
+
+=item * $r (unsigned) 
+
+=item * $g (unsigned) 
+
+=item * $b (unsigned) 
+
+=item * $a (unsigned) 
+
+=back
+
+=back
+
+=head2 (r, g, b, a) = $cp-E<gt>B<get_i8> 
+
+=over
+
+=back
+
+=head2 $cp-E<gt>B<set_i8> ($r, $g, $b, $a)
+
+=over
+
+=over
+
+=item * $r (unsigned) 
+
+=item * $g (unsigned) 
+
+=item * $b (unsigned) 
+
+=item * $a (unsigned) 
+
+=back
+
+=back
+
+=head2 string = $cp-E<gt>B<get_title> 
+
+=over
+
+=back
+
+=head2 $cp-E<gt>B<set_title> ($title)
+
+=over
+
+=over
+
+=item * $title (string) 
+
+=back
+
+=back
+
+=head2 boolean = $cp-E<gt>B<get_use_alpha> 
+
+=over
+
+=back
+
+=head2 $cp-E<gt>B<set_use_alpha> ($use_alpha)
+
+=over
+
+=over
+
+=item * $use_alpha (boolean) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'alpha' (Glib::UInt : readable / writable)
+
+The alpha value of the chosen color
+
+=item 'blue' (Glib::UInt : readable / writable)
+
+The amount of blue in the chosen color
+
+=item 'dither' (boolean : readable / writable)
+
+Whether or not to dither to color
+
+=item 'green' (Glib::UInt : readable / writable)
+
+The amount of green in the chosen color
+
+=item 'red' (Glib::UInt : readable / writable)
+
+The amount of red in the chosen color
+
+=item 'title' (string : readable / writable)
+
+The title to give to the color picker
+
+=item 'use-alpha' (boolean : readable / writable)
+
+Whether or not to give the color an alpha value
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<color-set> (Gnome2::ColorPicker, Glib::UInt, Glib::UInt, Glib::UInt, Glib::UInt)
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>, L<Gtk2::Button>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

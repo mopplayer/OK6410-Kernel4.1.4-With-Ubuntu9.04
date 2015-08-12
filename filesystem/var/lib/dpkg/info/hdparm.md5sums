@@ -1,0 +1,15 @@
+4f1b743e6f71b833578546f20f734656  sbin/hdparm
+ffa5a66b97506d945d416f92bcfc719c  lib/udev/rules.d/85-hdparm.rules
+061fdab89e49d2debcc3db4165d8d5f9  lib/udev/hdparm
+a82d7ba3ade9e8ec902749db98c592f3  usr/share/doc/hdparm/copyright
+450e57ea7f058a7511c839a8c6bbc969  usr/share/doc/hdparm/README.acoustic
+514625d432c02a1439b2e1349e1ea574  usr/share/doc/hdparm/changelog.Debian.gz
+06f21a3c122f50040a29904b4f9cbdd4  usr/share/doc/hdparm/TODO
+7297d8033d9e44a833814d06ed8942ff  usr/share/doc/hdparm/contrib/idectl
+aea31ca0fe9cc8671fa161383b9bb931  usr/share/doc/hdparm/contrib/ultrabayd
+baaa6f6947f4c67536ce3f6262ba7691  usr/share/doc/hdparm/contrib/README
+a2521a456490018499963bdea6d1c897  usr/share/doc/hdparm/contrib/fix_standby.c.gz
+0e14df85c23ac02f8519d38fcdb8db89  usr/share/doc/hdparm/README.Debian.gz
+57730d35e70e71bb63f4ed707668452c  usr/share/doc/hdparm/changelog.old.gz
+63801438bb54c78aa9b57eb00e32b1ef  usr/share/man/man5/hdparm.conf.5.gz
+df221d797e13a261d20f665908d32727  usr/share/man/man8/hdparm.8.gz

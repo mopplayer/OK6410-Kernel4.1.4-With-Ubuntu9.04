@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -e
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE" ]; then
+        md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+        old_md5sum="`sed -n -e \"/^Conffiles:/,/^[^ ]/{\\\\' $CONFFILE '{s/ obsolete$//;s/.* //;p}}\" /var/lib/dpkg/status`"
+        if [ "$md5sum" = "$old_md5sum" ]; then
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+        fi
+    fi
+}
+
+case "$1" in
+  install|upgrade)
+	# The following must be deleted at preinst time
+	# so that dpkg can remove their parent directories
+	# Delete obsolete dev.d symlinks
+	for N in 0 1 2 3 4 5 6 7 ; do
+		D="/etc/dev.d/snd/controlC$N"
+		if [ -d "$D" ] ; then
+			L="$D/alsa-base.dev"
+			rm -fv "$L"
+		fi
+	done
+	# Delete obsolete dev.d script
+	rm -fv /etc/alsa/dev.d/alsa-base
+	# Delete obsolete init script
+	rm -fv /etc/init.d/alsa
+	# Rename alsa-base
+	if dpkg --compare-versions "$2" lt "1.0.18.dfsg-1ubuntu5"; then
+	    prep_mv_conffile /etc/modprobe.d/alsa-base \
+	    		     /etc/modprobe.d/alsa-base.conf
+	    prep_mv_conffile /etc/modprobe.d/blacklist-modem \
+	    		     /etc/modprobe.d/blacklist-modem.conf
+	fi
+	;;
+# abort-upgrade)
+esac
+
+
+

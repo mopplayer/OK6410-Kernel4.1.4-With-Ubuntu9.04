@@ -1,0 +1,12 @@
+93f111eb5f0211500bbcc7e51da19ea2  usr/share/lintian/overrides/libkrb53
+1d592b61381f4c221776d8e32cf81638  usr/share/doc/libkrb53/copyright
+e6be06a9b9edd33a1d1676aa0302846a  usr/share/doc/libkrb53/README.gz
+3691c8ea81b9651950f53b44e51fc7d3  usr/share/doc/libkrb53/changelog.Debian.gz
+fbeff61fdc2688060fd7f5ade73648f5  usr/share/doc/libkrb53/README.Debian.gz
+d3e8c052366e1db1e86eb1318bc39851  usr/share/doc/libkrb53/NEWS.Debian.gz
+c4bff218822af90640e68c7e4daea03e  usr/lib/libk5crypto.so.3.1
+7e597a478d72257a84248c82e7efd4be  usr/lib/libkrb4.so.2.0
+8bc6cf14a245c03c1a325846cad00128  usr/lib/libdes425.so.3.0
+583f92a0abcf6344d8a79c644c50092e  usr/lib/libgssapi_krb5.so.2.2
+2db076c65556eb91013d25e3a08b07e8  usr/lib/libkrb5.so.3.3
+1f4929ba4e109fde24d07cef38bf054f  usr/lib/libkrb5support.so.0.1

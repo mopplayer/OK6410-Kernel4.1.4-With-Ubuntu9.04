@@ -1,0 +1,9 @@
+f3237a3209ada225170a01b69c966881  usr/lib/libarchive.so.2.4.17
+948cac649d80db5986522b96bc3b9140  usr/share/man/man5/mtree.5.gz
+f1fbf5d578af580ba614de8884fe8a89  usr/share/man/man5/libarchive-formats.5.gz
+11d8bed3eef7021f0e635e5ab99ababc  usr/share/man/man5/tar.5.gz
+80f2f534b02e5dde95cb0344e2c7a9fa  usr/share/man/man5/cpio.5.gz
+26ddfed9857b0b377cf8a19ca255cd3c  usr/share/lintian/overrides/libarchive1
+5d01759637b9a69f1d3d586ea22a4c51  usr/share/doc/libarchive1/changelog.gz
+a4a1657113d7d77c745a22789e755613  usr/share/doc/libarchive1/changelog.Debian.gz
+f7dab0330c80f798480889b7f63786f1  usr/share/doc/libarchive1/copyright

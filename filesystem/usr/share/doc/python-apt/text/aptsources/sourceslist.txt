@@ -1,0 +1,92 @@
+
+``aptsources.sourceslist`` --- Provide an abstraction of the sources.list
+*************************************************************************
+
+Note: This part of the documentation is created automatically.
+
+class aptsources.sourceslist.NullMatcher
+
+   a Matcher that does nothing
+
+   match(s)
+
+class aptsources.sourceslist.SourceEntry(line, file=None)
+
+   single sources.list entry
+
+   mysplit(line)
+
+      a split() implementation that understands the sources.list
+      format better and takes [] into account (for e.g. cdroms)
+
+   parse(line)
+
+      parse a given sources.list (textual) line and break it up into
+      the field we have
+
+   set_enabled(new_value)
+
+      set a line to enabled or disabled
+
+   str()
+
+      return the current line as string
+
+class aptsources.sourceslist.SourceEntryMatcher(matcherPath)
+
+   matcher class to make a source entry look nice lots of predefined
+   matchers to make it i18n/gettext friendly
+
+   match(source)
+
+      Add a matching template to the source
+
+class aptsources.sourceslist.SourcesList(withMatcher=True, matcherPath='/usr/share/python-apt/templates/')
+
+   represents the full sources.list + sources.list.d file
+
+   add(type, uri, dist, orig_comps, comment='', pos=-1, file=None)
+
+      Add a new source to the sources.list. The method will search for
+      existing matching repos and will try to reuse them as far as
+      possible
+
+   backup(backup_ext=None)
+
+      make a backup of the current source files, if no backup
+      extension is given, the current date/time is used (and returned)
+
+   check_for_relations(sources_list)
+
+      get all parent and child channels in the sources list
+
+   load(file)
+
+      (re)load the current sources
+
+   refresh()
+
+      update the list of known entries
+
+   remove(source_entry)
+
+      remove the specified entry from the sources.list
+
+   restoreBackup(backup_ext)
+
+      restore sources.list files based on the backup extension
+
+   save()
+
+      save the current sources
+
+aptsources.sourceslist.is_mirror(master_uri, compare_uri)
+
+   check if the given add_url is idential or a mirror of orig_uri e.g.
+   master_uri = archive.ubuntu.com
+
+      compare_uri = de.archive.ubuntu.com -> True
+
+aptsources.sourceslist.uniq(s)
+
+   simple and efficient way to return uniq list

@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/lib
+/usr/lib/libvte.so.9.5.0
+/usr/lib/libvte9
+/usr/lib/libvte9/interpret
+/usr/lib/libvte9/window
+/usr/lib/libvte9/osc
+/usr/lib/libvte9/decset
+/usr/lib/libvte9/gnome-pty-helper
+/usr/lib/libvte9/slowcat
+/usr/share/doc/libvte9
+/usr/lib/libvte.so.9

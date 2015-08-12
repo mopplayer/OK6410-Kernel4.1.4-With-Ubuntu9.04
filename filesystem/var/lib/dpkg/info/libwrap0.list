@@ -1,0 +1,11 @@
+/.
+/lib
+/lib/libwrap.so.0.7.6
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libwrap0
+/usr/share/doc/libwrap0/changelog.Debian.gz
+/usr/share/doc/libwrap0/changelog.gz
+/usr/share/doc/libwrap0/copyright
+/lib/libwrap.so.0

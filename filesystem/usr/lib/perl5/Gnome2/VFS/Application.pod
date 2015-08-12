@@ -1,0 +1,182 @@
+=head1 NAME
+
+Gnome2::VFS::Application
+
+
+=head1 METHODS
+
+=head2 $app_id-E<gt>B<add_mime_type> ($mime_type)
+
+=over
+
+=over
+
+=item * $mime_type (string) 
+
+=back
+
+=back
+
+=head2 list = $app_id-E<gt>B<get_bool_value> ($key)
+
+=over
+
+=over
+
+=item * $key (string) 
+
+=back
+
+
+Returns the actual value and a boolean indicating whether the requested key was
+found.
+
+
+=back
+
+=head2 $app_id-E<gt>B<set_bool_value> ($key, $value)
+
+=over
+
+=over
+
+=item * $key (string) 
+
+=item * $value (boolean) 
+
+=back
+
+=back
+
+=head2 $app_id-E<gt>B<clear_mime_types> 
+
+=over
+
+=back
+
+=head2 boolean = $app_id-E<gt>B<exists> 
+
+=over
+
+=back
+
+=head2 list = $app_id-E<gt>B<get_keys> 
+
+=over
+
+
+Returns a list of valid keys for that application.
+
+
+=back
+
+=head2 application = $app_id-E<gt>B<get_mime_application> 
+
+=over
+
+=back
+
+=head2 list = $app_id-E<gt>B<get_mime_types> 
+
+=over
+
+
+Returns a list of MIME types this application can handle.
+
+
+=back
+
+=head2 string = $app_id-E<gt>B<peek_value> ($key)
+
+=over
+
+=over
+
+=item * $key (string) 
+
+=back
+
+=back
+
+=head2 $app_id-E<gt>B<remove_application> 
+
+=over
+
+=back
+
+=head2 $app_id-E<gt>B<remove_mime_type> ($mime_type)
+
+=over
+
+=over
+
+=item * $mime_type (string) 
+
+=back
+
+=back
+
+=head2 boolean = $app_id-E<gt>B<supports_mime_type> ($mime_type)
+
+=over
+
+=over
+
+=item * $mime_type (string) 
+
+=back
+
+=back
+
+=head2 boolean = $app_id-E<gt>B<supports_uri_scheme> ($uri_scheme)
+
+=over
+
+=over
+
+=item * $uri_scheme (string) 
+
+=back
+
+=back
+
+=head2 $app_id-E<gt>B<unset_key> ($key)
+
+=over
+
+=over
+
+=item * $key (string) 
+
+=back
+
+=back
+
+=head2 $app_id-E<gt>B<set_value> ($key, $value)
+
+=over
+
+=over
+
+=item * $key (string) 
+
+=item * $value (string) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

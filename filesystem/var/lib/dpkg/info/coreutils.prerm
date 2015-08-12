@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_installinfo
+if [ "$1" = remove ] || [ "$1" = upgrade ]; then
+	install-info --quiet --remove /usr/share/info/coreutils.info
+fi
+# End automatically added section
+
+

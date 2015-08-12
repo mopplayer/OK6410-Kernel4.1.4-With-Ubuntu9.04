@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Open Folder
+TryExec=pcmanfm
+Exec=pcmanfm %U
+NoDisplay=true
+Terminal=false
+Icon=folder-open
+StartupNotify=true
+Type=Application
+MimeType=x-directory/gnome-default-handler;x-directory/normal;inode/directory;
+NotShowIn=GNOME;
+

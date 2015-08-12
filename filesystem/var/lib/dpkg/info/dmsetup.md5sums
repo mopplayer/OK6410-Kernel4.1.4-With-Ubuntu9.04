@@ -1,0 +1,8 @@
+f131520a98e6ffda1bd478130f4bbc73  sbin/dmsetup
+29dbf7b60359d4ca1d87ca0b83ac2ffe  usr/share/initramfs-tools/hooks/dmsetup
+96f326dbbc7f18f7d38cf9c0c55d72b5  usr/share/doc/dmsetup/copyright
+2550b304e22c999746df265c41e97f39  usr/share/doc/dmsetup/changelog.gz
+638c7ae7848728b5127e54cfeffca646  usr/share/doc/dmsetup/INTRO
+142866bafc497987c0c087fcb892cfca  usr/share/doc/dmsetup/changelog.Debian.gz
+5ee30539cadd881bb0ec14573d250a9b  usr/share/man/man8/dmsetup.8.gz
+ac6eaa95b66251a63c3cd6268951f3b4  lib/udev/rules.d/65-dmsetup.rules

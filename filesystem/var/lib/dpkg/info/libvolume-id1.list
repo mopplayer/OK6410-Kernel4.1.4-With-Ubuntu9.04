@@ -1,0 +1,12 @@
+/.
+/lib
+/lib/libvolume_id.so.1.1.0
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libvolume-id1
+/usr/share/doc/libvolume-id1/copyright
+/usr/share/doc/libvolume-id1/changelog.gz
+/usr/share/doc/libvolume-id1/changelog.Debian.gz
+/usr/share/doc/libvolume-id1/README
+/lib/libvolume_id.so.1

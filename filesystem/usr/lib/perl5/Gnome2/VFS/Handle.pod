@@ -1,0 +1,284 @@
+=head1 NAME
+
+Gnome2::VFS::Handle
+
+
+=head1 METHODS
+
+=head2 result = $handle-E<gt>B<close> 
+
+=over
+
+=back
+
+=head2 list = $handle-E<gt>B<get_file_info> ($options)
+
+=over
+
+=over
+
+=item * $options (Gnome2::VFS::FileInfoOptions) 
+
+=back
+
+
+Returns a GnomeVFSResult and a GnomeVFSFileInfo.
+
+
+=back
+
+=head2 result = $handle-E<gt>B<forget_cache> ($offset, $size)
+
+=over
+
+=over
+
+=item * $offset (unsigned) 
+
+=item * $size (unsigned) 
+
+=back
+
+Since: vfs 2.12
+
+=back
+
+=head2 list = $handle-E<gt>B<read> ($bytes)
+
+=over
+
+=over
+
+=item * $bytes (unsigned) 
+
+=back
+
+
+Returns a GnomeVFSResult, the number of bytes read and the buffer containing
+the read content.
+
+
+=back
+
+=head2 result = $handle-E<gt>B<seek> ($whence, $offset)
+
+=over
+
+=over
+
+=item * $whence (Gnome2::VFS::SeekPosition) 
+
+=item * $offset (unsigned) 
+
+=back
+
+=back
+
+=head2 list = $handle-E<gt>B<tell> 
+
+=over
+
+
+Returns a GnomeVFSResult and the offset.
+
+
+=back
+
+=head2 result = $handle-E<gt>B<truncate> ($length)
+
+=over
+
+=over
+
+=item * $length (unsigned) 
+
+=back
+
+=back
+
+=head2 list = $handle-E<gt>B<write> ($buffer, $bytes)
+
+=over
+
+=over
+
+=item * $buffer (string) 
+
+=item * $bytes (unsigned) 
+
+=back
+
+
+Returns a GnomeVFSResult and the number of bytes written.
+
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::VFS::FileInfoOptions
+
+=over
+
+=item * 'default' / 'GNOME_VFS_FILE_INFO_DEFAULT'
+
+=item * 'get-mime-type' / 'GNOME_VFS_FILE_INFO_GET_MIME_TYPE'
+
+=item * 'force-fast-mime-type' / 'GNOME_VFS_FILE_INFO_FORCE_FAST_MIME_TYPE'
+
+=item * 'force-slow-mime-type' / 'GNOME_VFS_FILE_INFO_FORCE_SLOW_MIME_TYPE'
+
+=item * 'follow-links' / 'GNOME_VFS_FILE_INFO_FOLLOW_LINKS'
+
+=item * 'get-access-rights' / 'GNOME_VFS_FILE_INFO_GET_ACCESS_RIGHTS'
+
+=item * 'name-only' / 'GNOME_VFS_FILE_INFO_NAME_ONLY'
+
+=item * 'get-acl' / 'GNOME_VFS_FILE_INFO_GET_ACL'
+
+=item * 'get-selinux-context' / 'GNOME_VFS_FILE_INFO_GET_SELINUX_CONTEXT'
+
+=back
+
+
+=head2 enum Gnome2::VFS::Result
+
+=over
+
+=item * 'ok' / 'GNOME_VFS_OK'
+
+=item * 'error-not-found' / 'GNOME_VFS_ERROR_NOT_FOUND'
+
+=item * 'error-generic' / 'GNOME_VFS_ERROR_GENERIC'
+
+=item * 'error-internal' / 'GNOME_VFS_ERROR_INTERNAL'
+
+=item * 'error-bad-parameters' / 'GNOME_VFS_ERROR_BAD_PARAMETERS'
+
+=item * 'error-not-supported' / 'GNOME_VFS_ERROR_NOT_SUPPORTED'
+
+=item * 'error-io' / 'GNOME_VFS_ERROR_IO'
+
+=item * 'error-corrupted-data' / 'GNOME_VFS_ERROR_CORRUPTED_DATA'
+
+=item * 'error-wrong-format' / 'GNOME_VFS_ERROR_WRONG_FORMAT'
+
+=item * 'error-bad-file' / 'GNOME_VFS_ERROR_BAD_FILE'
+
+=item * 'error-too-big' / 'GNOME_VFS_ERROR_TOO_BIG'
+
+=item * 'error-no-space' / 'GNOME_VFS_ERROR_NO_SPACE'
+
+=item * 'error-read-only' / 'GNOME_VFS_ERROR_READ_ONLY'
+
+=item * 'error-invalid-uri' / 'GNOME_VFS_ERROR_INVALID_URI'
+
+=item * 'error-not-open' / 'GNOME_VFS_ERROR_NOT_OPEN'
+
+=item * 'error-invalid-open-mode' / 'GNOME_VFS_ERROR_INVALID_OPEN_MODE'
+
+=item * 'error-access-denied' / 'GNOME_VFS_ERROR_ACCESS_DENIED'
+
+=item * 'error-too-many-open-files' / 'GNOME_VFS_ERROR_TOO_MANY_OPEN_FILES'
+
+=item * 'error-eof' / 'GNOME_VFS_ERROR_EOF'
+
+=item * 'error-not-a-directory' / 'GNOME_VFS_ERROR_NOT_A_DIRECTORY'
+
+=item * 'error-in-progress' / 'GNOME_VFS_ERROR_IN_PROGRESS'
+
+=item * 'error-interrupted' / 'GNOME_VFS_ERROR_INTERRUPTED'
+
+=item * 'error-file-exists' / 'GNOME_VFS_ERROR_FILE_EXISTS'
+
+=item * 'error-loop' / 'GNOME_VFS_ERROR_LOOP'
+
+=item * 'error-not-permitted' / 'GNOME_VFS_ERROR_NOT_PERMITTED'
+
+=item * 'error-is-directory' / 'GNOME_VFS_ERROR_IS_DIRECTORY'
+
+=item * 'error-no-memory' / 'GNOME_VFS_ERROR_NO_MEMORY'
+
+=item * 'error-host-not-found' / 'GNOME_VFS_ERROR_HOST_NOT_FOUND'
+
+=item * 'error-invalid-host-name' / 'GNOME_VFS_ERROR_INVALID_HOST_NAME'
+
+=item * 'error-host-has-no-address' / 'GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS'
+
+=item * 'error-login-failed' / 'GNOME_VFS_ERROR_LOGIN_FAILED'
+
+=item * 'error-cancelled' / 'GNOME_VFS_ERROR_CANCELLED'
+
+=item * 'error-directory-busy' / 'GNOME_VFS_ERROR_DIRECTORY_BUSY'
+
+=item * 'error-directory-not-empty' / 'GNOME_VFS_ERROR_DIRECTORY_NOT_EMPTY'
+
+=item * 'error-too-many-links' / 'GNOME_VFS_ERROR_TOO_MANY_LINKS'
+
+=item * 'error-read-only-file-system' / 'GNOME_VFS_ERROR_READ_ONLY_FILE_SYSTEM'
+
+=item * 'error-not-same-file-system' / 'GNOME_VFS_ERROR_NOT_SAME_FILE_SYSTEM'
+
+=item * 'error-name-too-long' / 'GNOME_VFS_ERROR_NAME_TOO_LONG'
+
+=item * 'error-service-not-available' / 'GNOME_VFS_ERROR_SERVICE_NOT_AVAILABLE'
+
+=item * 'error-service-obsolete' / 'GNOME_VFS_ERROR_SERVICE_OBSOLETE'
+
+=item * 'error-protocol-error' / 'GNOME_VFS_ERROR_PROTOCOL_ERROR'
+
+=item * 'error-no-master-browser' / 'GNOME_VFS_ERROR_NO_MASTER_BROWSER'
+
+=item * 'error-no-default' / 'GNOME_VFS_ERROR_NO_DEFAULT'
+
+=item * 'error-no-handler' / 'GNOME_VFS_ERROR_NO_HANDLER'
+
+=item * 'error-parse' / 'GNOME_VFS_ERROR_PARSE'
+
+=item * 'error-launch' / 'GNOME_VFS_ERROR_LAUNCH'
+
+=item * 'error-timeout' / 'GNOME_VFS_ERROR_TIMEOUT'
+
+=item * 'error-nameserver' / 'GNOME_VFS_ERROR_NAMESERVER'
+
+=item * 'error-locked' / 'GNOME_VFS_ERROR_LOCKED'
+
+=item * 'error-deprecated-function' / 'GNOME_VFS_ERROR_DEPRECATED_FUNCTION'
+
+=item * 'error-invalid-filename' / 'GNOME_VFS_ERROR_INVALID_FILENAME'
+
+=item * 'error-not-a-symbolic-link' / 'GNOME_VFS_ERROR_NOT_A_SYMBOLIC_LINK'
+
+=item * 'num-errors' / 'GNOME_VFS_NUM_ERRORS'
+
+=back
+
+
+=head2 enum Gnome2::VFS::SeekPosition
+
+=over
+
+=item * 'start' / 'GNOME_VFS_SEEK_START'
+
+=item * 'current' / 'GNOME_VFS_SEEK_CURRENT'
+
+=item * 'end' / 'GNOME_VFS_SEEK_END'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

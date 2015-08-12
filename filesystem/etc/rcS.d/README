@@ -1,0 +1,20 @@
+The scripts in this directory whose names begin with an 'S' are executed
+once when booting the system, even when booting directly into single user
+mode.
+
+The scripts are all symbolic links whose targets are located in
+/etc/init.d/ .
+
+To disable a script in this directory, rename it so that it begins with
+a 'K'.
+
+For more information see /etc/init.d/README.
+
+The following sequence points are defined at this time:
+
+* After the S40 scripts have executed, all local file systems are mounted
+  and networking is available. All device drivers have been initialized.
+
+* After the S60 scripts have executed, the system clock has been set, NFS
+  filesystems have been mounted (unless the system depends on the automounter,
+  which is started later) and the filesystems have been cleaned.

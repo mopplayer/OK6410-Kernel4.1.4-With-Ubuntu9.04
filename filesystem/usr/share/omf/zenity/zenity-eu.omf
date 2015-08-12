@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Sun Java Mahaigaineko Sistemaren dokumentazio-taldea)</creator>
+    <creator>(Glynn Foster)</creator>
+    <maintainer>(Glynn Foster)</maintainer>
+    <contributor>(Nicholas Curran)</contributor>
+    <title>Zenity-ren eskuliburua</title>
+    <date>2003ko urtarrila</date>
+    <version identifier="Zenity-ren eskuliburuaren 1.0 bertsioa" date="2003ko urtarrila"/>
+    <subject category="GNOME|Utilities"/>
+    <description>
+            Gdialog-en berridazketa da Zenity, hau da, GNOMEren dialog-en bertsioa; komando-lerrotik eta shell script-etik elkarrizketa-koadroak bistaratzeko aukera ematen dizu.
+    </description>
+    <type>
+       user's guide
+     </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/zenity/eu/zenity.xml"/>
+    <language code="eu"/>
+    <relation seriesid="1e4f989c-287a-11d7-84e2-b1f3b939ba73"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Sun Microsystems"/>
+  </resource>
+</omf>

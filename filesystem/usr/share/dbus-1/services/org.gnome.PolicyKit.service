@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.gnome.PolicyKit
+Exec=/usr/lib/policykit-gnome/polkit-gnome-manager

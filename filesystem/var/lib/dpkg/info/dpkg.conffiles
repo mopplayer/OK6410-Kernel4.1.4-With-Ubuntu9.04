@@ -1,0 +1,4 @@
+/etc/dpkg/origins/debian
+/etc/dpkg/dpkg.cfg
+/etc/logrotate.d/dpkg
+/etc/alternatives/README

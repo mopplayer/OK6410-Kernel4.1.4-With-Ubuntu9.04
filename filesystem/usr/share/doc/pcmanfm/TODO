@@ -1,0 +1,6 @@
+1. Support user scripts for mime-type handling. (Add user 
+   extended options in popup menu for selected files)	PENDING
+2. Improve desktop icon support.
+3. Support remote file systems via FUSE.
+4. Support tags
+

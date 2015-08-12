@@ -1,0 +1,52 @@
+#! /bin/sh
+
+umask 022
+set -e
+
+install-info --quiet --section "Development" "Development" \
+  --description="System V interprocess communication facilities" \
+  /usr/share/info/ipc.info.gz
+update-alternatives --install /usr/bin/pager pager /bin/more 50 \
+  --slave /usr/share/man/man1/pager.1.gz pager.1.gz /usr/share/man/man1/more.1.gz
+update-alternatives --install /usr/bin/pager pager /usr/bin/pg 10 \
+  --slave /usr/share/man/man1/pager.1.gz pager.1.gz /usr/share/man/man1/pg.1.gz
+
+#
+#	Check if links to hwclock.sh are present in runlevel "6".
+#	If not, remove the ones from runlevel "S" so that
+#	update-rc.d will do it's job.
+#
+if [ ! -f /etc/rc6.d/???hwclock.sh ] && [ ! -f /etc/rc0.d/???hwclock.sh ]
+then
+	rm -f /etc/rcS.d/???hwclock.sh
+fi
+
+# hwclock works on all Linux architectures, except s390 (and s390x, of course).
+if [ "$(uname -s)" = "Linux" ]; then
+    model=$(uname -m)
+    if [ ${model%x} != "s390" ]; then
+        update-rc.d -f hwclock.sh remove 2>/dev/null > /dev/null
+        update-rc.d hwclock.sh stop 25 0 6 . > /dev/null
+    fi
+fi
+
+if [ "$1" = "configure" ] && dpkg --compare-versions "$2" lt "2.14.2-1ubuntu4"; then
+	# Remove old init script
+	update-rc.d -f hwclockfirst.sh remove 2>/dev/null > /dev/null
+	rm -f /etc/init.d/hwclockfirst.sh
+
+	# Remove adjtime file if unused
+	if ! grep -qe '^[^#]*/sbin/hwclock.*--adjust' /etc/init.d/hwclock.sh; then
+		rm -f /etc/adjtime
+	fi
+fi
+
+if [ -x /usr/sbin/update-mime ]; then
+	update-mime
+fi
+
+if [ -L /usr/doc/util-linux ] ; then
+    rm -f /usr/doc/util-linux
+fi
+
+

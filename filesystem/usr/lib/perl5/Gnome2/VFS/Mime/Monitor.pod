@@ -1,0 +1,41 @@
+=head1 NAME
+
+Gnome2::VFS::Mime::Monitor
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gnome2::VFS::Mime::Monitor
+
+
+=head1 METHODS
+
+=head2 monitor = Gnome2::VFS::Mime::Monitor-E<gt>B<get> 
+
+=over
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<data-changed> (Gnome2::VFS::Mime::Monitor)
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>, L<Glib::Object>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

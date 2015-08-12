@@ -1,0 +1,32 @@
+#!/bin/sh
+set -e
+
+# Create this dir if required for ourselves rather than
+# depending strictly on udev.
+mkdir -p /etc/udev/rules.d
+
+update-rc.d -f xserver-xorg-input-wacom remove
+
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/xserver-xorg-input-wacom.rules" ]; then
+		echo "Preserving user changes to /lib/udev/rules.d/40-xserver-xorg-input-wacom.rules ..."
+		if [ -e "/lib/udev/rules.d/40-xserver-xorg-input-wacom.rules" ]; then
+			mv -f "/lib/udev/rules.d/40-xserver-xorg-input-wacom.rules" "/lib/udev/rules.d/40-xserver-xorg-input-wacom.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/xserver-xorg-input-wacom.rules" "/lib/udev/rules.d/40-xserver-xorg-input-wacom.rules"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/rules.d/50-xserver-xorg-input-wacom.rules" ]; then
+		echo "Preserving user changes to /etc/udev/rules.d/40-xserver-xorg-input-wacom.rules ..."
+		mv -f "/etc/udev/rules.d/50-xserver-xorg-input-wacom.rules" "/etc/udev/rules.d/40-xserver-xorg-input-wacom.rules"
+	fi
+fi
+# End automatically added section
+
+
+exit 0
+

@@ -1,0 +1,16 @@
+#! /bin/sh -e
+
+pkg=sed
+
+case "$1" in
+  (configure|abort-remove|abort-deconfigure)
+	install-info --quiet --section "General commands" "General commands" \
+		/usr/share/info/sed.info
+	;;
+  (abort-upgrade)
+	# Nothing to undo
+	;;
+  (*)
+	echo "$0: Undocumented call: \"$@\"" >&2
+	exit 1;
+esac

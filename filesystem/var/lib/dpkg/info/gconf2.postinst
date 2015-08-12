@@ -1,0 +1,43 @@
+#!/bin/sh
+set -e
+
+if [ "$1" != "configure" ] || dpkg --compare-versions "$2" lt 2.19.1-2; then
+    update-alternatives \
+	--install /usr/bin/gconftool gconftool /usr/bin/gconftool-2 25 \
+	--slave /usr/share/man/man1/gconftool.1.gz gconftool.1.gz \
+		/usr/share/man/man1/gconftool-2.1.gz
+fi
+
+
+
+for GCONF_DIR in /var/lib/gconf/defaults \
+		 /etc/gconf/gconf.xml.mandatory \
+		 /etc/gconf/gconf.xml.defaults ; do
+  GCONF_TREE=$GCONF_DIR/%gconf-tree.xml
+  if [ ! -f "$GCONF_TREE" ]; then
+    gconf-merge-tree "$GCONF_DIR"
+    chmod 644 "$GCONF_TREE"
+    find "$GCONF_DIR" -mindepth 1 -maxdepth 1 -type d -exec rm -rf \{\} \;
+    rm -f "$GCONF_DIR/%gconf.xml"
+    SIGNAL_DAEMONS=yes
+  fi
+done
+
+if [ -d /usr/share/gconf/schemas ]; then
+  if [ "$1" = configure ] && [ -z "$2" ] || [ ! -s /var/lib/gconf/defaults/%gconf-tree.xml ]; then
+    # First installation: rebuild the defaults database in case 
+    # of packages shipping schemas but not depending on gconf2
+    gconf-schemas --register-all
+    SIGNAL_DAEMONS=no
+  fi
+fi
+if [ -d /usr/share/gconf/defaults ] && [ ! -s /var/lib/gconf/debian.defaults/%gconf-tree.xml ]; then
+  # Same for the defaults
+  update-gconf-defaults
+  SIGNAL_DAEMONS=no
+fi
+
+if [ "$SIGNAL_DAEMONS" = yes ]; then
+  # re-read gconf databases
+  kill -s HUP `pidof gconfd-2` >/dev/null 2>&1 || true
+fi

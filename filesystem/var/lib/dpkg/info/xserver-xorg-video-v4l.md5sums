@@ -1,0 +1,5 @@
+7d4d018f6bbff7e42672d1aabc75c5cf  usr/share/doc/xserver-xorg-video-v4l/copyright
+2103db426a086e5047c11b1c0ef0915e  usr/share/doc/xserver-xorg-video-v4l/changelog.gz
+c207eada46995283d537296b2fe49dd4  usr/share/doc/xserver-xorg-video-v4l/changelog.Debian.gz
+1e4bd1d5fdb690df893921f863a0ae83  usr/share/man/man4/v4l.4.gz
+5315a09e04b9ddd79f77b33a9d4df54d  usr/lib/xorg/modules/drivers/v4l_drv.so

@@ -1,0 +1,103 @@
+#!/bin/sh -e
+# This script can be called in the following ways:
+#
+# Before the package is installed:
+#	<new-preinst> install
+#
+# Before removed package is upgraded:
+#	<new-preinst> install <old-version>
+#
+# Before the package is upgraded:
+#	<new-preinst> upgrade <old-version>
+#
+#
+# If postrm fails during upgrade or fails on failed upgrade:
+#	<old-preinst> abort-upgrade <new-version>
+
+
+# Prepare to remove a no-longer used conffile
+prep_rm_conffile()
+{
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE" ]; then
+        md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+        old_md5sum="`sed -n -e \"/^Conffiles:/,/^[^ ]/{\\\\' $CONFFILE '{s/ obsolete$//;s/.* //;p}}\" /var/lib/dpkg/status`"
+        if [ "$md5sum" != "$old_md5sum" ]; then
+            echo "Obsolete conffile $CONFFILE has been modified by you, renaming to .dpkg-bak"
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+	else
+	    mv -f "$CONFFILE" "$CONFFILE".dpkg-obsolete
+	fi
+    fi
+}
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE" ]; then
+        md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+        old_md5sum="`sed -n -e \"/^Conffiles:/,/^[^ ]/{\\\\' $CONFFILE '{s/ obsolete$//;s/.* //;p}}\" /var/lib/dpkg/status`"
+        if [ "$md5sum" = "$old_md5sum" ]; then
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+	else
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-moving
+        fi
+    fi
+}
+
+
+# Prepare to migrate config to 3.7-style
+prep_migrate_config_37()
+{
+    prep_rm_conffile /etc/modprobe.d/aliases
+    prep_rm_conffile /etc/modprobe.d/isapnp
+    prep_rm_conffile /etc/modprobe.d/options
+
+    prep_rm_conffile /etc/modprobe.d/arch/alpha
+    prep_rm_conffile /etc/modprobe.d/arch/i386
+    prep_rm_conffile /etc/modprobe.d/arch/ia64
+    prep_rm_conffile /etc/modprobe.d/arch/m68k.amiga
+    prep_rm_conffile /etc/modprobe.d/arch/m68k.atari
+    prep_rm_conffile /etc/modprobe.d/arch/m68k.generic
+    prep_rm_conffile /etc/modprobe.d/arch/mips
+    prep_rm_conffile /etc/modprobe.d/arch/parisc
+    prep_rm_conffile /etc/modprobe.d/arch/powerpc.apus
+    prep_rm_conffile /etc/modprobe.d/arch/powerpc.generic
+    prep_rm_conffile /etc/modprobe.d/arch/powerpc.pmac
+    prep_rm_conffile /etc/modprobe.d/arch/s390
+    prep_rm_conffile /etc/modprobe.d/arch/sparc
+    prep_rm_conffile /etc/modprobe.d/arch/x86_64
+
+    prep_rm_conffile /etc/modprobe.d/blacklist-amd76-edac
+    prep_mv_conffile /etc/modprobe.d/blacklist \
+		     /etc/modprobe.d/blacklist.conf
+    prep_mv_conffile /etc/modprobe.d/blacklist-firewire \
+		     /etc/modprobe.d/blacklist-firewire.conf
+    prep_mv_conffile /etc/modprobe.d/blacklist-framebuffer \
+		     /etc/modprobe.d/blacklist-framebuffer.conf
+    prep_mv_conffile /etc/modprobe.d/blacklist-watchdog \
+		     /etc/modprobe.d/blacklist-watchdog.conf
+}
+
+
+case "$1" in
+    install|upgrade)
+	# Upgrade from intrepid
+	if dpkg --compare-versions "$2" lt "3.7~pre7-1"; then
+	    prep_migrate_config_37
+	fi
+	;;
+
+    abort-upgrade)
+	;;
+
+    *)
+	echo "$0 called with unknown argument \`$1'" 1>&2
+	exit 1
+	;;
+esac
+
+
+exit 0

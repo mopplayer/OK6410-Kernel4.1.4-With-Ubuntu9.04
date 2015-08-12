@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libaudiofile0
+/usr/share/doc/libaudiofile0/NOTES
+/usr/share/doc/libaudiofile0/ACKNOWLEDGEMENTS
+/usr/share/doc/libaudiofile0/copyright
+/usr/share/doc/libaudiofile0/changelog.gz
+/usr/share/doc/libaudiofile0/changelog.Debian.gz
+/usr/share/doc/libaudiofile0/TODO
+/usr/share/doc/libaudiofile0/README
+/usr/share/doc/libaudiofile0/NEWS.gz
+/usr/share/doc/libaudiofile0/AUTHORS
+/usr/lib
+/usr/lib/libaudiofile.so.0.0.2
+/usr/lib/libaudiofile.so.0

@@ -1,0 +1,23 @@
+This is the Ubuntu package of module-init-tools, the tools for managing
+Linux kernel modules
+
+Copyright © 2006 Jon Masters.
+Copyright © 2006 Red Hat Inc.
+Copyright © 2008 Alan Jenkins <alan-jenkins@tuffmail.co.uk>
+Copyright © 2001-2004 Rusty Russell.
+Copyright © 2001-2004 IBM Corporation.
+
+Licence:
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+On Ubuntu systems, the complete text of the GNU General Public License
+can be found in ‘/usr/share/common-licenses/GPL’.

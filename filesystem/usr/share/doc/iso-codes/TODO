@@ -1,0 +1,14 @@
+TODO for iso-codes
+==================
+
+- Maybe add ISO 639-5
+
+- Clear up remaining license issues (GPL vs. LGPL)
+
+- Maybe switch to version 3 of license (GPL or LGPL)
+
+- Remove iso_639.tab, add a note to README about that
+
+- Remove obsolete files from notes directory
+
+- Add man pages documenting ISO tables.

@@ -1,0 +1,102 @@
+#!/bin/sh -e
+#
+# update-ca-certificates
+#
+# Copyright (c) 2003 Fumitoshi UKAI <ukai@debian.or.jp>
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+verbose=0
+fresh=0
+while [ $# -gt 0 ];
+do
+  case $1 in
+  --verbose|-v)
+  	verbose=1;;
+  --fresh|-f)
+	fresh=1;;
+  --help|-h|*)
+	echo "$0: [--verbose] [--fresh]"
+	exit;;
+  esac
+  shift
+done
+
+CERTSCONF=/etc/ca-certificates.conf
+CERTSDIR=/usr/share/ca-certificates
+CERTBUNDLE=ca-certificates.crt
+ETCCERTSDIR=/etc/ssl/certs
+cd $ETCCERTSDIR
+if [ "$fresh" = 1 ]; then
+  echo -n "Clearing symlinks in $ETCCERTSDIR..."
+  find . -type l -print | while read symlink
+  do
+     case $(readlink $symlink) in
+     $CERTSDIR*) rm -f $symlink;;
+     esac
+  done
+  find . -type l -print | while read symlink
+  do
+     test -f $symlink || rm -f $symlink
+  done
+  echo "done."
+fi
+echo -n "Updating certificates in $ETCCERTSDIR...."
+
+bundletmp=`mktemp "${CERTBUNDLE}.tmp.XXXXXX"`
+removed="$(sed -ne 's/^!//p' $CERTSCONF | while read crt
+do
+ if test "$crt" = ""; then continue; fi
+ pem=$(basename "$crt" .crt).pem
+ if test -e "$pem"; then
+  rm -f "$pem"
+  echo "-$ETCCERTSDIR/$pem"
+ fi
+done)"
+
+added="$(sed -e '/^#/d' -e '/^!/d' $CERTSCONF | while read crt
+do
+ if test "$crt" = ""; then continue; fi
+ if ! test -f "$CERTSDIR/$crt"; then continue; fi
+ pem=$(basename "$crt" .crt).pem
+ if ! test -e "$pem"; then echo "+$ETCCERTSDIR/$pem"; fi
+ ln -sf "$CERTSDIR/$crt" "$pem"
+ cat "$CERTSDIR/$crt" >> "$bundletmp"
+done)"
+chmod 0644 "$bundletmp"
+mv -f "$bundletmp" "$CERTBUNDLE"
+
+if [ -n "$added" ] || [ -n "$removed" ]; then
+  # only run if set of files has changed
+
+  if [ "$verbose" = 0 ]; then
+    c_rehash . > /dev/null 2>&1
+  else
+    c_rehash .
+  fi
+  echo "done."
+
+  HOOKSDIR=/etc/ca-certificates/update.d
+  echo -n "Running hooks in $HOOKSDIR...."
+  VERBOSE_ARG=
+  [ "$verbose" = 0 ] || VERBOSE_ARG=--verbose
+  eval run-parts $VERB_ARG --test -- $HOOKSDIR | while read hook; do
+  printf -- "${removed:+$removed\n}${added:+$added\n}" | eval $hook
+  done
+  echo "done."
+else
+  echo "done."
+fi

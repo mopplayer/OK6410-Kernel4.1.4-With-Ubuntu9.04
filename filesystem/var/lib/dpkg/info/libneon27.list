@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libneon27
+/usr/share/doc/libneon27/BUGS
+/usr/share/doc/libneon27/NEWS.gz
+/usr/share/doc/libneon27/copyright
+/usr/share/doc/libneon27/AUTHORS
+/usr/share/doc/libneon27/README
+/usr/share/doc/libneon27/changelog.gz
+/usr/share/doc/libneon27/TODO
+/usr/share/doc/libneon27/changelog.Debian.gz
+/usr/share/doc/libneon27/THANKS
+/usr/lib
+/usr/lib/libneon.so.27.1.2
+/usr/lib/libneon.so.27

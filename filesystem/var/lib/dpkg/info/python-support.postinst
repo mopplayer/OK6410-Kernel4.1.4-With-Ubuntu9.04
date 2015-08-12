@@ -1,0 +1,11 @@
+#! /bin/sh
+set -e
+
+if [ "$1" = "triggered" ]; then
+    update-python-modules --post-install
+    exit 0
+fi
+
+
+
+update-python-modules --post-install python-support.dirs

@@ -1,0 +1,38 @@
+=head1 NAME
+
+Glib::Param::Enum -  Wrapper for enum parameters in GLib
+
+=for object Glib::Param::Enum Wrapper for enum parameters in GLib
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 scalar = $pspec_enum-E<gt>B<get_default_value> 
+
+=over
+
+=back
+
+=head2 string = $pspec_enum-E<gt>B<get_enum_class> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>, L<Glib::ParamSpec>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

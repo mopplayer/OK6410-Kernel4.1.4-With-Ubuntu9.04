@@ -1,0 +1,16 @@
+Take a look into the changelog.Debian.gz for the maintainers of this package.
+
+It was downloaded from CPAN, ftp://ftp.uni-hamburg.de/pub/soft/lang/perl/CPAN/
+modules/by-module/Time/TimeDate-*.tar.gz. 
+Look at http://www.perl.com/CPAN/CPAN.html for other mirrors.
+
+The upstream author is: <gbarr@pobox.com> (Graham Barr)
+
+Copyright:
+
+Copyright 1996 Graham Barr. All rights reserved.
+
+You may distribute under the terms of either the GNU General Public
+License or the Artistic License, as specified in the Perl README file.
+You can find the license texts in /usr/share/common-licenses/ and
+/usr/share/doc/perl/copyright.

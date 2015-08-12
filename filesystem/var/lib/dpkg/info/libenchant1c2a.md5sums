@@ -1,0 +1,17 @@
+486150fb65cf1838e19e1414a1b52dbd  usr/share/enchant/enchant.ordering
+0d9f034153421d3b95f4216cc629f4c7  usr/share/doc/libenchant1c2a/copyright
+db11dfb2fd3de17eb7b356604e908506  usr/share/doc/libenchant1c2a/changelog.gz
+698a273f035fdb99c2c6176ad1951242  usr/share/doc/libenchant1c2a/changelog.Debian.gz
+7862eaf32519e4d88bbbcd4524618be9  usr/share/doc/libenchant1c2a/README
+b85a31d2746e0d5c8d67c8f997213e35  usr/share/doc/libenchant1c2a/uspell/README
+a51bbb058672353e675774416942c4a8  usr/share/doc/libenchant1c2a/ispell/README
+d58712400991030bf343fc2d8df9840a  usr/share/doc/libenchant1c2a/aspell/README
+826682dc11d533b65a55b7f3951cd294  usr/share/man/man1/enchant.1.gz
+6fd2cc56240b0f06152719bf28ca709c  usr/bin/enchant
+4c19e4ecc8a1586495152935aded4c5c  usr/bin/enchant-lsmod
+773d4f71be82cf95278234764e579e1f  usr/lib/enchant/libenchant_zemberek.so
+c831f152dd80be76d122b81fe5eae97b  usr/lib/enchant/libenchant_ispell.so
+51e9caac6f9ff0652a31c91f44cdeab1  usr/lib/enchant/libenchant_myspell.so
+e5810e7e6a82e176afbfdb7de93ba93b  usr/lib/enchant/libenchant_hspell.so
+ce8cc1ca8fc589bb3a5a8998d5b9703b  usr/lib/enchant/libenchant_aspell.so
+b088e8ec1def3a681daa4c957dd61f97  usr/lib/libenchant.so.1.4.2

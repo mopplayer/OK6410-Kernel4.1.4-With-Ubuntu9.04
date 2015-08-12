@@ -1,0 +1,451 @@
+<oaf_info>
+	<oaf_server ubuntu-gettext-domain="libbonobo-2.0" iid="OAFIID:Bonobo_CosNaming_NamingContext"
+        	    type="exe" location="/usr/lib/bonobo-activation/bonobo-activation-server">
+		<oaf_attribute name="repo_ids" type="stringv">
+			<item value="IDL:CosNaming/NamingContext:1.0"/>
+		</oaf_attribute>
+		<oaf_attribute name="name" type="string" value="Name service"/>
+		<oaf_attribute name="name-ar" type="string" value="خدمة الأسماء"/>
+		<oaf_attribute name="name-as" type="string" value="নেম সেৱা"/>
+		<oaf_attribute name="name-az" type="string" value="Adlandırma xidməti"/>
+		<oaf_attribute name="name-be" type="string" value="Паслуга назваў"/>
+		<oaf_attribute name="name-bg" type="string" value="Услуга за имената"/>
+		<oaf_attribute name="name-bn" type="string" value="নাম সার্ভিস"/>
+		<oaf_attribute name="name-bn_IN" type="string" value="নেম পরিসেবা"/>
+		<oaf_attribute name="name-bs" type="string" value="Servis za imenovanje"/>
+		<oaf_attribute name="name-ca" type="string" value="Servei de noms"/>
+		<oaf_attribute name="name-cs" type="string" value="Pojmenovávací služba"/>
+		<oaf_attribute name="name-cy" type="string" value="Gwasanaeth enw"/>
+		<oaf_attribute name="name-da" type="string" value="Navnetjeneste"/>
+		<oaf_attribute name="name-de" type="string" value="Namensdienst"/>
+		<oaf_attribute name="name-dz" type="string" value="མིང་གི་ཞབས་ཏོག"/>
+		<oaf_attribute name="name-el" type="string" value="Υπηρεσία ονοματοδότησης"/>
+		<oaf_attribute name="name-en_CA" type="string" value="Name service"/>
+		<oaf_attribute name="name-en_GB" type="string" value="Name service"/>
+		<oaf_attribute name="name-eo" type="string" value="Noma servo"/>
+		<oaf_attribute name="name-es" type="string" value="Servicio de nombres"/>
+		<oaf_attribute name="name-et" type="string" value="Nimeteenus"/>
+		<oaf_attribute name="name-eu" type="string" value="Izen-zerbitzua"/>
+		<oaf_attribute name="name-fa" type="string" value="خدمات نام"/>
+		<oaf_attribute name="name-fi" type="string" value="Nimipalvelu"/>
+		<oaf_attribute name="name-fr" type="string" value="Service de noms"/>
+		<oaf_attribute name="name-ga" type="string" value="Seirbhís Ainmithe"/>
+		<oaf_attribute name="name-gl" type="string" value="Servizo de nomes"/>
+		<oaf_attribute name="name-gu" type="string" value="નામની સેવા"/>
+		<oaf_attribute name="name-he" type="string" value="Name service"/>
+		<oaf_attribute name="name-hi" type="string" value="नाम सेवा"/>
+		<oaf_attribute name="name-hr" type="string" value="Ime servisa"/>
+		<oaf_attribute name="name-hu" type="string" value="Névszolgáltatás"/>
+		<oaf_attribute name="name-id" type="string" value="Layanan nama"/>
+		<oaf_attribute name="name-is" type="string" value="Nafnaþjónusta"/>
+		<oaf_attribute name="name-it" type="string" value="Servizio di nomi"/>
+		<oaf_attribute name="name-ja" type="string" value="ネーム・サービス"/>
+		<oaf_attribute name="name-ka" type="string" value="სახელთა მომსახურება"/>
+		<oaf_attribute name="name-ko" type="string" value="네임 서비스"/>
+		<oaf_attribute name="name-li" type="string" value="Naam deens"/>
+		<oaf_attribute name="name-lt" type="string" value="Vardų paslauga"/>
+		<oaf_attribute name="name-lv" type="string" value="Nosaukumu serviss"/>
+		<oaf_attribute name="name-mai" type="string" value="नाम सेवा"/>
+		<oaf_attribute name="name-mg" type="string" value="Sampan&apos;asa momba ny anarana"/>
+		<oaf_attribute name="name-mk" type="string" value="Име на сервисот"/>
+		<oaf_attribute name="name-ml" type="string" value="നെയിം സേവനങ്ങള്‍"/>
+		<oaf_attribute name="name-mn" type="string" value="Нэрний үйлчилгээ"/>
+		<oaf_attribute name="name-mr" type="string" value="नाव सेवा"/>
+		<oaf_attribute name="name-ms" type="string" value="Nama servis"/>
+		<oaf_attribute name="name-nb" type="string" value="Navnetjeneste"/>
+		<oaf_attribute name="name-ne" type="string" value="नाम सेवा"/>
+		<oaf_attribute name="name-nl" type="string" value="Naam service"/>
+		<oaf_attribute name="name-nn" type="string" value="Namneteneste"/>
+		<oaf_attribute name="name-or" type="string" value="ନାମ ସେବା"/>
+		<oaf_attribute name="name-pa" type="string" value="ਨਾਂ ਸੇਵਾ"/>
+		<oaf_attribute name="name-pl" type="string" value="Usługa nazw"/>
+		<oaf_attribute name="name-pt" type="string" value="Serviço de nomes"/>
+		<oaf_attribute name="name-pt_BR" type="string" value="Serviço de nomes"/>
+		<oaf_attribute name="name-ro" type="string" value="Serviciu de nume"/>
+		<oaf_attribute name="name-ru" type="string" value="Сервис имён"/>
+		<oaf_attribute name="name-sk" type="string" value="Pomenovávacia služba"/>
+		<oaf_attribute name="name-sl" type="string" value="Imenska storitev"/>
+		<oaf_attribute name="name-sq" type="string" value="Shërbimi i emrave"/>
+		<oaf_attribute name="name-sr" type="string" value="Служба именовања"/>
+		<oaf_attribute name="name-sr@latin" type="string" value="Služba imenovanja"/>
+		<oaf_attribute name="name-sv" type="string" value="Namntjänst"/>
+		<oaf_attribute name="name-ta" type="string" value="பெயர் சேவை"/>
+		<oaf_attribute name="name-te" type="string" value="నామపు సేవ"/>
+		<oaf_attribute name="name-th" type="string" value="บริการชื่อ"/>
+		<oaf_attribute name="name-tr" type="string" value="Servis Adı"/>
+		<oaf_attribute name="name-uk" type="string" value="Служба назв"/>
+		<oaf_attribute name="name-vi" type="string" value="Dịch vụ tên"/>
+		<oaf_attribute name="name-wa" type="string" value="No do siervice"/>
+		<oaf_attribute name="name-xh" type="string" value="Inkonzo yegama"/>
+		<oaf_attribute name="name-yi" type="string" value="נאָמען־באַדינונג"/>
+		<oaf_attribute name="name-zh_CN" type="string" value="名称服务"/>
+		<oaf_attribute name="name-zh_HK" type="string" value="名稱服務"/>
+		<oaf_attribute name="name-zh_TW" type="string" value="名稱服務"/>
+		<oaf_attribute name="description" type="string" value="CORBA CosNaming service."/>
+		<oaf_attribute name="description-ar" type="string" value="خدمة CORBA CosNaming."/>
+		<oaf_attribute name="description-as" type="string" value="CORBA CosNaming সেৱা"/>
+		<oaf_attribute name="description-az" type="string" value="CORBA CosNaming xidməti"/>
+		<oaf_attribute name="description-be" type="string" value="Паслуга CORBA CosNaming."/>
+		<oaf_attribute name="description-bg" type="string" value="Услуга за CORBA CosNaming."/>
+		<oaf_attribute name="description-bn" type="string" value="কোরবা CosNaming সার্ভিস"/>
+		<oaf_attribute name="description-bn_IN" type="string" value="CORBA CosNaming পরিসেবা"/>
+		<oaf_attribute name="description-bs" type="string" value="Servis CORBA CosNaming."/>
+		<oaf_attribute name="description-ca" type="string" value="Servei «CosNaming» de CORBA."/>
+		<oaf_attribute name="description-cs" type="string" value="Služba CORBA CosNaming."/>
+		<oaf_attribute name="description-cy" type="string" value="Gwasanaeth CosNaming CORBA."/>
+		<oaf_attribute name="description-da" type="string" value="CORBA CosNaming-tjeneste."/>
+		<oaf_attribute name="description-de" type="string" value="CORBA-CosNaming-Dienst."/>
+		<oaf_attribute name="description-dz" type="string" value="ཀོར་བཱ་ ཀོསི་ནེ་མིང་ ཞབས་ཏོག"/>
+		<oaf_attribute name="description-el" type="string" value="Υπηρεσία CORBA CosNaming."/>
+		<oaf_attribute name="description-en_CA" type="string" value="CORBA CosNaming service."/>
+		<oaf_attribute name="description-en_GB" type="string" value="CORBA CosNaming service."/>
+		<oaf_attribute name="description-eo" type="string" value="CORBA CosNaming servo."/>
+		<oaf_attribute name="description-es" type="string" value="Servicio CORBA CosNaming."/>
+		<oaf_attribute name="description-et" type="string" value="CORBA CosNaming teenus."/>
+		<oaf_attribute name="description-eu" type="string" value="CORBA CosNaming zerbitzua."/>
+		<oaf_attribute name="description-fa" type="string" value="خدمات CORBA CosNaming."/>
+		<oaf_attribute name="description-fi" type="string" value="CORBA CosNaming -palvelu."/>
+		<oaf_attribute name="description-fr" type="string" value="Service CORBA CosNaming."/>
+		<oaf_attribute name="description-ga" type="string" value="Serbhís CosNaming do CORBA."/>
+		<oaf_attribute name="description-gl" type="string" value="Servizo CORBA CosNaming."/>
+		<oaf_attribute name="description-gu" type="string" value="CORBA CosNaming સેવા."/>
+		<oaf_attribute name="description-he" type="string" value="CORBA CosNaming service."/>
+		<oaf_attribute name="description-hi" type="string" value="कोरबा कास-नेमिंग सेवा."/>
+		<oaf_attribute name="description-hr" type="string" value="Servis CORBA CosNaming."/>
+		<oaf_attribute name="description-hu" type="string" value="CORBA CosNaming szolgáltatás."/>
+		<oaf_attribute name="description-id" type="string" value="Layanan CosNaming CORBA"/>
+		<oaf_attribute name="description-is" type="string" value="CORBA CosNaming-þjónusta"/>
+		<oaf_attribute name="description-it" type="string" value="Servizio CORBA CosNaming."/>
+		<oaf_attribute name="description-ja" type="string" value="CORBA CosNaming サービス"/>
+		<oaf_attribute name="description-ka" type="string" value="CORBA CosNaming მომსახურება."/>
+		<oaf_attribute name="description-ko" type="string" value="CORBA CosNaming 서비스."/>
+		<oaf_attribute name="description-li" type="string" value="CORBA CosNaming service"/>
+		<oaf_attribute name="description-lt" type="string" value="CORBA CosNaming paslauga."/>
+		<oaf_attribute name="description-lv" type="string" value="CORBA CosNaming serviss."/>
+		<oaf_attribute name="description-mai" type="string" value="कोरबा कास-नेमिंग सेवा."/>
+		<oaf_attribute name="description-mg" type="string" value="Sampan&apos;asa CORBA CosNaming."/>
+		<oaf_attribute name="description-mk" type="string" value="CORBA CosNaming сервис."/>
+		<oaf_attribute name="description-ml" type="string" value="CORBA CosNaming സേവനം."/>
+		<oaf_attribute name="description-mn" type="string" value="CORBA-CosNaming-Үйлчилгээ."/>
+		<oaf_attribute name="description-mr" type="string" value="CORBA CosNaming सेवा."/>
+		<oaf_attribute name="description-ms" type="string" value="Servis CosNaming CORBA."/>
+		<oaf_attribute name="description-nb" type="string" value="CORBA CosNaming-tjeneste."/>
+		<oaf_attribute name="description-ne" type="string" value="CORBA CosNaming सेवा ।"/>
+		<oaf_attribute name="description-nl" type="string" value="CORBA CosNaming service"/>
+		<oaf_attribute name="description-nn" type="string" value="CORBA CosNaming-teneste."/>
+		<oaf_attribute name="description-or" type="string" value="କୋର୍ବା କସନାମ ସେବା"/>
+		<oaf_attribute name="description-pa" type="string" value="ਕੋਰਬਾ Cos ਨਾਂ ਸੇਵਾ"/>
+		<oaf_attribute name="description-pl" type="string" value="Usługa CORBA CosNaming."/>
+		<oaf_attribute name="description-pt" type="string" value="Serviço CosNaming CORBA."/>
+		<oaf_attribute name="description-pt_BR" type="string" value="Serviço CosNaming CORBA."/>
+		<oaf_attribute name="description-ro" type="string" value="Serviciu CORBA CosNaming."/>
+		<oaf_attribute name="description-ru" type="string" value="Сервис CosNaming среды CORBA."/>
+		<oaf_attribute name="description-sk" type="string" value="Služba CORBA CosNaming."/>
+		<oaf_attribute name="description-sl" type="string" value="Storitev CORBA CosNaming."/>
+		<oaf_attribute name="description-sq" type="string" value="Shërbimi CORBA CosNaming."/>
+		<oaf_attribute name="description-sr" type="string" value="CORBA CosNaming служба."/>
+		<oaf_attribute name="description-sr@latin" type="string" value="CORBA CosNaming služba."/>
+		<oaf_attribute name="description-sv" type="string" value="CORBA CosNaming-tjänst."/>
+		<oaf_attribute name="description-ta" type="string" value="CORBA CosNaming சேவை."/>
+		<oaf_attribute name="description-te" type="string" value="CORBA CosNaming సేవ."/>
+		<oaf_attribute name="description-th" type="string" value="บริการ CosNaming ของ CORBA"/>
+		<oaf_attribute name="description-tr" type="string" value="CORBA CosNaming Servisi."/>
+		<oaf_attribute name="description-uk" type="string" value="Служба CosNaming середовища CORBA."/>
+		<oaf_attribute name="description-vi" type="string" value="Dịch vụ CosNaming CORBA."/>
+		<oaf_attribute name="description-wa" type="string" value="Siervice CosNaming di CORBA."/>
+		<oaf_attribute name="description-xh" type="string" value="Inkonzo i-CORBA CosNaming."/>
+		<oaf_attribute name="description-yi" type="string" value="CORBA CosNaming באַדינוג"/>
+		<oaf_attribute name="description-zh_CN" type="string" value="CORBA CosNaming 服务。"/>
+		<oaf_attribute name="description-zh_HK" type="string" value="CORBA CosNaming 服務。"/>
+		<oaf_attribute name="description-zh_TW" type="string" value="CORBA CosNaming 服務。"/>
+	</oaf_server>
+	<oaf_server ubuntu-gettext-domain="libbonobo-2.0" iid="OAFIID:Bonobo_Activation_EventSource"
+        	    type="exe" location="/usr/lib/bonobo-activation/bonobo-activation-server">
+		<oaf_attribute name="repo_ids" type="stringv">
+			<item value="IDL:Bonobo/EventSource:1.0"/>
+		</oaf_attribute>
+		<oaf_attribute name="name" type="string"
+		value="Notification service"/>
+		<oaf_attribute name="name-ar" type="string"
+		value="خدمة التلبيغ"/>
+		<oaf_attribute name="name-as" type="string"
+		value="সূচনাপ্ৰদানেৰ সেৱা"/>
+		<oaf_attribute name="name-az" type="string"
+		value="Bildiriş xidməti"/>
+		<oaf_attribute name="name-be" type="string"
+		value="Паслуга паведамленьняў"/>
+		<oaf_attribute name="name-bg" type="string"
+		value="Услуга за уведомяване"/>
+		<oaf_attribute name="name-bn" type="string"
+		value="নোটিফিকেশন সার্ভিস"/>
+		<oaf_attribute name="name-bn_IN" type="string"
+		value="সূচনাপ্রদানের পরিসেবা"/>
+		<oaf_attribute name="name-bs" type="string"
+		value="Servis za obavijesti"/>
+		<oaf_attribute name="name-ca" type="string"
+		value="Servei de notificació"/>
+		<oaf_attribute name="name-cs" type="string"
+		value="Služba upozornění"/>
+		<oaf_attribute name="name-cy" type="string"
+		value="Gwasanaeth hysbysu"/>
+		<oaf_attribute name="name-da" type="string"
+		value="Bekendtgørelsestjeneste"/>
+		<oaf_attribute name="name-de" type="string"
+		value="Benachrichtigungsdienst"/>
+		<oaf_attribute name="name-dz" type="string"
+		value="བརྡ་བསྐུལ་ཞབས་ཏོག"/>
+		<oaf_attribute name="name-el" type="string"
+		value="Υπηρεσία ειδοποίησης"/>
+		<oaf_attribute name="name-en_CA" type="string"
+		value="Notification service"/>
+		<oaf_attribute name="name-en_GB" type="string"
+		value="Notification service"/>
+		<oaf_attribute name="name-es" type="string"
+		value="Servicio de notificación"/>
+		<oaf_attribute name="name-et" type="string"
+		value="Teavitusteenus"/>
+		<oaf_attribute name="name-eu" type="string"
+		value="Abisu-zerbitzua"/>
+		<oaf_attribute name="name-fi" type="string"
+		value="Huomautuspalvelu"/>
+		<oaf_attribute name="name-fr" type="string"
+		value="Service de notification"/>
+		<oaf_attribute name="name-gl" type="string"
+		value="Servizo de notificación"/>
+		<oaf_attribute name="name-gu" type="string"
+		value="નોંધણીની સેવા"/>
+		<oaf_attribute name="name-he" type="string"
+		value="Notification service"/>
+		<oaf_attribute name="name-hi" type="string"
+		value="सूचना सेवा"/>
+		<oaf_attribute name="name-hr" type="string"
+		value="Servis obavješćivanja"/>
+		<oaf_attribute name="name-hu" type="string"
+		value="Értesítési szolgáltatás"/>
+		<oaf_attribute name="name-id" type="string"
+		value="Layanan notifikasi"/>
+		<oaf_attribute name="name-it" type="string"
+		value="Servizio di notifica"/>
+		<oaf_attribute name="name-ja" type="string"
+		value="通知サービス"/>
+		<oaf_attribute name="name-ka" type="string"
+		value="შეტყობინების მომსახურება"/>
+		<oaf_attribute name="name-ko" type="string"
+		value="알림 서비스"/>
+		<oaf_attribute name="name-lt" type="string"
+		value="Pranešimų paslauga"/>
+		<oaf_attribute name="name-lv" type="string"
+		value="Ziņošanas serviss"/>
+		<oaf_attribute name="name-mai" type="string"
+		value="सूचना सेवा"/>
+		<oaf_attribute name="name-mg" type="string"
+		value="Sampan&apos;asa momba ny fampahafantarana"/>
+		<oaf_attribute name="name-mk" type="string"
+		value="Сервис за известување"/>
+		<oaf_attribute name="name-ml" type="string"
+		value="അറിയിപ്പ് സേവനങ്ങള്‍"/>
+		<oaf_attribute name="name-mn" type="string"
+		value="Сонордуулга үйлчилгээ"/>
+		<oaf_attribute name="name-mr" type="string"
+		value="सूचना सेवा"/>
+		<oaf_attribute name="name-ms" type="string"
+		value="Servis Pemakluman"/>
+		<oaf_attribute name="name-nb" type="string"
+		value="Meldingstjeneste"/>
+		<oaf_attribute name="name-ne" type="string"
+		value="सूचना सेवा"/>
+		<oaf_attribute name="name-nl" type="string"
+		value="Aankondigingsservice"/>
+		<oaf_attribute name="name-nn" type="string"
+		value="Varslingsteneste"/>
+		<oaf_attribute name="name-or" type="string"
+		value="ବିଜ୍ଞପ୍ତି ସେବା"/>
+		<oaf_attribute name="name-pa" type="string"
+		value="ਟਿੱਪਣੀ ਸੇਵਾ"/>
+		<oaf_attribute name="name-pl" type="string"
+		value="Usługa powiadamiania"/>
+		<oaf_attribute name="name-pt" type="string"
+		value="Serviço de notificação"/>
+		<oaf_attribute name="name-pt_BR" type="string"
+		value="Serviço de notificação"/>
+		<oaf_attribute name="name-ro" type="string"
+		value="Serviciu de notificare"/>
+		<oaf_attribute name="name-ru" type="string"
+		value="Сервис уведомления"/>
+		<oaf_attribute name="name-sk" type="string"
+		value="Oznamovacia služba"/>
+		<oaf_attribute name="name-sl" type="string"
+		value="Storitev obveščanja"/>
+		<oaf_attribute name="name-sq" type="string"
+		value="Shërbimi i njoftimeve"/>
+		<oaf_attribute name="name-sr" type="string"
+		value="Служба за обавештења"/>
+		<oaf_attribute name="name-sr@latin" type="string"
+		value="Služba za obaveštenja"/>
+		<oaf_attribute name="name-sv" type="string"
+		value="Notifieringstjänst"/>
+		<oaf_attribute name="name-ta" type="string"
+		value="அறிவித்தல் சேவை"/>
+		<oaf_attribute name="name-te" type="string"
+		value="నోటీసు సేవ"/>
+		<oaf_attribute name="name-th" type="string"
+		value="บริการแจ้งเหตุ"/>
+		<oaf_attribute name="name-tr" type="string"
+		value="Uyarı servisi"/>
+		<oaf_attribute name="name-uk" type="string"
+		value="Служба сповіщення"/>
+		<oaf_attribute name="name-vi" type="string"
+		value="Dịch vụ thông báo"/>
+		<oaf_attribute name="name-wa" type="string"
+		value="Siervice di notifiaedje"/>
+		<oaf_attribute name="name-xh" type="string"
+		value="Inkonzo yokwazisa"/>
+		<oaf_attribute name="name-zh_CN" type="string"
+		value="通告服务"/>
+		<oaf_attribute name="name-zh_HK" type="string"
+		value="通知服務"/>
+		<oaf_attribute name="name-zh_TW" type="string"
+		value="通知服務"/>
+		<oaf_attribute name="description" type="string"
+		value="Notification service for activation"/>
+		<oaf_attribute name="description-ar" type="string"
+		value="خدمة التبليغ للتنشيط"/>
+		<oaf_attribute name="description-as" type="string"
+		value="সক্ৰিয়কৰণেৰ জন্য ব্যৱহৃত সূচনাপ্ৰদানেৰ সেৱা"/>
+		<oaf_attribute name="description-az" type="string"
+		value="Fəallaşdırma üçün bildiriş xidməti"/>
+		<oaf_attribute name="description-be" type="string"
+		value="Паслуга паведамленьняў для актывацыі"/>
+		<oaf_attribute name="description-bg" type="string"
+		value="Услуга за уведомяване на активиране"/>
+		<oaf_attribute name="description-bn" type="string"
+		value="অ্যাকটিভেশনের জন্য নোটিফিকেশন সার্ভিস"/>
+		<oaf_attribute name="description-bn_IN" type="string"
+		value="সক্রিয়করণের জন্য ব্যবহৃত সূচনাপ্রদানের পরিসেবা"/>
+		<oaf_attribute name="description-bs" type="string"
+		value="Servis za obavijesti o aktiviranju"/>
+		<oaf_attribute name="description-ca" type="string"
+		value="Servei de notificació per a l&apos;activació"/>
+		<oaf_attribute name="description-cs" type="string"
+		value="Služba upozornění na aktivaci"/>
+		<oaf_attribute name="description-cy" type="string"
+		value="Gwasanaeth hysbysu er mwyn cychwyn"/>
+		<oaf_attribute name="description-da" type="string"
+		value="Bekendtgørelsestjeneste for aktivering"/>
+		<oaf_attribute name="description-de" type="string"
+		value="Benachrichtigungsdienst zur Aktivierung"/>
+		<oaf_attribute name="description-dz" type="string"
+		value="ཤུགས་བཟོའི་བརྡ་བསྐུལ་ཞབས་ཏོག"/>
+		<oaf_attribute name="description-el" type="string"
+		value="Υπηρεσία ειδοποίησης για ενεργοποίηση"/>
+		<oaf_attribute name="description-en_CA" type="string"
+		value="Notification service for activation"/>
+		<oaf_attribute name="description-en_GB" type="string"
+		value="Notification service for activation"/>
+		<oaf_attribute name="description-es" type="string"
+		value="Servicio de notificación para activación"/>
+		<oaf_attribute name="description-et" type="string"
+		value="Teavitusteenus aktiveerimise jaoks"/>
+		<oaf_attribute name="description-eu" type="string"
+		value="Abisu-zerbitzua aktibatzeko"/>
+		<oaf_attribute name="description-fi" type="string"
+		value="Huomautuspalvelu aktivointia varten"/>
+		<oaf_attribute name="description-fr" type="string"
+		value="Service de notification pour l&apos;activation"/>
+		<oaf_attribute name="description-gl" type="string"
+		value="Servizo de notificación para a activación"/>
+		<oaf_attribute name="description-gu" type="string"
+		value="કાર્યશીલ માટે નોંધણીની સેવા"/>
+		<oaf_attribute name="description-he" type="string"
+		value="Notification service for activation"/>
+		<oaf_attribute name="description-hi" type="string"
+		value="सक्रियण हेतु सूचना सेवा"/>
+		<oaf_attribute name="description-hr" type="string"
+		value="Servis obavješćivanja za pokretanje"/>
+		<oaf_attribute name="description-hu" type="string"
+		value="Értesítési szolgáltatás az aktivációhoz"/>
+		<oaf_attribute name="description-id" type="string"
+		value="Layanan notifikasi aktivasi"/>
+		<oaf_attribute name="description-it" type="string"
+		value="Servizio di notifica per l&apos;attivazione"/>
+		<oaf_attribute name="description-ja" type="string"
+		value="活性化の通知サービス"/>
+		<oaf_attribute name="description-ka" type="string"
+		value="შეტყობინების მომსახურება გააქტივებისთვის"/>
+		<oaf_attribute name="description-ko" type="string"
+		value="액티베이션 알림 서비스"/>
+		<oaf_attribute name="description-lt" type="string"
+		value="Pranešimų apie aktyvavimą paslauga"/>
+		<oaf_attribute name="description-lv" type="string"
+		value="Aktivizācijas ziņošanas serviss"/>
+		<oaf_attribute name="description-mai" type="string"
+		value="सक्रियण लेल सूचना सेवा"/>
+		<oaf_attribute name="description-mg" type="string"
+		value="Sampan&apos;asa momba ny fampahafantarana ho an&apos;ny fandefasana"/>
+		<oaf_attribute name="description-mk" type="string"
+		value="Сервис за известување за активирање"/>
+		<oaf_attribute name="description-ml" type="string"
+		value="പ്രവര്‍ത്തനത്തിനുളള അറിയിപ്പ് സേവനങ്ങള്‍"/>
+		<oaf_attribute name="description-mn" type="string"
+		value="Идэвхжүүлэлт сонордуулгын үйлчилгээ"/>
+		<oaf_attribute name="description-mr" type="string"
+		value="सक्रीयता करीता सूचना सेवा"/>
+		<oaf_attribute name="description-ms" type="string"
+		value="Servis pemakluman bagi pengaktifan"/>
+		<oaf_attribute name="description-nb" type="string"
+		value="Meldingstjeneste for aktivering"/>
+		<oaf_attribute name="description-ne" type="string"
+		value="सक्रियताका लागि सूचना सेवा"/>
+		<oaf_attribute name="description-nl" type="string"
+		value="Aankondigingsservice voor activering"/>
+		<oaf_attribute name="description-nn" type="string"
+		value="Varslingsteneste for aktivering"/>
+		<oaf_attribute name="description-or" type="string"
+		value="ସକ୍ରିୟଣ ପାଇଁ ବିଜ୍ଞପ୍ତି ସେବା"/>
+		<oaf_attribute name="description-pa" type="string"
+		value="ਸਰਗਰਮੀ ਲਈ ਟਿੱਪਣੀ ਸੇਵਾ"/>
+		<oaf_attribute name="description-pl" type="string"
+		value="Aktywująca usługa powiadamiania"/>
+		<oaf_attribute name="description-pt" type="string"
+		value="Serviço de notificação para activação"/>
+		<oaf_attribute name="description-pt_BR" type="string"
+		value="Serviço de notificação para ativação"/>
+		<oaf_attribute name="description-ro" type="string"
+		value="Serviciu de notificare pentru activare"/>
+		<oaf_attribute name="description-ru" type="string"
+		value="Сервис уведомления для активации"/>
+		<oaf_attribute name="description-sk" type="string"
+		value="Oznamovacia služba pre aktiváciu"/>
+		<oaf_attribute name="description-sl" type="string"
+		value="Storitev obveščanja za aktivacijo"/>
+		<oaf_attribute name="description-sq" type="string"
+		value="Shërbimi i njoftimeve për aktivimin"/>
+		<oaf_attribute name="description-sr" type="string"
+		value="Служба обавештавања за активацију"/>
+		<oaf_attribute name="description-sr@latin" type="string"
+		value="Služba obaveštavanja za aktivaciju"/>
+		<oaf_attribute name="description-sv" type="string"
+		value="Notifieringstjänst för aktivering"/>
+		<oaf_attribute name="description-ta" type="string"
+		value="தூண்டு செய்வதட்கான அறிவித்தல் சேவை"/>
+		<oaf_attribute name="description-te" type="string"
+		value="క్రియాశీలత కొరకు నోటీసు సేవ"/>
+		<oaf_attribute name="description-th" type="string"
+		value="บริการแจ้งเหตุสำหรับการ activate"/>
+		<oaf_attribute name="description-tr" type="string"
+		value="Etkinleştirme için uyarı servisi"/>
+		<oaf_attribute name="description-uk" type="string"
+		value="Служба сповіщення для активації"/>
+		<oaf_attribute name="description-vi" type="string"
+		value="Dịch vụ thông báo việc kích hoạt"/>
+		<oaf_attribute name="description-xh" type="string"
+		value="Inkonzo yokwazisa ukwenza ukuba isebenze"/>
+		<oaf_attribute name="description-zh_CN" type="string"
+		value="待激活的通告服务"/>
+		<oaf_attribute name="description-zh_HK" type="string"
+		value="activation 的通知服務"/>
+		<oaf_attribute name="description-zh_TW" type="string"
+		value="activation 的通知服務"/>
+	</oaf_server>
+</oaf_info>
+

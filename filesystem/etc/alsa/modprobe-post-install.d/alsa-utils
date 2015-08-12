@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# modprobe post-install script for alsa
+
+udev_is_active()
+{
+	test -e /dev/.udev || test -d /dev/.udevdb || return 1
+	return 0
+}
+
+if udev_is_active ; then
+	# Stuff is done in a udev-run script instead
+	exit 0
+fi
+
+case "$1" in
+snd-*-synth)
+	# module is not a sound card driver with a mixer
+	:
+	;;
+*)
+	# module is a sound card driver with a mixer
+	exec /etc/init.d/alsa-utils start
+	;;
+esac

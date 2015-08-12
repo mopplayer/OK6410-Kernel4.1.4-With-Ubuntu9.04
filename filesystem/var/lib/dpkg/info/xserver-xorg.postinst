@@ -1,0 +1,1938 @@
+#!/bin/sh
+# Debian xserver-xorg package post-installation script
+# Copyright 1998-2004 Branden Robinson.
+# Copyright 2004-2005 Canonical Ltd.
+# Licensed under the GNU General Public License, version 2.  See the file
+# /usr/share/common-licenses/GPL or <http://www.gnu.org/copyleft/gpl.txt>.
+# Acknowledgements to Stephen Early, Mark Eichin, and Manoj Srivastava.
+
+set -e
+
+# source debconf library
+. /usr/share/debconf/confmodule
+
+THIS_PACKAGE=xserver-xorg
+THIS_SCRIPT=postinst
+
+# $Id$
+
+# This is the X Strike Force shell library for X Window System package
+# maintainer scripts.  It serves to define shell functions commonly used by
+# such packages, and performs some error checking necessary for proper operation
+# of those functions.  By itself, it does not "do" much; the maintainer scripts
+# invoke the functions defined here to accomplish package installation and
+# removal tasks.
+
+# If you are reading this within a Debian package maintainer script (e.g.,
+# /var/lib/dpkg)info/PACKAGE.{config,preinst,postinst,prerm,postrm}), you can
+# skip past this library by scanning forward in this file to the string
+# "GOBSTOPPER".
+
+SOURCE_VERSION=1:7.4~5ubuntu18
+OFFICIAL_BUILD=
+
+# Use special abnormal exit codes so that problems with this library are more
+# easily tracked down.
+SHELL_LIB_INTERNAL_ERROR=86
+SHELL_LIB_THROWN_ERROR=74
+SHELL_LIB_USAGE_ERROR=99
+
+# old -> new variable names
+if [ -z "$DEBUG_XORG_PACKAGE" ] && [ -n "$DEBUG_XFREE86_PACKAGE" ]; then
+  DEBUG_XORG_PACKAGE="$DEBUG_XFREE86_PACKAGE"
+fi
+if [ -z "$DEBUG_XORG_DEBCONF" ] && [ -n "$DEBUG_XFREE86_DEBCONF" ]; then
+  DEBUG_XORG_DEBCONF="$DEBUG_XFREE86_DEBCONF"
+fi
+
+# initial sanity checks
+if [ -z "$THIS_PACKAGE" ]; then
+  cat >&2 <<EOF
+Error: package maintainer script attempted to use shell library without
+definining \$THIS_PACKAGE shell variable.  Please report the package name,
+version, and the text of this error message to the Debian Bug Tracking System.
+Visit <http://www.debian.org/Bugs/Reporting> on the World Wide Web for
+instructions, read the file /usr/share/doc/debian/bug-reporting.txt from the
+"doc-debian" package, or install the "reportbug" package and use the command of
+the same name to file a report against version $SOURCE_VERSION of this package.
+EOF
+  exit $SHELL_LIB_USAGE_ERROR
+fi
+
+if [ -z "$THIS_SCRIPT" ]; then
+  cat >&2 <<EOF
+Error: package maintainer script attempted to use shell library without
+definining \$THIS_SCRIPT shell variable.  Please report the package name,
+version, and the text of this error message to the Debian Bug Tracking System.
+Visit <http://www.debian.org/Bugs/Reporting> on the World Wide Web for
+instructions, read the file /usr/share/doc/debian/bug-reporting.txt from the
+"doc-debian" package, or install the "reportbug" package and use the command of
+the same name to file a report against version $SOURCE_VERSION of the
+"$THIS_PACKAGE" package.
+EOF
+  exit $SHELL_LIB_USAGE_ERROR
+fi
+
+ARCHITECTURE="$(dpkg --print-installation-architecture)"
+
+if [ "$1" = "reconfigure" ] || [ -n "$DEBCONF_RECONFIGURE" ]; then
+  RECONFIGURE="true"
+else
+  RECONFIGURE=
+fi
+
+if ([ "$1" = "install" ] || [ "$1" = "configure" ]) && [ -z "$2" ]; then
+  FIRSTINST="yes"
+fi
+
+if [ -z "$RECONFIGURE" ] && [ -z "$FIRSTINST" ]; then
+  UPGRADE="yes"
+fi
+
+trap "message;\
+      message \"Received signal.  Aborting $THIS_PACKAGE package $THIS_SCRIPT script.\";\
+      message;\
+      exit 1" HUP INT QUIT TERM
+
+reject_nondigits () {
+  # syntax: reject_nondigits [ operand ... ]
+  #
+  # scan operands (typically shell variables whose values cannot be trusted) for
+  # characters other than decimal digits and barf if any are found
+  while [ -n "$1" ]; do
+    # does the operand contain anything but digits?
+    if ! expr "$1" : "[[:digit:]]\+$" > /dev/null 2>&1; then
+      # can't use die(), because it wraps message() which wraps this function
+      echo "$THIS_PACKAGE $THIS_SCRIPT error: reject_nondigits() encountered" \
+           "possibly malicious garbage \"$1\"" >&2
+      exit $SHELL_LIB_THROWN_ERROR
+    fi
+    shift
+  done
+}
+
+reject_whitespace () {
+  # syntax: reject_whitespace [ operand ]
+  #
+  # scan operand (typically a shell variable whose value cannot be trusted) for
+  # whitespace characters and barf if any are found
+  if [ -n "$1" ]; then
+    # does the operand contain any whitespace?
+    if expr "$1" : "[[:space:]]" > /dev/null 2>&1; then
+      # can't use die(), because I want to avoid forward references
+      echo "$THIS_PACKAGE $THIS_SCRIPT error: reject_whitespace() encountered" \
+           "possibly malicious garbage \"$1\"" >&2
+      exit $SHELL_LIB_THROWN_ERROR
+    fi
+  fi
+}
+
+reject_unlikely_path_chars () {
+  # syntax: reject_unlikely_path_chars [ operand ... ]
+  #
+  # scan operands (typically shell variables whose values cannot be trusted) for
+  # characters unlikely to be seen in a path and which the shell might
+  # interpret and barf if any are found
+  while [ -n "$1" ]; do
+    # does the operand contain any funny characters?
+    if expr "$1" : '.*[!$&()*;<>?|].*' > /dev/null 2>&1; then
+      # can't use die(), because I want to avoid forward references
+      echo "$THIS_PACKAGE $THIS_SCRIPT error: reject_unlikely_path_chars()" \
+           "encountered possibly malicious garbage \"$1\"" >&2
+      exit $SHELL_LIB_THROWN_ERROR
+    fi
+    shift
+  done
+}
+
+# Query the terminal to establish a default number of columns to use for
+# displaying messages to the user.  This is used only as a fallback in the
+# event the COLUMNS variable is not set.  ($COLUMNS can react to SIGWINCH while
+# the script is running, and this cannot, only being calculated once.)
+DEFCOLUMNS=$(stty size 2> /dev/null | awk '{print $2}') || true
+if ! expr "$DEFCOLUMNS" : "[[:digit:]]\+$" > /dev/null 2>&1; then
+  DEFCOLUMNS=80
+fi
+
+message () {
+  # pretty-print messages of arbitrary length
+  reject_nondigits "$COLUMNS"
+  echo "$*" | fmt -t -w ${COLUMNS:-$DEFCOLUMNS} >&2
+}
+
+observe () {
+  # syntax: observe message ...
+  #
+  # issue observational message suitable for logging someday when support for
+  # it exists in dpkg
+  if [ -n "$DEBUG_XORG_PACKAGE" ]; then
+    message "$THIS_PACKAGE $THIS_SCRIPT note: $*"
+  fi
+}
+
+warn () {
+  # syntax: warn message ...
+  #
+  # issue warning message suitable for logging someday when support for
+  # it exists in dpkg; also send to standard error
+  message "$THIS_PACKAGE $THIS_SCRIPT warning: $*"
+}
+
+die () {
+  # syntax: die message ...
+  #
+  # exit script with error message
+  message "$THIS_PACKAGE $THIS_SCRIPT error: $*"
+  exit $SHELL_LIB_THROWN_ERROR
+}
+
+internal_error () {
+  # exit script with error; essentially a "THIS SHOULD NEVER HAPPEN" message
+  message "internal error: $*"
+  if [ -n "$OFFICIAL_BUILD" ]; then
+    message "Please report a bug in the $THIS_SCRIPT script of the" \
+            "$THIS_PACKAGE package, version $SOURCE_VERSION to the Debian Bug" \
+            "Tracking System.  Include all messages above that mention the" \
+            "$THIS_PACKAGE package.  Visit " \
+            "<http://www.debian.org/Bugs/Reporting> on the World Wide Web for" \
+            "instructions, read the file" \
+            "/usr/share/doc/debian/bug-reporting.txt from the doc-debian" \
+            "package, or install the reportbug package and use the command of" \
+            "the same name to file a report."
+  fi
+  exit $SHELL_LIB_INTERNAL_ERROR
+}
+
+usage_error () {
+  message "usage error: $*"
+  message "Please report a bug in the $THIS_SCRIPT script of the" \
+          "$THIS_PACKAGE package, version $SOURCE_VERSION to the Debian Bug" \
+          "Tracking System.  Include all messages above that mention the" \
+          "$THIS_PACKAGE package.  Visit " \
+          "<http://www.debian.org/Bugs/Reporting> on the World Wide Web for" \
+          "instructions, read the file" \
+          "/usr/share/doc/debian/bug-reporting.txt from the doc-debian" \
+          "package, or install the reportbug package and use the command of" \
+          "the same name to file a report."
+  exit $SHELL_LIB_USAGE_ERROR
+}
+
+
+maplink () {
+  # returns what symlink should point to; i.e., what the "sane" answer is
+  # Keep this in sync with the debian/*.links files.
+  # This is only needed for symlinks to directories.
+  #
+  # XXX: Most of these look wrong in the X11R7 world and need to be fixed.
+  # If we've stopped using this function, fixing it might enable us to re-enable
+  # it again and catch more errors.
+  case "$1" in
+    /etc/X11/xkb/compiled) echo /var/lib/xkb ;;
+    /etc/X11/xkb/xkbcomp) echo /usr/X11R6/bin/xkbcomp ;;
+    /usr/X11R6/lib/X11/app-defaults) echo /etc/X11/app-defaults ;;
+    /usr/X11R6/lib/X11/fs) echo /etc/X11/fs ;;
+    /usr/X11R6/lib/X11/lbxproxy) echo /etc/X11/lbxproxy ;;
+    /usr/X11R6/lib/X11/proxymngr) echo /etc/X11/proxymngr ;;
+    /usr/X11R6/lib/X11/rstart) echo /etc/X11/rstart ;;
+    /usr/X11R6/lib/X11/twm) echo /etc/X11/twm ;;
+    /usr/X11R6/lib/X11/xdm) echo /etc/X11/xdm ;;
+    /usr/X11R6/lib/X11/xinit) echo /etc/X11/xinit ;;
+    /usr/X11R6/lib/X11/xkb) echo /etc/X11/xkb ;;
+    /usr/X11R6/lib/X11/xserver) echo /etc/X11/xserver ;;
+    /usr/X11R6/lib/X11/xsm) echo /etc/X11/xsm ;;
+    /usr/bin/X11) echo ../X11R6/bin ;;
+    /usr/bin/rstartd) echo ../X11R6/bin/rstartd ;;
+    /usr/include/X11) echo ../X11R6/include/X11 ;;
+    /usr/lib/X11) echo ../X11R6/lib/X11 ;;
+    *) internal_error "maplink() called with unknown path \"$1\"" ;;
+  esac
+}
+
+analyze_path () {
+  # given a supplied set of pathnames, break each one up by directory and do an
+  # ls -dl on each component, cumulatively; i.e.
+  # analyze_path /usr/X11R6/bin -> ls -dl /usr /usr/X11R6 /usr/X11R6/bin
+  # Thanks to Randolph Chung for this clever hack.
+
+  local f g
+
+  while [ -n "$1" ]; do
+    reject_whitespace "$1"
+    g=
+    message "Analyzing $1:"
+    for f in $(echo "$1" | tr / \  ); do
+      if [ -e /$g$f ]; then
+        ls -dl /$g$f /$g$f.dpkg-* 2> /dev/null || true
+        g=$g$f/
+      else
+        message "/$g$f: nonexistent; directory contents of /$g:"
+        ls -l /$g
+        break
+      fi
+    done
+    shift
+  done
+}
+
+find_culprits () {
+  local f p dpkg_info_dir possible_culprits smoking_guns bad_packages package \
+    msg
+
+  reject_whitespace "$1"
+  message "Searching for overlapping packages..."
+  dpkg_info_dir=/var/lib/dpkg/info
+  if [ -d $dpkg_info_dir ]; then
+    if [ "$(echo $dpkg_info_dir/*.list)" != "$dpkg_info_dir/*.list" ]; then
+      possible_culprits=$(ls -1 $dpkg_info_dir/*.list | egrep -v \
+        "(xbase-clients|x11-common|xfs|xlibs)")
+      if [ -n "$possible_culprits" ]; then
+        smoking_guns=$(grep -l "$1" $possible_culprits || true)
+        if [ -n "$smoking_guns" ]; then
+          bad_packages=$(printf "\\n")
+          for f in $smoking_guns; do
+            # too bad you can't nest parameter expansion voodoo
+            p=${f%*.list}      # strip off the trailing ".list"
+            package=${p##*/}   # strip off the directories
+            bad_packages=$(printf "%s\n%s" "$bad_packages" "$package")
+          done
+          msg=$(cat <<EOF
+The following packages appear to have file overlaps with the X.Org packages;
+these packages are either very old, or in violation of Debian Policy.  Try
+upgrading each of these packages to the latest available version if possible:
+for example, with the command "apt-get install".  If no newer version of a
+package is available, you will have to remove it; for example, with the command
+"apt-get remove".  If even the latest available version of the package has
+this file overlap, please file a bug against that package with the Debian Bug
+Tracking System.  You may want to refer the package maintainer to section 12.8
+of the Debian Policy manual.
+EOF
+)
+          message "$msg"
+          message "The overlapping packages are: $bad_packages"
+        else
+          message "no overlaps found."
+        fi
+      fi
+    else
+      message "cannot search; no matches for $dpkg_info_dir/*.list."
+    fi
+  else
+    message "cannot search; $dpkg_info_dir does not exist."
+  fi
+}
+
+# we require a readlink command or shell function
+if ! which readlink > /dev/null 2>&1; then
+  message "The readlink command was not found.  Please install version" \
+          "1.13.1 or later of the debianutils package."
+  readlink () {
+    # returns what symlink in $1 actually points to
+    perl -e '$l = shift; exit 1 unless -l $l; $r = readlink $l; exit 1 unless $r; print "$r\n"' "$1"
+  }
+fi
+
+check_symlink () {
+  # syntax: check_symlink symlink
+  #
+  # See if specified symlink points where it is supposed to.  Return 0 if it
+  # does, and 1 if it does not.
+  #
+  # Primarily used by check_symlinks_and_warn() and check_symlinks_and_bomb().
+
+  local symlink
+
+  # validate arguments
+  if [ $# -ne 1 ]; then
+    usage_error "check_symlink() called with wrong number of arguments;" \
+                "expected 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  symlink="$1"
+
+  if [ "$(maplink "$symlink")" = "$(readlink "$symlink")" ]; then
+    return 0
+  else
+    return 1
+  fi
+}
+
+check_symlinks_and_warn () {
+  # syntax: check_symlinks_and_warn symlink ...
+  #
+  # For each argument, check for symlink sanity, and warn if it isn't sane.
+  #
+  # Call this function from a preinst script in the event $1 is "upgrade" or
+  # "install".
+
+  local errmsg symlink
+
+  # validate arguments
+  if [ $# -lt 1 ]; then
+    usage_error "check_symlinks_and_warn() called with wrong number of" \
+                "arguments; expected at least 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  while [ -n "$1" ]; do
+    symlink="$1"
+    if [ -L "$symlink" ]; then
+      if ! check_symlink "$symlink"; then
+        observe "$symlink symbolic link points to wrong location" \
+                "$(readlink "$symlink"); removing"
+        rm "$symlink"
+      fi
+    elif [ -e "$symlink" ]; then
+      errmsg="$symlink exists and is not a symbolic link; this package cannot"
+      errmsg="$errmsg be installed until this"
+      if [ -f "$symlink" ]; then
+        errmsg="$errmsg file"
+      elif [ -d "$symlink" ]; then
+        errmsg="$errmsg directory"
+      else
+        errmsg="$errmsg thing"
+      fi
+      errmsg="$errmsg is removed"
+      die "$errmsg"
+    fi
+    shift
+  done
+}
+
+check_symlinks_and_bomb () {
+  # syntax: check_symlinks_and_bomb symlink ...
+  #
+  # For each argument, check for symlink sanity, and bomb if it isn't sane.
+  #
+  # Call this function from a postinst script.
+
+  local problem symlink
+
+  # validate arguments
+  if [ $# -lt 1 ]; then
+    usage_error "check_symlinks_and_bomb() called with wrong number of"
+                "arguments; expected at least 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  while [ -n "$1" ]; do
+    problem=
+    symlink="$1"
+    if [ -L "$symlink" ]; then
+      if ! check_symlink "$symlink"; then
+        problem=yes
+        warn "$symlink symbolic link points to wrong location" \
+             "$(readlink "$symlink")"
+      fi
+    elif [ -e "$symlink" ]; then
+      problem=yes
+      warn "$symlink is not a symbolic link"
+    else
+      problem=yes
+      warn "$symlink symbolic link does not exist"
+    fi
+    if [ -n "$problem" ]; then
+      analyze_path "$symlink" "$(readlink "$symlink")"
+      find_culprits "$symlink"
+      die "bad symbolic links on system"
+    fi
+    shift
+  done
+}
+
+font_update () {
+  # run $UPDATECMDS in $FONTDIRS
+
+  local dir cmd shortcmd x_font_dir_prefix
+
+  x_font_dir_prefix="/usr/share/fonts/X11"
+
+  if [ -z "$UPDATECMDS" ]; then
+    usage_error "font_update() called but \$UPDATECMDS not set"
+  fi
+  if [ -z "$FONTDIRS" ]; then
+    usage_error "font_update() called but \$FONTDIRS not set"
+  fi
+
+  reject_unlikely_path_chars "$UPDATECMDS"
+  reject_unlikely_path_chars "$FONTDIRS"
+
+  for dir in $FONTDIRS; do
+    if [ -d "$x_font_dir_prefix/$dir" ]; then
+      for cmd in $UPDATECMDS; do
+        if which "$cmd" > /dev/null 2>&1; then
+          shortcmd=${cmd##*/}
+          observe "running $shortcmd in $dir font directory"
+	  cmd_opts=
+          if [ "$shortcmd" = "update-fonts-alias" ]; then
+            cmd_opts=--x11r7-layout
+          fi
+          if [ "$shortcmd" = "update-fonts-dir" ]; then
+            cmd_opts=--x11r7-layout
+          fi
+          if [ "$shortcmd" = "update-fonts-scale" ]; then
+            cmd_opts=--x11r7-layout
+          fi
+          $cmd $cmd_opts $dir || warn "$cmd $cmd_opts $dir" \
+                              "failed; font directory data may not" \
+                              "be up to date"
+        else
+          warn "$cmd not found; not updating corresponding $dir font" \
+               "directory data"
+        fi
+      done
+    else
+      warn "$dir is not a directory; not updating font directory data"
+    fi
+  done
+}
+
+remove_conffile_prepare () {
+  # syntax: remove_conffile_prepare filename official_md5sum ...
+  #
+  # Check a conffile "filename" against a list of canonical MD5 checksums.
+  # If the file's current MD5 checksum matches one of the "official_md5sum"
+  # operands provided, then prepare the conffile for removal from the system.
+  # We defer actual deletion until the package is configured so that we can
+  # roll this operation back if package installation fails.
+  #
+  # Call this function from a preinst script in the event $1 is "upgrade" or
+  # "install" and verify $2 to ensure the package is being upgraded from a
+  # version (or installed over a version removed-but-not-purged) prior to the
+  # one in which the conffile was obsoleted.
+
+  local conffile current_checksum
+
+  # validate arguments
+  if [ $# -lt 2 ]; then
+    usage_error "remove_conffile_prepare() called with wrong number of" \
+                "arguments; expected at least 2, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  conffile="$1"
+  shift
+
+  # does the conffile even exist?
+  if [ -e "$conffile" ]; then
+    # calculate its checksum
+    current_checksum=$(md5sum < "$conffile" | sed 's/[[:space:]].*//')
+    # compare it to each supplied checksum
+    while [ -n "$1" ]; do
+      if [ "$current_checksum" = "$1" ]; then
+        # we found a match; move the confffile and stop looking
+        observe "preparing obsolete conffile $conffile for removal"
+        mv "$conffile" "$conffile.$THIS_PACKAGE-tmp"
+        break
+      fi
+      shift
+    done
+  fi
+}
+
+remove_conffile_lookup () {
+  # syntax: remove_conffile_lookup package filename
+  #
+  # Lookup the md5sum of a conffile in dpkg's database, and prepare for removal
+  # if it matches the actual file's md5sum.
+  #
+  # Call this function when you would call remove_conffile_prepare but only
+  # want to check against dpkg's status database instead of known checksums.
+
+  local package conffile old_md5sum
+
+  # validate arguments
+  if [ $# -ne 2 ]; then
+    usage_error "remove_conffile_lookup() called with wrong number of" \
+                "arguments; expected 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  package="$1"
+  conffile="$2"
+
+  if ! [ -e "$conffile" ]; then
+    return
+  fi
+  old_md5sum="$(dpkg-query -W -f='${Conffiles}' "$package" | \
+    awk '{ if (match($0, "^ '"$conffile"' ")) print $2}')"
+  if [ -n "$old_md5sum" ]; then
+    remove_conffile_prepare "$conffile" "$old_md5sum"
+  fi
+}
+
+remove_conffile_commit () {
+  # syntax: remove_conffile_commit filename
+  #
+  # Complete the removal of a conffile "filename" that has become obsolete.
+  #
+  # Call this function from a postinst script after having used
+  # remove_conffile_prepare() in the preinst.
+
+  local conffile
+
+  # validate arguments
+  if [ $# -ne 1 ]; then
+    usage_error "remove_conffile_commit() called with wrong number of" \
+                "arguments; expected 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  conffile="$1"
+
+  # if the temporary file created by remove_conffile_prepare() exists, remove it
+  if [ -e "$conffile.$THIS_PACKAGE-tmp" ]; then
+    observe "committing removal of obsolete conffile $conffile"
+    rm "$conffile.$THIS_PACKAGE-tmp"
+  fi
+}
+
+remove_conffile_rollback () {
+  # syntax: remove_conffile_rollback filename
+  #
+  # Roll back the removal of a conffile "filename".
+  #
+  # Call this function from a postrm script in the event $1 is "abort-upgrade"
+  # or "abort-install" is  after having used remove_conffile_prepare() in the
+  # preinst.
+
+  local conffile
+
+  # validate arguments
+  if [ $# -ne 1 ]; then
+    usage_error "remove_conffile_rollback() called with wrong number of" \
+                "arguments; expected 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  conffile="$1"
+
+  # if the temporary file created by remove_conffile_prepare() exists, move it
+  # back
+  if [ -e "$conffile.$THIS_PACKAGE-tmp" ]; then
+    observe "rolling back removal of obsolete conffile $conffile"
+    mv "$conffile.$THIS_PACKAGE-tmp" "$conffile"
+  fi
+}
+
+replace_conffile_with_symlink_prepare () {
+  # syntax: replace_conffile_with_symlink_prepare oldfilename newfilename \
+  # official_md5sum ...
+  #
+  # Check a conffile "oldfilename" against a list of canonical MD5 checksums.
+  # If the file's current MD5 checksum matches one of the "official_md5sum"
+  # operands provided, then prepare the conffile for removal from the system.
+  # We defer actual deletion until the package is configured so that we can
+  # roll this operation back if package installation fails. Otherwise copy it
+  # to newfilename and let dpkg handle it through conffiles mechanism.
+  #
+  # Call this function from a preinst script in the event $1 is "upgrade" or
+  # "install" and verify $2 to ensure the package is being upgraded from a
+  # version (or installed over a version removed-but-not-purged) prior to the
+  # one in which the conffile was obsoleted.
+
+  local conffile current_checksum
+
+  # validate arguments
+  if [ $# -lt 3 ]; then
+    usage_error "replace_conffile_with_symlink_prepare() called with wrong" \
+                " number of arguments; expected at least 3, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  oldconffile="$1"
+  shift
+  newconffile="$1"
+  shift
+
+  remove_conffile_prepare "$_oldconffile" "$@"
+  # If $oldconffile still exists, then md5sums didn't match.
+  # Copy it to new one.
+  if [ -f "$oldconffile" ]; then
+    cp "$oldconffile" "$newconffile"
+  fi
+
+}
+
+replace_conffile_with_symlink_commit () {
+  # syntax: replace_conffile_with_symlink_commit oldfilename
+  #
+  # Complete the removal of a conffile "oldfilename" that has been
+  # replaced by a symlink.
+  #
+  # Call this function from a postinst script after having used
+  # replace_conffile_with_symlink_prepare() in the preinst.
+
+  local conffile
+
+  # validate arguments
+  if [ $# -ne 1 ]; then
+    usage_error "replace_conffile_with_symlink_commit() called with wrong" \
+                "number of arguments; expected 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  conffile="$1"
+
+  remove_conffile_commit "$conffile"
+}
+
+replace_conffile_with_symlink_rollback () {
+  # syntax: replace_conffile_with_symlink_rollback oldfilename newfilename
+  #
+  # Roll back the replacing of a conffile "oldfilename" with symlink to
+  # "newfilename".
+  #
+  # Call this function from a postrm script in the event $1 is "abort-upgrade"
+  # or "abort-install" and verify $2 to ensure the package failed to upgrade
+  # from a version (or install over a version removed-but-not-purged) prior
+  # to the one in which the conffile was obsoleted.
+  # You should have  used replace_conffile_with_symlink_prepare() in the
+  # preinst.
+
+  local conffile
+
+  # validate arguments
+  if [ $# -ne 2 ]; then
+    usage_error "replace_conffile_with_symlink_rollback() called with wrong" \
+                "number of arguments; expected 2, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  oldconffile="$1"
+  newconffile="$2"
+
+  remove_conffile_rollback "$_oldconffile"
+  if [ -f "$newconffile" ]; then
+    rm "$newconffile"
+  fi
+}
+
+run () {
+  # syntax: run command [ argument ... ]
+  #
+  # Run specified command with optional arguments and report its exit status.
+  # Useful for commands whose exit status may be nonzero, but still acceptable,
+  # or commands whose failure is not fatal to us.
+  #
+  # NOTE: Do *not* use this function with db_get or db_metaget commands; in
+  # those cases the return value of the debconf command *must* be checked
+  # before the string returned by debconf is used for anything.
+
+  local retval
+
+  # validate arguments
+  if [ $# -lt 1 ]; then
+    usage_error "run() called with wrong number of arguments; expected at" \
+                "least 1, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  "$@" || retval=$?
+
+  if [ ${retval:-0} -ne 0 ]; then
+    observe "command \"$*\" exited with status $retval"
+  fi
+}
+
+register_x_lib_dir_with_ld_so () {
+  # syntax: register_x_lib_dir_with_ld_so
+  #
+  # Configure the dynamic loader ld.so to search /usr/X11R6/lib for shared
+  # libraries.
+  #
+  # Call this function from the postinst script of a package that places a
+  # shared library in /usr/X11R6/lib, before invoking ldconfig.
+
+  local dir ldsoconf
+
+  dir="/usr/X11R6/lib"
+  ldsoconf="/etc/ld.so.conf"
+
+  # is the line not already present?
+  if ! fgrep -qsx "$dir" "$ldsoconf"; then
+    observe "adding $dir directory to $ldsoconf"
+    echo "$dir" >> "$ldsoconf"
+  fi
+}
+
+deregister_x_lib_dir_with_ld_so () {
+  # syntax: deregister_x_lib_dir_with_ld_so
+  #
+  # Configure dynamic loader ld.so to not search /usr/X11R6/lib for shared
+  # libraries, if and only if no shared libaries remain there.
+  #
+  # Call this function from the postrm script of a package that places a shared
+  # library in /usr/X11R6/lib, in the event "$1" is "remove", and before
+  # invoking ldconfig.
+
+  local dir ldsoconf fgrep_status cmp_status
+
+  dir="/usr/X11R6/lib"
+  ldsoconf="/etc/ld.so.conf"
+
+  # is the line present?
+  if fgrep -qsx "$dir" "$ldsoconf"; then
+    # are there any shared objects in the directory?
+    if [ "$(echo "$dir"/lib*.so.*.*)" = "$dir/lib*.so.*.*" ]; then
+      # glob expansion produced nothing, so no shared libraries are present
+      observe "removing $dir directory from $ldsoconf"
+      # rewrite the file (very carefully)
+      set +e
+      fgrep -svx "$dir" "$ldsoconf" > "$ldsoconf.dpkg-tmp"
+      fgrep_status=$?
+      set -e
+      case $fgrep_status in
+        0|1) ;; # we don't actually care if any lines matched or not
+        *) die "error reading \"$ldsoconf\"; fgrep exited with status" \
+          "$fgrep_status" ;;
+      esac
+      set +e
+      cmp -s "$ldsoconf.dpkg-tmp" "$ldsoconf"
+      cmp_status=$?
+      set -e
+      case $cmp_status in
+        0) rm "$ldsoconf.dpkg-tmp" ;; # files are identical
+        1) mv "$ldsoconf.dpkg-tmp" "$ldsoconf" ;; # files differ
+        *) die "error comparing \"$ldsoconf.dpkg-tmp\" to \"$ldsoconf\";" \
+          "cmp exited with status $cmp_status" ;;
+      esac
+    fi
+  fi
+}
+
+make_symlink_sane () {
+  # syntax: make_symlink_sane symlink target
+  #
+  # Ensure that the symbolic link symlink exists, and points to target.
+  #
+  # If symlink does not exist, create it and point it at target.
+  #
+  # If symlink exists but is not a symbolic link, back it up.
+  #
+  # If symlink exists, is a symbolic link, but points to the wrong location, fix
+  # it.
+  #
+  # If symlink exists, is a symbolic link, and already points to target, do
+  # nothing.
+  #
+  # This function wouldn't be needed if ln had an -I, --idempotent option.
+
+  # Validate arguments.
+  if [ $# -ne 2 ]; then
+    usage_error "make_symlink_sane() called with wrong number of arguments;" \
+      "expected 2, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  # We could just use the positional parameters as-is, but that makes things
+  # harder to follow.
+  local symlink target
+
+  symlink="$1"
+  target="$2"
+
+  if [ -L "$symlink" ] && [ "$(readlink "$symlink")" = "$target" ]; then
+      observe "link from $symlink to $target already exists"
+  else
+    observe "creating symbolic link from $symlink to $target"
+    mkdir -p "${target%/*}" "${symlink%/*}"
+    ln -s -b -S ".dpkg-old" "$target" "$symlink"
+  fi
+}
+
+migrate_dir_to_symlink () {
+  # syntax: migrate_dir_to_symlink old_location new_location
+  #
+  # Per Debian Policy section 6.5.4, "A directory will never be replaced by a
+  # symbolic link to a directory or vice versa; instead, the existing state
+  # (symlink or not) will be left alone and dpkg will follow the symlink if
+  # there is one."
+  #
+  # We have to do it ourselves.
+  #
+  # This function moves the contents of old_location, a directory, into
+  # new_location, a directory, then makes old_location a symbolic link to
+  # new_location.
+  #
+  # old_location need not exist, but if it does, it must be a directory (or a
+  # symlink to a directory).  If it is not, it is backed up.  If new_location
+  # exists already and is not a directory, it is backed up.
+  #
+  # This function should be called from a package's preinst so that other
+  # packages unpacked after this one --- but before this package's postinst runs
+  # --- are unpacked into new_location even if their payloads contain
+  # old_location filespecs.
+
+  # Validate arguments.
+  if [ $# -ne 2 ]; then
+    usage_error "migrate_dir_to_symlink() called with wrong number of"
+                "arguments; expected 2, got $#"
+    exit $SHELL_LIB_USAGE_ERROR
+  fi
+
+  # We could just use the positional parameters as-is, but that makes things
+  # harder to follow.
+  local new old
+
+  old="$1"
+  new="$2"
+
+  # Is old location a symlink?
+  if [ -L "$old" ]; then
+    # Does it already point to new location?
+    if [ "$(readlink "$old")" = "$new" ]; then
+      # Nothing to do; migration has already been done.
+      observe "migration of $old to $new already done"
+      return 0
+    else
+      # Back it up.
+      warn "backing up symbolic link $old as $old.dpkg-old"
+      mv -b "$old" "$old.dpkg-old"
+    fi
+  fi
+
+  # Does old location exist, but is not a directory?
+  if [ -e "$old" ] && ! [ -d "$old" ]; then
+      # Back it up.
+      warn "backing up non-directory $old as $old.dpkg-old"
+      mv -b "$old" "$old.dpkg-old"
+  fi
+
+  observe "migrating $old to $new"
+
+  # Is new location a symlink?
+  if [ -L "$new" ]; then
+    # Does it point the wrong way, i.e., back to where we're migrating from?
+    if [ "$(readlink "$new")" = "$old" ]; then
+      # Get rid of it.
+      observe "removing symbolic link $new which points to $old"
+      rm "$new"
+    else
+      # Back it up.
+      warn "backing up symbolic link $new as $new.dpkg-old"
+      mv -b "$new" "$new.dpkg-old"
+    fi
+  fi
+
+  # Does new location exist, but is not a directory?
+  if [ -e "$new" ] && ! [ -d "$new" ]; then
+    warn "backing up non-directory $new as $new.dpkg-old"
+    mv -b "$new" "$new.dpkg-old"
+  fi
+
+  # Create new directory if it does not yet exist.
+  if ! [ -e "$new" ]; then
+    observe "creating $new"
+    mkdir -p "$new"
+  fi
+
+  # Copy files in old location to new location.  Back up any filenames that
+  # already exist in the new location with the extension ".dpkg-old".
+  observe "copying files from $old to $new"
+  if ! (cd "$old" && cp -a -b -S ".dpkg-old" . "$new"); then
+    die "error(s) encountered while copying files from $old to $new"
+  fi
+
+  # Remove files at old location.
+  observe "removing $old"
+  rm -r "$old"
+
+  # Create symlink from old location to new location.
+  make_symlink_sane "$old" "$new"
+}
+
+# vim:set ai et sw=2 ts=2 tw=80:
+
+# GOBSTOPPER: The X Strike Force shell library ends here.
+
+if [ -e /etc/default/xorg ]; then
+  . /etc/default/xorg
+fi
+
+if [ "x$XORG_CONFIG" = "xcustom" ]; then
+  # leave configuration alone
+  warn "not updating configuration as per \$XORG_CUSTOM"
+  exit 0
+fi
+
+# the error-out function
+bomb () {
+  echo "$PROGNAME: error: $*" | fold -s -w "${COLUMNS:-80}" >&2
+  exit 1
+}
+
+debug_echo () {
+  # Syntax: debug_echo message ...
+  if [ -n "$DEBUG_XORG_DEBCONF" ] || [ "$DEBCONF_DEBUG" = "user" ] \
+    || [ "$DEBCONF_DEBUG" = '.*' ]; then
+    DEBUG_XORG_PACKAGE="yes" observe "$*"
+  fi
+}
+
+validate_string_db_input () {
+  # Syntax: validate_string_db_input priority template
+  #
+  # validate string input; can't have doublequotes
+  # If $MAY_BE_NULL is a non-null value (e.g., "yes"), the string may be null.
+  if [ $# -ne 2 ]; then
+    echo "internal error: validate_string_db_input() called with wrong number of arguments: $*" >&2
+    exit 1
+  fi
+  PRIORITY="$1"
+  TEMPLATE="$2"
+  db_get "$TEMPLATE"
+  SAFE="$RET"
+  set +e
+  while :; do
+    db_input "$PRIORITY" "$TEMPLATE"
+    # is the question going to be asked?
+    if [ $? -eq 30 ]; then
+      break # no; bail out of validation loop
+    fi
+    db_go
+    db_get "$TEMPLATE"
+    if [ -n "$RET" ]; then
+      if ! expr "$RET" : '.*".*' > /dev/null 2>&1; then
+        break # valid input
+      else
+        ERROR="xserver-xorg/config/doublequote_in_string_error"
+      fi
+    else
+      if [ -n "$MAY_BE_NULL" ]; then
+        break # valid (null) input
+      else
+        ERROR="xserver-xorg/config/null_string_error"
+      fi
+    fi
+    # we only get to this point if the input was invalid; restore the known
+    # good value in case we are interrupted before the user provides a valid
+    # one
+    db_set "$TEMPLATE" "$SAFE"
+    db_fset "$TEMPLATE" seen false
+    # now show the user the error message
+    db_fset "$ERROR" seen false
+    db_input critical "$ERROR"
+    db_go
+  done
+  set -e
+}
+
+CONFIG_DIR="/etc/X11"
+CONFIG_AUX_DIR=/var/lib/x11
+SERVER_SYMLINK="$CONFIG_DIR/X"
+XORGCONFIG="$CONFIG_DIR/xorg.conf"
+CONFIG_AUX_DIR="/var/lib/x11"
+SERVER_SYMLINK_CHECKSUM="$CONFIG_AUX_DIR/${SERVER_SYMLINK##*/}.md5sum"
+SERVER_SYMLINK_ROSTER="$CONFIG_AUX_DIR/${SERVER_SYMLINK##*/}.roster"
+XORGCONFIG_CHECKSUM="$CONFIG_AUX_DIR/${XORGCONFIG##*/}.md5sum"
+XORGCONFIG_ROSTER="$CONFIG_AUX_DIR/${XORGCONFIG##*/}.roster"
+THIS_SERVER=/usr/bin/Xorg
+
+NCARDS=0
+NSERVERS=0
+NDRIVERS=0
+DRIVERS_LIST=
+MULTIHEAD=
+
+# get machine architecture
+ARCH=$(dpkg --print-installation-architecture)
+
+debug_echo () {
+  # Syntax: debug_echo message ...
+  if [ -n "$DEBUG_XORG_DEBCONF" ] || [ "$DEBCONF_DEBUG" = "user" ] \
+    || [ "$DEBCONF_DEBUG" = '.*' ]; then
+    DEBUG_XORG_PACKAGE=yes observe "$*"
+  fi
+}
+
+debug_report_status () {
+  # Syntax: debug_report_status command exit_status
+  debug_echo "$1 exited with status $2"
+}
+
+discover_sparc_video () {
+  # Detect video cards on sparc by parsing prtconf output
+  prtconf -p -v | awk '
+  BEGIN {
+          display_node = 0; 
+          model = ""; 
+          name = ""; 
+  }
+  /Node/ {
+           if(display_node == 1) {
+             printf "model=\"%s\" name=\"%s\"\n", model, name
+             display_node = 0;
+           };
+           model = "";
+           name = ""
+  }
+  /device_type:/ {
+                   if(index($2, "display") != 0) {
+                     display_node = 1
+                   }
+  }
+  /model:/ { l=length($2); model = substr($2, 2, l-2) }
+  /name:/  { l=length($2); name = substr($2, 2, l-2) }
+  END{
+       if(display_node == 1) {
+         printf "model=\"%s\" name=\"%s\"\n", model, name
+       }; 
+  }' | \
+  while read line
+  do
+    eval "${line}"
+#   Match the name and the model to the driver.
+    test -z "${name}" && continue
+#   The model stored in the prom is usually not too
+#   informative, so that we need to provide some
+#   sensible human-readable card identification as well.
+    server='XFree86'
+    case "${name}" in
+      'cgsix' )
+        card='Sun CG6 framebuffer'
+        driver='suncg6' 
+	;;
+      'SUNW,sx' )
+        card='Sun CG14 framebuffer'
+        driver='suncg14'
+        ;;
+      'SUNW,leo' )
+        card='Sun LEO framebuffer'
+        driver='sunleo'
+        ;;
+      'SUNW,tcx' )
+        card='Sun TCX framebuffer' 
+        driver='suntcx'
+	;;
+      'SUNW,m64B' )
+        card='ATI Technologies 3D Rage Pro or similar'
+        driver='ati'
+        ;;
+      'SUNW,ffb' )
+        card='Sun Creator3D framebuffer or similar'
+        driver='sunffb'
+        ;;
+      'SUNW,afb' )
+        card='Sun Elite3D framebuffer or similar'
+        driver='sunffb'
+        ;;
+      'TSI,gfxp' )
+        card='PGX32 framebuffer or similar'
+        driver='glint'
+        ;;
+      * )
+        card='Unknown'
+        server='unknown'
+        driver='unknown'
+        ;;
+    esac
+    if [ -n "${model}" ]; then
+      card="${card} (${model})"
+    fi
+    printf "${card}\t${server}\t${driver}\n"
+  done
+}
+
+validate_string_db_input () {
+  # Syntax: validate_string_db_input priority template
+  #
+  # validate string input; can't have doublequotes
+  # If $MAY_BE_NULL is a non-null value (e.g., "yes"), the string may be null.
+  if [ $# -ne 2 ]; then
+    echo "internal error: validate_string_db_input() called with wrong number of arguments: $*" >&2
+    exit 1
+  fi
+  PRIORITY=$1
+  TEMPLATE=$2
+  db_get "$TEMPLATE"
+  SAFE="$RET"
+  set +e
+  while :; do
+    db_input "$PRIORITY" "$TEMPLATE"
+    # is the question going to be asked?
+    if [ $? -eq 30 ]; then
+      break # no; bail out of validation loop
+    fi
+    db_go
+    db_get "$TEMPLATE"
+    if [ -n "$RET" ]; then
+      if ! expr "$RET" : '.*".*' > /dev/null 2>&1; then
+        break # valid input
+      else
+        ERROR=xserver-xorg/config/doublequote_in_string_error
+      fi
+    else
+      if [ -n "$MAY_BE_NULL" ]; then
+        break # valid (null) input
+      else
+        ERROR=xserver-xorg/config/null_string_error
+      fi
+    fi
+    # we only get to this point if the input was invalid; restore the known
+    # good value in case we are interrupted before the user provides a valid
+    # one
+    db_set "$TEMPLATE" "$SAFE"
+    db_fset "$TEMPLATE" seen false
+    # now show the user the error message
+    db_fset "$ERROR" seen false
+    db_input critical "$ERROR"
+    db_go
+  done
+  set -e
+}
+
+validate_numeric_db_input () {
+  # Syntax: validate_numeric_db_input priority template
+  #
+  # validate numeric input; must have only digits, can be null
+  if [ $# -ne 2 ]; then
+    echo "internal error: validate_numeric_db_input() called with wrong number of arguments: $*" >&2
+    exit 1
+  fi
+  PRIORITY=$1
+  TEMPLATE=$2
+  db_get "$TEMPLATE"
+  SAFE="$RET"
+  set +e
+  while :; do
+    db_input "$PRIORITY" "$TEMPLATE"
+    # is the question going to be asked?
+    if [ $? -eq 30 ]; then
+      break # no; bail out of validation loop
+    fi
+    db_go
+    db_get "$TEMPLATE"
+    if [ -z "$RET" ] || expr "$RET" : "[0-9]\+$" > /dev/null 2>&1; then
+      break # valid input
+    fi
+    # we only get to this point if the input was invalid; restore the known
+    # good value in case we are interrupted before the user provides a valid
+    # one
+    db_set "$TEMPLATE" "$SAFE"
+    db_fset "$TEMPLATE" seen false
+    # now show the user the error message
+    db_fset xserver-xorg/config/nonnumeric_string_error seen false
+    db_input critical xserver-xorg/config/nonnumeric_string_error
+    db_go
+  done
+  set -e
+}
+
+validate_bus_id_db_input () {
+  # Syntax: validate_bus_id_db_input priority template
+  #
+  # validate BusID input
+  if [ $# -ne 2 ]; then
+    echo "internal error: validate_bus_id_db_input() called with wrong number of arguments: $*" >&2
+    exit 1
+  fi
+  PRIORITY=$1
+  TEMPLATE=$2
+  db_get "$TEMPLATE"
+  SAFE="$RET"
+  set +e
+  while :; do
+    db_input "$PRIORITY" "$TEMPLATE"
+    # is the question going to be asked?
+    if [ $? -eq 30 ]; then
+      break # no; bail out of validation loop
+    fi
+    db_go
+    db_get "$TEMPLATE"
+    case "$RET" in
+      "")
+        # An empty string is valid.
+        break
+        ;;
+      ISA:*)
+        # Looks like an ISA bus ID specification string.  At least up to a
+        # point; upstream (xf86ParseIsaBusString() in
+        # xc/programs/Xserver/hw/xfree86/common/xf86isaBus.c) doesn't actually
+        # *supply* a specification.  So if the user's gotten this far, it's good
+        # enough.
+        break
+        ;;
+      PCI:*)
+        # Looks like a PCI bus ID specification; validate it.  (We can use &&
+        # outside a conditional here because of the "set +e" above.)
+        expr "$RET" : "PCI:[0-9]\{1,3\}:[0-9]\{1,3\}:[0-9]\{1,3\}$" >/dev/null \
+          2>&1 && break
+        ;;
+      SBUS:*)
+        # Looks like an SBUS bus ID specification; validate it.  (We can use &&
+        # outside a conditional here because of the "set +e" above.)
+        #
+        # According to upstream (xf86ParseSbusBusString() in
+        # xc/programs/Xserver/hw/xfree86/common/xf86sbusBus.c):
+        #
+        # The format is assumed to be one of:
+        # * "fbN", e.g. "fb1", which means the device corresponding to /dev/fbN
+        # * "nameN", e.g. "cgsix0", which means Nth instance of card NAME
+        # * "/prompath", e.g. "/sbus@0,10001000/cgsix@3,0" which is
+        #   PROM pathname to the device.
+        #
+        # Well, okay.
+        #
+        # Accept any non-null sequence of lowercase letters followed by a
+        # non-null sequence of decimal digits.  This handles "fbN" and "nameN".
+        expr "$RET" : "SBUS:[a-z]\+[0-9]\+" >/dev/null 2>&1 && break
+        # Now for the PROM path.  I am lazy; accept a slash followed a non-null
+        # sequence of letters and commas, an at sign, a non-null sequence of
+        # hexadecimal digits, a comma, and another non-null sequence of
+        # hexadecimal digits.  Furthermore, accept multiple occurences of this
+        # entire sequence.  Whew.
+        expr "$RET" : "SBUS:\(/[A-Za-z,]\+@[0-9A-Fa-f]\+,[0-9A-Fa-f]\+\)\+$" \
+          >/dev/null 2>&1 && break
+        ;;
+      [0-9])
+        # Accept a simple decimal integer for legacy buses that haven't been
+        # properly implemented (e.g., for SGI Indigo2 XL).
+        break
+        ;;
+      *)
+    esac
+    # we only get to this point if the input was invalid; restore the known good
+    # value in case we are interrupted before the user provides a valid one
+    db_set "$TEMPLATE" "$SAFE"
+    db_fset "$TEMPLATE" seen false
+    # now show the user the error message
+    db_fset xserver-xorg/config/device/bus_id_error seen false
+    db_input critical xserver-xorg/config/device/bus_id_error
+    db_go
+  done
+  set -e
+}
+
+auto_answer () {
+  # Syntax: auto_answer input_command priority template default_answer
+  #
+  # Used to auto-answer questions that don't have reasonable defaults.  Some
+  # people insist on running the xserver-xorg config script with the
+  # non-interactive frontend.  For this to work, the debconf database will need
+  # to be pre-loaded with answers to several questions.  You have been
+  # warned...
+  if [ $# -ne 4 ]; then
+    echo "internal error: auto_answer() called with wrong number of arguments: $*" >&2
+    exit 1
+  fi
+  INPUT_COMMAND=$1
+  PRIORITY=$2
+  TEMPLATE=$3
+  DEFAULT_ANSWER=$4
+  set +e
+  debug_echo "auto_answer() \"$INPUT_COMMAND $PRIORITY $TEMPLATE\" with default \"$DEFAULT_ANSWER\""
+  db_fget "$TEMPLATE" seen
+  # are we re-configuring?
+  if [ -z "$FIRSTINST" ] && [ "$RET" = "true" ]; then
+    # yes, we are reconfiguring
+    db_get "$TEMPLATE"
+    debug_echo "auto_answer: (reconfiguring) preserving existing answer \"$RET\""
+  else
+    # not reconfiguring; has the question been seen before?
+    if [ "$RET" = "true" ]; then
+      db_get "$TEMPLATE"
+      debug_echo "auto_answer: (not reconfiguring) preserving existing answer \"$RET\""
+    else
+      debug_echo "auto_answer: auto-answering with \"$DEFAULT_ANSWER\""
+      db_set $TEMPLATE "$DEFAULT_ANSWER"
+    fi
+  fi
+  "$INPUT_COMMAND" "$PRIORITY" "$TEMPLATE"
+  if [ $? -eq 30 ]; then
+    debug_echo "auto_answer: $TEMPLATE is not being asked"
+  else
+    debug_echo "auto_answer: asking $TEMPLATE"
+  fi
+  set -e
+  db_go
+  db_get "$TEMPLATE"
+  debug_echo "auto_answer: $TEMPLATE is \"$RET\""
+}
+
+priority_ceil() {
+  # syntax: priority_ceil requested_priority
+  #
+  # Given a variable PRIORITY_CEILING and a "requested_priority" argument, echo
+  # a debconf priority string corresponding to the lesser of the two.
+
+  # Implementation note: a clever version of this could be done using "eval",
+  # or embedding a Perl script, but those would be more difficult to maintain.
+  # Better just to go the simple and stupid route.  Yes, I know this is not
+  # very efficient.
+
+  # Validate arguments.
+  if [ $# -ne 1 ]; then
+    debug_echo "priority_ceil() called with empty or bogus arguments \"$*\";" \
+               "assuming argument of \"low\""
+    _requested_priority=low
+  else
+    _requested_priority="$1"
+  fi
+
+  # If PRIORITY_CEILING is null or unset, it's same as not having one at all;
+  # the sky's the limit.  We use a locally scoped priority_ceiling variable
+  # because we don't want to affect the value of the global one.
+  _priority_ceiling=${PRIORITY_CEILING:-"critical"}
+
+  # Ensure the value of _priority_ceiling is reasonable.
+  if [ "$_priority_ceiling" != "critical" ] && \
+       [ "$_priority_ceiling" != "high" ] && \
+       [ "$_priority_ceiling" != "medium" ] && \
+       [ "$_priority_ceiling" != "low" ]; then
+    debug_echo "priority_ceil() called with bogus value of \$PRIORITY_CEILING" \
+               "\"$_priority_ceiling\"; treating as \"critical\""
+    _priority_ceiling=critical
+  fi
+
+  case "$_requested_priority" in
+    critical)
+      # This is the highest priority, so there is nowhere to go but down.
+      echo "$_priority_ceiling"
+      ;;
+    high)
+      case "$_priority_ceiling" in
+        critical)
+          echo "$_requested_priority"
+          ;;
+        high|medium|low)
+          echo "$_priority_ceiling"
+          ;;
+      esac
+      ;;
+    medium)
+      case "$_priority_ceiling" in
+        critical|high)
+          echo "$_requested_priority"
+          ;;
+        medium|low)
+          echo "$_priority_ceiling"
+          ;;
+      esac
+      ;;
+    low)
+      # This is the lowest priority, so we can't go any lower.
+      echo "$_requested_priority"
+      ;;
+    *)
+      debug_echo "priority_ceil() called with bogus argument" \
+                 "\"$_requested_priority\"; returning \"low\""
+      echo low
+      ;;
+  esac
+}
+
+non_latin_keyboard () {
+  NONLATINMAPS="am ar bg by cs el gr il ir iu lo lt mk ml mm mn ru th tj ua"
+  for i in $NONLATINMAPS; do
+    if [ "$XMAP" = "$i" ]; then
+      NON_LATIN="true"
+    fi
+  done
+
+  # Turkish F keyboards are non-Latin; Turkish Q aren't.
+  if [ "$XMAP" = "tr" ] && [ "$VARIANT" = "f" ]; then
+    NON_LATIN="true"
+  fi
+}
+
+# analyze arguments; used by auto_answer()
+if [ "$1" = "reconfigure" ] || [ -n "$DEBCONF_RECONFIGURE" ]; then
+  RECONFIGURE=true
+else
+  RECONFIGURE=
+fi
+
+if [ -z "$2" ]; then
+  FIRSTINST=yes
+fi
+
+debug_echo "Configuring $THIS_PACKAGE."
+
+# collect information about installed video card(s), if possible
+if [ "$ARCH" = "sparc" ]; then
+  DISCOVER_PROG='prtconf'
+  DISCOVER_FUNC='discover_sparc_video'
+
+  if which $DISCOVER_PROG > /dev/null 2>&1; then
+    DISCOVERED_VIDEO=$($DISCOVER_FUNC)
+    MULTIHEAD=$(echo "$DISCOVERED_VIDEO" | wc -l)
+    if [ -n "$DISCOVERED_VIDEO" ]; then
+      NCARDS=$(echo "$DISCOVERED_VIDEO" | wc -l)
+      SERVERS=$(echo "$DISCOVERED_VIDEO" | awk 'BEGIN { FS="\t" } {print $2}' | grep -v unknown | sort | uniq)
+      if [ -n "$SERVERS" ]; then
+        NSERVERS=$(echo "$SERVERS" | wc -l)
+      fi
+      DRIVERS=$(echo "$DISCOVERED_VIDEO" | awk 'BEGIN { FS="\t" } {print $NF}' | grep -v unknown | sort | uniq)
+      if [ -n "$DRIVERS" ]; then
+        NDRIVERS=$(echo "$DRIVERS" | wc -l)
+        DRIVERS_LIST=$(echo "$DRIVERS" | awk 'BEGIN {ORS="";FS="\t"} {if(NR > 1){print last ","};last=$0} END {print last}')
+      fi
+      if [ $MULTIHEAD -gt 1 ]; then
+        MULTIHEAD=yes
+      fi
+      DISCOVERED_VIDEO=$(echo "$DRIVERS" | head -n 1)
+    else
+      DISCOVERED_VIDEO=""
+    fi
+  else
+    DISCOVERED_VIDEO=""
+  fi
+else
+  DISCOVERED_VIDEO=""
+fi
+
+if [ -n "$XFORCEVESA" ] || [ -n "$(grep xforcevesa /proc/cmdline)" ]; then
+  # don't let the server autodetect the video card, but always use vesa instead
+  DRIVERS_LIST="vesa"
+  DISCOVERED_VIDEO="vesa"
+fi
+
+db_subst xserver-xorg/config/device/driver choices "$DRIVERS_LIST"
+auto_answer db_input low xserver-xorg/config/device/driver "$DISCOVERED_VIDEO"
+
+if [ -n "$FIRSTINST" ] || [ -n "$RECONFIGURE" ]; then
+  # BusID
+  PRIORITY=low
+  DEFAULT=
+
+  # Some PowerPCs need to be told where to find the video card even if there is
+  # only one in the machine (broken PCI bus code in the XFree86 X server, most
+  # likely).  If there are multiple video cards, we need to configure one as the
+  # primary head.
+  if [ "$ARCH" = "powerpc" ] || [ "$MULTIHEAD" = "yes" ]; then
+    PRIORITY=medium
+    if which lspci > /dev/null 2>&1; then
+      # Try to guess the correct BusID.
+      VIDEO_CARD=$(LC_ALL=C lspci -n | grep -E "(Class )?0300:" | sort -n | head -n 1 \
+        | cut -d\  -f1)
+      if [ -n "$VIDEO_CARD" ]; then
+        # Recent versions of lspci report a four-digit domain as the first field.
+        if expr "$VIDEO_CARD" : ".*:.*:.*\..*" >/dev/null 2>&1; then
+          # We have an entry in "hex:hex:hex.hex" format; we need
+          # "PCI:decimal:decimal:decimal" (we don't use the domain).
+          DOMAIN=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d: -f1) )
+          BUS=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d: -f2) )
+          DEVICE=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d: -f3 | cut -d. -f1) )
+          FUNCTION=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d. -f2) )
+          DEFAULT="PCI:$BUS:$DEVICE:$FUNCTION"
+        elif expr "$VIDEO_CARD" : ".*:.*\..*" >/dev/null 2>&1; then
+          # We have an entry in "hex:hex.hex" format; we need
+          # "PCI:decimal:decimal:decimal".
+          BUS=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d: -f1) )
+          DEVICE=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d: -f2 | cut -d. -f1) )
+          FUNCTION=$(printf "%d" 0x$(echo $VIDEO_CARD | cut -d. -f2) )
+          DEFAULT="PCI:$BUS:$DEVICE:$FUNCTION"
+        else
+          warn "unrecognized output from lspci: \"$VIDEO_CARD\""
+        fi
+      fi
+    fi
+  fi
+
+  # SGI Indigo2 XLs require a special hack, per Guido Guenther (see Debian
+  # #249614).
+  if [ -e /proc/cpuinfo ]; then
+    if grep -q "system type.*:.*SGI Indigo2" /proc/cpuinfo; then
+      PRIORITY=medium
+      DEFAULT=1
+    fi
+  fi
+
+  # For most people, asking this question at all is a bad idea. Only do it
+  # if we have a need to do so, as defined by setting the priority
+  if [ "$PRIORITY" = "medium" ]; then
+    # this question requires input validation
+    if [ -n "$DEFAULT" ]; then
+      auto_answer validate_bus_id_db_input "$(priority_ceil $PRIORITY)" xserver-xorg/config/device/bus_id "$DEFAULT"
+    else
+      validate_bus_id_db_input "$(priority_ceil $PRIORITY)" xserver-xorg/config/device/bus_id || debug_report_status "validate_bus_id_db_input $(priority_ceil $PRIORITY) xserver-xorg/config/device/bus_id" "$?"
+    fi
+  else
+    db_set xserver-xorg/config/device/bus_id ""
+  fi
+
+  # use fbcon kernel functions?
+
+  case "$ARCH" in
+    alpha|hurd-i386|i386|amd64|lpia)
+      USE_FBDEV=false
+      ;;
+    *)
+      USE_FBDEV=true
+      ;;
+  esac
+
+  if [ -e /proc/fb ]; then
+    FB_TYPE="$(grep '^0 ' /proc/fb | sed 's/[^[:space:]] //')"
+    # did we actually get back anything?
+    if [ -n "$FB_TYPE" ]; then
+      if echo "$FB_TYPE" | grep -Eiq '(OFfb|VESA|VGA16)'; then
+        USE_FBDEV=false
+      else
+        # other framebuffers do support UseFBDEV
+        USE_FBDEV=true
+      fi
+    fi
+  else
+    USE_FBDEV=false
+  fi
+
+  if [ -n "$XORG_USE_FBDEV" ] && [ "$XORG_USE_FBDEV" = "no" ]; then
+    USE_FBDEV=false
+  fi
+
+  db_get xserver-xorg/config/device/use_fbdev || debug_report_status "db_get xserver-xorg/config/device/use_fbdev"
+  if [ "$RET" = "true" ] && [ "$USE_FBDEV" = "false" ]; then
+    debug_echo "xserver-xorg/config/device/use_fbdev is \"true\" but /proc/fb does not exist, is empty, or reports a framebuffer type with which UseFBDev cannot be used; setting template to \"false\""
+    db_set xserver-xorg/config/device/use_fbdev false
+  fi
+
+  auto_answer db_input "$(priority_ceil medium)" xserver-xorg/config/device/use_fbdev "$USE_FBDEV"
+fi
+
+# keyboard setup
+PRIORITY="medium"
+
+if [ -n "$FIRSTINST" ]; then
+  AUTODETECT_KB="true"
+else
+  AUTODETECT_KB="false"
+fi
+
+auto_answer db_input "$(priority_ceil $PRIORITY)" xserver-xorg/autodetect_keyboard "$AUTODETECT_KB" || debug_echo "db_input xserver-xorg/autodetect_keyboard"
+db_get xserver-xorg/autodetect_keyboard || debug_report_status "db_get server-xorg/autodetect_keyboard"
+if [ "$RET" = "true" ]; then
+  DOKBDETECT="true"
+  debug_echo "Redetecting keyboard layout; resetting flag to false."
+  db_set xserver-xorg/autodetect_keyboard false
+fi
+
+if [ -n "$DOKBDETECT" ] && [ -f /etc/default/console-setup ]; then
+  # Hmm. At least for now, none of the variables in this file will clash
+  # with our own variables ...
+  . /etc/default/console-setup
+fi
+
+if [ "$XKBLAYOUT" ]; then
+  debug_echo "Fetched keyboard layout from console configuration:"
+  debug_echo "layout: '$XKBLAYOUT', options: '$XKBOPTIONS', variant: '$XKBVARIANT', model: '$XKBMODEL'"
+  PRIORITY=low
+elif [ -n "$DOKBDETECT" ]; then
+  # generated by a small bit of Perl from a static list of keymaps provided
+  # by Matthias Urlichs
+  REALLANG=${LANG%%@*}
+  REALLANG=${REALLANG%%.*}
+
+  db_get debian-installer/keymap || debug_report_status "db_get debian-installer/keymap"
+  DI_KEYMAP="${RET##mac-usb-}"
+  DI_KEYMAP="${DI_KEYMAP%%-latin1}"
+
+  case "$DI_KEYMAP" in
+    be2) XMAP="be";;
+    bg) XMAP="bg"; VARIANT="bds";;
+    br) XMAP="us"; VARIANT="intl"; MODEL="pc104";;
+    br-abnt2) XMAP="br"; VARIANT="abnt2"; MODEL="abnt2";;
+    by) XMAP="by";;
+    ca-multi) XMAP="ca"; VARIANT="multi";;
+    cf) XMAP="ca"; VARIANT="fr";;
+    croat) XMAP="hr";;
+    cz-lat2) XMAP="cz";;
+    de-latin1-nodeadkeys) XMAP="de"; VARIANT="nodeadkeys";;
+    de) XMAP="de";;
+    dvorak) XMAP="us"; VARIANT="dvorak"; MODEL="pc104";;
+    dk) XMAP="dk";;
+    es) XMAP="es";;
+    et) XMAP="ee";;
+    fi) XMAP="fi";;
+    fr) XMAP="fr"; VARIANT="oss";;
+    fr_CH) XMAP="ch"; VARIANT="fr";;
+    fr-latin9) XMAP="fr"; VARIANT="latin9";;
+    gb) XMAP="gb";;
+    gr) XMAP="gr";;
+    hebrew) XMAP="il";;
+    hu) XMAP="hu";;
+    is) XMAP="is";;
+    it) XMAP="it";;
+    jp106) XMAP="jp"; MODEL="jp106";;
+    la) XMAP="latam";;
+    lfc-cat) XMAP="es"; VARIANT="cat";;
+    lt) XMAP="lt";;
+    lv-latin4) XMAP="lv";;
+    # XXX should these be MODEL="macintosh"?
+    mac-us-std) XMAP="us";;
+    mac-de2-ext) XMAP="de"; VARIANT="nodeadkeys";;
+    mac-fr2-ext) XMAP="fr";;
+    mac-fr3) XMAP="fr";;
+    mac-es) XMAP="es";;
+    mac-usb-de_CH) XMAP="ch"; VARIANT="de";;
+    mk) XMAP="mk";;
+    nl) XMAP="nl";;
+    no) XMAP="no";;
+    pl) XMAP="pl";;
+    pt) XMAP="pt";;
+    ro) XMAP="ro";;
+    ru) XMAP="ru";;
+    se) XMAP="se";;
+    sg) XMAP="ch"; VARIANT="de";;
+    sk-qwerty) XMAP="sk"; VARIANT="qwerty";;
+    slovene) XMAP="si";;
+    sr-cy) XMAP="cs";;
+    trf|trfu) XMAP="tr"; VARIANT="f";;
+    trq|trqu) XMAP="tr";;
+    ua) XMAP="ua";;
+    uk) XMAP="gb";;
+    us) XMAP="us"; MODEL="pc104";;
+    *) XMAP="UNKNOWN";;
+  esac
+
+  if [ "$XMAP" = "us" ] && [ "${DI_LANG}" = "ko_KR" ]; then
+    XMAP=kr # Uses US keyboard on the console.
+    MODEL=
+  fi
+
+  if [ "$XMAP" = "UNKNOWN" ]; then
+    warn "failed to infer keyboard layout from layout/lang '$DI_KEYMAP--$REALLANG'"
+    PRIORITY=medium
+    XMAP="us"
+    MODEL="pc104"
+  # prompt for layout if we ended up with French Canadian; apparently having
+  # US-layout keyboards is common there
+  elif [ "$XMAP" = "ca" ] && [ "$VARIANT" = "fr" ]; then
+    PRIORITY=high
+  else
+    PRIORITY=low
+  fi
+
+  # we can't do non-Latin usernames, so people with Latin layouts need a US
+  # layout so they can log in, and then switch to writing native text.  Bit hard
+  # to work out which one should be the default.
+  non_latin_keyboard
+  if [ -n "$NON_LATIN" ]; then
+    warn "selected layout '$XMAP' from '$DI_KEYMAP--$REALLANG' is non-Latin; " \
+         "adding us to the layout list, Alt+Shift toggles"
+    if [ -z "$OPTIONS" ]; then
+      OPTIONS="grp:alt_shift_toggle"
+    else
+      OPTIONS="$OPTIONS,grp:alt_shift_toggle"
+    fi
+    XMAP="us,$XMAP"
+  fi
+  
+  if [ -n "$LEVEL2" ]; then
+    warn "selected layout '$XMAP' from '$DI_KEYMAP--$REALLANG' is l2-only"
+  fi
+
+  XKBLAYOUT="$XMAP"
+  XKBOPTIONS="$OPTIONS"
+  XKBVARIANT="$VARIANT"
+  XKBMODEL="$MODEL"
+else
+  db_get xserver-xorg/config/inputdevice/keyboard/layout || debug_report_status "db_get xserver-xorg/config/inputdevice/keyboard/layout"
+  XKBLAYOUT="$RET"
+  db_get xserver-xorg/config/inputdevice/keyboard/options || debug_report_status "db_get xserver-xorg/config/inputdevice/keyboard/options"
+  XKBOPTIONS="$RET"
+  db_get xserver-xorg/config/inputdevice/keyboard/variant || debug_report_status "db_get xserver-xorg/config/inputdevice/keyboard/variant"
+  XKBVARIANT="$RET"
+  db_get xserver-xorg/config/inputdevice/keyboard/model || debug_report_status "db_get xserver-xorg/config/inputdevice/keyboard/model"
+  XKBMODEL="$RET"
+  PRIORITY=low
+fi
+
+MAY_BE_NULL= auto_answer validate_string_db_input "$(priority_ceil $PRIORITY)" xserver-xorg/config/inputdevice/keyboard/layout "$XKBLAYOUT"
+
+# these questions require input validation
+PRIORITY=medium
+
+DEFAULT=xorg
+MAY_BE_NULL= auto_answer validate_string_db_input "$(priority_ceil $PRIORITY)" xserver-xorg/config/inputdevice/keyboard/rules "$DEFAULT"
+
+if [ -z "$XKBMODEL" ]; then
+  db_get xserver-xorg/config/inputdevice/keyboard/rules
+  if [ "$RET" = "sun" ]; then
+    db_set xserver-xorg/config/inputdevice/keyboard/rules "xorg"
+    XKBMODEL=pc105
+  elif [ "$RET" = "xorg" ]; then
+    if [ "$ARCH" = "powerpc" ] && \
+        [ -e /proc/sys/dev/mac_hid/keyboard_sends_linux_keycodes ] && \
+        [ "$(cat /proc/sys/dev/mac_hid/keyboard_sends_linux_keycodes)" = "0" ]; then
+      XKBMODEL=macintosh_old
+    else
+      XKBMODEL=pc105
+    fi
+  fi
+fi
+MAY_BE_NULL= auto_answer validate_string_db_input "$(priority_ceil $PRIORITY)" xserver-xorg/config/inputdevice/keyboard/model "$XKBMODEL"
+
+# ugly kludge, I know; map Apple->AltGr for most European Macs
+db_get xserver-xorg/config/inputdevice/keyboard/model
+if [ "$ARCH" = "powerpc" ] && [ "$RET" = "pc105" ]; then
+  if [ -n "$XKBOPTIONS" ]; then
+    if ! echo "$XKBOPTIONS" | grep -q "lv3:"; then
+      XKBOPTIONS="$XKBOPTIONS,lv3:lwin_switch"
+    fi
+  else
+    XKBOPTIONS="lv3:lwin_switch"
+  fi
+fi
+
+# kill me now.
+if echo "$XKBOPTIONS" | grep -q "nodeadkeys"; then
+  if [ -z "$XKBVARIANT" ]; then
+    XKBVARIANT="nodeadkeys"
+    NEWOPTIONS=""
+    IFS_SAVE="$IFS"
+    IFS=","
+    for i in $XKBOPTIONS; do
+      IFS="$IFS_SAVE"
+      if [ "$i" != "nodeadkeys" ]; then
+        NEWOPTIONS="${NEWOPTIONS:+$NEWOPTIONS,}$i"
+      fi
+      IFS=","
+    done
+    IFS="$IFS_SAVE"
+    XKBOPTIONS="$NEWOPTIONS"
+    db_set xserver-xorg/config/inputdevice/keyboard/variant "$XKBVARIANT"
+    db_set xserver-xorg/config/inputdevice/keyboard/options "$XKBOPTIONS"
+  else
+    warn "wanted to migrate nodeadkeys from options -> variant, but variant" \
+         "is already $XKBVARIANT; not migrating"
+  fi
+fi
+
+MAY_BE_NULL=yes auto_answer validate_string_db_input "$(priority_ceil low)" xserver-xorg/config/inputdevice/keyboard/variant "$XKBVARIANT"
+
+MAY_BE_NULL=yes auto_answer validate_string_db_input "$(priority_ceil $PRIORITY)" xserver-xorg/config/inputdevice/keyboard/options "$XKBOPTIONS"
+
+# files and dri sections
+if [ -e "$CONFIG_AUX_DIR/.migrateconfig" ]; then
+  AUTODETECT_VIDEO="yes"
+  rm -f $CONFIG_AUX_DIR/.migrateconfig
+fi
+
+
+
+# register this package as a (potential) handler of the X server symlink and
+# X.Org X server configuration file
+for ROSTER in "$SERVER_SYMLINK_ROSTER" "$XORGCONFIG_ROSTER"; do
+  if ! fgrep -qsx "$THIS_PACKAGE" "$ROSTER"; then
+    echo "$THIS_PACKAGE" >> "$ROSTER"
+  fi
+done
+
+# only mess with the server symlink file if it is a symbolic link or does
+# not exist.  otherwise, assume that's the way the user wants it.
+if ! [ -e "$SERVER_SYMLINK" ]; then
+  ln -s "$THIS_SERVER" "$SERVER_SYMLINK"
+# recover from an old bug
+elif [ `readlink "$SERVER_SYMLINK"` = "/bin/true" ]; then
+  rm -f "$SERVER_SYMLINK"
+  ln -s "$THIS_SERVER" "$SERVER_SYMLINK"
+fi
+
+if [ -n "$UPGRADE" ] && dpkg --compare-versions "$2" le "1:7.3+5"; then
+        # Clean up our old crap
+        rm -f "$SERVER_SYMLINK_CHECKSUM" "$SERVER_SYMLINK_ROSTER"
+        for QUESTION in "shared/default-x-server" \
+                        "xserver-xorg/autodetect_mouse" \
+                        "xserver-xorg/autodetect_monitor" \
+                        "xserver-xorg/autodetect_video_card" \
+                        "xserver-xorg/config/device/identifier" \
+                        "xserver-xorg/config/monitor/selection-method" \
+                        "xserver-xorg/config/monitor/screen-size" \
+                        "xserver-xorg/config/monitor/mode-list" \
+                        "xserver-xorg/config/monitor/default-identifier" \
+                        "xserver-xorg/config/monitor/horiz-sync" \
+                        "xserver-xorg/config/monitor/vert-refresh" \
+                        "xserver-xorg/config/monitor/range_input_error" \
+                        "xserver-xorg/config/display/modes" \
+                        "xserver-xorg/config/device/video_ram" \
+                        "xserver-xorg/config/display/default_depth" \
+                        "xserver-xorg/config/inputdevice/mouse/port" \
+                        "xserver-xorg/config/inputdevice/mouse/protocol" \
+                        "xserver-xorg/config/inputdevice/mouse/emulate3buttons" \
+                        "xserver-xorg/config/modules" \
+                        "xserver-xorg/config/monitor/default-identifier" \
+                        "xserver-xorg/config/monitor/identifier" \
+                        "xserver-xorg/config/write_files_section" \
+                        "xserver-xorg/multiple_possible_x-drivers"; do
+          db_unregister "$QUESTION" || true
+        done
+fi
+
+# no debconf interaction should be done after this point
+# (the dexconf call below invokes db_stop)
+
+# Don't touch the config on upgrades except to deal with known issues with old
+# configs.
+if [ -n "$RECONFIGURE" ]; then
+  # prepare a new version
+  NEW_XORGCONFIG="$XORGCONFIG.dpkg-new"
+  if [ -n "$RECONFIGURE" ] && [ -e "$XORGCONFIG" ]; then
+    BACKUP_XORGCONFIG="$XORGCONFIG.$(date '+%Y%m%d%H%M%S')"
+    if [ -e "$BACKUP_XORGCONFIG" ]; then
+      bomb "backup xorg.conf file $BACKUP_XORGCONFIG already" \
+           "exists; please remove it and try again"
+    fi
+    cp "$XORGCONFIG" "$BACKUP_XORGCONFIG"
+    warn "overwriting possibly-customised configuration file; backup" \
+         "in $BACKUP_XORGCONFIG"
+  fi
+  if dexconf -o "$NEW_XORGCONFIG"; then
+    if ! cmp -s "$XORGCONFIG" "$NEW_XORGCONFIG"; then
+      mv "$NEW_XORGCONFIG" "$XORGCONFIG"
+      md5sum "$XORGCONFIG" > "$XORGCONFIG_CHECKSUM"
+    fi
+  else
+    warn "error while preparing new Xorg X server configuration" \
+         "file in $NEW_XORGCONFIG; not attempting to update existing" \
+         "configuration"
+  fi
+  rm -f "$NEW_XORGCONFIG"
+elif dpkg --compare-versions "$2" lt-nl "1:7.4~5ubuntu1"; then
+  # We're upgrading from pre-7.4.  We need to replace i810 with intel,
+  # via with openchrome, and psb with vesa.
+  if [ -e "$XORGCONFIG" ]; then
+    sed -e'
+	/^[[:space:]]*Section[[:space:]]\+"Device"[[:space:]]*$/,/^[[:space:]]*EndSection[[:space:]]*$/ {
+	/^[[:space:]]*Driver[[:space:]]\+"i810"/s/i810/intel/
+	/^[[:space:]]*Driver[[:space:]]\+"via"/s/via/openchrome/
+	/^[[:space:]]*Driver[[:space:]]\+"psb"/s/psb/vesa/
+	}
+	' $XORGCONFIG > ${XORGCONFIG}.madwizard-new
+    if ! cmp -s $XORGCONFIG ${XORGCONFIG}.madwizard-new; then
+      # compare the current and stored checksums; if they do not match, assume
+      # that's the way the user wants it.
+      if [ "$(md5sum "$XORGCONFIG")" != "$(cat "$XORGCONFIG_CHECKSUM")" ]; then
+        BACKUP_XORGCONFIG="$XORGCONFIG.$(date '+%Y%m%d%H%M%S')"
+        warn "$XORGCONFIG has been customized, but we need to make updates. Backing up your config to $BACKUP_XORGCONFIG. If we screw something up, restore using this file."
+        cp "$XORGCONFIG" "$BACKUP_XORGCONFIG"
+      else
+        # checksums match, update the checksum
+        md5sum "${XORGCONFIG}.madwizard-new" > "$XORGCONFIG_CHECKSUM"
+      fi
+      chown --reference=$XORGCONFIG ${XORGCONFIG}.madwizard-new
+      chmod --reference=$XORGCONFIG ${XORGCONFIG}.madwizard-new
+      mv ${XORGCONFIG}.madwizard-new $XORGCONFIG
+    else
+      rm ${XORGCONFIG}.madwizard-new
+    fi
+  fi
+else
+  debug_echo "not updating $XORGCONFIG; we're upgrading"
+fi
+
+case "$1" in
+  configure)
+    if dpkg --compare-versions "$2" lt-nl "1:7.3+11"; then
+      remove_conffile_commit "/etc/init.d/xserver-xorg"
+    fi
+    if dpkg --compare-versions "$2" lt-nl "1:7.3+13"; then
+      update-rc.d xserver-xorg remove || true
+    fi
+    ;;
+esac
+
+exit 0
+
+# vim:set ai et sts=2 sw=2 tw=0:

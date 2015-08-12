@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = configure ]; then
+  # Ensure Defoma subst file exists, with some default substitutions
+  if ! defoma-subst check-rule fontconfig; then
+    defoma-subst new-rule fontconfig \
+      'serif --GeneralFamily,* Roman --Shape Serif Upright --Weight Medium' \
+      'sans-serif --GeneralFamily,* SansSerif --Shape NoSerif Upright --Weight Medium' \
+      'monospace --Width,* Fixed --GeneralFamily,2 Typewriter --Shape Upright --Weight Medium'
+  fi
+fi
+
+# Automatically added by dh_installdocs
+if [ "$1" = configure ] && which install-docs >/dev/null 2>&1; then
+	install-docs -i /usr/share/doc-base/fontconfig-user
+fi
+# End automatically added section
+# Automatically added by dh_installdefoma
+if [ "$1" = "configure" ]; then
+
+  test -x /usr/bin/defoma-app && /usr/bin/defoma-app update fontconfig
+
+fi
+# End automatically added section
+  
+
+if [ "$1" = configure ]; then
+  if dpkg --compare-versions "$2" lt 2.4.0-1; then
+  printf "Cleaning up old fontconfig caches... "
+  for dir in /usr/share/fonts /var/lib/defoma/fontconfig.d /usr/X11R6/lib/X11/fonts /usr/local/share/fonts ; do
+  	if [ -d $dir ]; then
+	    find $dir -name fonts.cache-1 -exec rm -f \{\} \;
+	    find $dir -depth -mindepth 1 -type d -exec rmdir --ignore-fail-on-non-empty \{\} \;
+	fi
+  done
+  printf "done.\n"
+  fi
+  # Force regeneration of all fontconfig cache files.
+  mkdir -p /var/cache/fontconfig
+  printf "Regenerating fonts cache... "
+  fc-cache -s -f -v 1>/var/log/fontconfig.log 2>&1 || (printf "failed.\nSee /var/log/fontconfig.log for more information.\n"; exit 1)
+  printf "done.\n"
+fi

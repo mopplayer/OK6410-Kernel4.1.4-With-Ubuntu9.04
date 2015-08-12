@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+# Automatically added by installdeb-aspell
+
+
+SCRIPT="/usr/sbin/update-dictcommon-aspell"
+
+if [ "$1" = "configure" ] ; then
+    if [ -x "$SCRIPT" ]; then
+	$SCRIPT  
+    else
+	echo "Error: $SCRIPT not present or executable. Missing dependency on dictionaries-common?" >&2
+	exit 1
+    fi
+fi
+# End automatically added section

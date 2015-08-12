@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_iconcache
+touch -m /usr/share/icons/hicolor
+if [ "$1" = configure ] && \
+   [ -x "`which gtk-update-icon-cache 2>/dev/null`" ] && \
+   [ -f /etc/gtk-2.0/gdk-pixbuf.loaders ] && \
+   [ "`find /usr/share/icons/hicolor -mindepth 1 -maxdepth 1 -type d | wc -l`" -gt 0 ] && \
+   [ "`find /usr/share/icons/hicolor -mindepth 1 -maxdepth 1 -type f -name index.theme | wc -l`" -eq 1 ]; then
+	gtk-update-icon-cache -q /usr/share/icons/hicolor
+fi
+# End automatically added section

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pop-Up Notifications
+Comment=Set your pop-up notification preferences
+Exec=notification-properties
+Icon=notification-properties
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GNOME;GTK;Settings;
+OnlyShowIn=GNOME;
+NoDisplay=true
+X-Ubuntu-Gettext-Domain=notification-daemon

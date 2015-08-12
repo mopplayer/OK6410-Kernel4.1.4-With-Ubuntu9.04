@@ -1,0 +1,38 @@
+#!/bin/sh -e
+#
+# Ensure the AppArmor profile is loaded before dhclient is started on systems
+# that support it. This can happen with auto dhcp interfaces when udev is
+# started.
+#
+
+PROFILE="/etc/apparmor.d/sbin.dhclient3"
+FORCED="/etc/apparmor.d/force-complain/sbin.dhclient3"
+AAPROFILES="/sys/kernel/security/apparmor/profiles"
+
+[ "$IFACE" != "lo" ] || exit 0
+
+# Exit if apparmor is not installed
+test -x /sbin/apparmor_parser || exit 0
+
+# Exit if apparmor is neither available nor enabled
+grep -q "1" /sys/module/apparmor/parameters/enabled 2>/dev/null || exit 0
+
+# Wait for apparmor to load
+while [ ! -e "$AAPROFILES" ]; do
+    # If apparmor is not loaded by the time we leave rcS, we go into S from
+    # another runlevel, or are in a non-S runlevel, just exit
+    runlevel | grep -E -q '( [0-9]|[0-9] S)' && exit 0
+    sleep 1
+done
+
+if [ -s "$PROFILE" ] && [ ! -e "$FORCED" ]; then
+    # If the profile exists and not in force-complain mode, wait a bit
+    # for it to be loaded by apparmor
+    for j in 0 1 2 3 4 5 6 7 8 9 ; do
+        grep -q '/sbin/dhclient3 ' "$AAPROFILES" && exit 0
+        sleep 1
+    done
+
+    # If we somehow got here, just try to load the profile ourself
+    cat $PROFILE | apparmor_parser -a || true
+fi

@@ -1,0 +1,407 @@
+=head1 NAME
+
+Gnome2::Client
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Client
+
+
+=head1 METHODS
+
+=head2 client = Gnome2::Client-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 client = Gnome2::Client-E<gt>B<new_without_connection> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<add_static_arg> (...)
+
+=over
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<set_clone_command> (...)
+
+=over
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=back
+
+=head2 string = $client-E<gt>B<get_config_prefix> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<connect> 
+
+=over
+
+=back
+
+=head2 boolean = $client-E<gt>B<connected> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<set_current_directory> ($dir)
+
+=over
+
+=over
+
+=item * $dir (string) 
+
+=back
+
+=back
+
+=head2 string = $client-E<gt>B<get_desktop_id> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<set_discard_command> (...)
+
+=over
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<disconnect> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<set_environment> ($name, $value)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=item * $value (string) 
+
+=back
+
+=back
+
+=head2 clientflags = $client-E<gt>B<get_flags> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<flush> 
+
+=over
+
+=back
+
+=head2 string = $client-E<gt>B<get_global_config_prefix> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<set_global_config_prefix> ($prefix)
+
+=over
+
+=over
+
+=item * $prefix (string) 
+
+=back
+
+=back
+
+=head2 string = $client-E<gt>B<get_id> 
+
+=over
+
+=back
+
+=head2 Gnome2::Client-E<gt>B<interaction_key_return> ($key, $cancel_shutdown)
+
+=over
+
+=over
+
+=item * $key (integer) 
+
+=item * $cancel_shutdown (boolean) 
+
+=back
+
+=back
+
+=head2 client = Gnome2::Client-E<gt>B<master> 
+
+=over
+
+=back
+
+=head2 string = $client-E<gt>B<get_previous_id> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<set_priority> ($priority)
+
+=over
+
+=over
+
+=item * $priority (integer) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<request_interaction> ($dialog_type, $function, $data=undef)
+
+=over
+
+=over
+
+=item * $dialog_type (Gnome2::DialogType) 
+
+=item * $function (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<request_phase_2> 
+
+=over
+
+=back
+
+=head2 $client-E<gt>B<request_save> ($save_style, $shutdown, $interact_style, $fast, $global)
+
+=over
+
+=over
+
+=item * $save_style (Gnome2::SaveStyle) 
+
+=item * $shutdown (boolean) 
+
+=item * $interact_style (Gnome2::InteractStyle) 
+
+=item * $fast (boolean) 
+
+=item * $global (boolean) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<set_resign_command> (...)
+
+=over
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<set_restart_command> (...)
+
+=over
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<set_restart_style> ($style)
+
+=over
+
+=over
+
+=item * $style (Gnome2::RestartStyle) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<save_any_dialog> ($dialog)
+
+=over
+
+=over
+
+=item * $dialog (Gtk2::Dialog) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<save_error_dialog> ($dialog)
+
+=over
+
+=over
+
+=item * $dialog (Gtk2::Dialog) 
+
+=back
+
+=back
+
+=head2 $client-E<gt>B<set_shutdown_command> (...)
+
+=over
+
+=over
+
+=item * ... (list) 
+
+=back
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item boolean = B<save-yourself> (Gnome2::Client, integer, Gnome2::SaveStyle, boolean, Gnome2::InteractStyle, boolean)
+
+=item B<die> (Gnome2::Client)
+
+=item B<save-complete> (Gnome2::Client)
+
+=item B<shutdown-cancelled> (Gnome2::Client)
+
+=item B<connect> (Gnome2::Client, boolean)
+
+=item B<disconnect> (Gnome2::Client)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::ClientFlags
+
+=over
+
+=item * 'is-connected' / 'GNOME_CLIENT_IS_CONNECTED'
+
+=item * 'restarted' / 'GNOME_CLIENT_RESTARTED'
+
+=item * 'restored' / 'GNOME_CLIENT_RESTORED'
+
+=back
+
+
+=head2 enum Gnome2::DialogType
+
+=over
+
+=item * 'error' / 'GNOME_DIALOG_ERROR'
+
+=item * 'normal' / 'GNOME_DIALOG_NORMAL'
+
+=back
+
+
+=head2 enum Gnome2::InteractStyle
+
+=over
+
+=item * 'none' / 'GNOME_INTERACT_NONE'
+
+=item * 'errors' / 'GNOME_INTERACT_ERRORS'
+
+=item * 'any' / 'GNOME_INTERACT_ANY'
+
+=back
+
+
+=head2 enum Gnome2::RestartStyle
+
+=over
+
+=item * 'if-running' / 'GNOME_RESTART_IF_RUNNING'
+
+=item * 'anyway' / 'GNOME_RESTART_ANYWAY'
+
+=item * 'immediately' / 'GNOME_RESTART_IMMEDIATELY'
+
+=item * 'never' / 'GNOME_RESTART_NEVER'
+
+=back
+
+
+=head2 enum Gnome2::SaveStyle
+
+=over
+
+=item * 'global' / 'GNOME_SAVE_GLOBAL'
+
+=item * 'local' / 'GNOME_SAVE_LOCAL'
+
+=item * 'both' / 'GNOME_SAVE_BOTH'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

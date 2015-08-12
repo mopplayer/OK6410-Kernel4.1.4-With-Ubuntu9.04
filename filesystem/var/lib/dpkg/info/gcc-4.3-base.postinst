@@ -1,0 +1,15 @@
+#! /bin/sh -e
+
+case "$1" in
+    configure)
+	# see #355439, packaging error in 4.0.2-9*
+	docdir=/usr/share/doc/gcc-4.3-base
+	if [ ! -f $docdir/copyright ]; then
+	    ln $docdir/.copyright $docdir/copyright
+	fi
+	if [ ! -f $docdir/changelog.Debian.gz ]; then
+	    ln $docdir/.changelog.Debian.gz $docdir/changelog.Debian.gz
+	fi
+esac
+
+

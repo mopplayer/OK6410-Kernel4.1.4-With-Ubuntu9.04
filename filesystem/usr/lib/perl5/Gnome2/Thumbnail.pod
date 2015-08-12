@@ -1,0 +1,106 @@
+=head1 NAME
+
+Gnome2::Thumbnail
+
+=for object Gnome2::Thumbnail
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 boolean = $pixbuf-E<gt>B<has_uri> ($uri)
+
+=over
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+=back
+
+=head2 boolean = $pixbuf-E<gt>B<is_valid> ($uri, $mtime)
+
+=over
+
+=over
+
+=item * $uri (string) 
+
+=item * $mtime (a timestamp) 
+
+=back
+
+=back
+
+=head2 string = Gtk2::Gdk::Pixbuf-E<gt>B<md5> ($uri)
+
+=over
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+=back
+
+=head2 string = Gtk2::Gdk::Pixbuf-E<gt>B<path_for_uri> ($uri, $size)
+
+=over
+
+=over
+
+=item * $uri (string) 
+
+=item * $size (Gnome2::ThumbnailSize) 
+
+=back
+
+=back
+
+=head2 pixbuf = $pixbuf-E<gt>B<scale_down_pixbuf> ($dest_width, $dest_height)
+
+=over
+
+=over
+
+=item * $dest_width (integer) 
+
+=item * $dest_height (integer) 
+
+=back
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::ThumbnailSize
+
+=over
+
+=item * 'normal' / 'GNOME_THUMBNAIL_SIZE_NORMAL'
+
+=item * 'large' / 'GNOME_THUMBNAIL_SIZE_LARGE'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

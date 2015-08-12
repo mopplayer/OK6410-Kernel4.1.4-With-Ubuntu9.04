@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/gamin
+/usr/lib/gamin/gam_server
+/usr/share
+/usr/share/doc
+/usr/share/doc/gamin
+/usr/share/doc/gamin/AUTHORS
+/usr/share/doc/gamin/TODO
+/usr/share/doc/gamin/copyright
+/usr/share/doc/gamin/NEWS.gz
+/usr/share/doc/gamin/README
+/etc
+/etc/gamin
+/etc/gamin/gaminrc
+/usr/share/doc/gamin/changelog.Debian.gz

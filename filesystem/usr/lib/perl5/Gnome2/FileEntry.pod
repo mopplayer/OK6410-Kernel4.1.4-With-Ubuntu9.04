@@ -1,0 +1,224 @@
+=head1 NAME
+
+Gnome2::FileEntry
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Box
+                           +----Gtk2::VBox
+                                +----Gnome2::FileEntry
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+  Gtk2::Editable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::FileEntry-E<gt>B<new> ($history_id, $browse_dialog_title)
+
+=over
+
+=over
+
+=item * $history_id (string) 
+
+=item * $browse_dialog_title (string) 
+
+=back
+
+=back
+
+=head2 $fentry-E<gt>B<set_default_path> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = $fentry-E<gt>B<get_directory_entry> 
+
+=over
+
+=back
+
+=head2 $fentry-E<gt>B<set_directory_entry> ($directory_entry)
+
+=over
+
+=over
+
+=item * $directory_entry (boolean) 
+
+=back
+
+=back
+
+=head2 $fentry-E<gt>B<set_filename> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 string = $fentry-E<gt>B<get_full_path> ($file_must_exist)
+
+=over
+
+=over
+
+=item * $file_must_exist (boolean) 
+
+=back
+
+=back
+
+=head2 widget = $fentry-E<gt>B<gnome_entry> 
+
+=over
+
+=back
+
+=head2 widget = $fentry-E<gt>B<gtk_entry> 
+
+=over
+
+=back
+
+=head2 boolean = $fentry-E<gt>B<get_modal> 
+
+=over
+
+=back
+
+=head2 $fentry-E<gt>B<set_modal> ($is_modal)
+
+=over
+
+=over
+
+=item * $is_modal (boolean) 
+
+=back
+
+=back
+
+=head2 $fentry-E<gt>B<set_title> ($browse_dialog_title)
+
+=over
+
+=over
+
+=item * $browse_dialog_title (string) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'browse-dialog-title' (string : readable / writable)
+
+Title for the Browse file dialog.
+
+=item 'default-path' (string : readable / writable)
+
+Default path for the Browse file window.
+
+=item 'directory-entry' (boolean : readable / writable)
+
+Whether the file entry is being used to enter directory names or complete filenames.
+
+=item 'filechooser-action' (Gtk2::FileChooserAction : readable / writable)
+
+The type of operation that the file selector is performing.
+
+=item 'filename' (string : readable / writable)
+
+Filename that should be displayed in the file entry.
+
+=item 'gnome-entry' (Gnome2::Entry : readable)
+
+GnomeEntry that the file entry uses for entering filenames.  You can use this property to get the GnomeEntry if you need to modify or query any of its parameters.
+
+=item 'gtk-entry' (Gtk2::Entry : readable)
+
+GtkEntry that the file entry uses for entering filenames.  You can use this property to get the GtkEntry if you need to modify or query any of its parameters.
+
+=item 'history-id' (string : readable / writable)
+
+Unique identifier for the file entry.  This will be used to save the history list.
+
+=item 'modal' (boolean : readable / writable)
+
+Whether the Browse file window should be modal.
+
+=item 'use-filechooser' (boolean : readable / writable)
+
+Whether to use the new GtkFileChooser widget or the GtkFileSelection widget to select files.
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<activate> (Gnome2::FileEntry)
+
+=item B<browse-clicked> (Gnome2::FileEntry)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::FileChooserAction
+
+=over
+
+=item * 'open' / 'GTK_FILE_CHOOSER_ACTION_OPEN'
+
+=item * 'save' / 'GTK_FILE_CHOOSER_ACTION_SAVE'
+
+=item * 'select-folder' / 'GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER'
+
+=item * 'create-folder' / 'GTK_FILE_CHOOSER_ACTION_CREATE_FOLDER'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Box>, L<Gtk2::VBox>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,4 @@
+alsa-base: syntax-error-in-debian-changelog
+alsa-base: maintainer-script-removes-device-files postrm:9
+alsa-base: binary-without-manpage usr/sbin/alsa
+alsa-base: description-contains-duplicated-word package package

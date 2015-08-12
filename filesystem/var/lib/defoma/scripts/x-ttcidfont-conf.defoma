@@ -1,0 +1,1069 @@
+@ACCEPT_CATEGORIES = qw(truetype cid cmap);
+
+package x_ttcidfont_conf;
+use strict;
+use POSIX;
+
+use vars qw($DEFOMA_TEST_DIR $ROOTDIR);
+
+use Debian::Defoma::Common;
+use Debian::Defoma::Font;
+use Debian::Defoma::Id;
+import Debian::Defoma::Font;
+import Debian::Defoma::Id;
+import Debian::Defoma::Common;
+
+my ($Id, $IdCmap, $IdSub);
+
+my $configfile = "$DEFOMA_TEST_DIR/etc/defoma/config/x-ttcidfont-conf.conf";
+my $PkgDir = "$ROOTDIR/x-ttcidfont-conf.d";
+my $FontRootDir = "$PkgDir/dirs";
+my $Method;
+my @AliasSize = qw(8 10 12 14 16 18 20 22 24 26 28 30 32);
+my %SpacingC;
+my $Spacing;
+my $VL;
+
+sub get_xlfd_element {
+    my $h = shift;
+    my $ret = {};
+
+    $ret->{Foundry} = 'unknown';
+    $ret->{Foundry} = $h->{'Foundry'} if (exists($h->{'Foundry'}));
+    $ret->{Foundry} = $h->{'X-Foundry'} if (exists($h->{'X-Foundry'}));
+
+    $ret->{Family} = 'unknown';
+    $ret->{Family} = $h->{'FontName'} if (exists($h->{'FontName'}));
+    $ret->{Family} = $h->{'Family'} if (exists($h->{'Family'}));
+    $ret->{Family} = $h->{'X-Family'} if (exists($h->{'X-Family'}));
+
+
+    $ret->{Weight} = 'medium';
+    $ret->{Weight} = $h->{'Weight'} if (exists($h->{'Weight'}));
+    $ret->{Weight} = $h->{'X-Weight'} if (exists($h->{'X-Weight'}));
+
+    $ret->{Slant} = 'r';
+    $ret->{Slant} = 'o' if
+	(exists($h->{'Shape'}) && $h->{'Shape'} =~ /Oblique/);
+    $ret->{Slant} = 'i' if
+	(exists($h->{'Shape'}) && $h->{'Shape'} =~ /Italic/);
+    $ret->{Slant} = $h->{'X-Slant'} if (exists($h->{'X-Slant'}));
+
+    $ret->{SetWidth} = 'normal';
+    $ret->{SetWidth} = 'condensed' if (exists($h->{'Shape'}) &&
+				       $h->{'Shape'} =~ /Condensed/);
+    $ret->{SetWidth} = 'expanded' if (exists($h->{'Shape'}) &&
+				      $h->{'Shape'} =~ /Expanded/);
+    $ret->{SetWidth} = $h->{'X-SetWidth'} if
+	(exists($h->{'X-SetWidth'}));
+
+    $ret->{Style} = '';
+    $ret->{Style} = $h->{'X-Style'} if (exists($h->{'X-Style'}));
+
+    $ret->{Pixel} = 0;
+    $ret->{Pixel} = $h->{'X-PixelSize'} if (exists($h->{'X-PixelSize'}));
+
+    $ret->{Point} = 0;
+    $ret->{Point} = $h->{'X-PointSize'} if (exists($h->{'X-PointSize'}));
+
+    $ret->{ResX} = 0;
+    $ret->{ResX} = $h->{'X-Resolution'} if
+	(exists($h->{'X-Resolution'}));
+
+    $ret->{ResY} = 0;
+    $ret->{ResY} = $h->{'X-Resolution'} if
+	(exists($h->{'X-Resolution'}));
+
+    $ret->{AvgWidth} = 0;
+    $ret->{AvgWidth} = $h->{'X-AverageWidth'} if
+	(exists($h->{'X-AverageWidth'}));
+
+    $ret->{Encoding} = 'iso8859-1';
+    $ret->{Encoding} = $h->{'X-RegistryEncoding'} if
+	(exists($h->{'X-RegistryEncoding'}));
+
+    $ret->{Spacing} = 'p';
+    $ret->{Spacing} = $Spacing if (defined($Spacing));
+    $ret->{Spacing} = $h->{'X-Spacing'} if (exists($h->{'X-Spacing'}));
+
+    foreach my $k (keys(%{$ret})) {
+	$ret->{$k} =~ s/ .*//;
+	$ret->{$k} =~ tr/A-Z/a-z/;
+	$ret->{$k} =~ s/-/_/g if ($k ne 'Encoding');
+    }
+
+    return $ret;
+}
+
+sub generate_xlfd {
+    my $xe = shift;
+    my $h = shift;
+    my $xlfd;
+    my (@xlfds, @xlfdsb, @xlfds_, @xlfdsb_);
+    my ($i, $j);
+    my (@ret, @list);
+    
+
+    $xlfdsb[0] = $xe->{Pixel};
+    $xlfdsb[1] = $xe->{Point};
+    $xlfdsb[2] = $xe->{ResX};
+    $xlfdsb[3] = $xe->{ResY};
+    $xlfdsb[4] = $xe->{Spacing};
+    $xlfdsb[5] = $xe->{AvgWidth};
+    $xlfdsb[6] = $xe->{Encoding};
+
+    @xlfdsb_ = @xlfdsb;
+
+    $xlfds[0] = $xe->{Foundry};
+    $xlfds[1] = $xe->{Family};
+    $xlfds[2] = $xe->{Weight};
+    $xlfds[3] = $xe->{Slant};
+    $xlfds[4] = $xe->{SetWidth};
+    $xlfds[5] = $xe->{Style};
+
+    @xlfds_ = @xlfds;
+
+    $xlfd = join('-', '', @xlfds, @xlfdsb);
+
+    push(@ret, $xlfd);
+
+    if (exists($h->{'X-Alias'})) {
+	@list = split(' ', $h->{'X-Alias'});
+	
+	foreach $i (@list) {
+	    $i =~ tr/A-Z/a-z/;
+	    $xlfd = join('-', $i, @xlfdsb);
+	    push(@ret, $xlfd);
+	}
+    }
+
+    if (exists($h->{'X-SimpleAlias'})) {
+	@list = split(' ', $h->{'X-SimpleAlias'});
+
+	foreach $i (@list) {
+	    $i =~ tr/A-Z/a-z/;
+	    push(@ret, $i);
+	}
+    }
+
+    if (exists($h->{'X-ElementAlias'})) {
+	@list = split(' ', $h->{'X-ElementAlias'});
+
+	foreach $i (@list) {
+	    $i =~ tr/A-Z/a-z/;
+	    my @l = split(/:/, $i);
+	    my @xs = (@xlfds, @xlfdsb);
+	    my %c2e = ('foundry' => 0, 'family' => 1, 'weight' => 2,
+		       'slant' => 3, 'setwidth' => 4, 'style' => 5,
+		       'pixel' => 6, 'point' => 7, 'resx' => 8, 'resy' => 9,
+		       'spacing' => 10, 'avgwidth' => 11, 'encoding' => 12);
+	    
+	    foreach my $p (@l) {
+		$p =~ /^([^=]+)=(.+)$/;
+
+		$xs[$c2e{$1}] = $2;
+	    }
+
+	    $xlfd = join('-', '', @xs);
+	    push(@ret, $xlfd);
+	}
+    }
+
+    return @ret;
+}
+
+sub generate_alias {
+    my $o = shift;
+    my $i = shift;
+    my $aliasptr = shift;
+
+    my $id = $o->{0}->[$i];
+    my $oid = $o->{5}->[$i];
+    my @l;
+    my ($p, $size, $psize, $sid, $soid, $flag, $j);
+
+    $id =~ s/_/ /g;
+    $oid =~ s/_/ /g;
+
+    my @xe = split(/-/, $id);
+    
+    if ($xe[7] == 0 && $xe[8] == 0) {
+	foreach $size (@AliasSize) {
+	    $psize = $size * 10;
+	    $xe[7] = $size;
+	    $xe[8] = $psize;
+	    $xe[12] = $psize;
+	    $sid = join('-', @xe);
+	    
+	    $soid = $oid;
+	    $soid =~ s/-0-0-0-0-/-$size-$psize-0-0-/;
+	    
+	    push(@{$aliasptr}, "\"$sid\" \"$soid\"");
+	}
+    } elsif ($xe[0]) {
+	foreach $size (@AliasSize) {
+	    $psize = $size * 10;
+	    $sid = $id.'-'.$size;
+	    
+	    $soid = $oid;
+	    $soid =~ s/-0-0-0-0-/-$size-$psize-0-0-/;
+	    
+	    push(@{$aliasptr}, "\"$sid\" \"$soid\"");
+	}
+    } else {
+	$soid = $oid;
+	$soid =~ s/-0-0-0-0-/-$xe[7]-$xe[8]-$xe[9]-$xe[10]-/;
+	
+	push(@{$aliasptr}, "\"$id\" \"$soid\"");
+	
+	return 0;
+    }
+    
+    push(@{$aliasptr}, "\"$id\" \"$oid\"");
+}
+
+sub write_resource_files {
+    my $category = shift;
+    my $scaleptr = shift;
+    my $aliasptr = shift;
+
+    my $fscale = "$PkgDir/dirs/$category/fonts.scale";
+    my $falias = "$PkgDir/dirs/$category/fonts.alias";
+
+    open(F, '>' . $fscale) || return 0;
+    my $lnum = @{$scaleptr};
+
+    print F $lnum, "\n";
+
+    foreach my $i (@{$scaleptr}) {
+	print F $i, "\n";
+    }
+
+    close F;
+
+    open(F, '>' . $falias) || return 0;
+
+    foreach my $i (@{$aliasptr}) {
+	print F $i, "\n";
+    }
+
+    close F;
+
+    system('/usr/bin/X11/mkfontdir',
+	'-e', '/usr/share/fonts/X11/encodings',
+	'-e', '/usr/share/fonts/X11/encodings/large',
+	"$PkgDir/dirs/$category");
+
+    return 0;
+}
+
+sub register_all {
+    my $o = shift;
+    my $font = shift;
+    my $pri = shift;
+    my $xe = shift;
+    my $h = shift;
+    my $ctg = shift;
+    
+    my @hints = parse_hints_build($h);
+    my @xlfds = generate_xlfd($xe, $h);
+    my %add = ();
+
+    $add{category} = $ctg if ($ctg);
+
+    my $xlfd0 = shift(@xlfds);
+
+    defoma_id_register($o, type => 'real', font => $font, id => $xlfd0,
+		       priority => $pri, hints => join(' ', @_, @hints),
+		       %add);
+
+    while (@xlfds) {
+	my $xlfd = shift(@xlfds);
+
+	defoma_id_register($o, type => 'alias', font => $font, id => $xlfd,
+			   priority => $pri, origin => $xlfd0, %add);
+    }
+}
+
+###
+
+sub parse_config_file {
+    $Method = 'xtt';
+
+    if (open(F, $configfile)) {
+	while (<F>) {
+	    next if ($_ =~ /^\#/);
+	    chomp($_);
+
+	    if ($_ =~ /^X_TRUETYPE_METHOD=(xtt|freetype)\s*$/) {
+		$Method = $1;
+	    }
+	    if ($_ =~ /^XTT_VL=([ynYN])\s*$/) {
+		$VL = ($1 =~ /[yY]/) ? 1 : 0;
+	    }
+	}
+	close F;
+    }
+}
+
+sub parse_config_file2 {
+    %SpacingC = ();
+
+    if (open(F, $configfile . "2")) {
+	while (<F>) {
+	    next if ($_ =~ /^\#/);
+	    chomp($_);
+	    my @a = split(' ', $_);
+	    my $l = shift(@a);
+
+	    if (defined($l)) {
+		$SpacingC{$l} = undef;
+	    }
+	}
+	close F;
+    }
+}
+
+sub init {
+    unless ($Method) {
+	parse_config_file();
+	parse_config_file2();
+    }
+    unless ($Id) {
+	$Id = defoma_id_open_cache();
+	$IdCmap = defoma_id_open_cache('cmap');
+	$IdCmap->{callback} = 0;
+	$IdSub = defoma_id_open_cache('sub');
+	$IdSub->{callback} = 0;
+    }
+    
+    return 0;
+}
+
+my $done = 0;
+
+sub term {
+    unless ($done) {
+	$done = 1;
+	defoma_id_close_cache($Id);
+	defoma_id_close_cache($IdCmap);
+	defoma_id_close_cache($IdSub);
+    }
+
+    return 0;
+}
+
+sub make_link {
+    my $diro = shift;
+    my $font = shift;
+    my $fname = shift;
+
+    my $fontfile;
+    
+    if ($fname) {
+	$fontfile = $fname;
+    } else {
+	return 1 unless($font =~ /^(.*)\/(.+)$/);
+	$fontfile = $2;
+    }
+    
+    my $dir = $FontRootDir.$diro;
+    
+    return 1 if (-e $dir . $fontfile);
+    symlink($font, $dir . $fontfile) || return 1;
+
+    return 0;
+}
+
+sub remove_link {
+    my $diro = shift;
+    my $font = shift;
+    my $fname = shift;
+
+    my $fontfile = shift;
+    
+    if ($fname) {
+	$fontfile = $fname;
+    } else {
+	return 1 unless($font =~ /^(.*)\/(.+)$/);
+	$fontfile = $2;
+    }
+    
+    my $dir = $FontRootDir.$diro;
+
+    return 1 unless(-l $dir . $fontfile);
+    unlink($dir . $fontfile);
+
+    return 0;
+}
+
+### CATEGORY: TrueType
+
+sub xtt_register {
+    my $font = shift;
+    my $facenum = shift;
+    my $face = shift;
+    my $ttcap = shift;
+    my $pri = shift;
+    my $h = shift;
+
+    my $i_angle = 0.4;
+    my $o_angle = 0.2;
+    my $boldstring = 'bold';
+    my $hw_bw = '';
+    my $hw_sw = '';
+    my $nobold = 0;
+    my $nori = 0;
+    my $noi = 0;
+    my $noo = 0;
+    my $noro = 0;
+
+    my %horig;
+    my $k;
+    foreach $k (keys(%{$h})) {
+	$horig{$k} = $h->{$k};
+    }
+
+    if ($ttcap) {
+	my @l = split(' ', $ttcap);
+	foreach my $i (@l) {
+	    if ($i =~ /^italic-angle=(.+)$/) {
+		$i_angle = $1;
+	    } elsif ($i =~ /^oblique-angle=(.+)$/) {
+		$o_angle = $1;
+	    } elsif ($i =~ /^halfwidth-bw=(.+)$/) {
+		$hw_bw = $1;
+	    } elsif ($i =~ /^halfwidth-sw=(.+)$/) {
+		$hw_sw = $1;
+	    } elsif ($i =~ /^bold-string=(.+)$/) {
+		$boldstring = $1;
+		$boldstring =~ tr/A-Z/a-z/;
+	    } elsif ($i eq 'no-bold') {
+		$nobold = 1;
+	    } elsif ($i eq 'no-ritalic') {
+		$nori = 1;
+	    } elsif ($i eq 'no-italic') {
+		$noi = 1;
+	    } elsif ($i eq 'no-roblique') {
+		$noro = 1;
+	    } elsif ($i eq 'no-oblique') {
+		$noo = 1;
+	    }
+	}
+    }
+
+    my $ttcapbase = '';
+    $ttcapbase = 'fn='.$face.':' if ($facenum > 1);
+    my $ttcapbase_hw = '';
+
+    if ($h->{'X-RegistryEncoding'} !~/^(jisx0208\.|jisx0212\.|jisx0213\.|gb2312\.|big5|ksc5601\.|gbk|gb18030)/) {
+	$ttcapbase_hw .= 'bw='.$hw_bw.':' if ($hw_bw);
+	$ttcapbase_hw .= 'sw='.$hw_sw.':' if ($hw_sw);
+    }
+
+    my $xe = get_xlfd_element($h);
+    my $weight0 = $xe->{Weight};
+    my $slant0 = $xe->{Slant};
+    my $space0 = $xe->{Spacing};
+    
+    my $hweight0 = $h->{Weight};
+    my $hwidth0 = $h->{Width};
+    my $hshape0 = $h->{Shape} || '';
+    $hshape0 =~ s/(Upright|Italic|Oblique|)//g;
+    my $hslant0 = $1 || 'Upright';
+    
+    my @italiclist = ($slant0);
+    if ($slant0 eq 'r' &&
+	(($h->{Transform} && $h->{Transform} !~ /NotSlant/) ||
+	 ! $h->{Transform})) {
+	push(@italiclist, 'i') unless ($noi);
+	push(@italiclist, 'ri') unless ($nori);
+	push(@italiclist, 'o') unless ($noo);
+	push(@italiclist, 'ro') unless ($noro);
+    }
+    
+    my @boldlist = ($weight0);
+    if ($weight0 ne $boldstring &&
+	(($h->{Transform} && $h->{Transform} !~ /NotBoldize/) ||
+	 ! $h->{Transform})) {
+	push(@boldlist, $boldstring) unless ($nobold);
+    }
+
+    my @spclist = ($space0);
+    if ($h->{'X-Spacing'}) {
+	@spclist = split(' ', $h->{'X-Spacing'});
+    } elsif ($Spacing) {
+	push(@spclist, ($Spacing eq 'c') ? 'm' : 'c');
+    }
+    
+    my $fontname0 = $h->{FontName};
+    my $fontname0_b = $h->{'FontName-Bold'};
+    my $fontname0_bi = $h->{'FontName-BoldItalic'};
+    my $fontname0_i = $h->{'FontName-Italic'};
+    
+    parse_hints_cut($h, 'X-Weight', 'X-Slant', 'X-Spacing');
+
+    my $idobj = $Id;
+    
+    foreach my $spc (@spclist) {
+	$xe->{Spacing} = $spc;
+
+	foreach my $slant (@italiclist) {
+	    $h->{Shape} = $hshape0.' ';
+	    $h->{Shape} .= ($slant eq $slant0) ? $hslant0 : 'Italic';
+	    $xe->{Slant} = $slant;
+	    
+	    foreach my $weight (@boldlist) {
+		$h->{Weight} = $hweight0 if ($hweight0);
+		$h->{Weight} = 'Bold' if ($weight eq $boldstring);
+		$xe->{Weight} = $weight;
+
+		my $ttcap = $ttcapbase;
+		$ttcap .= $ttcapbase_hw if ($spc eq 'c');
+		$ttcap .= 'vl=y:' if ($spc ne 'c' && $VL);
+		$ttcap .= 'ds=y:' if ($weight ne $weight0);
+		$ttcap .= 'ai='.$i_angle.':' if ($slant eq 'i');
+		$ttcap .= 'ai=-'.$i_angle.':' if ($slant eq 'ri');
+		$ttcap .= 'ai='.$o_angle.':' if ($slant eq 'o');
+		$ttcap .= 'ai=-'.$o_angle.':' if ($slant eq 'ro');
+		
+		$ttcap = '.' unless($ttcap);
+
+		if ($weight eq $boldstring && $slant eq 'i') {
+		    $h->{FontName} = $fontname0_bi || $fontname0;
+		} elsif ($weight eq $boldstring) {
+		    $h->{FontName} = $fontname0_b || $fontname0;
+		} elsif ($slant eq 'i') {
+		    $h->{FontName} = $fontname0_i || $fontname0;
+		} else {
+		    $h->{FontName} = $fontname0;
+		}
+
+		register_all($idobj, $font, $pri, $xe, $h, '', $ttcap);
+	    }
+	    $idobj = $IdSub if ($slant ne 'r');
+	}
+	$idobj = $IdSub;
+    }
+
+    foreach $k (keys(%horig)) {
+	$h->{$k} = $horig{$k};
+    }
+}
+
+sub freetype_register {
+    my $font = shift;
+    my $facenum = shift;
+    my $face = shift;
+    my $pri = shift;
+    my $h = shift;
+
+    my $cap = '.';
+    $cap = ':'.$face.':' if ($facenum > 1);
+
+    my $hwidth = $h->{Width};
+    my $xe = get_xlfd_element($h);
+
+    register_all($Id, $font, $pri, $xe, $h, '', $cap);
+
+#    
+    if ($h->{'X-Spacing'}) {
+	my @spclist = split(' ', $h->{'X-Spacing'});
+	
+	shift(@spclist);
+	foreach my $spc (@spclist) {
+	    $xe->{Spacing} = $spc;
+	    
+	    register_all($IdSub, $font, $pri, $xe, $h, '', $cap);
+	}
+    } elsif ($Spacing) {
+	$xe->{Spacing} = $Spacing eq 'c' ? 'm' : 'c';
+	
+	register_all($IdSub, $font, $pri, $xe, $h, '', $cap);
+    }
+}
+
+sub tt_register {
+    my $font = shift;
+
+    make_link('/TrueType/', $font) && return 1;
+    
+    my $hh = parse_hints_start(@_);
+    
+    my $facenum = $hh->{FaceNum} || 1;
+    parse_hints_cut($hh, 'FaceNum');
+    my ($i, $j);
+    my $noerror = 0;
+
+    for ($i = 0; $i < $facenum; $i++) {
+	my $h = parse_hints_subhints_inherit($hh, $i);
+	parse_hints_cut($h, 'Encoding');
+	parse_hints_cut($h, 'X-Alias', 'X-SimpleAlias') if ($Method eq 'xtt');
+	my $pri = $h->{Priority} || 0;
+	next unless ($h->{FontName});
+	
+	my %xencoding;
+
+	if (exists($h->{Charset})) {
+	    my @charset = split(' ', $h->{'Charset'});
+
+	    foreach $j (@charset) {
+		my $x = get_xencoding($j, '');
+		$xencoding{$x} = $j if ($x);
+	    }
+	}
+
+	my @xenc;
+	if ($h->{'X-RegistryEncoding'}) {
+	    @xenc = split(' ', $h->{'X-RegistryEncoding'});
+	    foreach $j (@xenc) {
+		my $c = get_charset($j);
+		$xencoding{$j} = $c;
+	    }
+	}
+
+	$noerror = 1;
+
+	@xenc = keys(%xencoding);
+
+	undef $Spacing;
+	if ($h->{Width} && $h->{Width} eq 'Fixed') {
+	    if (grep(exists($SpacingC{$_}), @xenc)) {
+		$Spacing = 'c';
+	    } else {
+		$Spacing = 'm';
+	    }
+	}
+	
+	foreach my $xe (@xenc) {
+	    my $cset = $xencoding{$xe};
+
+	    $h->{'X-RegistryEncoding'} = $xe;
+	    parse_hints_cut($h, 'Charset');
+	    $h->{'Charset'} = $cset if ($cset);
+
+	    if ($Method eq 'xtt') {
+		xtt_register($font, $facenum, $i, $h->{TTCap}, $pri, $h);
+	    } else {
+		freetype_register($font, $facenum, $i, $pri, $h);
+	    }
+	}
+    }
+
+    unless ($noerror) {
+	remove_link('/TrueType/', $font);
+	return 2;
+    }
+
+    return 0;
+}
+
+sub tt_unregister {
+    my $font = shift;
+
+    remove_link('/TrueType/', $font);
+
+    defoma_id_unregister($Id, type => 'alias', font => $font);
+    defoma_id_unregister($Id, type => 'real', font => $font);
+    defoma_id_unregister($IdSub, type => 'alias', font => $font);
+    defoma_id_unregister($IdSub, type => 'real', font => $font);
+
+    return 0;
+}
+
+sub tt_install {
+    my $font = shift;
+    my $id = shift;
+    shift;
+    shift;
+    shift;
+
+    defoma_font_register('xfont', $id, @_);
+}
+
+sub tt_remove {
+    my $font = shift;
+    my $id = shift;
+
+    defoma_font_unregister('xfont', $id);
+}
+
+sub tt_term {
+    my @scale = ();
+    my @alias = ();
+    my $file;
+    my $id;
+    my $oid;
+
+    my @l = defoma_id_grep_cache($Id, 'installed', f4 => 'truetype');
+    foreach my $i (@l) {
+	$id = $Id->{0}->[$i];
+	$id =~ s/_/ /g;
+
+	if ($Id->{2}->[$i] eq 'SrI') {
+	    $file = $Id->{1}->[$i];
+	    $file =~ s/^(.*)\///;
+
+	    my $cap = $Id->{7}->[$i];
+	    $cap =~ s/ .*$//;
+	    $cap = '' if ($cap eq '.');
+
+	    push(@scale, $cap.$file.' '.$id);
+	} else {
+	    generate_alias($Id, $i, \@alias);
+	}
+    }
+
+    @l = defoma_id_grep_cache($IdSub, 'installed', f4 => 'truetype');
+    foreach my $i (@l) {
+	$id = $IdSub->{0}->[$i];
+	$id =~ s/_/ /g;
+
+	if ($IdSub->{2}->[$i] eq 'SrI') {
+	    $file = $IdSub->{1}->[$i];
+	    $file =~ s/^(.*)\///;
+
+	    my $cap = $IdSub->{7}->[$i];
+	    $cap =~ s/ .*$//;
+	    $cap = '' if ($cap eq '.');
+
+	    push(@scale, $cap.$file.' '.$id);
+	} else {
+	    generate_alias($IdSub, $i, \@alias);
+	}
+    }
+
+    write_resource_files('TrueType', \@scale, \@alias);
+
+    term();
+
+    return 0;
+}
+
+sub truetype {
+    my $com = shift;
+
+    if ($com eq 'register') {
+	return tt_register(@_);
+    } elsif ($com eq 'unregister') {
+	return tt_unregister(@_);
+    } elsif ($com eq 'do-install-real') {
+	return tt_install(@_);
+    } elsif ($com eq 'do-remove-real') {
+	return tt_remove(@_);
+    } elsif ($com eq 'init') {
+	return init();
+    } elsif ($com eq 'term') {
+	return tt_term();
+    }
+
+    return 0;
+}
+
+### CATEGORY: cid
+
+my $cid_term_done = 0;
+
+sub cid_term {
+    return 0 if ($cid_term_done);
+    
+    my @l = defoma_id_grep_cache($Id, 'installed', f4 => 'cid');
+    my @scale = ();
+    my @alias = ();
+    my $id;
+    my $oid;
+
+    foreach my $i (@l) {
+	$id = $Id->{0}->[$i];
+	next if ($id =~ /^CID:/);
+	$id =~ s/_/ /g;
+	
+	if ($Id->{2}->[$i] eq 'SrI') {
+	    my $cidfont = $Id->{1}->[$i];
+
+	    push(@scale, $cidfont . ' ' . $id);
+	} else {
+	    generate_alias($Id, $i, \@alias);
+	}
+    }
+
+    write_resource_files('CID', \@scale, \@alias);
+    if ( -e '/usr/bin/mkcfm')
+    {
+        system('/usr/bin/mkcfm', "$PkgDir/dirs/CID");
+    }
+
+    term();
+
+    return 0;
+}
+
+sub cid_check_dir {
+    my ($reg, $ord) = @_;
+
+    my $dir = $FontRootDir.'/CID/'.$reg.'-'.$ord.'/';
+
+    unless (-d $dir) {
+	mkdir($dir, 0755) || return 1;
+
+	mkdir($dir.'CIDFont', 0755) || return 1;
+	mkdir($dir.'AFM', 0755) || return 1;
+	mkdir($dir.'CFM', 0755) || return 1;
+	mkdir($dir.'CMap', 0755) || return 1;
+    }
+
+    return 0;
+}
+
+sub cid_register_all {
+    my $font = shift;
+    my $cmap = shift;
+    my $reg = shift;
+    my $ord = shift;
+    my $cset = shift;
+    my $enc = shift;
+    my $xenc = shift;
+    my $h = shift;
+
+    $h->{'X-RegistryEncoding'} = $xenc;
+    $h->{'Charset'} = $cset if ($cset ne '.');
+    $h->{'Encoding'} = $enc if ($enc ne '.');
+
+    my $pri = $h->{Priority} || 0;
+    my $fontname = $h->{FontName};
+    
+    my $xe = get_xlfd_element($h);
+
+    $font =~ /(.*)\/(.+)/;
+    my $cidfont = $reg.'-'.$ord.'/'.$2.'--'.$cmap.'.cid';
+
+    register_all($Id, $cidfont, $pri, $xe, $h, 'cid');
+
+    return 0;
+}
+
+sub cid_register {
+    my $font = shift;
+    return 1 unless ($font =~ /(.*)\/(.+)/);
+    
+    my $h = parse_hints_start(@_);
+    
+    my $reg = $h->{CIDRegistry};
+    my $ord = $h->{CIDOrdering};
+    my $fontname = $h->{FontName};
+    return 1 unless ($reg && $ord && $fontname);
+
+    cid_check_dir($reg, $ord) && return 2;
+
+    my $dir = '/CID/'.$reg.'-'.$ord.'/';
+
+    make_link($dir.'CIDFont/', $font, $fontname) && return 3;
+
+    if (exists($h->{AFM})) {
+	my $afm = $h->{AFM};
+
+	if (make_link($dir.'AFM/', $afm, $fontname.'.afm')) {
+	    remove_link($dir.'CIDFont/', $font, $fontname);
+	    return 4;
+	}
+    }
+    
+    my $pri = $h->{Priority} || 0;
+
+    parse_hints_cut($h, 'CIDRegistry', 'CIDSupplement', 'CIDOrdering',
+		    'Charset', 'Encoding', 'AFM');
+    my @hints = parse_hints_build($h);
+
+    defoma_id_register($IdCmap, type => 'real', font => $font,
+		       id => $reg.'-'.$ord.'/'.$fontname,
+		       priority => $pri,
+		       hints => join(' ', $reg, $ord, @hints));
+
+    my @l = defoma_id_grep_cache($IdCmap, 'real', r0 => $reg.'-'.$ord.'/.*',
+				 f4 => 'cmap');
+
+    foreach my $i (@l) {
+	$IdCmap->{0}->[$i] =~ /(.*)\/(.+)/;
+	my $cmap = $2;
+	my @chints = split(' ', $IdCmap->{7}->[$i]);
+	
+	cid_register_all($font, $cmap, $reg, $ord, $chints[2], $chints[3],
+			 $chints[4], $h);
+    }
+
+    return 0;
+}
+
+sub cid_unregister {
+    my $font = shift;
+    my $h = parse_hints_start(@_);
+
+    my $reg = $h->{CIDRegistry};
+    my $ord = $h->{CIDOrdering};
+    my $fontname = $h->{FontName};
+    return 1 unless ($reg && $ord && $fontname);
+
+    my $dir = '/CID/'.$reg.'-'.$ord.'/';
+
+    remove_link($dir.'CIDFont/', $font, $fontname);
+
+    if (exists($h->{AFM})) {
+	my $afm = $h->{AFM};
+
+	remove_link($dir.'AFM/', $afm, $fontname.'.afm');
+    }
+
+    defoma_id_unregister($IdCmap, type => 'real', font => $font);
+
+    my @l = defoma_id_grep_cache($IdCmap, 'real', r0 => $reg.'-'.$ord.'/.*',
+				 f4 => 'cmap');
+
+    foreach my $i (@l) {
+	$IdCmap->{0}->[$i] =~ /(.*)\/(.+)/;
+	my $cmap = $2;
+
+	$font =~ /(.*)\/(.+)/;
+	my $cidfont = $reg.'-'.$ord.'/'.$2.'--'.$cmap;
+
+	defoma_id_unregister($Id, type => 'alias', font => $cidfont);
+	defoma_id_unregister($Id, type => 'real', font => $cidfont);
+    }
+
+    return 0;
+}
+
+sub cid_install {
+    my $font = shift;
+    my $id = shift;
+    shift;
+    shift;
+
+    defoma_font_register('xfont', $id, @_);
+    
+    return 0;
+}
+
+sub cid_remove {
+    my $font = shift;
+    my $id = shift;
+    
+    defoma_font_unregister('xfont', $id);
+    
+    return 0;
+}
+
+sub cid {
+    my $com = shift;
+
+    if ($com eq 'register') {
+	return cid_register(@_);
+    } elsif ($com eq 'unregister') {
+	return cid_unregister(@_);
+    } elsif ($com eq 'do-install-real') {
+	return cid_install(@_);
+    } elsif ($com eq 'do-remove-real') {
+	return cid_remove(@_);
+    } elsif ($com eq 'init') {
+	return init();
+    } elsif ($com eq 'term') {
+	return cid_term();
+    }
+
+    return 0;
+}
+
+###
+
+sub cmap_register {
+    my $font = shift;
+    my $h = parse_hints_start(@_);
+
+    my $cmap = $h->{CMapName};
+    my $reg = $h->{CIDRegistry};
+    my $ord = $h->{CIDOrdering};
+    return 1 unless ($cmap && $reg && $ord);
+
+    my $cset = $h->{Charset};
+    my $enc = $h->{Encoding};
+    my $xenc = $h->{'X-RegistryEncoding'};
+
+    return 1 unless ($xenc);
+    return 1 if ($h->{Direction} && $h->{Direction} eq 'Vertical');
+
+    cid_check_dir($reg, $ord) && return 2;
+
+    make_link('/CID/'.$reg.'-'.$ord.'/CMap/', $font, $cmap) && return 3;
+
+    $cset = '.' unless ($cset);
+    $enc = '.' unless ($enc);
+
+    my $pri = $h->{Priority} || 0;
+
+    defoma_id_register($IdCmap, type => 'real', font => $font,
+		       id => $reg.'-'.$ord.'/'.$cmap, priority => $pri,
+		       hints => join(' ', $reg, $ord, $cset, $enc, $xenc));
+
+    my @l = defoma_id_grep_cache($IdCmap, 'real', r0 => $reg.'-'.$ord.'/.*',
+				 f4 => 'cid');
+
+    foreach my $i (@l) {
+	my @hints = split(' ', $IdCmap->{7}->[$i]);
+
+	shift(@hints);
+	shift(@hints);
+
+	my $h = parse_hints_start(@hints);
+
+	cid_register_all($IdCmap->{1}->[$i], $cmap, $reg, $ord, $cset, $enc,
+			 $xenc, $h);
+    }
+
+    return 0;
+}
+
+sub cmap_unregister {
+    my $font = shift;
+    my $h = parse_hints_start(@_);
+
+    my $cmap = $h->{CMapName};
+    my $reg = $h->{CIDRegistry};
+    my $ord = $h->{CIDOrdering};
+
+    return unless ($cmap && $reg && $ord);
+    
+    remove_link('/CID/'.$reg.'-'.$ord.'/CMap/', $font, $cmap);
+    
+    defoma_id_unregister($IdCmap, type => 'real', font => $font);
+
+    my @l = defoma_id_grep_cache($IdCmap, 'real', r0 => $reg.'-'.$ord.'/.*',
+				 f4 => 'cid');
+
+    foreach my $i (@l) {
+	$IdCmap->{0}->[$i] =~ /(.*)\/(.+)/;
+	my $cidfont = $reg.'-'.$ord.'/'.$2.'--'.$cmap.'.cid';
+
+	defoma_id_unregister($Id, type => 'alias', font => $cidfont);
+	defoma_id_unregister($Id, type => 'real', font => $cidfont);
+    }
+
+
+    return 0;
+}
+
+sub cmap {
+    my $com = shift;
+
+    if ($com eq 'register') {
+	return cmap_register(@_);
+    } elsif ($com eq 'unregister') {
+	return cmap_unregister(@_);
+    } elsif ($com eq 'init') {
+	return init();
+    } elsif ($com eq 'term') {
+	return cid_term();
+    }
+
+    return 0;
+}
+
+1;

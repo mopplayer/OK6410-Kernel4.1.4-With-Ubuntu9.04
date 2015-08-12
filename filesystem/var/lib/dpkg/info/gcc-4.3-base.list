@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/gcc
+/usr/lib/gcc/arm-linux-gnueabi
+/usr/lib/gcc/arm-linux-gnueabi/4.3
+/usr/share
+/usr/share/doc
+/usr/share/doc/gcc-4.3-base
+/usr/share/doc/gcc-4.3-base/changelog.Debian.gz
+/usr/share/doc/gcc-4.3-base/TODO.Debian
+/usr/share/doc/gcc-4.3-base/copyright
+/usr/share/doc/gcc-4.3-base/README.Debian.gz
+/usr/lib/gcc/arm-linux-gnueabi/4.3.3

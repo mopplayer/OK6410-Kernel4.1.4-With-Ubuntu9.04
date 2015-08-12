@@ -1,0 +1,3 @@
+/desktop/gnome/url-handlers/http/command	"firefox %s"
+/desktop/gnome/url-handlers/https/command	"firefox %s"
+/desktop/gnome/url-handlers/h323/command	"ekiga -c %s"

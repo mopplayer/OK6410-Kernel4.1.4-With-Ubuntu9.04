@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libxres1
+/usr/share/doc/libxres1/copyright
+/usr/share/doc/libxres1/changelog.gz
+/usr/share/doc/libxres1/changelog.Debian.gz
+/usr/lib
+/usr/lib/libXRes.so.1.0.0
+/usr/lib/libXRes.so.1

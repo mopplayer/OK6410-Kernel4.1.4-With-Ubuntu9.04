@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libbeecrypt6
+/usr/share/doc/libbeecrypt6/README.Debian
+/usr/share/doc/libbeecrypt6/copyright
+/usr/share/doc/libbeecrypt6/changelog.Debian.gz
+/usr/lib
+/usr/lib/libbeecrypt.so.6.4.0
+/usr/lib/libbeecrypt.so.6

@@ -1,0 +1,177 @@
+=head1 NAME
+
+Gnome2::AppHelper
+
+=for object Gnome2::AppHelper
+
+=for apidoc
+
+=head1 GnomeUIInfo
+
+In Gnome2 GnomeUIInfo's are often used as a convenient way to create GUI's.  In
+Perl, GnomeUIInfo's are always references to arrays of items.  Items can either
+be references to hashs or references to arrays:
+
+=over
+
+=item Hash Reference
+
+When using hash references, items are specified by giving key-value pairs.  A
+typical example:
+
+  { type => "item", label => "Quit", callback => sub { exit(0); } }
+
+For the list of valid keys, see below.
+
+=item Array References
+
+When using array references, items are a list of the following keys, in this
+order:
+
+  type,
+  label,
+  hint,
+  moreinfo,
+  pixmap_type,
+  pixmap_info,
+  accelerator_key and
+  modifiers.
+
+The example from above would become:
+
+  [ "item", "Item", undef, sub { exit(0); },
+    undef, undef, undef, undef ]
+
+=back
+
+To create multi-level structures, you use the "subtree" type and the "subtree"
+key, as in the following example:
+
+  {
+    type => "subtree",
+    label => "Radio Items",
+    subtree => [
+      {
+        type => "radioitems",
+        moreinfo => [
+          {
+            type => "item",
+            label => "A"
+          },
+          {
+            type => "item",
+            label => "B"
+          },
+          {
+            type => "item",
+            label => "C"
+          },
+          {
+            type => "item",
+            label => "D"
+          },
+          {
+            type => "item",
+            label => "E"
+          }
+        ]
+      }
+    ]
+  }
+
+=cut
+
+=for object Gnome2::AppHelper
+=cut
+
+=for object Gnome2::AppHelper
+=cut
+
+=for object Gnome2::AppHelper
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 Gnome2-E<gt>B<accelerators_sync> 
+
+=over
+
+=back
+
+=head2 $menu_shell-E<gt>B<fill_menu> ($uiinfo, $accel_group, $uline_accels, $pos)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=item * $accel_group (Gtk2::AccelGroup) 
+
+=item * $uline_accels (boolean) 
+
+=item * $pos (integer) 
+
+=back
+
+=back
+
+=head2 $toolbar-E<gt>B<fill_toolbar> ($uiinfo, $accel_group)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=item * $accel_group (Gtk2::AccelGroup) 
+
+=back
+
+=back
+
+=head2 list = $parent-E<gt>B<find_menu_pos> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+
+Returns the GtkWidget and the position associated with the path.
+
+
+=back
+
+=head2 $bar-E<gt>B<install_menu_hints> ($uiinfo)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

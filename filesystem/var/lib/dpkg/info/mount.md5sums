@@ -1,0 +1,15 @@
+d7c6c8bea9e2dbc35af011e5bbe90dfa  bin/umount
+771f08f322ad52564db11ced61f49662  bin/mount
+1194214e77afcea6907160ede353a2db  sbin/swapon
+927377316e4ca55c1a48cf1a130eb53e  sbin/losetup
+9bff45e441b314d5dc56d6bd21a330ba  usr/share/man/man8/mount.8.gz
+d47f1da7610b90b481a57045e6ec37c3  usr/share/man/man8/swapon.8.gz
+8eafbc0cd23494cedd9471d47e55a36b  usr/share/man/man8/swapoff.8.gz
+6e9d87c223ef868804a36a5b8c7162fb  usr/share/man/man8/umount.8.gz
+cf324e9c5550f0131dc248108457c372  usr/share/man/man8/losetup.8.gz
+d2356fe6f57e8e78686d1186b76c0dd6  usr/share/man/man5/fstab.5.gz
+586182189d4cf19cdeb795db6118db9b  usr/share/doc/mount/examples/fstab
+1689f8cda766b180c63150f4002a8967  usr/share/doc/mount/changelog.Debian.gz
+647c2b502e019e1d2c15f3e42be7ab94  usr/share/doc/mount/changelog.gz
+49beacb15b769895d680b900b45c45f6  usr/share/doc/mount/copyright
+bae4819d7a449fd1bcfb3845970d0712  usr/share/doc/mount/README.mount

@@ -1,0 +1,5 @@
+ * Handle the case where several packages use the same directory for 
+   private modules.
+
+Cosmetic:
+ * Handle the case when .so files are identical across python versions.

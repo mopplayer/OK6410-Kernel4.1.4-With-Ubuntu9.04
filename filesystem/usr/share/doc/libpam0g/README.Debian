@@ -1,0 +1,36 @@
+PAM for DEBIAN
+--------------
+
+PAM (Pluggable Authentication Modules) provides system administrators with a
+powerful method of controlling system access and methods of authentication.
+
+The documentation for PAM is packaged in the "libpam-doc" package. The
+"Linux-PAM System Administrator's Guide" covers configuring PAM, what
+modules are available etc. The documentation also includes "The Linux-PAM
+Application Developers' Guide" and "The Linux-PAM Module Writers' Guide".
+
+The Debian default configuration is to emulate the old UNIX authentication.
+
+The Debian PAM packages live at svn://svn.debian.org/pkg-pam/.  The
+current version is in the trunk directory; previous versions live in
+the tags directory.
+
+Changes Since Debian 3.0
+------------------------
+
+The pam_securetty module used to prompt for a password when it was
+going to fail access.   This Debian-specific patch defeats one of the
+key uses of this module: to  deny access to privileged accounts soon
+enough in the PAM stack that  the password is never requested and is
+not compromised over insecure network links.  If you want to ask for
+the password use required not requisite in your PAM config.
+
+Previously, pam_rhosts allowed the .rhosts file to be a symlink.  This
+was a debian specific change that has been dropped because it is not
+the upstream behavior nor is it the documented behavior of ruserok(3).
+
+Similarly, pam_listfile used to allow the user file to be a symlink.
+This is no longer allowed because upstream seems to be against the
+change.  Please see discussion started by Sam Hartman on
+pam-list@redhat.com during the May 2002 time frame.
+

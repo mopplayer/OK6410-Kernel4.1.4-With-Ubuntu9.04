@@ -1,0 +1,10 @@
+
+``aptsources`` --- Working with sources.list
+********************************************
+
+* ``aptsources.distinfo`` --- provide meta information for distro
+  repositories
+* ``aptsources.distro`` --- Distribution abstraction of the
+  sources.list
+* ``aptsources.sourceslist`` --- Provide an abstraction of the
+  sources.list

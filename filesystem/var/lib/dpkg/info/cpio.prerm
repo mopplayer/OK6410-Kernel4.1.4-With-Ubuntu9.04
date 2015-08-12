@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+if [ "$1" = remove ]; then 
+    update-alternatives --remove mt /bin/mt-gnu
+    install-info --quiet --remove /usr/share/info/cpio.info
+    if test -L /sbin/rmt && test /sbin/rmt -ef /usr/sbin/rmt; then
+	rm -f /sbin/rmt
+    fi
+fi

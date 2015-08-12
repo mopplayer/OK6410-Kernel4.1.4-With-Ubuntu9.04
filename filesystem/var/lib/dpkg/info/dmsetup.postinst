@@ -1,0 +1,20 @@
+#!/bin/sh
+
+if [ "$1" = "configure" ]; then
+	if type update-initramfs >/dev/null 2>&1; then
+		update-initramfs -u
+	fi
+fi
+
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/dmsetup.rules" ]; then
+		echo "Preserving user changes to /lib/udev/rules.d/65-dmsetup.rules ..."
+		if [ -e "/lib/udev/rules.d/65-dmsetup.rules" ]; then
+			mv -f "/lib/udev/rules.d/65-dmsetup.rules" "/lib/udev/rules.d/65-dmsetup.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/dmsetup.rules" "/lib/udev/rules.d/65-dmsetup.rules"
+	fi
+fi
+# End automatically added section
+

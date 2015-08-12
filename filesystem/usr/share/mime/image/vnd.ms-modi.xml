@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="image/vnd.ms-modi">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>Microsoft Document Imaging format</comment>
+  <acronym>MDI</acronym>
+  <expanded-acronym>Microsoft Document Imaging</expanded-acronym>
+</mime-type>

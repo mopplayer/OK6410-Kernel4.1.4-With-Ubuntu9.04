@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/upstart
+/usr/lib/upstart/migrate-inittab.pl
+/usr/share
+/usr/share/doc
+/etc
+/etc/event.d
+/etc/event.d/tty1
+/etc/event.d/tty2
+/etc/event.d/tty6
+/etc/event.d/tty3
+/etc/event.d/tty5
+/etc/event.d/tty4
+/usr/share/doc/system-services

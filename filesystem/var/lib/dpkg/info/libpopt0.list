@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpopt0
+/usr/share/doc/libpopt0/copyright
+/usr/share/doc/libpopt0/README
+/usr/share/doc/libpopt0/changelog.gz
+/usr/share/doc/libpopt0/changelog.Debian.gz
+/lib
+/lib/libpopt.so.0.0.0
+/lib/libpopt.so.0

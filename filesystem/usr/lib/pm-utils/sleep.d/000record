@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# Record that we have a suspend/hibernate in progress.
+#
+. "${PM_FUNCTIONS}"
+
+LOGFILE="/var/lib/pm-utils/status"
+
+case "$1" in
+	hibernate|suspend)
+		echo "$1" >"$LOGFILE"
+		;;
+	thaw|resume) 
+		rm -f "$LOGFILE"
+		;;
+esac

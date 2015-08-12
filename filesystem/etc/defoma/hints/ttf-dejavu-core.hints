@@ -1,0 +1,95 @@
+category truetype
+
+# Sans
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Medium
+  Width = Variable
+  Shape = NoSerif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Bold.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Bold
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Bold
+  Width = Variable
+  Shape = NoSerif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+
+# Serif
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Medium
+  Width = Variable
+  Shape = Serif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Bold.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Bold
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Bold
+  Width = Variable
+  Shape = Serif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+
+# Mono
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf
+  Family = DejaVu-Sans-Mono
+  FontName = DejaVu-Sans-Mono
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Typewriter
+  Weight = Medium
+  Width = Fixed
+  Shape = NoSerif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Bold.ttf
+  Family = DejaVu-Sans-Mono
+  FontName = DejaVu-Sans-Mono-Bold
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Typewriter
+  Weight = Bold
+  Width = Fixed
+  Shape = NoSerif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+

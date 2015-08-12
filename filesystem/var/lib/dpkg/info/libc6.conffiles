@@ -1,0 +1,5 @@
+/etc/init.d/glibc.sh
+/etc/gai.conf
+/etc/ld.so.conf.d/arm-linux-gnueabi.conf
+/etc/ld.so.conf.d/libc.conf
+/etc/bindresvport.blacklist

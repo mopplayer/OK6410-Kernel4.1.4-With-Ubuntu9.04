@@ -1,0 +1,63 @@
+X-Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
+X-Debianized-By: Denis Barbier <barbier@debian.org>
+X-Debianized-Date: Wed Oct 5 20:46:30 2005 +0000
+X-Source-Downloaded-From: ftp://ftp.altlinux.org/pub/people/legion/kbd/
+X-Upstream-Author: Alexey Gladkov <gladkov.alexey@gmail.com>,
+                   Andries E. Brouwer <aeb@cwi.nl>
+X-Comment: In many places, this file is based on assumptions.  If you find
+           yourself credited wrongly (or not at all), please contact the
+           Debian kbd maintainers at <pkg-kbd-devel@lists.alioth.debian.org>
+           to request changes to this file.
+
+Files: debian/*
+Copyright: © 1991-2001 Yann Dirson <dirson@debian.org>,
+           © 2001 Alcove <http://alcove.fr/>,
+           © 2004 Wartan Hachaturow <wart@debian.org>,
+           © 2004–2006 Denis Barbier <barbier@debian.org>,
+           © 2007 Anton Zinoviev <zinoviev@debian.org>,
+           © 2008 Michael Schutte <m.schutte.jr@gmail.com>
+License: GPL-2+
+ On Debian systems, the complete text of the GNU General Public License can be
+ found in “/usr/share/common-licenses/GPL-2”.
+
+Files: *
+Copyright: various, see below
+License: GPL-2+
+ All files in this package may be freely copied under the terms
+ of the GNU General Public License (GPL), version 2, or at your
+ option any later version - except possibly for the restrictions
+ mentioned in the directory consolefonts.
+
+Files: src/kbdrate.c
+Copyright: © 1992 Rickard E. Faith
+License: GPL-any
+ Distributed under the GPL. This program comes with ABSOLUTELY NO WARRANTY.
+
+Files: src/dumpkeys.c, src/loadkeys.y, src/analyze,l, src/ksyms.c,
+       src/ksyms.h, src/showkey.c, src/loadkeys.1, man/man1/dumpkeys.1,
+       man/man1/showkey.1, man/man5/keymaps.5
+Copyright: © 1993 Risto Kankkunen
+
+Files: src/setfont.c, man/man8/setfont.8, src/mapscrn.c, man/man8/mapscrn.8,
+       src/loadkeys.y
+Copyright: © 1993 Eugene G. Crosser
+
+Files: man/man1/psfaddtable.1, man/man1/psfgettable.1,
+       man/man1/psfstriptable.1
+Copyright: © 1994 H. Peter Anvin
+
+Files: src/chvt.c, src/clrunimap.c, src/deallocvt.c, src/fgconsole.c,
+       src/findfile.c, src/getfd.c, src/getkeycodes.c, src/getunimap.c,
+       src/kbd_mode.c, src/loadunimap.c, src/psffontop.c, src/psfxtable.c,
+       src/resizecons.c, src/screendump.c, src/setkeycodes.c, src/setleds.c,
+       src/setmetamode.c, src/setvesablank.c, src/showconsolefont.c,
+       src/spawn_console.c, src/spawn_login.c, man/man1/chvt.1,
+       man/man1/deallocvt.1, man/man1/kbd_mode.1, man/man1/setleds.1,
+       man/man1/setmetamode.1, man/man8/getkeycodes.8, man/man8/loadunimap.8,
+       man/man8/resizecons.8, man/man8/setkeycodes.8 (and changes to files
+       mentioned above)
+Copyright: © 1994–1999 Andries E. Brouwer
+
+Files: man/man1misc/splitfont.1, man/man1/openvt.1, man/man8misc/setlogcons.8,
+       man/man8misc/vcstime.8 (and changes to files mentioned above)
+Copyright: © 2007–2008 Alexey Gladkov <gladkov.alexey@gmail.com>

@@ -1,0 +1,11 @@
+c7f97e690ce7e8b73d7fde8bf4209740  usr/share/doc/gnome-mount/copyright
+ce17525c4d95b8f87aa403dc4a36119e  usr/share/doc/gnome-mount/changelog.Debian.gz
+7e785513685b31a1e3c728d2c1585293  usr/share/doc/gnome-mount/README
+a8c1a1f1f08d31571a694130abcd3796  usr/share/doc/gnome-mount/NEWS.gz
+0adfa9d2769524740f307a9a39e23d87  usr/share/doc/gnome-mount/AUTHORS
+5c1238ad5a1c2905b9797e2d26a2cafa  usr/share/man/man1/gnome-mount.1.gz
+639380fae204f92141d8956a7f183a62  usr/share/gnome-mount/gnome-mount-properties.glade
+0167fcee3c9d3700cafcf50ff2f34d1e  usr/share/gconf/schemas/gnome-mount.schemas
+c9613b9769c3341d09f1126b8ec9ad09  usr/bin/gnome-mount
+a81021c1b48254bc0198debf9f669d7d  usr/lib/nautilus/extensions-2.0/libgnome-mount.so
+b64fbbb980f0f5ec5b1985a9fd5f9448  usr/lib/pkgconfig/gnome-mount.pc

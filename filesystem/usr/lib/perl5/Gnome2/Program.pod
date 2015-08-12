@@ -1,0 +1,247 @@
+=head1 NAME
+
+Gnome2::Program
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gnome2::Program
+
+
+=head1 METHODS
+
+=head2 string = $program-E<gt>B<get_app_id> 
+
+=over
+
+=back
+
+=head2 string = $program-E<gt>B<get_app_version> 
+
+=over
+
+=back
+
+=head2 string = $program-E<gt>B<get_human_readable_name> 
+
+=over
+
+=back
+
+=head2 program = Gnome2::Program-E<gt>B<init> ($app_id, $app_version, $module_info=undef, ...)
+
+=over
+
+=over
+
+=item * $app_id (string) 
+
+=item * $app_version (string) 
+
+=item * $module_info (scalar) 
+
+=item * ... (list) 
+
+=back
+
+
+The list argument is for property-value pairs.
+
+
+=back
+
+=head2 list = $program-E<gt>B<locate_file> ($domain, $file_name, $only_if_exists)
+
+=over
+
+=over
+
+=item * $domain (Gnome2::FileDomain) 
+
+=item * $file_name (string) 
+
+=item * $only_if_exists (boolean) 
+
+=back
+
+
+Returns a list of locations.
+
+
+=back
+
+=head2 moduleinfo = Gnome2::Program-E<gt>B<module_load> ($mod_name)
+
+=over
+
+=over
+
+=item * $mod_name (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Program-E<gt>B<module_register> ($module_info)
+
+=over
+
+=over
+
+=item * $module_info (scalar) 
+
+=back
+
+=back
+
+=head2 boolean = Gnome2::Program-E<gt>B<module_registered> ($module_info)
+
+=over
+
+=over
+
+=item * $module_info (scalar) 
+
+=back
+
+=back
+
+=head2 program or undef = Gnome2::Program-E<gt>B<get_program> 
+
+=over
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'app-datadir' (string : readable / writable)
+
+Data prefix where this application was installed
+
+=item 'app-id' (string : readable)
+
+ID string to use for this application
+
+=item 'app-libdir' (string : readable / writable)
+
+Library prefix where this application was installed
+
+=item 'app-prefix' (string : readable / writable)
+
+Prefix where this application was installed
+
+=item 'app-sysconfdir' (string : readable / writable)
+
+Configuration prefix where this application was installed
+
+=item 'app-version' (string : readable)
+
+Version of this application
+
+=item 'create-directories' (boolean : readable / writable / construct-only)
+
+Create standard GNOME directories on startup
+
+=item 'enable-sound' (boolean : readable / writable)
+
+Enable sound on startup
+
+=item 'espeaker' (string : readable / writable)
+
+How to connect to esd
+
+=item 'gnome-datadir' (string : readable / writable / construct-only)
+
+Data prefix where GNOME was installed
+
+=item 'gnome-libdir' (string : readable / writable / construct-only)
+
+Library prefix where GNOME was installed
+
+=item 'gnome-path' (string : readable / writable / construct-only)
+
+Path in which to look for installed files
+
+=item 'gnome-prefix' (string : readable / writable / construct-only)
+
+Prefix where GNOME was installed
+
+=item 'gnome-sysconfdir' (string : readable / writable / construct-only)
+
+Configuration prefix where GNOME was installed
+
+=item 'goption-context' (gpointer : readable / writable / construct-only)
+
+The goption context pointer that GnomeProgram is using
+
+=item 'human-readable-name' (string : readable / writable / construct-only)
+
+Human readable name of this application
+
+=item 'popt-context' (gpointer : readable)
+
+The popt context pointer that GnomeProgram is using
+
+=item 'popt-flags' (integer : writable / construct-only)
+
+The flags to use for popt
+
+=item 'popt-table' (gpointer : writable / construct-only)
+
+The table of options for popt
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::FileDomain
+
+=over
+
+=item * 'unknown' / 'GNOME_FILE_DOMAIN_UNKNOWN'
+
+=item * 'libdir' / 'GNOME_FILE_DOMAIN_LIBDIR'
+
+=item * 'datadir' / 'GNOME_FILE_DOMAIN_DATADIR'
+
+=item * 'sound' / 'GNOME_FILE_DOMAIN_SOUND'
+
+=item * 'pixmap' / 'GNOME_FILE_DOMAIN_PIXMAP'
+
+=item * 'config' / 'GNOME_FILE_DOMAIN_CONFIG'
+
+=item * 'help' / 'GNOME_FILE_DOMAIN_HELP'
+
+=item * 'app-libdir' / 'GNOME_FILE_DOMAIN_APP_LIBDIR'
+
+=item * 'app-datadir' / 'GNOME_FILE_DOMAIN_APP_DATADIR'
+
+=item * 'app-sound' / 'GNOME_FILE_DOMAIN_APP_SOUND'
+
+=item * 'app-pixmap' / 'GNOME_FILE_DOMAIN_APP_PIXMAP'
+
+=item * 'app-config' / 'GNOME_FILE_DOMAIN_APP_CONFIG'
+
+=item * 'app-help' / 'GNOME_FILE_DOMAIN_APP_HELP'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

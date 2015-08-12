@@ -1,0 +1,174 @@
+
+Template: dhcp3-client/dhclient-script_moved
+Type: note
+Description: dhclient-script moved
+ As of 3.0.4-2, dhclient-script is installed in /sbin and is no longer
+ registered as a configuration file. /etc/dhcp3/dhclient-script
+ appears to have been modified at some point, so it has not been
+ removed. However it is no longer being used.
+ .
+ Please consider using the hook infrastructure (see dhclient-script(8)
+ for more information) instead of modifying dhclient-script.
+Description-cs.UTF-8: dhclient-script se přesunul
+ Od verze 3.0.4-2 je dhclient-script instalován do /sbin a již není považován za konfigurační soubor. Zdá se, že /etc/dhcp3/dhclient-script byl někdy upravován a proto jej neodstraňuji, nicméně už se k ničemu nepoužívá.
+ .
+ Místo přímých úprav dhclient-script prosím zvažte použití modulární infrastruktury (viz dhclient-script(8).
+Description-de.UTF-8: dhclient-script wurde verschoben
+ Mit der Version 3.0.4-2 wird die Datei dhclient-script in das Verzeichnis /sbin installiert und ist nicht mehr als Konfigurationsdatei eingetragen. Die Datei /etc/dhcp3/dhclient-script scheint verändert worden zu sein und wurde deshalb nicht gelöscht. Sie wird aber nicht mehr benutzt.
+ .
+ Bitte benutzen Sie den Hook-Mechanismus (siehe dhclient-script(8) für weitere Informationen) anstatt die Datei dhclient-script zu verändern.
+Description-es.UTF-8: Se ha movido dhclient-script
+ A partir de la versión 3.0.4-2 se instala dhclient-script en /sbin y ya no se registra como fichero de configuración. Parece que ha modificado en algún momento «/etc/dhcp3/dhclient-script» por lo que no se ha eliminado. Sin embargo debe tener en cuenta que ya no va a utilizarse.
+ .
+ Por favor, intente utilizar la infraestructura de programas «anzuelo» (consulte dhclient-script(8) para más información) en lugar de modificar el programa dhclient-script.
+Description-eu.UTF-8: dhclient-script mugitua izan da
+ 3.0.4-2 bertsiotik aurrera, dhclient-script /sbin karpetan instalatzen da eta ez da konfigurazio fitxategi bat. Dirudienez noizbait /etc/dhcp3/dhclient-script aldatu duzu beraz ez da ezabatua izan. Hala ere ez da luzaroago erabilia izango.
+ .
+ Mesedez dhclient-script aldatu ordez hook azpiegitura (argibide gehiagorako dhclient-script(8) begiratu) erabiltzeko aukera kontutan har ezazu.
+Description-fi.UTF-8: dhclient-script siirretty
+ Versiosta 3.0.4-2 alkaen dhclient-script on asennettuna hakemistoon /sbin, eikä sitä enää rekisteröidä asetustiedostoksi. Tiedostoa /etc/dhcp3/dhclient-script on muokattu jossain vaiheessa, joten sitä ei poistettu. Sitä ei kuitenkaan enää käytetä.
+ .
+ Harkitse koukkujärjestelmän (hook infrastructure, katso man-ohjesivu dhclient-script(8)) käyttöä tiedoston dhclient-script muokkaamisen sijaan.
+Description-fr.UTF-8: Déplacement du script dhclient-script
+ Depuis la version 3.0.4-2, le script dhclient-script est installé dans /sbin et n'est plus un fichier de configuration. Ce fichier /etc/dhcp3/dhclient-script a été modifié sans être supprimé mais n'est plus utilisé.
+ .
+ Veuillez considérer l'utilisation de l'infrastructure de crochet plutôt que de modifier le fichier dhclient-script.
+Description-gl.UTF-8: Trasladouse dhclient-script
+ A partires de 3.0.4-2, dhclient-script está instalado en /sbin e xa non está rexistrado coma un ficheiro de configuración. Semella que /etc/dhcp3/dhclient-script foi modificado nalgún momento, así que non se eliminou. Nembargantes, xa non se emprega.
+ .
+ Pense en empregar a infraestructura de puntos de enganche (consulte dhclient-script(8) para obter máis información) no canto de modificar dhclient-script.
+Description-it.UTF-8: Spostato dhclient-script
+ Dalla versione 3.0.4-2, dhclient-script viene installato in /sbin e non è più registrato come un file di configurazione. Sembra che il file /etc/dhcp3/dhclient-script sia stato modificato e quindi non viene rimosso, comunque non viene più usato.
+ .
+ Si suggerisce di usare l'infrastruttura di hook (consultare dhclient-script(8) per ulteriori informazioni) anziché modificare dhclient-script.
+Description-ja.UTF-8: dhclient-script は移動しました
+ バージョン 3.0.4-2 から、dhclient-script は /sbin にインストールされ、設定ファイルとして登録されないようになっています。/etc/dhcp3/dhclient-script には何箇所か変更が加えられているようなので、削除はされていません。しかし、今後は使われることはありません。
+ .
+ dhclient-script を編集するのではなく、フックスクリプトを使うことを検討してください（詳細は dhclient-script(8) を参照してください）。
+Description-ko.UTF-8: dhclient-script 위치 변경
+ 버전 3.0.4-2부터는 dhclient-script가 /sbin에 설치되며 더 이상 설정파일로 등록되지 않습니다. /etc/dhcp3/dhclient-script에 변경사항이 있는 것으로 보여 지우지는 않았습니다. 하지만 이 파일을 더 이상 사용하지는 않습니다.
+ .
+ dhclient-script를 변경하기보다는 후크 기반(자세한 정보는 dhclient-script(8) 참조)을 사용하길 권장합니다.
+Description-nl.UTF-8: Het dhclient-script is verplaatst
+ Vanaf versie 3.0.4-2 wordt het dhclient-script geïnstalleerd in /sbin en wordt het niet langer geregistreerd als configuratiebestand. Het lijkt erop dat het bestand /etc/dhcp3/dhclient-script op enig moment is gewijzigd; het is daarom niet verwijderd, maar het wordt niet langer gebruikt.
+ .
+ Aangeraden wordt niet het dhclient-script te wijzigen maar in plaats daarvan de "hook"-infrastructuur (zie dhclient-script(8) voor aanvullende informatie) te gebruiken.
+Description-pt.UTF-8: o dhclient-script foi movido
+ A partir da versão 3.0.4-2, o dhclient-script é instalado em /sbin e deixou de ser registado como um ficheiro de configuração. /etc/dhcp3/dhclient-script parece ter sido modificado algures no tempo, portanto não foi removido. No entanto já não está a ser usado.
+ .
+ Por favor considere usar a infraestrutura de ganchos em vez de modificar o dhclient-script (ver dhclient-script(8) para mais informação).
+Description-pt_BR.UTF-8: dhclient-script foi movido
+ A partir da versão 3.0.4-2, o dhclient-script é instalado em /sbin e não é mais registrado como um arquivo de configuração. /etc/dhcp3/dhclient-script parece ter sido modificado em algum ponto, portanto não foi removido. No entanto ele deixou de ser usado.
+ .
+ Por favor, considere a utilização da infra-estrutura de gatilhos ("hook") (veja dhclient-script(8) para mais informações) ao invés de modificar o dhclient-script.
+Description-ru.UTF-8: Изменено расположение dhclient-script
+ Начиная с версии 3.0.4-2, dhclient-script устанавливается в каталог /sbin и более не является конфигурационным файлом. Кажется, в системе находится изменённая версия файла /etc/dhcp3/dhclient-script, поэтому он не был удалён. Однако, использоваться он больше не будет.
+ .
+ Вместо редактирования сценария dhclient-script, пожалуйста, пользуйтесь инфраструктурой хуков (подробности смотрите в dhclient-script(8)).
+Description-sk.UTF-8: dhclient-script sa presunul
+ Od verzie 3.0.4-2, je dhclient-script nainštalovaný v /sbin a už nie je registrovaný ako konfiguračný súbor. Zdá sa, že /etc/dhcp3/dhclient-script bol niekedy zmenený, takže nebol odstránený. Už sa však nepoužíva.
+ .
+ Prosím, zvážte použitie infraštruktúry postupných volaní (hook) (viac informácií v dhclient-script(8)) namiesto zmeny dhclient-script.
+Description-sv.UTF-8: dhclient-script har flyttats
+ Från och med 3.0.4-2 är dhclient-script installerat i /sbin och är inte längre registrerad som en konfigurationsfil. /etc/dhcp3/dhclient-script verkar ha ändrats vid något tillfälle, så den filen har inte tagits bort, men den används inte längre.
+ .
+ Vänligen överväg att använda infrastrukturen för krokar (se dhclient-script(8) för mer information) istället för att modifiera dhclient-script.
+Description-ta.UTF-8: டிஹெச் சார்ந்தோன் குறு நிரல் (dhclient-script) நகர்த்தப்பட்டது.
+ 3.0.4-2 முதல் டிஹெச் சார்ந்தோன் குறு நிரல் (dhclient-script) /sbin இல் நிறுவப்படும். அது இனி வடிவமைப்பு கோப்பாக பதிவு செய்யப் பட மாட்டாது. /etc/dhcp3/dhclient-script ஏதோ ஒரு சமயம் மாற்றப்பட்டது போல உள்ளது. ஆகவே அது நீக்கப் பட்டது. அது இனி பயன் படாது.
+ .
+ டிஹெச் சார்ந்தோன் குறு நிரல் ஐ மாற்றுவதற்கு பதில் தயை செய்து ஹூக் அடிப்படை கட்டமைப்பை பயன்படுத்துவதைப் பற்றி யோசிக்கவும். மேலும் தகவல்களுக்கு dhclient-script(8) ஐ காண்க.
+Description-tr.UTF-8: dhclient-script taşındı
+ Sürüm 3.0.4-2 ile birlikte dhclient-script /sbin içine kurulur ve artık bir yapılandırma dosyası değildir. /etc/dhcp3/dhclient-script bir noktasında değiştirilmiş gibi gözüküyor, buyüzden silinmeyecek. Fakat artık kullanılmayacaktır.
+ .
+ Lütfen dhclient-script betiğini değiştirmek yerine hook altyapısını (daha fazla bilgi için dhclient-script(8) kısmına gözatın) kullanmayı tercih edin.
+Description-vi.UTF-8: dhclient-script đã di chuyển
+ Kể từ phiên bản 3.0.4-2, « dhclient-script » được cài đặt vào thư mục « /sbin », cũng không còn được đăng ký lại là tập tin cấu hình. Có vẻ là « /etc/dhcp3/dhclient-script » bị sửa đổi vào điểm thời nào : vì thế nó chưa bị gỡ bỏ ; cũng không còn được dùng lại.
+ .
+ Khuyên bạn dùng hạ tầng cơ sở « hook » (xem « dhclient-script » để tìm thêm thông tin) thay vào sửa đổi « dhclient-script ».
+
+Template: dhcp3-client/dhclient-needs-restarting
+Type: note
+Description: dhclient needs restarting
+ As always, dhclient is not restarted on upgrade, so you are still running the
+ previous version of dhclient. You can restart it by doing an ifdown and ifup
+ on the interface(s) that are configured to use DHCP, or by explicitly killing
+ and restarting dhclient.
+ .
+ Naturally, you should exercise caution if you are managing a remote server via
+ an interface using DHCP.
+Description-cs.UTF-8: dhclient vyžaduje restart
+ Běžně se dhclient při aktualizaci nerestartuje, takže stále používáte starší verzi dhclienta. Restartovat jej můžete buď zavoláním ifdown a ifup na rozhraních, která jsou nastavena pro používání DHCP, nebo také explicitně zabitím a novým spuštěním dhclienta.
+ .
+ Pochopitelně byste měli být opatrní například v situaci, kdy spravujete vzdálený server přes rozhraní spravované pomocí DHCP.
+Description-de.UTF-8: dhclient muss neu gestartet werden
+ Dhclient wird, wie immer, während der Aktualisierung nicht neu gestartet, deshalb arbeiten Sie noch mit der vorherigen Version von dhclient. Sie können es durch die Kommandos ifdown und ifup an den Schnittstellen, die DHCP benutzen, neu starten oder dhclient ausdrücklich beenden und neu starten.
+ .
+ Sie sollten vorsichtig sein, falls Sie einen entfernten Rechner über eine Schnittstelle verwalten, die DHCP benutzt.
+Description-es.UTF-8: Es necesario reiniciar dhclient
+ Como siempre, no se ha reinstalado dhclient al hacer la actualización, por lo que aún está ejecutando la versión anterior de este programa. Puede reiniciarlo si ejecuta «ifdown» seguido de «ifup» para la/s interface/s que tiene configuradas para que utilicen DHCP o bien explícitamente matando y rearrancando dhclient.
+ .
+ Por supuesto, debería hacer esto con cuidado si está gestionando un servidor remoto a través de una interfaz que utiliza DHCP.
+Description-eu.UTF-8: dhclient berrabiarazi egin behar da
+ Betiko moduan, dhclient ez da berrabiarazi bertsio berritzean beraz bezeroaren bertsio zaharra erabiltzen ari da. Berau berrabiarazteko interfazea ezgaitu (ifdown) eta gaitu (ifup) dezakezu edo zehazki dhclient hil eta berrabiarazi.
+ .
+ Noski, kontuz ibili beharko duzu DHCP erabiltzen duen interfaze baten bitartez urruneko zerbitzari bat konfiguratzen ari bazara.
+Description-fi.UTF-8: dhclient tulee käynnistää uudelleen.
+ Kuten aina, ohjelmaa dhclient ei käynnistetä uudelleen päivitettäessä, joten ohjelman edellinen versio on yhä käytössä. Voit käynnistää sen uudelleen ajamalla komennot ifdown ja ifup verkkoliitynnöille, jotka on asetettu käyttämään DHCP:tä, tai tappamalla ja käynnistämällä uudelleen ohjelman dhclient.
+ .
+ Luonnollisesti tulisi edetä varoen, jos hallinnoit etäpalvelinta DHCP:tä käyttävän verkkoliitynnän kautta.
+Description-fr.UTF-8: Redémarrage nécessaire pour dhclient
+ Dhclient n'est jamais redémarré lors d'une mise à jour, et la version précédente est actuellement active. Vous pouvez redémarrer ce script avec les commandes « ifdown » et « ifup » sur la (les) interface(s) configurée(s) pour utiliser DHCP, ou alors tuer le processus et ensuite redémarrer dhclient.
+ .
+ La prudence est recommandée avec un serveur distant géré via une interface qui utilise elle-même DHCP.
+Description-gl.UTF-8: Hai que reiniciar dhclient
+ Igual que sempre, dhclient non se reinicia ao actualizalo, así que aínda está a executar a versión antiga de dhclient. Pode reinicialo executando ifdown e ifup sobre as interfaces que estean configuradas para empregar DHCP, ou matando e reiniciando dhclient.
+ .
+ Por suposto, debería ter coidado se está a xestionar un servidor remoto a través dunha interface que emprega DHCP.
+Description-it.UTF-8: dhclient deve essere riavviato
+ dhclient non viene riavviato dopo l'aggiornamento e quindi rimane in esecuzione la versione precedente. È possibile avviare la nuova versione tramite i comandi ifdown e ifup sulle interfacce configurate per usare DHCP oppure in modo esplicito terminando (con kill) e riavviando dhclient.
+ .
+ Si raccomanda la massima attenzione se si sta operando su un server remoto tramite un'interfaccia che usa DHCP.
+Description-ja.UTF-8: dhclient は再起動が必要です
+ いつものように、dhclient はアップグレード時には再起動しませんので、まだ以前のバージョンの dhclient が動作しています。DHCP を使うように設定してあるインターフェイスで ifdown と ifup を実行することで dhclient を再起動できます。dhclient を kill して再起動することでも可能です。
+ .
+ 当然の事ですが、DHCP を使っているインターフェイス経由でリモートサーバを管理している場合は注意を払うべきです。
+Description-ko.UTF-8: dhclient를 재시작해야 합니다
+ 언제나처럼 업그레이드를 해도 dhclient는 다시 시작시키지 않으므로 아직 예전 버전의 dhclient를 사용중입니다. DHCP를 사용하는 인터페이스에 ifdown과 ifup를 하셔서 dhclient를 다시 시작하거나 dhclient를 직접 죽여서 다시 시작하실 수 습니다.
+ .
+ DHCP를 이용하는 인터페이스를 통해 원격 서버를 관리하고 계신다면 당연히 주의하시길 바랍니다.
+Description-nl.UTF-8: dhclient moet worden herstart
+ Zoals altijd wordt dhclient niet automatisch opnieuw opgestart bij deze opwaardering en dus is nog altijd de voorgaande versie van dhclient actief. U kunt de service herstarten door een 'ifdown' en 'ifup' te geven voor de interface(s) die met behulp van DHCP zijn geconfigureerd. Een andere optie is een expliciete 'kill' van het actieve dhclient proces en het daarna opnieuw te starten.
+ .
+ U dient uiteraard voorzichtig te zijn als u een server vanaf afstand beheert via een interface die is geconfigureerd met behulp van DHCP.
+Description-pt.UTF-8: o dhclient precisa de ser reiniciado
+ Como sempre, o dhclient não é reiniciado na actualização, portanto ainda está a correr a versão antiga do dhclient. Pode reiniciá-lo fazendo ifdown e ifup na(s) interface(s) que está(ão) configurada(s) para usar DHCP, ou terminando e reiniciando explicitamente o dhclient.
+ .
+ Naturalmente, deve ter cuidado se está a gerir um servidor remoto usando uma interface que use DHCP.
+Description-pt_BR.UTF-8: dhclient precisa ser reiniciado
+ Como sempre, o dhclient não foi reiniciado na atualização, portanto você ainda está executando a versão anterior do dhclient. Você pode reiniciá-lo fazendo um ifdown e ifup na(s) interface(s) que são configuradas para usar DHCP, ou explicitamente matando ("kill") e reiniciando o dhclient.
+ .
+ Naturalmente, você deveria tomar cuidado se estiver gerenciando um servidor remoto através de uma interface usando DHCP.
+Description-ru.UTF-8: Требуется перезапустить dhclient
+ Как обычно, при обновлении перезапуск dhclient не выполняется, поэтому у вас всё ещё запущена предыдущая версия dhclient. Вы можете перезапустить его выполнив ifdown и ifup для интерфейса(ов), который(ые) используют DHCP, или явно убив и перезапустив dhclient.
+ .
+ Естественно, вы должны быть осторожны, если делаете это на сервере удалённо через интерфейс, использующий DHCP.
+Description-sk.UTF-8: dhclient potrebuje reštart
+ Ako vždy, dhclient sa po upgrade nereštartuje, takže momentálne stále beží predchádzajúca verzia dhclient. Môžete ho reštartovať pomocou ifdown a ifup na rozhraniach, ktoré boli nakonfigurované, aby používali DHCP, alebo explicitne zabitím a znovuspustením procesu dhclient.
+ .
+ Prirodzene by ste mali byť opatrní ak spravujete vzdialený server cez rozhranie používajúce DHCP.
+Description-sv.UTF-8: dhclient behöver startas om
+ Som vanligt startar dhclient inte om vid uppgradering så du kör fortfarande den föregående versionen av dhclient. Du kan starta om den genom att köra ifdown och ifup på de nätverksgränssnitt som är konfigurerade att använda DHCP, eller genom att uttryckligen döda och sedan starta upp dhclient igen.
+ .
+ Självklart bör du vidtaga försiktighetsåtgärder om du administrerar en avlägsen server via ett nätverksgränssnitt som använder DHCP.
+Description-ta.UTF-8: டிஹெச் சார்ந்தோன் ஐ மீள் துவக்க வேண்டும்.
+ வழக்கம் போல டிஹெச் சார்ந்தோன் மேம்பட்டவுடன் மீள் துவக்கப் படுவதில்லை. நீங்கள் இன்னமும் முந்தைய பதிப்பில்தான் உள்ளீர்கள். அதை மீள் துவக்க வேண்டும். அதற்கு டிஹெச்சிபி(DHCP) ஐ பயன்படுத்த வடிவமைத்த இடைமுகங்களில் ifdown மற்றும் ifup செய்தோ அல்லது தெளிவாக டிஹெச் சார்ந்தோன் ஐ நிறுத்தி மீள் துவக்கவோ வேண்டும்.
+ .
+ நீங்கள் டிஹெச்சிபி ஐ பயன் படுத்தி இடை முகம் வழியாக தொலை சேவையகத்தை மேலாண்டால் இயற்கையாக எச்சரிக்கையுடன் இருக்க வேண்டும்.
+Description-tr.UTF-8: dhclient takrar başlatmayı gerektiriyor
+ Herzamanki gibi dhclient güncellenmelerde tekrar başlatılmıyor, dolayısıyla hala dhclient'ın eski sürümünü kullanıyorsunuz. DHCP kullanan arayüzler için birer ifdown ve ifup yaparak tekrar başlatabilirsiniz, yada tamamen öldürüp dhclient'ı tekrar başlatabilirsiniz.
+ .
+ Eğer uzak bir sunucuyu DHCP kullanan bir arayüz üzerinden yönetiyorsanız doğal olarak dikkatli olmalısınız.
+Description-vi.UTF-8: dhclient cần phải được khởi chạy lại
+ dhclient không được khởi chạy lại khi nâng cấp, vì thế bạn vẫn còn chạy phiên bản dhclient trước. Cũng có thể khởi chạy lại bằng cách làm « ifdown » và « ifup » trên mỗi giao diện được cấu hình để sử dụng DHCP, hoặc bằng cách buộc kết thúc và khởi chạy lại dhclient một cách dứt khoát.
+ .
+ Cũng cần phải cẩn thận khi quản lý máy phục vụ từ xa bằng DHCP.

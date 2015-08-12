@@ -1,0 +1,208 @@
+=head1 NAME
+
+Glib::Flags -  Overloaded operators representing GLib flags
+
+=head1 HIERARCHY
+
+  Glib::Flags
+
+=for object Glib::Flags Overloaded operators representing GLib flags
+
+=for position DESCRIPTION
+
+=head1 DESCRIPTION
+
+Glib maps flag and enum values to the nicknames strings provided by the
+underlying C libraries.  Representing flags this way in Perl is an interesting
+problem, which Glib solves by using some cool overloaded operators. 
+
+The functions described here actually do the work of those overloaded
+operators.  See the description of the flags operators in the "This Is
+Now That" section of L<Glib> for more info.
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 scalar = $class-E<gt>B<new> ($a)
+
+=over
+
+=over
+
+=item * $a (scalar) 
+
+=back
+
+Create a new flags object with given bits.  This is for use from a
+subclass, it's not possible to create a C<Glib::Flags> object as such.
+For example,
+
+    my $f1 = Glib::ParamFlags->new ('readable');
+    my $f2 = Glib::ParamFlags->new (['readable','writable']);
+
+An object like this can then be used with the overloaded operators.
+
+=back
+
+=head2 scalar = $a-E<gt>B<all> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 scalar = $a-E<gt>B<as_arrayref> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+
+
+=back
+
+=head2 integer = $a-E<gt>B<bool> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+
+
+=back
+
+=head2 integer = $a-E<gt>B<eq> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 integer = $a-E<gt>B<ge> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 scalar = $a-E<gt>B<intersect> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 integer = $a-E<gt>B<ne> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 scalar = $a-E<gt>B<sub> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 scalar = $a-E<gt>B<union> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+=head2 scalar = $a-E<gt>B<xor> ($b, $swap)
+
+=over
+
+=over
+
+=item * $b (scalar) 
+
+=item * $swap (integer) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

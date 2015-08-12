@@ -1,0 +1,86 @@
+#!/usr/bin/python
+#
+# Copyright (c) 2005-2009 Canonical Ltd
+#
+# AUTHOR:
+# Michael Vogt <mvo@ubuntu.com>
+#
+# This file is part of GDebi
+#
+# GDebi is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as published
+# by the Free Software Foundation; either version 2 of the License, or (at
+# your option) any later version.
+#
+# GDebi is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with GDebi; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+#
+
+import sys
+import apt
+import os.path
+
+
+from optparse import OptionParser
+from GDebi.GDebi import GDebi
+
+from gettext import gettext as _
+import gettext
+
+import pygtk
+pygtk.require("2.0")
+import gtk
+
+
+if __name__ == "__main__":
+    data="/usr/share/gdebi"
+
+    localesApp="gdebi"
+    localesDir="/usr/share/locale"
+    gettext.bindtextdomain(localesApp, localesDir)
+    gettext.textdomain(localesApp)
+
+    parser = OptionParser()
+    parser.add_option("-n", "--non-interactive",
+                      action="store_true", dest="non_interactive",
+                      default=False,
+                      help=_("Run non-interactive (dangerous!)"))
+    (options, args) = parser.parse_args()
+
+    try:
+        gtk.init_check()
+    except RuntimeError, e:
+        sys.stderr.write("Can not start %s: %s. Exiting\n" % (sys.argv[0], e))
+        sys.exit(1)
+
+    afile = ""
+    if len(args) >= 1:
+        afile = args[0]
+        
+    try:
+        app = GDebi(datadir=data,options=options,file=afile)
+    except SystemError, e:
+        err_header = _("Software index is broken")
+        err_body = _("This is a major failure of your software " 
+                    "management system. Please check for broken packages "
+                    "with synaptic, check the file permissions and "
+                    "correctness of the file '/etc/apt/sources.list' and "
+                    "reload the software information with: "
+                    "'sudo apt-get update' and 'sudo apt-get install -f'."
+                    )
+        dia = gtk.MessageDialog(None, 0, gtk.MESSAGE_ERROR,
+                                gtk.BUTTONS_OK, "")
+        dia.set_markup("<b><big>%s</big></b>" % err_header)
+        dia.format_secondary_text(err_body)
+        dia.run()
+        sys.exit(1)
+        
+    if options.non_interactive == True:
+        app.on_button_install_clicked(None)
+    app.run()

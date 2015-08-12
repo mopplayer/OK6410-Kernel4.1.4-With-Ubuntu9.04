@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdefoma
+FILE='/etc/defoma/hints/ttf-dejavu-core.hints'
+if [ "$1" = configure ]; then
+	test -x /usr/bin/defoma-font && /usr/bin/defoma-font reregister-all $FILE
+fi
+# End automatically added section

@@ -1,0 +1,47 @@
+=head1 NAME
+
+Gnome2::Canvas::version
+
+=for object Gnome2::Canvas::version
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 boolean = Gnome2::Canvas-E<gt>B<CHECK_VERSION> ($major, $minor, $micro)
+
+=over
+
+=over
+
+=item * $major (integer) 
+
+=item * $minor (integer) 
+
+=item * $micro (integer) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Canvas-E<gt>B<GET_VERSION_INFO> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::version>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

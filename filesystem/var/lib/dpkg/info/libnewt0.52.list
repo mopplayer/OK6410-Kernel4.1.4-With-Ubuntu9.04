@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libnewt0.52
+/usr/share/doc/libnewt0.52/newt.spec.gz
+/usr/share/doc/libnewt0.52/copyright
+/usr/share/doc/libnewt0.52/changelog.Debian.gz
+/usr/lib
+/usr/lib/libnewt.so.0.52.2
+/usr/lib/libnewt.so.0.52

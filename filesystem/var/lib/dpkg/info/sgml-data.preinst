@@ -1,0 +1,16 @@
+#!/bin/sh
+# sgml-data preinst
+#   jobs: remove directories which are replaced by symlinks
+
+set -e
+
+if [ "$1" = upgrade ]; then
+    if [ -d /usr/share/sgml/entities/xml-iso-entities-8879.1986 ]; then
+        rm -rf /usr/share/sgml/entities/xml-iso-entities-8879.1986
+    fi
+fi
+
+# automatically generated debhelper commands
+
+
+exit 0

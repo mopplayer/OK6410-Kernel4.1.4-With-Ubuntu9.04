@@ -1,0 +1,450 @@
+=head1 NAME
+
+Gnome2::VFS::Mime::Type
+
+
+=head1 METHODS
+
+=head2 scalar = Gnome2::VFS::Mime::Type-E<gt>B<new> ($mime_type)
+
+=over
+
+=over
+
+=item * $mime_type (string) 
+
+=back
+
+=back
+
+=head2 result = $mime_type-E<gt>B<add_application_to_short_list> ($application_id)
+
+=over
+
+=over
+
+=item * $application_id (string) 
+
+=back
+
+=back
+
+=head2 result = $mime_type-E<gt>B<add_extension> ($extension)
+
+=over
+
+=over
+
+=item * $extension (string) 
+
+=back
+
+=back
+
+=head2 list = $mime_type-E<gt>B<get_all_applications_for_uri> ($uri)
+
+=over
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+Since: vfs 2.10
+
+=back
+
+=head2 list = $mime_type-E<gt>B<get_all_applications> 
+
+=over
+
+
+Returns a list of GnomeVFSMimeApplication's.
+
+
+=back
+
+=head2 list = $mime_type-E<gt>B<get_all_desktop_entries> 
+
+=over
+
+Since: vfs 2.8
+
+=back
+
+=head2 boolean = $mime_type-E<gt>B<can_be_executable> 
+
+=over
+
+=back
+
+=head2 result = $mime_type-E<gt>B<set_can_be_executable> ($new_value)
+
+=over
+
+=over
+
+=item * $new_value (boolean) 
+
+=back
+
+=back
+
+=head2 mimeactiontype = $mime_type-E<gt>B<get_default_action_type> 
+
+=over
+
+=back
+
+=head2 result = $mime_type-E<gt>B<set_default_action_type> ($action_type)
+
+=over
+
+=over
+
+=item * $action_type (Gnome2::VFS::MimeActionType) 
+
+=back
+
+=back
+
+=head2 application = $mime_type-E<gt>B<get_default_application_for_uri> ($uri)
+
+=over
+
+=over
+
+=item * $uri (string) 
+
+=back
+
+Since: vfs 2.10
+
+=back
+
+=head2 application = $mime_type-E<gt>B<get_default_application> 
+
+=over
+
+=back
+
+=head2 result = $mime_type-E<gt>B<set_default_application> ($application_id)
+
+=over
+
+=over
+
+=item * $application_id (string) 
+
+=back
+
+=back
+
+=head2 string = $mime_type-E<gt>B<get_default_desktop_entry> 
+
+=over
+
+Since: vfs 2.8
+
+=back
+
+=head2 string = $mime_type-E<gt>B<get_description> 
+
+=over
+
+=back
+
+=head2 result = $mime_type-E<gt>B<set_description> ($description)
+
+=over
+
+=over
+
+=item * $description (string) 
+
+=back
+
+=back
+
+=head2 mimeequivalence = $mime_type-E<gt>B<get_equivalence> ($base_mime_type)
+
+=over
+
+=over
+
+=item * $base_mime_type (Gnome2::VFS::Mime::Type) 
+
+=back
+
+Since: vfs 2.8
+
+=back
+
+=head2 result = $mime_type-E<gt>B<extend_all_applications> (...)
+
+=over
+
+=over
+
+=item * ... (list) of application id's
+
+=back
+
+
+
+
+=back
+
+=head2 string = $mime_type-E<gt>B<get_icon> 
+
+=over
+
+=back
+
+=head2 result = $mime_type-E<gt>B<set_icon> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 boolean = $a-E<gt>B<is_equal> ($b)
+
+=over
+
+=over
+
+=item * $b (Gnome2::VFS::Mime::Type) 
+
+=back
+
+Since: vfs 2.8
+
+=back
+
+=head2 result = $mime_type-E<gt>B<remove_application_from_short_list> ($application_id)
+
+=over
+
+=over
+
+=item * $application_id (string) 
+
+=back
+
+=back
+
+=head2 result = $mime_type-E<gt>B<remove_extension> ($extension)
+
+=over
+
+=over
+
+=item * $extension (string) 
+
+=back
+
+=back
+
+=head2 result = $mime_type-E<gt>B<remove_from_all_applications> (...)
+
+=over
+
+=over
+
+=item * ... (list) of application id's
+
+=back
+
+
+
+
+=back
+
+=head2 list = $mime_type-E<gt>B<get_short_list_applications> 
+
+=over
+
+
+Returns a list of GnomeVFSMimeApplication's.
+
+
+=back
+
+=head2 result = $mime_type-E<gt>B<set_short_list_applications> (...)
+
+=over
+
+=over
+
+=item * ... (list) of application id's
+
+=back
+
+
+
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::VFS::MimeActionType
+
+=over
+
+=item * 'none' / 'GNOME_VFS_MIME_ACTION_TYPE_NONE'
+
+=item * 'application' / 'GNOME_VFS_MIME_ACTION_TYPE_APPLICATION'
+
+=item * 'component' / 'GNOME_VFS_MIME_ACTION_TYPE_COMPONENT'
+
+=back
+
+
+=head2 enum Gnome2::VFS::MimeEquivalence
+
+=over
+
+=item * 'unrelated' / 'GNOME_VFS_MIME_UNRELATED'
+
+=item * 'identical' / 'GNOME_VFS_MIME_IDENTICAL'
+
+=item * 'parent' / 'GNOME_VFS_MIME_PARENT'
+
+=back
+
+
+=head2 enum Gnome2::VFS::Result
+
+=over
+
+=item * 'ok' / 'GNOME_VFS_OK'
+
+=item * 'error-not-found' / 'GNOME_VFS_ERROR_NOT_FOUND'
+
+=item * 'error-generic' / 'GNOME_VFS_ERROR_GENERIC'
+
+=item * 'error-internal' / 'GNOME_VFS_ERROR_INTERNAL'
+
+=item * 'error-bad-parameters' / 'GNOME_VFS_ERROR_BAD_PARAMETERS'
+
+=item * 'error-not-supported' / 'GNOME_VFS_ERROR_NOT_SUPPORTED'
+
+=item * 'error-io' / 'GNOME_VFS_ERROR_IO'
+
+=item * 'error-corrupted-data' / 'GNOME_VFS_ERROR_CORRUPTED_DATA'
+
+=item * 'error-wrong-format' / 'GNOME_VFS_ERROR_WRONG_FORMAT'
+
+=item * 'error-bad-file' / 'GNOME_VFS_ERROR_BAD_FILE'
+
+=item * 'error-too-big' / 'GNOME_VFS_ERROR_TOO_BIG'
+
+=item * 'error-no-space' / 'GNOME_VFS_ERROR_NO_SPACE'
+
+=item * 'error-read-only' / 'GNOME_VFS_ERROR_READ_ONLY'
+
+=item * 'error-invalid-uri' / 'GNOME_VFS_ERROR_INVALID_URI'
+
+=item * 'error-not-open' / 'GNOME_VFS_ERROR_NOT_OPEN'
+
+=item * 'error-invalid-open-mode' / 'GNOME_VFS_ERROR_INVALID_OPEN_MODE'
+
+=item * 'error-access-denied' / 'GNOME_VFS_ERROR_ACCESS_DENIED'
+
+=item * 'error-too-many-open-files' / 'GNOME_VFS_ERROR_TOO_MANY_OPEN_FILES'
+
+=item * 'error-eof' / 'GNOME_VFS_ERROR_EOF'
+
+=item * 'error-not-a-directory' / 'GNOME_VFS_ERROR_NOT_A_DIRECTORY'
+
+=item * 'error-in-progress' / 'GNOME_VFS_ERROR_IN_PROGRESS'
+
+=item * 'error-interrupted' / 'GNOME_VFS_ERROR_INTERRUPTED'
+
+=item * 'error-file-exists' / 'GNOME_VFS_ERROR_FILE_EXISTS'
+
+=item * 'error-loop' / 'GNOME_VFS_ERROR_LOOP'
+
+=item * 'error-not-permitted' / 'GNOME_VFS_ERROR_NOT_PERMITTED'
+
+=item * 'error-is-directory' / 'GNOME_VFS_ERROR_IS_DIRECTORY'
+
+=item * 'error-no-memory' / 'GNOME_VFS_ERROR_NO_MEMORY'
+
+=item * 'error-host-not-found' / 'GNOME_VFS_ERROR_HOST_NOT_FOUND'
+
+=item * 'error-invalid-host-name' / 'GNOME_VFS_ERROR_INVALID_HOST_NAME'
+
+=item * 'error-host-has-no-address' / 'GNOME_VFS_ERROR_HOST_HAS_NO_ADDRESS'
+
+=item * 'error-login-failed' / 'GNOME_VFS_ERROR_LOGIN_FAILED'
+
+=item * 'error-cancelled' / 'GNOME_VFS_ERROR_CANCELLED'
+
+=item * 'error-directory-busy' / 'GNOME_VFS_ERROR_DIRECTORY_BUSY'
+
+=item * 'error-directory-not-empty' / 'GNOME_VFS_ERROR_DIRECTORY_NOT_EMPTY'
+
+=item * 'error-too-many-links' / 'GNOME_VFS_ERROR_TOO_MANY_LINKS'
+
+=item * 'error-read-only-file-system' / 'GNOME_VFS_ERROR_READ_ONLY_FILE_SYSTEM'
+
+=item * 'error-not-same-file-system' / 'GNOME_VFS_ERROR_NOT_SAME_FILE_SYSTEM'
+
+=item * 'error-name-too-long' / 'GNOME_VFS_ERROR_NAME_TOO_LONG'
+
+=item * 'error-service-not-available' / 'GNOME_VFS_ERROR_SERVICE_NOT_AVAILABLE'
+
+=item * 'error-service-obsolete' / 'GNOME_VFS_ERROR_SERVICE_OBSOLETE'
+
+=item * 'error-protocol-error' / 'GNOME_VFS_ERROR_PROTOCOL_ERROR'
+
+=item * 'error-no-master-browser' / 'GNOME_VFS_ERROR_NO_MASTER_BROWSER'
+
+=item * 'error-no-default' / 'GNOME_VFS_ERROR_NO_DEFAULT'
+
+=item * 'error-no-handler' / 'GNOME_VFS_ERROR_NO_HANDLER'
+
+=item * 'error-parse' / 'GNOME_VFS_ERROR_PARSE'
+
+=item * 'error-launch' / 'GNOME_VFS_ERROR_LAUNCH'
+
+=item * 'error-timeout' / 'GNOME_VFS_ERROR_TIMEOUT'
+
+=item * 'error-nameserver' / 'GNOME_VFS_ERROR_NAMESERVER'
+
+=item * 'error-locked' / 'GNOME_VFS_ERROR_LOCKED'
+
+=item * 'error-deprecated-function' / 'GNOME_VFS_ERROR_DEPRECATED_FUNCTION'
+
+=item * 'error-invalid-filename' / 'GNOME_VFS_ERROR_INVALID_FILENAME'
+
+=item * 'error-not-a-symbolic-link' / 'GNOME_VFS_ERROR_NOT_A_SYMBOLIC_LINK'
+
+=item * 'num-errors' / 'GNOME_VFS_NUM_ERRORS'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

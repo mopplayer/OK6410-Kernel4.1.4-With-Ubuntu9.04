@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+
+<!--
+Policy definitions for HAL's ACL Management mechanism
+
+Copyright (c) 2007 David Zeuthen <david@fubar.dk>
+
+HAL is licensed to you under your choice of the the Academic Free
+License Version 2.1, or the GNU General Public License version 2. Some
+individual source files may be under the GPL only. See COPYING for
+details.
+
+NOTE: Please keep the actions in alpabetical order
+
+-->
+
+<policyconfig>
+
+  <action id="org.freedesktop.hal.device-access.audio-player">
+    <description>Directly access audio players</description>
+    <message>System policy prevents access to audio players</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.camera">
+    <description>Directly access digital cameras</description>
+    <message>System policy prevents access to digital cameras</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.cdrom">
+    <description>Directly access optical drives</description>
+    <message>System policy prevents access to optical drives</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.dvb">
+    <description>Directly access DVB devices</description>
+    <message>System policy prevents access to DVB devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.fingerprint-reader">
+    <description>Directly access to fingerprint reader devices</description>
+    <message>System policy prevents access to fingerprint readers</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.floppy">
+    <description>Directly access Floppy devices</description>
+    <message>System policy prevents access to Floppy devices</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.ieee1394-avc">
+    <description>Directly access Firewire AVC devices</description>
+    <message>System policy prevents access to Firewire AVC devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.ieee1394-iidc">
+    <description>Directly access Firewire IIDC devices</description>
+    <message>System policy prevents access to Firewire IIDC devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.joystick">
+    <description>Directly access Joystick devices</description>
+    <message>System policy prevents access to Joystick devices</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.modem">
+    <description>Directly access serial modem devices</description>
+    <message>System policy prevents access to serial modem devices</message>
+    <defaults>
+      <allow_inactive>auth_admin_keep_always</allow_inactive>
+      <allow_active>auth_admin_keep_always</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.mouse">
+    <description>Directly access Mouse devices</description>
+    <message>System policy prevents access to Mouse devices</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.obex">
+    <description>Directly access OBEX devices</description>
+    <message>System policy prevents access to OBEX devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.pda">
+    <description>Directly access PDA devices</description>
+    <message>System policy prevents access to PDA devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.ppdev">
+    <description>Directly access parallel port devices</description>
+    <message>System policy prevents access to parallel port devices</message>
+    <defaults>
+      <allow_inactive>auth_admin_keep_always</allow_inactive>
+      <allow_active>auth_admin_keep_always</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.printer">
+    <description>Directly access printers</description>
+    <message>System policy prevents access to printers</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.removable-block">
+    <description>Directly access removable block devices</description>
+    <message>System policy prevents access to removable block devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>no</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.scanner">
+    <description>Directly access scanners</description>
+    <message>System policy prevents access to scanners</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.sound">
+    <description>Directly access sound devices</description>
+    <message>System policy prevents access to the sound devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.video">
+    <description>Directly access Video devices</description>
+    <message>System policy prevents access to Video devices</message>
+    <defaults>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.video4linux">
+    <description>Directly access video capture devices</description>
+    <message>System policy prevents access to video capture devices</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+  <action id="org.freedesktop.hal.device-access.smart-card-reader">
+    <description>Directly access smart-card readers</description>
+    <message>System policy prevents access to the smart-card readers</message>
+    <defaults>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+
+</policyconfig>

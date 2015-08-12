@@ -1,0 +1,28 @@
+### This file is part of the dictionaries-common package.
+### It has been automatically generated.
+### DO NOT EDIT!
+
+%dictionaries = (
+  'american (American English)' => {
+     'coding-system' => 'iso-8859-1',
+     'emacsen-name' => 'american',
+     'hash-name' => 'en_US'
+  },
+  'british (British English)' => {
+     'coding-system' => 'iso-8859-1',
+     'emacsen-name' => 'british',
+     'hash-name' => 'en_GB'
+  },
+  'canadian (Canadian English)' => {
+     'coding-system' => 'iso-8859-1',
+     'emacsen-name' => 'canadian',
+     'hash-name' => 'en_CA'
+  },
+  'english (English)' => {
+     'coding-system' => 'iso-8859-1',
+     'emacsen-name' => 'english',
+     'hash-name' => 'en'
+  }
+);
+
+1;

@@ -1,0 +1,100 @@
+
+Welcome to python-apt's documentation!
+**************************************
+
+Note: This documentation can not be considered complete at the moment. But
+  it provides better documentation than the documentation available
+  through pydoc.
+
+Note: This documentation has been created by Sphinx, using
+  reStructuredText files written by Julian Andres Klode
+  <jak@debian.org>, and in case of the apt package, from the
+  documentation shipped in the modules.
+
+Contents:
+
+* ``apt`` --- Highlevel apt package
+  * ``apt.cache`` --- The Cache class
+  * ``apt.cdrom`` - Functionality like in apt-cdrom
+  * ``apt.debfile`` --- Classes related to debian package files
+  * ``apt.gtk.widgets`` --- GTK widgets
+  * ``apt.package`` --- Classes for package handling
+  * ``apt.progress`` --- Classes for progress reporting
+  * Classes exported in apt
+* ``apt_pkg`` --- The low-level bindings for apt-pkg
+  * Classes in apt_pkg
+  * Module Initialization
+  * Object initialization
+  * The Acquire interface
+  * Hash functions
+  * Other functions
+  * Data
+* ``apt_inst`` - Working with local Debian packages
+  * Checking packages
+  * Listing contents
+  * Extracting contents
+  * Example: Emulating **dpkg** ``--extract``
+  * Example: Emulating **dpkg** ``--contents``
+  * Example: Emulating **dpkg** ``--info``
+* ``aptsources`` --- Working with sources.list
+  * ``aptsources.distinfo`` --- provide meta information for distro
+    repositories
+  * ``aptsources.distro`` --- Distribution abstraction of the
+    sources.list
+  * ``aptsources.sourceslist`` --- Provide an abstraction of the
+    sources.list
+* Coding for python-apt
+  * Available branches
+  * C++ Coding style
+  * Python Coding Style
+  * Submitting your patch
+  * Documentation updates
+  * Example patch session
+
+Indices and tables
+******************
+
+* *Index*
+
+* *Module Index*
+
+* *Search Page*
+
+
+TODO
+****
+
+Todo: This should be split and cleaned up a bit.
+
+(The original entry is located in apt_pkg/cache.rst, line 4 and can be
+found *here*.)
+
+Todo: Seems to be some mixture of versions and pkgFile.
+
+(The original entry is located in apt_pkg/cache.rst, line 254 and can
+be found *here*.)
+
+Todo: Explain better..
+
+(The original entry is located in apt_pkg/cache.rst, line 690 and can
+be found *here*.)
+
+Todo: Complete them
+
+(The original entry is located in apt_pkg/cache.rst, line 796 and can
+be found *here*.)
+
+Todo: Really document it.
+
+(The original entry is located in apt_pkg/cache.rst, line 1129 and can
+be found *here*.)
+
+Todo: Really document it.
+
+(The original entry is located in apt_pkg/cache.rst, line 1141 and can
+be found *here*.)
+
+Todo: Really document it.
+
+(The original entry is located in apt_pkg/cache.rst, line 1149 and can
+be found *here*.)

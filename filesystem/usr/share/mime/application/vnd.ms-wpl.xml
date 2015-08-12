@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/vnd.ms-wpl">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>WPL playlist</comment>
+  <acronym>WPL</acronym>
+  <expanded-acronym>Windows Media Player Playlist</expanded-acronym>
+  <generic-icon name="video-x-generic"/>
+</mime-type>

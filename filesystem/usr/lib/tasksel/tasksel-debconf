@@ -1,0 +1,53 @@
+#!/bin/sh
+# because debconf sucks
+. /usr/share/debconf/confmodule
+set -e
+
+# This is a bit nasty, but it lets us convert task names to short
+# descriptions so that we can handle unseen preseeding correctly. We should
+# probably just use debconf for all of tasksel instead, and then we could
+# get rid of this nonsense.
+if [ "$1" = --get ]; then
+	shift
+	tmpfile=$1
+	question=$2
+	db_get $question
+	echo "$RET" >$tmpfile
+	exit 0
+elif [ "$1" = --set ]; then
+	shift
+	question=$1
+	value="$2"
+	db_set $question "$value"
+	exit 0
+fi
+
+tmpfile=$1
+choices="$2"
+choicestrans="$3"
+defaults="$4"
+question=$5
+
+db_settitle tasksel/title
+db_subst $question ORIGCHOICES "$choices"
+db_subst $question CHOICES "$choicestrans"
+
+# Allow tasksel/first to be preseeded. If it has a non-empty value or
+# is marked as seen, then it must have been preseeded, and that
+# overrides any defaults set by tasksel.
+if [ "$question" = "tasksel/first" ]; then
+	db_get $question
+	value="$RET"
+	db_fget $question seen
+	if [ -z "$value" ] && [ "$RET" = false ]; then
+		db_set $question "$defaults"
+	fi
+else
+	db_set $question "$defaults"
+fi
+
+db_input high $question || true
+db_go # note: intentionally unguarded
+db_fset $question seen false
+db_get $question
+echo "$RET" >$tmpfile

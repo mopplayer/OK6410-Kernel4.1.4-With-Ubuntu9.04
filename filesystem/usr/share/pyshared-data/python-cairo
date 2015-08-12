@@ -1,0 +1,15 @@
+[python-package]
+format = 1
+python-version = 2.6, 2.5
+[pycentral]
+version = 0.6.11
+include-links = 1
+[files]
+/usr/lib/python2.5/site-packages/cairo=d
+/usr/lib/python2.5/site-packages/cairo/_cairo.so=f
+/usr/lib/python2.5/site-packages/cairo/__init__.py=f
+/usr/lib/python2.6/dist-packages/cairo=d
+/usr/lib/python2.6/dist-packages/cairo/_cairo.so=f
+/usr/lib/python2.6/dist-packages/cairo/__init__.py=f
+/usr/share/pyshared/cairo=d
+/usr/share/pyshared/cairo/__init__.py=f

@@ -1,0 +1,435 @@
+=head1 NAME
+
+Gnome2::VFS::Async
+
+
+=head1 METHODS
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<create> ($text_uri, $open_mode, $exclusive, $perm, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $text_uri (string) 
+
+=item * $open_mode (Gnome2::VFS::OpenMode) 
+
+=item * $exclusive (boolean) 
+
+=item * $perm (integer) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<create_symbolic_link> ($uri, $uri_reference, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $uri (Gnome2::VFS::URI) 
+
+=item * $uri_reference (string) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<create_uri> ($uri, $open_mode, $exclusive, $perm, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $uri (Gnome2::VFS::URI) 
+
+=item * $open_mode (Gnome2::VFS::OpenMode) 
+
+=item * $exclusive (boolean) 
+
+=item * $perm (integer) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<get_file_info> ($uri_ref, $options, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $uri_ref (scalar) 
+
+=item * $options (Gnome2::VFS::FileInfoOptions) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<set_file_info> ($uri, $info, $mask, $options, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $uri (Gnome2::VFS::URI) 
+
+=item * $info (Gnome2::VFS::FileInfo) 
+
+=item * $mask (Gnome2::VFS::SetFileInfoMask) 
+
+=item * $options (Gnome2::VFS::FileInfoOptions) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<find_directory> ($near_ref, $kind, $create_if_needed, $find_if_needed, $permissions, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $near_ref (scalar) 
+
+=item * $kind (Gnome2::VFS::FindDirectoryKind) 
+
+=item * $create_if_needed (boolean) 
+
+=item * $find_if_needed (boolean) 
+
+=item * $permissions (integer) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 integer = Gnome2::VFS::Async-E<gt>B<get_job_limit> 
+
+=over
+
+=back
+
+=head2 Gnome2::VFS::Async-E<gt>B<set_job_limit> ($limit)
+
+=over
+
+=over
+
+=item * $limit (integer) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<load_directory> ($text_uri, $options, $items_per_notification, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $text_uri (string) 
+
+=item * $options (Gnome2::VFS::FileInfoOptions) 
+
+=item * $items_per_notification (integer) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<load_directory_uri> ($uri, $options, $items_per_notification, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $uri (Gnome2::VFS::URI) 
+
+=item * $options (Gnome2::VFS::FileInfoOptions) 
+
+=item * $items_per_notification (integer) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<open> ($text_uri, $open_mode, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $text_uri (string) 
+
+=item * $open_mode (Gnome2::VFS::OpenMode) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 handle = Gnome2::VFS::Async-E<gt>B<open_uri> ($uri, $open_mode, $priority, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $uri (Gnome2::VFS::URI) 
+
+=item * $open_mode (Gnome2::VFS::OpenMode) 
+
+=item * $priority (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::VFS::Async-E<gt>B<xfer> ($source_ref, $target_ref, $xfer_options, $error_mode, $overwrite_mode, $priority, $func_update, $data_update, $func_sync, $data_sync=undef)
+
+=over
+
+=over
+
+=item * $source_ref (scalar) 
+
+=item * $target_ref (scalar) 
+
+=item * $xfer_options (Gnome2::VFS::XferOptions) 
+
+=item * $error_mode (Gnome2::VFS::XferErrorMode) 
+
+=item * $overwrite_mode (Gnome2::VFS::XferOverwriteMode) 
+
+=item * $priority (integer) 
+
+=item * $func_update (scalar) 
+
+=item * $data_update (scalar) 
+
+=item * $func_sync (scalar) 
+
+=item * $data_sync (scalar) 
+
+=back
+
+
+Returns a GnomeVFSResult and a GnomeVFSAsyncHandle.
+
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::VFS::FileInfoOptions
+
+=over
+
+=item * 'default' / 'GNOME_VFS_FILE_INFO_DEFAULT'
+
+=item * 'get-mime-type' / 'GNOME_VFS_FILE_INFO_GET_MIME_TYPE'
+
+=item * 'force-fast-mime-type' / 'GNOME_VFS_FILE_INFO_FORCE_FAST_MIME_TYPE'
+
+=item * 'force-slow-mime-type' / 'GNOME_VFS_FILE_INFO_FORCE_SLOW_MIME_TYPE'
+
+=item * 'follow-links' / 'GNOME_VFS_FILE_INFO_FOLLOW_LINKS'
+
+=item * 'get-access-rights' / 'GNOME_VFS_FILE_INFO_GET_ACCESS_RIGHTS'
+
+=item * 'name-only' / 'GNOME_VFS_FILE_INFO_NAME_ONLY'
+
+=item * 'get-acl' / 'GNOME_VFS_FILE_INFO_GET_ACL'
+
+=item * 'get-selinux-context' / 'GNOME_VFS_FILE_INFO_GET_SELINUX_CONTEXT'
+
+=back
+
+
+=head2 enum Gnome2::VFS::FindDirectoryKind
+
+=over
+
+=item * 'desktop' / 'GNOME_VFS_DIRECTORY_KIND_DESKTOP'
+
+=item * 'trash' / 'GNOME_VFS_DIRECTORY_KIND_TRASH'
+
+=back
+
+
+=head2 flags Gnome2::VFS::OpenMode
+
+=over
+
+=item * 'none' / 'GNOME_VFS_OPEN_NONE'
+
+=item * 'read' / 'GNOME_VFS_OPEN_READ'
+
+=item * 'write' / 'GNOME_VFS_OPEN_WRITE'
+
+=item * 'random' / 'GNOME_VFS_OPEN_RANDOM'
+
+=item * 'truncate' / 'GNOME_VFS_OPEN_TRUNCATE'
+
+=back
+
+
+=head2 flags Gnome2::VFS::SetFileInfoMask
+
+=over
+
+=item * 'none' / 'GNOME_VFS_SET_FILE_INFO_NONE'
+
+=item * 'name' / 'GNOME_VFS_SET_FILE_INFO_NAME'
+
+=item * 'permissions' / 'GNOME_VFS_SET_FILE_INFO_PERMISSIONS'
+
+=item * 'owner' / 'GNOME_VFS_SET_FILE_INFO_OWNER'
+
+=item * 'time' / 'GNOME_VFS_SET_FILE_INFO_TIME'
+
+=item * 'acl' / 'GNOME_VFS_SET_FILE_INFO_ACL'
+
+=item * 'selinux-context' / 'GNOME_VFS_SET_FILE_INFO_SELINUX_CONTEXT'
+
+=item * 'symlink-name' / 'GNOME_VFS_SET_FILE_INFO_SYMLINK_NAME'
+
+=back
+
+
+=head2 enum Gnome2::VFS::XferErrorMode
+
+=over
+
+=item * 'abort' / 'GNOME_VFS_XFER_ERROR_MODE_ABORT'
+
+=item * 'query' / 'GNOME_VFS_XFER_ERROR_MODE_QUERY'
+
+=back
+
+
+=head2 flags Gnome2::VFS::XferOptions
+
+=over
+
+=item * 'default' / 'GNOME_VFS_XFER_DEFAULT'
+
+=item * 'unused-1' / 'GNOME_VFS_XFER_UNUSED_1'
+
+=item * 'follow-links' / 'GNOME_VFS_XFER_FOLLOW_LINKS'
+
+=item * 'unused-2' / 'GNOME_VFS_XFER_UNUSED_2'
+
+=item * 'recursive' / 'GNOME_VFS_XFER_RECURSIVE'
+
+=item * 'samefs' / 'GNOME_VFS_XFER_SAMEFS'
+
+=item * 'delete-items' / 'GNOME_VFS_XFER_DELETE_ITEMS'
+
+=item * 'empty-directories' / 'GNOME_VFS_XFER_EMPTY_DIRECTORIES'
+
+=item * 'new-unique-directory' / 'GNOME_VFS_XFER_NEW_UNIQUE_DIRECTORY'
+
+=item * 'removesource' / 'GNOME_VFS_XFER_REMOVESOURCE'
+
+=item * 'use-unique-names' / 'GNOME_VFS_XFER_USE_UNIQUE_NAMES'
+
+=item * 'link-items' / 'GNOME_VFS_XFER_LINK_ITEMS'
+
+=item * 'follow-links-recursive' / 'GNOME_VFS_XFER_FOLLOW_LINKS_RECURSIVE'
+
+=item * 'target-default-perms' / 'GNOME_VFS_XFER_TARGET_DEFAULT_PERMS'
+
+=back
+
+
+=head2 enum Gnome2::VFS::XferOverwriteMode
+
+=over
+
+=item * 'abort' / 'GNOME_VFS_XFER_OVERWRITE_MODE_ABORT'
+
+=item * 'query' / 'GNOME_VFS_XFER_OVERWRITE_MODE_QUERY'
+
+=item * 'replace' / 'GNOME_VFS_XFER_OVERWRITE_MODE_REPLACE'
+
+=item * 'skip' / 'GNOME_VFS_XFER_OVERWRITE_MODE_SKIP'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

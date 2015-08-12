@@ -1,0 +1,32 @@
+=head1 NAME
+
+Glib::Param::String -  Wrapper for string parameters in GLib
+
+=for object Glib::Param::String Wrapper for string parameters in GLib
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 string = $pspec_string-E<gt>B<get_default_value> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>, L<Glib::ParamSpec>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

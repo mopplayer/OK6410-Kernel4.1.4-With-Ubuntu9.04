@@ -1,0 +1,32 @@
+=head1 NAME
+
+Glib::Param::Boolean -  Wrapper for boolean parameters in GLib
+
+=for object Glib::Param::Boolean Wrapper for boolean parameters in GLib
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 boolean = $pspec_boolean-E<gt>B<get_default_value> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>, L<Glib::ParamSpec>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

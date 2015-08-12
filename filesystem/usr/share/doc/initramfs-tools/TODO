@@ -1,0 +1,10 @@
+TODO
+====
+
+ o Grep for TODO and FIXME and do those. =)
+
+ o Eliminate ?udev?, ?klibc?, busybox (-> glibc).
+
+ o Default to dep for PPC - Possibly to detect newworld?
+
+ o udevsettle timeouts handling

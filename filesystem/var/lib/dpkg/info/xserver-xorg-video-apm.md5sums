@@ -1,0 +1,6 @@
+6db298bec5113f63f5619567bcda9b56  usr/share/doc/xserver-xorg-video-apm/copyright
+405af099c55ae29058d1059866b3d24c  usr/share/doc/xserver-xorg-video-apm/changelog.gz
+d10023c3baea4693e8d80757220545e7  usr/share/doc/xserver-xorg-video-apm/changelog.Debian.gz
+34e1a9da194ad10734be4d5ff3fbccee  usr/share/man/man4/apm.4.gz
+95d00f8aae184a8346e64b532e073ee0  usr/share/xserver-xorg/pci/apm.ids
+64e943f5f29b7a009d275a41630d8ecb  usr/lib/xorg/modules/drivers/apm_drv.so

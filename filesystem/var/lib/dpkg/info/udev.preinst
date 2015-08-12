@@ -1,0 +1,120 @@
+#!/bin/sh -e
+# This script can be called in the following ways:
+#
+# Before the package is installed:
+#	<new-preinst> install
+#
+# Before removed package is upgraded:
+#	<new-preinst> install <old-version>
+#
+# Before the package is upgraded:
+#	<new-preinst> upgrade <old-version>
+#
+#
+# If postrm fails during upgrade or fails on failed upgrade:
+#	<old-preinst> abort-upgrade <new-version>
+
+
+# Prepare to remove a no-longer used conffile
+prep_rm_conffile()
+{
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE" ]; then
+        md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+        old_md5sum="`sed -n -e \"/^Conffiles:/,/^[^ ]/{\\\\' $CONFFILE '{s/ obsolete$//;s/.* //;p}}\" /var/lib/dpkg/status`"
+        if [ "$md5sum" != "$old_md5sum" ]; then
+            echo "Obsolete conffile $CONFFILE has been modified by you, renaming to .dpkg-bak"
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+	else
+	    mv -f "$CONFFILE" "$CONFFILE".dpkg-obsolete
+	fi
+    fi
+}
+
+# Prepare to move a conffile without triggering a dpkg question
+prep_mv_conffile() {
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE" ]; then
+        md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+        old_md5sum="`sed -n -e \"/^Conffiles:/,/^[^ ]/{\\\\' $CONFFILE '{s/ obsolete$//;s/.* //;p}}\" /var/lib/dpkg/status`"
+        if [ "$md5sum" = "$old_md5sum" ]; then
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+	else
+            mv -f "$CONFFILE" "$CONFFILE".dpkg-moving
+        fi
+    fi
+}
+
+
+# Disable udevadm from being run during an upgrade
+disable_udevadm()
+{
+    dpkg-divert --local --rename --divert /sbin/udevadm.upgrade \
+    		--add /sbin/udevadm
+
+    cat <<'UDEVADM' > /sbin/udevadm
+#!/bin/sh
+
+if [ "${0##*/}" = "udevtrigger" ] || [ "$1" = "trigger" ]; then
+    echo "udevadm trigger is not permitted while udev is unconfigured." 1>&2
+    exit 1
+fi
+
+if [ "${0##*/}" = "udevsettle" ] || [ "$1" = "settle" ]; then
+    echo "udevadm settle is not permitted while udev is unconfigured." 1>&2
+    exit 1
+fi
+
+exec /bin/bash -c "exec -a \"\$0\" /sbin/udevadm.upgrade \"\$@\"" "$0" "$@"
+UDEVADM
+    chmod +x /sbin/udevadm
+}
+
+
+# Prepare to remove Ubuntu rules in favour of upstream ones
+prep_rm_ubuntu_rules()
+{
+    prep_rm_conffile /etc/udev/rules.d/05-options.rules
+    prep_rm_conffile /etc/udev/rules.d/05-udev-early.rules
+    prep_rm_conffile /etc/udev/rules.d/20-names.rules
+    prep_rm_conffile /etc/udev/rules.d/30-cdrom_id.rules
+    prep_rm_conffile /etc/udev/rules.d/40-basic-permissions.rules
+    prep_rm_conffile /etc/udev/rules.d/40-permissions.rules
+    prep_rm_conffile /etc/udev/rules.d/60-persistent-input.rules
+    prep_rm_conffile /etc/udev/rules.d/60-persistent-storage-tape.rules
+    prep_rm_conffile /etc/udev/rules.d/60-persistent-storage.rules
+    prep_rm_conffile /etc/udev/rules.d/60-symlinks.rules
+    prep_rm_conffile /etc/udev/rules.d/61-persistent-storage-edd.rules
+    prep_rm_conffile /etc/udev/rules.d/65-id-type.rules
+    prep_rm_conffile /etc/udev/rules.d/66-persistent-storage-edd.rules
+    prep_rm_conffile /etc/udev/rules.d/75-cd-aliases-generator.rules
+    prep_rm_conffile /etc/udev/rules.d/75-persistent-net-generator.rules
+    prep_rm_conffile /etc/udev/rules.d/80-programs.rules
+    prep_rm_conffile /etc/udev/rules.d/90-modprobe.rules
+    prep_rm_conffile /etc/udev/rules.d/95-udev-late.rules
+}
+
+
+case "$1" in
+    install|upgrade)
+    	disable_udevadm
+
+	# Upgrade from intrepid
+	if dpkg --compare-versions "$2" lt "136-4"; then
+	    prep_rm_ubuntu_rules
+	fi
+	;;
+
+    abort-upgrade)
+	;;
+
+    *)
+	echo "$0 called with unknown argument \`$1'" 1>&2
+	exit 1
+	;;
+esac
+
+
+exit 0

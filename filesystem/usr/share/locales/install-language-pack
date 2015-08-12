@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <language code> <class> [<version>]"
+    exit 0
+fi
+
+# install locales for base packages (not for gnome/kde)
+# (use "--no-purge" in case PURGE=yes is used in config, which would remove
+#  all other locale files)
+if [ -z "$2" ]; then
+    /usr/sbin/locale-gen --no-purge --lang "$1"
+fi
+
+# reload gdm to make it aware of new locales
+if [ -x /etc/init.d/gdm ]; then
+    if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+        invoke-rc.d gdm reload || exit 0
+    else
+        /etc/init.d/gdm reload || exit 0
+    fi
+fi

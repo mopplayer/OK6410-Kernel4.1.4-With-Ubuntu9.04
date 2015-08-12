@@ -1,0 +1,37 @@
+=head1 NAME
+
+Gnome2::AuthenticationManager
+
+
+=head1 METHODS
+
+=head2 boolean = Gnome2::AuthenticationManager-E<gt>B<dialog_is_visible> 
+
+=over
+
+Since: libgnomeui 2.8
+
+=back
+
+=head2 Gnome2::AuthenticationManager-E<gt>B<init> 
+
+=over
+
+Since: libgnomeui 2.4
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

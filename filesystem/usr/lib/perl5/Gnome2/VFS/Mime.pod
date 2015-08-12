@@ -1,0 +1,148 @@
+=head1 NAME
+
+Gnome2::VFS::Mime
+
+=for object Gnome2::VFS::Mime
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 boolean = Gnome2::VFS::Mime-E<gt>B<id_in_application_list> ($id, ...)
+
+=over
+
+=over
+
+=item * $id (string) 
+
+=item * ... (list) of GnomeVFSMimeApplication's
+
+=back
+
+
+
+
+=back
+
+=head2 list = Gnome2::VFS::Mime-E<gt>B<id_list_from_application_list> (...)
+
+=over
+
+=over
+
+=item * ... (list) of GnomeVFSMimeApplication's
+
+=back
+
+
+
+Returns a list of application id's.
+
+
+=back
+
+=head2 string = Gnome2::VFS-E<gt>B<get_mime_type_for_data> ($data)
+
+=over
+
+=over
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::VFS-E<gt>B<get_mime_type_for_name_and_data> ($filename, $data)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=item * $data (scalar) 
+
+=back
+
+Since: vfs 2.14
+
+=back
+
+=head2 string = Gnome2::VFS-E<gt>B<get_mime_type_for_name> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+Since: vfs 2.14
+
+=back
+
+=head2 string = Gnome2::VFS-E<gt>B<get_mime_type> ($text_uri)
+
+=over
+
+=over
+
+=item * $text_uri (string) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::VFS::Mime-E<gt>B<remove_application_from_list> ($application_id, ...)
+
+=over
+
+=over
+
+=item * $application_id (string) 
+
+=item * ... (list) of GnomeVFSMimeApplication's
+
+=back
+
+
+
+Returns a boolean indicating whether anything was removed and the resulting
+list of GnomeVFSMimeApplication's.
+
+
+=back
+
+=head2 string = Gnome2::VFS-E<gt>B<get_slow_mime_type> ($text_uri)
+
+=over
+
+=over
+
+=item * $text_uri (string) 
+
+=back
+
+Since: vfs 2.14
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

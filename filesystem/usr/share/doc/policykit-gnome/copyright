@@ -1,0 +1,54 @@
+This package was debianized by Michael Biebl <biebl@debian.org> on
+Fri, 27 Jul 2007 06:37:19 +0200.
+
+It was downloaded from http://hal.freedesktop.org/releases/
+
+Upstream Author: 
+
+    David Zeuthen, <david@fubar.dk>
+
+Copyright: 
+
+    Copyright (C) 2007 David Zeuthen, <david@fubar.dk>
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+ 
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+ 
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.
+
+===============================================================================
+
+The API documentation in the doc/ subdirectory is licensed under the GFDL.
+
+  Permission is granted to copy, distribute and/or modify this document under
+  the terms of the GNU Free Documentation License, Version 1.1 or any later
+  version published by the Free Software Foundation with no Invariant Sections,
+  no Front-Cover Texts, and no Back-Cover Texts. You may obtain a copy of the 
+  GNU Free Documentation License from the Free Software Foundation by visiting 
+  their Web site or by writing to:
+
+  Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
+  MA 02110-1301, USA.
+
+On Debian systems, the complete text of the GNU Free Documentation
+License can be found in `/usr/share/common-licenses/GFDL'.
+
+===============================================================================
+
+The Debian packaging is (C) 2007, Michael Biebl <biebl@debian.org> and
+is licensed under the GPL, see above.
+

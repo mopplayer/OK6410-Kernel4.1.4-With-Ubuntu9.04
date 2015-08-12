@@ -1,0 +1,7 @@
+[GdmGreeterTheme]
+Greeter=Human.xml
+Name=Human
+Description=Ubuntu Default Welcome Theme
+Author=Kenneth Wimer, Mat Tomaszewski
+Copyright=(c) 2004-2009 Canonical Ltd.
+Screenshot=screenshot.png

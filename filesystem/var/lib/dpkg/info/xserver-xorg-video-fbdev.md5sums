@@ -1,0 +1,5 @@
+6db298bec5113f63f5619567bcda9b56  usr/share/doc/xserver-xorg-video-fbdev/copyright
+bdda3a1e7994cf726a11bf54c2119647  usr/share/doc/xserver-xorg-video-fbdev/changelog.gz
+effcea8f33dc482229bd480f2f1a5399  usr/share/doc/xserver-xorg-video-fbdev/changelog.Debian.gz
+73baa1be381b2b47f9245965216be15e  usr/share/man/man4/fbdev.4.gz
+a9de10077a5748086f53871a9318cd7e  usr/lib/xorg/modules/drivers/fbdev_drv.so

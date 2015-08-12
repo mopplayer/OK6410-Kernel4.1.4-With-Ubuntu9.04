@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="240"
+   height="32"
+   id="svg2161"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docbase="/home/kwwii/bzr/kwwii_gdm/Human"
+   sodipodi:docname="userentry.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/usr/share/gdm/themes/Human/userentry.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs2163">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 16 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="240 : 16 : 1"
+       inkscape:persp3d-origin="120 : 10.666667 : 1"
+       id="perspective11" />
+    <filter
+       inkscape:collect="always"
+       id="filter3158">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.62075223"
+         id="feGaussianBlur3160" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.1295455"
+     inkscape:cx="82.017062"
+     inkscape:cy="4.5"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="164px"
+     height="28px"
+     inkscape:window-width="1918"
+     inkscape:window-height="1125"
+     inkscape:window-x="0"
+     inkscape:window-y="45"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showgrid="false" />
+  <metadata
+     id="metadata2166">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.40000000000000002;fill:#2b0000;fill-opacity:1;stroke:none;stroke-width:1.11797571000000007;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter3158)"
+       id="rect2380"
+       width="200"
+       height="32"
+       x="1"
+       y="1"
+       rx="5.3846154"
+       ry="7"
+       inkscape:export-filename="/home/kwwii/Desktop/userentry.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       transform="matrix(1.19,0,0,0.9375,-0.19,6.25e-2)" />
+    <rect
+       style="opacity:1;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:1.11797571000000007;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2169"
+       width="235.62"
+       height="28.125"
+       x="2.1900001"
+       y="1.9375"
+       rx="5.4923077"
+       ry="5.625"
+       inkscape:export-filename="/home/kwwii/bzr/kwwii_gdm/Human/boundingbox.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

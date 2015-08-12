@@ -1,0 +1,120 @@
+=head1 NAME
+
+Gnome2::HRef
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gtk2::Button
+                                +----Gnome2::HRef
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::HRef-E<gt>B<new> ($url, $text)
+
+=over
+
+=over
+
+=item * $url (string) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 string = $href-E<gt>B<get_label> 
+
+=over
+
+=back
+
+=head2 $href-E<gt>B<set_label> ($label)
+
+=over
+
+=over
+
+=item * $label (string) 
+
+=back
+
+=back
+
+=head2 string = $href-E<gt>B<get_text> 
+
+=over
+
+=back
+
+=head2 $href-E<gt>B<set_text> ($text)
+
+=over
+
+=over
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 string = $href-E<gt>B<get_url> 
+
+=over
+
+=back
+
+=head2 $href-E<gt>B<set_url> ($url)
+
+=over
+
+=over
+
+=item * $url (string) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'text' (string : readable / writable)
+
+The text on the button
+
+=item 'url' (string : readable / writable)
+
+The URL that GnomeHRef activates
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>, L<Gtk2::Button>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,30 @@
+重启xwindow
+killall -HUP x-session-manager
+
+lxsession
+gdm
+
+自动登录
+sudo vim /etc/gdm/gdm.conf
+AutomaticLoginEnable=true
+AutomaticLogin=ubuntu
+
+触摸屏校准
+export TSLIB_TSDEVICE=/dev/input/event0
+export TSLIB_CALIBFILE=/etc/pointercal
+export TSLIB_CONFFILE=/etc/ts.conf
+export TSLIB_PLUGINDIR=/usr/lib/ts
+export TSLIB_CONSOLEDEVICE=none
+export TSLIB_FBDEVICE=/dev/fb0
+
+
+ts.conf配置文件内容/etc/ts.conf
+module_raw input
+module pthres pmin=1
+module variance delta=300
+module dejitter delta=300
+module linear
+
+校正程序
+ts_calibrate
+ts_test

@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/share
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libuuid1
+/usr/share/doc
+/usr/share/doc/libuuid1
+/usr/share/doc/libuuid1/changelog.Debian.gz
+/usr/share/doc/libuuid1/copyright
+/lib
+/lib/libuuid.so.1.2
+/lib/libuuid.so.1

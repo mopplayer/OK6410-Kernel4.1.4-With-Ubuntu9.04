@@ -1,0 +1,12 @@
+4528a2a49c73203bf9453c9c08730bf8  usr/bin/chacl
+15f2f0611e94f60e6193ceee4aa46cc4  usr/bin/setfacl
+fc18c67896306b9d4dc3515b5e56738d  usr/bin/getfacl
+04ca7fd4af2268cf0f691f341d9c2f40  usr/share/man/man5/acl.5.gz
+4fdeca5c2dcba0f3bd0f11d3492abcc6  usr/share/man/man1/chacl.1.gz
+32598be134f7b5233144d8cf9cbca952  usr/share/man/man1/setfacl.1.gz
+917fe0d3ee4643bd4ea3482e8f2ea732  usr/share/man/man1/getfacl.1.gz
+0b1b35036d1c86e8807d39cc9dd9d76b  usr/share/doc/acl/README
+5c07339c1b9ca7b9d55920d4a2033d73  usr/share/doc/acl/changelog.Debian.gz
+0ea955363470dc7d7ee278a11a0de7f6  usr/share/doc/acl/copyright
+28d2de9ff37cdbcd20674cf0293a1488  usr/share/doc/acl/CHANGES.gz
+1d537431e758dd041ed780ac795277d7  usr/share/doc/acl/PORTING

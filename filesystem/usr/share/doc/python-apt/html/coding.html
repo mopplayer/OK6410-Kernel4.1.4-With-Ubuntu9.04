@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Coding for python-apt &mdash; python-apt v0.7.9~exp2 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.7.9~exp2',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="python-apt v0.7.9~exp2 documentation" href="index.html" />
+    <link rel="prev" title="aptsources.sourceslist &#8212; Provide an abstraction of the sources.list" href="aptsources/sourceslist.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="aptsources/sourceslist.html" title="aptsources.sourceslist &#8212; Provide an abstraction of the sources.list"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">python-apt v0.7.9~exp2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="coding-for-python-apt">
+<h1>Coding for python-apt<a class="headerlink" href="#coding-for-python-apt" title="Permalink to this headline">¶</a></h1>
+<p>Let&#8217;s say you need a new feature, you can develop it, and you want to get it
+included in python-apt. Then be sure to follow the following guidelines.</p>
+<div class="section" id="available-branches">
+<h2>Available branches<a class="headerlink" href="#available-branches" title="Permalink to this headline">¶</a></h2>
+<p>First of all, let&#8217;s talk a bit about the bzr branches of python-apt. In the
+following parts, we will assume that you use bzr to create your changes and
+submit them.</p>
+<dl class="docutils">
+<dt><strong>mvo:</strong> <a class="reference external" href="http://people.ubuntu.com/~mvo/bzr/python-apt/mvo">http://people.ubuntu.com/~mvo/bzr/python-apt/mvo</a></dt>
+<dd><p class="first">This is Michael Vogt&#8217;s branch. Most of the development of apt happens here,
+as he is the lead maintainer of python-apt.</p>
+<p>This branch is also available from Launchpads super mirror, via
+<tt class="docutils literal"><span class="pre">lp:python-apt</span></tt>. Checkouts from Launchpad are generally faster and can
+use the bzr protocoll.</p>
+<p class="last">VCS-Browser: <a class="reference external" href="https://code.launchpad.net/~mvo/python-apt/python-apt--mvo">https://code.launchpad.net/~mvo/python-apt/python-apt&#8211;mvo</a></p>
+</dd>
+<dt><strong>debian-sid:</strong> <a class="reference external" href="http://bzr.debian.org/apt/python-apt/debian-sid">http://bzr.debian.org/apt/python-apt/debian-sid</a></dt>
+<dd><p class="first">This is the official Debian branch of python-apt. All code which will be
+uploaded to Debian is here. It is not as up-to-date as the mvo branch,
+because this branch often gets updated just right before the release
+happens.</p>
+<p class="last">VCS-Browser: <a class="reference external" href="http://bzr.debian.org/loggerhead/apt/python-apt/debian-sid/changes">http://bzr.debian.org/loggerhead/apt/python-apt/debian-sid/changes</a></p>
+</dd>
+<dt><strong>jak:</strong> <a class="reference external" href="http://bzr.debian.org/users/jak/python-apt/jak">http://bzr.debian.org/users/jak/python-apt/jak</a></dt>
+<dd><p class="first">This is Julian Andres Klode&#8217;s (the documentation author&#8217;s) branch. This
+is the place where cleanup and documentation updates happen. It is based
+off debian-sid or mvo.</p>
+<p class="last">VCS-Browser: <a class="reference external" href="http://bzr.debian.org/loggerhead/users/jak/python-apt/jak/changes">http://bzr.debian.org/loggerhead/users/jak/python-apt/jak/changes</a></p>
+</dd>
+<dt><strong>ubuntu:</strong> <tt class="docutils literal"><span class="pre">lp:~ubuntu-core-dev/python-apt/ubuntu</span></tt></dt>
+<dd><p class="first">This is the official Ubuntu development branch. The same notes apply as
+for the debian-sid branch above.</p>
+<p class="last">VCS-Browser: <a class="reference external" href="https://code.launchpad.net/~ubuntu-core-dev/python-apt/ubuntu">https://code.launchpad.net/~ubuntu-core-dev/python-apt/ubuntu</a></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="c-coding-style">
+<h2>C++ Coding style<a class="headerlink" href="#c-coding-style" title="Permalink to this headline">¶</a></h2>
+<p>When you work on the C++ code in the python/ directory, you should follow some
+basic rules.</p>
+<p>The indentation of the code is a bit non-standard. We currently use 3 spaces
+indentation for the C++ code.</p>
+<p>When you create new functions, you should follow some naming conventions. All
+C++ functions are named according to the <tt class="docutils literal"><span class="pre">CamelCase</span></tt> convention.</p>
+<p>The resulting Python functions should be <tt class="docutils literal"><span class="pre">CamelCase</span></tt> as well in apt_pkg, or
+<tt class="docutils literal"><span class="pre">mixedCase</span></tt> in apt_inst. The same applies for variables, parameters,
+attributes, etc.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This coding style guidelines are incomplete. If you have any questions
+send an email to <a class="reference external" href="mailto:deity&#37;&#52;&#48;lists&#46;debian&#46;org">deity<span>&#64;</span>lists<span>&#46;</span>debian<span>&#46;</span>org</a>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The coding style may be changed completely during the port to Python 3.0.
+But this will not happen very soon.</p>
+</div>
+</div>
+<div class="section" id="python-coding-style">
+<h2>Python Coding Style<a class="headerlink" href="#python-coding-style" title="Permalink to this headline">¶</a></h2>
+<p>The coding style for all code written in python is <span class="target" id="index-7"></span><a class="reference external" href="http://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a>. For modules added
+from version 0.7.9 on, there are no exceptions.</p>
+<p>Modules introduced prior to 0.7.9 use mixedCase names for methods, functions
+and variables. These names will be replaced by names conforming to <span class="target" id="index-8"></span><a class="reference external" href="http://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a>
+in a future release of python-apt.</p>
+<p>Therefore, try to reduce the introduction of the mixedName code to the absolute
+minimum (sometimes you can also use shorter names).</p>
+<p>To prepare the port to Python 3.0, code should not use any functionality which
+is deprecated as of Python 2.6.</p>
+<p>The has_key() functionality may be used only on TagSection objects; as they
+provide no other way to do this. If someone is willing to adapt TagSection to
+support <tt class="docutils literal"><span class="pre">key</span> <span class="pre">in</span> <span class="pre">mapping</span></tt> and <tt class="docutils literal"><span class="pre">iter(mapping)</span></tt>, this would be great.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can use the tool pep8.py from <a class="reference external" href="http://svn.browsershots.org/trunk/devtools/pep8/">http://svn.browsershots.org/trunk/devtools/pep8/</a>
+to validate your code. Please also run pylint, pychecker, and pyflakes and
+fix all new <strong>errors</strong> they report (undefined names, etc.).</p>
+</div>
+</div>
+<div class="section" id="submitting-your-patch">
+<h2>Submitting your patch<a class="headerlink" href="#submitting-your-patch" title="Permalink to this headline">¶</a></h2>
+<p>First of all, the patch you create should be based against the debian-sid
+branch of python-apt.</p>
+<p>Once you have made your change, check that it:</p>
+<blockquote>
+<ul class="simple">
+<li>conforms to <span class="target" id="index-9"></span><a class="reference external" href="http://www.python.org/dev/peps/pep-0008"><strong>PEP 8</strong></a> (checked with pep8.py). It should, at least not
+introduce new errors. (and never have whitespace at end of line)</li>
+<li>produces no new errors in pychecker, pyflakes and pylint (unless you
+can&#8217;t fix them, but please tell so when requesting the merge, so it can
+be fixed before hitting one of the main branches).</li>
+<li>does not change the behaviour of existing code in a non-compatible way.</li>
+</ul>
+</blockquote>
+<p>If your change follows all points of the checklist, you can commit it to your
+repository. (You could commit it first, and check later, and then commit the
+fixes, but commits should be logical and it makes no sense to have to commits
+for one logical unit).</p>
+<p>Once you have made all your changes,  you can run <tt class="docutils literal"><span class="pre">bzr</span> <span class="pre">send</span> <span class="pre">-o</span> <span class="pre">patch-name</span></tt>
+to create a so called <em>merge-directive</em>, which contains your changes and
+allows us to preserve the history of your changes. (But please replace patch-name
+with something useful).</p>
+<p>Now report a bug against the python-apt package, attach the merge directive
+you created in the previous step, and tag it with &#8216;patch&#8217;. It might also be
+a good idea to prefix the bug report with &#8216;[PATCH]&#8217;.</p>
+<p>If your patch introduces new functions, parameters, etc. , but does not update
+the content of this documentation, please CC. <a class="reference external" href="mailto:jak&#37;&#52;&#48;debian&#46;org">jak<span>&#64;</span>debian<span>&#46;</span>org</a>, and add a short
+notice to the bug report. Also see <cite>Documentation updates</cite></p>
+<p>Once your patch got merged, you can <em>pull</em> the branch into which it has been
+merged into your local one. If you have made changes since you submitted your
+patch, you may need to <em>merge</em> the branch instead.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you plan to work on python-apt for a longer time, it may be a good
+idea to publish your branch somewhere. Alioth (<a class="reference external" href="http://alioth.debian.org">http://alioth.debian.org</a>)
+and Launchpad (<a class="reference external" href="https://launchpad.net">https://launchpad.net</a>) provide bzr hosting. You can also
+use any webspace with ftp or sftp connection (for the upload). Then you do
+not need to send <em>merge directives</em>, but you can point to your branch
+instead.</p>
+</div>
+</div>
+<div class="section" id="documentation-updates">
+<h2>Documentation updates<a class="headerlink" href="#documentation-updates" title="Permalink to this headline">¶</a></h2>
+<p>If you want to update the documentation, please follow the procedure as written
+above. But please CC: <a class="reference external" href="mailto:jak&#37;&#52;&#48;debian&#46;org">jak<span>&#64;</span>debian<span>&#46;</span>org</a> in the bug report.</p>
+<p>You can send your content in plain text, but reStructuredText is the preferred
+format. I (Julian Andres Klode) will review your patch and will forward them to
+Michael Vogt, for inclusion in his branch. On release, this will be merged into
+the debian-sid branch.</p>
+</div>
+<div class="section" id="example-patch-session">
+<h2>Example patch session<a class="headerlink" href="#example-patch-session" title="Permalink to this headline">¶</a></h2>
+<p>In the following example, we edit a file, create a merge directive (an enhanced
+patch), and report a wishlist bug with this patch against the python-apt
+package:</p>
+<div class="highlight-python"><pre>user@pc:~$ bzr clone http://bzr.debian.org/apt/python-apt/debian-sid/
+user@pc:~$ cd debian-sid
+user@pc:~/debian-sid$ editor FILES
+user@pc:~/debian-sid$ pep8.py FILES # PEP 8 check, see above.
+user@pc:~/debian-sid$ pylint -e FILES # Check with pylint
+user@pc:~/debian-sid$ pyflakes FILES  # Check with pyflakes
+user@pc:~/debian-sid$ pychecker FILES # Check with pychecker
+user@pc:~/debian-sid$ bzr commit
+user@pc:~/debian-sid$ bzr send -o my-patch
+user@pc:~/debian-sid$ reportbug --severity=wishlist --tag=patch --attach=my-patch python-apt
+user@pc:~/debian-sid$ # Add --list-cc=jak@debian.org if you change docs.</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">Coding for python-apt</a><ul>
+<li><a class="reference external" href="#available-branches">Available branches</a></li>
+<li><a class="reference external" href="#c-coding-style">C++ Coding style</a></li>
+<li><a class="reference external" href="#python-coding-style">Python Coding Style</a></li>
+<li><a class="reference external" href="#submitting-your-patch">Submitting your patch</a></li>
+<li><a class="reference external" href="#documentation-updates">Documentation updates</a></li>
+<li><a class="reference external" href="#example-patch-session">Example patch session</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="aptsources/sourceslist.html" title="previous chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">aptsources.sourceslist</span></tt> &#8212; Provide an abstraction of the sources.list</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/coding.txt">Show Source</a></li>
+            </ul>
+          <h3>Quick search</h3>
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="aptsources/sourceslist.html" title="aptsources.sourceslist &#8212; Provide an abstraction of the sources.list"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">python-apt v0.7.9~exp2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2009, Julian Andres Klode &lt;jak@debian.org&gt;.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.5.1.
+    </div>
+  </body>
+</html>

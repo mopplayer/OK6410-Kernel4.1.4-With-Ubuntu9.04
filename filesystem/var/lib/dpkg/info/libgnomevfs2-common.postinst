@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_gconf
+if [ "$1" = "configure" ] && which update-gconf-defaults >/dev/null 2>&1; then
+	update-gconf-defaults
+fi
+# End automatically added section
+# Automatically added by dh_gconf
+if [ "$1" = "configure" ]; then
+	gconf-schemas --register desktop_default_applications.schemas desktop_gnome_url_handlers.schemas system_dns_sd.schemas system_http_proxy.schemas system_smb.schemas 
+fi
+# End automatically added section

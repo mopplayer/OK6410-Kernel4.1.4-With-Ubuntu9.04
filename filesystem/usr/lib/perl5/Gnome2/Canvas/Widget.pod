@@ -1,0 +1,96 @@
+=head1 NAME
+
+Gnome2::Canvas::Widget - Gtk2::Widgets as CanvasItems
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::Canvas::Widget
+
+=for object Gnome2::Canvas::Widget - Gtk2::Widgets as CanvasItems
+
+=cut
+
+
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'anchor' (Gtk2::AnchorType : readable / writable)
+
+=item 'height' (double : readable / writable)
+
+=item 'size-pixels' (boolean : readable / writable)
+
+=item 'widget' (Gtk2::Widget : readable / writable)
+
+=item 'width' (double : readable / writable)
+
+=item 'x' (double : readable / writable)
+
+=item 'y' (double : readable / writable)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::AnchorType
+
+=over
+
+=item * 'center' / 'GTK_ANCHOR_CENTER'
+
+=item * 'north' / 'GTK_ANCHOR_NORTH'
+
+=item * 'north-west' / 'GTK_ANCHOR_NORTH_WEST'
+
+=item * 'north-east' / 'GTK_ANCHOR_NORTH_EAST'
+
+=item * 'south' / 'GTK_ANCHOR_SOUTH'
+
+=item * 'south-west' / 'GTK_ANCHOR_SOUTH_WEST'
+
+=item * 'south-east' / 'GTK_ANCHOR_SOUTH_EAST'
+
+=item * 'west' / 'GTK_ANCHOR_WEST'
+
+=item * 'east' / 'GTK_ANCHOR_EAST'
+
+=item * 'n' / 'GTK_ANCHOR_N'
+
+=item * 'nw' / 'GTK_ANCHOR_NW'
+
+=item * 'ne' / 'GTK_ANCHOR_NE'
+
+=item * 's' / 'GTK_ANCHOR_S'
+
+=item * 'sw' / 'GTK_ANCHOR_SW'
+
+=item * 'se' / 'GTK_ANCHOR_SE'
+
+=item * 'w' / 'GTK_ANCHOR_W'
+
+=item * 'e' / 'GTK_ANCHOR_E'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

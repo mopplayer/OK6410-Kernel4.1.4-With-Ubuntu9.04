@@ -1,0 +1,25 @@
+#! /bin/sh -e
+
+abort_rm_conffile () {
+	CONFFILE="$1"
+	ACTION="$2"
+
+	if [ "$ACTION" = remove ]; then
+		if [ -e "$CONFFILE".moved-by-preinst ]; then
+			echo "Aborting removal of obsolete conffile $CONFFILE"
+			mv -f "$CONFFILE".moved-by-preinst "$CONFFILE"
+		fi
+	fi
+}
+
+case $1 in
+	abort-install|abort-upgrade)
+		if dpkg --compare-versions "$2" lt 1.14.1-4ubuntu3; then
+			abort_rm_conffile /etc/init.d/console-screen.kbd.sh remove
+		fi
+		;;
+esac
+
+
+
+exit 0

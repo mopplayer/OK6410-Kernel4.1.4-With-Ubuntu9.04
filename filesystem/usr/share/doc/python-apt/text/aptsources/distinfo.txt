@@ -1,0 +1,57 @@
+
+``aptsources.distinfo`` --- provide meta information for distro repositories
+****************************************************************************
+
+Note: This part of the documentation is created automatically.
+
+class aptsources.distinfo.Component(name, desc=None, long_desc=None)
+
+   get_description()
+
+   get_description_long()
+
+   set_description(desc)
+
+   set_description_long(desc)
+
+class aptsources.distinfo.DistInfo(dist=None, base_dir='/usr/share/python-apt/templates')
+
+   finish_template(template, component)
+
+      finish the current tempalte
+
+class aptsources.distinfo.Mirror(proto, hostname, dir, location=None)
+
+   Storage for mirror related information
+
+   add_repository(proto, dir)
+
+   get_location()
+
+   get_repo_urls()
+
+   get_repositories_for_proto(proto)
+
+   has_repository(proto, dir)
+
+   set_location(location)
+
+class aptsources.distinfo.Repository(proto, dir)
+
+   get_info()
+
+   get_url(hostname)
+
+class aptsources.distinfo.Template
+
+   has_component(comp)
+
+      Check if the distribution provides the given component
+
+   is_mirror(url)
+
+      Check if a given url of a repository is a valid mirror
+
+aptsources.distinfo.split_url(url)
+
+   split a given URL into the protocoll, the hostname and the dir part

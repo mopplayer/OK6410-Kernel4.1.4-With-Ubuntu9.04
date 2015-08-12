@@ -1,0 +1,53 @@
+#! /bin/sh
+#
+# initscripts postrm
+#
+
+set -e
+ 
+case "$1" in
+  purge)
+	#
+	# Remove abandoned conffiles
+	#
+	rm -f \
+		/etc/init.d/bootclean \
+		/etc/init.d/bootclean.dpkg-old \
+		/etc/init.d/bootclean.sh \
+		/etc/init.d/bootclean.sh.dpkg-old
+
+	#
+	# Remove configuration files
+	#
+	rm -f \
+		/etc/default/rcS \
+		/etc/nologin \
+		/etc/motd.tail \
+		/etc/motd.static \
+		/etc/motd
+
+	#
+	# Remove state files
+	#
+	rm -f /var/lib/initscripts/nologin
+
+	#
+	# Remove run time state files
+	#
+	rm -f /var/run/motd
+
+	#
+	# Remove log files
+	#
+	rm -f \
+		/var/log/dmesg \
+		/var/log/boot \
+		/var/log/fsck/checkroot \
+		/var/log/fsck/checkfs
+
+	# Remove rc symlinks ?
+	# Remove /dev/pts and /dev/shm ?
+	;;
+esac
+
+:

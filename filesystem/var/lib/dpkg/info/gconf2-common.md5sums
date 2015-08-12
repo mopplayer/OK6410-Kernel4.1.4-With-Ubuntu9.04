@@ -1,0 +1,13 @@
+42fc7033476d0ef67c6128de8ba37743  usr/share/gconf/default.path
+55d34c730913f8973211b6220f59893e  usr/share/gconf/default.path.md5sum
+a0c92dea68d9e57cdfa4a6a336387c83  usr/share/doc/gconf2-common/README
+173cf1c644baa2dbba589fef018a13cb  usr/share/doc/gconf2-common/TODO
+4507c7b209896c38b6866b601c93fb21  usr/share/doc/gconf2-common/AUTHORS
+538904e14cb89efaf82c5c208be8ace3  usr/share/doc/gconf2-common/copyright
+7ea4bc4f6cc5f795279b8d28e1cab055  usr/share/doc/gconf2-common/schema/evoldap.schema
+7b8bad6fdfa48c701eb8f27a6d261559  usr/share/doc/gconf2-common/NEWS.gz
+b709793427c1eb6175162f773d168179  usr/share/doc/gconf2-common/changelog.Debian.gz
+98975a1aa335eb7c830f430125cf30ed  usr/share/dbus-1/services/org.gnome.GConf.service
+8e1fbe78a1156d0b72ee512478d17dd2  usr/share/dbus-1/system-services/org.gnome.GConf.Defaults.service
+745313f25d14c7bc29fb44c744469de7  usr/share/PolicyKit/policy/org.gnome.gconf.defaults.policy
+00d778655418b937477a288af63f9951  usr/share/sgml/gconf/gconf-1.0.dtd

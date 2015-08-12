@@ -1,0 +1,99 @@
+#!/bin/sh -e
+
+# must be sourced at the top level or $@ will be lost when $0 is executed
+if [ "$1" = "configure" ]; then
+  . /usr/share/debconf/confmodule
+fi
+
+create_hosts_files() {
+  if [ -e /etc/hosts.allow -a -e /etc/hosts.deny ]; then
+    return 0
+  fi
+
+  # The default paranoid mode, in order to avoid breaking expected 
+  # behaviour is 'false', however, if debconf is used to set this to
+  # true then we add a more restrictive definition
+  PARANOID="false"
+
+  db_get tcpd/paranoid-mode || true
+  PARANOID="$RET"
+
+  if [ ! -e /etc/hosts.allow ]; then
+    cat > /etc/hosts.allow <<EOF
+# /etc/hosts.allow: list of hosts that are allowed to access the system.
+#                   See the manual pages hosts_access(5) and hosts_options(5).
+#
+# Example:    ALL: LOCAL @some_netgroup
+#             ALL: .foobar.edu EXCEPT terminalserver.foobar.edu
+#
+# If you're going to protect the portmapper use the name "portmap" for the
+# daemon name. Remember that you can only use the keyword "ALL" and IP
+# addresses (NOT host or domain names) for the portmapper, as well as for
+# rpc.mountd (the NFS mount daemon). See portmap(8) and rpc.mountd(8)
+# for further information.
+#
+EOF
+
+    if [ "$PARANOID" = "true" ]; then
+      cat >> /etc/hosts.allow <<EOF
+
+ALL: 127.0.0.1
+
+# Since all access will be restriced in hosts.deny you might want to give
+# access to some machines to some common (remote) services:
+# sshd: aaaa.bbbb.cccc.ddd
+EOF
+    fi
+  fi
+
+  if [ ! -e /etc/hosts.deny ]; then
+    cat > /etc/hosts.deny <<EOF
+# /etc/hosts.deny: list of hosts that are _not_ allowed to access the system.
+#                  See the manual pages hosts_access(5) and hosts_options(5).
+#
+# Example:    ALL: some.host.name, .some.domain
+#             ALL EXCEPT in.fingerd: other.host.name, .other.domain
+#
+# If you're going to protect the portmapper use the name "portmap" for the
+# daemon name. Remember that you can only use the keyword "ALL" and IP
+# addresses (NOT host or domain names) for the portmapper, as well as for
+# rpc.mountd (the NFS mount daemon). See portmap(8) and rpc.mountd(8)
+# for further information.
+#
+# The PARANOID wildcard matches any host whose name does not match its
+# address.
+EOF
+
+    if [ "$PARANOID" = "true" ]; then
+      cat >> /etc/hosts.deny <<EOF
+
+# We don't trust anybody, so never allow access.
+ALL: ALL
+EOF
+    else
+      cat >> /etc/hosts.deny <<EOF
+
+# You may wish to enable this to ensure any programs that don't
+# validate looked up hostnames still leave understandable logs. In past
+# versions of Debian this has been the default.
+# ALL: PARANOID
+EOF
+    fi
+  fi
+}
+
+case "$1" in
+    configure)
+    create_hosts_files
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+    echo "postinst called with unknown argument '$1'" >&2
+    exit 1
+    ;;
+esac
+
+

@@ -1,0 +1,40 @@
+#!/bin/sh
+
+set -e
+
+migratious_files="libnspr4.so libplc4.so libplds4.so"
+
+if [ "$1" = "abort-upgrade" -o "$1" = "failed-upgrade" ]; then
+
+	for f in $migratious_files; do
+		if [ -e /usr/lib/XNOLDCONFIG_$f.new-migration ]; then
+			rm -f /usr/lib/$f
+			mv /usr/lib/XNOLDCONFIG_$f.new-migration /usr/lib/$f
+		fi
+		if [ -e /usr/lib/XNOLDCONFIG_$f.0d.new-migration ]; then
+			rm -f /usr/lib/$f.0d
+			mv /usr/lib/XNOLDCONFIG_$f.0d.new-migration /usr/lib/$f.0d
+		fi
+	done
+
+fi
+
+
+# old-prerm upgrade version
+# this is the dowgrade cas where we need to reshuffle links before the upgrade happens
+if [ "$1" = "upgrade" ] && dpkg --compare-versions "$2" "le" "4.7.1+1.9-1ubuntu1~"; then
+
+	for f in $migratious_files; do
+		if [ -L /usr/lib/$f.0d ]; then
+			rm -f /usr/lib/XNOLDCONFIG_$f.old-migration
+			mv /usr/lib/$f.0d /usr/lib/XNOLDCONFIG_$f.0d.old-migration
+		fi
+		if [ -r /usr/lib/$f -a ! -L /usr/lib/$f ]; then
+			rm -f /usr/lib/XNOLDCONFIG_$f.old-migration
+			mv /usr/lib/$f /usr/lib/XNOLDCONFIG_$f.old-migration
+		fi
+	done
+
+fi
+
+

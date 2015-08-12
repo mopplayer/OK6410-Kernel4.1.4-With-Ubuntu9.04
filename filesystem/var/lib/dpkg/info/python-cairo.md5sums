@@ -1,0 +1,14 @@
+0d47e2543e4e660c4c36b66828218c55  usr/lib/python2.5/site-packages/cairo/_cairo.so
+4dcb65c37ccdd3a999dd340daca889a1  usr/lib/python2.6/dist-packages/cairo/_cairo.so
+b2a30fca2d41f4f44ffaf190b89c7fc1  usr/share/doc/python-cairo/README
+7b3e6c2ee8c044318a9ca6278ecf3296  usr/share/doc/python-cairo/changelog.gz
+ab6ee93082b06eda2a2cbe41d49a7d51  usr/share/doc/python-cairo/examples/spiral.py
+a6417ce488e2d95c0865ae94a08a3441  usr/share/doc/python-cairo/examples/hering.py
+c359fc954f3f67fb95ff9cdf51976671  usr/share/doc/python-cairo/examples/warpedtext.py
+b4c8609a98fe623911d1b7ad29303400  usr/share/doc/python-cairo/examples/gradient.py
+b3cb6d0a72df8c8a0f23f069d70755a7  usr/share/doc/python-cairo/NEWS.gz
+03446aa33c693bd562906768f8b1afa6  usr/share/doc/python-cairo/changelog.Debian.gz
+47a46b1912916d99995fd90a6386bec9  usr/share/doc/python-cairo/copyright
+a520c8c6b2be610327fe1c70c43c35c1  usr/share/doc/python-cairo/AUTHORS
+0ce37976642a976e04fb7d335642bdf3  usr/share/pyshared-data/python-cairo
+96f7c847a4078123ed4444d06a9abe7a  usr/share/pyshared/cairo/__init__.py

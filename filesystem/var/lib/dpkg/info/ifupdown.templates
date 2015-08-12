@@ -1,0 +1,60 @@
+Template: ifupdown/convert-interfaces
+Type: boolean
+Default: true
+Description: Update /etc/network/interfaces?
+ The format of /etc/network/interfaces has had a minor but incompatible
+ change made between version 0.5.x and 0.6.x of ifupdown. It is however
+ possible to automatically convert from the old format to the new in almost
+ all cases.
+Description-ca.UTF-8: Voleu actualitzar el fitxer /etc/network/interfaces?
+ El format del fitxer /etc/network/interfaces de l'ifupdown s'ha modificat entre les versions 0.5.x i 0.6.x. Tot i això, en la majoria dels casos es pot actualitzar automàticament del format vell al nou.
+Description-cs.UTF-8: Aktualizovat /etc/network/interfaces?
+ Mezi verzemi 0.5.x a 0.6 programu ifupdown došlo k malé, ale nekompatibilní změně formátu souboru /etc/network/interfaces. V téměř všech případech lze převést data ze starého formátu do nového zcela automaticky.
+Description-da.UTF-8: Opdatér /etc/network/interfaces?
+ Formatet i filen /etc/network/interfaces har fået lavet en mindre men inkompatibel ændring mellem version 0.5.x og 0.6.x af ifupdown. Det er dog muligt at automatisk konvertere fra det gamle format til det nye i næsten alle tilfælde.
+Description-de.UTF-8: Soll /etc/network/interfaces erneuert werden?
+ Das Format von /etc/network/interfaces hat eine kleinere aber inkompatible Änderung zwischen Version 0.5.x und 0.6.x von ifupdown erfahren. Es ist jedoch in fast allen Fällen möglich, automatisch vom alten in das neue Format zu konvertieren.
+Description-el.UTF-8: Να γίνει διόρθωση του /etc/network/interfaces;
+ Η δομή του /etc/network/interfaces άλλαξε με ένα μικρό αλλά ασύμβατο τρόπο από την έκδοση του πακέτου ifupdown 0.5.x και 0.6.x.  Ωστόσο, είναι δυνατή η αυτόματη μετατροπή της παλιάς δομής στη νέα για σχεδόν όλες τις περιπτώσεις.
+Description-es.UTF-8: ¿Actualizar /etc/network/interfaces
+ El formato de /etc/network/interfaces ha sufrido un cambio pequeño pero incompatible entre las versiones 0.5.x y 0.6.x de ifupdown. No obstante, en casi todos los casos es posible realizar la conversión automáticamente entre el formato antiguo y el nuevo.
+Description-fr.UTF-8: Mettre à jour /etc/network/interfaces ?
+ Le format du fichier /etc/network/interfaces a subi un changement mineur mais incompatible entre les versions 0.5.x et 0.6.x d'ifupdown. Il est néanmoins possible de convertir automatiquement ce fichier de l'ancien format au nouveau, dans la plupart des cas.
+Description-gl.UTF-8: ¿Actualizar /etc/network/interfaces?
+ O formato de /etc/network/interfaces tivo un cambio menor pero incompatible entre as versións 0.5.x e 0.6.x de ifupdown. Nembargantes, é posible converter automáticamente do formato antigo ao novo en case tódolos casos.
+Description-it.UTF-8: Aggiornare /etc/network/interfaces?
+ Il formato del file /etc/network/interfaces ha subito un piccolo cambiamento che lo rende incompatibile fra le versioni 0.5.x e 0.6.x di ifupdown. Comunque, nella maggior parte dei casi, è possibile convertire automaticamente il file dal vecchio formato al nuovo.
+Description-ja.UTF-8: /etc/network/interfaces を更新しますか?
+ /etc/network/interfaces の形式は、ifupdown の 0.5.x と 0.6.x のあいだで細かな、しかし非互換の変更が行われました。ほぼすべての場合、古い形式から新しい形式へ自動的に変換できます。
+Description-lt.UTF-8: Atnaujinti /etc/network/interfaces?
+ Failo /etc/network/interfaces formatas nežymiai, bet nesuderinamai skiriasi tarp ifupdown versijų 0.5.x ir 0.6.x, tačiau beveik visais atvejais galima automatiškai konvertuoti iš seno formato į naują.
+Description-nb.UTF-8: Oppdatere /etc/network/interfaces?
+ Formatet til /etc/network/interfaces gjennomgikk en mindreikke-kompatibel endring mellom versjon 0.5.x og 0.6.x av ifupdown.Det er mulig a automatisk konvertere fra det gamle til det nyeformatet i nesten alle tilfeller.
+Description-nl.UTF-8: /etc/network/interfaces bijwerken?
+ De indeling van /etc/network/interfaces heeft tussen versie 0.5.x en 0.6.x van ifupdown een kleine, maar incompatibele verandering ondergaan. In bijna alle gevallen is het echter mogelijk om automatisch het oude format naar het nieuwe om te zetten.
+Description-no.UTF-8: Oppdatere /etc/network/interfaces?
+ Formatet til /etc/network/interfaces gjennomgikk en mindreikke-kompatibel endring mellom versjon 0.5.x og 0.6.x av ifupdown.Det er mulig a automatisk konvertere fra det gamle til det nyeformatet i nesten alle tilfeller.
+Description-pl.UTF-8: Uaktualnić /etc/network/interfaces?
+ W porównaniu z wersją 0.5.x, wersja 0.6.x programu ifupdown wprowadza drobne zmiany, które jednak powodują, że stara wersja pliku /etc/network/interfaces może nie pasować do nowej konfiguracji. Istnieje jednak możliwość automatycznej konwersji (w praktycznie wszystkich przypadkach) ze starego formatu do nowego.
+Description-pt.UTF-8: Actualizar /etc/network/interfaces?
+ O formato de /etc/network/interfaces teve uma modificação menor mas incompatível entre as versões 0.5.x e 0.6.x do ifupdown. É no entanto, possível converter automaticamente a partir do velho para o novo formato na maioria dos casos.
+Description-pt_BR.UTF-8: Atualizar /etc/network/interfaces?
+ O formato do arquivo /etc/network/interfaces sofreu uma mudança menor mas incompatível entre as versões 0.5.x e 0.6.x do pacote ifupdown. Porém é possível converter a partir do formato antigo para o novo formato na maioria dos casos.
+Description-ru.UTF-8: Обновить /etc/network/interfaces?
+ Формат /etc/network/interfaces имеет небольшие, но несовместимые изменения между версиями 0.5.x и 0.6.x ifupdown. Однако возможно автоматически преобразовать старый формат с новый почти во всех случаях.
+Description-sv.UTF-8: Uppdatera /etc/network/interfaces?
+ Formatet på /etc/network/interfaces har genomgått en liten ändring som gör att versionerna 0.5.x och 0.6.x av ifupdown blivit inkompatibla. Dock är det möjligt att nästan alltid automatiskt konvertera från det gamla formatet till det nya.
+Description-tr.UTF-8: /etc/network/interfaces güncellensin mi?
+ /etc/network/interfaces dosya biçeminde 0.5.x'den 0.6.x sürümüne geçişte küçük fakat uyumsuzluk yaratan bir değişiklik oldu. Bununla birlikte eski biçemin otomatik olarak yenisine dönüştürülmesi neredeyse her durumda mümkündür.
+Description-vi.UTF-8: Cập nhật «/etc/network/interfaces» không?
+ Khuôn dạng của «/etc/network/interfaces» đã thay đổi một cách nhỏ nhưng không tương thích giữa phiên bản 0.5.x và 0.6.x của trình ifupdown. Tuy nhiên, có thể tự động chuyển đổi từ khuôn dạng cũ sang điều mới trong gần tất cả trường hợp.
+Description-zh_CN.UTF-8: 更新 /etc/network/interfaces 吗？
+ ifupdown 0.5.x 与 0.6.x 所使用的 /etc/network/interfaces 的文件格式之间有一个较小但互不兼容的改变，然而在绝大多数情况下程序都能自动将旧格式转换到新格式。
+
+Template: ifupdown/convert-interfaces-hotplug
+Type: boolean
+Default: true
+Description: Update /etc/network/interfaces?
+ The format of /etc/network/interfaces has had a minor but incompatible
+ change made for dapper. It is however possible to automatically convert
+ from the old format to the new in almost all cases.

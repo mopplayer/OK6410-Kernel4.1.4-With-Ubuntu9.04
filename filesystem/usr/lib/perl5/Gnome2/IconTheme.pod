@@ -1,0 +1,244 @@
+=head1 NAME
+
+Gnome2::IconTheme
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gnome2::IconTheme
+
+
+=head1 METHODS
+
+=head2 icontheme = Gnome2::IconTheme-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 boolean = $theme-E<gt>B<get_allow_svg> 
+
+=over
+
+=back
+
+=head2 $theme-E<gt>B<set_allow_svg> ($allow_svg)
+
+=over
+
+=over
+
+=item * $allow_svg (boolean) 
+
+=back
+
+=back
+
+=head2 $theme-E<gt>B<append_search_path> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 $theme-E<gt>B<set_custom_theme> ($theme_name)
+
+=over
+
+=over
+
+=item * $theme_name (string) 
+
+=back
+
+=back
+
+=head2 string = $theme-E<gt>B<get_example_icon_name> 
+
+=over
+
+=back
+
+=head2 boolean = $theme-E<gt>B<has_icon> ($icon_name)
+
+=over
+
+=over
+
+=item * $icon_name (string) 
+
+=back
+
+=back
+
+=head2 list = $theme-E<gt>B<list_icons> ($context=undef)
+
+=over
+
+=over
+
+=item * $context (string) 
+
+=back
+
+
+Returns a list of icons.
+
+
+=back
+
+=head2 list = $icon_theme-E<gt>B<lookup> ($thumbnail_factory, $file_uri, $custom_icon, $file_info, $mime_type, $flags)
+
+=over
+
+=over
+
+=item * $thumbnail_factory (Gnome2::ThumbnailFactory or undef) 
+
+=item * $file_uri (string) 
+
+=item * $custom_icon (scalar) 
+
+=item * $file_info (Gnome2::VFS::FileInfo) 
+
+=item * $mime_type (string) 
+
+=item * $flags (Gnome2::IconLookupFlags) 
+
+=back
+
+
+Returns the icon name and a GnomeIconLookupFlags.
+
+
+=back
+
+=head2 list = $theme-E<gt>B<lookup_icon> ($icon_name, $size)
+
+=over
+
+=over
+
+=item * $icon_name (string) 
+
+=item * $size (integer) 
+
+=back
+
+
+Returns the filename, the icon data and the base size.
+
+
+=back
+
+=head2 list = $icon_theme-E<gt>B<lookup_sync> ($thumbnail_factory, $file_uri, $custom_icon, $flags)
+
+=over
+
+=over
+
+=item * $thumbnail_factory (Gnome2::ThumbnailFactory or undef) 
+
+=item * $file_uri (string) 
+
+=item * $custom_icon (scalar) 
+
+=item * $flags (Gnome2::IconLookupFlags) 
+
+=back
+
+
+Returns the icon name and a GnomeIconLookupFlags.
+
+
+=back
+
+=head2 $theme-E<gt>B<prepend_search_path> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = $theme-E<gt>B<rescan_if_needed> 
+
+=over
+
+=back
+
+=head2 list = $theme-E<gt>B<get_search_path> 
+
+=over
+
+
+Returns a list of paths.
+
+
+=back
+
+=head2 $theme-E<gt>B<set_search_path> (...)
+
+=over
+
+=over
+
+=item * ... (list) of paths
+
+=back
+
+
+
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<changed> (Gnome2::IconTheme)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::IconLookupFlags
+
+=over
+
+=item * 'none' / 'GNOME_ICON_LOOKUP_FLAGS_NONE'
+
+=item * 'embedding-text' / 'GNOME_ICON_LOOKUP_FLAGS_EMBEDDING_TEXT'
+
+=item * 'show-small-images-as-themselves' / 'GNOME_ICON_LOOKUP_FLAGS_SHOW_SMALL_IMAGES_AS_THEMSELVES'
+
+=item * 'allow-svg-as-themselves' / 'GNOME_ICON_LOOKUP_FLAGS_ALLOW_SVG_AS_THEMSELVES'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,8 @@
+# Reset the System Clock to UTC if the hardware clock from which it was
+# copied by the kernel was in localtime.
+
+KERNEL=="rtc0", IMPORT{file}="/etc/default/rcS"
+KERNEL=="rtc0", ENV{UTC}!="yes", ENV{BADYEAR}!="yes", \
+	RUN+="/sbin/hwclock --rtc=$root/$name --systz --localtime --noadjfile"
+KERNEL=="rtc0", ENV{UTC}!="yes", ENV{BADYEAR}=="yes", \
+	RUN+="/sbin/hwclock --rtc=$root/$name --systz --localtime --noadjfile --badyear"

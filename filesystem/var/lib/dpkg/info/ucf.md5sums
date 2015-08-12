@@ -1,0 +1,14 @@
+1afaf886bc7bad92cdf8d4144437ecc9  usr/share/lintian/overrides/ucf
+7e886ae4562b70a912daa87cc6425d5c  usr/share/man/man1/ucf.1.gz
+ca094f17611a4ab9b652c1d211acbcdb  usr/share/man/man1/ucfr.1.gz
+d50cfb68302a7bfdea19c4d549c0712e  usr/share/man/man1/ucfq.1.gz
+fdebdffd87ee0965b8b5395357d77e58  usr/share/man/man1/lcf.1.gz
+bca80b1e0f4e33505307dd90924d3253  usr/share/man/man5/ucf.conf.5.gz
+d1cd8a6cf74de43bdcb9c2d3013d4110  usr/share/doc/ucf/examples/postinst
+50cb8edc26fbd44dbced9682bb79413e  usr/share/doc/ucf/examples/postrm
+c3bb3cd92ae1cd5c459f529454042bda  usr/share/doc/ucf/copyright
+4bcf2a725b077044f4512f0d17893ae4  usr/share/doc/ucf/changelog.gz
+6dcd207007acb312a88d9ad04751c3c8  usr/bin/ucf
+5fc40ff6a9bb01dd01f82da07bde819e  usr/bin/ucfr
+ee729d7d753bfc63e35c8cea948b69d5  usr/bin/ucfq
+b2aa583a77ea5dd90dce8ba9ef6b38f8  usr/bin/lcf

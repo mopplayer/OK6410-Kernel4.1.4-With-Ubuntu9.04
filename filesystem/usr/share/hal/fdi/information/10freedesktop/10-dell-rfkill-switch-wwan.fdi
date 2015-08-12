@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deviceinfo version="0.2">
+
+  <device>
+    <match key="info.subsystem" string="platform">
+      <match key="platform.id" string="dcdbas">
+        <match key="/org/freedesktop/Hal/devices/computer:system.kernel.name" string="Linux">
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.vendor" prefix="Dell ">
+            <match key="/org/freedesktop/Hal/devices/computer:system.formfactor" string="laptop">
+              <spawn udi="/org/freedesktop/Hal/devices/dell_wwan_switch"/>
+	    </match>
+          </match>
+        </match>
+      </match>
+    </match>
+  </device>
+
+  <device>
+    <match key="info.udi" string="/org/freedesktop/Hal/devices/dell_wwan_switch">
+      <addset key="info.capabilities" type="strlist">killswitch</addset>
+      <merge key="info.product" type="string">Dell WWAN Switch</merge>
+      <merge key="info.category" type="string">killswitch</merge>
+      <merge key="killswitch.type" type="string">wwan</merge>
+      <merge key="killswitch.access_method" type="string">dell</merge>
+    </match>
+  </device>
+
+</deviceinfo>

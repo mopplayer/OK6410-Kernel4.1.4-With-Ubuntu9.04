@@ -1,0 +1,17 @@
+#! /bin/sh -e
+
+pkg=sed
+
+case "$1" in
+  (remove|deconfigure)
+	install-info --quiet --remove sed
+	;;
+
+  (upgrade|failed-upgrade)
+	;;
+
+  (*)
+	echo "$0: Undocumented call: \"$@\"" >&2
+	exit 1
+	;;
+esac

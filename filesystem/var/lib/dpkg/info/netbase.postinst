@@ -1,0 +1,59 @@
+#!/bin/sh -e
+
+remove_options_file() {
+  [ -z "$2" -o ! -e /etc/network/options ] || return 0
+  if dpkg --compare-versions "$2" ge "4.22-1"; then
+    return 0
+  fi
+
+  # on which conditions should /etc/network/options be silently removed?
+}
+
+update_hosts_file() {
+  if [ -f /etc/hosts ] && ! grep -qE "^::1[[:space:]]" /etc/hosts; then
+    cat >>/etc/hosts <<-EOF
+
+	::1     localhost ip6-localhost ip6-loopback
+	fe00::0 ip6-localnet
+	ff00::0 ip6-mcastprefix
+	ff02::1 ip6-allnodes
+	ff02::2 ip6-allrouters
+	ff02::3 ip6-allhosts
+EOF
+  fi
+}
+
+update_rc() {
+  update-rc.d networking start 40 S . start 35 0 6 . > /dev/null
+}
+
+create_networks() {
+  if [ -e /etc/networks ]; then return 0; fi
+
+  cat >> /etc/networks <<-EOF
+	default		0.0.0.0
+	loopback	127.0.0.0
+	link-local	169.254.0.0
+	
+EOF
+}
+
+case "$1" in
+    configure)
+    #remove_options_file "$@"
+    update_hosts_file
+    update_rc
+    create_networks
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+    echo "postinst called with unknown argument '$1'" >&2
+    exit 1
+    ;;
+esac
+
+
+

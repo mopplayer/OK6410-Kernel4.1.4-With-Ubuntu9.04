@@ -1,0 +1,59 @@
+=head1 NAME
+
+Glib::Param::Double -  Wrapper for double parameters in GLib
+
+=for object Glib::Param::Double Wrapper for double parameters in GLib
+
+=head1 DESCRIPTION
+
+This page documents the extra accessors available for both of the
+floating-point type paramspecs: Float and Double.  Perl really only supports
+doubles, so all of these methods return NVs (that is, the C type "double"); the
+distinction of size is important to the underlying C library and also
+determines the data value range.
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 double = $pspec-E<gt>B<get_default_value> 
+
+=over
+
+=back
+
+=head2 double = $pspec-E<gt>B<get_epsilon> 
+
+=over
+
+=back
+
+=head2 double = $pspec-E<gt>B<get_maximum> 
+
+=over
+
+=back
+
+=head2 double = $pspec-E<gt>B<get_minimum> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>, L<Glib::ParamSpec>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

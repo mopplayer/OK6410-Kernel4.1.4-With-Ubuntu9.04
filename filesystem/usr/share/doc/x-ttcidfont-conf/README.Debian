@@ -1,0 +1,22 @@
+x-ttcidfont-conf for Debian
+---------------------------
+
+It configures TrueType fonts and CID fonts for X through Defoma framework.
+The format of the dynamically generated fonts.scale file of TrueType fonts
+is decided at the first installation of this package through Debconf
+by asking "Which backend do you choose, xtt or freetype?".
+You can change the backend by running
+	dpkg-reconfigure x-ttcidfont-conf
+in console.
+
+ And please add these FontPath lines in /etc/X11/xorg.conf, if they are not
+ already there. (Newer versions of Xorg may not need this).
+
+ FontPath "/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType"
+ FontPath "/var/lib/defoma/x-ttcidfont-conf.d/dirs/CID"
+
+Please also refer to README.Defoma.
+
+ -- Yasuhiro Take <take@debian.org>, Sat, 28 Apr 2001 05:41:38 +0900
+ -- Modified by ISHIKAWA Mutsumi <ishikawa@linux.or.jp>, Sun Aug 19 02:08:06 JST 2001
+ -- Yasuhiro Take <take@debian.org>, Fri Nov 16 19:17:35 JST 2001

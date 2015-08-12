@@ -1,0 +1,100 @@
+#!/bin/sh
+set -eu
+
+STATEDIR=/var/lib/initramfs-tools
+supported_host_version=""
+supported_target_version=""
+outfile=""
+
+# FIXME: drop script after Lenny (needed for Etch linux-images)
+
+usage()
+{
+	cat >&2 << EOF
+
+Usage: ${0} <-o outfile> [version]
+
+Please use update-initramfs(8):
+${0} exists for compatibility by kernel-package(5) calls.
+See mkinitramfs-kpkg(8) for further details.
+EOF
+	exit 1
+}
+
+OPTIONS=`getopt -o m:o: --long supported-host-version:,supported-target-version: -n "$0" -- "$@"`
+# Check for non-GNU getopt
+if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
+
+eval set -- "$OPTIONS"
+
+while true; do
+	case "$1" in
+	-m)
+		# ignore
+		shift 2
+		;;
+	-o)
+		touch $2
+		outfile="$(readlink -f "$2")"
+		shift 2
+		;;
+	--supported-host-version)
+		supported_host_version="$2"
+		shift 2
+		;;
+	--supported-target-version)
+		supported_target_version="$2"
+		shift 2
+		;;
+	--)
+		shift
+		break
+		;;
+	*)
+		echo "Internal error!" >&2
+		exit 1
+		;;
+	esac
+done
+
+if [ -n "$supported_host_version" ] || [ -n "$supported_target_version" ]; then
+	if [ -n "$supported_host_version" ]; then
+		host_upstream_version="${supported_host_version%%-*}"
+	fi
+	if [ -n "$supported_target_version" ]; then
+		target_upstream_version="${supported_target_version%%-*}"
+		if dpkg --compare-versions "$target_upstream_version" lt "2.6.12"; then
+			exit 2
+		fi
+	fi
+	exit 0
+fi
+
+
+if [ -z "${outfile}" ]; then
+	usage
+fi
+
+# And by "version" we really mean path to kernel modules
+# This is braindead, and exists to preserve the interface with mkinitrd
+version="${1}"
+
+case "${version}" in
+/lib/modules/*/[!/]*)
+	;;
+/lib/modules/[!/]*)
+	version="${version#/lib/modules/}"
+	version="${version%%/*}"
+	;;
+esac
+
+case "${version}" in
+*/*)
+	echo "$PROG: ${version} is not a valid kernel version" >&2
+	exit 1
+	;;
+esac
+
+# linux-image installs latest version
+mkinitramfs -o ${outfile} ${version}
+sha1sum "${outfile}" | sed -e 's/\.new//' > "${STATEDIR}/${version}"

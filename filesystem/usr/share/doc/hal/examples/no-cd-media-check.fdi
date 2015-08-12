@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- SGML -*- -->
+
+<!-- 
+  An example fdi config that disables media checks on CD devices, to work
+  around certain hardware bugs described in Debian bug #370186
+-->
+<deviceinfo version="0.2">
+
+<!-- 
+  The following disables the use of hald-addon-storage for all CD/DVD devices
+  on the system.
+-->
+  <device>
+    <match key="storage.cdrom.cdr" bool="true">
+      <merge key="info.addons" type="strlist"></merge>
+    </match>
+  </device>
+
+<!-- 
+  The following disables the use of hald-addon-storage for specific CD
+  devices, by name.  You can find the name of your particular CD device
+  using the 'lshal' command.
+-->
+  <device>
+    <match key="info.product" string="HL-DT-STDVD-ROM GDR8162B">
+      <merge key="info.addons" type="strlist"></merge>
+    </match>
+  </device>
+  <device>
+    <match key="info.product" string="HL-DT-ST DVDRAM GSA-4080N">
+      <merge key="info.addons" type="strlist"></merge>
+    </match>
+  </device>
+  <device>
+    <match key="info.product" string="HL-DT-ST DVD-RW GCA-4080N">
+      <merge key="info.addons" type="strlist"></merge>
+    </match>
+  </device>
+
+</deviceinfo>
+

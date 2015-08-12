@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/python-support
+/usr/share/python-support/python-vte
+/usr/share/doc
+/usr/lib
+/usr/lib/python-support
+/usr/lib/python-support/python-vte
+/usr/lib/python-support/python-vte/python2.6
+/usr/lib/python-support/python-vte/python2.6/gtk-2.0
+/usr/lib/python-support/python-vte/python2.6/gtk-2.0/vtemodule.so
+/usr/lib/python-support/python-vte/python2.5
+/usr/lib/python-support/python-vte/python2.5/gtk-2.0
+/usr/lib/python-support/python-vte/python2.5/gtk-2.0/vtemodule.so
+/usr/share/doc/python-vte

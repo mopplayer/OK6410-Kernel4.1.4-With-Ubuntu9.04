@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+update-alternatives --install /usr/bin/x-www-browser \
+                    x-www-browser /usr/bin/conkeror 20  \
+                    --slave /usr/share/man/man1/x-www-browser.1.gz \
+                    x-www-browser.1.gz /usr/share/man/man1/conkeror.1.gz
+
+# Automatically added by dh_installmenu
+if [ "$1" = "configure" ] && [ -x "`which update-menus 2>/dev/null`" ]; then
+	update-menus
+fi
+# End automatically added section
+
+
+exit 0

@@ -1,0 +1,4 @@
+ucf: description-synopsis-might-not-be-phrased-properly
+ucf: no-debconf-config
+ucf: missing-debconf-dependency
+ucf: debconf-is-not-a-registry ./usr/bin/ucf

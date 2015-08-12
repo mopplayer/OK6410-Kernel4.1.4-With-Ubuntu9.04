@@ -1,0 +1,25 @@
+A list of tasks that need doing in and around Rarian
+
+Now, on to stuff that needs doing within Rarian
+----------------------------------------------
+
+(In no particular order)
+
+* Handle escape codes within strings as specified in Desktop Entry Spec
+
+* Cleanup of code.  Add comments and (better)API reference documentation
+
+* Add overview document, detailing how Rarian is built (for easy replacement)
+
+* Test the bejeesus out of it.  Test on malformed files.  Ensure it doesn't
+  crash.
+
+* Ensure its portable to other UNIX-like systems
+
+* Ensure it can migrate and handle all omf files
+
+* Add rarian-validate program to validate rarian files
+
+* Caching of info, man and document files on a per-user basis
+
+* Handle errors gracefully

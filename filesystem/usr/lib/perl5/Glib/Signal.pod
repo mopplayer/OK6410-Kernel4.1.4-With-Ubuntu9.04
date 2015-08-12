@@ -1,0 +1,76 @@
+=head1 NAME
+
+Glib::Signal -  Object customization and general purpose notification
+
+=for object Glib::Signal Object customization and general purpose notification
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 integer = Glib-E<gt>B<install_exception_handler> ($func, $data=undef)
+
+=over
+
+=over
+
+=item * $func (subroutine) 
+
+=item * $data (scalar) 
+
+=back
+
+
+Install a subroutine to be executed when a signal emission traps an exception
+(a croak or die).  I<$func> should return boolean (true if the handler should
+remain installed) and expect to receive a single scalar.  This scalar will be a
+private copy of $@ which the handler can mangle to its heart's content.
+
+Returns an identifier that may be used with C<remove_exception_handler>.
+
+See C<gperl_install_exception_handler()> in L<Glib::xsapi>.
+
+
+=back
+
+=head2 Glib-E<gt>B<remove_exception_handler> ($tag)
+
+=over
+
+=over
+
+=item * $tag (integer) 
+
+=back
+
+
+Remove the exception handler identified by I<$tag>, as returned by
+C<install_exception_handler>.  If I<$tag> cannot be found, this
+does nothing.
+
+WARNING:  Do not call this function from within an exception handler.
+If you want to remove your handler during its execution just have it
+return false.
+
+See C<gperl_remove_exception_handler()> in L<Glib::xsapi>.
+
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

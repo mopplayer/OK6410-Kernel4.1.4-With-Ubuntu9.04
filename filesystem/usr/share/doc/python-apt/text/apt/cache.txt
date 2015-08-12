@@ -1,0 +1,179 @@
+
+``apt.cache`` --- The Cache class
+*********************************
+
+
+The Cache class
+===============
+
+class apt.cache.Cache(progress=None, rootdir=None, memonly=False)
+
+   Dictionary-like package cache.
+
+   This class has all the packages that are available in it's
+   dictionary
+
+   cache[pkgname]
+
+      Return a ``Package()`` for the package with the name *pkgname*.
+
+   additionalRequiredSpace
+
+      Get the size of the additional required space on the fs.
+
+   cachePostChange()
+
+      called internally if the cache has changed, emit a signal then
+
+   cachePreChange()
+
+      called internally if the cache is about to change, emit a signal
+      then
+
+   clear()
+
+      Unmark all changes
+
+   commit(fetchProgress=None, installProgress=None)
+
+      Apply the marked changes to the cache
+
+   connect(name, callback)
+
+      connect to a signal, currently only used for
+      cache_{post,pre}_{changed,open}
+
+   getChanges()
+
+      Get the marked changes
+
+   getProvidingPackages(virtual)
+
+      Return a list of packages which provide the virtual package of
+      the specified name
+
+   has_key(key)
+
+   installArchives(pm, installProgress)
+
+   isVirtualPackage(pkgname)
+
+      Return whether the package is a virtual package.
+
+   keys()
+
+   open(progress)
+
+      Open the package cache, after that it can be used like a
+      dictionary
+
+   reqReinstallPkgs
+
+      Return the packages not downloadable packages in reqreinst
+      state.
+
+   requiredDownload
+
+      Get the size of the packages that are required to download.
+
+   update(fetchProgress=None)
+
+      run the equivalent of apt-get update
+
+   upgrade(distUpgrade=False)
+
+      Upgrade the all package, DistUpgrade will also install new
+      dependencies
+
+
+Example
+-------
+
+The following example shows how to load the cache, update it, and
+upgrade all the packages on the system:
+
+   import apt
+   import apt.progress
+
+   # First of all, open the cache
+   cache = apt.Cache()
+   # Now, lets update the package list
+   cache.update()
+   # We need to re-open the cache because it needs to read the package list
+   cache.open(None)
+   # Now we can do the same as 'apt-get upgrade' does
+   cache.upgrade()
+   # or we can play 'apt-get dist-upgrade'
+   cache.upgrade(True)
+   # Q: Why does nothing happen?
+   # A: You forgot to call commit()!
+   cache.commit(apt.progress.TextFetchProgress(),
+                apt.progress.InstallProgress())
+
+
+Working with Filters
+====================
+
+class apt.cache.Filter
+
+   Filter base class
+
+   apply(pkg)
+
+      Filter function, return True if the package matchs a filter
+      criteria and False otherwise
+
+class apt.cache.MarkedChangesFilter
+
+   Filter that returns all marked changes
+
+   apply(pkg)
+
+class apt.cache.FilteredCache(cache=None, progress=None)
+
+   A package cache that is filtered.
+
+   Can work on a existing cache or create a new one
+
+   filterCachePostChange()
+
+      Called internally if the cache changes, emit a signal then.
+
+   has_key(key)
+
+   keys()
+
+   setFilter(filter)
+
+      Set the current active filter.
+
+
+Example
+-------
+
+This is an example for a filtered cache, which only allows access to
+the packages whose state has been changed, eg. packages marked for
+installation:
+
+   >>> from apt.cache import FilteredCache, Cache, MarkedChangesFilter
+   >>> cache = apt.Cache()
+   >>> changed = apt.FilteredCache(cache)
+   >>> changed.setFilter(MarkedChangesFilter())
+   >>> print len(changed) == len(cache.GetChanges()) # Both need to have same length
+   True
+
+
+Exceptions
+==========
+
+exception apt.cache.FetchCancelledException
+
+   Exception that is thrown when the user cancels a fetch operation.
+
+exception apt.cache.FetchFailedException
+
+   Exception that is thrown when fetching fails.
+
+exception apt.cache.LockFailedException
+
+   Exception that is thrown when locking fails.

@@ -1,0 +1,135 @@
+#! /usr/bin/python
+# -*- coding: UTF-8 -*-
+#
+# © 2005 Josselin Mouette <joss@debian.org>
+# Licensed under the GNU LGPL, see /usr/share/common-licenses/LGPL-2.1
+
+
+defaults_dir = '/usr/share/gconf/defaults'
+outdir = '/var/lib/gconf/debian.defaults'
+treefile = '%gconf-tree.xml'
+
+import os,tempfile,shutil,sys
+
+if os.geteuid():
+  sys.stderr.write("%s needs to be run as root.\n"%sys.argv[0])
+  sys.exit(1)
+
+tmp_dir=tempfile.mkdtemp(prefix="gconf-")
+tmp_home=tmp_dir+'/home'
+tmp_gconf=tmp_dir+'/gconf'
+tmp_file=tmp_dir+'/temp.entries'
+
+save_stdout=os.dup(1)
+os.close(1)
+
+def cleanup():
+  os.dup2(save_stdout,1)
+  os.close(save_stdout)
+  shutil.rmtree(tmp_dir)
+
+def htmlescape(str):
+  return str.replace('&','&amp;').replace('>','&gt;').replace('<','&lt;').replace('"','&quot;')
+
+def int_entry(value):
+  return '  <int>' + value + '</int>\n'
+
+def bool_entry(value):
+  return '  <bool>' + value + '</bool>\n'
+
+def float_entry(value):
+  return '  <float>' + value + '</float>\n'
+
+def string_entry(value):
+  return '  <string>' + htmlescape(value) + '</string>\n'
+
+def list_entry(value):
+  ret = '  <list type="string">\n'
+  for v in value[1:-1].split(','):
+    ret += '    <value><string>' + htmlescape(v) + '</string></value>\n'
+  ret += '  </list>\n'
+  return ret
+
+
+def listcmp(a,b):
+  """Number of starting similar elements in a and b"""
+  m = min(len(a),len(b))
+  for i in range(m):
+    if a[i] != b[i]:
+      return i
+  return m
+
+def apply_entries(filename):
+  res=os.spawnvpe(os.P_WAIT,'gconftool-2',
+           ['gconftool-2','--direct','--config-source',
+            'xml:merged:'+tmp_gconf,'--load',filename],
+           {'HOME': tmp_home})
+  if res:
+    cleanup()
+    sys.exit(res)
+
+gconf_val = {}
+
+def write_and_apply_entries(filename):
+  out=file(filename,'w')
+  out.write('<gconfentryfile>\n<entrylist base="/">\n')
+  for key in gconf_val:
+    out.write('<entry>\n<key>' + key + '</key>\n<value>\n')
+    # write the current entry
+    value = gconf_val[key]
+    if value[0] == '"' and value[-1] == '"':
+      out.write(string_entry(value[1:-1]))
+    elif value in ['true','false']:
+      out.write(bool_entry(value))
+    elif value[0] == '[' and value[-1] == ']':
+      out.write(list_entry(value))
+    elif value.isdigit():
+      out.write(int_entry(value))
+    else:
+      try:
+        float(value)
+        out.write(float_entry(value))
+      except ValueError:
+        out.write(string_entry(value))
+    out.write('</value>\n</entry>\n')
+  out.write('</entrylist>\n</gconfentryfile>\n')
+  out.close()
+  apply_entries(filename)
+
+def read_entries(filename):
+  for line in file(filename):
+    l = line.rstrip('\n').split(None,1)
+    if len(l) == 2:
+      gconf_val[l[0]] = l[1]
+
+
+defaults_files = os.listdir(defaults_dir)
+defaults_files.sort()
+for f in defaults_files:
+  realname=defaults_dir+'/'+f
+  if f.endswith('.dpkg-tmp'):
+    pass
+  elif f.endswith('.entries'):
+    if gconf_val:
+      write_and_apply_entries(tmp_file)
+      gconf_val={}
+    apply_entries(realname)
+  else:
+    read_entries(realname)
+if gconf_val:
+  write_and_apply_entries(tmp_file)
+
+try:
+  shutil.copyfile(tmp_gconf+'/'+treefile,outdir+'/'+treefile+'.tmp')
+  os.rename(outdir+'/'+treefile+'.tmp',outdir+'/'+treefile)
+except IOError:
+  # No %gconf-tree.xml file was created.
+  try:
+    os.remove(outdir+'/'+treefile)
+  except OSError:
+    # No existing file
+    pass
+
+cleanup()
+
+os.system('kill -s HUP `pidof gconfd-2` >/dev/null 2>&1')

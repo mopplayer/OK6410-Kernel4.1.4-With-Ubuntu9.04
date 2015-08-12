@@ -1,0 +1,6 @@
+f9026850995ba8ce7eefec893d798f5d  usr/share/doc/xserver-xorg-video-chips/copyright
+ca6cc87d026ab590051466098becd2ae  usr/share/doc/xserver-xorg-video-chips/changelog.gz
+f8d0cb5db79c9fa79b9839c3c9444aff  usr/share/doc/xserver-xorg-video-chips/changelog.Debian.gz
+b99d0ea7f898b98978b381c88abe7df6  usr/share/man/man4/chips.4.gz
+eb24222a00804ff50fdc425cb77b382c  usr/share/xserver-xorg/pci/chips.ids
+45a59a214123eea8a18df49b5bae5544  usr/lib/xorg/modules/drivers/chips_drv.so

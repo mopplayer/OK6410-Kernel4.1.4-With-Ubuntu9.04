@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<deviceinfo version="0.2">
+  <device>
+    <match key="platform.id" string="omapfb">
+     <spawn udi="/org/freedesktop/Hal/devices/omapfb_bl"/>
+    </match>
+   </device>
+   <device>
+    <match key="info.udi" string="/org/freedesktop/Hal/devices/omapfb_bl">
+        <merge key="info.product" type="string">OMAP LCD controller and panel</merge>
+        <merge key="info.category" type="string">laptop_panel</merge>
+        <append key="info.capabilities" type="strlist">laptop_panel</append>
+        <merge key="laptop_panel.access_method" type="string">custom</merge>
+        <merge key="laptop_panel.num_levels" type="int">15</merge>
+        <append key="info.addons" type="strlist">hald-addon-omap-backlight</append>
+    </match>
+  </device>
+</deviceinfo>

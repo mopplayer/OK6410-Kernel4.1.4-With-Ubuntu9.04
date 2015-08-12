@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# Allows a task to be enabled or disabled if tasksel is running inside a
+# debconf instance, as in the first stage Debian install.
+#
+# To enable this test insert your tasks stanza a keyword like:
+#
+# Test-debconf: false
+#
+# This will cause the task to be available only if tasksel is not running
+# in debconf.
+
+have_terminal_plugin () {
+	db_capb backup
+	set -- $RET
+	for cap; do
+		if [ "$cap" = plugin-terminal ]; then
+			return 0
+		fi
+	done
+	return 1
+}
+
+if [ "$DEBIAN_HAS_FRONTEND" ] || [ "$DEBCONF_READFD" ]; then
+	# Avoid starting debconf unless it is already running.
+	. /usr/share/debconf/confmodule
+	if have_terminal_plugin; then
+		running_in_debconf=false # at least, we can pretend we aren't
+	else
+		running_in_debconf=true
+	fi
+else
+	running_in_debconf=false
+fi
+
+if [ "$2" = "$running_in_debconf" ]; then
+	exit 3 # display task, not marked for installation
+fi
+exit 1 # do not display task

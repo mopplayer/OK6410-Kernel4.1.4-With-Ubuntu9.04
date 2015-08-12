@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/xserver-xorg-input-tslib
+/usr/share/doc/xserver-xorg-input-tslib/copyright
+/usr/share/doc/xserver-xorg-input-tslib/changelog.gz
+/usr/share/doc/xserver-xorg-input-tslib/changelog.Debian.gz
+/usr/share/man
+/usr/share/man/man4
+/usr/share/man/man4/tslib.4.gz
+/usr/lib
+/usr/lib/xorg
+/usr/lib/xorg/modules
+/usr/lib/xorg/modules/input
+/usr/lib/xorg/modules/input/tslib_drv.so

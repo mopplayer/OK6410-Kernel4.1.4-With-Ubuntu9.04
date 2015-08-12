@@ -1,0 +1,39 @@
+#!/bin/sh
+set -e
+
+XUL_VERSION=1.9
+GRE_VERSION=1.9.0.8
+OLD_GRE=`echo $2 | sed -e 's/\+.*//' -e 's/~\([^~]*\).*/\1pre/'`
+
+# Remove a no-longer used conffile
+rm_conffile() {
+  PKGNAME="$1"
+  CONFFILE="$2"
+  if [ -e "$CONFFILE" ]; then
+    md5sum="`md5sum \"$CONFFILE\" | sed -e \"s/ .*//\"`"
+    old_md5sum="`dpkg-query -W -f='${Conffiles}' $PKGNAME | sed -n -e \"\\\\' $CONFFILE '{s/ obsolete$//;s/.* //p}\"`"
+    if [ "$md5sum" != "$old_md5sum" ]; then
+      echo "Obsolete conffile $CONFFILE has been modified by you."
+      echo "Saving as $CONFFILE.dpkg-bak ..."
+      mv -f "$CONFFILE" "$CONFFILE".dpkg-bak
+    else
+      echo "Removing obsolete conffile $CONFFILE ..."
+      rm -f "$CONFFILE"
+    fi
+  fi
+}
+
+if [ "$1" = "upgrade" ]; then
+  # Remove all files already obsolete, unless this is one we want to install (downgrade)
+  for obsolete in `dpkg-query -W -f='${Conffiles}' xulrunner-$XUL_VERSION | grep 'obsolete$' | awk '{ print $1 }'` ; do
+    if [ "$obsolete" != "/etc/gre.d/$GRE_VERSION.system.conf" ] ; then
+      rm_conffile xulrunner-$XUL_VERSION "$obsolete"
+    fi
+  done
+  # Remove the previous GRE file, if we just bumped it
+  if [ "$OLD_GRE" != "$GRE_VERSION" ] ; then
+    rm_conffile xulrunner-$XUL_VERSION "/etc/gre.d/$OLD_GRE.system.conf"
+  fi
+fi
+
+

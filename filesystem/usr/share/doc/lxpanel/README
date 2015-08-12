@@ -1,0 +1,24 @@
+LXPanel is a lightweight X11 desktop panel.
+
+There are 2 programs contained in the package.
+
+1. lxpanel: the panel
+
+2. lxpanelctl: the controller of lxpanel, can be used to control lxpanel in 
+               other programs.  The best place to use lxpanelctl is bar far 
+               the numerous key bindings provided by window managers.
+               When the key combination is pressed, call lxpanelctl to popup
+               system menu, or to open run dialog in lxpanel.
+               Run lxpanelctl without any argument to see what command it 
+               currently recognizes.
+
+
+About Netstat and Netstatus plugins:
+
+1. netstatus was ported from netstatus panel applet of GNOME Project.  This
+   plugin has good support on Linux/BSD/other UNIX, and it is released under
+   GNU GPL. (the same as LxDE)
+
+2. netstat is a new plugin written by LxDE developers as the lightweight
+   replacement of netstatus plugin.  It aims to be more usable and resource
+   efficient.  At the current stage, netstat runs only on Linux.

@@ -1,0 +1,77 @@
+WITH_SELINUX
+  - review all tools to check that the strategies are consistent
+
+chage, chfn, chsh: same change needed as in passwd.
+  - probably need moving check_selinux_access to a separate file.
+
+man useradd
+	document default behavior for GROUP
+	remove "The default group number is 1 or whatever is..."
+
+useradd manpage
+  - add -k option
+  - mention that -o require -u
+
+testsuite
+ - newgrp
+   - test with unknown user's GID
+
+newusers
+ - add logging to SYSLOG & AUDIT
+
+faillog
+ - accept numerical user and range of users
+
+Document when/where option appeared, document whether an option is standard
+or not.
+
+depends rules for the manpages
+
+Check all the expiry semantics
+
+Add options --crypt-method and --sha-rounds to gpasswd
+
+ALL:
+- move base passwd/shadow/group/gshadow operation to module for allow write
+  different backend modules for db, NIS, LDAP and others. Default backend it
+  will be goot if will be chosen depending on /etc/nsswitch.conf and allow
+  override this by -r <repository> options (where the <repository> can be
+  file, db, nis nisplus, ldap .. like on /etc/nsswitch.conf in service column).
+  passwd have old piece of code with handling -r option and it will be good
+  finish this and propagate on other shadow tools for allow operate on other
+  user databases by well known tools.
+
+- useradd:
+  - add handle create user mail spool in maildir format.
+
+- add handle -n switch in groups and id command for allow query is
+  group/user with specified id/gid exist - this will be very usable
+  on automation in packages for query/check is group/user exist in system
+  or not,
+
+- groupmems: 
+  - need some work on add PAM and i18n support.
+
+- userdel:
+  - add backup option for the removal of user resources,
+  - add lookop and remove per user group.
+  - user_busy: check that the user is not running any processes.
+
+- passwd:
+  - check combination of options (e.g. -u/-l)
+
+- newgrp: check the USE_PAM section.
+
+- groupmems: check reason for isgroup
+
+- newusers: doc for pw_gid not clear. Differentiate
+            pw_gid specified and exist
+            pw_gid specified but does not exist
+             * name
+             * number
+            pw_gid not specified.
+- newusers: document what happens when no uid is specified.
+- newusers: add option --system?
+
+-Documentation:
+ * document when options were added.

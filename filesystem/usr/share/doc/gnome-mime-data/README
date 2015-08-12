@@ -1,0 +1,5 @@
+This module contains the base MIME and Application database for GNOME.
+It is meant to be accessed through the MIME functions in GnomeVFS.
+
+A canonical list of mime types is available at
+http://www.iana.org/assignments/media-types/

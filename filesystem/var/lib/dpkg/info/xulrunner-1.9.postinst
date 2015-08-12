@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+XUL_VERSION=1.9
+GRE_VERSION=`/usr/bin/xulrunner-$XUL_VERSION --gre-version`
+
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ]; then
+        /usr/sbin/update-alternatives --install /usr/bin/xulrunner \
+                xulrunner /usr/bin/xulrunner-$XUL_VERSION 50
+	if test -e /usr/lib/xulrunner-$GRE_VERSION/.autoreg; then
+		touch /usr/lib/xulrunner-$GRE_VERSION/.autoreg
+	fi
+
+	# Remove possible left-over
+	if [ -f /etc/ld.so.conf.d/xulrunner-$XUL_VERSION ] ; then
+		rm -f /etc/ld.so.conf.d/xulrunner-$XUL_VERSION
+	fi
+
+	ldconfig
+fi
+
+

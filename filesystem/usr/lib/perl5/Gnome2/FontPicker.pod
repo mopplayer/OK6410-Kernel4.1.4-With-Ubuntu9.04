@@ -1,0 +1,225 @@
+=head1 NAME
+
+Gnome2::FontPicker
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gtk2::Button
+                                +----Gnome2::FontPicker
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::FontPicker-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 $gfp-E<gt>B<fi_set_show_size> ($show_size)
+
+=over
+
+=over
+
+=item * $show_size (boolean) 
+
+=back
+
+=back
+
+=head2 $gfp-E<gt>B<fi_set_use_font_in_label> ($use_font_in_label, $size)
+
+=over
+
+=over
+
+=item * $use_font_in_label (boolean) 
+
+=item * $size (integer) 
+
+=back
+
+=back
+
+=head2 string = $gfp-E<gt>B<get_font_name> 
+
+=over
+
+=back
+
+=head2 boolean = $gfp-E<gt>B<set_font_name> ($fontname)
+
+=over
+
+=over
+
+=item * $fontname (string) 
+
+=back
+
+=back
+
+=head2 fontpickermode = $gfp-E<gt>B<get_mode> 
+
+=over
+
+=back
+
+=head2 $gfp-E<gt>B<set_mode> ($mode)
+
+=over
+
+=over
+
+=item * $mode (Gnome2::FontPickerMode) 
+
+=back
+
+=back
+
+=head2 string = $gfp-E<gt>B<get_preview_text> 
+
+=over
+
+=back
+
+=head2 $gfp-E<gt>B<set_preview_text> ($text)
+
+=over
+
+=over
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 string = $gfp-E<gt>B<get_title> 
+
+=over
+
+=back
+
+=head2 $gfp-E<gt>B<set_title> ($title)
+
+=over
+
+=over
+
+=item * $title (string) 
+
+=back
+
+=back
+
+=head2 widget = $gfp-E<gt>B<uw_get_widget> 
+
+=over
+
+=back
+
+=head2 $gfp-E<gt>B<uw_set_widget> ($widget)
+
+=over
+
+=over
+
+=item * $widget (Gtk2::Widget) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'font' (gpointer : readable)
+
+The selected GtkFont
+
+=item 'font-name' (string : readable / writable)
+
+Name of the selected font
+
+=item 'label-font-size' (integer : readable / writable)
+
+Font size for label in font info mode
+
+=item 'mode' (Gnome2::FontPickerMode : readable / writable)
+
+The mode of operation of the font picker
+
+=item 'preview-text' (string : readable / writable)
+
+Preview text shown in the dialog
+
+=item 'show-size' (boolean : readable / writable)
+
+Show size in font info mode
+
+=item 'title' (string : readable / writable)
+
+The title of the selection dialog box
+
+=item 'use-font-in-label' (boolean : readable / writable)
+
+Use font in the label in font info mode
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<font-set> (Gnome2::FontPicker, string)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::FontPickerMode
+
+=over
+
+=item * 'pixmap' / 'GNOME_FONT_PICKER_MODE_PIXMAP'
+
+=item * 'font-info' / 'GNOME_FONT_PICKER_MODE_FONT_INFO'
+
+=item * 'user-widget' / 'GNOME_FONT_PICKER_MODE_USER_WIDGET'
+
+=item * 'unknown' / 'GNOME_FONT_PICKER_MODE_UNKNOWN'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>, L<Gtk2::Button>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

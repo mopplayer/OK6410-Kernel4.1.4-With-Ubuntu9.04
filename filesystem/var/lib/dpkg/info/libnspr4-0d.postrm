@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+migratious_files="libnspr4.so libplc4.so libplds4.so"
+
+if [ "$1" = "upgrade" ]; then
+	for f in $migratious_files; do
+		rm -f /usr/lib/XNOLDCONFIG_$f.old-migration
+		rm -f /usr/lib/XNOLDCONFIG_$f.0d.old-migration
+	done
+fi
+
+

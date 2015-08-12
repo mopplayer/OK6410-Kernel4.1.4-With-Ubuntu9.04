@@ -1,0 +1,13 @@
+d37d13d3f504d8d10b98214bf3d43f55  usr/share/doc/libgl1-mesa-dri/copyright
+febb289dea7abb95ac0b18b24a167ff6  usr/share/doc/libgl1-mesa-dri/changelog.Debian.gz
+67e70c9bcc375beec9f0b96e52878202  usr/lib/dri/r128_dri.so
+ab409daa728d966843a08bbfa52a6e36  usr/lib/dri/radeon_dri.so
+282fa3d93bad6319420c7baa5e22bada  usr/lib/dri/mach64_dri.so
+58825e24a6bcd1ee34d99aff4db8bede  usr/lib/dri/r200_dri.so
+e1913f2dcf04116b35b26e2d1d0c6e8a  usr/lib/dri/trident_dri.so
+a327b8c6d2703a03fba42b7ccb019fa4  usr/lib/dri/r300_dri.so
+963511153a8b89e81f76fb0bc052dd9b  usr/lib/dri/tdfx_dri.so
+8082c6177d47db35d8b4c9d9c29aa3e6  usr/lib/dri/mga_dri.so
+b9160d4fcd7fbf7c5b7cd8e13c0432f1  usr/lib/dri/swrast_dri.so
+39e6130b0baf0a97bd9efe6ebbe3f4ec  usr/lib/dri/savage_dri.so
+98450830287d3c7d7477e29d96b64921  usr/lib/dri/s3v_dri.so

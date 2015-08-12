@@ -1,0 +1,22 @@
+TODO
+====
+
+ - Patch all login managers to open CK sessions
+
+ - Make a registration interface for per-session
+   idle time delegates
+
+ - Report idle time per Seat
+
+ - Establish what session-types should be
+
+ - Improve the ck-list-sessions interface
+
+ - Complete the documentation
+
+ - Make openssh report sessions correctly
+   Not as easy as just using the PAM module.
+
+ - Figure out how to register activation handlers
+
+ - Use a configuration file for defining how to add sessions to seats

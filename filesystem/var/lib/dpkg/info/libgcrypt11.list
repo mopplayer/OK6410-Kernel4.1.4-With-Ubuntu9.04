@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgcrypt11
+/usr/share/doc/libgcrypt11/README.gz
+/usr/share/doc/libgcrypt11/NEWS.gz
+/usr/share/doc/libgcrypt11/copyright
+/usr/share/doc/libgcrypt11/AUTHORS
+/usr/share/doc/libgcrypt11/TODO
+/usr/share/doc/libgcrypt11/changelog.Debian.gz
+/usr/share/doc/libgcrypt11/THANKS.gz
+/lib
+/lib/libgcrypt.so.11.4.4
+/lib/libgcrypt.so.11

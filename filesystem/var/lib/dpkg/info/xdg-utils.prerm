@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+rmdir /usr/local/share/applications 2>/dev/null || true
+rmdir /usr/local/share/desktop-directories 2>/dev/null || true
+rmdir /usr/local/share/icons/hicolor 2>/dev/null || true
+rmdir /usr/local/share/icons 2>/dev/null || true
+rmdir /usr/local/share/mime/packages 2>/dev/null || true
+rmdir /usr/local/share/mime 2>/dev/null || true
+
+

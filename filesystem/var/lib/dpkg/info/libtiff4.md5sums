@@ -1,0 +1,7 @@
+bb332d1346a927cba9112f496c2a6359  usr/lib/libtiff.so.4.2.1
+c4e4bd33742d7d7bee601165e44275b0  usr/share/doc/libtiff4/README.Debian
+1c51320be5812f33e393f1d97cff0c1b  usr/share/doc/libtiff4/TODO
+4dea3d798db94a241c9039db6a693382  usr/share/doc/libtiff4/changelog.Debian.gz
+695ae31c6ddc61ea38050467e1214369  usr/share/doc/libtiff4/copyright
+869cf35409cf26d736e326030f341fa0  usr/share/doc/libtiff4/README
+a28a1187c07dd46471cd9566e5cdc102  usr/share/lintian/overrides/libtiff4

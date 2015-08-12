@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpolkit-gnome0
+/usr/share/doc/libpolkit-gnome0/copyright
+/usr/share/doc/libpolkit-gnome0/changelog.Debian.gz
+/usr/share/doc/libpolkit-gnome0/TODO
+/usr/share/doc/libpolkit-gnome0/README
+/usr/share/doc/libpolkit-gnome0/NEWS.gz
+/usr/share/doc/libpolkit-gnome0/AUTHORS
+/usr/lib
+/usr/lib/libpolkit-gnome.so.0.0.0
+/usr/lib/libpolkit-gnome.so.0

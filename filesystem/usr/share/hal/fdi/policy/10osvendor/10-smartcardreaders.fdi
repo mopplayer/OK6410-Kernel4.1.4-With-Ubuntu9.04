@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deviceinfo version="0.2">
+  <device>
+    <match key="info.subsystem" string="usb">
+      <!-- SCM SPR 335, SPR 532 -->
+      <match key="usb.vendor_id" int="0x4e6">
+        <match key="usb.product_id" int_outof="0x5115;0xe001;0xe003">
+          <append key="info.capabilities" type="strlist">access_control</append>
+          <merge key="access_control.file" type="copy_property">@info.parent:linux.device_file</merge>
+          <merge key="access_control.type" type="string">smart-card-reader</merge>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

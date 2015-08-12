@@ -1,0 +1,12 @@
+26ebfd8420896f82308abea88df4978f  usr/share/dbus-1/services/obex-data-server.service
+ca731007c93cb1e8fc5af9fd74bbbd32  usr/share/doc/obex-data-server/dbus-api.txt.gz
+0a07e954967465d206375813eb7bbbd7  usr/share/doc/obex-data-server/NEWS.gz
+29357d24fb44843703d7edfb9af99690  usr/share/doc/obex-data-server/copyright
+1428d2e7bd470feebe9f41acd7f8bc93  usr/share/doc/obex-data-server/AUTHORS
+fa237cd36294686287641425bc060f86  usr/share/doc/obex-data-server/changelog.gz
+a654d2b8c466aa17d7fd24ca4869c6c0  usr/share/doc/obex-data-server/examples/README.examples
+4dd16672cea63000a17d84be43144236  usr/share/doc/obex-data-server/examples/ods-server-test.py.gz
+3b710a623e03d11692fc83381b641d81  usr/share/doc/obex-data-server/examples/ods-session-test.py.gz
+05554587227fc571a39ce873250b7f9b  usr/share/doc/obex-data-server/changelog.Debian.gz
+cbf17adcff876bb78bb6685cfcaba14e  usr/share/man/man1/obex-data-server.1.gz
+f5c957bade96ec4bffc6b64bdf130c8d  usr/bin/obex-data-server

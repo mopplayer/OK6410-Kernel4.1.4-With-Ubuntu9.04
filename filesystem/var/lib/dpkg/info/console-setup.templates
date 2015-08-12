@@ -1,0 +1,984 @@
+Template: debian-installer/console-setup/title
+Type: text
+Description: Configure the keyboard
+Description-be.UTF-8: Наладзіць клавіятуру
+Description-bg.UTF-8: Настройка на клавиатурата
+Description-cs.UTF-8: Nastavit klávesnici
+Description-de.UTF-8: Tastatur konfigurieren
+Description-eu.UTF-8: Konfiguratu teklatua:
+Description-fi.UTF-8: Tee näppäimistön asetukset
+Description-fr.UTF-8: Configurer le clavier
+Description-gl.UTF-8: Configurar o teclado
+Description-pt.UTF-8: Configure o teclado
+Description-sv.UTF-8: Välj tangentbord:
+Description-th.UTF-8: ตั้งค่าผังแป้นพิมพ์
+Description-tr.UTF-8: Klavye yapılandırması
+Description-vi.UTF-8: Cấu hình bàn phím
+
+Template: console-setup/codeset
+Type: select
+Choices: . Arabic, # Armenian, # Cyrillic - KOI8-R and KOI8-U, # Cyrillic - non-Slavic languages, # Cyrillic - Slavic languages (also Bosnian and Serbian Latin), . Ethiopic, # Georgian, # Greek, # Hebrew, # Lao, # Latin1 and Latin5 - western Europe and Turkic languages, # Latin2 - central Europe and Romanian, # Latin3 and Latin8 - Chichewa; Esperanto; Irish; Maltese and Welsh, # Latin7 - Lithuanian; Latvian; Maori and Marshallese, . Latin - Vietnamese, # Thai, . Combined - Latin; Slavic Cyrillic; Hebrew; basic Arabic, . Combined - Latin; Slavic Cyrillic; Greek, . Combined - Latin; Slavic and non-Slavic Cyrillic
+Choices-be.UTF-8: . Арабскі, # Армянскі, # Кірылічны - KOI8-R і KOI8-U, # Кірылічны - неславянскія мовы, # Кірылічны - славянскія мовы (разам з баснійскай і сербскай лацінкай), . Эфіёпскі, # Грузінскі, # Грэцкі, # Ізраільскі, # Лао, # Latin1 і Latin5 - заходне-еўрапейскія і турэцкія мовы, # Latin2 - цэнтральна-еўрапейскія і румынская, # Latin3 і Latin8 - чычэва; эсперанта; ірландская; мальтыйская і ўэльская, # Latin7 - літоўская; латвійская; маоры ды маршалская, . Latin - в'етнамская, # тайскі, . Аб'яднаны - Latin; славянская кірыліца; ізраільскі; базавы арабскі, . Аб'яднаны - Latin; славянская кірыліца; грэцкі, . Аб'яднаны - Latin; славянская і неславянская кірыліца
+Choices-bg.UTF-8: . арабски, # арменски, # кирилица - KOI8-R и KOI8-U, # кирилица - неславянски езици, # кирилица - славянски езици (вкл. босненска и сръбска латиница), . етиопски, # грузински, # гръцки, # еврейски, # лао, # Latin1 и Latin5 - западна Европа и тюркски езици, # Latin2 - централна Европа и румънски, # Latin3 и Latin8 - ниянджа; есперанто; ирландски; малтийски; уелски, # Latin7 - литовски; латвийски; маорски; маршалски, . Latin - виетнамски, # тайски, . комбинирана - латиница; славянска кирилица; еврейски; базов арабски, . комбинирана - латиница; славянска кирилица; гръцки, . комбинирана - латиница; славянска и неславянска кирилица
+Choices-cs.UTF-8: . Arabské, # Arménské, # Azbuka - KOI8-R a KOI8-U, # Azbuka - jiné než slovanské jazyky, # Azbuka - slovanské jazyky (také bosenská a srbská latinka), . Etiopské, # Gruzínské, # Řecké, # Hebrejské, # Laoské, # Latin1 a Latin5 - západoevropské jazyky a turečtina, # Latin2 - střední Evropa a rumunština, # Latin3 a Latin8 - čičeva; esperanto; irština; maltština a velština, # Latin7 - litevština; lotyština; maorština a maršalština, . Latin - vietnamština, # Thajské, . Kombinované - latinka; slovanská azbuka; hebrejština; základní arabština, . Kombinované - latinka; slovanská azbuka; řečtina, . Kombinované - latinka; slovanská i jiná azbuka
+Choices-de.UTF-8: . Arabisch, # Armenisch, # Kyrillisch - KOI8-R und KOI8-U, # Kyrillisch - nichtslawische Sprachen, # Kyrillisch - slawische Sprachen (auch bosnisch und serbisch-lateinisch), . Äthiopisch, # Georgisch, # Griechisch, # Hebräisch, # Laotisch, # Latin1 und Latin5 - westeuropäische und türkische Sprachen, # Latin2 - Zentraleuropäisch und Rumänisch, # Latin3 und Latin8 - Chichewa\, Esperanto\, Irisch\, Maltesisch und Walisisch, # Latin7 - Litauisch\, Lettisch\, Maorisch und Marshallisch, . Latin - Vietnamesisch, # Thailändisch, . Kombiniert - Latein\, slawisches Kyrillisch\, Hebräisch\, einfaches Arabisch, . Kombiniert - Latein\, slawisches Kyrillisch\, Griechisch, . Kombiniert - Latein\, slawisches und nichtslawisches Kyrillisch
+Choices-es.UTF-8: . Árabe, # Armenio, # Cirílico - LOI8-R y KOI8-U, # Cirílico - lenguas no Eslavas, # Cirílico - Lenguas Eslavas (también el Latino Serbio y Bosnio), . Etíope, # Georgiano, # Griego, # Hebreo, # Lao, # Latino1 y Latino5 - Europa Occidental y lenguas Turcas, # Latino2 - Europa Central y Rumano, # Latino3 y Latino8 - Chichewa; Esperanto; Irlandés; Maltés y Galés, # Latino7 - Lituano; Letonio; Maori y Marsellés, . Latino - Vietnamita, # Tailandés, . Combinado - Latino; Cirílico Eslavo; Hebreo; Árabe básico, . Combinado - Latino; Cirílico Eslavo; Griego, . Combinado - Latino; Cirílico Eslavo y no Eslavo
+Choices-eu.UTF-8: . Arabiarra, # Armeniarra, # Zirilikoa - KOI8-R eta KOI8-U, # Zirilikoa - hizkuntza ez-eslaviarrak, # Zirilikoa - Hizkuntza eslaviarrak (Bosnia eta Serbiar Latina barne), . Etiopiarra, # Georgiarra, # Grekoa, # Hebreera, # Laosera, # Latin1 eta Latin5 - mendebaldeko Europa eta turkiar hizkuntzak, # Latin2 - erdiko Europa eta errumaniera, # Latin3 eta Latin8 - Chichewa; Esperantoa; Irlandako gaelikoa; Maltera eta Galesa, # Latin7 - Lituaniera; Letoniera; Maoriera eta Marshallera, . Latina - Vietnamera, # Thailandiarra, . Askotarikoa - Latina; Eslaviar Zirilikoa; Hebreera; Arabiera soila, . Askotarikoa - Latina; Eslaviar zirilikoa; Grekoa, . Askotarikoa - Latina; Eslaviar eta ez-eslaviar Zirilikoa
+Choices-fi.UTF-8: . Arabialainen, # Armenialainen, # Kyrillinen - KOI8-R ja KOI8-U, # Kyrillinen - ei-slaavilaiset kielet, # Kyrillinen - slaavilaiset kielet (myös Bosnian ja Serbian Latin), . Etiopialainen, # Georgialainen, # Kreikkalainen, # Heprealainen, # Laolainen, # Latin1 ja Latin5 - länsieurooppalaiset ja turkkilaiset kielet, # Latin2 - keskieurooppalaiset kielet ja romania, # Latin3 ja Latin8 - chichewa; esperanto; iiri; malta; kymri, # Latin7 - liettua; latvia; maori; marshallin kieli, . Latin - vietnamilainen, # Thai, . Yhdistelmä - Latin; slaavilainen kyrillinen; heprea; arabian perusversio, . Yhdistelmä - Latin; slaavilainen kyrillinen; kreikka, . Yhdistelmä - Latin; slaavilainen ja ei-slaavilainen kyrillinen
+Choices-fr.UTF-8: . arabe, # arménien, # cyrillique : KOI8-R et KOI8-U, # cyrillique : langues autres que slaves, # cyrillique : langues slaves (et aussi le bosniaque et le serbe latin), . éthiopien, # géorgien, # grec, # hébreu, # lao, # latin1 et latin5 : langues de l'Europe de l'ouest et turc, # latin2 : langues d'Europe centrale et roumain, # latin3 et latin8 : chichewa\, espéranto\, irlandais\, maltais et gallois, # latin7 : lituanien\, letton\, maori et marshall, . latin : vietnamien, # thaï, . combiné : latin\, cyrillique slave\, hébreu\, arabe de base, . combiné : latin\, cyrillique slave\, grec, . combiné : latin\, cyrillique slave et non slave
+Choices-gl.UTF-8: . Árabe, # Armenio, # Cirílico - KIO8-R e KOI8-U, # Cirílico - idiomas non eslavos, # Cirílico - idiomas eslavos (tamén bosnio e serbio), . Etíope, # Xeorxiano, # Grego, # Hebreo, # Lao, # Latin1 e Latin5 - Europa occidental e idiomas turcos, # Latin2 - Europa central e rumano, # Latin3 e Latin8 - chichewa\, esperanto\, irlandés\, maltés e galés, # Latin7 - lituano\, letón\, maorí e marshalés, . Latino - Vietnamita, # Thai, . Combinado - latino\, cirílico eslavo\, hebreo\, árabe básico, . Combinado - latino\, cirílico eslavo\, grego, . Combinado - latino\, eslavo e cirílico non eslavo
+Choices-nl.UTF-8: . Arabisch, # Armeens, # Cyrillisch - KOI8-R en KOI8-U, # Cyrillisch - niet-Slavische talen, # Cyrillisch - Slavische talen (waaronder Bosnisch en Servisch Latijns), . Ethiopisch, # Georgisch, # Grieks, # Hebreeuws, # Laoees, # Latijns1 en Latijns5 - West-Europese en Turkse talen, # Latijns2 - Centraal-Europa en Roemenië , # Latijns3 en Latijns8 - Chichewa; Esperanto; Iers; Maltees en Welsh, # Latijns7 - Litouws; Lets; Maori en Marshallees, . Latijns - Vietnamees, # Thais , . Gecombineerd - Latijns; Slavisch Cyrillisch; Hebreeuws; basis-Arabisch, . Gecombineerd - Latijns; Slavisch Cyrillisch; Grieks, . Gecombineerd - Latijns; Slavisch en niet-Slavisch Cyrillisch
+Choices-pt.UTF-8: . Árabe, # Arménio, # Cirílico - KOI8-R e KOI8-U, # Cirílico - línguas não eslavas, # Cirílico - Línguas eslavas (também Bósnio e Sérvio Latino), . Etíope, # Georgiano, # Grego, # Hebraico, # Lao, # Latin1 e Latin5 - línguas da Europa ocidental e turcas, # Latin2 - Europa central e Romeno, # Latin3 e Latin8 - Chichewa; Esperanto: Irlandês; Maltês e Galês, # Latin7 - Lituano; Letão; Maori e Marshallês, . Latin - Vietnamita, # Tailandês, . Combinado - Latino; Cirílico Eslavo; Hebraico; Árabe básico, . Combinado - Latino; Cirílico Eslavo; Grego, . Combinado - Latino; Cirílico Eslavo e não Eslavo
+Choices-ru.UTF-8: . арабский, # армянский, # кириллица - KOI8-R и KOI8-U, # кириллица - не славянские языки, # кириллица - славянские языки (также боснийская и сербская латиница), . эфиопский, # грузинский, # греческий, # иврит, # лаосский, # Latin1 и Latin5 - языки западной Европы и тюркские, # Latin2 - для центральной Европы и румынские, # Latin3 и Latin8 - чева; эсперанто; ирландский; мальтийский и валлийский, # Latin7 - литовский; латышский; маори и маршальский, . Latin - вьетнамский, # тайский, . комбинированный - латинский; славянская кириллица; иврит; основной арабский, . комбинированный - латинский; славянская кириллица; греческий, . комбинированный - латинский; славянская и не славянская кириллица
+Choices-sv.UTF-8: . Arabiska, # Armenisk, # Kyrillisk - KOI8-R och KOI8-U, # Kyrillisk - icke-slaviska språk, # Kyrillisk - slaviska språk (samt Bosnisk och Serbisk latin), . Etiopisk, # Georgiska, # Grekiska , # Hebreiska, # Lao, # Latin1 och Latin5 - västeuropeiska språk samt turkiska, # Latin2 - centraleuropeiska språk, # latin3 och Latin8 - chichewa\, esperanto\, irländksa\, maltesiska och kymriska (walesiska), # Latin7 - litauiska\, lettiska\, maori och Marshallesiska, . Latin - vietnamesiska, # Thai, . Kombinerad - Latin\, slavisk kyrillisk\, hebreisk\, enkel arabisk, . Kombinerad - Latin\, slavisk kyrillisk\, grekisk, . Kombinerad - Latin\, slavisk och icke-slavisk kyrillisk
+Choices-th.UTF-8: . อารบิก, # อาร์เมเนีย, # ซีริลลิก - KOI8-R และ KOI8-U, # ซีริลลิก - ภาษาที่ไม่ใช่ตระกูลสลาฟ, # ซีริลลิก - ภาษาตระกูลสลาฟ (รวมถึงบอสเนียและละตินเซอร์เบีย), . เอธิโอเปีย, # จอร์เจีย, # กรีก, # ฮีบรู, # ลาว, # ละติน 1 และ ละติน 5 - ยุโรปตะวันตกและภาษาตระกูลเติร์ก, # ละติน 2 - ยุโรปตอนกลางและโรมาเนีย, # ละติน 3 และ ละติน 8 - ชิเชวา; เอสเปรันโต; ไอริช; มอลตา และเวลส์, # ละติน 7 - ลิทัวเนีย; ลัตเวีย; เมารี และมาร์แชลล์, . ละติน - เวียดนาม, # ไทย, . ผสม - ละติน; ซีริลลิกตระกูลสลาฟ; ฮีบรู; อารบิกพื้นฐาน, . ผสม - ละติน; ซีริลลิกตระกูลสลาฟ; กรีก, . ผสม - ละติน; ซีริลลิกตระกูลสลาฟและที่ไม่ใช่สลาฟ
+Choices-tr.UTF-8: . Arapça, # Ermenice, # Kiril - KOI8-R ve KOI8-U, # Kiril - Slav olmayan diller, # Kiril - Slav dilleri (ayrıca Boşnakça ve Latin Sırpça), . Etiyopyaca, # Gürcü Dili, # Yunanca, # İbranice, # Lao Dili, # Latin1 ve Latin5 - Batı Avrupa dilleri ve Türkî diller, # Latin2 - Orta Avrupa ve Romanya, # Latin3 ve Latin8 - Chichewa dili; Esperanto; İrlanda Dili; Galce ve Malta Dili, # Latin7 - Litvanya Dili; Letonca; Marshallese dili ve Yeni Zelanda Yerli Dili, . Latin - Vietnam Dili, # Tayca, . Birleştirilmiş - Latin; Slav Kirili; İbranice; temel Arapça, . Birleştirilmiş - Latin; Slav Kirili; Yunanca, . Birleştirilmiş - Latin; Slav Kirili ve Slav olmayan Kiril
+Choices-vi.UTF-8: . A Rập, # Ác-mê-ni, # Ki-rin: KOI8-R và KOI8-U, # Kirin: ngôn ngữ khác Xla-vợ, # Kirin: ngôn ngữ Xla-vợ (cũng có tiếng Bo-x-nia và Xéc-bi La-tinh), . Ê-ti-ô-pi, # Gi-oa-gi-a, # Hy Lạp, # Do Thái, # Lào, # Latin1 and Latin5: các ngôn ngữ vùng Tây Âu và kiểu Thổ Nhĩ Kỳ, # Latin2: vùng Trung Âu và tiếng Rô-ma-ni, # Latin3 and Latin8: tiếng Chi-chi-oua\, Ét-pe-ran-tô\, Ai-len\, Man-tơ và Ouen-s, # Latin7: tiếng Li-tu-a-ni\, Lát-vi-a\, Mao-ri và Ma-sa-ni, . Latin: Tiếng Việt, # Thái, . Tổ hợp: La-tinh; Ki-rin Xla-vợ; Do thái; A Rập cơ bản , . Tổ hợp: La-tinh; Ki-rin Xla-vợ; Hy Lạp, . Tổ hợp: La-tinh; Ki-rin Xla-vợ và khác Xla-vợ
+Default: . Combined - Latin; Slavic Cyrillic; Hebrew; basic Arabic
+Description: Set of characters that should be supported by the console font:
+ If you don't use a framebuffer, the choices that start with "." will
+ reduce the number of available colors on the console.
+Description-be.UTF-8: Знаказбор, што будзе падтрыманы шрыфтом кансолі:
+ Калі вы не выкарыстоўваеце framebuffer, варыянты з "." у пачатку паменшаць колькасць дасяжных колераў кансолі.
+Description-bg.UTF-8: Съвкупност от писмени знаци, която трябва да се поддържа на конзолата:
+ Ако не използвате фреймбуфер, вариантите, които започват с точка ще намалят броя възможни цветове на конзолата.
+Description-cs.UTF-8: Množina znaků, které by měly být podporovány konzolovým fontem:
+ Nepoužíváte-li framebuffer, pak volby začínající tečkou sníží počet barev dostupných na konzoli.
+Description-de.UTF-8: Zeichensatz, der von der Konsolenschriftart unterstützt werden soll:
+ Falls Sie keinen Framebuffer verwenden, werden die Auswahlen, die mit einem Punkt (».«) anfangen, die Anzahl der verfügbaren Farben auf der Konsole reduzieren.
+Description-eu.UTF-8: Kontsola letra-tipoak onartu behar dituen karaktere jokoak:
+ Framebuffer erabiltzen ez baduzu, puntu batez hasten diren aukerek kontsolan erabilgarri den kolore kopurua gutxiagotuko dute.
+Description-fi.UTF-8: Merkkijoukko, joita konsolifontin tulisi tukea:
+ Jos kehyspuskurointi ei ole käytössä, merkillä ”.” alkavat vaihtoehdot rajoittavat konsolilla käytössä olevien värien määrää.
+Description-fr.UTF-8: Jeu de caractères devant être pris en charge par la police de la console :
+ Si vous n'utilisez pas le tampon vidéo (« framebuffer »), les choix qui commencent par un point réduiront le nombre de couleurs disponibles pour la console.
+Description-gl.UTF-8: Conxunto de caracteres que debería estar soportado polo tipo de letra da consola:
+ Se non usa o framebuffer, as opcións que comezan con "." han reducir o número de cores dispoñibles na consola.
+Description-pt.UTF-8: Conjunto de caracteres que devem ser suportados pelo tipo de letra da consola:
+ Se não usar framebuffer as opções que começam com "." irão reduzir o número de cores disponíveis para a consola.
+Description-ru.UTF-8: Набор символов, который должен поддерживаться консольным шрифтом:
+ Если в консоли не используется фрейм-буфер, то в вариантах, начинающихся с ".", будет доступно меньшее число цветов.
+Description-sv.UTF-8: Dessa tecken ska kunna visas av teckensnittet i konsollen:
+ Om du inte använder framebuffer så kommer antalet färger att vara begränsad om du väljer ett alternativ som börjar med "."
+Description-th.UTF-8: ชุดอักขระที่แบบอักษรสำหรับคอนโซลควรรองรับ:
+ ถ้าคุณไม่ได้ใช้เฟรมบัฟเฟอร์ ตัวเลือกที่ขึ้นต้นด้วย "." จะทำให้จำนวนสีที่ใช้ได้ในคอนโซลลดลง
+Description-tr.UTF-8: Uçbirim yazıtipince desteklenmesi gereken karakter setleri:
+ Eğer çerçeve tamponu (framebuffer) kullanmıyorsanız, "." ile başlayan seçenekler uçbirimde kullanılabilir olan renklerin sayısını azaltacak.
+Description-vi.UTF-8: Bộ ký tự mà phông bàn giao tiếp nên hỗ trợ :
+ Nếu bạn không dùng vùng đệm khung, sự chọn bắt đầu với dấu chấm « . » sẽ giảm số các màu sắc sẵn sàng trên bàn giao tiếp.
+
+Template: console-setup/model
+Type: select
+Choices: ${CHOICES}
+Description: Keyboard model:
+Description-be.UTF-8: Мадэль клавіятуры:
+Description-bg.UTF-8: Модел на клавиатурата:
+Description-cs.UTF-8: Model klávesnice:
+Description-de.UTF-8: Tastaturmodell:
+Description-es.UTF-8: Modelo de teclado:
+Description-eu.UTF-8: Teklatu modeloa:
+Description-fi.UTF-8: Näppäimistön malli:
+Description-fr.UTF-8: Modèle du clavier :
+Description-gl.UTF-8: Modelo do teclado:
+Description-nl.UTF-8: Toetsenbordmodel:
+Description-pt.UTF-8: Modelo de teclado:
+Description-ru.UTF-8: Модель клавиатуры:
+Description-sv.UTF-8: Tangentbordsmodell:
+Description-th.UTF-8: รุ่นของแป้นพิมพ์:
+Description-tr.UTF-8: Klavye modeli:
+Description-vi.UTF-8: Mẫu bàn phím:
+
+Template: console-setup/layout
+Type: select
+Choices: ${CHOICES}
+Default: U.S. English
+Description: Origin of the keyboard:
+Description-be.UTF-8: Паходжанне клавіятуры:
+Description-bg.UTF-8: Произходът на клавиатурната подредба:
+Description-cs.UTF-8: Původ klávesnice:
+Description-de.UTF-8: Herkunft der Tastatur:
+Description-eu.UTF-8: Teklatuaren jatorria:
+Description-fi.UTF-8: Näppäimistön alkuperä:
+Description-fr.UTF-8: Origine du clavier :
+Description-gl.UTF-8: Orixe do teclado:
+Description-pt.UTF-8: Origem do teclado:
+Description-ru.UTF-8: Для кого предназначена клавиатура:
+Description-sv.UTF-8: Tangentbordets ursprung:
+Description-th.UTF-8: ผังแป้นพิมพ์:
+Description-tr.UTF-8: Klavyenin kökeni:
+Description-vi.UTF-8: Gốc của bàn phím này:
+
+Template: console-setup/variant
+Type: select
+Choices: ${CHOICES}
+Description: Keyboard layout:
+ There is more than one keyboard layout with the origin you selected.
+ Please select the layout matching your keyboard.
+Description-be.UTF-8: Раскладка клавіятуры:
+ Больш за адну раскладку клавіятуры з паходжаннем, што вы выбралі. Выберыце раскладку, адпаведную клавіятуры.
+Description-bg.UTF-8: Клавиатурна подредба:
+ Има повече от една клавиатурни подредби с посочения от вас произход.  Моля, изберете онази от тях, която съответства на вашата клавиатура.
+Description-cs.UTF-8: Rozložení klávesnice:
+ Ke zvolenému původu existuje více klávesových rozložení. Vyberte si prosím rozložení odpovídající vaší klávesnici.
+Description-de.UTF-8: Tastenbelegung:
+ Es gibt mehr als eine mögliche Tastenbelegung für das Herkunftsland, das Sie ausgewählt haben. Bitte wählen Sie die zu Ihrer Tastatur passende Belegung.
+Description-eu.UTF-8: Teklatu diseinua:
+ Hautatu duzun jatorrirako teklatu diseinu bat baino gehiago dago. Mesedez hautatu zure teklatuari dagokion diseinua.
+Description-fi.UTF-8: Näppäinasettelu:
+ Valittua näppäimistön alkuperää vastaa useampi näppäinasettelu. Valitse oikea näppäinasettelu.
+Description-fr.UTF-8: Disposition du clavier :
+ Plusieurs dispositions de clavier correspondant à l'origine choisie. Veuillez choisir celle qui correspond à votre clavier.
+Description-gl.UTF-8: Disposición do teclado:
+ Hai máis dunha disposición de teclado coa orixe que escolleu. Escolla a disposición que encaixe co seu teclado.
+Description-pt.UTF-8: Disposição do teclado:
+ Há mais de uma disposição de teclado com a origem escolhida. Por favor escolha a disposição que corresponde ao seu teclado.
+Description-ru.UTF-8: Раскладка клавиатуры:
+ Для выбранного вами предназначения, есть несколько раскладок клавиатуры. Выберите раскладку, подходящую для вашей клавиатуры.
+Description-sv.UTF-8: Tangentbordsupplägg:
+ Det finns mer än ett upplägg för tangentbordet med ursprunget du angav, vänligen välj tangentbordsupplägg.
+Description-th.UTF-8: ผังแป้นพิมพ์แบบย่อย:
+ มีผังแป้นพิมพ์แบบย่อยของผังแป้นพิมพ์ที่คุณเลือก กรุณาเลือกแบบย่อยที่ตรงกับแป้นพิมพ์ของคุณ
+Description-tr.UTF-8: Klavye düzeni:
+ Seçtiğiniz köken birden fazla düzene sahip. Lütfen klavyenizle uyuşan bir düzen seçin.
+Description-vi.UTF-8: Bố trí bàn phím:
+ Sơ đồ gốc đã chọn có một vài biến thể.  Xin hãy chọn biến thể thích hợp với bàn phím.
+
+Template: console-setup/dont_ask_layout
+Type: error
+Description: Unsupported settings in configuration file
+ The configuration file /etc/default/console-setup specifies a keyboard
+ layout and variant that are not supported by the configuration
+ program.  Because of that, no questions about the keyboard layout will
+ be asked and your current configuration will be preserved.
+Description-be.UTF-8: Непадтрыманыя настаўленні ў файле налад
+ Файл налад file /etc/default/console-setup вызначае раскладку клавіятуры і варыянт, што не падтрымліваецца праграмай наладжвання. Праз гэта не будзе задана пытанняў пра раскладку клавіятуры і вашыя бягучыя налады будуць захаваны.
+Description-bg.UTF-8: Неподдържани настройки в конфигурационния файл
+ Конфигурационният файл /etc/default/console-setup определя клавиатурна подредба и вариант, които не се поддържат от конфигурационната програма.  Поради това няма да бъдат задавани въпроси за клавиатурната подредба, а ще бъде запазена текущата настройка.
+Description-cs.UTF-8: Nepodporovaná nastavení v konfiguračním souboru
+ Konfigurační soubor /etc/default/console-setup obsahuje variantu a rozložení klávesnice, které nejsou podporovány tímto konfiguračním programem. Kvůli tomu budou nyní přeskočeny otázky ohledně nastavení klávesnice a vaše stávající nastavení bude zachováno.
+Description-de.UTF-8: Nicht unterstützte Einstellungen in der Konfigurationsdatei
+ Die Konfigurationsdatei /etc/default/console-setup spezifiziert eine Tastaturbelegung und -variante, die von dem Konfigurationsprogramm nicht unterstützt wird. Deshalb werden keine Fragen über die Tastaturbelegung gestellt und Ihre gegenwärtige Konfiguration wird erhalten.
+Description-eu.UTF-8: Ezarpen onartezina konfigurazio fitxategian
+ /etc/default/console-setup konfigurazio fitxategiak konfigurazio programak onartzen ez dituen teklatu diseinu eta aldagaiak ezartzen ditu. Horregatik teklatu diseinuari buruzko galderarik ez zaizu egingo eta zure uneko konfigurazioa mantenduko da.
+Description-fi.UTF-8: Ei-tuettuja asetuksia asetustiedostossa
+ Asetustiedostossa /etc/default/console-setup on määritelty näppäinasettelu ja muunnelma, joita asetusohjelma ei tue. Tästä syystä näppäinasetteluun liittyviä kysymyksiä ei kysytä ja nykyiset asetukset säilytetään.
+Description-fr.UTF-8: Paramètres non gérés dans le fichier de configuration
+ Le fichier de configuration /etc/default/console-setup spécifie une disposition et une variante du clavier qui ne sont pas gérées par le programme de configuration. Pour cette raison, aucune information ne vous sera demandée concernant la disposition des touches de votre clavier et le configuration actuelle sera conservée.
+Description-gl.UTF-8: Parámetros sen soporte no ficheiro de configuración
+ O ficheiro de configuración /etc/default/console-setup especifica unha disposición de teclado e variante que non están soportados no programa de configuración. Debido a iso non se han facer preguntas sobre a disposición de teclado e hase conservar a configuración actual.
+Description-pt.UTF-8: Opções não suportadas no ficheiro de configuração
+ O ficheiro de configuração /etc/default/console-setup especifica uma disposição de teclado e variante que não são suportados pelo programa de configuração. Por essa razão não serão feitas perguntas sobre a disposição de teclado e a configuração actual será mantida.
+Description-ru.UTF-8: Неподдерживаемые настройки в конфигурационном файле
+ В файле настройки /etc/default/console-setup указана раскладка клавиатуры и вариант, которые не поддерживаются программой настройки. Из-за этого вопросы о раскладке клавиатуры заданы не будут, а имеющаяся настройка будет сохранена.
+Description-sv.UTF-8: Okända inställningar i konfigurationsfilen
+ Konfigurationsfilen /etc/default/console-setup anger ett tangentbordsupplägg som inte stöds av konfigurationsprogrammet. På grund av detta kommer inga övriga frågor att ställas om tangentbordsupplägget och din nuvarande konfiguration behålls.
+Description-th.UTF-8: พบค่าตั้งที่ไม่รองรับในแฟ้มค่าตั้ง
+ แฟ้มค่าตั้ง /etc/default/console-setup ระบุผังแป้นพิมพ์และแบบย่อยที่โปรแกรมตั้งค่าไม่รองรับ ดังนั้น จะไม่ถามคำถามเกี่ยวกับผังแป้นพิมพ์ และจะคงค่าตั้งปัจจุบันของคุณไว้
+Description-tr.UTF-8: Yapılandırma dosyasındaki desteklenmeyen ayarlar
+ /etc/default/console-setup yapılandırma dosyasında yapılandırma programı tarafından desteklenmeyen bir klavye düzeni ve alt tür bildirilmiş.  Bu yüzden klavye düzeniyle ilgili herhangi bir soru sorulmayacak ve mevcut yapılandırmanız korunacak.
+Description-vi.UTF-8: Tập tin cấu hình chứa thiết lập không được hỗ trợ
+ Tập tin cấu hình « /etc/default/console-setup » ghi rõ một bố trí bàn phím và biến thể không được chương trình cấu hình hỗ trợ. Do đó, không có câu về bố trí bàn phím sẽ được hỏi, và cấu hình hiện thời sẽ không thay đổi.
+
+Template: console-setup/fontface
+Type: select
+Choices: ${CHOICES}
+Default: Fixed
+Description: Font for the console:
+ Please choose the font face you would like to use on Linux console.
+ .
+  - VGA has a traditional appearance and has medium coverage
+    of international scripts;
+  - Fixed has a simplistic appearance and has better coverage
+    of international scripts;
+  - Terminus is aimed to reduce eye fatigue, though some symbols
+    have a similar aspect which may be a problem for programmers.
+ .
+ If you prefer a bold version of the Terminus font, then choose
+ TerminusBold if you use a framebuffer, otherwise TerminusBoldVGA.
+Description-be.UTF-8: Шрыфт кансолі:
+ Выберыце шрыфт дл выкарыстання на кансолі Linux.
+ .
+  - VGA выглядае традыцыйна і змяшчае сярэднюю колькасць
+    міжнародных скрыптоў;
+  - Fixed мае найпрасцейшы выгляд і лепшую падтрымку
+    міжнародных скрыптоў;
+  - Terminus мае на мэце зменшыць стомленасць вачэй, хаця
+    некаторыя сімвалы выглядаюць аднолькава, што ёсць 
+    праблема для праграмістаў.
+ .
+ Калі вы аддаеце перавагу тлустай версіі шрыфта Terminus і не выкарыстоўваеце фрэймбуфер, то выберыце TerminusBold.  Калі выкарыстоўваеце фрэймбуфер, то выберыце TerminusBoldVGS.
+Description-bg.UTF-8: Шрифт за конзолата:
+ Моля, посочете шрифта, който бихте желали да се използва на конзолата на Линукс.
+ .
+ VGA изглежда по традиционен начин и има умерено добра поддръжка на различните азбуки. Fixed изглежда опростено и има по-добра поддръжка на различните азбуки. Целта на шрифта Terminus е да намали умората на очите, макар че някои символи си приличат и това може да бъде проблем за програмистите.
+ .
+ Ако предпочитате удебеления вариант на шрифта Terminus и не използвате фреймбуфер, изберете TerminusBoldVGA.  Ако пък използвате фреймбуфер, тогава изберете TerminusBold.
+Description-cs.UTF-8: Písmo pro konzoli:
+ Zvolte si prosím typ písma, které chcete na konzoli používat.
+ .
+  - VGA má tradiční vzhled a střední pokrytí mezinárodních
+    znaků;
+  - Fixed má jednoduchý vzhled a má lepší pokrytí
+    mezinárodních znaků;
+  - Terminus je zaměřen na snížení námahy očí, ačkoliv
+    některé znaky mají podobný vzhled, což může být problém
+    třeba pro programátory.
+ .
+ Preferujete-li tučnou variantu písma Terminus a používáte framebuffer, zvolte TerminusBold. Pokud framebuffer nepoužíváte, zvolte TerminusBoldVGA.
+Description-de.UTF-8: Schriftart für die Konsole:
+ Bitte wählen Sie die Schriftart, die Sie auf der Linux-Konsole verwenden möchten.
+ .
+  - VGA sieht traditionell aus und hat eine mittlere Abdeckung
+    von internationalen Schriften;
+  - Fixed hat ein einfaches Aussehen und eine bessere Abdeckung
+    von internationalen Schriften;
+  - Terminus ist darauf gerichtet, die Ermüdung der Augen zu
+    reduzieren. Manche Symbole haben ein ähnliches Aussehen,
+    was ein Problem für Programmierer sein kann.
+ .
+ Falls Sie von Terminus die fette Variante vorziehen und keinen Framebuffer verwenden, dann wählen Sie TerminusBoldVGA. Falls Sie Framebuffer verwenden, wählen Sie TerminusBold.
+Description-eu.UTF-8: Kontsolaren letra-tipoa:
+ Mesedez hautatu Linux kontsolan erabili nahi duzun letra-tipo itxura.
+ .
+  - <VGA> itxura tradizionala da eta grafia internazionalen onarpen
+    ertaina du;
+  - <Fixed>-ek itxura sinpleagoa du eta grafia internazionalen
+    onarpen hobea du;
+  - <Terminus> begien nekadura gutxitzeko garatuta dago, horregatik
+    zenbait ikur antzekoak dira programatzaileentzat arazo bat izan
+    badaiteke ere.
+ .
+ Terminus letra-tipoen bertsio lodia nahiago baduzu eta ez baduzu framebuffer erabiltzen, TerminusBoldVGA hautatu. Framebuffer erabiltzen baduzu TerminusBold hautatu.
+Description-fi.UTF-8: Konsolissa käytettävä fontti:
+ Valitse fontti, jota Linux-konsolissa käytetään.
+ .
+  - VGA:      Perinteinen ulkoasu, kohtuullinen tuki eri kielien merkeille.
+  - Fixed:    Yksinkertaisempi ulkoasu, parempi tuki eri kielien merkeille.
+  - Terminus: Suunniteltu vähentämään silmien väsymistä. Tietyt merkit
+              näyttävät toisiltaan, mikä saattaa haitata ohjelmoitaessa.
+ .
+ Jos käyttöön halutaan Terminus-fontin lihavoitu versio ja kehyspuskurointi on käytössä, valitse TerminusBold, muussa tapauksessa valitse TerminusBoldVGA.
+Description-fr.UTF-8: Police de caractères pour la console :
+ Veuillez indiquer le type de police que vous désirez utiliser pour la console Linux en mode texte.
+ .
+  - « VGA » correspond à l'apparence traditionnelle, elle possède
+    une couverture moyenne des scripts internationaux.
+  - « Fixed » a un aspect simplifié et une meilleure couverture des
+    scripts internationaux.
+  - « Terminus » a pour but de limiter la fatigue oculaire. Cependant
+    certains symboles peuvent apparaître presque semblables, ce qui peut
+    représenter un problème pour les programmeurs.
+ .
+ Si vous préférez la version grasse de la police Terminus et que vous n'utilisez pas le tampon vidéo (« framebuffer »), choisissez alors TerminusBoldVGA. Si vous utilisez le tampon vidéo, utilisez alors TerminusBold.
+Description-gl.UTF-8: Tipo de letra para a consola:
+ Escolla o tipo de letra que quere empregar na consola de Linux.
+ .
+  - VGA ten un aspecto tradicional e ten cobertura media
+    dos alfabetos internacionais;
+  - Fixed ten un aspecto simple e ten mellor cobertura
+    dos alfabetos internacionais;
+  - Terminus está deseñado para reducir a fatiga visual
+    aínda que algúns símbolos teñen un aspecto similar,
+    o que pode ser un problema para os programadores.
+ .
+ Se prefire a versión en negrito do tipo Terminus, escolla o tipo TerminusBold se emprega o framebuffer; se non, escolla TerminusBoldVGA.
+Description-pt.UTF-8: Tipo de letra para a consola:
+ Por favor escolha o tipo de letra que quer usar na consola Linux.
+ .
+  - VGA tem uma aparência tradicional e suporta alfabetos
+    internacionais;
+  - Fixed tem uma aparência simplista mas melhor suporte
+    para alfabetos internacionais;
+  - Terminus tem como objectivo reduzir a fatiga ocular
+    embora alguns símbolos têm aspectos semelhantes que podem
+    causar problemas aos programadores.
+ .
+ Se preferir a versão negrito do tipo de letra Terminus escolha TerminusBold se usa framebuffer, e TerminusBoldVGA se não usa.
+Description-ru.UTF-8: Консольный шрифт:
+ Выберите начертание шрифта, который вы бы хотели видеть в консоли Linux.
+ .
+  - VGA имеет традиционный вид и содержит половину
+    международных символов;
+  - Fixed имеет упрощённый вид и содержит большее количество
+    международных символов;
+  - Terminus снижает нагрузку на глаза, хотя некоторые
+    символы имеют схожий вид, что может быть проблемой
+    для программистов.
+ .
+ Если вам нравится жирная версия шрифта Terminus и вы используете фрейм-буфер, то выберите TerminusBold. Если нет, то выбирайте TerminusBoldVGA.
+Description-sv.UTF-8: Teckensnitt för konsollen:
+ Välj vilket teckensnitt som ska användas i konsollen
+ .
+ - VGA använder en traditionell visning och har medelbra
+ spridning i internationella skript
+ - Fixed har ett enkelt förhållningssätt och bättre spridning
+ i internationella skript.
+ - Terminus är framtaget för att reducera ögontrötthet, en del tecken är dock mycket lika varandra och ställer därmed till en del problem för programmerare.
+ .
+ Om du vill ha en fetstil version av Terminus så väljer du TerminusBold om du använder dig av en framebuffer, i övriga fall ska du välja TerminusBoldVGA.
+Description-th.UTF-8: แบบอักษรสำหรับคอนโซล:
+ กรุณาเลือกแบบอักษรที่ต้องการใช้บนคอนโซลลินุกซ์:
+ .
+  - VGA จะมีรูปร่างตามแบบธรรมดา และมีอักษรภาษาต่างๆ แต่พอประมาณ
+  - Fixed จะมีรูปร่างง่ายๆ และครอบคลุมอักษรภาษาต่างๆ มากกว่า
+  - Terminus มุ่งให้ดูสบายตา แต่สัญลักษณ์บางตัวอาจมีสัดส่วนใกล้เคียงกัน
+    ทำให้มีปัญหาสำหรับโปรแกรมเมอร์
+ .
+ ถ้าคุณต้องการใช้แบบอักษร Terminus แบบหนา ก็ให้เลือก TerminusBold ในกรณีที่ใช้เฟรมบัฟเฟอร์ หรือถ้าไม่ใช้เฟรมบัฟเฟอร์ ก็เลือก TerminusBoldVGA
+Description-tr.UTF-8: Uçbirimde kullanılacak yazıtipi:
+ Lütfen Linux uçbiriminde kullanmak istediğiniz yazıtipini seçin.
+ .
+  - VGA geleneksel görünümlüdür ve uluslar arası kullanım
+    için vasattır;
+  - Fixed basit görünümlüdür ve harf kapsamı en geniş olan
+    yazıtipidir;
+  - Terminus göz yorgunluğunu azaltmayı amaçlar.
+ .
+ Terminus yazıtipini tercih etmeniz halinde, eğer çerçeve tamponu kullanıyorsanız TerminusBold'u, çerçeve tamponu kullanmıyorsanız TerminusBoldVGA'yı seçin.
+Description-vi.UTF-8: Phông cho bàn giao tiếp:
+ Hãy chọn mặt phông chữ bạn muốn dùng trên bàn giao tiếp Linux.
+ .
+  • VGA	hình thức truyền thống, hỗ trợ trung bình các chữ viết quốc tế.
+  • Fixed	hình thức đơn giản, mà hỗ trợ nhiều chữ viết quốc tế hơn.
+  • Terminus	giảm sự mệt mỏi mắt, dù một số ký hiệu hình như tương tự
+ 			thì có thể khó đọc cho nhà phát triển.
+ .
+ Thích phông chữ Terminus in đậm thì hãy chọn TerminusBold nếu dùng vùng đệm khung; không thì chọn TerminusBoldVGA.
+
+Template: console-setup/fontsize-text
+Type: select
+Choices: ${CHOICES}
+Default: 16
+Description: Font size:
+ Please select the size of the font for the Linux console.  For
+ reference, the font your computer starts with has size 16.
+Description-be.UTF-8: Памер шрыфта:
+ Вызначце памер шрыфта для кансолі Linux. Падказка: шрыфт, з якім кампутар запускаецца, мае памер 16.
+Description-bg.UTF-8: Размер на шрифта:
+ Моля, изберете размера на шрифта за конзолата на Линукс. За сравнение - шрифтът, с който вашият компютър се стартира, има височина 16.
+Description-cs.UTF-8: Velikost písma:
+ Vyberte prosím velikost písma pro linuxovou konzoli. Pro orientaci: při startu počítače se používá písmo o velikosti 16.
+Description-de.UTF-8: Schriftgröße:
+ Bitte wählen Sie die Größe der Schriftart für die Linux-Konsole. Zum Vergleich - die Schriftart, mit der Ihr Rechner startet, hat die Größe 16.
+Description-eu.UTF-8: Letra-tipo tamaina:
+ Mesedez hautatu Linux kontsolarako letra-tipo tamaina. Erreferentzia gisa: zure ordenagailuak abiaraztean erabiltzen duen tamaina 16 da.
+Description-fi.UTF-8: Fontin koko:
+ Valitse Linux-konsolilla käytettävän fontin koko. Vertailukohtana voidaan käyttää tietokoneen käynnistyessä käytettävää koon 16 fonttia.
+Description-fr.UTF-8: Taille de la police :
+ Veuillez choisir la taille de la police pour la console Linux. Comme référence, la taille de la police au démarrage du système est de 16.
+Description-gl.UTF-8: Tamaño do tipo:
+ Escolla o tamaño do tipo de letra para a consola de Linux. Como referencia, o tipo de letra co que se inicia o ordenador ten tamaño 16.
+Description-pt.UTF-8: Tamanho da letra:
+ Por favor escolha o tamanho da letra para a consola Linux. Para comparação, o tamanho de letra no arranque do computador tem tamanho 16.
+Description-ru.UTF-8: Размер шрифта:
+ Выберите размер шрифта для консоли Linux. Для справки: размер шрифта для вашего компьютера начинается с 16.
+Description-sv.UTF-8: Teckenstorlek:
+ Välj teckenstorlek för konsollen. Som referens kan du tänka på att i startläget så används storlek 16.
+Description-th.UTF-8: ขนาดแบบอักษร:
+ กรุณากำหนดขนาดของแบบอักษรสำหรับคอนโซลลินุกซ์ ข้อมูลอ้างอิง: แบบอักษรที่ใช้ขณะเปิดเครื่องมีขนาด 16
+Description-tr.UTF-8: Yazıtipi boyutu
+ Lütfen Linux uçbiriminde kullanmak istediğiniz yazıtipi boyutunu seçin.  Başvuru olması açısından; bilgisayarınızın başlarken kullandığı yazıtipinin boyutu 16'dır.
+Description-vi.UTF-8: Kích cỡ phông:
+ Hãy chọn kích cỡ của phông chữ cho bàn giao tiếp Linux. Để so sánh, máy tính này khởi động với phông chữ kích cỡ 16.
+
+Template: console-setup/fontsize-fb
+Type: select
+Choices: ${CHOICES}
+Default: 16
+Description: Font size:
+ Please select the size of the font for the Linux console.  When the
+ size is represented as a plain number then the corresponding font can
+ be used with all console drivers and the number measures the height
+ of the symbols (in number of scan lines).  Otherwise the size has the
+ format HEIGHTxWIDTH and the corresponding fonts can be used only if
+ you use framebuffer and the kbd console package (console-tools
+ doesn't work for such fonts).  Currently these fonts cannot be used
+ if the framebuffer you use is based on the RadeonFB kernel module.
+ .
+ You can use the height of the fonts in order to figure out the real
+ size of the symbols on the console.  For reference, the font your
+ computer starts with has height 16.
+Description-be.UTF-8: Памер шрыфта:
+ Выберыце памер шрыфта для кансолі Linux. Калі памер прадстаўлены як лічба, то адпаведны шрыфт можа быць ужыты з усімі драйверамі кансоляў і лічба вымярае вышыню сімвалаў (у знойдзеных лініях). Інакш памер мае фармат ВЫШЫНЯxШЫРЫНЯ, і адпаведныя шрыфты могуць быць ужыты, толькі калі вы выкарыстоўваеце фрэймбуфер ды кансольны пакет kbd (console-tools не працуюць з такімі шрыфтамі). Зараз гэтыя шрыфты не могуць быць ужыты, калі вы карыстаецеся фрэймбуферам на падставе модуля RadeonFB ядра.
+ .
+ Вы можаце вызначыць вышыню шрыфтоў, каб высветліць рэальны памер сімвалаў на кансолі. Падказка: шрыфт, з якім кампутар запускаецца, мае вышыню 16.
+Description-bg.UTF-8: Размер на шрифта:
+ Моля, посочете размера на шрифта за конзолата на Линукс. Когато размерът е представен с обикновено число, тогава съответният шрифт може да се използва с всички конзолни драйвери, а числото показва височината на символите (в брой редове).  В противен случай размерът има вида ВИСОЧИНАxШИРИНА, а съответните шрифтове могат да се използват само ако използвате фреймбуфер и конзолния пакет kbd (console-tools не работи с такива шрифтове).  Понастоящем тези шрифтове не могат да се използват и ако вашият фреймбуфер е реализиран посредством модула на ядрото RadeonFB.
+ .
+ Може да използвате височината на шрифтовете, за да си представите реалния размер на символите на конзолата.  За сравнение - шрифтът, с който вашият компютър се стартира, има височина 16.
+Description-cs.UTF-8: Velikost písma:
+ Zadejte prosím velikost písma pro linuxovou konzoli. Pokud je velikost zadána jako přirozené číslo, pak můžete použít odpovídající font se všemi ovladači konzole. Číslo znamená výšku symbolů (měřeno počtem rozkladových řádků). V ostatních případech má velikost formát VÝŠKAxŠÍŘKA a příslušný font lze použít pouze pokud používáte framebuffer a konzolový balík kbd (console-tools pro tyto fonty nefungují). Tato písma také nemůžete použít v případech, kdy používáte framebuffer založený na jaderném modulu RadeonFB.
+ .
+ Výšku fontů můžete použít pro odhad reálné velikosti symbolů na obrazovce. Pro orientaci: při startu počítače se používá písmo o velikosti 16.
+Description-de.UTF-8: Schriftgröße:
+ Bitte wählen Sie die Größe der Schriftart für die Linux-Konsole. Wenn die Größe als einfache Zahl angegeben wird, dann kann die entsprechende Schriftart mit allen Konsolentreibern genutzt werden. Die Zahl misst die Höhe der Symbole (in Bildschirmzeilen). Anderenfalls hat die Größe das Format HÖHExBREITE und die entsprechenden Schriftarten können nur genutzt werden, falls Sie Framebuffer und das kbd-console-Paket verwenden (console-tools funktioniert nicht mit solchen Schriftarten). Gegenwärtig können diese Schriftarten nicht genutzt werden, falls der Framebuffer, den Sie verwenden, auf dem RadeonFB-Kernelmodul basiert.
+ .
+ Sie können die Höhe der Schriftart dazu verwenden, die wirkliche Größe der Symbole auf der Konsole zu ermitteln. Als Vergleich - die Schriftart, mit der Ihr Rechner startet, hat die Höhe 16.
+Description-eu.UTF-8: Letra-tipo tamaina:
+ Mesedez hautatu Linux kontsolan erabiliko den letra-tipoaren tamaina. Tamaina zenbaki oso batez errepresentatzen denean, dagokion letra-tipoa kontsola kontrolatzaile guztiekin erabili ahalko da eta zenbakiak ikurraren altuera adieraziko du (eskaneatze lerro kopurua). Bestela, tamainak ALTUERAxZABALERA formatua du, eta dagozkion letra-tipoak erabiltzeko framebuffer eta kbd kontsola paketea erabili behar dira (console-tools paketeak ez du funtzionatzen letra-tipo hauekin). Oraingoz letra-tipo hauek ezin dira erabili erabiltzen duzun framebuffer-a RadeonFB kernel moduluan oinarriturik badago.
+ .
+ Letra-tipoen altuera erabil dezakezu kontsola ikurren egiazko tamainaren ideia bat egiteko.  Erreferentzia gisa: ordenagailuak abiaraztean erabiltzen duen letra-tipoa 16 da.
+Description-fi.UTF-8: Fontin koko:
+ Valitse Linux-konsolin fontin koko. Kun koko annetaan pelkkänä numerona, sitä vastaavaa fonttia voidaan käyttää kaikkien konsoliajurien kanssa ja numero mittaa symbolien korkeutta (piirtorivien määränä). Vaihtoehtoisesti koko annetaan muodossa KORKEUSxLEVEYS ja vastaavia fontteja voidaan käyttää vain käytettäessä kehyspuskurointia ja konsolipakettia kbd (console-tools ei toimi tällaisten fonttien kanssa). Tällä hetkellä näitä fontteja ei voida käyttää, jos käytössä on RadeonFB-ydinmoduuliin perustuva kehyspuskuri.
+ .
+ Fonttien korkeuksia voidaan käyttää apuna määritettäessä konsolilla näkyvien symbolien kokoa. Vertailukohtana voidaan käyttää tietokoneen käynnistyessä käytettävää koon 16 fonttia.
+Description-fr.UTF-8: Taille de la police :
+ Veuillez choisir la taille de la police de la console Linux. Lorsque la taille est représentée par un nombre entier, la police correspondante peut être utilisée avec tous les pilotes de console et les nombres indiquent la hauteur des symboles (en nombre de lignes de balayage). Sinon, la taille est dans le format HAUTEURxLARGEUR et les polices correspondantes ne peuvent être utilisées que si vous utilisez le tampon vidéo (« framebuffer ») et le paquet « kbd » (« console-tools » ne fonctionne pas avec ce type de police). Actuellement, ces polices ne peuvent pas être utilisées si votre tampon vidéo est basé sur le module du noyau RadeonFB.
+ .
+ La hauteur des polices peut vous aider à avoir une idée de la taille réelle des symboles sur la console. Comme référence, la police avec laquelle votre ordinateur démarre a une hauteur de 16.
+Description-gl.UTF-8: Tamaño do tipo:
+ Seleccione o tamaño do tipo de letra para a consola de Linux. Se se representa o tamaño cun só número hase poder empregar o tipo de letra correspondente con tódolos controladores de consola, e o número indica a altura dos símbolos (en liñas). Se o tamaño ten o formato ALTOxANCHO, os tipos correspondentes só se poden empregar se usa o framebuffer e o paquete de consola kbd (console-tools non funciona con eses tipos). Actualmente, non se poden empregar eses tipos se o framebuffer que usa está baseado no módulo do núcleo RadeonFB.
+ .
+ Pode empregar a altura dos tipos para determinar o tamaño real dos símbolos na consola. Coma referencia, o tipo de letra co que se inicia o seu ordenador ten altura 16.
+Description-pt.UTF-8: Tamanho da letra:
+ Por favor escolha o tamanho da letra para a consola Linux. Quando o tamanho é representado por um número o tipo de letra correspondente pode ser usado com todos os drivers de consola e o número mede a altura dos símbolos (em número de linhas de varrimento). Alternativamente, o tamanho tem o formato ALTURAxLARGURA e os tipos de letra correspondentes podem ser usados apenas se usar o framebuffer e o pacote kbd console (o console-tools não funciona com esses tipos de letra). Actualmente não se podem usar estes tipos de letra se usar um framebuffer baseado no módulo de kernel RadeonFB.
+ .
+ Pode usar a altura do tipo de letra para calcular a altura real dos símbolos na consola. Para comparação, o tipo de letra no arranque do computador tem uma altura de 16.
+Description-ru.UTF-8: Размер шрифта:
+ Выберите размер шрифта для консоли Linux. Если размер задан просто числом, то соответствующий ему шрифт может быть использован с любым драйвером консоли, а число означает высоту символов (то есть число сканируемых линий). Также размер может иметь формат ВЫСОТАхШИРИНА, но соответствующие в этом случае шрифты будут использованы только, если используется фрейм-буфер и консольный пакет kbd (console-tools не работает с такими шрифтами). В настоящее время такие шрифты не могут использоваться, если для работы фрейм-буфера используется модуль ядра RadeonFB.
+ .
+ Вы можете использовать высоту шрифтов для определения реального размера символов в консоли. Для справки: высота шрифта для вашего компьютера начинается с 16.
+Description-sv.UTF-8: Teckenstorlek:
+ Välj storleken på tecknen i konsollen. När storleken anges som ett ensamt tal så kan tecknet visas av alla konsolldrivrutiner och talet anger då höjden på tecknen (antalet linjer som behöver uppdateras i skärmen). I övriga fall så anges storleken genom HÖJDxBREDD och teckensnittet kan då bara användas om du använder en frambuffer och paketet kbd (console-tools kan inte användas för sådana teckensnitt). Dessa teckensnitt kan inte användas om framebuffern använder sig av kärnmodulen RadeonFB.
+ .
+ Du kan använda höjden på tecknet för att ta reda på den verkliga storleken på tecknet. Som referens kan du tänka på att startläget använder teckenstorleken 16.
+Description-th.UTF-8: ขนาดแบบอักษร:
+ กรุณากำหนดขนาดของแบบอักษรสำหรับคอนโซลลินุกซ์ ถ้าขนาดเป็นตัวเลขล้วน แบบอักษรจะใช้ได้กับไดรเวอร์สำหรับคอนโซลทุกตัว โดยตัวเลขนี้จะกำหนดความสูงของตัวอักษร (ในหน่วยจำนวนจุด) มิฉะนั้น ขนาดก็ต้องอยู่ในรูป สูงxกว้าง ซี่งแบบอักษรดังกล่าวจะใช้ได้เมื่อใช้เฟรมบัฟเฟอร์และแพกเกจ kbd เท่านั้น (console-tools ใช้แบบอักษรดังกล่าวไม่ได้) และในขณะนี้ แบบอักษรดังกล่าว จะใช้ไม่ได้กับเฟรมบัฟเฟอร์ที่ทำงานด้วยมอดูลเคอร์เนล RadeonFB
+ .
+ คุณสามารถใช้ความสูงของแบบอักษรในการหาความสูงของตัวอักษรจริงๆ บนคอนโซลได้ ข้อมูลอ้างอิง: แบบอักษรที่ใช้ขณะเปิดเครื่องมีขนาด 16
+Description-tr.UTF-8: Yazıtipi boyutu
+ Lütfen Linux uçbiriminde kullanılacak olan yazıtipinin boyutunu seçin. Boyut basit bir sayıysa, söz konusu yazıtipi tüm uçbirim sürücüleriyle ve simgelerin yüksekliğini ölçen sayıyla kullanılabilir (tarama satırı sayısıyla).  Eğer boyut YÜKSEKLİKxGENİŞLİK biçimindeyse söz konusu yazıtipleri sadece kbd uçbirim paketi ve çerçeve tamponu kullanıyorsanız kullanılabilir (console-tools bu tür yazıtipleriyle çalışmaz).  Şu anda; eğer kullandığınız çerçeve tamponu RadeonFB çekirdek modülünü temel alıyorsa, bu yazıtipleri kullanılamaz.
+ .
+ Uçbirimdeki simgelerin gerçek boyutunu kavramak için yazıtiplerinin yüksekliğini kullanabilirsiniz. Başvuru olması açısından, bilgisayarınızın açılırken kullandığı yazıtipinin yüksekliği 16'dır.
+Description-vi.UTF-8: Kích cỡ phông:
+ Hãy chọn kích cỡ của phông chữ cho bàn giao tiếp Linux. Khi kích cỡ được hiển thị dưới dạng một số thô, thì phông chữ tương ứng có thể được sử dụng với mọi trình điều khiển bàn giao tiếp, và số đó đại diện chiều cao của ký hiệu (theo số dòng quét). Không thấy số thô thì kích cỡ theo định dạng CAO×RỘNG và phông chữ tương ứng chỉ thích hợp nếu bạn sử dụng vùng đệm khung và gói bàn giao tiếp kbd (gọi console-tools không tương thích với phông chữ kiểu này). Hiện thời, phông kiểu này vô ích nếu bạn dùng một vùng đệm khung dựa vào mô-đun hạt nhân RadeonFB.
+ .
+ Bạn có thể sử dụng chiều cao của phông chữ để tính kích cỡ thật của ký hiệu trên bàn giao tiếp. Để so sánh, máy tính này khởi động với phông chữ kích cỡ 16.
+
+Template: console-setup/charmap
+Type: select
+Choices: ${CHOICES}
+Default: UTF-8
+Description: Encoding on the console:
+Description-be.UTF-8: Кадыроўка кансолі:
+Description-bg.UTF-8: Кодиране на конзолата:
+Description-cs.UTF-8: Kódování na konzoli:
+Description-de.UTF-8: Kodierung der Konsole:
+Description-es.UTF-8: Codificación de la consola:
+Description-eu.UTF-8: Kontsolako kodeketa:
+Description-fi.UTF-8: Konsolilla käytettävä koodaus:
+Description-fr.UTF-8: Codage de la console :
+Description-gl.UTF-8: Codificación na consola:
+Description-nl.UTF-8: Codering voor de console:
+Description-pt.UTF-8: Codificação da consola:
+Description-ru.UTF-8: Кодировка в консоли:
+Description-sv.UTF-8: Teckenkodning för konsollen:
+Description-th.UTF-8: รหัสอักขระบนคอนโซล:
+Description-tr.UTF-8: Uçbirimde kullanılacak kodlama:
+Description-vi.UTF-8: Bảng mã trên bàn giao tiếp:
+
+Template: console-setup/ttys
+Type: string
+Default: /dev/tty[1-6]
+Description: Virtual consoles in use:
+ Please enter a space-delimited list of virtual consoles you use. The usual
+ Unix filename wildcards are allowed (*, ? and [...]).
+ .
+ If you are unsure, then use the default /dev/tty[1-6] which stands for six
+ virtual consoles. If you use devfs, then enter /dev/vc/[1-6] instead.
+Description-be.UTF-8: Віртуальныя кансолі ва ўжытку:
+ Увядзіце падзелены прабеламі спіс віртуальных кансоляў, якімі вы карыстаецеся. Дазволены звычайныя шаблоны назваў файлаў Unix (*, ? і [...]).
+ .
+ Калі няўрэўнены, то выкарыстайце прадвызначанасць /dev/tty[1-6], якая дае шэсць віртуальных кансоляў. Калі выкарстоўваеце devfs, то ўвядзіце /dev/vc/[1-6].
+Description-bg.UTF-8: Използвани виртуални конзоли:
+ Моля, въведете списъка от виртуални конзоли, които използвате, разделени с интервали.  Обичайните глобални символи за файлови имена са позволени (*, ? и [...]).
+ .
+ Ако не сте сигурни, използвайте стойността по подразбиране (/dev/tty[1-6]) - тя е за шест виртуални конзоли.  Ако използвате devfs, вместо това въведете /dev/vc/[1-6].
+Description-cs.UTF-8: Používané virtuální konzoly:
+ Zadejte mezerami oddělený seznam virtuálních konzol, které používáte. Povoleny jsou typické unixové zástupné znaky pro jména souborů (*, ? a [...]).
+ .
+ Pokud si nejste jisti, ponechte výchozí /dev/tty[1-6], což představuje šest virtuálních konzol. Používáte-li devfs, zadejte /dev/vc/[1-6].
+Description-de.UTF-8: Virtuelle Konsolen in Verwendung:
+ Bitte geben Sie eine durch Leerzeichen getrennte Liste der virtuellen Konsolen, die Sie verwenden, ein. Die gewöhnlichen Unix-Dateinamen-Platzhalter sind erlaubt (*, ? und [...]).
+ .
+ Falls Sie sich nicht sicher sind, verwenden Sie die Voreinstellung /dev/tty[1-6]. Das steht für sechs virtuelle Konsolen. Falls Sie devfs verwenden, geben Sie stattdessen /dev/vc/[1-6] ein.
+Description-eu.UTF-8: Erabiliko diren kontsola birtualak:
+ Mesedez idatzi, zuriunez bereizirik, erabili nahi dituzun kontsola birtualak. Unix fitxategi-izenetako komodin arruntak onartzen dira (*, ? eta [...]).
+ .
+ Ziur ez bazaude, lehenetsiriko /dev/tty[1-6] erabili; sei kontsola birtual abiaraziko dira horrela. devfs erabiltzen baduzu /dev/vc/[1-6] erabili.
+Description-fi.UTF-8: Käytössä olevat virtuaalikonsolit:
+ Anna välilyönnein eroteltu luettelo käytettävistä virtuaalikonsoleista. Tavallisia Unixin tiedostonimien korvausmerkkejä voidaan käyttää (*, ? ja [...]).
+ .
+ Jos olet epävarma, käytä oletusta /dev/tty[1-6], joka tarkoittaa kuutta virtuaalikonsolia. Käytettäessä devfs:ää, syötä edellisen sijaan /dev/vc/[1-6].
+Description-fr.UTF-8: Consoles virtuelles utilisées :
+ Veuillez entrer une liste, délimitée par des espaces, des consoles virtuelles à utiliser. Les jokers habituels pour les noms de fichier Unix sont autorisés (*, ? et [...]).
+ .
+ En cas de doute, utilisez la valeur par défaut /dev/tty[1-6] qui permet six consoles virtuelles. Si vous utilisez devfs, entrez alors /dev/vc/[1-6].
+Description-gl.UTF-8: Consolas virtuais en uso:
+ Introduza unha lista coas consolas virtuais que emprega, separadas por espazos. Admítense os comodíns de nomes de ficheiros habituais de Unix (*, ? e [...]).
+ .
+ Se non está seguro, empregue o valor por defecto, "/dev/tty[1-6]", que indica seis consolas virtuais. Se emprega devfs, introduza /dev/vc/[1-6]
+Description-pt.UTF-8: Consolas virtuais em utilização:
+ Por favor indique uma lista de consolas virtuais delimitada por espaços. Os caracteres especiais habituais de nomes de ficheiros Unix são permitidos (*, ? e [...]).
+ .
+ Se não tem certeza, use o valor padrão /dev/tty[1-6] que significa seis consolas virtuais. Se usar devfs, então indique /dev/vc/[1-6].
+Description-ru.UTF-8: Используемые виртуальные консоли:
+ Введите список (через пробел) используемых виртуальных консолей. Можно использовать файловые маски Unix (*, ? и [...]).
+ .
+ Если не уверены, то используйте значение по умолчанию /dev/tty[1-6], которое определяет шесть виртуальных консолей. Если используется devfs, то вместо этого введите /dev/vc/[1-6].
+Description-sv.UTF-8: Virtuella konsoller som används:
+ Ange en lista över de virtuella konsoller du använder, skilj dem åt med blanksteg. Standardiserade jokertecken från Unix filsystem kan användas (*, ? och [...]).
+ .
+ Om du är osäker så anger du /dev/tty/[1-6] som anger de sex vanliga virtuella konsollerna. Om du använder devfs så anger du istället /dev/vc/[1-6].
+Description-th.UTF-8: คอนโซลเสมือนที่ใช้:
+ กรุณาระบุรายชื่อคอนโซลเสมือนที่คุณใช้ โดยคั่นด้วยช่องว่าง คุณสามารถใช้ wildcard สำหรับชื่อแฟ้มยูนิกซ์ตามปกติได้ (*, ? และ [...])
+ .
+ ถ้าคุณไม่แน่ใจ ก็ควรใช้ค่าปริยาย /dev/tty[1-6] ซึ่งแทนคอนโซลเสมือน 6 จอ แต่ถ้าคุณใช้ devfs ก็ป้อน /dev/vc/[1-6] แทน
+Description-tr.UTF-8: Kullanımdaki sanal uçbirimler:
+ Lütfen kullandığınız sanal uçbirimleri, boşluklarla ayrılmış bir liste halinde girin. Bu listede Unix dosya isimlerinde alışageldiğiniz joker karakterleri (*, ? ve [...]) kullanabilirsiniz.
+ .
+ Eğer emin değilseniz altı adet sanal uçbirim anlamına gelen, öntanımlı /dev/tty[1-6] değerini kullanabilirsiniz. Şayet devfs kullanıyorsanız bu girdi /dev/vc/[1-6] biçiminde olmalıdır.
+Description-vi.UTF-8: Bàn giao tiếp ảo đang dùng:
+ Hãy nhập một danh sách định giới bằng dấu cách chứa các bàn giao tiếp ảo bạn dùng. Cũng cho phép những ký tự đại diện thường dùng (*, ?, [...]).
+ .
+ Chưa chắc thì hãy dùng giá trị mặc định (/dev/tty[1-6]) mà đại diện sáu bàn giao tiếp ảo. Nếu bạn dùng devfs, hãy nhập « /dev/vc/[1-6] » để thay thế.
+
+Template: console-setup/toggle
+Type: select
+Choices: Caps Lock, Right Alt, Right Control, Right Shift, Right Logo key, Menu key, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Left Control+Left Shift, Left Alt, Left Control, Left Shift, Left Logo key, Scroll Lock key, No toggling
+Choices-be.UTF-8: Caps Lock, Правы Alt, Правы Control, Правы Shift, Правая кнопка Logo, Кнока меню, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Левы Control+Левы Shift, Левы Alt, Левы Control, Левы Shift, Левая кнопка Logo, Scroll Lock, Без пераключэння.
+Choices-bg.UTF-8: Caps Lock, Десен Alt, Десен Control, Десен Shift, Десен клавиш с лого, Клавиш меню, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Ляв Control+Ляв Shift, Ляв Alt, Ляв Control, Ляв Shift, Ляв клавиш с лого, Scroll Lock, Без превключване
+Choices-cs.UTF-8: Caps Lock, Pravý Alt, Pravý Control, Pravý Shift, Pravá klávesa logo, Klávesa Menu, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Levý Control+levý Shift, Levý Alt, Levý Control, Levý Shift, Levá klávesa logo, Klávesa Scroll Lock, Bez přepínání
+Choices-de.UTF-8: Feststelltaste, Alt rechts (Alt Gr), Strg rechts, Umschalttaste rechts, Symboltaste rechts, Menütaste, Alt+Umschalttaste, Strg+Umschalttaste, Strg+Alt, Alt+Feststelltaste, Strg links+Umschalttaste links, Alt links, Strg links, Umschalttaste links, Symboltaste links, Rollen-Taste, keine Umschaltung
+Choices-eu.UTF-8: Maiuskulak Blokeatu, Eskuineko Alt, Eskuineko Kontrol, Eskuineko Maius, Eskuineko logo tekla, Menu tekla, Alt+Maius, Kontrol+Maius, Kontrol+Alt, Maiuskulak Blokeatu, Kontrol+Maius, Ezkerreko Alt, Ezkerreko Kontrola, Ezkerreko Maius, Ezkerreko Logo tekla, Blokeatu Korritzea tekla, Konmutaziorik ez
+Choices-fi.UTF-8: Caps Lock, Oikea Alt, Oikea Control, Oikea Vaihto, Oikea Logo-näppäin, Menu-näppäin, Alt+Vaihto, Control+Vaihto, Control+Alt, Alt+Caps Lock, Vasen Control+Vasen Vaihto, Vasen Alt, Vasen Control, Vasen Vaihto, Vasen Logo-näppäin, Scroll Lock -näppäin, Ei tapaa vaihtamiseen
+Choices-fr.UTF-8: Verrouillage Majuscule, Touche Alt de droite, Touche Ctrl de droite, Majuscule de droite, Touche « logo » de droite, Touche Menu, Alt + Majuscule, Ctrl + Majuscule, Ctrl + Alt, Alt + Verrouillage Majuscule, Ctrl gauche + Majuscule gauche, Touche Alt de gauche, Ctrl de gauche, Majuscule de gauche, Touche « logo » de gauche, Arrêt défil. (Scroll Lock), Pas de basculement
+Choices-gl.UTF-8: Bloqueo de maiúsculas, Tecla Alt dereita, Tecla Control dereita, Tecla de maiúsculas dereita, Tecla de logotipo dereita, Tecla do menú, Alt+Maiúsculas, Control+Maiúsculas, Control+Alt, Alt+Bloqueo de maiúsculas, Tecla Control esquerda+Tecla Maiúsculas esquerda, Tecla Alt esquerda, Tecla Control esquerda, Tecla de maiúsculas esquerda, Tecla de logotipo esquerda, Tecla de bloqueo de desprazamento, Non conmutar
+Choices-pt.UTF-8: Caps Lock, Alt direito, Control Direito, Shift Direito, Tecla Logotipo Direito, Tecla Menu, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Control Esquerdo+Shift Esquerdo, Alt Esquerdo, Control Esquerdo, Shift Esquerdo, Tecla de Logotipo Esquerdo, Tecla Scroll Lock, Sem alternância
+Choices-ru.UTF-8: Caps Lock, правая клавиша Alt, правая клавиша Control, правая клавиша Shift, правая клавиша Logo, клавиша Menu, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, левый Control+левый Shift, левая клавиша Alt, левая клавиша Control, левая клавиша Shift, левая клавиша Logo, Scroll Lock, без переключателя
+Choices-sv.UTF-8: Caps Lock, Alt\, höger, Control\, höger, Shift\, höger, Tangent med logotype\, höger, Menyknapp, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Vänster Control+Vänster Shift, Alt\, vänster, Control\, vänster, Shift\, vänster, Tangent med logotype\, vänster, Scroll Lock, Ingen utbytbarhet
+Choices-th.UTF-8: Caps Lock, Alt ขวา, Control ขวา, Shift ขวา, ปุ่มโลโก้ขวา, ปุ่มเมนู, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Control ซ้าย+Shift ซ้าย, Alt ซ้าย, Control ซ้าย, Shift ซ้าย, ปุ่มโลโก้ซ้าย, ปุ่ม Scroll Lock, ไม่มีการสลับ
+Choices-tr.UTF-8: Caps Lock (Büyük Harf Kilidi), Sağ Alt, Sağ Control, Sağ Shift, Sağ Logo tuşu, Menü tuşu, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock (Büyük Harf Kilidi), Sol Control+Sol Shift, Sol Alt, Sol Control, Sol Shift, Sol Logo tuşu, Kaydırma Kilidi (Scroll Lock) tuşu:, Kip değiştirme yok
+Choices-vi.UTF-8: Caps Lock, Alt phải, Ctrl phải, Shift phải, Phím biểu hình bên phải, Phím trình đơn, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Left trái+Left trái, Alt trái, Ctrl trái, Shift trái, Phím biểu tượng bên trái, Phím Scroll Lock, Không bật/tắt
+Default: Alt+Shift
+Description: Method for toggling between national and Latin mode:
+ You will need a way to toggle the keyboard between the national
+ layout and the standard Latin layout.  Several options are available.
+ .
+ The most ergonomic choices seem to be the right Alt and the Caps Lock keys
+ (in the latter case, use the combination Shift+Caps Lock for normal Caps
+ toggle).  Another popular choice is the Alt+Shift combination; note
+ however that in this case the combination Alt+Shift (or Control+Shift if
+ you choose it) will lose its usual meaning in Emacs and other programs
+ using it.
+ .
+ Note that the listed keys are not present on all keyboards.
+Description-be.UTF-8: Спосаб пераключэння між нацыянальным і лацінскім рэжымамі:
+ Вам трэба вызначыць спосаб пераключэння клавіятуры паміж нацыянальнай і стандартнай лацінскай раскладкай. Некалькі налад даступныя.
+ .
+ Найбольш эрганамічнымі варыянтамі ёсць правы Alt ды Caps Lock (у апошнім выпадку выкарыстоўвайце камбінацыю Shift+Caps Lock для звычайнага пераключэння Caps). Іншым папулярным выбарам ёсць камбінацыя Alt+Shift; заўважце, што тады камбінацыя Alt+Shift (або Control+Shift, калі выберыце яе) згубіць сваё дзеянне ў Emacs ды іншых праграмах, дзе яна апрацоўваецца.
+ .
+ Заўважце, паказаныя кнопкі не прысутнічаюць на ўсіх клавіятурах.
+Description-bg.UTF-8: Метод за превключване между режими „латиница“ и „национални букви“:
+ При вашата клавиатурна подредба е необходим начин за превключване между режим „латиница“ и режим „национални букви“.  Има редица възможности.
+ .
+ Най-ергономичният избор изглежда са десният Alt и клавишът Caps Lock (в този случай използвайте комбинацията Shift+Caps Lock за нормален Caps Lock).  Друг популярен избор е комбинацията Alt+Shift; имайте предвид обаче, че в този случай комбинацията Alt+Shift (или Control+Shift, ако я изберете), ще загуби обичайното си значение в Emacs и другите програми, които я използват.
+ .
+ Забележете, че някои от изброените клавиши отсъстват на някои клавиатури.
+Description-cs.UTF-8: Způsob přepínání mezi vstupem národních znaků a latinkou:
+ Potřebujete způsob, kterým se budete přepínat mezi vaším národním rozložením a standardním rozložením latinky. K dispozici je několik možností.
+ .
+ Nejergonomičtější se zdá použití pravého Altu nebo Caps Lock (původní funkčnost Caps Lock pak získáte kombinací kláves Shift+Caps Lock). Další populární kombinací je Alt+Shift případně Control+Shift. V takovém případě ale tato kombinace ztratí v aplikacích svůj původní význam (např. v Emacsu).
+ .
+ Uvedené klávesy nejsou přítomny na všech klávesnicích.
+Description-de.UTF-8: Methode zur Umschaltung zwischen nationalem und lateinischem Modus:
+ Sie benötigen eine Möglichkeit, die Tastaturbelegung zwischen nationalem und lateinischem Standard-Modus zu wechseln. Mehrere Optionen sind dazu verfügbar.
+ .
+ Die ergonomischste Wahl scheint entweder die rechte Alt-Taste (Alt Gr) und die Feststelltasten zu sein (im letzteren Fall können Sie die Kombination Umschalttaste+Feststelltaste für die normale Funktion der Feststelltaste verwenden). Eine weitere beliebte Wahl ist die Kombination Alt+Umschalttaste. Bitte beachten Sie aber, dass damit diese Kombination (bzw. Strg+Umschalttaste, falls Sie diese wählen) ihre gewöhnliche Bedeutung verliert, die sie in Emacs und anderen Programmen, die sie benutzen, hat.
+ .
+ Beachten Sie, dass die gelisteten Tasten nicht auf allen Tastaturen vorhanden sind.
+Description-eu.UTF-8: Latin eta nazio moduen arteko konmutazio metodoa:
+ Agian latin estandar eta nazional diseinuen artean teklatua konmutatzeko aukera beharko duzu. Zenbait aukera erabil daitezke.
+ .
+ Aukera ergonomikoenak Ezker Alt eta Blokeatu Maiuskulak teklek dirudite (bestela Maius+Blokeatu Maiuskulak erabili tamaina arruntera aldatzeko). Beste hautapen oso erabili bat Alt+Maius tekla-konbinazioa da, kontuan izan kasu honetan Alt+Maius (edo Kontrol+Maius hori hautatu baduzu) tekla konbinazioak Emacs edo beste programetan duen erabilera galduko duela.
+ .
+ Oharra: zerrendaturiko teklak ez daude teklatu guztietan.
+Description-fi.UTF-8: Tapa paikallisen ja Latin-tilan välillä vaihtamiseen:
+ Näppäinasettelua halutaan usein vaihtaa paikallisen ja standardin Latin-näppäinasettelun välillä. Tämä voidaan tehdä usealla tavalla.
+ .
+ Helpoin näistä vaihtoehdoista on ehkä oikea Alt tai Caps Lock (käytä jälkimmäisessä tapauksessa yhdistelmää Vaihto+Caps Lock normaaliin kirjainkoon vaihtoon). Toinen suosittu vaihtoehto on yhdistelmä Alt+Vaihto. Tällöin kuitenkin on huomattava, että tämä yhdistelmä (tai vastaavasti Control+Vaihto) ei toimi Emacsissa tai sitä käyttävissä ohjelmissa.
+ .
+ Kaikkia lueteltuja näppäimiä ei ole kaikissa näppäimistöissä.
+Description-fr.UTF-8: Méthode de basculement entre le mode national et le mode latin :
+ Il vous faudra un moyen pour basculer entre la disposition nationale et la disposition latine normale. Plusieurs options sont disponibles.
+ .
+ Les choix les plus ergonomiques semblent être la touche Alt de droite et la touche de verrouillage majuscule (dans ce dernier cas, utilisez la combinaison Majuscule + Verrouillage majuscule pour le basculement habituel en mode majuscule). Un autre choix populaire est la combinaison Alt + Majuscule ; notez cependant que dans ce cas la combinaison Alt + Majuscule (ou Ctrl + Majuscule si vous l'avez choisie) perdra sa fonction habituelle dans Emacs ou dans tout autre programme qui l'utiliserait.
+ .
+ Veuillez noter que les touches indiquées ne font pas partie de tous les claviers.
+Description-gl.UTF-8: Método para conmutar entre o modo nacional e o modo latino:
+ Ha precisar dun sistema para conmutar o teclado entre a disposición nacional e a disposición latina estándar. Hai varias opcións dispoñibles.
+ .
+ As opcións máis ergonómicas semellan ser a tecla Alt dereita e a tecla de bloqueo de maiúsculas (neste último caso empregue a combinación de Maiúsculas+Bloqueo de maiúsculas para conmutar entre maiúsculas/minúsculas). Outra opción popular é a combinación Alt+Maiúsculas; neste caso teña en conta que a combinación Alt+Maiúsculas (ou Control+Maiúsculas) ha perder o seu significado habitual en Emacs e outros programas que a usen.
+ .
+ Teña en conta que estas teclas non están presentes en tódolos teclados.
+Description-pt.UTF-8: Método para alternar entre o modo nacional e Latin:
+ Precisa de um modo de alternar o teclado entre a disposição nacional e o padrão Latin. Estão disponíveis algumas opções.
+ .
+ As escolhas mais ergonómicas parecem ser as teclas Alt direito e a Caps Lock (neste caso para ligar as maiúsculas usa-se Shift+Caps Lock). Outra escolha popular é a combinação Alt+Shift; notar que neste caso a combinação Alt+Shift (ou Control+Shift se a escolher) perderá o seu significado habitual no Emacs e noutros programas.
+ .
+ Atenção que as teclas referidas não estão presentes em todos os teclados.
+Description-ru.UTF-8: Способ переключения между национальной и латинской раскладкой:
+ Вам нужно указать способ переключения клавиатуры между национальной раскладкой и стандартной латинской раскладкой. Доступно несколько вариантов.
+ .
+ Наиболее эргономичным способом считаются правая клавиша Alt и Caps Lock (в последнем случае для переключения между заглавными и строчными буквами используется комбинация Shift+Caps Lock). Ещё одна популярная комбинация: Alt+Shift; заметим, что в этом случае комбинация Alt+Shift (или Control+Shift, если вы её выберете) потеряет своё привычное действие в Emacs и других, использующих её, программах.
+ .
+ Заметим, что не на всех клавиатурах есть перечисленные клавиши.
+Description-sv.UTF-8: Metod att byta melan inställning fär nationellt och latin.
+ Du behäver ett sätt att bytatangentbordsupplägg mellan ditt vanliga nationella upplägg och Latin som är standardvalet. Det finns en mängd alternativ tillgängliga.
+ .
+ Det mest ergonomiska valet verkar vara höger Alt- och Caps Lock-tangenterna. Ett annat vanligt val är kombinationen Alt+Shift, här ska man dock vara medveten om att en del program (t.ex. Emacs) använder sig av denna kombination till andra saker och dessa blir därmed omöjliga att utföra.
+ .
+ Kom ihåg att alla tangentern som anges här inte finns på alla tangentbord.
+Description-th.UTF-8: วิธีสลับภาษาท้องถิ่นกับอังกฤษ:
+ คุณต้องกำหนดวิธีสลับภาษาแป้นพิมพ์ ระหว่างผังภาษาท้องถิ่นกับผังละตินมาตรฐาน มีตัวเลือกหลายทางให้เลือก
+ .
+ ตัวเลือกที่ดูจะถูกสุขลักษณะที่สุด น่าจะเป็น Alt ขวา และ Caps Lock (โดยในกรณีหลัง คุณสามารถใช้ Shift+Caps Lock สำหรับการยกแคร่ค้างตามปกติได้) อีกตัวเลือกหนึ่งที่นิยม คือ Alt+Shift แต่สังเกตว่า การใช้ปุ่มดังกล่าวจะทำให้ไม่สามารถใช้ Alt+Shift (หรือ Control+Shift ในกรณีที่คุณเลือก) ตามปกติใน Emacs และโปรแกรมอื่นๆ ที่ใช้ปุ่มดังกล่าวได้
+ .
+ สังเกตว่าปุ่มในรายชื่อนี้ไม่ได้มีในทุกแป้นพิมพ์
+Description-tr.UTF-8: Ulusal ve Latin kipler arasında geçiş için kullanılacak yöntem:
+ Ulusal düzen ve standart Latin düzeni arasında geçiş yapmak için bir yola ihtiyaç duyacaksınız.  Buna yönelik çok sayıda seçenek mevcuttur.
+ .
+ En kullanışlı seçimler sağ Alt ve Caps Lock (Büyük Harf Kilidi) tuşları gibi görünüyor (bu amaçla Caps Lock'ı seçmeniz halinde büyük harf kilitlemesini Shift+Caps Lock bileşimiyle yapabilirsiniz). Diğer yaygın bir seçim Alt+Shift bileşimidir.  Böyle bir seçim yapmanız halinde Alt+Shift (veya eğer bunu seçmişseniz Control+Shift) bileşiminin, bu tuşları kullanan Emacs ve diğer bazı programlardaki işlevinin kaybolacağını da unutmayın.
+ .
+ Listelenen tuşların her klavyede bulunmadığına dikkat edin.
+Description-vi.UTF-8: Phương pháp bật/tắt giữa chế độ quốc gia và chế độ La-tinh:
+ Bạn cần một phương pháp bật/tắt giữa bố trí quốc gia và bố trí La-tinh tiêu chuẩn. Có sẵn vài tùy chọn khác nhau.
+ .
+ Những sự chọn tối ưu nhân tố nhất hình như phím Alt bên phải và phím Caps Lock (khoá chữ hoa): trong trường hợp Caps Lock, hãy dùng tổ hợp phím Shift+Caps Lock để bật/tắt chữ hoa. Một sự chọn thường dùng khác là tổ hợp phím Alt+Shift; tuy nhiên, ghi chú rằng trong trường hợp này tổ hợp phím Alt+Shift (hay Control+Shift nếu bạn chọn nó) sẽ mất ý nghĩa thường trong Emacs và các chương trình khác sử dụng nó.
+ .
+ Ghi chú rằng những phím được liệt kê không phải nằm trên mọi bàn phím.
+
+Template: console-setup/switch
+Type: select
+Choices: No temporary switch, Both Logo keys, Right Alt, Right Logo key, Left Alt, Left Logo key
+Choices-be.UTF-8: Без часовага пераключэння, Дзве Logo кнопкі, Правы Alt, Правая кнопка Logo, Левы Alt, Левая кнопка Logo
+Choices-bg.UTF-8: Без временно превключване, И двата клавиша с лого, Десен Alt, Десен клавиш с лого, Ляв Alt, Ляв клавиш с лого
+Choices-cs.UTF-8: Bez dočasného přepnutí, Obě klávesy logo, Pravý Alt, Pravá klávesa logo, Levý Alt, Levá klávesa logo
+Choices-de.UTF-8: Kein vorübergehender Wechsel, Beide Symboltasten, Alt rechts (Alt Gr), Symboltaste rechts, Alt links, Symboltaste links
+Choices-es.UTF-8: Sin cambio temporal, Ambas teclas del logo, Alt derecho, Tecla derecha de logo, Alt izquierdo, Tecla izquierda de logo
+Choices-eu.UTF-8: Ez uneko aldaketarik, Bi logotipo teklak, Eskuineko Alt, Eskuineko logo tekla, Ezkerreko Alt, Ezkerreko Logo tekla
+Choices-fi.UTF-8: Ei väliaikaista muuntajaa, Molemmat Logo-näppäimet, Oikea Alt, Oikea Logo-näppäin, Vasen Alt, Vasen Logo-näppäin
+Choices-fr.UTF-8: Pas de basculement temporaire, Les deux touches « logo », Touche Alt de droite, Touche « logo » de droite, Touche Alt de gauche, Touche « logo » de gauche
+Choices-gl.UTF-8: Sen conmutador temporal, Ámbalas dúas teclas de logotipo, Tecla Alt dereita, Tecla de logotipo dereita, Tecla Alt esquerda, Tecla de logotipo esquerda
+Choices-nl.UTF-8: Geen tijdelijke omschakeling, Beide Logotoetsen, Alt-Rechts, Logotoets-Rechts, Alt-Links, Logotoets-Links
+Choices-pt.UTF-8: Sem alternância temporária, Ambas as teclas de Logotipo, Alt direito, Tecla Logotipo Direito, Alt Esquerdo, Tecla de Logotipo Esquerdo
+Choices-ru.UTF-8: нет временного переключателя, обе клавиши Logo, правая клавиша Alt, правая клавиша Logo, левая клавиша Alt, левая клавиша Logo
+Choices-sv.UTF-8: Avaktivera temporärt byte, Båda tangenterna med logotype, Alt\, höger, Tangent med logotype\, höger, Alt\, vänster, Tangent med logotype\, vänster
+Choices-th.UTF-8: ไม่มีการสลับชั่วคราว, ปุ่มโลโก้คู่, Alt ขวา, ปุ่มโลโก้ขวา, Alt ซ้าย, ปุ่มโลโก้ซ้าย
+Choices-tr.UTF-8: Geçici geçiş yok, Her iki Logo tuşu, Sağ Alt, Sağ Logo tuşu, Sol Alt, Sol Logo tuşu
+Choices-vi.UTF-8: Không có cái chuyển tạm thời, Cả hai phím biểu hình, Alt phải, Phím biểu hình bên phải, Alt trái, Phím biểu tượng bên trái
+Default: No temporary switch
+Description: Method for temporarily toggling between national and Latin input:
+ Sometimes the keyboard is in national mode and you want to type only a few
+ Latin letters. In this case it may be desirable to have a key for
+ temporarily switching between national and Latin symbols.  While this key
+ is pressed in national mode, the keyboard types Latin letters.  Conversely,
+ when the keyboard is in Latin mode and this key is pressed, the keyboard
+ will type national letters.
+ .
+ If you don't like this feature, choose the option "No temporary switch".
+Description-be.UTF-8: Спосаб часовага пераключэння паміж нацыянальным і лацінскім уводам:
+ Часам клавіятура ў нацыянальным рэжыме і вы хочаце набраць некалькі лацінскіх літар. Тады будзе зручным мець кнопку для часовага пераключэння паміж нацыянальнымі і лацінскімі сімваламі. Пакуль гэтая кнопка націснута ў нацыянальным рэжыме, клавіятура набірае лацінскія літары і наадварот, пакуль гэтая кнопка націснута ў лацінскім рэжыме, клавіятура набірае нацыянальныя літары.
+ .
+ Калі не жадаеце такой магчымасці, выберыце "Без часовага пераключэння".
+Description-bg.UTF-8: Метод за временна смяна между режими „латиница“ и „национални букви“:
+ Понякога клавиатурата се намира в режим за национални знаци и искате да въведете само няколко латински букви.  В този случай може би е желателно да имате клавиш, с който да може да се преминава временно между режим „латиница“ и режим с национални букви.  Докато този клавиш е натиснат в режим за национални букви, клавиатурата ще генерира латински букви и обратно, докато той е натиснат в режим „латиница“, клавиатурата ще генерира национални букви.
+ .
+ Ако не желаете да използвате тази възможност, изберете варианта „Без временно превключване“.
+Description-cs.UTF-8: Způsob pro dočasné přepnutí mezi vstupem národních znaků a latinkou:
+ Občas máte klávesnici v režimu vkládání národních znaků a potřebujete napsat pouze několik písmen z latinky. V takových případech je užitečné mít klávesu pro dočasné přepnutí mezi národními a latinkovými znaky. Během stisku této klávesy v národním režimu se píší latinková písmena a obráceně při stisku v latinkovém režimu se píší národní písmena.
+ .
+ Jestliže se vám tato vlastnost nelíbí, vyberte "Bez dočasného přepnutí".
+Description-de.UTF-8: Methode zum vorübergehenden Wechseln zwischen nationaler und lateinischer Eingabe:
+ Gelegentlich ist die Tastatur im nationalen Modus und Sie wollen nur wenige lateinische Zeichen eingeben. In diesem Fall kann es erstrebenswert sein, eine Taste zum vorübergehenden Wechseln zwischen nationalen und lateinischen Symbolen zu haben. Während diese Taste im nationalen Modus gedrückt ist, liefert die Tastatur lateinische Buchstaben, und umgekehrt, wenn sich die Tastatur im lateinischen Modus befindet, und Sie halten diese Taste gedrückt, wird die Tastatur nationale Buchstaben liefern.
+ .
+ Falls Sie diese Funktion nicht verwenden wollen, wählen Sie »Kein vorübergehender Wechsel«.
+Description-eu.UTF-8: Latin eta nazio sarrera-moduen artean uneko konmutazioa egiteko metodoa:
+ Kasu batzuetan teklatua modu nazionalean egonik Latin letra gutxi batzuk idatzi nahi izatea gerta daiteke. Halakoetan desiragarria da nazio eta latin arteko uneko aldaketa egiteko tekla bat izatea. Modu nazionalean gaudelarik tekla hau sakatzean teklatuak latin letrak idatziko ditu eta alderantziz; teklatua latin moduan dagoenean tekla hau sakatuz letra nazionalak idatziko ditu.
+ .
+ Ezaugarri hau behar ez baduzu "Ez uneko aldaketarik" aukera hautatu.
+Description-fi.UTF-8: Tapa paikallisen ja Latin-merkistön välillä vaihtamiseen:
+ Joskus näppäimistö on paikallisessa tilassa ja halutaan kirjoittaa vain muutamia Latin-merkkejä. Tällaisessa tilanteessa on kätevää, jos paikallinen näppäimistö voidaan väliaikaisesti muuntaa Latin-näppäimistöksi yhdellä näppäimellä. Kun tätä näppäintä painetaan paikallisessa tilassa, näppäimistö kirjoittaa Latin-merkkejä. Vastaavasti, kun näppäimistö on Latin-tilassa ja tätä näppäintä painetaan, näppäimistö kirjoittaa paikallisia merkkejä.
+ .
+ Jos tätä ominaisuutta ei haluta käyttää, valitse ”Ei väliaikaista muuntajaa”.
+Description-fr.UTF-8: Méthode de basculement temporaire entre caractères nationaux et latins :
+ Parfois, le clavier est dans un mode national et il nécessaire de saisir quelques caractères latins. Dans ce cas, il peut être souhaitable d'avoir une touche pour basculer temporairement entre les symboles nationaux et latins. Lorsque cette touche est pressée en mode national, les lettres entrées le sont en latin et, à l'inverse, lorsque le clavier est en mode latin et que vous pressez cette touche, les lettres seront de type national.
+ .
+ Si vous ne souhaitez pas cette fonctionnalité, choisissez « Pas de basculement temporaire »
+Description-gl.UTF-8: Método para conmutar temporalmente entre a entrada nacional e latina:
+ Ás veces, o teclado está no modo nacional e quere escribir só unhas poucas letras latinas. Neste caso pode ser desexable ter unha tecla para conmutar temporalmente entre os símbolos nacionais e os símbolos latinos. Mentres prema esta tecla no modo nacional, o teclado ha escribir letras latinas, e viceversa, se o teclado está no modo latino, mentres prema esta tecla o teclado ha escribir letras nacionais.
+ .
+ Se non lle interesa esta funcionalidade, escolla a opción "Sen conmutador temporal".
+Description-pt.UTF-8: Método para alternar temporariamente entre teclado nacional e Latin:
+ Por vezes o teclado está em modo nacional e quer escrever alguns caracteres Latin. Neste caso pode ser desejável ter uma tecla para alternar temporariamente entre os símbolos nacionais e Latin. Enquanto esta tecla for pressionada em modo nacional, escrevem-se caracteres Latin e vice-versa.
+ .
+ Se não gostar desta característica, escolha a opção "Sem alternância temporária".
+Description-ru.UTF-8: Временный переключатель между национальной или латинской раскладкой:
+ Иногда при активной национальной раскладке вы хотите ввести только несколько латинских символов. В этом случае удобно иметь клавишу временного переключения между национальной и латинской раскладками. Пока эта клавиша нажата при активной национальной раскладке с клавиатуры вводятся латинские символы и наоборот, когда клавиатура в латинском режиме, при нажатой клавише можно вводить национальные символы.
+ .
+ Если вам не нужна такая возможность, выберите пункт "нет временного переключателя".
+Description-sv.UTF-8: För att temporärt byta mellan inställningen får nationell och latin-inmatning:
+ Det kan hända att du har tangentbordet inställt på nationellt läge och vill skriva några tecken från Latinskt läge, då kan det vara bra att kunna byta tangentbordsupplägg temporärt. När du trycker ned knappen för byte i det nationella läget så byts tangentbordsupplägget till Latinskt läge. För att byta tillbaka till nationellt läge gör du samma opertion en gång till.
+ .
+ Om du inte vill ha den här funktionen så anger du "Avaktivera temporärt byte".
+Description-th.UTF-8: วิธีสลับภาษาแป้นพิมพ์ระหว่างภาษาท้องถิ่นกับอังกฤษแบบชั่วคราว:
+ ในบางครั้ง ขณะที่แป้นพิมพ์อยู่ในโหมดภาษาท้องถิ่น แต่คุณต้องการป้อนอักษรภาษาอังกฤษแค่ไม่กี่ตัว ในกรณีดังกล่าว การใช้ปุ่มสลับภาษาชั่วคราวอาจจะช่วยให้สะดวกขึ้น โดยถ้าปุ่มนี้ถูกกดค้างในโหมดภาษาท้องถิ่น แป้นพิมพ์จะป้อนอักขระภาษาอังกฤษ และในทางกลับกัน ถ้าปุ่มนี้ถูกกดค้างในโหมดภาษาอังกฤษ แป้นพิมพ์จะป้อนอักขระภาษาท้องถิ่น
+ .
+ ถ้าคุณไม่ต้องการใช้ความสามารถนี้ ก็ให้เลือกตัวเลือก "ไม่มีการสลับชั่วคราว"
+Description-tr.UTF-8: Ulusal ve Latin kipler arasında geçici geçiş için kullanılacak yöntem:
+ Bazen, klavye ulusal kipteyken, sadece birkaç Latin harfi girmek isteyebilirsiniz. Bu tür durumlarda geçici olarak, ulusal ve Latin kipler arasında geçiş yapmanızı sağlayacak bir tuşun olması arzu edilebilir.  Latin kipte bu tuş basılıyken ulusal harfler; benzer şekilde ulusal kipte bu tuş basılıyken de, Latin harfler girilebilecektir.
+ .
+ Böyle bir özellik istemiyorsanız "Geçici geçiş yok"u seçin.
+Description-vi.UTF-8: Phương pháp bật/tắt tạm thời giữa cách gõ quốc gia và La-tinh:
+ Đôi khi bàn phím ở chế độ quốc gia và bạn chỉ muốn gõ vài chữ La-tinh. Trong trường hợp này, có ích khi có một phím tạm thời chuyển đổi giữa ký hiệu quốc gia và La-tinh. Trong khi ấn giữ phím này ở chế độ quốc gia, bàn phím gõ chữ La-tinh. Ngược lại, trong khi ấn giữ phím này ở chế độ La-tinh, bàn phím sẽ gỡ chữ quốc gia.
+ .
+ Không thích tính năng này thì hãy bật tùy chọn « Không có cái chuyển tạm thời ».
+
+Template: console-setup/altgr
+Type: select
+Choices: No AltGr key, Right Alt, Right Control, Right Logo key, Menu key, Left Alt, Left Logo key, Keypad Enter key, Both Logo keys, Both Alt keys
+Choices-be.UTF-8: Няма кнопкі AltGr, Правы Alt, Правы Control, Правая кнопка Logo, Кнока меню, Левы Alt, Левая кнопка Logo, Enter на лічбавай клавіятуры, Дзве Logo кнопкі, Кнопкі Alt разам
+Choices-bg.UTF-8: Без клавиш AltGr, Десен Alt, Десен Control, Десен клавиш с лого, Клавиш меню, Ляв Alt, Ляв клавиш с лого, Клавиш Enter (цифров блок), И двата клавиша с лого, Двата клавиша Alt
+Choices-cs.UTF-8: Bez klávesy AltGr, Pravý Alt, Pravý Control, Pravá klávesa logo, Klávesa Menu, Levý Alt, Levá klávesa logo, Klávesa Enter v numerickém bloku, Obě klávesy logo, Obě klávesy Alt
+Choices-de.UTF-8: Keine »Alt Gr«-Taste, Alt rechts (Alt Gr), Strg rechts, Symboltaste rechts, Menütaste, Alt links, Symboltaste links, Eingabetaste des numerischen Feldes, Beide Symboltasten, Beide Alt-Tasten (Alt+Alt Gr)
+Choices-eu.UTF-8: Ez AltGR tekla, Eskuineko Alt, Eskuineko Kontrol, Eskuineko logo tekla, Menu tekla, Ezkerreko Alt, Ezkerreko Logo tekla, Zenbakizko teklatuko Sartu tekla, Bi logotipo teklak, Bi Alt teklak batera
+Choices-fi.UTF-8: Ei AltGr-näppäintä, Oikea Alt, Oikea Control, Oikea Logo-näppäin, Menu-näppäin, Vasen Alt, Vasen Logo-näppäin, Numeronäppäimistön Enter-näppäin, Molemmat Logo-näppäimet, Molemmat Alt-näppäimet
+Choices-fr.UTF-8: Pas de touche AltGr, Touche Alt de droite, Touche Ctrl de droite, Touche « logo » de droite, Touche Menu, Touche Alt de gauche, Touche « logo » de gauche, Entrée (pavé numérique), Les deux touches « logo », Les deux touches Alt ensemble
+Choices-gl.UTF-8: Sen tecla AltGr, Tecla Alt dereita, Tecla Control dereita, Tecla de logotipo dereita, Tecla do menú, Tecla Alt esquerda, Tecla de logotipo esquerda, Tecla Intro do teclado numérico, Ámbalas dúas teclas de logotipo, As dúas teclas Alt
+Choices-pt.UTF-8: Sem tecla AltGr, Alt direito, Control Direito, Tecla Logotipo Direito, Tecla Menu, Alt Esquerdo, Tecla de Logotipo Esquerdo, Tecla Enter do teclado numérico, Ambas as teclas de Logotipo, Ambas as teclas Alt
+Choices-ru.UTF-8: нет клавиши AltGr, правая клавиша Alt, правая клавиша Control, правая клавиша Logo, клавиша Menu, левая клавиша Alt, левая клавиша Logo, Enter на цифр. клавиатуре, обе клавиши Logo, обе клавиши Alt одновременно
+Choices-sv.UTF-8: Ingen AltGr-tangent, Alt\, höger, Control\, höger, Tangent med logotype\, höger, Menyknapp, Alt\, vänster, Tangent med logotype\, vänster, Enter på numeriskt tangentbord, Båda tangenterna med logotype, Båda Alt-tangenterna
+Choices-th.UTF-8: ไม่ใช้ปุ่ม AltGr, Alt ขวา, Control ขวา, ปุ่มโลโก้ขวา, ปุ่มเมนู, Alt ซ้าย, ปุ่มโลโก้ซ้าย, ปุ่ม Enter ในแป้นตัวเลข, ปุ่มโลโก้คู่, ปุ่ม Alt คู่
+Choices-tr.UTF-8: AltGr tuşu yok, Sağ Alt, Sağ Control, Sağ Logo tuşu, Menü tuşu, Sol Alt, Sol Logo tuşu, Tuş takımı Enter tuşu, Her iki Logo tuşu, Her iki Alt tuşu
+Choices-vi.UTF-8: Không có phím AltGr, Alt phải, Ctrl phải, Phím biểu hình bên phải, Phím trình đơn, Alt trái, Phím biểu tượng bên trái, Phím Gõ Vùng Phím, Cả hai phím biểu hình, Cả hai phím Alt
+Default: Right Alt
+Description: AltGr key replacement:
+ With some keyboard layouts, AltGr is a modifier key used to input
+ some characters, primarily ones that are unusual for the language of the
+ keyboard layout, such as foreign currency symbols and accented letters. 
+ If a key has a third symbol on it (on the front vertical face or the
+ bottom right of the key top, sometimes in a different color), then AltGr
+ is often the means of eliciting that symbol.
+Description-be.UTF-8: Замена кнопкі AltGr
+ У некаторах клавіятурных раскладках AltGr - кнопка-мадыфікатар для ўводу пэўных знакаў, што адсутнічаюць у мове клавіятурнай раскладкі: напрыклад, знакі іншаземнай валюты і літары з націскамі. Калі кнопка мае трэці сімвал на ёй (на пярэднім вертыкальным баку або ўнізе справа, часам асобным колерам), тады AltGr хутчэй за ўсё выведзе гэты сімвал.
+Description-bg.UTF-8: Клавиш AltGr:
+ При някои клавиатурни подредби клавишът AltGr e модификатор, който се използва за въвеждането на някои знаци, предимно такива, които са необичайни за езика на клавиатурната подредба, като знаци за различни парични единици и букви с диакритични знаци.  Ако върху някой клавиш има изобразен трети символ (на предната вертикална страна или в долния десен ъгъл, понякога с друг цвят), то често клавишът AltGr е начинът да се въведе този символ.
+Description-cs.UTF-8: Náhrada za klávesu AltGr:
+ V některých klávesových rozloženích se modifikátor AltGr používá pro zadávání některých znaků, hlavně těch, které jsou pro daný jazyk neobvyklé, jako jsou cizí symboly měn nebo akcentovaná písmena. Pokud má klávesa na své popisce třetí symbol (často odlišnou barvou), tak AltGr obvykle slouží pro vybrání tohoto symbolu.
+Description-de.UTF-8: »Alt Gr«-Ersatz:
+ Bei manchen Tastaturbelegungen ist Alt Gr eine Modifikatortaste, die zur Eingabe einiger Zeichen verwendet wird. Hauptsächlich wird sie für solche Zeichen verwendet, die für die Sprache der Tastatur ungewöhnlich sind, wie ausländische Währungssymbole und akzentuierte Buchstaben. Falls eine Taste ein drittes Symbol trägt (auf der Vorderseite oder unten rechts auf der Oberseite, manchmal in einer anderen Farbe), dann ist Alt Gr oft das Mittel, dieses Symbol zu erzeugen.
+Description-eu.UTF-8: AltGr tekla ordezkoa:
+ Teklatu diseinu batzuetan, altGr tekla eraldatzaile bat da zenbait karaktere idazteko, nagusiki teklatu diseinuan gutxitan erabiltzen direnak, hala nola atzerriko diru ikurrak eta azentuak. Tekla batek hirugarren ikur bat badu (botoiaren aurreko alderdi bertikalean edo teklaren goialdeko eskuin eta behean, batzuetan beste kolore batez) AltGR sakatzea ikur hori idazteko modua izan ohi da.
+Description-fi.UTF-8: AltGr-näppäimen korvaaja:
+ Joissain näppäinasetteluissa AltGr on muuntonäppäin, jonka avulla voidaan syöttää joitain merkkejä. Nämä on yleensä näppäinasettelun kielelle epätyypillisiä, kuten ulkomaisia valuuttasymboleita ja aksentoituja kirjaimia. Jos näppäimessä on kolmas symboli, se saadaan yleensä syötettyä kyseisen näppäimen ja AltGr-näppäimen yhdistelmällä.
+Description-fr.UTF-8: Touche de remplacement d'AltGr :
+ Avec certaines dispositions de claviers, AltGr est une touche de modification utilisée pour entrer de nombreux caractères, principalement ceux qui n'appartiennent pas à la langue correspondant à la disposition du clavier, comme les symboles des devises étrangères et les lettres accentuées. Si une touche comporte un troisième symbole (gravé sur la face verticale ou en bas et à droite de la face supérieure de la touche, parfois d'une couleur différente), alors AltGr est souvent le moyen d'obtenir ce symbole.
+Description-gl.UTF-8: Substituto da tecla AltGr:
+ Con algunhas das disposicións de teclado, AltGr é unha tecla modificadora que se emprega para introducir algúns caracteres; principalmente algúns pouco habituais para o idioma da disposición de teclado, coma símbolos de moedas estranxeiras ou letras acentuadas. Se hai unha tecla cun terceiro símbolo (na cara anterior da tecla ou na parte inferior dereita da cara superior, ás veces nunha cor distinta), AltGr adoita ser o xeito de obter ese símbolo.
+Description-pt.UTF-8: Substituição para AltGr:
+ Em alguns teclados, o AltGr serve de modificador para escrever alguns caracteres, especialmente alguns que são invulgares na língua configurada, tais como símbolos de moeda estrangeira e letras acentuadas. Se uma tecla tem um terceiro símbolo (às vezes na face frontal, outras na parte inferior direita do topo ou numa cor diferente), é provável que o AltGr seja a tecla que permite escrevê-lo.
+Description-ru.UTF-8: Замена для клавиши AltGr:
+ В некоторых раскладках клавиатуры есть клавиша-модификатор AltGr, используемая для ввода, в основном, редко используемых в языке раскладки клавиатуры символов, например, символа национальной валюты и символы с диакритическим знаком. Если клавиша имеет третье значение символа (на передней вертикальной стенке клавиши или в виде значка внизу справа, иногда другого цвета), то AltGr часто используется для вывода этого символа.
+Description-sv.UTF-8: Ersättare för AltGr
+ I en del tangentbordsupplägg så är AltGr en modifierande tanget som används för att skriva tecken som inte är vanliga i språket för tangentbordsupplägget. Exempelvis accenter eller symboler för utländsk valuta. Om tangentbordet har ett tredje tecken på tangenterna (i en annan förg eller motsvarande) så används vanligen AltGr för att skriva dessa tecken.
+Description-th.UTF-8: การแทนปุ่ม AltGr:
+ ในผังแป้นพิมพ์บางแบบ AltGr จะใช้เป็นปุ่มประกอบในการป้อนอักขระบางตัว ซึ่งมักเป็นอักขระแปลกปลอมสำหรับภาษาของผังแป้นพิมพ์ เช่นสัญลักษณ์หน่วยเงินตราต่างประเทศ และอักขระที่มีเครื่องหมายกำกับเสียง ถ้าปุ่มในแป้นพิมพ์มีป้ายอักขระที่สาม (ที่ผิวข้างด้านหน้าปุ่ม หรือที่มุมล่างขวาของผิวบนปุ่ม โดยบางครั้งพิมพ์ด้วยสีที่ต่างออกไป) ปุ่ม AltGr ก็มักจะใช้เลือกอักขระที่ว่านั้น
+Description-tr.UTF-8: AltGr'nin yerine geçecek tuş:
+ Bazı klavye düzenlerinde AltGr çeşitli karakterlerin girilmesini sağlayan bir niteleyici tuştur.  Bu karakterlerin büyük bir bölümü, yabancı para simgeleri ve aksanlı harfler gibi, kullanılan klavye düzenine ait dilde yaygın olmayan karakterlerden oluşur.  Eğer bir tuşta (tuşun dikey ön kenarında veya hemen üzerinde sağ alt tarafta, bazen de farklı bir renkle) bir üçüncü simge görüyorsanız AltGr tuşu çoğunlukla bu simgenin girilmesini sağlamakta kullanılır.
+Description-vi.UTF-8: Thay thế phím AltGr:
+ Trên một số bố trí bàn phím, AltGr là một phím bổ trợ dùng để gõ một số ký tự, chính là ký tự khác với ngôn ngữ của bố trí bàn phím, v.d. ký hiệu tiền tệ nước ngoại và chữ có dấu phụ lạ.
+
+Template: console-setup/compose
+Type: select
+Choices: No compose key, Right Alt, Right Control, Right Logo key, Menu key, Left Logo key, Caps Lock
+Choices-be.UTF-8: Няма кнопкі compose, Правы Alt, Правы Control, Правая кнопка Logo, Кнока меню, Левая кнопка Logo, Caps Lock
+Choices-bg.UTF-8: Без клавиш „Compose“, Десен Alt, Десен Control, Десен клавиш с лого, Клавиш меню, Ляв клавиш с лого, Caps Lock
+Choices-cs.UTF-8: Bez klávesy Compose, Pravý Alt, Pravý Control, Pravá klávesa logo, Klávesa Menu, Levá klávesa logo, Caps Lock
+Choices-de.UTF-8: Keine Compose-Taste, Alt rechts (Alt Gr), Strg rechts, Symboltaste rechts, Menütaste, Symboltaste links, Feststelltaste
+Choices-es.UTF-8: Sin tecla modificadora, Alt derecho, Control derecho, Tecla derecha de logo, Tecla de menú, Tecla izquierda de logo, Bloqueo de mayúsculas
+Choices-eu.UTF-8: Ez konposaturiko teklarik, Eskuineko Alt, Eskuineko Kontrol, Eskuineko logo tekla, Menu tekla, Ezkerreko Logo tekla, Maiuskulak Blokeatu
+Choices-fi.UTF-8: Ei yhdistelmänäppäintä, Oikea Alt, Oikea Control, Oikea Logo-näppäin, Menu-näppäin, Vasen Logo-näppäin, Caps Lock
+Choices-fr.UTF-8: Pas de touche « compose », Touche Alt de droite, Touche Ctrl de droite, Touche « logo » de droite, Touche Menu, Touche « logo » de gauche, Verrouillage Majuscule
+Choices-gl.UTF-8: Non hai tecla Compose, Tecla Alt dereita, Tecla Control dereita, Tecla de logotipo dereita, Tecla do menú, Tecla de logotipo esquerda, Bloqueo de maiúsculas
+Choices-nl.UTF-8: Geen samenstellingstoets, Alt-Rechts, Control-Rechts, Logotoets-Rechts, Menutoets, Logotoets-Links, Caps Lock
+Choices-pt.UTF-8: Se tecla compose, Alt direito, Control Direito, Tecla Logotipo Direito, Tecla Menu, Tecla de Logotipo Esquerdo, Caps Lock
+Choices-ru.UTF-8: нет составной клавиши, правая клавиша Alt, правая клавиша Control, правая клавиша Logo, клавиша Menu, левая клавиша Logo, Caps Lock
+Choices-sv.UTF-8: Ingen komposittangent, Alt\, höger, Control\, höger, Tangent med logotype\, höger, Menyknapp, Tangent med logotype\, vänster, Caps Lock
+Choices-th.UTF-8: ไม่ใช้ปุ่มผสมอักขระ, Alt ขวา, Control ขวา, ปุ่มโลโก้ขวา, ปุ่มเมนู, ปุ่มโลโก้ซ้าย, Caps Lock
+Choices-tr.UTF-8: Birleştirme (Compose) tuşu yok, Sağ Alt, Sağ Control, Sağ Logo tuşu, Menü tuşu, Sol Logo tuşu, Caps Lock (Büyük Harf Kilidi)
+Choices-vi.UTF-8: Không có phím cấu tạo, Alt phải, Ctrl phải, Phím biểu hình bên phải, Phím trình đơn, Phím biểu tượng bên trái, Caps Lock
+Default: No compose key
+Description: Compose key:
+ The Compose key (known also as Multi_key) causes the computer to interpret
+ the next few keystrokes as a combination in order to produce a character
+ not found on the keyboard.
+ .
+ On the text console the Compose key does not work in Unicode mode. If not
+ in Unicode mode, regardless of what you choose here, you can always also
+ use the Alt+period combination as a Compose key.
+Description-be.UTF-8: Кнопка Compose:
+ Кнопка Compose (вядома таксама як Multi_key) паведамляе праграме сігналам, што наступныя націскі кнопак трэба апрацаваць як камбінацыю для вываду знака, якога няма на клавіятуры
+ .
+ На тэкставай кансолі кнопка Compose не працуе ў рэжыме Unicode. Калі не ў рэжыме Unicode, безадносна таго, што тут выберыце, вы можаце заўсёды выкарыстаць камбінацыю Alt+. як кнопку Compose.
+Description-bg.UTF-8: Клавиш „Compose“:
+ Клавишът „Compose“ (известен също като Multi_key) е клавиш, който е предназначен да посочи на софтуера да интерпретира следващите няколко клавиша като комбинация с цел да генерира символ, който отсъства на клавиатурата.
+ .
+ На текстовата конзола клавишът „Compose“ не работи в режим „Уникод“.  Ако режимът не е „Уникод“, то независимо какво ще изберете тук, ще може да използвате също комбинацията Alt+точка като клавиш „Compose“.
+Description-cs.UTF-8: Klávesa Compose:
+ Klávesa Compose (také známá jako Multi_key) říká počítači, aby následující stisky kláves interpretoval jako kombinaci, čímž můžete napsat znak, který se normálně na klávesnici nenachází.
+ .
+ Klávesa Compose bohužel nefunguje na textové konzoli v unicodovém režimu. Nezávisle na tom, co zde vyberete, můžete vždy místo klávesy Compose použít kombinaci Alt+tečka (tedy pouze pokud nepoužíváte režim unicode).
+Description-de.UTF-8: Compose-Taste:
+ Die Aufgabe der Compose-Taste (auch als Multi_key bekannt) ist es, dem Computer zu signalisieren, dass die nächsten Tastenanschläge als eine Kombination zu interpretieren sind, die ein Zeichen produziert, welches nicht auf der Tastatur vorhanden ist.
+ .
+ Auf der Textkonsole funktioniert die Compose-Taste nicht im Unicode-Modus. Falls Sie nicht im Unicode-Modus arbeiten, können Sie immer auch die Kombination Alt+Satzpunkt (.) als Compose-Taste verwenden, unabhängig von Ihrer Auswahl hier.
+Description-eu.UTF-8: Tekla konposatua:
+ Konposaturiko tekla (Multi_key izenez ere ezaguna) zapalduz gero, softwareak tekla-konbinazio gisa interpretatuko ditu zapaltzen diren hurrengo teklak. Teklatuan ez dauden ikurrak idatz daitezke horrela.
+ .
+ Testu kontsolan ez du konposaturiko teklak funtzionatuko Unicode moduan. Unicode moduan ez zaudenean, hemen ezartzen duzuna edozer dela ere, Alt+periodo konbinazioa erabili ahal izango duzu konposaturiko tekla gisa.
+Description-fi.UTF-8: Yhdistelmänäppäin:
+ Yhdistelmänäppäin (Compose key tai Multi_key) käskee tietokonetta tulkitsemaan pari seuraavaa näppäilyä yhdistelmäksi. Näin voidaan tuottaa merkkejä, joita ei löydy näppäimistöltä.
+ .
+ Tekstikonsolilla yhdistelmänäppäin ei toimi Unicode-tilassa. Muussa kuin Unicode-tilassa voidaan tästä valinnasta riippumatta aina käyttää yhdistelmää Alt+piste yhdistelmänäppäimenä.
+Description-fr.UTF-8: Touche « compose » :
+ La touche « compose » (encore appelée « touche multi ») sert à indiquer que les touches utilisées ensuite doivent être combinées de façon à produire un caractère qui n'existe pas sur le clavier.
+ .
+ Sur les consoles en mode texte, la touche « compose » ne fonctionne pas en mode Unicode. Si l'on n'est pas en mode Unicode, indépendemment de ce que vous avez choisi ici, vous pouvez toujours utiliser la combinaison Alt + point comme touche « compose ».
+Description-gl.UTF-8: Tecla "compose":
+ A tecla Compose (tamén coñecida coma "Multi_key") fai que o ordenador interprete as seguintes pulsacións de teclas coma unha combinación para producir un carácter que non figura no teclado.
+ .
+ Na consola de texto, a tecla Compose non funciona no modo Unicode. Se non está no modo Unicode, independentemente do que escolla aquí, sempre ha poder empregar a combinación Alt+punto coma tecla Compose.
+Description-pt.UTF-8: Tecla compose:
+ A tecla Compose (também conhecida como Multi) é uma tecla que sinaliza o software para interpretar os batimentos de teclas seguintes como uma combinação de símbolos para produzir um caracter não existente no teclado.
+ .
+ Na consola de texto a tecla Compose não funciona em modo Unicode. Se não estiver em modo Unicode, independentemente da escolha, pode sempre usar a combinação Alt+ponto como tecla Compose.
+Description-ru.UTF-8: Составная клавиша:
+ Составная клавиша (также называемая Multi_key) -- это клавиша, которая подаёт сигнал программе, что последующие нажатия следует воспринимать как комбинацию для получения символа, которого нет на клавиатуре.
+ .
+ На текстовых консолях в режиме Юникода составная клавиша не работает. Если режим Юникода не используется, то независимо, что вы сейчас выберете, всегда можно пользоваться также комбинацией Alt+точка как составной клавишей.
+Description-sv.UTF-8: Komposittangent:
+ Komposittangenten (kallas även multitangent) tvingar datorn att tolka de kommande tangenttrycken som en del av en sekvens för att kunna skapa tecken som inte finns på tangentbordet.
+ .
+ I textläge fungerar inte komposittangenten i Unicode. Om du inte befinner dig i Unicode-läge, oberoende vad du väljer här, så kan du använda Alt+punkt(".") som en komposittangent.
+Description-th.UTF-8: ปุ่มผสมอักขระ (Compose key):
+ ปุ่มผสมอักขระ (Compose key หรือเรียกอีกชื่อหนึ่งว่า Multi_key) จะทำให้เครื่องตีความปุ่มกดสองสามครั้งถัดไปเป็นลำดับสำหรับผสมเป็นอักขระที่ไม่มีในแป้นพิมพ์
+ .
+ บนคอนโซลในโหมดอักขระ จะใช้ปุ่มผสมอักขระในโหมดยูนิโค้ดไม่ได้ แต่ถ้าไม่ได้อยู่ในโหมดยูนิโค้ด ไม่ว่าคุณจะเลือกปุ่มอะไรที่นี่ คุณจะยังคงสามารถใช้ปุ่ม Alt+จุด เป็นปุ่มผสมอักขระได้เสมอ
+Description-tr.UTF-8: Birleştirme (Compose) tuşu:
+ Birleştirme tuşu ("Multi_key" olarak da bilinir); bilgisayarın, ard arda girilen bir dizi tuş vuruşunu, klavyede bulunmayan bir karakteri üretmek için birleşik olarak yorumlamasını sağlar.
+ .
+ Birleştirme tuşu, Unikod kipli metin uçbiriminde çalışmaz. Unikod kipinin haricindeki her durumda Alt+nokta bileşimini birleştirme tuşu olarak kullanabilirsiniz.
+Description-vi.UTF-8: Phím cấu tạo :
+ Phím cấu tạo (cũng được gọi như là Multi_key) gây ra máy tính đọc vài cú nhấn phím kế tiếp như là một tổ hợp để nhập một ký tự không nằm trên bàn phím đó.
+ .
+ Trên bàn giao tiếp văn bản, phím cấu tạo không hoạt động ở chế độ Unicode. Khi không ở chế độ Unicode, bất chấp sự chọn ở đây, bạn cũng có thể sử dụng tổ hợp Alt+dấu_chấm như là một phím cấu tạo.
+
+Template: console-setup/ask_detect
+Type: boolean
+Default: false
+Description: Detect keyboard layout?
+ You can try to have your keyboard layout detected by pressing a series of
+ keys. If you do not want to do this, you will be able to select your
+ keyboard layout from a list.
+Description-bg.UTF-8: Намиране на клавиатурна подредба?
+ Можете да пробвате да намерите вашата клавиатурна подредба като натиснете последица от клавиши. Ако не искате да направите това, ще можете да изберете вашата клавиатурна подредба от списък.
+Description-de.UTF-8: Tastaturmodell erkennen?
+ Sie können versuchen das Tastaturmodell anhand von Tasteneingaben erkennen zu lassen. Wenn Sie das nicht möchten, können sie das Tastaturmodell aus einer Liste wählen.
+Description-es.UTF-8: ¿Detectar la disposición del teclado?
+ Puede probar que su modelo de teclado sea detectado pulsando una serie de teclas. Si no desea hacer esto, podrá seleccionar su modelo de teclado de una lista.
+Description-fi.UTF-8: Tunnista näppäimistön asettelu?
+ Voit antaa näppäimistön asettelun tulevan tunnistetuksi painamalla tiettyjä näppäimiä. Jos et halua tehdä niin, voit valita näppäimistöasettelusi luettelosta.
+Description-fr.UTF-8: Détecter l'agencement du clavier ?
+ Vous pouvez faire détecter l'agencement de votre clavier en appuyant sur une série de touches. Si vous ne désirez pas procéder de la sorte, vous aurez la possibilité de choisir l'agencement de votre clavier depuis une liste.
+Description-gl.UTF-8: Detectar a distribución do teclado?
+ Pode facer que se detecte a distribución do teclado premendo unha serie de teclas. Se non o quere facer, pode seleccionar a distribución do teclado nunha lista.
+Description-pt.UTF-8: Detectar disposição do teclado?
+ Pode tentar que a disposição do seu teclado seja detectada pressionando uma série de teclas. Se não quiser fazer isto, poderá escolher a disposição do seu teclado através de uma lista.
+Description-ru.UTF-8: Определить раскладку клавиатуры?
+ Можно попытаться настроить раскладку, нажимая клавиши клавиатуры. Или же выберите раскладку из списка.
+Description-sv.UTF-8: Identifiera tangentbordslayout?
+ Du kan försöka att få din tangentbordslayout identifierad genom att trycka på ett antal tangenter. Om du inte vill göra det här så kommer du att kunna välja din tangentbordslayout från en lista.
+Description-th.UTF-8: ตรวจหาแป้นพิมพ์หรือไม่?
+ คุณสามารถตรวจหาแบบของแป้นพิมพ์โดยการกดปุ่มต่าง ถ้าคุณไม่ต้องการที่จะทำแบบนี้ คุณจะสามารถเลือกแบบของแป้นพิมพ์จากรายการได้
+Description-tr.UTF-8: Klavye yerleşimini sapta?
+ Klavye yerleşiminizin saptanmasını bir dizi tuşa basarak deneyebilirsiniz. Bunu yapmak istemiyorsanız klavye yerleşiminizi bir listeden seçebilirsiniz.
+
+Template: console-setup/detect
+Type: detect-keyboard
+Choices: ${FILENAME}
+Description: Detecting your keyboard layout
+Description-bg.UTF-8: Търсене на вашата клавиатурна подредба
+Description-de.UTF-8: Ihr Tastaturmodell wird erkannt
+Description-es.UTF-8: Detectando la disposición de su teclado
+Description-fi.UTF-8: Tunnistetaan näppäimistön asettelua
+Description-fr.UTF-8: Détection de l'agencement du clavier
+Description-gl.UTF-8: A detectar a distribución do teclado
+Description-pt.UTF-8: A detectar a disposição do seu teclado
+Description-ru.UTF-8: Определение раскладки клавиатуры
+Description-sv.UTF-8: Identifierar din tangentbordslayout
+Description-th.UTF-8: กำลังตรวจหาแป้นพิมพ์ของคุณ
+Description-tr.UTF-8: Klavye yerleşiminiz saptanıyor
+
+Template: console-setup/detected
+Type: note
+Description: Keyboard layout detection complete
+ Based on the keys you pressed, your keyboard layout appears to be
+ "${LAYOUT}". If this is not correct, you can go back and select your layout
+ from the full list instead.
+Description-bg.UTF-8: Търсенето на клавиатурна подредба завърши
+ Въз основа на клавишите, които натиснахте, вашата клавиатурна подредба изглежда е "${LAYOUT}". Ако това не е правилно, можете да се върнете в предишния екран и да изберете вашата клавиатурна подредба от пълния списък.
+Description-de.UTF-8: Tastaturmodell-Erkennung abgeschlossen
+ Anhand der gedrückten Tasten wurde das Tastaturmodell »${LAYOUT}« ausgewählt. Falls diese Auswahl nicht richtig ist, können Sie zurück gehen und Ihr Modell stattdessen aus einer vollständigen Liste wählen.
+Description-es.UTF-8: Detección de disposición de  teclado completa
+ Sobre la base de las teclas que pulsó, su modelo de teclado parece ser "${LAYOUT}". Si esto no es correcto, puede volver atrás y seleccionar el diseño de la lista completa en su lugar
+Description-fi.UTF-8: Näppäimistön asettelun tunnistus valmis
+ Painettujen näppäimien perusteella näppäimistön asettelu vaikuttaisi olevan "${LAYOUT}". Jos tämä ei ole oikein, siirry takaisin ja valitse asettelusi luettelosta.
+Description-fr.UTF-8: La détection de l'agencement du clavier est terminée
+ D'après les touches sur lesquelles vous avez appuyé, l'agencement de votre clavier est "${LAYOUT}". Si cela n'est pas correct, vous pouvez revenir en arrière et sélectionner un autre agencement depuis une liste.
+Description-gl.UTF-8: Rematou a detección da distribución do teclado
+ Segundo as teclas que premeu, parece que a distribución do teclado é ${LAYOUT}". De non ser correcto, pode recuar e seleccionar a distribución do teclado na lista completa.
+Description-pt.UTF-8: Detecção da disposição do teclado completa
+ Baseado nas teclas que pressionou, a disposição do seu teclado aparenta ser "${LAYOUT}". Se não está correto, pode voltar e escolher a disposição do seu teclado na lista.
+Description-ru.UTF-8: Определение раскладки клавиатуры завершено
+ Основываясь на результатах, скорее всего раскладка клавиатуры — "${LAYOUT}". Если это не так, вернитесь назад и выберите раскладку из списка.
+Description-sv.UTF-8: Identifiering av tangentbordslayout är färdig
+ Baserat på tangenterna som du tryckte på så verkar din tangentbordslayout vara "${LAYOUT}". Om detta inte är korrekt så kan du istället gå tillbaka och välja din layout från den kompletta listan.
+Description-th.UTF-8: ตรวจหาแป้นพิมพ์เสร็จแล้ว
+ ดูจากปุ่มต่างๆที่คุณกด แป้นพิมพ์ของคุณน่าจะเป็นแบบ "${LAYOUT}" ถ้าไม่ถูกต้อง คุณสามารถกลับไปเลือกใหม่จากรายการได้
+Description-tr.UTF-8: Klavye yerleşimi saptama tamamlandı
+ Dokunduğunuz tuşlara göre klavye yerleşiminiz "${LAYOUT}" olarak görünüyor. Bu doğru değilse geri gidip yerleşiminizi tam listeden seçebilirsiniz.
+
+Template: console-setup/modelcode
+Type: string
+Description: for internal use
+
+Template: console-setup/layoutcode
+Type: string
+Description: for internal use
+
+Template: console-setup/variantcode
+Type: string
+Description: for internal use
+
+Template: console-setup/optionscode
+Type: string
+Description: for internal use
+
+Template: console-setup/fontsize
+Type: string
+Description: for internal use
+
+Template: console-setup/codesetcode
+Type: string
+Description: for internal use
+

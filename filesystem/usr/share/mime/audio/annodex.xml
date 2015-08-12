@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="audio/annodex">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>Annodex Audio</comment>
+  <sub-class-of type="application/annodex"/>
+  <alias type="audio/x-annodex"/>
+</mime-type>

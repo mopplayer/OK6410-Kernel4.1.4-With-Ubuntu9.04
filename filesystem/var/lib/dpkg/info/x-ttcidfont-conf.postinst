@@ -1,0 +1,68 @@
+#! /bin/sh
+
+set -e
+
+. /usr/share/debconf/confmodule
+
+FILE='/etc/defoma/config/x-ttcidfont-conf.conf'
+
+case $1 in
+    configure)
+    rm -f /etc/X11/fonts/TrueType/x-ttcid.alias /etc/X11/fonts/TrueType/x-ttcid.scale
+    rm -f /etc/X11/fonts/CID/x-ttcid.alias /etc/X11/fonts/CID/x-ttcid.scale
+    [ -d /etc/X11/fonts/CID ] && rmdir --ignore-fail-on-non-empty /etc/X11/fonts/CID
+    if [ -L /etc/X11/fonts/TrueType ] ; then
+      rm /etc/X11/fonts/TrueType
+    else if [ -d /etc/X11/fonts/TrueType ] ; then
+      rmdir --ignore-fail-on-non-empty /etc/X11/fonts/TrueType
+    fi fi
+    
+    if [ -d /etc/X11/fonts/defoma/TrueType ]; then
+      rm -f /etc/X11/fonts/defoma/TrueType/x-ttcid.alias /etc/X11/fonts/defoma/TrueType/x-ttcid.scale
+      rmdir --ignore-fail-on-non-empty /etc/X11/fonts/defoma/TrueType
+    fi
+    if [ -d /etc/X11/fonts/defoma/CID ]; then
+      rm -f /etc/X11/fonts/defoma/CID/x-ttcid.alias /etc/X11/fonts/defoma/CID/x-ttcid.scale
+      rmdir --ignore-fail-on-non-empty /etc/X11/fonts/defoma/CID
+    fi
+    [ -d /etc/X11/fonts/defoma ] && rmdir --ignore-fail-on-non-empty /etc/X11/fonts/defoma
+    [ -d /var/lib/defoma/x-ttcid.d ] && rm -rf /var/lib/defoma/x-ttcid.d
+    
+    db_get x-ttcidfont-conf/tt_backend || true
+    
+    echo "# IF YOU EDIT THIS FILE MANUALLY, RUN:" > $FILE
+    echo "#   defoma-app update x-ttcidfont-conf truetype" >> $FILE
+    echo "# TO REFLECT THE CHANGE." >> $FILE
+    echo "# The following variable decides which method is used for" >> $FILE
+    echo "# handling truetype fonts." >> $FILE
+    echo "X_TRUETYPE_METHOD=$RET" >> $FILE
+    
+    db_get x-ttcidfont-conf/xtt_vl || true
+
+    echo "# The following variable decides if X calculate font" >> $FILE
+    echo "# metrics in the very lazy way when the method is xtt." >> $FILE
+    case "X$RET" in
+	Xtrue) echo "XTT_VL=y" >> $FILE ;;
+	*) echo "XTT_VL=n" >> $FILE ;;
+    esac
+    
+    ;;
+    
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+    
+    *)
+    echo "postinst called with unknown argument \`$1'" >&2
+    exit 0
+    ;;
+esac
+
+# Automatically added by dh_installdefoma
+if [ "$1" = "configure" ]; then
+
+  test -x /usr/bin/defoma-app && /usr/bin/defoma-app update x-ttcidfont-conf
+
+fi
+# End automatically added section
+
+

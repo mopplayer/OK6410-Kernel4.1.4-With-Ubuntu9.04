@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<gconf>
+	<dir name="apps">
+		<dir name="gksu">
+			<entry name="sudo-mode" mtime="1241846749" type="bool" value="true"/>
+		</dir>
+	</dir>
+	<dir name="desktop">
+		<dir name="gnome">
+			<dir name="font_rendering">
+				<entry name="dpi" mtime="1241846749" type="float" value="96"/>
+			</dir>
+			<dir name="sound">
+				<entry name="event_sounds" mtime="1241846749" type="bool" value="true"/>
+				<entry name="enable_esd" mtime="1241846749" type="bool" value="true"/>
+			</dir>
+			<dir name="background">
+				<entry name="picture_options" mtime="1241846749" type="string">
+					<stringvalue>stretched</stringvalue>
+				</entry>
+				<entry name="picture_filename" mtime="1241846749" type="string">
+					<stringvalue>/usr/share/backgrounds/warty-final-ubuntu.png</stringvalue>
+				</entry>
+				<entry name="primary_color" mtime="1241846749" type="string">
+					<stringvalue>#4E3E29</stringvalue>
+				</entry>
+			</dir>
+			<dir name="interface">
+				<entry name="gtk_theme" mtime="1241846749" type="string">
+					<stringvalue>Human</stringvalue>
+				</entry>
+				<entry name="icon_theme" mtime="1241846749" type="string">
+					<stringvalue>Human</stringvalue>
+				</entry>
+			</dir>
+			<dir name="peripherals">
+				<dir name="mouse">
+					<entry name="cursor_theme" mtime="1241846749" type="string">
+						<stringvalue>Human</stringvalue>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="url-handlers">
+				<dir name="https">
+					<entry name="command" mtime="1241846749" type="string">
+						<stringvalue>firefox %s</stringvalue>
+					</entry>
+				</dir>
+				<dir name="http">
+					<entry name="command" mtime="1241846749" type="string">
+						<stringvalue>firefox %s</stringvalue>
+					</entry>
+				</dir>
+				<dir name="h323">
+					<entry name="command" mtime="1241846749" type="string">
+						<stringvalue>ekiga -c %s</stringvalue>
+					</entry>
+				</dir>
+			</dir>
+			<dir name="applications">
+				<dir name="media">
+					<entry name="exec" mtime="1241846749" type="string">
+						<stringvalue>rhythmbox</stringvalue>
+					</entry>
+				</dir>
+				<dir name="browser">
+					<entry name="exec" mtime="1241846749" type="string">
+						<stringvalue>firefox</stringvalue>
+					</entry>
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</gconf>

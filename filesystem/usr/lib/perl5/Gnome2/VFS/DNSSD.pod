@@ -1,0 +1,120 @@
+=head1 NAME
+
+Gnome2::VFS::DNSSD
+
+=for object Gnome2::VFS::DNSSD
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 list = Gnome2::VFS::DNSSD-E<gt>B<browse> ($domain, $type, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $domain (string) 
+
+=item * $type (string) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::VFS::DNSSD-E<gt>B<browse_sync> ($domain, $type, $timeout_msec)
+
+=over
+
+=over
+
+=item * $domain (string) 
+
+=item * $type (string) 
+
+=item * $timeout_msec (integer) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::VFS-E<gt>B<get_default_browse_domains> 
+
+=over
+
+=back
+
+=head2 list = Gnome2::VFS::DNSSD-E<gt>B<list_browse_domains_sync> ($domain, $timeout_msec)
+
+=over
+
+=over
+
+=item * $domain (string) 
+
+=item * $timeout_msec (integer) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::VFS::DNSSD-E<gt>B<resolve> ($name, $type, $domain, $timeout, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=item * $type (string) 
+
+=item * $domain (string) 
+
+=item * $timeout (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::VFS::DNSSD-E<gt>B<resolve_sync> ($name, $type, $domain, $timeout_msec)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=item * $type (string) 
+
+=item * $domain (string) 
+
+=item * $timeout_msec (integer) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

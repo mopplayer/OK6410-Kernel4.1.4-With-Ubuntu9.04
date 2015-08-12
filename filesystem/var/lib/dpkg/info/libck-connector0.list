@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libck-connector0
+/usr/share/doc/libck-connector0/copyright
+/usr/share/doc/libck-connector0/changelog.gz
+/usr/share/doc/libck-connector0/changelog.Debian.gz
+/usr/share/doc/libck-connector0/TODO
+/usr/share/doc/libck-connector0/README
+/usr/share/doc/libck-connector0/NEWS.gz
+/usr/share/doc/libck-connector0/AUTHORS
+/usr/lib
+/usr/lib/libck-connector.so.0.0.0
+/usr/lib/libck-connector.so.0

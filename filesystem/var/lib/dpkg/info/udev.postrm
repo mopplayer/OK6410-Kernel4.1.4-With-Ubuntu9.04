@@ -1,0 +1,187 @@
+#!/bin/sh -e
+# This script can be called in the following ways:
+#
+# After the package was removed:
+#	<postrm> remove
+#
+# After the package was purged:
+#	<postrm> purge
+#
+# After the package was upgraded:
+#	<old-postrm> upgrade <new-version>
+# if that fails:
+#	<new-postrm> failed-upgrade <old-version>
+#
+#
+# After all of the packages files have been replaced:
+#	<postrm> disappear <overwriting-package> <version>
+#
+#
+# If preinst fails during install:
+#	<new-postrm> abort-install
+#
+# If preinst fails during upgrade of removed package:
+#	<new-postrm> abort-install <old-version>
+#
+# If preinst fails during upgrade:
+#	<new-postrm> abort-upgrade <old-version>
+
+
+# Undo removal of a no-longer used conffile
+undo_rm_conffile()
+{
+    CONFFILE="$1"
+
+    if [ ! -e "$CONFFILE" ]; then
+	if [ -e "$CONFFILE".dpkg-bak ]; then
+	    echo "Restoring modified conffile $CONFFILE"
+	    mv -f "$CONFFILE".dpkg-bak "$CONFFILE"
+	elif [ -e "$CONFFILE".dpkg-obsolete ]; then
+	    mv -f "$CONFFILE".dpkg-obsolete "$CONFFILE"
+	fi
+    fi
+}
+
+# Finish removal of a no-longer used conffile
+finish_rm_conffile()
+{
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE".dpkg-bak ]; then
+	rm -f "$CONFFILE".dpkg-bak
+    fi
+}
+
+# Undo move of a conffile
+undo_mv_conffile()
+{
+    CONFFILE="$1"
+
+    if [ ! -e "$CONFFILE" ]; then
+	if [ -e "$CONFFILE".dpkg-bak ]; then
+	    mv -f "$CONFFILE".dpkg-bak "$CONFFILE"
+	elif [ -e "$CONFFILE".dpkg-moving ]; then
+	    mv -f "$CONFFILE".dpkg-moving "$CONFFILE"
+	fi
+    fi
+}
+
+# Finish move of a conffile
+finish_mv_conffile()
+{
+    CONFFILE="$1"
+
+    if [ -e "$CONFFILE".dpkg-bak ]; then
+	rm -f "$CONFFILE".dpkg-bak
+    fi
+}
+
+
+# Enable udevadm again
+enable_udevadm()
+{
+    rm -f /sbin/udevadm
+    dpkg-divert --local --rename --divert /sbin/udevadm.upgrade \
+    		--remove /sbin/udevadm
+}
+
+
+# Undo remove of Ubuntu rules in favour of upstream ones
+undo_rm_ubuntu_rules()
+{
+    undo_rm_conffile /etc/udev/rules.d/05-options.rules
+    undo_rm_conffile /etc/udev/rules.d/05-udev-early.rules
+    undo_rm_conffile /etc/udev/rules.d/20-names.rules
+    undo_rm_conffile /etc/udev/rules.d/30-cdrom_id.rules
+    undo_rm_conffile /etc/udev/rules.d/40-basic-permissions.rules
+    undo_rm_conffile /etc/udev/rules.d/40-permissions.rules
+    undo_rm_conffile /etc/udev/rules.d/60-persistent-input.rules
+    undo_rm_conffile /etc/udev/rules.d/60-persistent-storage-tape.rules
+    undo_rm_conffile /etc/udev/rules.d/60-persistent-storage.rules
+    undo_rm_conffile /etc/udev/rules.d/60-symlinks.rules
+    undo_rm_conffile /etc/udev/rules.d/61-persistent-storage-edd.rules
+    undo_rm_conffile /etc/udev/rules.d/65-id-type.rules
+    undo_rm_conffile /etc/udev/rules.d/66-persistent-storage-edd.rules
+    undo_rm_conffile /etc/udev/rules.d/75-cd-aliases-generator.rules
+    undo_rm_conffile /etc/udev/rules.d/75-persistent-net-generator.rules
+    undo_rm_conffile /etc/udev/rules.d/80-programs.rules
+    undo_rm_conffile /etc/udev/rules.d/90-modprobe.rules
+    undo_rm_conffile /etc/udev/rules.d/95-udev-late.rules
+}
+
+# Finish remove of Ubuntu rules in favour of upstream ones
+finish_rm_ubuntu_rules()
+{
+    finish_rm_conffile /etc/udev/rules.d/05-options.rules
+    finish_rm_conffile /etc/udev/rules.d/05-udev-early.rules
+    finish_rm_conffile /etc/udev/rules.d/20-names.rules
+    finish_rm_conffile /etc/udev/rules.d/30-cdrom_id.rules
+    finish_rm_conffile /etc/udev/rules.d/40-basic-permissions.rules
+    finish_rm_conffile /etc/udev/rules.d/40-permissions.rules
+    finish_rm_conffile /etc/udev/rules.d/60-persistent-input.rules
+    finish_rm_conffile /etc/udev/rules.d/60-persistent-storage-tape.rules
+    finish_rm_conffile /etc/udev/rules.d/60-persistent-storage.rules
+    finish_rm_conffile /etc/udev/rules.d/60-symlinks.rules
+    finish_rm_conffile /etc/udev/rules.d/61-persistent-storage-edd.rules
+    finish_rm_conffile /etc/udev/rules.d/65-id-type.rules
+    finish_rm_conffile /etc/udev/rules.d/66-persistent-storage-edd.rules
+    finish_rm_conffile /etc/udev/rules.d/75-cd-aliases-generator.rules
+    finish_rm_conffile /etc/udev/rules.d/75-persistent-net-generator.rules
+    finish_rm_conffile /etc/udev/rules.d/80-programs.rules
+    finish_rm_conffile /etc/udev/rules.d/90-modprobe.rules
+    finish_rm_conffile /etc/udev/rules.d/95-udev-late.rules
+}
+
+
+# Remove configuration and log files
+purge_files()
+{
+    if [ -f /etc/iftab ]; then
+	rm -f /etc/iftab || true
+    fi
+
+    if [ -f /var/log/udev ]; then
+	rm -f /var/log/udev || true
+    fi
+}
+
+
+case "$1" in
+    remove)
+	;;
+
+    purge)
+    	finish_rm_ubuntu_rules
+	purge_files
+	;;
+
+    upgrade|failed-upgrade|disappear)
+	;;
+
+    abort-install|abort-upgrade)
+	# Abort upgrade from intrepid
+	if dpkg --compare-versions "$2" lt "136-4"; then
+	    undo_rm_ubuntu_rules
+	fi
+
+	enable_udevadm
+	;;
+
+    *)
+	echo "$0 called with unknown argument \`$1'" 1>&2
+	exit 1
+	;;
+esac
+
+# Automatically added by dh_installinit
+if [ "$1" = "purge" ] ; then
+	update-rc.d udev-finish remove >/dev/null || exit $?
+fi
+# End automatically added section
+# Automatically added by dh_installinit
+if [ "$1" = "purge" ] ; then
+	update-rc.d udev remove >/dev/null || exit $?
+fi
+# End automatically added section
+
+exit 0

@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_iconcache
+[ -d /usr/share/icons/hicolor ] && touch -m /usr/share/icons/hicolor || true
+if [ "$1" = "remove" ] && \
+   [ -x "`which gtk-update-icon-cache 2>/dev/null`" ] && \
+   [ -f /etc/gtk-2.0/gdk-pixbuf.loaders ]; then
+   	if [ "`find /usr/share/icons/hicolor -mindepth 1 -maxdepth 1 -type d | wc -l`" -gt 0 ] && \
+	   [ "`find /usr/share/icons/hicolor -mindepth 1 -maxdepth 1 -type f -name index.theme | wc -l`" -eq 1 ]; then
+   		# we shouldn't bomb out, if gtk-update-icon-cache failes, 
+		# it's not important enough
+		gtk-update-icon-cache -q /usr/share/icons/hicolor || true;
+	else
+		# if the icon theme directory has no subdirs, we can remove the cache
+		rm -f /usr/share/icons/hicolor/icon-theme.cache || true;
+	fi
+fi
+# End automatically added section

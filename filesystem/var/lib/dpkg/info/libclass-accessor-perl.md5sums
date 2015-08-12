@@ -1,0 +1,11 @@
+7fe27be7218d888f0f466c8b0f007c95  usr/share/perl5/Class/Accessor.pm
+75a54efbbf56673ad01d09f40c5df82e  usr/share/perl5/Class/Accessor/Faster.pm
+c0014e4df9ed65aaba1f154ff99e4a0a  usr/share/perl5/Class/Accessor/Fast.pm
+8199f069f5807f23a97c68839406761a  usr/share/man/man3/Class::Accessor.3pm.gz
+9899eb7e4d048d2cb246a07d671cebff  usr/share/man/man3/Class::Accessor::Fast.3pm.gz
+389b16f777817ef65527c5cc4f121ced  usr/share/man/man3/Class::Accessor::Faster.3pm.gz
+1b013688c0b75a9b3067e180001c487b  usr/share/doc/libclass-accessor-perl/README
+534e4d637404253f709734a6c8216d49  usr/share/doc/libclass-accessor-perl/copyright
+f802a732070dcb1123406b9ad09adcc3  usr/share/doc/libclass-accessor-perl/changelog.gz
+1a0c9c502d033418986fa7ba9f34b353  usr/share/doc/libclass-accessor-perl/examples/benchmark
+346cdccbc369d4ca675c462f4bf98784  usr/share/doc/libclass-accessor-perl/changelog.Debian.gz

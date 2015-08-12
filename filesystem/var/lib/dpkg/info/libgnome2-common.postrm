@@ -1,0 +1,19 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_gconf
+if which update-gconf-defaults >/dev/null 2>&1; then
+	update-gconf-defaults
+fi
+# End automatically added section
+# Automatically added by dh_gconf
+if [ "$1" = purge ]; then
+	OLD_DIR=/etc/gconf/schemas
+	SCHEMA_FILES="desktop_gnome_accessibility_keyboard.schemas desktop_gnome_accessibility_startup.schemas desktop_gnome_applications_at_mobility.schemas desktop_gnome_applications_at_visual.schemas desktop_gnome_applications_browser.schemas desktop_gnome_applications_office.schemas desktop_gnome_applications_terminal.schemas desktop_gnome_applications_window_manager.schemas desktop_gnome_background.schemas desktop_gnome_file_views.schemas desktop_gnome_interface.schemas desktop_gnome_lockdown.schemas desktop_gnome_peripherals_keyboard.schemas desktop_gnome_peripherals_mouse.schemas desktop_gnome_sound.schemas desktop_gnome_thumbnail_cache.schemas desktop_gnome_thumbnailers.schemas desktop_gnome_typing_break.schemas "
+	if [ -d $OLD_DIR ]; then
+		for SCHEMA in $SCHEMA_FILES; do
+			rm -f $OLD_DIR/$SCHEMA
+		done
+		rmdir -p --ignore-fail-on-non-empty $OLD_DIR
+	fi
+fi
+# End automatically added section

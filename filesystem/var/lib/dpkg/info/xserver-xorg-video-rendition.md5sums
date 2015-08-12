@@ -1,0 +1,6 @@
+a3061b0c931ed67f47acad7d103657e4  usr/lib/xorg/modules/drivers/rendition_drv.so
+5d3b692f6d9f76ec3084928cee42aa54  usr/share/man/man4/rendition.4.gz
+a228d0cb2cc1bb593893b5275c346c64  usr/share/doc/xserver-xorg-video-rendition/changelog.Debian.gz
+34e2f8baf65bef51c133ea5c290cf3c3  usr/share/doc/xserver-xorg-video-rendition/changelog.gz
+d7c1c0dfc2e183f162162ef619c61f24  usr/share/doc/xserver-xorg-video-rendition/copyright
+1fa1e66f4f10da9f668b96c5bf6b8119  usr/share/xserver-xorg/pci/rendition.ids

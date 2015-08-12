@@ -1,0 +1,10 @@
+# This file causes network devices to be brought up or down as a result
+# of hardware being added or removed, including that which isn't ordinarily
+# removable.
+# See udev(7) for syntax.
+
+# Bring devices up and down only if they're marked auto.
+# Use start-stop-daemon so we don't wait on dhcp
+SUBSYSTEM=="net", TEST!="/var/run/network/ifstate", RUN+="/bin/mkdir /var/run/network"
+SUBSYSTEM=="net", ACTION=="add", RUN+="/sbin/start-stop-daemon --start --background --pidfile /var/run/network/bogus --startas /sbin/ifup -- --allow auto $env{INTERFACE}"
+SUBSYSTEM=="net", ACTION=="remove", RUN+="/sbin/start-stop-daemon --start --background --pidfile /var/run/network/bogus --startas /sbin/ifdown -- --allow auto $env{INTERFACE}"

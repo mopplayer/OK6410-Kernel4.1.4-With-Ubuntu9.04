@@ -1,0 +1,10 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgl1-mesa-glx
+/usr/share/doc/libgl1-mesa-glx/copyright
+/usr/share/doc/libgl1-mesa-glx/changelog.Debian.gz
+/usr/lib
+/usr/lib/libGL.so.1.2
+/usr/lib/libGL.so.1

@@ -1,0 +1,38 @@
+=head1 NAME
+
+Gnome2::VFS::Resolve
+
+=for object Gnome2::VFS::Resolve
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 list = Gnome2::VFS-E<gt>B<resolve> ($hostname)
+
+=over
+
+=over
+
+=item * $hostname (string) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

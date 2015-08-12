@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="audio/x-gsm">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>GSM 06.10 audio</comment>
+  <acronym>GSM</acronym>
+  <expanded-acronym>Global System for Mobile communications</expanded-acronym>
+</mime-type>

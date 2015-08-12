@@ -1,0 +1,5 @@
+b1e7b2923c926aac9d4f7dec7e65f971  sbin/MAKEDEV
+4c3b5d18907ba73dc8848f79554ea9ab  usr/share/man/man8/MAKEDEV.8.gz
+69b88dcc6288c223064a0a8bc4b8da7e  usr/share/lintian/overrides/makedev
+93e925f18c7145016e11858cf677b370  usr/share/doc/makedev/copyright
+62dab87a8636911eabccab25a9b57ca7  usr/share/doc/makedev/changelog.Debian.gz

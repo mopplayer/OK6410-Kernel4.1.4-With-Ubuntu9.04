@@ -1,0 +1,140 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          udev
+# Required-Start:    mountkernfs
+# Required-Stop:
+# Should-Start:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Start the udev daemon.
+# Description:       Mounts the /dev virtual filesystem, starts the udev
+#                    daemon and populates /dev.
+### END INIT INFO
+
+# Check the package is still installed
+[ -x /sbin/udevd ] || exit 0
+
+# Get LSB functions
+. /lib/lsb/init-functions
+. /etc/default/rcS
+
+
+case "$1" in
+    start)
+	# We need the uevent support introduced in 2.6.15, bail out if we
+	# don't have it and fall back to a static /dev
+	if [ ! -f /sys/class/mem/null/uevent ]; then
+	    if mountpoint -q /dev; then
+		# uh-oh, initramfs made some kind of /dev, get rid of it
+		umount -l /dev
+	    fi
+	    exit 1
+	fi
+
+	if ! mountpoint -q /dev; then
+	    # initramfs didn't mount /dev, so we'll need to do that
+	    mount -n -t tmpfs -o mode=0755 udev /dev
+	fi
+
+	# Copy over default device tree
+	cp -a -f /lib/udev/devices/* /dev
+
+	# It's all over netlink now
+	if [ -e /proc/sys/kernel/hotplug ]; then
+	    echo "" > /proc/sys/kernel/hotplug
+	fi
+	
+	# Start udevd
+	log_begin_msg "Starting kernel event manager..."
+	if start-stop-daemon --start --quiet --exec /sbin/udevd -- --daemon; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+
+	# This next bit can take a while
+	if type usplash_write >/dev/null 2>&1; then
+	    usplash_write "TIMEOUT 360" ||:
+	    trap "usplash_write 'TIMEOUT 15' ||:" 0
+	fi
+
+	# Log things that trigger does
+	/sbin/udevadm monitor -e >/dev/.udev.log &
+	UDEV_MONITOR_PID=$!
+
+	# Fix permissions and missing symlinks/programs for devices made in
+	# initramfs, and catch up on everything we missed
+	log_begin_msg "Loading hardware drivers..."
+	/sbin/udevadm trigger
+	if /sbin/udevadm settle; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+
+	# Kill the udev monitor again
+	kill $UDEV_MONITOR_PID
+	;;
+    stop)
+	log_begin_msg "Stopping kernel event manager..."
+	if start-stop-daemon --stop --quiet --oknodo --exec /sbin/udevd --retry 5; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+	umount -l /dev
+	;;
+    restart)
+	if [ ! -f /sys/kernel/uevent_seqnum ]; then
+	    echo "Kernel uevent sequence number not available, cowardly not restarting udev" 1>&2
+	    exit 0
+	fi
+
+	seqnum_before=$(cat /sys/kernel/uevent_seqnum)
+
+ 	log_begin_msg "Stopping kernel event manager..."
+	if start-stop-daemon --stop --quiet --oknodo --exec /sbin/udevd --retry 5; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+
+	log_begin_msg "Starting kernel event manager..."
+	if start-stop-daemon --start --quiet --exec /sbin/udevd -- --daemon; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+
+	seqnum_after=$(cat /sys/kernel/uevent_seqnum)
+
+	if [ $seqnum_before -ne $seqnum_after ]; then
+	    echo "Kernel uevent sequence number changed, some events may have been missed :o(" 1>&2
+	fi
+	;;
+    refresh-devices)
+	cp -au /lib/udev/devices/* /dev
+
+	log_begin_msg "Loading additional hardware drivers..."
+	/sbin/udevadm trigger
+	if /sbin/udevadm settle; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+	;;
+    reload|force-reload)
+	log_begin_msg "Reloading kernel event manager..."
+	if start-stop-daemon --stop --signal 1 --exec /sbin/udevd; then
+	    log_end_msg 0
+	else
+	    log_end_msg $?
+	fi
+	;;
+*)
+	echo "Usage: /etc/init.d/udev {start|stop|restart|refresh-devices|reload|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0

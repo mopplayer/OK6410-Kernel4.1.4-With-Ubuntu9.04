@@ -1,0 +1,101 @@
+=head1 NAME
+
+Gnome2::main
+
+=for object Gnome2::main
+
+=cut
+
+=for object Gnome2::main
+
+=cut
+
+=for object Gnome2::main
+
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 boolean = Gnome2-E<gt>B<CHECK_VERSION> ($major, $minor, $micro)
+
+=over
+
+=over
+
+=item * $major (integer) 
+
+=item * $minor (integer) 
+
+=item * $micro (integer) 
+
+=back
+
+=back
+
+=head2 list = Gnome2-E<gt>B<GET_VERSION_INFO> 
+
+=over
+
+=back
+
+=head2 string = Gnome2::GConf-E<gt>B<get_app_settings_relative> ($program, $subkey)
+
+=over
+
+=over
+
+=item * $program (Gnome2::Program) 
+
+=item * $subkey (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::GConf-E<gt>B<get_gnome_libs_settings_relative> ($subkey)
+
+=over
+
+=over
+
+=item * $subkey (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2-E<gt>B<user_accels_dir_get> 
+
+=over
+
+=back
+
+=head2 string = Gnome2-E<gt>B<user_dir_get> 
+
+=over
+
+=back
+
+=head2 string = Gnome2-E<gt>B<user_private_dir_get> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

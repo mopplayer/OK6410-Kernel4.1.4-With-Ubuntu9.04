@@ -1,0 +1,72 @@
+# -*- readme-debian -*-
+
+Some known problems and debugging hints
+=======================================
+
+Debugging dictionaries-common first configuration from debian-installer
+-----------------------------------------------------------------------
+If you want to debug dictionaries-common behavior during its first
+pre-configuration when running debian-installer, you need to run
+debian-installer in expert mode. Open a shell and near the top of
+
+   /var/lib/dpkg/info/pkgsel.postinst
+
+add
+
+   export DICT_COMMON_DEBUG=1
+
+This way, you should get debugging info in the syslog for the installation.
+
+debconf question asked on every upgrade
+---------------------------------------
+If everytime you upgrade any wordlist or ispell dictionary are asked
+about preferred language (and not only at most the first time you
+installed it) there is a problem, because that is not what current
+code should do.
+
+This has been noticed to happen due to debconf database corruption,
+
+  http://bugs.debian.org/335612
+
+usually caused by nearly full /var partitions. Please read below
+section "Problems installing or removing a wordlist/ispell dictionary"
+about how to work around this.
+
+Problems installing or removing a wordlist/ispell dictionary
+----------------------------------------------
+Something like
+---
+# dpkg --purge wbritish
+(Reading database ... 111027 files and directories currently installed.)
+Removing wbritish ...
+Can't call method "choices" on an undefined value at /usr/share/perl5/Debconf/Question.pm line 85, <GEN0> line 4.
+dpkg: error processing wbritish (--purge):
+ subprocess post-removal script returned error exit status 29
+Errors were encountered while processing:
+ wbritish
+---
+is usually related to debconf type 1 db corruption, see e.g.,
+
+  http://bugs.debian.org/198297
+
+or pages for bug reports 224400, 247849, 255193, 282587, 284287, 297534.
+
+Please take a look at those bug reports to check whether the problem is
+actually the same, and see if you can provide more information about
+the problem before proceeding further. As a side note, it has been
+pointed out that there is a high probability of this problem being related
+to a nearly full /var partition.
+
+After that, the suggested fix is, quoting Joey Hess message in above bug page
+
+> By purging and reinstalling the package, you only fixed the entries for
+> that package. I suggest you run /usr/share/debconf/fix_db.pl as root,
+> which will delete all the orphaned questions. You may end up having to
+> repeat your answers to some debconf questions during future upgrades,
+> but that's a small price to pay for a consistent debconf database.
+
+----------------------------------
+ -- Agustin Martin Domingo <agmartin@debian.org>, Tue, 13 Feb 2007 15:40:06 +0100
+
+ LocalWords:  debian debconf usr alioth org wordlists wordlist debhelper http
+ LocalWords:  iamerican wspanish miscfiles xemacs wbritish var html dpkg

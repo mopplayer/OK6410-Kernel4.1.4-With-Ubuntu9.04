@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/x-fictionbook+xml">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>FictionBook document</comment>
+  <sub-class-of type="application/xml"/>
+</mime-type>

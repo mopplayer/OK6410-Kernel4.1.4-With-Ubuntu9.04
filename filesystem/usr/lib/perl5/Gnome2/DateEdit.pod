@@ -1,0 +1,179 @@
+=head1 NAME
+
+Gnome2::DateEdit
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Box
+                           +----Gtk2::HBox
+                                +----Gnome2::DateEdit
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::DateEdit-E<gt>B<new> ($the_time, $show_time, $use_24_format)
+
+=over
+
+=over
+
+=item * $the_time (a timestamp) 
+
+=item * $show_time (boolean) 
+
+=item * $use_24_format (boolean) 
+
+=back
+
+=back
+
+=head2 widget = Gnome2::DateEdit-E<gt>B<new_flags> ($the_time, $flags)
+
+=over
+
+=over
+
+=item * $the_time (a timestamp) 
+
+=item * $flags (Gnome2::DateEditFlags) 
+
+=back
+
+=back
+
+=head2 scalar = $gde-E<gt>B<get_flags> 
+
+=over
+
+=back
+
+=head2 $gde-E<gt>B<set_flags> ($flags)
+
+=over
+
+=over
+
+=item * $flags (Gnome2::DateEditFlags) 
+
+=back
+
+=back
+
+=head2 a timestamp = $gde-E<gt>B<get_initial_time> 
+
+=over
+
+=back
+
+=head2 $gde-E<gt>B<set_popup_range> ($low_hour, $up_hour)
+
+=over
+
+=over
+
+=item * $low_hour (integer) 
+
+=item * $up_hour (integer) 
+
+=back
+
+=back
+
+=head2 a timestamp = $gde-E<gt>B<get_time> 
+
+=over
+
+=back
+
+=head2 $gde-E<gt>B<set_time> ($the_time)
+
+=over
+
+=over
+
+=item * $the_time (a timestamp) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'dateedit-flags' (Gnome2::DateEditFlags : readable / writable)
+
+Flags for how DateEdit looks
+
+=item 'initial-time' (Glib::ULong : readable / writable)
+
+The initial time
+
+=item 'lower-hour' (integer : readable / writable)
+
+Lower hour in the time popup selector
+
+=item 'time' (Glib::ULong : readable / writable)
+
+The time currently selected
+
+=item 'upper-hour' (integer : readable / writable)
+
+Upper hour in the time popup selector
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<time-changed> (Gnome2::DateEdit)
+
+=item B<date-changed> (Gnome2::DateEdit)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::DateEditFlags
+
+=over
+
+=item * 'show-time' / 'GNOME_DATE_EDIT_SHOW_TIME'
+
+=item * '24-hr' / 'GNOME_DATE_EDIT_24_HR'
+
+=item * 'week-starts-on-monday' / 'GNOME_DATE_EDIT_WEEK_STARTS_ON_MONDAY'
+
+=item * 'display-seconds' / 'GNOME_DATE_EDIT_DISPLAY_SECONDS'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Box>, L<Gtk2::HBox>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

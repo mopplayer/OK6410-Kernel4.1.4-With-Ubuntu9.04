@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdocs
+if [ "$1" = remove ] || [ "$1" = upgrade ] && \
+   which install-docs >/dev/null 2>&1; then
+	install-docs -r findutils
+fi
+# End automatically added section
+# Automatically added by dh_installinfo
+if [ "$1" = remove ] || [ "$1" = upgrade ]; then
+	install-info --quiet --remove /usr/share/info/find.info
+fi
+# End automatically added section

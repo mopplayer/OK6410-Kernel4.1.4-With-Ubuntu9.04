@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# Selects a task by default if particular task names are listed in
+# tasksel/limit-tasks. Use like this:
+#
+# Test-limited: ubuntustudio-audio ubuntustudio-audio-plugins ubuntustudio-graphics ubuntustudio-video
+#
+# This will cause the task to be selected if any of those tasks are listed
+# in tasksel/limit-tasks, which is a reasonably good marker for a
+# specialised CD install. This only applies to new installs.
+
+# If we're being used to test an enhancing task, then it's always OK to go
+# ahead and mark the task for installation.
+if [ "$TESTING_ENHANCER" ]; then
+	exit 0 # do not display, but do install task
+fi
+
+if [ ! "$NEW_INSTALL" ]; then
+	exit 3 # display task, not marked for installation
+fi
+
+. /usr/share/debconf/confmodule
+
+if ! db_fget tasksel/limit-tasks seen || [ "$RET" != true ]; then
+	exit 3 # display task, not marked for installation
+fi
+db_get tasksel/limit-tasks
+LIMIT="$(echo "$RET" | sed 's/,/ /g')"
+
+shift
+for task; do
+	for limit in $LIMIT; do
+		if [ "$task" = "$limit" ]; then
+			exit 2 # display task, marked for installation
+		fi
+	done
+done
+exit 3 # display task, not marked for installation

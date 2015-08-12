@@ -1,0 +1,17 @@
+#! /bin/sh
+
+set -e
+
+install-info --quiet --remove ipc
+
+case "$1" in
+	remove)
+		update-alternatives --remove pager /bin/more
+		update-alternatives --remove pager /usr/bin/pg
+		;;
+	upgrade|failed-upgrade|deconfigure)
+		;;
+esac
+
+
+

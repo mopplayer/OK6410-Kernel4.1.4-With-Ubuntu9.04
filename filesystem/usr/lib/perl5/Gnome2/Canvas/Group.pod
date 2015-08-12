@@ -1,0 +1,46 @@
+=head1 NAME
+
+Gnome2::Canvas::Group - A group of Gnome2::CanvasItems
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::Canvas::Group
+
+=for object Gnome2::Canvas::Group - A group of Gnome2::CanvasItems
+
+=cut
+
+
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'x' (double : readable / writable)
+
+X
+
+=item 'y' (double : readable / writable)
+
+Y
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

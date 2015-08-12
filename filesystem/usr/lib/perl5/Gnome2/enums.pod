@@ -1,0 +1,450 @@
+=head1 NAME
+
+Gnome2::enums - enumeration and flag values for Gnome2
+
+=head1 DESCRIPTION
+
+Just a listing of all enum and flags types defined for Gnome2, in one place
+for convenience.  For more information, see the description of flags and
+enums in L<Glib>.
+
+=head1 LISTING
+
+=head2 flags Gnome2::Bonobo::DockItemBehavior
+
+=over
+
+=item * 'normal' / 'BONOBO_DOCK_ITEM_BEH_NORMAL'
+
+=item * 'exclusive' / 'BONOBO_DOCK_ITEM_BEH_EXCLUSIVE'
+
+=item * 'never-floating' / 'BONOBO_DOCK_ITEM_BEH_NEVER_FLOATING'
+
+=item * 'never-vertical' / 'BONOBO_DOCK_ITEM_BEH_NEVER_VERTICAL'
+
+=item * 'never-horizontal' / 'BONOBO_DOCK_ITEM_BEH_NEVER_HORIZONTAL'
+
+=item * 'locked' / 'BONOBO_DOCK_ITEM_BEH_LOCKED'
+
+=back
+
+=head2 enum Gnome2::Bonobo::DockPlacement
+
+=over
+
+=item * 'top' / 'BONOBO_DOCK_TOP'
+
+=item * 'right' / 'BONOBO_DOCK_RIGHT'
+
+=item * 'bottom' / 'BONOBO_DOCK_BOTTOM'
+
+=item * 'left' / 'BONOBO_DOCK_LEFT'
+
+=item * 'floating' / 'BONOBO_DOCK_FLOATING'
+
+=back
+
+=head2 flags Gnome2::ClientFlags
+
+=over
+
+=item * 'is-connected' / 'GNOME_CLIENT_IS_CONNECTED'
+
+=item * 'restarted' / 'GNOME_CLIENT_RESTARTED'
+
+=item * 'restored' / 'GNOME_CLIENT_RESTORED'
+
+=back
+
+=head2 enum Gnome2::ClientState
+
+=over
+
+=item * 'idle' / 'GNOME_CLIENT_IDLE'
+
+=item * 'saving-phase-1' / 'GNOME_CLIENT_SAVING_PHASE_1'
+
+=item * 'waiting-for-phase-2' / 'GNOME_CLIENT_WAITING_FOR_PHASE_2'
+
+=item * 'saving-phase-2' / 'GNOME_CLIENT_SAVING_PHASE_2'
+
+=item * 'frozen' / 'GNOME_CLIENT_FROZEN'
+
+=item * 'disconnected' / 'GNOME_CLIENT_DISCONNECTED'
+
+=item * 'registering' / 'GNOME_CLIENT_REGISTERING'
+
+=back
+
+=head2 flags Gnome2::DateEditFlags
+
+=over
+
+=item * 'show-time' / 'GNOME_DATE_EDIT_SHOW_TIME'
+
+=item * '24-hr' / 'GNOME_DATE_EDIT_24_HR'
+
+=item * 'week-starts-on-monday' / 'GNOME_DATE_EDIT_WEEK_STARTS_ON_MONDAY'
+
+=item * 'display-seconds' / 'GNOME_DATE_EDIT_DISPLAY_SECONDS'
+
+=back
+
+=head2 enum Gnome2::DialogType
+
+=over
+
+=item * 'error' / 'GNOME_DIALOG_ERROR'
+
+=item * 'normal' / 'GNOME_DIALOG_NORMAL'
+
+=back
+
+=head2 enum Gnome2::EdgePosition
+
+=over
+
+=item * 'start' / 'GNOME_EDGE_START'
+
+=item * 'finish' / 'GNOME_EDGE_FINISH'
+
+=item * 'other' / 'GNOME_EDGE_OTHER'
+
+=item * 'last' / 'GNOME_EDGE_LAST'
+
+=back
+
+=head2 enum Gnome2::FileDomain
+
+=over
+
+=item * 'unknown' / 'GNOME_FILE_DOMAIN_UNKNOWN'
+
+=item * 'libdir' / 'GNOME_FILE_DOMAIN_LIBDIR'
+
+=item * 'datadir' / 'GNOME_FILE_DOMAIN_DATADIR'
+
+=item * 'sound' / 'GNOME_FILE_DOMAIN_SOUND'
+
+=item * 'pixmap' / 'GNOME_FILE_DOMAIN_PIXMAP'
+
+=item * 'config' / 'GNOME_FILE_DOMAIN_CONFIG'
+
+=item * 'help' / 'GNOME_FILE_DOMAIN_HELP'
+
+=item * 'app-libdir' / 'GNOME_FILE_DOMAIN_APP_LIBDIR'
+
+=item * 'app-datadir' / 'GNOME_FILE_DOMAIN_APP_DATADIR'
+
+=item * 'app-sound' / 'GNOME_FILE_DOMAIN_APP_SOUND'
+
+=item * 'app-pixmap' / 'GNOME_FILE_DOMAIN_APP_PIXMAP'
+
+=item * 'app-config' / 'GNOME_FILE_DOMAIN_APP_CONFIG'
+
+=item * 'app-help' / 'GNOME_FILE_DOMAIN_APP_HELP'
+
+=back
+
+=head2 enum Gnome2::FontPickerMode
+
+=over
+
+=item * 'pixmap' / 'GNOME_FONT_PICKER_MODE_PIXMAP'
+
+=item * 'font-info' / 'GNOME_FONT_PICKER_MODE_FONT_INFO'
+
+=item * 'user-widget' / 'GNOME_FONT_PICKER_MODE_USER_WIDGET'
+
+=item * 'unknown' / 'GNOME_FONT_PICKER_MODE_UNKNOWN'
+
+=back
+
+=head2 enum Gnome2::HelpError
+
+=over
+
+=item * 'internal' / 'GNOME_HELP_ERROR_INTERNAL'
+
+=item * 'not-found' / 'GNOME_HELP_ERROR_NOT_FOUND'
+
+=back
+
+=head2 enum Gnome2::IconListMode
+
+=over
+
+=item * 'icons' / 'GNOME_ICON_LIST_ICONS'
+
+=item * 'text-below' / 'GNOME_ICON_LIST_TEXT_BELOW'
+
+=item * 'text-right' / 'GNOME_ICON_LIST_TEXT_RIGHT'
+
+=back
+
+=head2 flags Gnome2::IconLookupFlags
+
+=over
+
+=item * 'none' / 'GNOME_ICON_LOOKUP_FLAGS_NONE'
+
+=item * 'embedding-text' / 'GNOME_ICON_LOOKUP_FLAGS_EMBEDDING_TEXT'
+
+=item * 'show-small-images-as-themselves' / 'GNOME_ICON_LOOKUP_FLAGS_SHOW_SMALL_IMAGES_AS_THEMSELVES'
+
+=item * 'allow-svg-as-themselves' / 'GNOME_ICON_LOOKUP_FLAGS_ALLOW_SVG_AS_THEMSELVES'
+
+=back
+
+=head2 flags Gnome2::IconLookupResultFlags
+
+=over
+
+=item * 'none' / 'GNOME_ICON_LOOKUP_RESULT_FLAGS_NONE'
+
+=item * 'thumbnail' / 'GNOME_ICON_LOOKUP_RESULT_FLAGS_THUMBNAIL'
+
+=back
+
+=head2 enum Gnome2::InteractStyle
+
+=over
+
+=item * 'none' / 'GNOME_INTERACT_NONE'
+
+=item * 'errors' / 'GNOME_INTERACT_ERRORS'
+
+=item * 'any' / 'GNOME_INTERACT_ANY'
+
+=back
+
+=head2 enum Gnome2::MDIMode
+
+=over
+
+=item * 'notebook' / 'GNOME_MDI_NOTEBOOK'
+
+=item * 'toplevel' / 'GNOME_MDI_TOPLEVEL'
+
+=item * 'modal' / 'GNOME_MDI_MODAL'
+
+=item * 'default-mode' / 'GNOME_MDI_DEFAULT_MODE'
+
+=back
+
+=head2 enum Gnome2::PasswordDialogRemember
+
+=over
+
+=item * 'nothing' / 'GNOME_PASSWORD_DIALOG_REMEMBER_NOTHING'
+
+=item * 'session' / 'GNOME_PASSWORD_DIALOG_REMEMBER_SESSION'
+
+=item * 'forever' / 'GNOME_PASSWORD_DIALOG_REMEMBER_FOREVER'
+
+=back
+
+=head2 enum Gnome2::PreferencesType
+
+=over
+
+=item * 'never' / 'GNOME_PREFERENCES_NEVER'
+
+=item * 'user' / 'GNOME_PREFERENCES_USER'
+
+=item * 'always' / 'GNOME_PREFERENCES_ALWAYS'
+
+=back
+
+=head2 enum Gnome2::RestartStyle
+
+=over
+
+=item * 'if-running' / 'GNOME_RESTART_IF_RUNNING'
+
+=item * 'anyway' / 'GNOME_RESTART_ANYWAY'
+
+=item * 'immediately' / 'GNOME_RESTART_IMMEDIATELY'
+
+=item * 'never' / 'GNOME_RESTART_NEVER'
+
+=back
+
+=head2 enum Gnome2::SaveStyle
+
+=over
+
+=item * 'global' / 'GNOME_SAVE_GLOBAL'
+
+=item * 'local' / 'GNOME_SAVE_LOCAL'
+
+=item * 'both' / 'GNOME_SAVE_BOTH'
+
+=back
+
+=head2 enum Gnome2::ThumbnailSize
+
+=over
+
+=item * 'normal' / 'GNOME_THUMBNAIL_SIZE_NORMAL'
+
+=item * 'large' / 'GNOME_THUMBNAIL_SIZE_LARGE'
+
+=back
+
+=head2 enum Gnome2::TriggerType
+
+=over
+
+=item * 'none' / 'GTRIG_NONE'
+
+=item * 'function' / 'GTRIG_FUNCTION'
+
+=item * 'command' / 'GTRIG_COMMAND'
+
+=item * 'mediaplay' / 'GTRIG_MEDIAPLAY'
+
+=back
+
+=head2 enum Gnome2::UIInfoConfigurableTypes
+
+=over
+
+=item * 'new' / 'GNOME_APP_CONFIGURABLE_ITEM_NEW'
+
+=item * 'open' / 'GNOME_APP_CONFIGURABLE_ITEM_OPEN'
+
+=item * 'save' / 'GNOME_APP_CONFIGURABLE_ITEM_SAVE'
+
+=item * 'save-as' / 'GNOME_APP_CONFIGURABLE_ITEM_SAVE_AS'
+
+=item * 'revert' / 'GNOME_APP_CONFIGURABLE_ITEM_REVERT'
+
+=item * 'print' / 'GNOME_APP_CONFIGURABLE_ITEM_PRINT'
+
+=item * 'print-setup' / 'GNOME_APP_CONFIGURABLE_ITEM_PRINT_SETUP'
+
+=item * 'close' / 'GNOME_APP_CONFIGURABLE_ITEM_CLOSE'
+
+=item * 'quit' / 'GNOME_APP_CONFIGURABLE_ITEM_QUIT'
+
+=item * 'cut' / 'GNOME_APP_CONFIGURABLE_ITEM_CUT'
+
+=item * 'copy' / 'GNOME_APP_CONFIGURABLE_ITEM_COPY'
+
+=item * 'paste' / 'GNOME_APP_CONFIGURABLE_ITEM_PASTE'
+
+=item * 'clear' / 'GNOME_APP_CONFIGURABLE_ITEM_CLEAR'
+
+=item * 'undo' / 'GNOME_APP_CONFIGURABLE_ITEM_UNDO'
+
+=item * 'redo' / 'GNOME_APP_CONFIGURABLE_ITEM_REDO'
+
+=item * 'find' / 'GNOME_APP_CONFIGURABLE_ITEM_FIND'
+
+=item * 'find-again' / 'GNOME_APP_CONFIGURABLE_ITEM_FIND_AGAIN'
+
+=item * 'replace' / 'GNOME_APP_CONFIGURABLE_ITEM_REPLACE'
+
+=item * 'properties' / 'GNOME_APP_CONFIGURABLE_ITEM_PROPERTIES'
+
+=item * 'preferences' / 'GNOME_APP_CONFIGURABLE_ITEM_PREFERENCES'
+
+=item * 'about' / 'GNOME_APP_CONFIGURABLE_ITEM_ABOUT'
+
+=item * 'select-all' / 'GNOME_APP_CONFIGURABLE_ITEM_SELECT_ALL'
+
+=item * 'new-window' / 'GNOME_APP_CONFIGURABLE_ITEM_NEW_WINDOW'
+
+=item * 'close-window' / 'GNOME_APP_CONFIGURABLE_ITEM_CLOSE_WINDOW'
+
+=item * 'new-game' / 'GNOME_APP_CONFIGURABLE_ITEM_NEW_GAME'
+
+=item * 'pause-game' / 'GNOME_APP_CONFIGURABLE_ITEM_PAUSE_GAME'
+
+=item * 'restart-game' / 'GNOME_APP_CONFIGURABLE_ITEM_RESTART_GAME'
+
+=item * 'undo-move' / 'GNOME_APP_CONFIGURABLE_ITEM_UNDO_MOVE'
+
+=item * 'redo-move' / 'GNOME_APP_CONFIGURABLE_ITEM_REDO_MOVE'
+
+=item * 'hint' / 'GNOME_APP_CONFIGURABLE_ITEM_HINT'
+
+=item * 'scores' / 'GNOME_APP_CONFIGURABLE_ITEM_SCORES'
+
+=item * 'end-game' / 'GNOME_APP_CONFIGURABLE_ITEM_END_GAME'
+
+=back
+
+=head2 enum Gnome2::UIInfoType
+
+=over
+
+=item * 'endofinfo' / 'GNOME_APP_UI_ENDOFINFO'
+
+=item * 'item' / 'GNOME_APP_UI_ITEM'
+
+=item * 'toggleitem' / 'GNOME_APP_UI_TOGGLEITEM'
+
+=item * 'radioitems' / 'GNOME_APP_UI_RADIOITEMS'
+
+=item * 'subtree' / 'GNOME_APP_UI_SUBTREE'
+
+=item * 'separator' / 'GNOME_APP_UI_SEPARATOR'
+
+=item * 'help' / 'GNOME_APP_UI_HELP'
+
+=item * 'builder-data' / 'GNOME_APP_UI_BUILDER_DATA'
+
+=item * 'item-configurable' / 'GNOME_APP_UI_ITEM_CONFIGURABLE'
+
+=item * 'subtree-stock' / 'GNOME_APP_UI_SUBTREE_STOCK'
+
+=item * 'include' / 'GNOME_APP_UI_INCLUDE'
+
+=back
+
+=head2 enum Gnome2::UIPixmapType
+
+=over
+
+=item * 'none' / 'GNOME_APP_PIXMAP_NONE'
+
+=item * 'stock' / 'GNOME_APP_PIXMAP_STOCK'
+
+=item * 'data' / 'GNOME_APP_PIXMAP_DATA'
+
+=item * 'filename' / 'GNOME_APP_PIXMAP_FILENAME'
+
+=back
+
+=head2 enum Gnome2::URLError
+
+=over
+
+=item * 'parse' / 'GNOME_URL_ERROR_PARSE'
+
+=item * 'launch' / 'GNOME_URL_ERROR_LAUNCH'
+
+=item * 'url' / 'GNOME_URL_ERROR_URL'
+
+=item * 'no-default' / 'GNOME_URL_ERROR_NO_DEFAULT'
+
+=item * 'not-supported' / 'GNOME_URL_ERROR_NOT_SUPPORTED'
+
+=item * 'vfs' / 'GNOME_URL_ERROR_VFS'
+
+=item * 'cancelled' / 'GNOME_URL_ERROR_CANCELLED'
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>, L<Glib::Flags>, L<Gtk2::enums>
+
+=head1 AUTHOR
+
+Generated Fri Nov 21 00:44:47 2008 by podifyenums.pl, using Gnome2-Perl version 1.042.
+
+=cut

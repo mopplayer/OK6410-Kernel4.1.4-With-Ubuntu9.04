@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY author1 "Sun">
+<!ENTITY author2 "Java Desktop System Documentation Team">
+<!ENTITY publisher "Sun Microsystems, Inc.">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.6.0">
+<!ENTITY app "<application>Zenity</application>">
+<!ENTITY appname "Zenity">
+<!ENTITY date "August 2004">
+<!ENTITY manrevision "2.0">
+]>
+<!-- ================ Document Header ================= -->
+<article id="index" lang="bg">
+
+  <articleinfo>
+    <title>Ръководство за Zenity</title>
+    <subtitle>Ръководство за Zenity, версия 2.0</subtitle>
+    <copyright>
+	    <year>2003</year>
+	    <year>2004</year>
+	    <holder>Sun Microsystems, Inc.</holder>
+    </copyright><copyright><year>2005</year><holder>Ростислав "zbrox" Райков (zbrox@i-space.org)</holder></copyright>
+
+    <!-- Translators: uncomment this
+    <copyright>
+	    <year>2004</year>
+	    <holder>ME_THE_TRANSLATOR</holder>
+    </copyright>
+    -->
+
+    <publisher>
+	    <publishername>Sun Microsystems, Inc.</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para>Предоставя се разрешение за копиране, разпространение и/или промяна на този документ, съгласно условията на „Лиценза за свободна документация на GNU“, версия 1.1 или всяка следваща версия, издадена от Фондация „Свободен софтуер“; без „Непроменливи раздели“, „Текстове на предната корица“, както и „Текстове на задната корица“. Копие на лиценза може да бъде намерено <ulink type="help" url="ghelp:fdl">тук</ulink> или във файла COPYING-DOCS, разпространяван с това ръководство.</para>
+         <para>Това ръководство е част от колекция ръководства за GNOME, разпространявани под GFDL. Ако искате да разпространявате това ръководство отделно, можете да го направите, като включите копие на лиценза към ръководството, както е описано в раздел 6 от лиценза.</para>
+
+	<para>Много от имената, използвани от компании, за да отличават собствените си продукти и услуги, са регистрирани търговски марки. Когато такива имена присъстват в която и да е документация за GNOME и членовете на проекта за документация на GNOME са осведомени за съответните търговски марки, тогава имената са с главни букви или начални главни букви.</para>
+
+	<para>ДОКУМЕНТЪТ И ПРОМЕНЕНИТЕ МУ ВЕРСИИ СЕ ПРЕДОСТАВЯТ ПОД УСЛОВИЯТА НА ЛИЦЕНЗА ЗА СВОБОДНА ДОКУМЕНТАЦИЯ НА GNU, С ДОПЪЛНИТЕЛНОТО ПОЯСНЕНИЕ, ЧЕ:<orderedlist>
+		<listitem>
+		  <para>ДОКУМЕНТЪТ СЕ ПРЕДОСТАВЯ НА БАЗА „КАКТО Е“, БЕЗ КАКВАТО И ДА Е ГАРАНЦИЯ, ПРЯКА ИЛИ КОСВЕНА, ВКЛЮЧИТЕЛНО БЕЗ ОГРАНИЧЕНИЯ И ГАРАНЦИИ, ЧЕ ДОКУМЕНТЪТ ИЛИ ПРОМЕНЕНАТА МУ ВЕРСИЯ СА БЕЗ ДЕФЕКТИ, ГОДНИ ЗА КОНКРЕТНА УПОТРЕБА ИЛИ НЕНАРУШАВАЩИ. ЦЕЛИЯТ РИСК ОТНОСНО КАЧЕСТВОТО, ТОЧНОСТТА И ХАРАКТЕРИСТИКИТЕ НА ДОКУМЕНТА ИЛИ ПРОМЕНЕНАТА МУ ВЕРСИЯ Е ЗА ВАША СМЕТКА. АКО НЯКОЙ ДОКУМЕНТ ИЛИ ПРОМЕНЕНАТА МУ ВЕРСИЯ СЕ ОКАЖЕ ДЕФЕКТЕН В КАКВОТО И ДА Е ОТНОШЕНИЕ, ВИЕ (НЕ ПЪРВОНАЧАЛНИЯ АВТОР ИЛИ КОЙТО И ДА Е ДОПРИНЕСЪЛ ЗА РАЗРАБОТКАТА) ПОЕМАТЕ РАЗХОДИТЕ ЗА ВСЯКАКВО НЕОБХОДИМО ОБСЛУЖВАНЕ, ПОПРАВКА ИЛИ КОРЕКЦИИ. ТОВА ОТКАЗВАНЕ ОТ ГАРАНЦИЯТА ПРЕДСТАВЛЯВА СЪЩЕСТВЕНА ЧАСТ ОТ ТОЗИ ЛИЦЕНЗ. НЕ Е РАЗРЕШЕНА УПОТРЕБАТА НА КОЙТО И ДА Е ДОКУМЕНТ ИЛИ ПРОМЕНЕНАТА ВЕРСИЯ НА ДОКУМЕНТА, ОСВЕН ПРИ СПАЗВАНЕ НА ТОЗИ ОТКАЗ ОТ ГАРАНЦИЯ; И</para>
+		</listitem>
+		<listitem>
+		  <para>ПРИ НИКАКВИ ОБСТОЯТЕЛСТВА И ПОД НИКАКВА ЮРИДИЧЕСКА ОСНОВА, НЕЗАВИСИМО ДАЛИ Е В НАРУШЕНИЕ (ВКЛЮЧИТЕЛНО ПРИЧИНЕНО ОТ НЕБРЕЖНОСТ), ДОГОВОР ИЛИ ДРУГО, АВТОРЪТ, ПЪРВОНАЧАЛНИЯТ АВТОР ИЛИ КОЙТО И ДА Е ДОПРИНЕСЪЛ ЗА РАЗРАБОТКАТА, ИЛИ КОЙТО И ДА Е ДИСТРИБУТОР НА ДОКУМЕНТА ИЛИ ПРОМЕНЕНАТА МУ ВЕРСИЯ, ИЛИ КОЙТО И ДА Е ДОСТАВЧИК НА КОЯТО И ДА Е ОТ ИЗБРОЕНИТЕ СТРАНИ, НЯМА ДА БЪДЕ ОТГОВОРЕН ПРЕД НИКОГО ЗА ВСИЧКИ ПРЕКИ, КОСВЕНИ, СПЕЦИАЛНИ, СЛУЧАЙНИ ИЛИ ПОСЛЕДСТВЕНИ ЩЕТИ ОТ КАКЪВТО И ДА Е ХАРАКТЕР, ВКЛЮЧИТЕЛНО, БЕЗ ОГРАНИЧЕНИЯ, ЩЕТИ ЗА ЗАГУБА НА ДОБРОЖЕЛАТЕЛНОСТ, СПИРАНЕ НА РАБОТАТА, КОМПЮТЪРНА ПОВРЕДА ИЛИ НЕИЗПРАВНОСТ, ИЛИ ВСЯКАКВИ ДРУГИ ЩЕТИ ИЛИ ЗАГУБИ, ВЪЗНИКНАЛИ ИЛИ СВЪРЗАНИ С УПОТРЕБАТА НА ДОКУМЕНТА ИЛИ ПРОМЕНЕНИТЕ МУ ВЕРСИИ, ДОРИ И КОГАТО ТАЗИ СТРАНА Е БИЛА ИНФОРМИРАНА ЗА ВЪЗМОЖНОСТТА ОТ ТАКИВА ЩЕТИ.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Java Desktop System Documentation Team</surname>
+        <affiliation><orgname>Sun Microsystems, Inc.</orgname></affiliation>
+      </author>
+      <author role="maintainer">
+        <firstname>Glynn</firstname>
+        <surname>Foster</surname>
+        <affiliation>
+          <orgname>Проект за документация на GNOME</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Nicholas</firstname>
+        <surname>Curran</surname>
+        <affiliation>
+          <orgname>Проект за документация на GNOME</orgname>
+        </affiliation>
+      </editor>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Ръководство за Zenity, версия 2.0</revnumber>
+        <date>August 2004</date>
+        <revdescription>
+          <para role="author">Sun Java Desktop System Documentation Team</para>
+          <para role="publisher">Sun Microsystems, Inc.</para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Ръководство за Zenity, версия 1.0</revnumber>
+        <date>Януари 2003</date>
+        <revdescription>
+          <para role="author">Glynn Foster</para>
+          <para role="publisher">Проект за документация на GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Това ръководство е за версия 2.6 на програмата Zenity.</releaseinfo>
+
+    <legalnotice>
+	    <title>Обратна връзка</title>
+	    <para>За обратна връзка, следвайте инструкциите на <ulink url="ghelp:gnome-feedback" type="help">Страницата за обратна връзка</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+
+    </legalnotice>
+    <abstract role="description">
+            <para>Zenity е наследникът на gdialog - вариантът на dialog за GNOME. Програмата позволява показването на диалогови прозорци, с които да се осъществява обмен на информация със скриптове за командния ред.</para>
+    </abstract>
+  </articleinfo>
+  
+  <indexterm>
+    <primary>zenity команда</primary>
+  </indexterm>
+  <indexterm>
+    <primary>създаване на прозорци</primary>
+  </indexterm>
+<!-- ================ Document Body ================= -->
+
+<!-- ==== Introduction ====== -->
+
+  <sect1 id="zenity-introduction">
+    <title>Въведение</title>
+
+    <para><application>Zenity</application> Ви позволява да създавате следните видове прости диалогови прозорци:</para>
+
+    <itemizedlist>
+        <listitem><para>Календар</para></listitem>
+	<listitem><para>Избор на файл</para></listitem>
+	<listitem><para>Списък</para></listitem>
+	<listitem><para>Икона за уведомяване</para></listitem>
+        <listitem><para>Съобщение</para>
+            <itemizedlist>
+	        <listitem><para>Грешка</para></listitem>
+		<listitem><para>Информация</para></listitem>
+		<listitem><para>Въпрос</para></listitem>
+		<listitem><para>Предупреждение</para></listitem>
+	    </itemizedlist>
+	</listitem>
+	<listitem><para>Прогрес</para></listitem>
+        <listitem><para>Текстово поле</para></listitem>
+	<listitem><para>Текстова информация</para></listitem>
+    </itemizedlist>
+
+  </sect1>
+
+<!-- ==== Usage ====== -->
+
+  <sect1 id="zenity-usage">
+    <title>Употреба</title>
+
+    <para>Когато пишете скриптове, може да използвате <application>Zenity</application>, за да създавате прости диалогови прозорци, които да интерактират графично с потребителя, както следва:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Може да създавате прозорци, които да изискват информация от потребителя. Примерно, може да питате потребителя да изберете дата от календарен прозорец или да избере файл от прозорец за избор на файл.</para>
+      </listitem>
+      <listitem>
+        <para>Може да създавате прозорци, които да предоставят информация на потребителя. Примерно, може да използвате прозорец за прогрес, за да покажете текущото състояние на операция или да използвате предупредително съобщение, за да сигнализирате за нещо на потребителя.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Когато потребителят затвори прозореца, <application>Zenity</application> показва текстът произведен от прозореца към стандартната грешка.</para>
+
+    <note>
+      <para>Когато пишете <application>Zenity</application> команди, се уверете, че сте поставили кавички около всеки аргумент.</para>
+      <para>Например, използвайте: <screen><userinput><command>zenity --calendar --title="Планиране на почивка"</command></userinput></screen>Не използвайте: <screen><userinput><command>zenity --calendar --title=Планиране на почивка</command></userinput></screen>.</para>
+      <para>Ако не използвате кавички, може да получите неочаквани резулати.</para>
+    </note>
+
+    <sect2 id="zenity-usage-mnemonics">
+      <title>Бързи клавиши</title>
+	<para>Бързият клавиш е клавиш, който Ви позволява да извършвате действие от клавиатурата без да използвате мишката, за да изберете командата от менюто или прозореца. Всеки бърз клавиш се идентифицира от подчертана буква в менюто или прозореца.</para>
+	<para>Някои прозорци на <application>Zenity</application> поддържат използването на бързи клавиши. За да определите символа, който да се използва като бърз клавиш поставете долна черна пред символа в текста на прозореца. Следният пример показва как да определите буквата "И", като бърз клавиш:</para>
+	<screen><userinput>"_Изберете име".</userinput></screen>
+    </sect2>
+
+    <sect2 id="zenity-usage-exitcodes">
+      <title>Изходни кодове</title>
+    <para><application>Zenity</application> връща следните изходни кодове:</para>
+
+    <informaltable frame="all">
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="COLSPEC0" colwidth="50*"/>
+        <colspec colname="COLSPEC1" colwidth="50*"/>
+        <thead>
+          <row valign="top">
+            <entry colname="COLSPEC0">
+              <para>Изходен код</para></entry>
+            <entry colname="COLSPEC1">
+              <para>Описание</para></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row valign="top">
+            <entry>
+              <para><varname>0</varname></para>
+            </entry>
+            <entry>
+              <para>Потребителят е натиснал или <guibutton>Добре</guibutton> или <guibutton>Затваряне</guibutton>.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>1</varname></para>
+            </entry>
+            <entry>
+              <para>Потребителят е натиснал <guibutton>Отказ</guibutton> или е използвал функциите на прозореца, за да го затвори.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>-1</varname></para>
+            </entry>
+            <entry>
+              <para>Възникнала е неочаквана грешка.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>5</varname></para>
+            </entry>
+            <entry>
+              <para>The dialog has been closed because the timeout has been reached.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    </sect2>
+
+
+  <!-- ==== General Options ====== -->
+
+  <sect2 id="zenity-usage-general-options">
+    <title>Общи настройки</title>
+
+    <para>Всички <application>Zenity</application> прозорци поддържат следните общи настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--title</option>=<replaceable>заглавие</replaceable></term>
+	<listitem>
+	  <para>Определя заглавието на прозореца.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--window-icon</option>=<replaceable>път_до_иконата</replaceable></term>
+	<listitem>
+	  <para>Определя иконата, която ще се показва в рамката на прозореца. Има 4 генерални икони, които са налични чрез доставяне на следните ключови думи - 'info', warning', 'question' и 'error'.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--width</option>=<replaceable>ширина</replaceable></term>
+	<listitem>
+	  <para>Определя ширината на прозореца.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--height</option>=<replaceable>височина</replaceable></term>
+	<listitem>
+	  <para>Определя височината на прозореца.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--timeout</option>=<replaceable>timeout</replaceable></term>
+	<listitem>
+	  <para>Specifies the timeout in seconds after which the dialog is closed.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-help-options">
+    <title>Настройки на помощта</title>
+
+    <para><application>Zenity</application> предоставя следните настройки за помощ:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--help</option></term>
+	<listitem>
+	  <para>Показва скъсен текст за помощ.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--help-all</option></term>
+	<listitem>
+	  <para>Показва пълния текст за помощ за всички прозорци.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-general</option></term>
+	<listitem>
+	  <para>Показва помощния текст за общите настройки.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-calendar</option></term>
+	<listitem>
+	  <para>Показва помощния текст за календарните настройки.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-entry</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройки по текстовите полета.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-error</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките за грешка.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-info</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките на прозорци за информация.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-file-selection</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките на прозорци за избор на файл.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-list</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките на списъчните прозорци.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-notification</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките на иконата за уведомяване.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-progress</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките на прогреса.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-question</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките за прозорците за въпроси.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-warning</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките за предупредителните прозорци.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-text-info</option></term>
+	<listitem>
+	  <para>Показва помощния текст за настройките на текстовата информация.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-misc</option></term>
+	<listitem>
+	  <para>Показва помощта за допълнителните настройки.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-gtk</option></term>
+	<listitem>
+	  <para>Показва помощта за GTK+ настройките.</para>
+	</listitem>
+      </varlistentry>
+ 
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-miscellaneous-options">
+    <title>Допълнителни настройки</title>
+
+    <para><application>Zenity</application> предоставя и следните допълнителни настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--about</option></term>
+	<listitem>
+	  <para>Показва прозорецът <guilabel>Относно Zenity</guilabel>, който съдържа информация за версията на <application>Zenity</application>, информация за авторските права и информация за разработчиците.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--version</option></term>
+	<listitem>
+	  <para>Показва номера на версията на <application>Zenity</application>.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== GTK+ Options ====== -->
+
+  <sect2 id="zenity-gtk-options">
+    <title>GTK+ настройки</title>
+
+    <para><application>Zenity</application> поддържа стандартните GTK+ настройки. За повече информация относно настройките на GTK+, изпълнете командата <command>zenity -?</command></para>
+
+  </sect2>
+
+  </sect1>
+<!-- ==== Calendar Options ====== -->
+
+  <sect1 id="zenity-calendar-options">
+    <title>Прозорец с календар</title>
+
+    <para>Използвайте настройката <option>--calendar</option>, за да създадете календарен прозорец. <application>Zenity</application> връща към стандартна грешка въведената информация. Ако не се определи дата от командния ред, прозорецът ще използва текущата дата.</para>
+    <para>Прозорецът с календар поддържа следните настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>текст</replaceable></term>
+	<listitem>
+	  <para>Определя текста, който се показва в прозореца с календар.</para>
+	</listitem>
+      </varlistentry>
+     	
+      <varlistentry>
+        <term><option>--day</option>=<replaceable>ден</replaceable></term>
+	<listitem>
+	  <para>Определя деня, който е избран в прозореца с календар. <replaceable>Денят</replaceable> може да е число между 1 и 31, включително.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--month</option>=<replaceable>месец</replaceable></term>
+	<listitem>
+	  <para>Определя месеца, който е избран в прозореца с календар. <replaceable>Месецът</replaceable> трябва да е число между 1 и 12, включително.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--year</option>=<replaceable>година</replaceable></term>
+	<listitem>
+	  <para>Определя годината, която е избрана в календарния прозорец.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--date-format</option>=<replaceable>формат</replaceable></term>
+	<listitem>
+	  <para>Определя формата, който е върнат от календарния прозорец след избора на дата. Стандартният формат зависи от локалата Ви. <replaceable>Форматът</replaceable> трябва да е формат, който се приема от функцията <command>strftime</command>, примерно <literal>%A %d/%m/%y</literal>.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният примерен скрипт показва как да създадете прозорец с календар: <programlisting>
+        #!/bin/sh
+
+
+        if zenity --calendar \
+        --title="Изберете дата" \
+        --text="Натиснете върху дата, за да я изберете." \
+        --day=10 --month=8 --year=2004
+          then echo $?
+          else echo "Няма избрана даата"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-calendar-screenshot">
+      <title>Примерен прозорец с календар</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-calendar-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> calendar dialog example</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+
+<!-- ==== File Selection Options ====== -->
+
+  <sect1 id="zenity-file-selection-options">
+    <title>Прозорец за избор на файлове</title>
+
+    <para>Използвайте настройката <option>--file-selection</option>, за да създадете прозорец за избор на файлове. <application>Zenity</application> връща избраните файлове или папки към стандартна грешка. Стандартния режим на прозореца е отваряне.</para>
+    <para>Прозорецът за избор на файлове поддържа следните опции:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>файлово име</replaceable></term>
+	<listitem>
+	  <para>Определя файла или папката, която е избрана в прозореца за избор на файлове, когато е показан за пръв път.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--multiple</option></term>
+	<listitem>
+	  <para>Позволява избирането на множество файлове в прозореца за избор на файлове.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--directory</option></term>
+	<listitem>
+	  <para>Позволява избирането само на папки в прозореца за избор на файлове.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--save</option></term>
+	<listitem>
+	  <para>Поставяне на прозореца за избор на файлове в режим на запазване.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--separator</option>=<replaceable>разделител</replaceable></term>
+	<listitem>
+	  <para>Определя низа използван за разделяне на върнатия списък от файлови имена.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният примерен скрипт показва как да създадете прозорец за избро на файлове: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection --title="Изберете файл"`
+
+        case $? in
+                 0)
+                        echo "Избран е файлът \"$FILE\".";;
+                 1)
+                        echo "Няма избран файл.";;
+                -1)
+                        echo "Няма избран файл.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-fileselection-screenshot">
+      <title>Примерен прозорец за избор на файлове</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-fileselection-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> file selection dialog example</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Notification Options ====== -->
+  <sect1 id="zenity-notification-options">
+    <title>Икона за уведомяване</title>
+
+    <para>
+    </para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>текст</replaceable></term>
+	<listitem>
+	  <para>Определя текста, който се показва в района за уведомяване.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният примерен скрипт показва как да създадете икона за уведомяване: <programlisting>
+        #!/bin/sh
+
+        zenity --notification\
+          --window-icon="info" \
+          --text="Има налични обновления по системата!"
+      </programlisting></para>
+
+    <figure id="zenity-notification-screenshot">
+      <title>Примерна икона за уведомяване</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-notification-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> notification icon example</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+<!-- ==== List Options ====== -->
+
+  <sect1 id="zenity-list-options">
+    <title>Списъчен прозорец</title>
+
+    <para>Използвайте настройката <option>--list</option>, за да създадете прозорец със списък. <application>Zenity</application> връща записите в първата колона текст на избраните редове към стандартна грешка.</para>
+
+    <para>Данните за прозореца трябва да бъдат определени колона по колона, ред по ред. Данните могат да бъдат предоставени на прозореца през стандартния вход. Всеки запис трябва да бъде разделен от символ за нов ред.</para>
+
+    <para>Ако използвате настройките <option>--checklist</option> или <option>--radiolist</option>, всеки ред трябва да започва или с 'TRUE', или с 'FALSE'.</para>
+
+    <para>Прозорецът със списък поддържа следните настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--column</option>=<replaceable>колона</replaceable></term>
+	<listitem>
+	  <para>Определя заглавната част на колоните, които се показват в списъка. Трябва да определите настройката <option>--column</option> за всяка колона, която искате да покажете в прозореца.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--checklist</option></term>
+	<listitem>
+	  <para>Определя, че първата колона в първия прозорец със списък съдържа полета за отметки.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--radiolist</option></term>
+	<listitem>
+	  <para>Определя това, че първата колона в прозореца със списък съдържа радио бутони.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+	<listitem>
+	  <para>Позволява показаните елементи да бъдат редактирани.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--separator</option>=<replaceable>разделител</replaceable></term>
+	<listitem>
+	  <para>Определя кой низ е използван, когато прозореца със списък връща избраните записи.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--print-column</option>=<replaceable>колона</replaceable></term>
+	<listitem>
+	  <para>Определя кои колони да бъдат изведени след избора. Стандартната колона е "1". "ALL" може да се използва, за да се изведат всички колони в списъка.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният пример показва как да създадете списъчен прозорец: <programlisting>
+        #!/bin/sh
+
+        zenity --list \
+          --title="Изберете грешките, които искате да прегледате" \
+          --column="Номер на грешка" --column="Сериозност" --column="Описание" \
+            992383 Нормална "GtkTreeView забива при множествен избор" \
+            293823 Висока "GNOME Dictionary не поддържа сървър посредник" \
+            393823 Критична "Редактирането на менюто не работи в GNOME 2.0"
+      </programlisting></para>
+
+    <figure id="zenity-list-screenshot">
+      <title>Пример за прозорец със списък</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-list-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> list dialog example</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Message Options ====== -->
+
+  <sect1 id="zenity-message-options">
+    <title>Прозорци със съобщения</title>
+
+    <para><application>Zenity</application> може да създава четири вида прозорци със съобщения:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Грешка</para>
+      </listitem>
+      <listitem>
+        <para>Информация</para>
+      </listitem>
+      <listitem>
+        <para>Въпрос</para>
+      </listitem>
+      <listitem>
+        <para>Предупреждение</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>За всеки вид, използвайте настройката <option>--text</option>, за да определите текста, който да се показва в прозореца.</para>
+
+    <sect2 id="zenity-error-dialog">
+      <title>Прозорец за грешка</title>
+
+      <para>Използвайте настройката <option>--error</option>, за да създадете прозорец за грешка.</para>
+
+      <para>Следният примерен скрипт показва как да създадете прозорец за грепка: <programlisting>
+          #!/bin/bash
+
+          zenity --error \
+          --text="Не може да се открие /var/log/syslog."
+        </programlisting></para>
+
+      <figure id="zenity-error-screenshot">
+        <title>Пример за прозорец за грешка</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-error-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> error dialog example</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-info-dialog">
+      <title>Прозорец за информация</title>
+
+      <para>Използвайте настройката <option>--info</option>, за да създадете прозорец за информация.</para>
+
+      <para>Следният примерен скрипт показва как да създадете прозорец за информация: <programlisting>
+          #!/bin/bash
+
+          zenity --info \
+          --text="Сливането е завършено. Обновени са 3 от 10 файла."
+        </programlisting></para>
+
+      <figure id="zenity-information-screenshot">
+        <title>Пример за прозорец за информация</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-information-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> information dialog example</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-question-dialog">
+      <title>Прозорец за въпроси</title>
+
+      <para>Използвайте настройката <option>--question</option>, за да създадете прозорец за въпроси.</para>
+
+      <para>Следният примерен скрипт показва как да създадете прозорец за въпроси: <programlisting>
+          #!/bin/bash
+
+          zenity --question \
+          --text="Сигурни ли сте, че искате да продължите?"
+        </programlisting></para>
+
+      <figure id="zenity-question-screenshot">
+        <title>Пример за прозорец за въпроси</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-question-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> question dialog example</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-warning-dialog">
+      <title>Прозорец за предупреждение</title>
+
+      <para>Използвайте настройката <option>--warning</option>, за да създадете прозорец за предупреждение.</para>
+
+      <para>Следният примерен скрипт показва как да създадете прозорец за предупреждение: <programlisting>
+          #!/bin/bash
+        
+          zenity --warning \
+          --text="Изключете захранващия кабел, за да избегнете токов удар."
+        </programlisting></para>
+
+      <figure id="zenity-warning-screenshot">
+        <title>Пример за прозорец за предупреждение</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-warning-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> warning dialog example</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+  </sect1>
+
+<!-- ==== Progress Options ====== -->
+
+  <sect1 id="zenity-progress-options">
+    <title>Прозорец за прогрес</title>
+
+    <para>Използвайте настройката <option>--progress</option>, за да създадете прозорец за прогрес.</para>
+
+    <para><application>Zenity</application> чете данни от стандартния вход ред по ред. Ако някой ред започва с #, текстът се обновява с текста на този ред. Ако ред съдържа само число, процентът се обновява към това число.</para>
+	
+    <para>Прозорецът за прогрес поддържа следните настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>текст</replaceable></term>
+	<listitem>
+	  <para>Определя текста, който да се показва в прозореца за прогрес.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--percentage</option>=<replaceable>проценти</replaceable></term>
+	<listitem>
+	  <para>Определя началните проценти, които да се настроят за прозореца за прогрес.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--auto-close</option></term>
+	<listitem>
+	  <para>Затваря прозореца за прогрес, когато се достигнат стоте процента.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--pulsate</option></term>
+	<listitem>
+	  <para>Указва, че лентата за прогреса пулсира докато във входа не се достигне до знака EOF.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният примерен скрипт показва как да създадете прозорец с прогрес: <programlisting>
+        #!/bin/sh
+        (
+        echo "10" ; sleep 1
+        echo "# Обновяване на пощенските журнали" ; sleep 1
+        echo "20" ; sleep 1
+        echo "# Зануляване на cron" ; sleep 1
+        echo "50" ; sleep 1
+        echo "Този ред просто ще бъде игнориран" ; sleep 1
+        echo "75" ; sleep 1
+        echo "# Рестартиране на системата" ; sleep 1
+        echo "100" ; sleep 1
+        ) |
+        zenity --progress \
+          --title="Обновяване на системните журнали" \
+          --text="Сканиране на пощенските журнали..." \
+          --percentage=0
+
+        if [ "$?" = -1 ] ; then
+                zenity --error \
+                  --text="Обновяването е отказано."
+        fi
+
+      </programlisting></para>
+
+    <figure id="zenity-progress-screenshot">
+      <title>Пример за прозорец за прогрес</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-progress-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> progress dialog example</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Text Entry Options ====== -->
+
+  <sect1 id="zenity-text-entry-options">
+    <title>Прозорец за въвеждане на текст</title>
+
+    <para>Използвайте настройката <option>-entry</option>, за да създадете прозорец за въвеждане на текст. <application>Zenity</application> връща съдържанието на текстовото поле към стандартна грешка.</para>	
+    <para>Прозорецът за въвеждане на текст поддържа следните настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>текст</replaceable></term>
+	<listitem>
+	  <para>Определя текстът, който да се показва в прозореца за въвеждане на текст.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--entry-text</option>=<replaceable>текст</replaceable></term>
+	<listitem>
+	  <para>Определя текста, който да се показва в полето за въвеждане на текст в прозореца за въвеждане на текст.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--hide-text</option></term>
+	<listitem>
+	  <para>Скрива текста в полето за въвеждане на текст в прозореца за въвеждане на текст.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният примерен скрипт показва как да създадете прозорец за въвеждане на текст: <programlisting>
+        #!/bin/sh
+
+        if zenity --entry \
+        --title="Добавяне на запис" \
+        --text="Въведете _паролата си:" \
+        --entry-text "парола" \
+        --hide-text
+          then echo $?
+          else echo "Няма въведена парола"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-entry-screenshot">
+      <title>Пример за прозорец за въвеждане на текст</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-entry-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> text entry dialog example</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+
+<!-- ==== Text Information Options ====== -->
+
+  <sect1 id="zenity-text-options">
+    <title>Прозорец с текстова информация</title>
+
+    <para>Използвайте настройката <option>--text-info</option>, за да създадете прозорец с текстова информация.</para>
+	
+    <para>Прозорецът с текстова информация поддържа следните настройки:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>файлово име</replaceable></term>
+	<listitem>
+	  <para>Определя файл, който да се зарежда в прозореца с текстова информация.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+        <listitem>
+          <para>Позволява показаният текст да бъде редактиран. Редактираният текст се връща към стандартна грешка, когато прозорецът бъде затворен.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Следният примерен скрипт показва как да създадете прозорец с текстова информация: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection \
+          --title="Избор на файл"`
+
+        case $? in
+                 0)
+                        zenity --text-info \
+                          --title=$FILE \
+                          --filename=$FILE \
+                          --editable 2&gt;/tmp/tmp.txt;;
+                 1)
+                        echo "Няма избран файл.";;
+                -1)
+                        echo "Няма избран файл.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-text-screenshot">
+      <title>Пример за прозорец с текстова информация</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-text-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> text information dialog example</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+</article>

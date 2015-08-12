@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/share
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libklibc
+/usr/share/doc
+/usr/share/doc/libklibc
+/usr/share/doc/libklibc/README
+/usr/share/doc/libklibc/changelog.Debian.gz
+/usr/share/doc/libklibc/copyright
+/lib
+/lib/klibc-w-Zvs4JmJk74i-iB3H7oljqjrjw.so

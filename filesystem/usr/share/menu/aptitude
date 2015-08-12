@@ -1,0 +1,3 @@
+?package(aptitude):needs="text" section="Applications/System/Administration" \
+  title="Aptitude" command="/usr/bin/aptitude" hints="apt" \
+  longtitle="Terminal-based software package manager"

@@ -1,0 +1,25 @@
+sysv-rc: package-installs-into-etc-rc.d etc/rcS.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc0.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc1.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc2.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc3.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc4.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc5.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc6.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rcS.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc0.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc1.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc2.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc3.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc4.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc5.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/rc6.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/init.d/README
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/init.d/rc
+sysv-rc: file-in-etc-not-marked-as-conffile /etc/init.d/rcS
+sysv-rc: script-in-etc-init.d-not-registered-via-update-rc.d /etc/init.d/README
+sysv-rc: script-in-etc-init.d-not-registered-via-update-rc.d /etc/init.d/rc
+sysv-rc: script-in-etc-init.d-not-registered-via-update-rc.d /etc/init.d/rcS
+sysv-rc: non-standard-file-permissions-for-etc-init.d-script etc/init.d/README 0644 != 0755
+sysv-rc: postrm-contains-additional-updaterc.d-calls /etc/init.d//usr/sbin/update-rc.d
+sysv-rc: postrm-contains-additional-updaterc.d-calls /etc/init.d//usr/sbin/invoke-rc.d

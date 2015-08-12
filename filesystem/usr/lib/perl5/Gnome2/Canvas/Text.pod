@@ -1,0 +1,305 @@
+=head1 NAME
+
+Gnome2::Canvas::Text - Text as CanvasItems
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::Canvas::Text
+
+=for object Gnome2::Canvas::Text - Text as CanvasItems
+
+=cut
+
+
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'anchor' (Gtk2::AnchorType : readable / writable)
+
+=item 'attributes' (Gtk2::Pango::AttrList : readable / writable)
+
+=item 'clip' (boolean : readable / writable)
+
+=item 'clip-height' (double : readable / writable)
+
+=item 'clip-width' (double : readable / writable)
+
+=item 'family' (string : readable / writable)
+
+Name of the font family, e.g. Sans, Helvetica, Times, Monospace
+
+=item 'family-set' (boolean : readable / writable)
+
+Whether this tag affects the font family
+
+=item 'fill-color' (string : readable / writable)
+
+Text color, as string
+
+=item 'fill-color-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+Text color, as a GdkColor
+
+=item 'fill-color-rgba' (Glib::UInt : readable / writable)
+
+Text color, as an R/G/B/A combined integer
+
+=item 'fill-stipple' (Gtk2::Gdk::Drawable : readable / writable)
+
+=item 'font' (string : readable / writable)
+
+Font description as a string
+
+=item 'font-desc' (Gtk2::Pango::FontDescription : readable / writable)
+
+Font description as a PangoFontDescription struct
+
+=item 'justification' (Gtk2::Justification : readable / writable)
+
+=item 'markup' (string : writable)
+
+Marked up text to render
+
+=item 'rise' (integer : readable / writable)
+
+Offset of text above the baseline (below the baseline if rise is negative)
+
+=item 'rise-set' (boolean : readable / writable)
+
+Whether this tag affects the rise
+
+=item 'scale' (double : readable / writable)
+
+Size of font, relative to default size
+
+=item 'scale-set' (boolean : readable / writable)
+
+Whether this tag affects font scaling
+
+=item 'size' (integer : readable / writable)
+
+Font size (as a multiple of PANGO_SCALE, eg. 12*PANGO_SCALE for a 12pt font size)
+
+=item 'size-points' (double : readable / writable)
+
+Font size in points (eg. 12 for a 12pt font size)
+
+=item 'size-set' (boolean : readable / writable)
+
+Whether this tag affects the font size
+
+=item 'stretch' (Gtk2::Pango::Stretch : readable / writable)
+
+Font stretch
+
+=item 'stretch-set' (boolean : readable / writable)
+
+Whether this tag affects the font stretch
+
+=item 'strikethrough' (boolean : readable / writable)
+
+Whether to strike through the text
+
+=item 'strikethrough-set' (boolean : readable / writable)
+
+Whether this tag affects strikethrough
+
+=item 'style' (Gtk2::Pango::Style : readable / writable)
+
+Font style
+
+=item 'style-set' (boolean : readable / writable)
+
+Whether this tag affects the font style
+
+=item 'text' (string : readable / writable)
+
+Text to render
+
+=item 'text-height' (double : readable)
+
+Height of the rendered text
+
+=item 'text-width' (double : readable)
+
+Width of the rendered text
+
+=item 'underline' (Gtk2::Pango::Underline : readable / writable)
+
+Style of underline for this text
+
+=item 'underline-set' (boolean : readable / writable)
+
+Whether this tag affects underlining
+
+=item 'variant' (Gtk2::Pango::Variant : readable / writable)
+
+Font variant
+
+=item 'variant-set' (boolean : readable / writable)
+
+Whether this tag affects the font variant
+
+=item 'weight' (integer : readable / writable)
+
+Font weight
+
+=item 'weight-set' (boolean : readable / writable)
+
+Whether this tag affects the font weight
+
+=item 'x' (double : readable / writable)
+
+=item 'x-offset' (double : readable / writable)
+
+=item 'y' (double : readable / writable)
+
+=item 'y-offset' (double : readable / writable)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::AnchorType
+
+=over
+
+=item * 'center' / 'GTK_ANCHOR_CENTER'
+
+=item * 'north' / 'GTK_ANCHOR_NORTH'
+
+=item * 'north-west' / 'GTK_ANCHOR_NORTH_WEST'
+
+=item * 'north-east' / 'GTK_ANCHOR_NORTH_EAST'
+
+=item * 'south' / 'GTK_ANCHOR_SOUTH'
+
+=item * 'south-west' / 'GTK_ANCHOR_SOUTH_WEST'
+
+=item * 'south-east' / 'GTK_ANCHOR_SOUTH_EAST'
+
+=item * 'west' / 'GTK_ANCHOR_WEST'
+
+=item * 'east' / 'GTK_ANCHOR_EAST'
+
+=item * 'n' / 'GTK_ANCHOR_N'
+
+=item * 'nw' / 'GTK_ANCHOR_NW'
+
+=item * 'ne' / 'GTK_ANCHOR_NE'
+
+=item * 's' / 'GTK_ANCHOR_S'
+
+=item * 'sw' / 'GTK_ANCHOR_SW'
+
+=item * 'se' / 'GTK_ANCHOR_SE'
+
+=item * 'w' / 'GTK_ANCHOR_W'
+
+=item * 'e' / 'GTK_ANCHOR_E'
+
+=back
+
+
+=head2 enum Gtk2::Justification
+
+=over
+
+=item * 'left' / 'GTK_JUSTIFY_LEFT'
+
+=item * 'right' / 'GTK_JUSTIFY_RIGHT'
+
+=item * 'center' / 'GTK_JUSTIFY_CENTER'
+
+=item * 'fill' / 'GTK_JUSTIFY_FILL'
+
+=back
+
+
+=head2 enum Gtk2::Pango::Stretch
+
+=over
+
+=item * 'ultra-condensed' / 'PANGO_STRETCH_ULTRA_CONDENSED'
+
+=item * 'extra-condensed' / 'PANGO_STRETCH_EXTRA_CONDENSED'
+
+=item * 'condensed' / 'PANGO_STRETCH_CONDENSED'
+
+=item * 'semi-condensed' / 'PANGO_STRETCH_SEMI_CONDENSED'
+
+=item * 'normal' / 'PANGO_STRETCH_NORMAL'
+
+=item * 'semi-expanded' / 'PANGO_STRETCH_SEMI_EXPANDED'
+
+=item * 'expanded' / 'PANGO_STRETCH_EXPANDED'
+
+=item * 'extra-expanded' / 'PANGO_STRETCH_EXTRA_EXPANDED'
+
+=item * 'ultra-expanded' / 'PANGO_STRETCH_ULTRA_EXPANDED'
+
+=back
+
+
+=head2 enum Gtk2::Pango::Style
+
+=over
+
+=item * 'normal' / 'PANGO_STYLE_NORMAL'
+
+=item * 'oblique' / 'PANGO_STYLE_OBLIQUE'
+
+=item * 'italic' / 'PANGO_STYLE_ITALIC'
+
+=back
+
+
+=head2 enum Gtk2::Pango::Underline
+
+=over
+
+=item * 'none' / 'PANGO_UNDERLINE_NONE'
+
+=item * 'single' / 'PANGO_UNDERLINE_SINGLE'
+
+=item * 'double' / 'PANGO_UNDERLINE_DOUBLE'
+
+=item * 'low' / 'PANGO_UNDERLINE_LOW'
+
+=item * 'error' / 'PANGO_UNDERLINE_ERROR'
+
+=back
+
+
+=head2 enum Gtk2::Pango::Variant
+
+=over
+
+=item * 'normal' / 'PANGO_VARIANT_NORMAL'
+
+=item * 'small-caps' / 'PANGO_VARIANT_SMALL_CAPS'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

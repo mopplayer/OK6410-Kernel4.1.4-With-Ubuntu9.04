@@ -1,0 +1,18 @@
+#! /bin/sh
+#
+# sysv-rc postrm
+#
+
+set -e
+ 
+case "$1" in
+	remove) : ;;
+	*) exit 0 ;;
+esac
+
+umask 022
+
+ln -sf /usr/share/sysvinit/update-rc.d /usr/sbin/update-rc.d
+ln -sf /usr/share/sysvinit/update-rc.d /usr/sbin/invoke-rc.d
+
+exit 0

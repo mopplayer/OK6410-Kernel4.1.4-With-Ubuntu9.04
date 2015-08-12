@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installxmlcatalogs
+if [ "$1" = "configure" ]; then
+	update-xmlcatalog --add --type uri --id "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/" --package rarian-compat --local /usr/share/xml/scrollkeeper/dtds/catalog.xml
+
+	update-xmlcatalog --add --type uri --id "http://scrollkeeper.sourceforge.net/dtds/scrollkeeper-omf-1.0/" --package rarian-compat --root
+
+fi
+# End automatically added section

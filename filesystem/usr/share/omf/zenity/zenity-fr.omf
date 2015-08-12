@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Sun L'équipe de documentation de Java Desktop System)</creator>
+    <creator>(Glynn Foster)</creator>
+    <maintainer>(Glynn Foster)</maintainer>
+    <contributor>(Nicholas Curran)</contributor>
+    <title>Manuel de Zenity</title>
+    <date>Janvier 2003</date>
+    <version identifier="Manuel de Zenity V1.0" date="Janvier 2003"/>
+    <subject category="GNOME|Utilities"/>
+    <description>
+            Zenity est une réécriture de gdialog, la version GNOME de dialog, vous permettant d'afficher des boîtes de dialogue depuis des scripts shell et la ligne de commande.
+    </description>
+    <type>
+       user's guide
+     </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/zenity/fr/zenity.xml"/>
+    <language code="fr"/>
+    <relation seriesid="1e4f989c-287a-11d7-84e2-b1f3b939ba73"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Sun Microsystems"/>
+  </resource>
+</omf>

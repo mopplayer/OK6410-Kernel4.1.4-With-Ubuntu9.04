@@ -1,0 +1,102 @@
+=head1 NAME
+
+Gnome2::VFS::VolumeMonitor
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gnome2::VFS::VolumeMonitor
+
+=for object Gnome2::VFS::VolumeMonitor
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 list = $volume_monitor-E<gt>B<get_connected_drives> 
+
+=over
+
+=back
+
+=head2 drive = $volume_monitor-E<gt>B<get_drive_by_id> ($id)
+
+=over
+
+=over
+
+=item * $id (unsigned) 
+
+=back
+
+=back
+
+=head2 list = $volume_monitor-E<gt>B<get_mounted_volumes> 
+
+=over
+
+=back
+
+=head2 volume = $volume_monitor-E<gt>B<get_volume_by_id> ($id)
+
+=over
+
+=over
+
+=item * $id (unsigned) 
+
+=back
+
+=back
+
+=head2 volume = $volume_monitor-E<gt>B<get_volume_for_path> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 volumemonitor = Gnome2::VFS-E<gt>B<get_volume_monitor> 
+
+=over
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<volume-mounted> (Gnome2::VFS::VolumeMonitor, Gnome2::VFS::Volume)
+
+=item B<volume-pre-unmount> (Gnome2::VFS::VolumeMonitor, Gnome2::VFS::Volume)
+
+=item B<volume-unmounted> (Gnome2::VFS::VolumeMonitor, Gnome2::VFS::Volume)
+
+=item B<drive-connected> (Gnome2::VFS::VolumeMonitor, Gnome2::VFS::Drive)
+
+=item B<drive-disconnected> (Gnome2::VFS::VolumeMonitor, Gnome2::VFS::Drive)
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>, L<Glib::Object>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

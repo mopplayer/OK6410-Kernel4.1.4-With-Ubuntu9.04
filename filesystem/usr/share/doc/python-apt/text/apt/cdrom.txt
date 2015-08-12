@@ -1,0 +1,34 @@
+
+``apt.cdrom`` - Functionality like in apt-cdrom
+***********************************************
+
+Classes related to cdrom handling.
+
+class apt.cdrom.Cdrom(progress=None, mountpoint=None, nomount=True)
+
+   Support for apt-cdrom like features.
+
+   This class has several optional parameters for initialisation,
+   which may be used to influence the behaviour of the object:
+
+   The optional parameter *progress* is a CdromProgress() subclass,
+   which will ask for the correct cdrom, etc. If not specified or
+   None, a CdromProgress() object will be used.
+
+   The optional parameter *mountpoint* may be used to specify an
+   alternative mountpoint.
+
+   If the optional parameter *nomount* is True, the cdroms will not be
+   mounted. This is the default behaviour.
+
+   add()
+
+      Add cdrom to the sources.list.
+
+   ident()
+
+      Identify the cdrom.
+
+   inSourcesList
+
+      Check if the cdrom is already in the current sources.list.

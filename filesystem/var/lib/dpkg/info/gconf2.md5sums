@@ -1,0 +1,10 @@
+538904e14cb89efaf82c5c208be8ace3  usr/share/doc/gconf2/copyright
+5537e42e181b4b4eb435681751e3c4f0  usr/share/doc/gconf2/FAQ.txt.gz
+abc8f1b52c662056690d253b0eb56bac  usr/share/doc/gconf2/README.Debian
+e5685b384c7b0f716c4ead26e9db7a3f  usr/share/man/man1/gconftool-2.1.gz
+084c7480c645cd8c92592d575218c83b  usr/share/man/man8/update-gconf-defaults.8.gz
+c06f49ed33706236dded87965826be3c  usr/share/man/man8/gconf-schemas.8.gz
+b93bb29fcb62abdd2c0bf3a4884c107a  usr/sbin/update-gconf-defaults
+aebac3a9f4c0173d72a7928245e55f64  usr/sbin/gconf-schemas
+480198c7cae1fe64ecffac0ab19215b9  usr/bin/gconftool-2
+0d0839cfe0140b83f395cd61a20098e5  usr/bin/gconf-merge-tree

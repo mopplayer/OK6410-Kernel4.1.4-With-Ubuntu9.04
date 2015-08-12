@@ -1,0 +1,217 @@
+=head1 NAME
+
+Gnome2::VFS::Drive
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Gnome2::VFS::Drive
+
+
+=head1 METHODS
+
+=head2 string = $drive-E<gt>B<get_activation_uri> 
+
+=over
+
+=back
+
+=head2 integer = $a-E<gt>B<compare> ($b)
+
+=over
+
+=over
+
+=item * $b (Gnome2::VFS::Drive) 
+
+=back
+
+=back
+
+=head2 string = $drive-E<gt>B<get_device_path> 
+
+=over
+
+=back
+
+=head2 devicetype = $drive-E<gt>B<get_device_type> 
+
+=over
+
+=back
+
+=head2 string = $drive-E<gt>B<get_display_name> 
+
+=over
+
+=back
+
+=head2 $drive-E<gt>B<eject> ($func, $data=undef)
+
+=over
+
+=over
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 string = $drive-E<gt>B<get_hal_udi> 
+
+=over
+
+Since: vfs 2.8
+
+=back
+
+=head2 string = $drive-E<gt>B<get_icon> 
+
+=over
+
+=back
+
+=head2 unsigned = $drive-E<gt>B<get_id> 
+
+=over
+
+=back
+
+=head2 boolean = $drive-E<gt>B<is_connected> 
+
+=over
+
+=back
+
+=head2 boolean = $drive-E<gt>B<is_mounted> 
+
+=over
+
+=back
+
+=head2 boolean = $drive-E<gt>B<is_user_visible> 
+
+=over
+
+=back
+
+=head2 $drive-E<gt>B<mount> ($func, $data=undef)
+
+=over
+
+=over
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 list = $drive-E<gt>B<get_mounted_volumes> 
+
+=over
+
+Since: vfs 2.8
+
+=back
+
+=head2 boolean = $drive-E<gt>B<needs_eject> 
+
+=over
+
+Since: vfs 2.16
+
+=back
+
+=head2 $drive-E<gt>B<unmount> ($func, $data=undef)
+
+=over
+
+=over
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<volume-mounted> (Gnome2::VFS::Drive, Gnome2::VFS::Volume)
+
+=item B<volume-pre-unmount> (Gnome2::VFS::Drive, Gnome2::VFS::Volume)
+
+=item B<volume-unmounted> (Gnome2::VFS::Drive, Gnome2::VFS::Volume)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::VFS::DeviceType
+
+=over
+
+=item * 'unknown' / 'GNOME_VFS_DEVICE_TYPE_UNKNOWN'
+
+=item * 'audio-cd' / 'GNOME_VFS_DEVICE_TYPE_AUDIO_CD'
+
+=item * 'video-dvd' / 'GNOME_VFS_DEVICE_TYPE_VIDEO_DVD'
+
+=item * 'harddrive' / 'GNOME_VFS_DEVICE_TYPE_HARDDRIVE'
+
+=item * 'cdrom' / 'GNOME_VFS_DEVICE_TYPE_CDROM'
+
+=item * 'floppy' / 'GNOME_VFS_DEVICE_TYPE_FLOPPY'
+
+=item * 'zip' / 'GNOME_VFS_DEVICE_TYPE_ZIP'
+
+=item * 'jaz' / 'GNOME_VFS_DEVICE_TYPE_JAZ'
+
+=item * 'nfs' / 'GNOME_VFS_DEVICE_TYPE_NFS'
+
+=item * 'autofs' / 'GNOME_VFS_DEVICE_TYPE_AUTOFS'
+
+=item * 'camera' / 'GNOME_VFS_DEVICE_TYPE_CAMERA'
+
+=item * 'memory-stick' / 'GNOME_VFS_DEVICE_TYPE_MEMORY_STICK'
+
+=item * 'smb' / 'GNOME_VFS_DEVICE_TYPE_SMB'
+
+=item * 'apple' / 'GNOME_VFS_DEVICE_TYPE_APPLE'
+
+=item * 'music-player' / 'GNOME_VFS_DEVICE_TYPE_MUSIC_PLAYER'
+
+=item * 'windows' / 'GNOME_VFS_DEVICE_TYPE_WINDOWS'
+
+=item * 'loopback' / 'GNOME_VFS_DEVICE_TYPE_LOOPBACK'
+
+=item * 'network' / 'GNOME_VFS_DEVICE_TYPE_NETWORK'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>, L<Glib::Object>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

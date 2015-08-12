@@ -1,0 +1,3 @@
+/etc/obex-data-server/imaging_capabilities.xml
+/etc/obex-data-server/capability.xml
+/etc/dbus-1/system.d/obex-data-server.conf

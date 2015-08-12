@@ -1,0 +1,6 @@
+e1fe61f29b96c2c1fcef1e8c04546975  usr/share/xserver-xorg/pci/mga.ids
+bcd016920149d839f70f0e392d223542  usr/share/doc/xserver-xorg-video-mga/copyright
+e60b4fe354f938e7dac7e97db3614f62  usr/share/doc/xserver-xorg-video-mga/changelog.gz
+6ba95ac4fb08c4b1df7e030599008eec  usr/share/doc/xserver-xorg-video-mga/changelog.Debian.gz
+ed34de290f8cffa49f5ada8b4da0e4ee  usr/share/man/man4/mga.4.gz
+7a9772315c70dad04f5ef302ef1ba5ac  usr/lib/xorg/modules/drivers/mga_drv.so

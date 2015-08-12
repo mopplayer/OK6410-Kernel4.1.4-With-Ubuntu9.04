@@ -1,0 +1,57 @@
+=head1 NAME
+
+Gnome2::VFS::FileInfo
+
+
+=head1 METHODS
+
+=head2 fileinfo = Gnome2::VFS::FileInfo-E<gt>B<new> ($hash_ref)
+
+=over
+
+=over
+
+=item * $hash_ref (scalar) 
+
+=back
+
+
+Creates a new GnomeVFSFileInfo object from I<hash_ref> for use with
+Gnome2::VFS::FileInfo::matches, for example.  Normally, you can always directly
+use a hash reference if you're asked for a GnomeVFSFileInfo.
+
+
+=back
+
+=head2 boolean = $a-E<gt>B<matches> ($b)
+
+=over
+
+=over
+
+=item * $b (Gnome2::VFS::FileInfo) 
+
+=back
+
+=back
+
+=head2 string = $info-E<gt>B<get_mime_type> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

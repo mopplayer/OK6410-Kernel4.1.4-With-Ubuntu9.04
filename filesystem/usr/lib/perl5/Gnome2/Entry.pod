@@ -1,0 +1,151 @@
+=head1 NAME
+
+Gnome2::Entry
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Box
+                           +----Gtk2::HBox
+                                +----Gtk2::Combo
+                                     +----Gnome2::Entry
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+  Gtk2::Editable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::Entry-E<gt>B<new> ($history_id=undef)
+
+=over
+
+=over
+
+=item * $history_id (string) 
+
+=back
+
+=back
+
+=head2 $gentry-E<gt>B<append_history> ($save, $text)
+
+=over
+
+=over
+
+=item * $save (boolean) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 $gentry-E<gt>B<clear_history> 
+
+=over
+
+=back
+
+=head2 widget = $gentry-E<gt>B<gtk_entry> 
+
+=over
+
+=back
+
+=head2 string = $gentry-E<gt>B<get_history_id> 
+
+=over
+
+=back
+
+=head2 $gentry-E<gt>B<set_history_id> ($history_id)
+
+=over
+
+=over
+
+=item * $history_id (string) 
+
+=back
+
+=back
+
+=head2 integer = $gentry-E<gt>B<get_max_saved> 
+
+=over
+
+=back
+
+=head2 $gentry-E<gt>B<set_max_saved> ($max_saved)
+
+=over
+
+=over
+
+=item * $max_saved (integer) 
+
+=back
+
+=back
+
+=head2 $gentry-E<gt>B<prepend_history> ($save, $text)
+
+=over
+
+=over
+
+=item * $save (boolean) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'gtk-entry' (Gtk2::Entry : readable)
+
+The GTK entry
+
+=item 'history-id' (string : readable / writable)
+
+History ID
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<activate> (Gnome2::Entry)
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Box>, L<Gtk2::HBox>, L<Gtk2::Combo>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

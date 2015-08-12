@@ -1,0 +1,91 @@
+=head1 NAME
+
+Gnome2::WindowIcon
+
+
+=head1 METHODS
+
+=head2 Gnome2::WindowIcon-E<gt>B<set_default_from_file_list> ($filenames_ref)
+
+=over
+
+=over
+
+=item * $filenames_ref (scalar) 
+
+=back
+
+=back
+
+=head2 Gnome2::WindowIcon-E<gt>B<set_default_from_file> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::WindowIcon-E<gt>B<set_from_default> ($w)
+
+=over
+
+=over
+
+=item * $w (Gtk2::Window) 
+
+=back
+
+=back
+
+=head2 Gnome2::WindowIcon-E<gt>B<set_from_file_list> ($w, $filenames_ref)
+
+=over
+
+=over
+
+=item * $w (Gtk2::Window) 
+
+=item * $filenames_ref (scalar) 
+
+=back
+
+=back
+
+=head2 Gnome2::WindowIcon-E<gt>B<set_from_file> ($w, $filename)
+
+=over
+
+=over
+
+=item * $w (Gtk2::Window) 
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::WindowIcon-E<gt>B<init> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,5 @@
+caa3fe945ba16f0e184fd36e52bd4ab1  usr/share/xserver-xorg/pci/ark.ids
+b4be8d81a1a5512786ee95c6bfc90938  usr/share/doc/xserver-xorg-video-ark/copyright
+e55cf9ddf6474e2294792202722fa7af  usr/share/doc/xserver-xorg-video-ark/changelog.gz
+4d97275c70473431445d688b716fa223  usr/share/doc/xserver-xorg-video-ark/changelog.Debian.gz
+a2df03137ac209e4369cf5a38951fcfd  usr/lib/xorg/modules/drivers/ark_drv.so

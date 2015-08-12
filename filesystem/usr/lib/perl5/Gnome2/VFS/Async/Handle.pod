@@ -1,0 +1,111 @@
+=head1 NAME
+
+Gnome2::VFS::Async::Handle
+
+
+=head1 METHODS
+
+=head2 $handle-E<gt>B<cancel> 
+
+=over
+
+=back
+
+=head2 $handle-E<gt>B<close> ($func, $data=undef)
+
+=over
+
+=over
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 $handle-E<gt>B<read> ($bytes, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $bytes (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+=head2 $handle-E<gt>B<seek> ($whence, $offset, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $whence (Gnome2::VFS::SeekPosition) 
+
+=item * $offset (unsigned) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+Since: vfs 2.6
+
+=back
+
+=head2 $handle-E<gt>B<write> ($buffer, $bytes, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $buffer (string) 
+
+=item * $bytes (integer) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::VFS::SeekPosition
+
+=over
+
+=item * 'start' / 'GNOME_VFS_SEEK_START'
+
+=item * 'current' / 'GNOME_VFS_SEEK_CURRENT'
+
+=item * 'end' / 'GNOME_VFS_SEEK_END'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

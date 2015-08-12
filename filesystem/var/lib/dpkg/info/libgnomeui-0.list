@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgnomeui-0
+/usr/share/doc/libgnomeui-0/NEWS.gz
+/usr/share/doc/libgnomeui-0/copyright
+/usr/share/doc/libgnomeui-0/AUTHORS
+/usr/share/doc/libgnomeui-0/README
+/usr/share/doc/libgnomeui-0/changelog.Debian.gz
+/usr/lib
+/usr/lib/libglade
+/usr/lib/libglade/2.0
+/usr/lib/libglade/2.0/libgnome.so
+/usr/lib/libgnomeui-2.so.0.2400.1
+/usr/lib/libgnomeui-2.so.0

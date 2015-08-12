@@ -1,0 +1,25 @@
+#!/bin/sh
+# Kludge to force a rescan of available wireless networks on resume, so that
+# stale ESSIDs aren't shown as current.
+# To be removed when bug #336055 is resolved in the kernel.
+
+. "${PM_FUNCTIONS}"
+
+which iwlist || exit $NA
+
+rescan_wireless()
+{
+	for iface in /sys/class/net/*; do
+		[ -d "$iface/wireless" ] || continue
+		iface="${iface##*/}"
+		iwlist "$iface" scanning
+	done
+}
+
+case "$1" in
+	thaw|resume)
+		rescan_wireless
+		;;
+	*) exit $NA
+		;;
+esac

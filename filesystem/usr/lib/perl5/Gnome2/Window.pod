@@ -1,0 +1,42 @@
+=head1 NAME
+
+Gnome2::Window
+
+=for object Gnome2::Window
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 $window-E<gt>B<toplevel_set_title> ($doc_name, $app_name, $extension)
+
+=over
+
+=over
+
+=item * $doc_name (string) 
+
+=item * $app_name (string) 
+
+=item * $extension (string) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

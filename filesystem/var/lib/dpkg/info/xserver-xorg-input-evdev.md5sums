@@ -1,0 +1,5 @@
+bbe993993dbfb9456cd456dfb80b2eab  usr/share/doc/xserver-xorg-input-evdev/copyright
+3c08b77d8622226d4b5ab23673f9032a  usr/share/doc/xserver-xorg-input-evdev/changelog.gz
+a6c402bb5e8db6464b2b6916b4b05489  usr/share/doc/xserver-xorg-input-evdev/changelog.Debian.gz
+43f407d365e40c11a84c3ade4d34c347  usr/share/man/man4/evdev.4.gz
+47a99fcddd7115243abfc602e0f23bde  usr/lib/xorg/modules/input/evdev_drv.so

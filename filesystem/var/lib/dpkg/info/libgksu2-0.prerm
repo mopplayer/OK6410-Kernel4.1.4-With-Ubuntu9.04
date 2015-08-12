@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_gconf
+if [ "$1" = remove ] || [ "$1" = upgrade ]; then
+	gconf-schemas --unregister gksu.schemas 
+fi
+# End automatically added section
+
+
+if [ "$1" = "remove" ]; then
+        update-alternatives --remove libgksu-gconf-defaults \
+	    /usr/share/libgksu/debian/gconf-defaults.libgksu-su
+
+        update-alternatives --remove libgksu-gconf-defaults \
+	    /usr/share/libgksu/debian/gconf-defaults.libgksu-sudo
+fi

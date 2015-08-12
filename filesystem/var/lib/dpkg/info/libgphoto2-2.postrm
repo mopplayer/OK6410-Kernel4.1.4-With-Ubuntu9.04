@@ -1,0 +1,30 @@
+#! /bin/sh
+
+PACKAGE="libgphoto2"
+
+set -e
+
+case "$1" in
+    remove|purge)
+	rm -f /etc/hotplug/usb/$PACKAGE.usermap
+	rm -f /usr/share/hal/fdi/information/20thirdparty/$PACKAGE.fdi || /bin/true
+	rm -f /usr/share/hal/fdi/information/10freedesktop/10-camera-$PACKAGE.fdi || /bin/true
+	rm -f /usr/share/hal/fdi/information/10freedesktop/10-camera-$PACKAGE-device.fdi || /bin/true
+	rm -f /usr/share/hal/fdi/preprobe/10osvendor/20-$PACKAGE.fdi || /bin/true
+	;;
+    disappear|upgrade|failed-upgrade|abort-install|abort-upgrade)
+	;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+esac
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "remove" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+exit 0

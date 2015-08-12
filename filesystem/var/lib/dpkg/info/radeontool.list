@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/sbin
+/usr/sbin/avivotool
+/usr/sbin/radeontool
+/usr/share
+/usr/share/doc
+/usr/share/doc/radeontool
+/usr/share/doc/radeontool/README.Debian
+/usr/share/doc/radeontool/copyright
+/usr/share/doc/radeontool/changelog.gz
+/usr/share/doc/radeontool/lightwatch.pl
+/usr/share/doc/radeontool/changelog.Debian.gz
+/usr/share/man
+/usr/share/man/man7
+/usr/share/man/man7/radeontool.7.gz

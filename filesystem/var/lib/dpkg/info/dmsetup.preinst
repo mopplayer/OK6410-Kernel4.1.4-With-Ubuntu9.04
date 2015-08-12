@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installudev
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/udev/dmsetup.rules" ]; then
+		if [ "`md5sum \"/etc/udev/dmsetup.rules\" | sed -e \"s/ .*//\"`" = \
+		     "`dpkg-query -W -f='${Conffiles}' dmsetup | sed -n -e \"\\\\' /etc/udev/dmsetup.rules's/.* //p\"`" ]
+		then
+			rm -f "/etc/udev/dmsetup.rules"
+		fi
+	fi
+	if [ -L "/lib/udev/rules.d/65-dmsetup.rules" ]; then
+		rm -f "/lib/udev/rules.d/65-dmsetup.rules"
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installudev
+if [ "$1" = install ] || [ "$1" = upgrade ]; then
+	if [ -e "/etc/udev/rules.d/65-dmsetup.rules" ]; then
+		if [ "`md5sum \"/etc/udev/rules.d/65-dmsetup.rules\" | sed -e \"s/ .*//\"`" = \
+		     "`dpkg-query -W -f='${Conffiles}' dmsetup | sed -n -e \"\\\\' /etc/udev/rules.d/65-dmsetup.rules's/.* //p\"`" ]
+		then
+			rm -f "/etc/udev/rules.d/65-dmsetup.rules"
+		fi
+	fi
+fi
+# End automatically added section

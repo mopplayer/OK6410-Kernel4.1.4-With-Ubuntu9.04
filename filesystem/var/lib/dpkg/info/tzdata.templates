@@ -1,0 +1,1127 @@
+Template: tzdata/Areas
+Type: select
+Choices: Africa, America, Antarctica, Australia, Arctic, Asia, Atlantic, Europe, Indian, Pacific, SystemV, Etc
+Choices-be.UTF-8: Афрыка, Амерыка, Антарктыда, Аўстралія, Арктыка, Азія, Атлантыка, Еўропа, Індыйскі акіян, Ціхі акіян, SystemV, Etc
+Choices-bg.UTF-8: Африка, Америка, Антарктида, Австралия, Арктика, Азия, Атлантически океан, Европа, Индия, Тихи океан, SystemV, Други
+Choices-ca.UTF-8: Àfrica, Amèrica, Antàrtida, Austràlia, Àrtic, Àsia, Atlàntic, Europa, Índic, Pacífic, SystemV, Etc
+Choices-cs.UTF-8: Afrika, Amerika, Antarktida, Austrálie, Arktida, Asie, Atlantik, Evropa, Indický oceán, Pacifik, SystemV, Jiná
+Choices-de.UTF-8: Afrika, Amerika, Antarktis, Australien, Arktis, Asien, Atlantik, Europa, Indien, Pazifik, SystemV, Usw.
+Choices-en.UTF-8: Africa, America, Antarctica, Australia, Arctic Ocean, Asia, Atlantic Ocean, Europe, Indian Ocean, Pacific Ocean, System V timezones, None of the above
+Choices-es.UTF-8: África, América, Antártida, Australia, Ártico, Asia, Atlántico, Europa, India, Pacífico, SystemV, Etc
+Choices-eu.UTF-8: Afrika, Amerika, Antartikoa, Australia, Artikoa, Asia, Atlantikoa, Europa, India, Pazifikoa, SystemV, Etab
+Choices-fi.UTF-8: Afrikka, Amerikka, Antarktis, Australia, Arktinen alue, Aasia, Atlantin valtameri, Eurooppa, Intian valtameri, Tyyni valtameri, SystemV-tyylinen, GMT-ajat
+Choices-fr.UTF-8: Afrique, Amérique, Antarctique, Australie, Arctique, Asie, Atlantique, Europe, Océan Indien, Pacifique, Système V, Autre
+Choices-gl.UTF-8: África, América, Antártida, Australia, Ártico, Asia, Atlántico, Europa, Índico, Pacífico, SystemV, Etc
+Choices-gu.UTF-8: આફ્રિકા, અમેરિકા, એન્ટાર્ટિકા, ઓસ્ટ્રેલિયા, આર્કટિક, એશિયા, એટલાન્ટિક, યુરોપ, ભારતીય, પેસેફિક, સિસ્ટમV, વગેરે
+Choices-he.UTF-8: אפריקה, אמריקה, אנטרקטיקה, אוסטרליה, החוג הארקטי, אסיה, אטלנטי, אירופה, הודי, פסיפיק (האוקיינוס השקט), SystemV, עוד
+Choices-hr.UTF-8: Afrika, Amerika, Antarktika, Australija, Arktik, Azija, Atlantic, Europa, Indijski, Pacific, SystemV, Itd
+Choices-hu.UTF-8: Afrika, Amerika, Déli-sark, Ausztrália, Északi-sark, Ázsia, Atlanti, Európa, Indiai, Csendes-óceáni, SystemV, Egyebek
+Choices-id.UTF-8: Afrika, Amerika, Antartika, Australia, Arktik, Asia, Atlantik, Eropa, India, Pasifik, Sistem V, ETC
+Choices-it.UTF-8: Africa, America, Antartide, Austrialia, Artide, Asia, Atlantico, Europa, Indiano, Pacifico, SystemV, Etc
+Choices-ja.UTF-8: アフリカ, アメリカ, 南極大陸, オーストラリア, 北極, アジア, 大西洋側, ヨーロッパ, インド地方, 太平洋側, SystemV, その他
+Choices-ku.UTF-8: Afrîka, Amerîka, Antartîka, Awistralya, Arktîk, Asya, Atlantîk, Ewropa, Hindistan, Pasîfîk, SystemV, Wekî din
+Choices-lt.UTF-8: Afrika, Amerika, Antarktida, Australija, Arktis, Azija, Atlanto, Europa, Indijos regionas, Ramiojo vandenyno, SystemV, kita
+Choices-ml.UTF-8: ആഫ്രിക്ക, അമേരിക്ക, അന്റാര്‍ട്ടിക്ക, ഓസ്ട്രേലിയ, ആര്‍ട്ടിക്, ഏഷ്യ, അറ്റ്‌ലാന്റിക്, യൂറോപ്പ്, ഇന്ത്യന്‍, പസഫിക്, സിസ്റ്റംV, Etc
+Choices-nl.UTF-8: Afrika, Amerika, Antarctica, Australië, Arctische Oceaan, Azie, Atlantische Oceaan, Europa, Indische Oceaan, Grote Oceaan, SystemV tijdzones, Anders
+Choices-pt.UTF-8: África, América, Antárctida, Austrália, Árctico, Ásia, Atlântico, Europa, Índico, Pacífico, SystemV, Etc
+Choices-ru.UTF-8: Африка, Америка, Антарктида, Австралия, Арктика, Азия, Атлантика, Европа, Индийский регион, Тихоокеанский регион, В соотвествии с SystemV, Другой
+Choices-sq.UTF-8: Afrikë, Amerikë, Antarktidë, Australi, Arktik, Azi, Atlantik, Europë, Indian, Paqësor, SystemV, Etc
+Choices-sv.UTF-8: Afrika, Amerika, Antarktis, Australien, Norra Ishavet, Asien, Atlanten, Europa, Indiska Oceanen, Stilla Havet, SystemV-tidszoner, Etc
+Choices-th.UTF-8: แอฟริกา, อเมริกา, แอนตาร์กติกา, ออสเตรเลีย, อาร์กติก, เอเชีย, แอตแลนติก, ยุโรป, มหาสมุทรอินเดีย, แปซิฟิก, SystemV, อื่น ๆ
+Choices-tr.UTF-8: Afrika, Amerika, Antarktika, Avustralya, Kuzey Kutbu, Asya, Atlantik, Avrupa, Hindistan, Pasifik, SystemV, Diğer
+Choices-vi.UTF-8: Châu Phi, Mỹ, Nam Cực, Úc, Bắc Cực, Châu Á, Đại Tây Dương, Châu Âu, Ấn Độ Dương, Thái Bình Dương, SystemV, v.v.
+Choices-wo.UTF-8: Afrik, Amerik, Antarktik, Australi, Arktik, Asi, Atlantik, Óróop, Indien, Pasifik, SystemV, Etc
+Description: Geographic area:
+ Please select the geographic area you live in. Subsequent
+ configuration questions will narrow this down by presenting a list of
+ cities, representing the time zones in which they are located.
+Description-be.UTF-8: Геаграфічная зона
+ Выберыце геаграфічную зону, у якой вы жывеце. Наступныя пытанні канфігуравання прадаставяць спіс гарадоў і і часавых зон, у якіх яны размешчаны.
+Description-bg.UTF-8: Географска област:
+ Изберете областта, в която се намирате. Следващите въпроси ще уточнят града.
+Description-ca.UTF-8: Àrea geogràfica:
+ Si us plau, seleccioneu l'àrea geogràfica de residència. Les següents preguntes de configuració permetran aproximar encara més la selecció tot i mostrant una llista de ciutats que representen les zones horàries en les que es troben.
+Description-cs.UTF-8: Geografická oblast:
+ Vyberte prosím geografickou oblast, ve které se nacházíte. Následující otázky zobrazí seznam měst, která reprezentují časová pásma, ve kterých jsou města umístěna.
+Description-de.UTF-8: Geographisches Gebiet:
+ Bitte wählen Sie das geographische Gebiet aus, in dem Sie leben. Die folgenden Fragen werden dies weiter durch eine Auswahl von Städten, die ihre Zeitzonen repräsentieren, in der sie liegen, einschränken.
+Description-en.UTF-8: Geographic area:
+ Please select the geographic area you live in. Subsequent configuration questions will narrow this down by presenting a list of cities, representing the time zones in which they are located.
+Description-es.UTF-8: Área geográfica:
+ Por favor elija el área geográfica donde reside. La lista de ciudades que se presentarán después representan la zona horaria en la que están localizadas.
+Description-eu.UTF-8: Eremu geografikoa
+ Mesedez hautatu bizi zaren eremu geografikoa. Hurrengo konfigurazio galderek aukera hau zehaztuko dute kokaturik zauden eremuko hiri zerrenda bat aurkeztuaz.
+Description-fi.UTF-8: Maantieteellinen alue:
+ Valitse maantieteellinen alue, jolla elät. Seuraavat asetuskysymykset kaventavat valintaa näyttämällä listan kaupungeista, jotka edustavat aikavyöhykkeitä, joilla ne sijaitsevat.
+Description-fr.UTF-8: Lieu géographique :
+ Veuillez choisir le lieu géographique où vous êtes situé(e). Les questions suivantes affineront ce choix en affichant une liste de villes qui représentent les fuseaux horaires où elles sont situées.
+Description-gl.UTF-8: Área xeográfica:
+ Escolla a área xeográfica na que reside. As seguintes preguntas de configuración han afinar máis a selección amosando unha lista de cidades que representan os fusos horarios nos que están ubicadas.
+Description-gu.UTF-8: ભૌગોલિક વિસ્તાર:
+ મહેરબાની કરી તમે રહેતા હોવ તે ભૌગોલિક વિસ્તાર પસંદ કરો. આગળનાં રુપરેખાંકન પ્રશ્નો આને શહેરોની યાદી બતાવીને, તમે જે જગ્યાએ છો તેનો સમય વિસ્તાર બતાવીને ટૂંકું બનાવશે.
+Description-he.UTF-8: אזור גיאוגרפי:
+ בחר בבקשה את האזור הגיאוגרפי שאתה חי בו. שאלות המשך לגבי מיקומך יצמצמו את הבחירה ע"י הצגה של רשימת ערים ורשימה של אזורי זמן שבהם אתה נמצא.
+Description-hr.UTF-8: Geografsko podruĂÂje:
+ Molim odaberite geografsko podruĂÂje gdje vi ÄšĹživite. Daljnja pitanja ĂÂe suziti odabir tako ÄšÄto ĂÂete dobiti popis gradova koji predstavljaju vremenske zone u kojima se oni nalaze.
+Description-hu.UTF-8: Földrajzi terület:
+ Válaszd ki a földrajzi területet, ahol élsz. A következő kérdések pontosítják ezt városok neveivel, melyek azon időzónákat képviselik, melyekben vannak.
+Description-id.UTF-8: Area Geografis:
+ Silakan pilih wilayah geografis tempat Anda berada. Beberapa pertanyaan selanjutnya akan mempersempit pilihan dengan menampilkan daftar kota, yang menggambarkan daerah waktu tempat kota tersebut berada.
+Description-it.UTF-8: Area geografica:
+ Per favore scegli l'area geografica in cui vivi. Successive domande restringeranno la lista presentando una lista di città, che rappresentano i fusi orari nelle quali si trovano.
+Description-ja.UTF-8: 地理的領域:
+ あなたの居住する地理的領域を選んでください。続く設定質問で、位置する時間帯を表現する都市名のリストが表示されるので、これをより狭めていくことができます。
+Description-ku.UTF-8: Qada cografîk:
+ Ji kerema xwe re qada cografîk a ku tu lê dijî hilbijêre. Dê di nexşeyekê de lîsteya bajaran derkeve.
+Description-lt.UTF-8: Geografinė zona:
+ Pasirinkite geografinę zoną kurioje Jūs gyvenate. Paskesnis konfigūravimo klausimas bus susiaurintas, pateikiant miestų, esančių šioje laiko zonoje, sąrašą.
+Description-ml.UTF-8: ഭൂമിശാത്രപരമായ ഭാഗം:
+ ദയവായി നിങ്ങള്‍ താമസിയ്ക്കുന്ന ഭൂമിശാസ്ത്രപരമായ ഭാഗം തിരഞ്ഞെടുക്കുക. അവിടത്തെ സമയ മേഘലയില്‍ സ്ഥിതിചെയ്യുന്ന നഗരങ്ങളുടെ പട്ടികയിലേയ്ക്ക് ഇതിനു് ശേഷമുള്ള ക്രമീകരണ ചോദ്യങ്ങള്‍ ഇതു് ചുരുക്കും.
+Description-nl.UTF-8: Geografisch gebied:
+ Wat is het geografisch gebied waarin u leeft? In verder vragen krijgt u een lijst van steden te zien die de verschillende tijdzones in dit gebied representeren.
+Description-pt.UTF-8: Área geográfica:
+ Por favor escolha a área geográfica onde vive. Seguidamente haverão mais perguntas de configuração que irão diminuir isto até uma lista de cidades que representam o fuso horário em que estão localizadas.
+Description-ru.UTF-8: Географический район:
+ Выберите географический район в котором вы живёте. Далее вам предложат подробный список городов, которые расположены в этом часовом поясе.
+Description-sq.UTF-8: Zona Gjeografike:
+ Të lutem zgjidh krahinën gjeografike ku jeton. Pyetje të tjera konfigurimi do të shfaqen duke prezantuar një listë qytetesh, që përfaqsojnë zonat kohore në të cilat ato gjenden.
+Description-sv.UTF-8: Geografiskt område:
+ Välj det geografiska område du bor i. Följande konfigurationsfrågor kommer att begränsa detta genom att presentera en lista med städer, som representerar de tidszoner i vilka de är placerade.
+Description-th.UTF-8: พื้นที่ภูมิศาสตร์
+ โปรดระบุพื้นที่ภูมิศาสตร์ที่คุณอยู่ คำถามถัดไปจะลดขอบเขตลงอีก โดยแสดงรายการชื่อเมืองที่เป็นตัวแทนเขตเวลาต่าง ๆ
+Description-tr.UTF-8: Coğrafi bölge:
+ Lütfen yaşadığınız coğrafi bölgeyi seçin. Sonraki yapılandırma soruları konumlandıkları saat dilimlerini temsil eden şehirlerin listesini daraltacak.
+Description-vi.UTF-8: Vùng địa lý:
+ Hãy chọn vùng địa lý trong đó bạn ở. Các câu hỏi cấu hình sau sẽ tập trung về chỗ bạn, bằng cách cung cấp danh sách thành phố, mỗi điều đại diện múi giờ chứa nó.
+Description-wo.UTF-8: Goxu geograafi:
+ Tannal goxu geograafi bi nga dëkke. Laaj yu komfiguraasioŋ yiy dikk, dina la wan ab list bu ay dëkk, benn bu nekk di teewal ab goxu waxtu yi ñu nekk.
+
+Template: tzdata/Zones/Africa
+Type: select
+Choices: Abidjan, Accra, Addis_Ababa, Algiers, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-be.UTF-8: Абіджан, Акра, Адыс-Абэба, Алжыр, Самара, Бамака, Бангуі, Банджул, Бісаў, Блантыр, Бразавіль, Бужумбура, Каір, Касабланка, Кеута, Канакры, Дакар, Дар-эс-Салаам, Джыбуці, Дуала, Эль-Эўн, Фрытаўн, Габаронэ, Харарэ, Яганэсбург, Кампала, Хартум, Кігалі, Кіншаса, Лагос, Лібрэвіль, Лом, Луанда, Лубумбаші, Лусака, Малаба, Мапута, Масэру, Мбабанэ, Магадышу, Манровія, Найробі, Нджамэна, Ніямэй, Нуакшот, Уагадугу, Порта-Нова, Сан-Томэ, Тымбукту, Трыпалі, Туніс, Віндхоўк
+Choices-bg.UTF-8: Абиджан, Акра, Адис Абеба, Алжир, Асмара, Бамако, Банги, Банджул, Бисау, Блантир, Бразавил, Бужумбура, Кайро, Казабланка, Селта, Конакри, Дакар, Дар ес Салаам, Джибути, Дуала, Ел Ааюн, Фрийтаун, Габороне, Хараре, Йоханесбург, Кампала, Хартум, Кигали, Киншаса, Лагос, Либревил, Ломе, Луанда, Любумбаши, Лусака, Малабо, Мапуто, Масеру, Мбабане, Могадишу, Монровия, Найроби, Нджамена, Ниамей, Нуакшот, Уагадугу, Порто-Ново, Сао Томе, Тимбукту, Триполи, Тунис, Виндхук
+Choices-ca.UTF-8: Abidjan, Accra, Addis Abeba, Alger, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, El Caire, Casablanca, Ceuta, Conakry, Dakar, Dar es Salaam, Djibouti, Douala, El Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, São Tomé, Timbuktu, Trípoli, Tunis, Windhoek
+Choices-cs.UTF-8: Abidžan, Akkra, Addis Abeba, Alžír, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Káhira, Casablanca, Ceuta, Conakry, Dakar, Dar es-Salaam, Djibouti, Douala, El Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Chartům, Kigali, Kinshasa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadišu, Monrovia, Nairobi, N'Djamena, Niamey, Nouakchott, Ouagadougou, Porto Novo, Sao Tome, Timbuktu, Tripolis, Tunis, Windhoek
+Choices-de.UTF-8: Abidjan, Accra, Addis Abeba, Algier, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kairo, Casablanca, Ceuta, Conakry, Dakar, Dar es Salam, Dschibuti, Duala, El Ajun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartum, Kigali, Kinshasa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadischu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, São Tomé, Timbuktu, Tripolis, Tunis, Windhoek
+Choices-en.UTF-8: Abidjan, Accra, Addis Ababa, Algiers, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar es Salaam, Djibouti, Douala, El-Aaiún, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-es.UTF-8: Abiyán, Accra, Addis Ababa, Argel, Asmara, Bamako, Bangui, Banjul, Bissáu, Blantyre, Brazzaville, Bujumbura, El Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar es Salaam, Yibuti, Duala, El Aaiun, Freetown, Gaborone, Harare, Johannesburgo, Kampala, Jartum, Kigali, Kinshasa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadiscio, Monrovia, Nairobi, Ndjamena, Niamey, Nuakchott, Uagadugú, Puerto Nuevo, Santo Tomás, Tombuctú, Trípoli, Túnez, Windhoek
+Choices-eu.UTF-8: Abidjan, Accra, Addis_Abeba, Alger, Asmara, Bamako, Bangi, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kairo, Casablanca, Ceuta, Konakry, Dakar, Dar_es_Salaam, Djibuti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamei, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-fi.UTF-8: Abidjan, Accra, Addis Abeba, Alger, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kairo, Casablanca, Ceuta, Conakry, Dakar, Dar es Salaam, Djibouti, Douala, El Aaiún, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartum, Kigali, Kinshasa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, São Tomé, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-fr.UTF-8: Abidjan, Accra, Addis Abeba, Alger, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Le Caire, Casablanca, Ceuta et Melilla, Conakry, Dakar, Dar es Salaam, Djibouti, Douala, El Aaiun, Freetown, Gaborone, Harare, Johannesbourg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadiscio, Monrovia, Nairobi, N'Djamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao-Tomé, Tombouctou, Tripoli, Tunis, Windhoek
+Choices-gl.UTF-8: Abidjan, Acra, Addis Abeba, Alxer, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, O Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar es Salám, Djibouti, Duala, El Aaiún, Freetown, Gaborone, Harare, Johannesburgo, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadiscio, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, São Tomé, Timbuktu, Tripoli, Tunes, Windhoek
+Choices-gu.UTF-8: અબિદજાન, અક્કારા, એડિસ અબાબા, અલ્જીઅર્સ, અસ્મેરા, બામાકો, બાન્ગુઇ, બાન્જુલ, બિસ્સાઉ, બ્લાન્ટાયર, બ્રાઝ્ઝવિલ્લે, બુજુમ્બુરા, કૈરો, કાસાબ્લાન્કા, સેયુટા, કોનાર્કી, ડકાર, દાર ઇ સલામ, જીબુટી, ડોઉલા, અલ આઇયુન, ફ્રીટાઉન, ગાબારોન, હરારે, જોહન્નિસબર્ગ, કમ્પાલા, ખાર્ટુમ, કિગાલિ, કિન્સાસા, લાગોસ, લિબ્રેવિલ્લે, લોમ, લાઉન્ડા, લુબુમ્બાશી, લુકાસા, માલાબો, માપુટો, માસેરુ, મબાબાને, મોગાદિશુ, મોન્રોવિઆ, નૈરોબી, નડજામેના, નૈઆમે, નોઉક્ચોટ, ઓગાડોઉગોઉ, પોર્ટો-નોવો, સાઓ ટોમ, ટીમ્બકટુ, ટ્રીપોલી, ટ્યુનિસ, વિન્ડહોક
+Choices-hr.UTF-8: Abidjan, Accra, Addis_Ababa, AlÄšĹžir, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kairo, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ougadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-hu.UTF-8: Abidjan, Accra, Addis_Ababa, Algiers, Aszmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kairó, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Dzsibuti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinsasza, Lagos, Libreville, Lome, Luanda, Lubumbasi, Lusaka, Malabo, Maputo, Maszeru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Kagadugu, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunisz, Windhoek
+Choices-id.UTF-8: Abidjan, Akra, Addis_Ababa, Algeria, Asmara, Barnako, Bangui, Banjul, Bisau, Blantyre, Brazzavila, Bujumbura, Kairo, Casablanca, Ceuta, Conakry, Dakar, Darus_Salam, Djibouti, Douala, Al-Aaiun, Freetown, Gaborona, Harare, Johannerburg, Kampala, Khartum, Kigali, Kinshasa, Lagos, Libravila, Loma, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchot, Ouagadougou, Porto-Novo, Sao_Toma, Timbuktu, Tripoli, Tunisia, Windhoek
+Choices-ja.UTF-8: アビジャン, アクラ, アディスアベバ, アルジェー, アスマラ, バマコ, バンギ, バンジュル, ビサウ, ブランタイア, ブラザヴィル, ブジュンブラ, カイロ, カサブランカ, セウタ, コナクリ, ダカール, ダルエスサラーム, ジブチ, ドゥアーラ, エルアイウン, フリータウン, ハボローネ, ハラレ, ヨハネスバーグ, カンパラ, ハルツーム, キガリ, キンシャサ, ラゴス, リーブルヴィル, ロメ, ルアンダ, ルブンバシ, ルサカ, マラボ, マプート, マセル, ムババネ, モガディシュ, モンロヴィア, ナイロビ, ウンジャメナ, ニアメ, ヌアクショット, ワガドゥーグ, ポルトノヴォ, サオトメ, ティンブクトゥ, トリポリ, チュニス, ウィントフック
+Choices-ku.UTF-8: Abîcan, Akra, Addis_Ababa, Algiers, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kahîre, Kazablanka, Ceuta, Konakry, Dakar, Dar-ul Selam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nayrobî, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-lt.UTF-8: Abidžanas, Akra, Adis_Abeba, Alžyras, Asmara, Bamakas, Bangis, Bandžulis, Bisau, Blantairas, Brazavilis, Bužumbūra, Kairas, Kasablanka, Ceuta, Konakris, Dakaras, Dar_es_Salamas, Džibutis, Duala, Ajunas, Fritaunas, Gaboronas, Hararė, Johanesburgas, Kampala, Chartumas, Kigalis, Kinshasa, Lagosas, Librevilis, Lomė, Luanda, Lubumbashi, Lusaka, Malabas, Maputu, Maseru, Mbabanė, Mogadišas, Monrovija, Nairobis, Ndžamena, Niamėjus, Nuakšotas, Uagadugu, Porto_Novas, San_Tomė, Timbuktu, Tripolis, Tunisas, Vindhukas
+Choices-ml.UTF-8: ആബിജാന്‍, ആക്ര, അഡിസ്_അബാബ, അള്‍ജിയേഴ്സ്, അസ്മാറ, ബമാകോ, ബാങ്ക്വി, ബാന്‍ജുള്‍, ബിസ്സോവു, ബ്ലാന്‍ടൈര്‍, ബ്രസ്സാവില്ലെ, ബുജുംബുറ, കെയ്റോ, കാസാബ്ലാങ്ക, സ്യൂട, കൊനാക്രി, ഡക്കാര്‍, ദാര്‍_എസ്_സലാം, ജിബൂട്ടി, ദൌള, എല്‍_ആയുന്‍, ഫ്രീടൌണ്‍, ഗാബറോണ്‍, ഹരാരെ, ജൊഹന്നാസ്ബര്‍ഗ്, കംപാല, ഖാര്‍ടോം, കിഗാലി, കിന്‍ഷാസ, ലാഗോസ്, ലിബര്‍വില്ല, ലോം, ലുവാണ്ട, ലുബുമ്പഷി, ലുസാക്ക, മലാബോ, മപൂട്ടോ, മസേരു, മംബാബേന്‍, മൊഗാദിഷു, മൊണ്‍റോവിയ, നെയ്റോബി, ജമേന, നിയാമി, നൌക്ഷോട്ട്, ഔഗാദഔഗൌ, പോര്‍ട്ടോ-നോവോ, സാവോ_ടോം, ടിമ്പുക്തു, ട്രിപ്പോളി, ടുണീസ്, വിീന്‍ഡോയക്ക്
+Choices-nl.UTF-8: Abidjan, Accra, Addis_Ababa, Algiers, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timboektoe, Tripoli, Tunis, Windhoek
+Choices-pt.UTF-8: Abijão, Acra, Adis Abeba, Argel, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Cairo, Casablanca, Ceuta, Conacri, Dacar, Dar es Salaam, Djibouti, Douala, El Aaiún, Freetown, Gaborone, Harare, Joanesburgo, Campala, Cartum, Kigali, Quinxassa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaca, Malabo, Maputo, Maseru, Mbabane, Mogadíscio, Monróvia, Nairobi, N'Djamena, Niamey, Nouakchott, Uagadugo, Porto-Novo, São Tomé, Timbuktu, Trípoli, Tunes, Windhoek
+Choices-ru.UTF-8: Абиджан, Аккра, Аддис-Абеба, Алжир, Асмэра, Бамако, Банги, Банжул, Бисау, Блантайр, Браззавиль, Бужумбура, Каир, Касабланка, Сеута, Конакри, Дакар, Дар-эс-Салам, Джибути, Дуала, Эль-Айюн, Фритаун, Габороне, Хараре, Йоханнесбург, Кампала, Хартум, Кигали, Киншаса, Лагос, Либревиль, Ломе, Луанда, Лубумбаши, Лусака, Малабо, Мапуту, Масеру, Мбабане, Могадишу, Монровия, Найроби, Нджамена, Ниамей, Нуакшот, Уагадугу, Порто-Ново, Сан-Томе, Томбукту, Триполи, Тунис, Виндхук
+Choices-sq.UTF-8: Abidjan, Accra, Addis_Ababa, Algjer, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-sv.UTF-8: Abidjan, Accra, Addis Abeba, Alger, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Kairo, Casablanca, Ceuta, Conakry, Dakar, Dar es-Salaam, Djibouti, Douala, Al-Ayun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lomé, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, N'Djamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, São Tomé, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-tr.UTF-8: Abidjan, Akra, Addis Ababa, Cezayir, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazavil, Bujumbura, Kahire, Kazablanka, Ceuta, Konakri, Dakar, Darüsselam, Cibuti, Duala, El Aaiun, Freetown, Gabaron, Harare, Johannesburg, Kampala, Hartum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbasi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadişu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao Tome, Timbuktu, Trablusgarp, Tunus, Windhoek
+Choices-vi.UTF-8: Abidjan, Accra, Addis_Ababa, An-giê-ri, Asmara, Bamako, Bangui, Banjul, Bi-xau, Blantyre, Brazzaville, Bujumbura, Cai-rô, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+Choices-wo.UTF-8: Abijaan, Akra, Addis_Ababa, Aljer, Asmara, Bamako, Baŋgi, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Keer, Kaasablaŋka, Ceuta et Melilla, Konaakiri, Dakaar, Dar_es_Salaam, Jibuti, Duwaala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Kampala, Xartuum, Kigali, Kinshasa (Sowwu), Lagos, Libreville, Lome, Luanda, Lubumbashi (Peeŋku), Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Njamena, Ñaame, Nuwaksoot, Wagadugu, Porto-Novo, Sao_Tome, Tumbuktu, Tripoli, Toonus, Windhoek
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/America
+Type: select
+Choices: Adak, Anchorage, Anguilla, Antigua, Araguaina, Argentina/Buenos_Aires, Argentina/Catamarca, Argentina/Cordoba, Argentina/Jujuy, Argentina/La_Rioja, Argentina/Mendoza, Argentina/Rio_Gallegos, Argentina/Salta, Argentina/San_Juan, Argentina/San_Luis, Argentina/Tucuman, Argentina/Ushuaia, Aruba, Asuncion, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa_Vista, Bogota, Boise, Cambridge_Bay, Campo_Grande, Cancun, Caracas, Cayenne, Cayman, Chicago, Chihuahua, Coral_Harbour, Costa_Rica, Cuiaba, Curacao, Danmarkshavn, Dawson, Dawson_Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El_Salvador, Ensenada, Fortaleza, Glace_Bay, Godthab, Goose_Bay, Grand_Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell_City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentucky/Louisville, Kentucky/Monticello, La_Paz, Lima, Los_Angeles, Maceio, Managua, Manaus, Marigot, Martinique, Mazatlan, Menominee, Merida, Mexico_City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New_York, Nipigon, Nome, Noronha, North_Dakota/Center, North_Dakota/New_Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port_of_Spain, Porto_Acre, Porto_Velho, Puerto_Rico, Rainy_River, Rankin_Inlet, Recife, Regina, Resolute, Rio_Branco, Santarem, Santiago, Santo_Domingo, Sao_Paulo, Scoresbysund, Shiprock, St_Barthelemy, St_Johns, St_Kitts, St_Lucia, St_Thomas, St_Vincent, Swift_Current, Tegucigalpa, Thule, Thunder_Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-be.UTF-8: Адак, Анхорадж, Ангілья, Антыгуа, Арагвайна, Аргенціна/Буэнас-Айрас, Аргенціна/Катамарка, Аргенціна/Кардоба, Аргенціна/Хухуй, Аргенціна/Ла_Рыёха, Аргенціна/Мендоза, Аргенціна/Рыё_Галегос, Аргенціна/Сальта, Аргенціна/Сан_Хуан, Аргенціна/Сан_Луіс, Аргенціна/Тукуман, Аргенціна/Ушуайя, Аруба, Асунсьён, Атыкакан, Атка, Багія, Барбадос, Бэлем, Беліз, Бланк-Саблон, Бона-Віста, Багота, Буас, Кэмбрыдж-Бэй, Кампа-Гранда, Канкун, Каракас, Каен, Кайман, Чыкага, Чыхуахуа, Корал-Харбар, Коста-Рыка, Куяба, Куракаа, Данмаркшван, Доўсан, Доўсан-Крык, Дэнвер, Дэтройт, Дамініка, Эдмантан, Эйрунэп, Эль-Сальвадор, Энсенада, Фарталеза, Глэйс-Бэй, Готаб, Гус-Бэй, Гранд-Турк, Гранада, Гвадалупа, Гватамала, Гваякіль, Гаяна, Халіфакс, Гавана, Гермосіла, Індыяна/Індыянапаліс, Індыяна/Кнокс, Індыяна/Марэнга, Індыяна/Пітсбург, Індыяна/Тэл Сіці, Індыяна/Вівэй, Індыяна/Вінсэнс, Індыяна/Вінамак, Інувік, Ікалют, Ямайка, Жунё, Кентукі/Луізвіль, Кентукі/Монцісэль, Ла-Пас, Ліма, Лос-Анджалес, Макеё, Манагуа, Манаўс, Марыгот, Мартынік, Мазатлан, Мэнамінэ, Мэрыда, Мэхіка, Мікелён, Монктан, Мантарэй, Мантэвідэа, Манрэаль, Мансэрат, Насаў, Нью-Ёрк, Ніпігон, Ном, Наронга, Паўночная_Дакота/Цэнтр, Паўночная_Дакота/Нью_Салем, Панама, Пангніртунг, Парамарыба, Фенікс, Порт-а-Прынс, Порт-а-Спэйн, Порт-Акрэ, Порта-Вэльга, Пуэрта-Рыка, Рэйні-Рывар, Ранкін-Інлет, Рэсіф, Рэгіна, Рэзалют, Рыё-Бранка, Сантарэм, Санцьяга, Санта-Дамінга, Сан-Паўла, Скорзбізунд, Шыпрок, Св_Барталамей, Сэнт-Джонс, Сэнт-Кітц, Сэнт-Люсія, Сэнт-Томас, Сэнт-Вінсэнт, Свіфт-Карант, Тэгусыгальпа, Туль, Зандар-Бэй, Тыджвана, Таронта, Тартола, Ванкувэр, Вірджын, Уайтхорс, Вініпэг, Якутат, Елаўнайф
+Choices-bg.UTF-8: Адак, Анкъридж, Ангила, Антигуа, Арагуейна, Аржентина/Буенос Айрес, Аржентина/Катамарка, Аржентина/Кордоба, Аржентина/Хухуй, Аржентина/Ла Риоха, Аржентина/Мендоса, Аржентина/Рио Галегос, Аржентина/Салта, Аржентина/Сан Хуан, Аржентина/Сан Луис, Аржентина/Тукуман, Аржентина/Ушуая, Аруба, Асунсион, Атикокан, Атка, Баия, Барбадос, Белем, Белиз, Блан-Саблон, Боа Виста, Богота, Боис, Кембридж Бей, Кампо Гранде, Канкун, Каракас, Шайен, Каймани, Чикаго, Чихуахуа, Корал Харбър, Коста Рика, Куяба, Кюрасао, Данмарксхафен, Досън, Досън Крийк, Денвър, Детройт, Доминика, Едмънтън, Ейрунепе, Ел Салвадор, Енсенада, Форталеза, Глейс Бей, Готаб, Гуус Бей, Гранд Тюрк, Гренада, Гваделупа, Гватемала, Гуаякил, Гайана, Халифакс, Хавана, Ермосильо, Индиана/Индианаполис, Индиана/Нокс, Индиана/Маренго, Индиана/Питърсбърг, Индиана/Тел сити, Индиана/Вивей, Индиана/Винсенес, Индиана/Уинамак, Инувик, Икалуит, Ямайка, Жуно, Кентъки/Луисвил, Кентъки/Монтичело, Ла Пас, Лима, Лос Анжелис, Масейо, Манагуа, Манаус, Маригот, Мартиника, Масатлан, Меномини, Мерида, Мексико сити, Микелон, Монктън, Монтерей, Монтевидео, Монреал, Монсерат, Насау, Ню Йорк, Нипигън, Ном, Нороня, Северна Дакота/Център, Северна Дакота/Ню Сейлем, Панама, Пангниртунг, Парамарибо, Финикс, Порт-о-Пренс, Порт-ъф-Спейн, Порту Акри, Порту Велю, Пуерто Рико, Рейни Ривър, Ранкин Инлет, Ресифи, Реджайна, Резолют, Рио Бранко, Сантарем, Сантяго, Санто Доминго, Сао Паоло, Скоресбисунд, Шипрок, Св. Вартоломей, Св. Джон, Сейнт Китс, Сейнт Лусия, Сейнт Томас, Сейнт Винсент, Суифт Кърънт, Тегусигалпа, Туле, Тъндър Бей, Тихуана, Торонто, Тортола, Ванкувър, Вирджински о-ви, Уайтхорс, Уинипег, Якутат, Йелоунайф
+Choices-ca.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Argentina/Buenos Aires, Argentina/Catamarca, Argentina/Córdoba, Argentina/Jujuy, Argentina/La Rioja, Argentina/Mendoza, Argentina/Rio Gallegos, Argentina/Salta, Argentina/San Juan, Argentina/San Luis, Argentina/Tucuman, Argentina/Ushuaia, Aruba, Asunción, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa Vista, Bogotà, Boise, Cambridge Bay, Campo Grande, Cancún, Caracas, Cayenne, Cayman, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiaba, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthab, Goose Bay, Grand Turk, Grenada, Guadalupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Angeles, Maceio, Managua, Manaus, Marigot, Martinica, Mazatlan, Menominee, Mèrida, Ciutat de Mèxic, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, Nova York, Nipigon, Nome, Noronha, Dakota del Nord/Centre, Dakota del Nord/New Salem, Panamà, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port-of-Spain, Porto Acre, Porto Velho, Puerto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarém, Santiago, Santo Domingo, São Paulo, Scoresbysund, Shiprock, Saint Barthélemy, Saint Johns, Saint Kitts, Saint Lucia, Saint Thomas, Saint Vincent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virginia, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-cs.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Argentina/Buenos Aires, Argentina/Catamarca, Argentina/Cordoba, Argentina/Jujuy, Argentina/La Rioja, Argentina/Mendoza, Argentina/Rio Gallegos, Argentina/Salta, Argentina/San Juan, Argentina/San Luis, Argentina/Tucuman, Argentina/Ushuaia, Aruba, Asunción, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa Vista, Bogota, Boise, Cambridge Bay, Campo Grande, Cancun, Caracas, Cayenne, Kajmanské ostrovy, Chicago, Chihuahua, Coral Harbour, Kostarika, Cuiaba, Curacao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthab, Goose Bay, Grand Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamajka, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Angeles, Maceio, Managua, Manaus, Marigot, Martinik, Mazatlan, Menominee, Merida, Mexico City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New York, Nipigon, Nome, Noronha, Severní Dakota/Střed, Severní Dakota/New Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port=au-Prince, Port of Spain, Porto Acre, Porto Velho, Portotiko, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarem, Santiago, Santo Domingo, Sao Paulo, Scoresbysund, Shiprock, Svatý Bartoloměj, St John's, Svatý Krištof, Svatá Lucie, Svatý Tomáš, Svatý Vincent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-de.UTF-8: Adak, Anchorage, Anguilla, Antigua, Aracaju, Argentinien/Buenos Aires, Argentinien/Catamarca, Argentinien/Córdoba, Argentinien/Jujuy, Argentinien/La Rioja, Argentinien/Mendoza, Argentinien/Río Gallegos, Argentinien/Salta, Argentinien/San Juan, Argentinien/San Luis, Argentinien/Tucumán, Argentinien/Ushuaia, Aruba, Asunción, Atikokan, Atka, Bahia, Barbados, Belém, Belize, Blanc-Sablon, Boa Vista, Bogotá, Boise, Cambridge Bay, Campo Grande, Cancún, Caracas, Cayenne, Kaiman, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiabá, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthåb, Goose Bay, Grand Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaika, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Angeles, Maceió, Managua, Manaus, Marigot, Martinique, Mazatlán, Menominee, Mérida, Mexiko-Stadt, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New York, Nipigon, Nome, Noronha, North Dakota/Center, North Dakota/New Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port of Spain, Porto Acre, Pôrto Velho, Puerto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarém, Santiago, Santo Domingo, São Paulo, Scoresbysund, Shiprock, Saint-Barthélemy, St Johns, St Kitts, St Lucia, St Thomas, St Vincent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-en.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Buenos Aires (Argentina), Catamarca (Argentina), Cordoba (Argentina), Jujuy (Argentina), La Rioja (Argentina), Mendoza (Argentina), Rio Gallegos (Argentina), Salta (Argentina), San Juan (Argentina), San Luis (Argentina), Tucuman (Argentina), Ushuaia (Argentina), Aruba, Asuncion, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa Vista, Bogota, Boise, Cambridge Bay, Campo Grande, Cancun, Caracas, Cayenne, Cayman, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiaba, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthab, Goose Bay, Grand Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indianapolis (Indiana), Knox (Indiana), Marengo (Indiana), Petersburg (Indiana), Tell City (Indiana), Vevay (Indiana), Vincennes (Indiana), Winamac (Indiana), Inuvik, Iqaluit, Jamaica, Juneau, Louisville (Kentucky), Monticello (Kentucky), La Paz, Lima, Los Angeles, Maceio, Managua, Manaus, Marigot, Martinique, Mazatlan, Menominee, Merida, Mexico City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New York, Nipigon, Nome, Noronha, Center (North Dakota), New Salem (North Dakota), Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port of Spain, Porto Acre, Porto Velho, Puerto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarém, Santiago, Santo Domingo, São Paulo, Scoresbysund, Shiprock, St Barthelemy, St Johns, St Kitts, St Lucia, St Thomas, St Vincent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-es.UTF-8: Adak, Anchorage, Anguila, Antigua, Araguaina, Argentina/Buenos Aires, Argentina/Catamarca, Argentina/Córdoba, Argentina/Jujuy, Argentina/La Rioja, Argentina/Mendoza, Argentina/Rio Gallegos, Argentina/Salta, Argentina/San Juan, Argentina/San Luis, Argentina/Tucumán, Argentina/Ushuaia, Aruba, Asunción, Atikokan, Atka, Bahía, Barbados, Belén, Belice, Blanc-Sablon, Buena Vista, Bogotá, Boise, Cambridge Bay, Campo Grande, Cancún, Caracas, Cayena, Caimán, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiabá, Curazao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthab, Goose Bay, Grand Turk, Granada, Guadalupe, Guatemala, Guayaquil, Guyana, Halifax, Habana, Hermosillo, Indiana/Indianápolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Ángeles, Maceió, Managua, Manaos, Marigot, Martinica, Mazatlan, Menominee, Mérida, Ciudad de México, Miquelón, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, Nueva York, Nipigon, Nome, Noronha, Dakota del Norte/Centro, Dakota del Norte/Nuevo Salem, Panamá, Pangnirtung, Paramaribo, Fénix, Puerto Príncipe, Puerto España, Puerto Acre, Puerto Bello, Puerto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Río Blanco, Santarém, Santiago, Santo Domingo, San Pablo, Ittoqqortoormiit, Shiprock, San Bartolomé, San Juan, San Cristóbal, Santa Lucía, Santo Tomás, San Vicente, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tórtola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-eu.UTF-8: Adak, Anchorage, Anguila, Antigua, Araguaina, Argentina/Buenos_Aires, Argentina/Catamarca, Argentina/Cordoba, Argentina/Jujuy, Argentina/La_Rioja, Argentina/Mendoza, Argentina/Rio_Gallegos, Argentina/Salta, Argentina/San_Juan, Argentina/San_Lui, Argentina/Tucuman, Argentina/Ushuaia, Aruba, Asuncion, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa_Vista, Bogota, Boise, Cambridge_Bay, Campo_Grande, Cancun, Caracas, Cayenne, Kaiman, Chicago, Chihuahua, Salliit, Costa_Rica, Kuiaba, Curacao, Danmarkshavn, Dawson, Dawson_Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El_Salvador, Ensenada, Fortaleza, Glace_Bay, Godthab, Goose_Bay, Grand_Turk, Granada, Guadalupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell_City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentucky/Louisville, Kentucky/Monticello, La_Paz, Lima, Los_Angeles, Maceio, Managua, Manao, Marigot, Martinika, Mazatlan, Menominee, Merida, Mexico_Hiria, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New_York, Nipigon, Nome, Noronha, Ipar_Dakota/Erdia, Ipar_Dakota/New_Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port_of_Spain, Porto_Acre, Porto_Velho, Puerto_Rico, Rainy_River, Rankin_Inlet, Recife, Regina, Resolute, Rio_Branco, Santarem, Santiago, Santo_Domingo, Sao_Paulo, Scoresbysund, Shiprock, St_Barthelemy, St_Johns, St_Kitts, St_Lucia, St_Thomas, St_Vincent, Swift_Current, Tegucigalpa, Thule, Thunder_Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-fi.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Argentiina/Buenos Aires, Argentiina/Catamarca, Argentiina/Córdoba, Argentiina/Jujuy, Argentiina/La Rioja, Argentiina/Mendoza, Argentiina/Rio Gallegos, Argentiina/Salta, Argentiina/San Juan, Argentiina/San Luis, Argentiina/Tucuman, Argentiina/Ushuaia, Aruba, Asunción, Atikokan, Atka, Bahia, Barbados, Belém, Belize, Blanc-Sablon, Boa Vista, Bogotá, Boise, Cambridge Bay, Campo Grande, Cancún, Caracas, Cayenne, Cayman, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiabá, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Nuuk, Goose Bay, Grand Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaika, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Angeles, Maceió, Managua, Manaus, Marigot, Martinique, Mazatlan, Menominee, Mérida, México, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New York, Nipigon, Nome, Noronha, Pohjois-Dakota/Keskusta, Pohjois-Dakota/New Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port of Spain, Porto Acre, Porto Velho, Puerto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarém, Santiago, Santo Domingo, São Paulo, Ittoqqortoormiit, Shiprock, Saint Barthélemy, St Johns, St Kitts, St Lucia, St Thomas, St Vincent, Swift Current, Tegucigalpa, Qaanaaq, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-fr.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Buenos Aires, Catamarca, Córdoba, Jujuy, La Rioja, Mendoza, Rio Gallegos, Salta, San Juan, San Luis, Tucuman, Ushuaia, Aruba, Asuncion, Atikokan, Atka, Bahia, La Barbade, Belém, Belize, Blanc-Sablon, Boa Vista, Bogota, Boise, Cambridge Bay, Campo Grande, Cancun, Caracas, Cayenne, Îles Caïman, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiabá, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Détroit, Dominique, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthab, Goose Bay, Grand_Turk, Grenade, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, La Havane, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaïque, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Angeles, Maceió, Managua, Manaus, Marigot, Martinique, Mazatlan, Menominee, Merida, Mexico City, Miquelon, Moncton, Monterrey, Montevideo, Montréal, Montserrat, Nassau, New York, Nipigon, Nome, Noronha, Dakota du Nord/Centre, Dakota du Nord/New Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port d'Espagne, Porto Acre, Porto Velho, Porto-Rico, Rainy River, Rankin_Inlet, Recife, Regina, Resolute, Rio Branco, Santarém, Santiago, Saint-Domingue, São Paulo, Scoresbysund, Shiprock, Saint Barthélemy, Saint-Johns, Saint-Kitts, Sainte-Lucie, Saint-Thomas, Saint-Vincent, Swift_Current, Tegucigalpa, Thulé, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Vierges (îles), Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-gu.UTF-8: અડાક, એન્ચોરાગે, એનગુલ્લા, એન્ટિગુઆ, આરાગુએના, આર્જેન્ટિના/બુએનાસ એરિસ, આર્જેન્ટિના/કાટામાર્કા, આર્જેન્ટિના/કોર્ડોબા, આર્જેન્ટિના/જુજુય, આર્જેન્ટિના/લા રીઓજા, આર્જેન્ટિના/મેન્ડોઝા, આર્જેન્ટિના/રીઓ ગાલેગોસ, આર્જેન્ટિના/સાલ્ટા, આર્જેન્ટિના/સાન જુઆન, આર્જેન્ટિના/સાન લુઇસ, આર્જેન્ટિના/તુકુમાન, આર્જેન્ટિના/ઉસ્હુઇઆ, અરુબા, અસુન્કિઓન, અટિકોકાન, અટ્કા, બાહીઆ, બાર્બાડોસ, બેલેમ, બેલિઝે, બ્લાન્ક-સેબ્લોન, બોઆ વિસ્ટા, બોગોટા, બોઇસે, કેન્બ્રિજ બે, કામ્પો ગ્રાન્ડે, કાન્કુન, કારાકાસ, સાયેને, કેયમેન, શિકાગો, ચિહુઆહુઆ, કોરલ હાર્બર, કોસ્ટા રીકા, ક્યુબા, કુરાકાઓ, ડેન્માર્કશોન, ડાઉસન, ડાઉસન ખાડી, ડેન્વર, ડેટ્રોઇટ, ડોમિનિકા, એડમોન્ટોન, ઇરુનેપે, અલ સાલ્વાડોર, એન્સેનાડા, ફોર્ટાલેઝા, ગ્લેસ બે, ગોડથાબ, ગૂસ અખાત, ગ્રાન્ડ તુર્ક, ગ્રેનેડા, ગ્યુડેલોપ, ગ્વાટેમાલા, ગ્યુઆકીલ, ગુઆના, હાલિફેક્સ, હવાના, હેર્મોસિલ્લો, ઇન્ડિયાના/ઇન્ડિયાનાપોલિસ, ઇન્ડિયાના/નોક્સ, ઇન્ડિયાના/મારેન્ગો, ઇન્ડિયાના/પીટ્સબર્ગ, ઇન્ડિયાના/ટેલ સીટી, ઇન્ડિયાના/વેવાય, ઇન્ડિયાના/વિન્સેન્નેસ, ઇન્ડિયાના/વિનમેક, ઇનુવિક, ઇકાલુઇટ, જમૈકા, જુનેયુ, કેનટુકી/લુઇસવિલે, કેનટુકી/મોન્ટિસેલો, લા પાઝ, લિમા, લોસ એન્જેલસ, મેસીઓ, માનાગુઆ, માનુસ, મારીગોટ, માર્ટિનિક, મઝાટલાન, મેનોમિની, મેરિડા, મેક્સિકો શહેર, મિક્લોન, મોન્કટોન, મોન્ટેર્રે, મોન્ટવિડીઓ, મોન્ટ્રિઅલ, મોન્ટસેર્રાટ, નાસાઉ, ન્યુ યોર્ક, નિપિગોન, નોમ, નોરોન્હા, નોર્થ ડાકોટા/મધ્ય, નોર્થ ડાકોટા/ન્યુ સાલેમ, પનામા, પાન્ગનિર્તુગ, પારામારિબો, ફિનિક્સ, પોર્ટ-ઓફ-પ્રિન્સ, પોર્ટ ઓફ સ્પેન, પોર્ટો એકર, પોર્ટો વેલ્હો, પુએર્તો રિકો, રેઇની નદી, રાન્કિન ઇન્લેટ, રેસિફે, રેગિના, રેસોલુટ, રીઓ બ્રાન્કો, સાન્ટારેમ, સાન્તિઆગો, સાન્ટો ડોમિન્ગો, સાઓ પાઉલો, સ્કોરબાયસન્ડ, શિપરોક, સેન્ટ બાર્થેલેમી, સેન્ટ જોહ્ન્સ, સેન્ટ કિટ્ટસ, સેન્ટ લુસિઆ, સેન્ટ થોમસ, સેન્ટ વિન્સેન્ટ, સ્વિફ્ટ પ્રવાહ, ટેગુસિગાલ્પા, થુલે, થન્ડર અખાત, ટિજુઆના, ટોર્નેડો, ટોર્ટોલા, વાનકુવર, વર્જીન, વ્હાઇટહોર્સ, વિનિપેગ, યાકુટાક, યેલોનાઇફ
+Choices-ja.UTF-8: エイダック, アンカレジ, アングイラ, アンティグア, アラグアイナ, アルゼンチン/ブエノスアイレス, アルゼンチン/カタマルカ, アルゼンチン/コルドバ, アルゼンチン/フフイ, アルゼンチン/ラリオハ, アルゼンチン/メンドサ, アルゼンチン/リオガエゴス, アルゼンチン/サルタ, アルゼンチン/サンファン, アルゼンチン/サンルイス, アルゼンチン/トゥクマン, アルゼンチン/ウシュアイア, アルバ, アスンシオン, アティコカン, アトカ, バイア, バルバドス, ベレン, ベリーズ, ブランサブロン, ボアヴィスタ, ボゴタ, ボイシ, ケンブリッジ湾, カンポグランデ, カンクン, カラカス, カイエンヌ, ケイマン, シカゴ, チワワ, コーラルハーバー, コスタリカ, クヤバ, キュラソー, デンマークシャウン, ドーソン, ドーソン運河, デンヴァー, デトロイト, ドミニカ, エドモントン, エイルネペ, エルサルバドル, エンセナダ, フォルタレザ, グラッセ湾, ゴッドホープ, グース湾, グランドターク, グレナダ, グアドループ, グアテマラ, グアヤキル, ガイアナ, ハリファックス, ハバナ, エルモシヨ, インディアナ/インディアナポリス, インディアナ/ノックス, インディアナ/マレンゴ, インディアナ/ピーターズバーグ, インディアナ/テルシティ, インディアナ/ビベー, インディアナ/ヴィンセンズ, インディアナ/ウィナマック, イヌヴィック, イカルイット, ジャマイカ, ジュノー, ケンタッキー/ルーイヴィル, ケンタッキー/モンティセロ, ラパス, リマ, ロサンゼルス, マセイオ, マナグア, マナウス, マリゴット, マルティニク, マサトラン, メノミニー, メリダ, メキシコシティ, ミクロン, マンクトン, モンテレー, モンテビデオ, モントリオール, モントセラト, ナッソー, ニューヨーク, ニピゴン, ノーム, ノロニャ, 北ダコタ/中央, 北ダコタ/ニューセイラム, パナマ, パンナータング, パラマリボ, フェニックス, ポルトープランス, ポートオブスペイン, ポルトアクレ, ポルトヴェリエ, プエルトリコ, レイニーリバー, ランキン湾, レシフェ, レジャイナ, レソリュート, リオブランコ, サンタレン, サンチアゴ, セントドミニゴ, サンパウロ, スコレスビスン, シップロック, セントバルテルミ, セントジョーンズ, セントキッツ, セントルチア, セントトーマス, セントビンセント, スイフトカレント, テグシガルパ, テューレ, サンダー湾, ティフアナ, トロント, トルトラ, バンクーバー, バージン, ホワイトホース, ウィニペグ, ヤクーツク, イエローナイフ
+Choices-ku.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Arjantîn/Buenos_Aîres, Arjantîn/Katamarca, Arjantîn/Kordoba, Arjantîn/Jujuy, Arjantîn/La_Rîoja, Arjantîn/Mendoza, Arjantîn/Rîo_Gallegos, Arjantîn/Salta, Arjantîn/San_Juan, Arjantîn/Buenos_Aîres, Arjantşn/Tucuman, Arjantîn/Ûşûîa, Aruba, Asuncion, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa_Vista, Bogota, Boise, Cambridge_Bay, Campo_Grande, Cancun, Caracas, Cayenne, Cayman, Chicago, Chihuahua, Coral_Harbour, Costa_Rica, Cuiaba, Curacao, Danmarkshavn, Dawson, Dawson_Creek, Denver, Detroit, Dominîk, Edmonton, Eirunepe, El_Salvador, Ensenada, Fortaleza, Glace_Bay, Godthab, Goose_Bay, Grand_Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Hindistan/Îndianapolîs, Hindistan/Knoks, Hindistan/Marengo, Hindistan/Petersburg, Hindistan/Tell_City, Hindistan/Vevay, Indianapolis/Vincennes, Hindistan/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentakî/Louisville, Kentakî/Montîcello, La_Paz, Lima, Los_Angeles, Maceio, Managua, Manaus, Marîgot, Martinique, Mazatlan, Menominee, Merida, Mexico_City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New_York, Nipigon, Nome, Noronha, Dakotaya_Bakur/Navend, Dakotaya_Bakur/New_Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port_of_Spain, Porto_Acre, Porto_Velho, Puerto_Rico, Rainy_River, Rankin_Inlet, Recife, Regina, Resolute, Rio_Branco, Santarem, Santiago, Santo_Domingo, Sao_Paulo, Scoresbysund, Shiprock, St_Barthelemy, St_Johns, St_Kitts, St_Lucia, St_Thomas, St_Vincent, Swift_Current, Tegucigalpa, Thule, Thunder_Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-lt.UTF-8: Adakas, Ankoridžas, Angilija, Antigva, Araguaina, Argentina/Buenos_Airės, Argentina/Katamarka, Argentina/Kordoba, Argentina/Žužujus, Argentina/La_Riocha, Argentina/Mendosa, Argentina/Rio_Galjegosas, Argentina/Salta, Argentina/San_Chuanas, Argentina/San_Luis, Argentina/Tukumanas, Argentina/Ušuaja, Aruba, Asunsjonas, Atikokanas, Atka, Bahia, Barbadosas, Belenas, Belizas, Blank-Sablonas, Boa_Vista, Bogota, Boizis, Kembridž_Bėjus, Campo_Grande, Kankunas, Karakasas, Kajenas, Kaimanų_salos, Čikaga, Čiuaua, Koralinis_Harboras, Kosta_Rika, Cuiaba, Karakasas, Danmarkshavn, Dausonas, Dauson_Krykas, Denveris, Detroitas, Dominika, Edmontonas, Eirunepe, Salvadoras, Ensenada, Fortaleza, Gleis_Bėjus, Godthab, Gūs_Bėjus, Grand_Terko_sala, Grenada, Gvadelupa, Gvatemala, Gvajakilis, Gviana, Halifaksas, Havana, Hermosiljas, Indiana/Indianapolis, Indiana/Noksas, Indiana/Marengas, Indiana/Petersburgas, Indiana/Tel_Sitis, Indiana/Vevėjus, Indiana/Vincenesas, Indiana/Vinmakas, Inuvikas, Ikaluitas, Jamaika, Džunas, Kentukis/Luizvilis, Kentukis/Montičelas, La_Pasas, Lima, Los_Andželas, Masejo, Managva, Manausas, Mauricijus, Martinika, Masatlanas, Menominis, Merida, Meksikas, Mikelonas, Monktonas, Monterėjus, Montevidėjas, Monrealis, Montseratas, Nasau, Niujorkas, Nipigonas, Numea, Noronha, Šiaurės_Dakota/Centras, Šiaurės_Dakota/Niusalemas, Panama, Pangnirtungas, Paramaribas, Finiksas, Port_o_Prensas, Port_of_Speinas, Porto_Akrė, Porto_Veljas, Puerto_Rikas, Rein_Riveras, Rankin_Inletas, Resifė, Redžaina, Rezoliutas, Riu_Brankas, Santaremas, Santjago, Santo_Domingas, San_Paulas, Skoresbiusūnas, Šiprokas, Sent_Bartelmis, Sent_Džonsas, Sent_Kitsas, Sent_Luisas, Sent_Tomas, Sent_Vinsentas, Svift_Karentas, Tegusigalpa, Tulė, Tander_Bėjus, Tichuana, Torontas, Tortola, Vankuveris, Virdžinija, Vaithorsas, Vinipegas, Kautatas, Jelounaifas
+Choices-pt.UTF-8: Adak, Anchorage, Ilhas Anguillas, Antígua, Araguaína, Argentina/Buenos Aires, Argentina/Catamarca, Argentina/Córdova, Argentina/Jujuy, Argentina/La Rioja, Argentina/Mendoza, Argentina/Rio Gallegos, Argentina/Salta, Argentina/San Juan, Argentina/San Luis, Argentina/Tucuman, Argentina/Ushuaia, Aruba, Assunção, Atikokan, Atka, Baía, Barbados, Belém, Belize, Blanc-Sablon, Boa Vista, Bogotá, Boise, Baía de Cambridge, Campo Grande, Cancún, Caracas, Caiena, Caimão, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiabá, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepé, El Salvador, Ensenada, Fortaleza, Baía Glace, Godthab, Baía de Goose, Grand Turk, Granada, Guadalupe, Guatemala, Guaiaquil, Guiana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentucky/Louisville, Kentucky/Monticello, La Paz, Lima, Los Angeles, Maceió, Manágua, Manaus, Marigot, Martinica, Mazátlan, Menominee, Merida, Cidade do México, Miquelon, Moncton, Monterrei, Montevideo, Montreal, Montserrat, Nassau, Nova Iorque, Nipigon, Nome, Noronha, Dacota do Norte/Centro, Dacota do Norte/New_Salem, Panamá, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Porto da Espanha, Porto Acre, Porto Velho, Porto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarem, Santiago, Santo Domingo, São Paulo, Scoresbysund, Shiprock, São Bartolomeu, St Johns, St Kitts, Santa Lúcia, St Thomas, St Vincent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-ru.UTF-8: Адак, Анкоридж, Ангилья, Антигуа, Арагуаина, Аргентина/Буэнос-Айрес, Аргентина/Катамарка, Аргентина/Кордова, Аргентина/Жужуй, Аргентина/Ла-Риоха, Аргентина/Мендоса, Аргентина/Рио-Гальегос, Аргентина/Сальта, Аргентина/Сан-Хуан, Аргентина/Сан-Луис, Аргентина/Сан-Мигель-де-Тукуман, Аргентина/Ушуайя, Аруба, Асунсьон, Атикокан, Атка, Баия, Барбадос, Белен, Белиз, Бланк-Саблон, Боа-Виста, Богота, Бойсе, Кеймбридж-Бей, Кампу-Гранди, Канкун, Каракас, Кайенна, Кайман, Чикаго, Чиуауа, Корал-Харбор, Коста-Рика, Куяба, Кюрасао, Данмарксхавн, Доусон, Доусон-Крик, Денвер, Детройт, Доминика, Эдмонтон, Эйрунепе, Эль-Сальвадор, Энсенада, Форталеза, Глейс-Бей, Готхоб, Гус-Бей, Гранд-Турк, Гренада, Гваделупа, Гватемала, Гуаякиль, Гайана, Галифакс, Гавана, Эрмосильо, Индиана/Индианаполис, Индиана/Нокс, Индиана/Маренго, Индиана/Петербург, Индиана/Телль-Сити, Индиана/Вивей, Индиана/Винсенс, Индиана/Винамак, Инувик, Икалуит, Ямайка, Джуно, Кентукки/Луисвилл, Кентукки/Монтичелло, Ла-Пас, Лима, Лос-Анджелес, Масейо, Манагуа, Манаус, Маригот, Мартиника, Масатлан, Меномини, Мерида, Мехико, Микелон, Монктон, Монтеррей, Монтевидео, Монреаль, Монтсеррат, Нассау, Нью-Йорк, Нипигон, Ном, Норона, Северная Дакота/Центр, Северная Дакота/Нью-Салем, Панама, Пангниртанг, Парамарибо, Феникс, Порт-о-Пренс, Порт-оф-Спейн, Порту-Акре, Порту-Велью, Пуэрто-Рико, Рейни-Ривер, Рэнкин-Инлет, Ресифи, Регина, Резолют, Риу-Бранку, Сантарем, Сантьяго, Санто-Доминго, Сан-Паулу, Скорсбисунн, Шипрок, Сент-Бартелеми, Сент-Джонс, Сент-Китс, Сент-Люсия, Сент-Томас, Сент-Винсент, Свифт-Карент, Тегусигальпа, Туле, Тандер-Бей, Тихуана, Торонто, Тортола, Ванкувер, Вирджиния, Уайтхорс, Виннипег, Якутат, Еллоунайф
+Choices-sv.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaína, Buenos Aires (Argentina), Catamarca (Argentina), Córdoba (Argentina), Jujuy (Argentina), La Rioja (Argentina), Mendoza (Argentina), Río Gallegos (Argentina), Salta (Argentina), San Juan (Argentina), San Luis (Argentina), Tucumán (Argentina), Ushuaia (Argentina), Aruba, Asunción, Atikokan, Atka, Bahia, Barbados, Belém, Belize, Blanc-Sablon, Boa Vista, Bogotá, Boise, Cambridge Bay, Campo Grande, Cancún, Caracas, Cayenne, Caymanöarna, Chicago, Chihuahua, Coral Harbour, Costa Rica, Cuiabá, Curaçao, Danmarkshavn, Dawson, Dawson Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Bay, Godthåb, Goose Bay, Grand Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havanna, Hermosillo, Indianapolis (Indiana), Knox (Indiana), Marengo (Indiana), Petersburg (Indiana), Tell City (Indiana), Vevay (Indiana), Vincennes (Indiana), Winamac (Indiana), Inuvik, Iqaluit, Jamaica, Juneau, Louisville (Kentucky), Monticello (Kentucky), La Paz, Lima, Los Angeles, Maceió, Managua, Manaus, Marigot, Martinique, Mazatlán, Menominee, Mérida, Mexico City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New York, Nipigon, Nome, Fernando de Noronha, Center (North Dakota), New Salem (North Dakota), Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port of Spain, Porto Acre, Porto Velho, Puerto Rico, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarém, Santiago, Santo Domingo, São Paulo, Scoresbysund, Shiprock, Saint-Barthélemy, Saint John's, Saint Kitts, Saint Lucia, Saint Thomas, Saint Vincent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Jungfruöarna, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-tr.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Arjantin/Buenos Aires, Arjantin/Catamarca, Arjantin/Kordoba, Arjantin/Jujuy, Arjantin/La Rioja, Arjantin/Mendoza, Arjantin/Rio Gallegos, Arjantin/Salta, Arjantin/San Juan, Arjantin/San Luis, Arjantin/Tucuman, Arjantin/Ushuaia, Aruba, Asuncion, Atikokan, Atka, Bahia, Barbados, Belem, Belize, Blanc-Sablon, Boa Vista, Bogota, Boise, Cambridge Koyu, Campo Grande, Cancun, Karakas, Cayenne, Cayman, Şikago, Chihuahua, Coral Limanı, Kosta Rika, Cuiaba, Kurasao, Semerkant, Dawson, Dawson Koyu, Denver, Detroit, Dominika, Edmonton, Eirunepe, El Salvador, Ensenada, Fortaleza, Glace Koyu, Godthab, Goose Koyu, Grand Turk, Grenada, Guadelup, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaika, Juneau, Kentucky/Louisville, Kentucky/Montiselo, La Paz, Lima, Los Angeles, Maceio, Managua, Manaus, Marigot, Martinique, Mazatlan, Menominee, Merida, Mexico City, Mikuelon, Moncton, Monterrey, Montevideo, Montreal, Monserat, Nassau, New York, Nipigon, Nome, Noronha, Kuzey Dakota/Merkez, Kuzey Dakota/Yeni Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port of Spain, Porto Akre, Porto Velho, Porto Riko, Rainy River, Rankin Inlet, Recife, Regina, Resolute, Rio Branco, Santarem, Santiago, Santo Domingo, Sao Paulo, Scoresbysund, Shiprock, Sen Barthelemy, Sen Johns, Sen Kitts, Sen Lusia, Sen Thomas, Sen Vinsent, Swift Current, Tegucigalpa, Thule, Thunder Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Choices-wo.UTF-8: Adak, Anchorage, Anguilla, Antigua, Araguaina, Arsantiin/Buenos_Aires, Arsantiin/Catamarca, Arsantiin/Kordoba, Arsantiin/Jujuy, Arsantiin/La_Rioja, Arsantiin/Mendoza, Arsantiin/Rio_Gallegos, Arsantiin/Salta, Arsantiin/San_Juan, Arsantiin/San_Luis, Arsantiin/Tucuman, Arsantiin/Ushuaia, Aruba, Asuncion, Atikokan, Atka, Bahia, Barbados, Belém, Belize, Blanc-Sablon, Boa Vista, Bogota, Boise, Cambridge_Bay, Campo Grande, Kankun, Karakas, Cayenne, Kayman, Cikaago, Chihuahua, Coral_Harbour, Costa_Rica, Cuiabá, Curacao, Danmarkshavn (côte Est - Nord de Scoresbysund), Dawson, Dawson_Creek, Denver, Detroit, Dominika, Edmonton, Eirunepe, El_Salvador, Ensenada, Fortaleza, Glace_Bay, Godthab (cas général), Goose_Bay, Grand_Turk, Grenada, Guadeloupe, Guatemala, Guyaquil (cas général), Guyana, Halifax, Habaana, Hermosillo, Indiana/Indianapolis, Indiana/Knoks, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell_City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamayka, Juneau, Kentucky/Louisville, Kentucky/Monticello, La_Paz, Lima, Los_Angeles, Maceió, Managua, Manaus, Marigot, Martinik, Mazatlan, Menominee, Merida, Mexico_City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New_York, Nipigon, Nome, Noronha (îles de l'Atlantique), Dakota_Noor/Digg, Dakota_Noor/New_Salem, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port_of_Spain, Porto_Acre, Porto Velho, Puerto_Rico, Rainy_River, Rankin_Inlet, Recife, Regina, Resolute, Rio Branco, Santarem, Santiago (cas général), Santo_Domingo, São Paulo, Scoresbysund - Ittoqqortoormiit, Shiprock, St_Barthelemy, St_Johns, St_Kitts, St_Lucia, St_Thomas, St_Vincent, Swift_Current, Tegucigalpa, Thule - Pituffik, Thunder_Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Antarctica
+Type: select
+Choices: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-be.UTF-8: Кэйсі, Дэвіс, Дзюмонт-д-Урвіль, Моўсан, Мак-Мурда, Палмэр, Ратэра, Сыёва, Васток
+Choices-bg.UTF-8: Кейси, Дейвис, Дюмон Дюрвил, Моусън, МакМърдо, Палмър, Ротера, Сьова, Восток
+Choices-ca.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-cs.UTF-8: stanice Casey, stanice Davis, stanice Dumont-d'Urville, stanice Mawson, stanice McMurdo, stanice Palmer, stanice Rothera, stanice Syowa, stanice Vostok
+Choices-de.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-en.UTF-8: Casey, Davis, Dumont d'Urville, Mawson, McMurdo (South Pole), Palmer, Rothera, Syowa, Vostok
+Choices-es.UTF-8: Casey, Davis, Dumont d'Urville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-eu.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-fi.UTF-8: Casey, Davis, Dumont-d'Urville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-fr.UTF-8: Base Casey, Base Davis, Base Dumont-d'Urville, Base Mawson, Base McMurdo, Base Palmer, Base Rothera, Base Syowa, Base Vostok
+Choices-gl.UTF-8: Casey, Davis, Dumont-d'Urville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-gu.UTF-8: કેસે, ડેવીસ, ડુમોન્ટડુર્વિલે, માઉસેન, મેકમુરડો, પાલ્મેર, રોથેરા, સયોવા, વોસ્તોક
+Choices-he.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-hr.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-hu.UTF-8: Casey, Davis, Dumont-d'Urville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vosztok
+Choices-id.UTF-8: Casey, Davis, Dumont-d'Urville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-ja.UTF-8: ケーシー, デーヴィス, デュモンデュルヴィル, モーソン, マクムード, パーマー, ロデラ, 昭和基地, ヴォストーク
+Choices-ku.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-lt.UTF-8: Casey, Davis, DumontDUrvilis, Mavsonas, Mak-Mardas, Palmeris, Rothera, Seva, Vostokas
+Choices-ml.UTF-8: കാസീ, ഡാവിസ്, ഡുമൊണ്ട്-ഡി'ഉര്‍വില്ലെ, മാസണ്‍, മക്മര്‍ഡോ, പാമര്‍, റൊതേര, സിയോവ, വോസ്ടോക്
+Choices-nl.UTF-8: Casey, Davis, DumontDurville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-pt.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-ru.UTF-8: Кейси, Дейвис, Дюмон-д'Юрвиль, Моусон, Мак-Мердо, Палмер, Ротера, Сёва, Восток
+Choices-sq.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-sv.UTF-8: Casey, Davis, Dumount d'Urville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-tr.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-vi.UTF-8: Casey, Davis, DumontDUrville, Mawson, McMurdo, Palmer, Rothera, Syowa, Vostok
+Choices-wo.UTF-8: Baas Casey, Baas Davis, BaasDumont-d'Urville, Baas Mawson, Baas McMurdo, Baas Palmer, Baas Rothera, Baas Syowa, Baas Vostok
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Australia
+Type: select
+Choices: Adelaide, Brisbane, Broken_Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord_Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-be.UTF-8: Адэлаіда, Брызбан, Броўкэн-Хіл, Канберра, Кур'е, Дарвін, Эўкла, Хобарт, Ліндаман, Лорд-Хоў, Мэльбурн, Пэрт, Сіднэй, Янкавіна
+Choices-bg.UTF-8: Аделаида, Бризбейн, Броукън Хил, Канбера, Кюри, Дарвин, Еукла, Хобарт, Линдеман, о-в Лорд Хоу, Мелбърн, Пърт, Сидни, Янковина
+Choices-ca.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-cs.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Ostrov lorda Howea, Melbourne, Perth, Sydney, Yancowinna
+Choices-de.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-en.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-es.UTF-8: Adelaida, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sídney, Yancowinna
+Choices-eu.UTF-8: Adelaide, Brisbane, Broken_Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord_Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-fi.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-fr.UTF-8: Adelaïde, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Île Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-gl.UTF-8: Adelaide, Brisbane, Broken Hill, Camberra, Currie, Darwin, Eucla, Hobart, Lindeman, Illa de Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-gu.UTF-8: એડેલેઇડ, બ્રિસબેન, બ્રોકન હિલ, કેનબેરા, કુરી, ડાર્વિન, ઇયુક્લા, હોબાર્ટ, લિન્ડેમેન, લોર્ડ હોવે, મેલબોર્ન, પર્થ, સિડની, યાન્કોવિન્ના
+Choices-hr.UTF-8: Adelaide, Brisbane, Broken_Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord_Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-hu.UTF-8: Adelaide, Brisbane, Törött Domb, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe-sziget, Melbourne, Perth, Sydney, Yancowinna
+Choices-id.UTF-8: Adelaide, Brisbane, Broken_Hill, Canbera, Currie, Darwin, Eucla, Hobart, Lindeman, Pulau_Lord_Howe, Melbourne, Perth, Sydney, Yancowina
+Choices-ja.UTF-8: アデレード, ブリスベーン, ブロークンヒル, キャンベラ, カリー, ダーウィン, ユークラ, ホーバート, リンデマン, ロードハウ島, メルボルン, パース, シドニー, Yancowinna
+Choices-ku.UTF-8: Adelaide, Brisbane, Broken_Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord_Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-lt.UTF-8: Adelaidė, Brisbenas, Broken_Hilas, Kanbera, Keris, Darvinas, Jukla, Hobartas, Lindemanas, Lordo_Houvo_sala, Melburnas, Pertas, Sidnis, Jankovina
+Choices-ml.UTF-8: അഡലൈഡ്, ബ്രിസ്ബേന്‍, ബ്രോക്കണ്‍_ഹില്‍, കാന്‍ബറ, ക്യൂറി, ഡാര്‍വിന്‍, യൂക്‍ള, ഹോബാര്‍ട്ട്, ലിന്‍ഡെമാന്‍, ലോര്‍ഡ്_ഹോവ്, മെല്ബണ്‍, പെര്‍ത്ത്, സിഡ്നി, യാങ്കോവിന്ന
+Choices-nl.UTF-8: Adelaide, Brisbane, Broken_Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord_Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-pt.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-ru.UTF-8: Аделаида, Брисбен, Брокен-Хилл, Канберра, Керри, Дарвин, Юкла, Хобарт, Линдеман, Лорд-Хау, Мельбурн, Перт, Сидней, Янковинна
+Choices-sq.UTF-8: Adelaide, Brisbane, Broken_Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord_Howe, Melbourne, Perth, Sydney, Yancowinna
+Choices-sv.UTF-8: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howeön, Melbourne, Perth, Sydney, Yancowinna
+Choices-tr.UTF-8: Adelaide, Brisbane, Broken Hill, Kanbera, Currie, Darwin, Eukla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sidney, Yankovina
+Choices-vi.UTF-8: Adelaide (Nam), Brisbane (Bắc Đông), Broken Hill (ở sâu trong), Canberra (thủ đô), Currie, Darwin (Bắc), Eucla, Hobart (Đảo hướng Nam Đông), Lindeman (Các đảo nghỉ Bắc Đông), Lord Howe Island (Đảo hướng Đông), Melbourne (Nam Đông), Perth (Tây), Sydney (Đông), Yancowinna
+Choices-wo.UTF-8: Adelaide (Australie du Sud), Brisbane (Queensland - cas général), Broken Hill (Nouvelles-Galles du Sud - Yancowinna), Canberra, Currie, Darwin (territoire du Nord), Eucla, Hobart (Tasmanie), Lindeman (Queensland - îles Holiday), Île Lord Howe, Melbourne (Victoria), Perth (Australie de l'Ouest), Sydney (Nouvelles-Galles du Sud - cas général), Yancowinna
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Arctic
+Type: select
+Choices: Longyearbyen
+Choices-be.UTF-8: Лонг'ерб'ен
+Choices-bg.UTF-8: Лонгиърбйен
+Choices-ca.UTF-8: Longyearbyen
+Choices-cs.UTF-8: Longyearbyen
+Choices-de.UTF-8: Longyearbyen
+Choices-en.UTF-8: Longyearbyen
+Choices-es.UTF-8: Longyearbyen
+Choices-eu.UTF-8: Longyearbyen
+Choices-fi.UTF-8: Longyearbyen
+Choices-fr.UTF-8: Longyearbyen
+Choices-gl.UTF-8: Longyearbyen
+Choices-gu.UTF-8: લોન્ગયરબયેન
+Choices-hr.UTF-8: Longyearbyen
+Choices-hu.UTF-8: Longyearbyen
+Choices-id.UTF-8: Longyearbyen
+Choices-ja.UTF-8: ロングイールビュアン
+Choices-ku.UTF-8: Longyearbyen
+Choices-lt.UTF-8: Longjyras
+Choices-ml.UTF-8: ലോങിയര്‍ബയന്‍
+Choices-nl.UTF-8: Longyearbyen
+Choices-pt.UTF-8: Longyearbyen
+Choices-ru.UTF-8: Лонгийир
+Choices-sq.UTF-8: Longyearbyen
+Choices-sv.UTF-8: Longyearbyen
+Choices-th.UTF-8: ลองเยียร์เบียน
+Choices-tr.UTF-8: Longyearbyen
+Choices-vi.UTF-8: Longyearbyen
+Choices-wo.UTF-8: Longyearbyen
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Asia
+Type: select
+Choices: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtobe, Ashgabat, Baghdad, Bahrain, Baku, Bangkok, Beirut, Bishkek, Brunei, Choibalsan, Chongqing, Colombo, Damascus, Dhaka, Dili, Dubai, Dushanbe, Gaza, Harbin, Ho_Chi_Minh, Hong_Kong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jerusalem, Kabul, Kamchatka, Karachi, Kashgar, Kathmandu, Katmandu, Kolkata, Krasnoyarsk, Kuala_Lumpur, Kuching, Kuwait, Macau, Magadan, Makassar, Manila, Muscat, Nicosia, Novosibirsk, Omsk, Oral, Phnom_Penh, Pontianak, Pyongyang, Qatar, Qyzylorda, Rangoon, Riyadh, Riyadh87, Riyadh88, Riyadh89, Sakhalin, Samarkand, Seoul, Shanghai, Singapore, Taipei, Tashkent, Tbilisi, Tehran, Tel_Aviv, Thimphu, Tokyo, Ujung_Pandang, Ulaanbaatar, Urumqi, Vientiane, Vladivostok, Yakutsk, Yekaterinburg, Yerevan
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Atlantic
+Type: select
+Choices: Azores, Bermuda, Canary, Cape_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, South_Georgia, St_Helena, Stanley
+Choices-be.UTF-8: Азоры, Бермуды, Канары, Капа-Вэрда, Фароэ, Ян-Маен, Мадэра, Рэйк'явік, Паўднёвая Джорджыя, Востраў Св. Алены, Стэнлі
+Choices-bg.UTF-8: Азорски о-ви, Бермуди, Канарски о-ви, Кабо Верде, Фарьорски о-ви, Ян Майен, Мадейра, Рейкявик, Южна Джорджия, Сейнт Хелена, Стенли
+Choices-ca.UTF-8: Açores, Bermudes, Canàries, Cap Verd, Fèroe, Jan Mayen, Madeira, Reykjavík, Georgia del Sud, St Helena, Stanley
+Choices-cs.UTF-8: Azory, Bermudy, Kanárské ostrovy, Kapverdy, Faerské ostrovy, Jan Mayen, Madeira, Rejkjavík, Jižní Georgie, Svatá Helena, Stanley
+Choices-de.UTF-8: Azoren, Bermuda, Kanaren, Kap Verde, Farör, Jan Mayen, Madeira, Reykjavík, South Georgia, St Helena, Stanley
+Choices-en.UTF-8: Azores, Bermuda, Canary, Cape Verde, Faroe, Jan Mayen, Madeira, Reykjavik, South Georgia, St. Helena, Stanley
+Choices-es.UTF-8: Azores, Bermudas, Canarias, Cabo Verde, Feroe, Jan Mayen, Madeira, Reikiavik, Georgia del Sur, Santa Elena, Stanley
+Choices-eu.UTF-8: Azores, Bermuda, Kanariak, Cape_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, Hego_Georgia, St_Helena, Stanley
+Choices-fi.UTF-8: Azorit, Bermuda, Kanariansaaret, Kap Verde, Färsaaret, Jan Mayen, Madeira, Reykjavík, Etelä-Georgia, St Helena, Stanley
+Choices-fr.UTF-8: Açores, Bermudes, Canaries, Cap-Vert, Faroe, Jan Mayen, Madère, Reykjavik, Géorgie du Sud, Sainte-Hélène, Stanley
+Choices-gl.UTF-8: Illas Azores, Illas Bermudas, Illas Canarias, Cabo Verde, Illas Faroes, Jan Mayen, Madeira, Reykjavik, Xeorxia do Sul, Santa Helena, Stanley
+Choices-gu.UTF-8: અઝોરેસ, બર્મુડા, કેનેરી, કેપ વર્દે, ફેરો, જાન માયેન, મેડેઇરા, રીકજાવિક, દક્ષિણ જર્યોજીઆ, સેન્ટ હેલેના, સ્ટેન્લી
+Choices-hr.UTF-8: Azori, Bermuda, Kanarski_otoci, Zelenortski_otoci, Farski_otoci, Jan_Mayen, Madeira, Reykjavik, South_Georgia, St_Helena, Stanley
+Choices-hu.UTF-8: Azori-szigetek, Bermuda, Canary, Cape_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, Dél_Georgia, St_Helena, Stanley
+Choices-id.UTF-8: Azores, Bermuda, Kanari, Teluk_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, Georgia_Selatan, Saint_Helena, Stanley
+Choices-ja.UTF-8: アゾレス, バーミューダ, カナリヤ, ケープヴェルデ, フェロー諸島, ヤンマイエン, マデイラ, レイキャヴィク, サウスジョージア, セントヘレナ, スタンリー
+Choices-ku.UTF-8: Azores, Bermuda, Canary, Cape_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, South_Georgia, St_Helena, Stanley
+Choices-lt.UTF-8: Azorų_salos, Bermudai, Kanarai, Žaliasis_Kyšulys, Farerų_salos, Jan_Maienas, Maderas, Reikjavikas, Pietų_Džordžija, Šventos_Elenos_sala, Stenlis
+Choices-ml.UTF-8: അസോറെസ്, ബെര്‍മുഡ, കാനറി, കേപ്_വിര്‍ഡേ, ഫറവോ, ജന്‍_മായെന്‍, മഡെയ്‌ര, റെയ്ക്ജാവിക്, തെക്കന്‍_ജോര്‍ജിയ, സെയിന്റ്_ഹെലെന, സ്റ്റാന്‍ലി
+Choices-nl.UTF-8: Azoren, Bermuda, Canaria, Kaapverdië, Faroe, Jan_Mayen, Madeira, Reykjavik, Zuid_Georgia, St_Helena, Stanley
+Choices-pt.UTF-8: Açores, Bermudas, Canárias, Cabo Verde, Faroe, Jan Mayen, Madeira, Reiquejavique, Geórgia do Sul, Santa Helena, Stanley
+Choices-ru.UTF-8: Азорские острова, Бермуды, Канары, Кабо-Верде, Фарерские острова, Ян-Майен, Мадейра, Рейкьявик, Южная Георгия, Остров Святой Елены, Стенли
+Choices-sq.UTF-8: Azores, Bermuda, Canary, Cape_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, South_Georgia, St_Helena, Stanley
+Choices-sv.UTF-8: Azorerna, Bermuda, Kanarieöarna, Kap Verde, Färöarna, Jan Mayen, Madeira, Reykjavik, Sydgeorgien, Sankta Helena, Stanley
+Choices-tr.UTF-8: Azorlar, Bermuda, Kanarya, Yeşilburun, Faro, Jan Mayen, Madeyra, Reykavik, Güney Gürcistan, Sen Helen, Stanley
+Choices-vi.UTF-8: Azores, Be-mu-đa, Canary, Cape_Verde, Faroe, Jan_Mayen, Madeira, Reykjavik, South_Georgia, St_Helena, Stanley
+Choices-wo.UTF-8: Asoor, Bermuuda, Kanari, Kap_Weer, Faroe, Jan_Mayen, Madeira, Rekyaavik, South_Georgia, St_Helena, Stanley
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Europe
+Type: select
+Choices: Amsterdam, Andorra, Athens, Belfast, Belgrade, Berlin, Bratislava, Brussels, Bucharest, Budapest, Chisinau, Copenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istanbul, Jersey, Kaliningrad, Kiev, Lisbon, Ljubljana, London, Luxembourg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moscow, Nicosia, Oslo, Paris, Podgorica, Prague, Riga, Rome, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Vienna, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
+Choices-be.UTF-8: Амстэрдам, Андора, Афіны, Белфаст, Белград, Берлін, Братыслава, Брусель, Бухарэст, Будапешт, Чысінаў, Капенгаген, Дублін, Гібралтар, Джэрнсі, Хельсінкі, Востраў Мэн, Стамбул, Джэрсі, Калінінград, Кіеў, Лісабон, Любляна, Лондан, Люксембург, Мадрыд, Мальта, Мэрыхамн, Мінск, Манака, Масква, Нікосія, Осла, Парыж, Падгорыца, Прага, Рыга, Рым, Самара, Сан-Марына, Сараева, Сімферопаль, Скоп'е, Сафія, Стакгольм, Талін, Тырана, Тыраспаль, Вужгарад, Вадуц, Ватыкан, Вена, Вільня, Валгаград, Варшава, Заграб, Запарожжа, Цюрых
+Choices-bg.UTF-8: Амстердам, Андора, Атина, Белфаст, Белград, Берлин, Братислава, Брюксел, Букурещ, Будапеща, Кишинев, Копенхаген, Дъблин, Гибралтар, Джърнси, Хелзинки, Айл ъф Ман, Истанбул, Джърси, Калининград, Киев, Лисабон, Любляна, Лондон, Люксембург, Мадрид, Малта, Мариехамн, Минск, Монако, Москва, Никозия, Осло, Париж, Подгорица, Прага, Рига, Рим, Самара, Сан Марино, Сараево, Симферопол, Скопие, София, Стокхолм, Талин, Тирана, Тираспол, Ужгород, Вадуц, Ватикана, Виена, Вилнюс, Волгоград, Варшава, Загреб, Запорожие, Цюрих
+Choices-ca.UTF-8: Amsterdam, Andorra, Atenes, Belfast, Belgrad, Berlín, Bratislava, Brussel·les, Bucarest, Budapest, Chisinau, Copenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Illa de Man, Istanbul, Jersey, Kaliningrad, Kíev, Lisboa, Ljubljana, Londres, Luxemburg, Madrid, Malta, Mariehamn, Minsk, Mònaco, Moscow, Nicosia, Oslo, París, Podgorica, Praga, Riga, Roma, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofia, Estocolm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vaticà, Viena, Vilnius, Volgograd, Varsòvia, Zagreb, Zaporozhye, Zuric
+Choices-cs.UTF-8: Amsterodam, Andorra, Athény, Belfast, Bělehrad, Berlín, Bratislava, Brusel, Bukurešť, Budapešť, Kišiněv, Kodaň, Dublin, Gibraltar, Guernsey, Helsinky, Ostrov Man, Istanbul, Jersey, Kaliningrad, Kijev, Lisabon, Lublaň, Londýn, Lucemburk, Madrid, Malta, Mariehamn, Minsk, Monako, Moskva, Nikósie, Oslo, Paříž, Podgorica, Praha, Riga, Řím, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofie, Stockholm, Talin, Tirana, Tiraspol, Užhorod, Vaduz, Vatikán, Vídeň, Vilnius, Volgograd, Varšava, Záhřeb, Zaporož'je, Curych
+Choices-de.UTF-8: Amsterdam, Andorra, Athen, Belfast, Belgrad, Berlin, Bratislava, Brüssel, Bukarest, Budapest, Chisinau, Kopenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle of Man, Istanbul, Jersey, Kaliningrad, Kiew, Lissabon, Ljubljana, London, Luxemburg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moskau, Nicosia, Oslo, Paris, Podgorica, Prag, Riga, Rom, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirana, Tiraspol, Uschhorod, Vaduz, Vatikan, Wien, Vilnius, Wolgograd, Warschau, Zagreb, Saporischschja, Zürich
+Choices-en.UTF-8: Amsterdam, Andorra, Athens, Belfast, Belgrade, Berlin, Bratislava, Brussels, Bucharest, Budapest, Chisinau, Copenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle of Man, Istanbul, Jersey, Kaliningrad, Kiev, Lisbon, Ljubljana, London, Luxembourg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moscow, Nicosia, Oslo, Paris, Podgorica, Prague, Riga, Rome, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Vienna, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
+Choices-es.UTF-8: Ámsterdam, Andorra, Atenas, Belfast, Belgrado, Berlín, Bratislava, Bruselas, Bucarest, Budapest, Chisinau, Copenhague, Dublín, Gibraltar, Guernsey, Helsinki, Isla de Man, Estambul, Jersey, Kaliningrado, Kiev, Lisboa, Liubliana, Londres, Luxemburgo, Madrid, Malta, Mariehamn, Minsk, Mónaco, Moscú, Nicosia, Oslo, París, Podgorica, Praga, Riga, Roma, Samara, San Marino, Sarajevo, Simferopol, Skopie, Sofía, Estocolmo, Tallin, Tirana, Tiraspol, Uzhgorod, Vaduz, Vaticano, Viena, Vilna, Volgogrado, Varsovia, Zagreb, Zaporozhye, Zúrich
+Choices-eu.UTF-8: Amsterdam, Andorra, Atenas, Belfast, Belgrad, Berlin, Bratislava, Brusela, Bukarest, Budapest, Chisinau, Kopenhage, Dublin, Gibraltar, Guernsey, Helsinki, Man_Uhartea, Istanbul, Jersey, Kaliningrad, Kiev, Lisboa, Ljubljana, Londres, Luxemburgo, Madril, Malta, Mariehamn, Minsk, Monako, Mosku, Nicosia, Oslo, Paris, Podgorica, Praga, Riga, Erroma, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirana, Tiraspol, Uzhgorod, Vaduz, Vatikanoa, Viena, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
+Choices-fi.UTF-8: Amsterdam, Andorra, Ateena, Belfast, Belgrad, Berliini, Bratislava, Brysseli, Bukarest, Budapest, Chişinǎu, Kööpenhamina, Dublin, Gibraltar, Guernsey, Helsinki, Mansaari, Istanbul, Jersey, Kaliningrad, Kiova, Lissabon, Ljubljana, Lontoo, Luxemburg, Madrid, Malta, Maarianhamina, Minsk, Monaco, Moskova, Nikosia, Oslo, Pariisi, Podgorica, Praha, Eiika, Rooma, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofia, Tukholma, Tallinna, Tirana, Tiraspol, Užhorod, Vaduz, Vatikaani, Wien, Vilna, Volgograd, Varsova, Zagreb, Zaporizhia, Zürich
+Choices-fr.UTF-8: Amsterdam, Andorre, Athènes, Belfast, Belgrade, Berlin, Bratislava, Bruxelles, Bucarest, Budapest, Chisinau, Copenhague, Dublin, Gibraltar, Guernesey, Helsinki, Île de Man, Istanbul, Jersey, Kaliningrad, Kiev, Lisbonne, Ljubljana, Londres, Luxembourg, Madrid, Malte, Mariehamn, Minsk, Monaco, Moscou, Nicosie, Oslo, Paris, Podgorica, Prague, Riga, Rome, Samara, Saint-Marin, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallin, Tirana, Tiraspol, Oujhorod, Vaduz, Vatican, Vienne, Vilnius, Volgograd, Varsovie, Zagreb, Zaporijia, Zurich
+Choices-gl.UTF-8: Amsterdam, Andorra, Atenas, Belfast, Belgrado, Berlín, Bratislava, Bruxelas, Bucarest, Budapest, Chisinau, Copenhague, Dublín, Xibraltar, Guernsey, Helsinki, Illa de Man, Estambul, Jersey, Kaliningrad, Kiev, Lisboa, Ljubljana, Londres, Luxemburgo, Madrid, Malta, Mariehamn, Minsk, Mónaco, Moscova, Nicosia, Oslo, París, Podgorica, Praga, Riga, Roma, Samara, San Marino, Saraxevo, Simferopol, Skopje, Sofía, Estocolmo, Tallín, Tirana, Tiraspol, Uzhgorod, Vaduz, Cidade do Vaticano, Viena, Vilna, Volgogrado, Varsovia, Zagreb, Zaporozhye, Zurich
+Choices-gu.UTF-8: આમસ્ટરડેમ, એન્ડોરા, એથેન્સ, બેલફાસ્ટ, બેલગ્રેડ, બર્લિન, બ્રાટિસ્લાવા, બ્રસેલ્સ, બુખારેસ્ટ, બુડાપેસ્ટ, ચિસિનાઉ, કોપનહેગન, ડબ્લિન, જીબ્રાલ્ટર, ગુર્નસે, હેલસિન્કી, આઇસ્લે ઓફ મેન, ઇન્તંબુલ, જર્સી, કાલિનિનગ્રાડ, કિવ, લિસ્બન, લજુબ્લજાના, લંડન, લક્ઝમબર્ગ, મેડ્રીડ, માલ્ટા, મેરીહામ્ન, મિન્સ્ક, મોનેકો, મોસ્કો, નિકોસિઆ, ઓસ્લો, પેરિસ, પોડગોરિકા, પ્રાગ, રિગા, રોમ, સમારા, સાન_મરિનો, સારાજેવો, સિમફેરોપોલ, સ્કોપ્જે, સોફિઆ, સ્ટોકહોમ, તાલિન, તિરાને, તિરાસ્પોલ, ઉઝગોરોડ, વાડુઝ, વેટિકન, વિએના, વિલ્નિઅસ, વોલ્ગોગ્રાડ, વોર્સો, ઝાગ્રેબ, ઝાપારોઝયે, ઝ્યુરિચ
+Choices-hr.UTF-8: Amsterdam, Andora, Atena, Belfast, Beograd, Berlin, Bratislava, Bruxelles, BukureĹĄt, BudimpeĹĄta, KiĹĄinjev, Kopenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istanbul, Jersey, Kalinjingrad, Kijev, Lisabon, Ljubljana, London, Luksemburg, Madrid, Malta, Mariehamn, Minsk, Monako, Moskva, Nicosia, Oslo, Pariz, Podgorica, Prag, Riga, Rim, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofija, Stockholm, Tallinn, Tirana, Tiraspol, UĹžhorod, Vaduz, Vatikan, BeÄ, Vilnius, Volgograd, VarÄšÄava, Zagreb, ZaporoĹžje, ZĂźrich
+Choices-hu.UTF-8: Amszterdam, Andorra, Athén, Belfast, Belgrád, Berlin, Pozsony, Brüsszel, Bukarest, Budapest, Kisinyov, Koppenhága, Dublin, Gibraltár, Guernsey, Helsinki, Man-sziget, Isztambul, Jersey, Moszkva-01 - Kalinyingrád, Kijev, Lisszabon, Ljubljana, London, Luxemburg, Madrid, Málta, Mariehamn, Minszk, Monaco, Moszkva+00 - nyugat-Oroszország, Nicosia, Oslo, Párizs, Podgorica, Prága, Riga, Róma, Moszkva+01 - Kaszpi-tenger, San_Marino, Szarajevó, Szimferopol, Szkopje, Szófia, Stockholm, Tallinn, Tirana, Tiraspol, Uzsgorod, Vaduz, Vatikán, Bécs, Vilnius, Volgográd, Varsó, Zágráb, Zaporozhye, Zürich
+Choices-id.UTF-8: Amsterdam, Andora, Athena, Belfas, Belgrade, Berlin, Bratislava, Brussel, Buchares, Budapes, Chisinau, Copenhagen, Dublin, Jabaltar, Guernsey, Helsinki, Isle_of_Man, Istambul, Jersey, Kaliningrad, Kiev, Lisbon, Ljubljana, London, Luxemburg, Madrid, Malta, Marieham, Minsk, Monaco, Moscow, Nicosia, Oslo, Paris, Podgorica, Praha, Riga, Roma, Samara, San_Marino, Sarajevo, Simferepol, Skopje, Sofia, Stockholm, Talin, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Viena, Vilnius, Volgograd, Warsawa, Zagreb, Zaporozhye, Zurich
+Choices-ja.UTF-8: アムステルダム, アンドラ, アセンズ, ベルファスト, ベオグラード, ベルリン, ブラチスラヴァ, ブリュッセル, ブカレスト, ブダペスト, キシニョフ, コペンハーゲン, ダブリン, ジブラルタル, ガーンジー, ヘルシンキ, マン島, イスタンブール, ジャージー, カリーニングラード, キエフ, リスボン, リュブリャーナ, ロンドン, ルクセンブルグ, マドリード, マルタ, マリーハムン, ミンスク, モナコ, モスクワ, ニコシア, オスロ, パリ, ポドゴリツァ, プラハ, リガ, ローマ, サマーラ, サンマリノ, サラエヴォ, シムフェロポリ, スコピエ, ソフィア, ストックホルム, タリン, ティラナ, ティラスポリ, ウジゴロド, ファドーツ, バチカン, ヴィエナ, ヴィリニュス, ヴォルゴグラード, ワルシャワ, ザグレブ, ザポロージェ, チューリヒ
+Choices-ku.UTF-8: Amsterdam, Andorra, Atena, Belfast, Belgrade, Berlin, Bratislava, Brussels, Bucharest, Budapeşte, Chisinau, Kopengahen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Stenbol, Jersey, Kaliningrad, Kiyev, Lisbon, Ljubljana, London, Luksembûrg, Madrid, Malta, Mariehamn, Minsk, Monako, Moskow, Nicosia, Oslo, Parîs, Podgorica, Prague, Riga, Roma, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofya, Stockholm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Viyena, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurîx
+Choices-lt.UTF-8: Amsterdamas, Andora, Atėnai, Belfastas, Belgradas, Berlynas, Bratislava, Briuselis, Bukareštas, Budapeštas, Kišiniovas, Kopenhaga, Dublinas, Gibraltaras, Gernsi_sala, Helsinkis, Meno_sala, Stambulas, Džersi_Sitis, Kaliningradas, Kijevas, Lisabona, Liubliana, Londonas, Liuksemburgas, Madridas, Malta, Mariehamnas, Minskas, Monakas, Maskva, Nikosija, Oslas, Paryžius, Podgorica, Praha, Ryga, Roma, Samara, San_Marinas, Sarajevas, Simferopolis, Skopjė, Sofija, Stokholmas, Talinas, Tirana, Tiraspolis, Užgorodas, Vaducas, Vatikanas, Viena, Vilnius, Volgogradas, Varšuva, Zagrebas, Zaporožė, Ciūrichas
+Choices-ml.UTF-8: ആസ്റ്റര്‍ഡാം, അണ്ടോറ, ഏഥന്‍സ്, ബെല്‍ഫാസ്റ്റ്, ബെല്‍ഗ്രേഡ്, ബെര്‍ലിന്‍, ബ്രാട്ടിസ്ലാവ, ബ്രസ്സല്‍സ്, ബുക്കാറസ്റ്റ്, ബുഡാപെസ്റ്റ്, ചിസിനാവു, കോപ്പന്‍ഹേഗന്‍, ഡബ്ലിന്‍, ജിബ്രാള്‍ട്ടര്‍, ഗുവണ്‍സി, ഹെല്‍സിങ്കി, ഐസില്‍_ഓഫ്_മാന്‍, ഇസ്താംബുള്‍, ജെര്‍സി, കലിനിന്‍ഗ്രാഡ്, കീവ്, ലിസ്ബണ്‍, ലജുബ്ല്യാന, ലണ്ടന്‍, ലക്സംബര്‍ഗ്, മാഡ്രിഡ്, മാള്‍ട്ട, മരിയേഹാന്‍, മിന്‍സ്ക്, മൊണാക്കോ, മോസ്കോ, നികോഷ്യ, ഓസ്ലോ, പാരീസ്, പോഡ്ഗൊറിക്ക, പ്രാഗ്, റിഗ, റോം, സമാറ, സാന്‍_മരീനോ, സരജാവോ, സിംഫെറോപോള്‍, സ്കോപ്യേ, സോഫിയ, സ്റ്റോക്ഹോം, ടാളിന്‍, ടിരാന്‍, ടിരാസ്പോള്‍, ഉഴ്ഗോരോദ്, വാഡുസ്, വത്തിക്കാന്‍, വിയന്ന, വില്‍നിയസ്, വോള്‍ഗോഗ്രാഡ്, വാഴ്സോ, സഗ്രേബ്, സപ്പോറോഴി, സൂറിച്ച്
+Choices-nl.UTF-8: Amsterdam, Andorra, Athene, Belfast, Belgrado, Berlijn, Bratislava, Brussel, Boekarest, Boedapest, Chisinau, Kopenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Eiland van Man, Istanbul, Jersey, Kaliningrad, Kiev, Lissabon, Ljubljana, Londen, Luxemburg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moskou, Nicosia, Oslo, Parijs, Podgorica, Praag, Riga, Rome, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirana, Tiraspol, Uzhgorod, Vaduz, Vaticaanstad, Wenen, Vilnius, Volgograd, Warschau, Zagreb, Zaporozhye, Zurich
+Choices-pt.UTF-8: Amsterdão, Andorra, Atenas, Belfast, Belgrado, Berlim, Bratislávia, Bruxelas, Bucareste, Budapeste, Chisinau, Copenhaga, Dublin, Gibraltar, Guernsey, Helsínquia, Ilha de Man, Istambul, Jersey, Kaliningrado, Kiev, Lisboa, Ljubljana, Londres, Luxemburgo, Madrid, Malta, Mariehamn, Minsk, Mónaco, Moscovo, Nicósia, Oslo, Paris, Podgorica, Praga, Riga, Roma, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofia, Estocolmo, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vaticano, Viena, Vilnius, Volgograd, Varsóvia, Zagreb, Zaporozhye, Zurique
+Choices-ru.UTF-8: Амстердам, Андорра, Афины, Белфаст, Белград, Берлин, Братислава, Брюссель, Бухарест, Будапешт, Кишинёв, Копенгаген, Дублин, Гибралтар, Гернси, Хельсинки, Остров Мэн, Стамбул, Джерси, Калининград, Киев, Лиссабон, Любляна, Лондон, Люксембург, Мадрид, Мальта, Мариехамн, Минск, Монако, Москва, Никосия, Осло, Париж, Подгорица, Прага, Рига, Рим, Самара, Сан-Марино, Сараево, Симферополь, Скопье, София, Стокгольм, Таллин, Тирана, Тирасполь, Ужгород, Вадуц, Ватикан, Вена, Вильнюс, Волгоград, Варшава, Загреб, Запорожье, Цюрих
+Choices-sq.UTF-8: Amsterdam, Andorra, Athens, Belfast, Belgrade, Berlin, Bratislava, Brussels, Bucharest, Budapest, Chisinau, Copenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istanbul, Jersey, Kaliningrad, Kiev, Lisbonë, Ljubljana, London, Luxembourg, Madrid, Malta, Mariehamn, Minsk, Monako, Moskë, Nicosia, Oslo, Paris, Podgorica, Prague, Riga, Rome, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Vienna, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
+Choices-sv.UTF-8: Amsterdam, Andorra, Aten, Belfast, Belgrad, Berlin, Bratislava, Bryssel, Bukarest, Budapest, Chisinau, Köpenhamn, Dublin, Gibraltar, Guernsey, Helsingfors, Isle of Man, Istanbul, Jersey, Kaliningrad, Kiev, Lissabon, Ljubljana, London, Luxemburg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moskva, Nicosia, Oslo, Paris, Podgorica, Prag, Riga, Rom, Samara, San Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirana, Tiraspol, Uzjhorod, Vaduz, Vatikanstaten, Wien, Vilnius, Volgograd, Warszawa, Zagreb, Zaporozhye, Zürich
+Choices-tr.UTF-8: Amsterdam, Andora, Atina, Belfast, Belgrad, Berlin, Bratislava, Brüksel, Bükreş, Budapeşte, Kişinev, Kopenhag, Dublin, Cebelitarık, Guernsey, Helsinki, Man Adası, İstanbul, Jersey, Kaliningrad, Kiev, Lizbon, Ljubljana, Londra, Lüksemburg, Madrid, Malta, Mariehamn, Minsk, Monako, Moskova, Lefkoşa, Oslo, Paris, Podgorica, Prag, Riga, Roma, Samara, San Marino, Saraybosna, Akmescit, Üsküp, Sofya, Stockholm, Tallinn, Tiran, Tiraspol, Uzhgorod, Vaduz, Vatikan, Viyana, Vilnüs, Volgograd, Varşova, Zagreb, Zaporosya, Zürih
+Choices-vi.UTF-8: Amsterdam, Andorra, Athens, Belfast, Belgrade, Berlin, Bratislava, Brussels, Bucharest, Budapest, Chisinau, Copenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istanbul, Jersey, Kaliningrad, Kiev, Lisbon, Ljubljana, London, Luxembourg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moscow, Nicosia, Oslo, Paris, Podgorica, Prague, Riga, Roma, Samara, San_Marino, Sarajevo, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Vienna, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
+Choices-wo.UTF-8: Amsterdaam, Andorra, Ateen, Belfast, Belgraad, Berliin, Bratislava, Bruuksel, Bukarest, Budapest, Chisinau, Kopenhaagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istambul, Jersey, Moscou -01 (Kaliningrad), Kiyeef, Lisbonne (cas général), Liyubliyaana, London, Luksembuur, Madrid (cas général), Malt, Mariehamn, Minsk, Monaako, Moscou (Russie de l'Ouest), Nikoosi, Oslo, Pari, Podgoritsa, Praag, Riga, Room, Moscou +01 (Mer Caspienne), San_Marino, Sarayeefo, Simferopol, Skopiye, Sofia, Stokholm, Tallinn, Tirane, Tiraspol, Uzhgorod, Vaduz, Vatican, Vieen, Vilnius, Volgograd, Warsowi, Zagreb, Zaporozhye, Zurik
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Indian
+Type: select
+Choices: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-be.UTF-8: Антананарыву, Чагас, Востраў Раства, Какосавыя астравы, Каморы, Кэргелен, Магэ, Мальдывы, Маўрыцы, Маёт, Рэюньён
+Choices-bg.UTF-8: Антананариво, Чагос, о-в Рождество, о-ви Кокос, Коморски о-ви, Кергуелен, Махе, Малдивски о-ви, Мавриций, Майоте, Реюнион
+Choices-ca.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-cs.UTF-8: Antananarivo, Čagoské ostrovy, Vánoční ostrov, Kokosové ostrovy, Komory, Kergueleny, Mahé, Maldivy, Mauritius, Mayotte, Reunion
+Choices-de.UTF-8: Antananarivo, Chagos, Christmas, Kokos, Comoro, Kerguelen, Mahe, Malidiven, Mauritius, Mayotte, Réunion
+Choices-en.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-es.UTF-8: Antananarivo, Chagos, Isla de Navidad, Cocos, Comoro, Kerguelen, Mahe, Maldivas, Mauricio, Mayotte, Reunión
+Choices-eu.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldivak, Maurizio, Mayotte, Reunion
+Choices-fi.UTF-8: Antananarivo, Chagos, Joulusaari, Kookossaaret, Comoro, Kerguelen, Mahé, Malediivit, Mauritius, Mayotte, Réunion
+Choices-fr.UTF-8: Tananarive, Chagos, Christmas (île), Cocos (îles), Comores, Kerguelen, Mahé, Maldives, Île Maurice, Mayotte, Réunion
+Choices-gl.UTF-8: Antananarivo, Chagos, Illa de Nadal, Illas Cocos, Illas Comores, Kerguelen, Mahe, Illas Maldivas, Mauricio, Mayotte, Illa de Reunión
+Choices-gu.UTF-8: એન્ટાનાનારીવો, ચાગોસ, ક્રિસમસ, કોકોસ, કોમોરો, કેર્ગુએલેન, માહે, માલદિવ, મોરિશિઅસ, માયોટ્ટે, રીયુનિયન
+Choices-hr.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldivi, Mauricijus, Mayotte, Reunion
+Choices-hu.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldív-szigetek, Mauritius, Mayotte, Reunion
+Choices-id.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-ja.UTF-8: アンタナナリヴォ, チャゴス, クリスマス, ココス, コモロ, ケルゲレン, マエ, モルジヴ, モーリシャス, マヨット, レユニオン
+Choices-ku.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-lt.UTF-8: Antananaryvas, Čagoso_archipelagas, Velykų_sala, Kokoso_salos, Komoro_salos, Ketgeleno_sala, Mahė, Maldyvai, Mauricijus, Mayoteas, Reunionas
+Choices-ml.UTF-8: അന്റനാനാറിവോ, ചാഗോസ്, ക്രിസ്തുമസ്, കൊകോസ്, കൊമോറോ, കെര്‍ഗുവേലന്‍, മാഹി, മാലിദ്വീപ്, മൌറീഷ്യസ്, മയോട്ടേ, റീയൂണിയന്‍
+Choices-nl.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldiven, Mauritius, Mayotte, Reunion
+Choices-pt.UTF-8: Antananarivo, Chagos, Ilha Natal, Cocos, Comoro, Kerguelen, Mahe, Maldivas, Maurício, Mayotte, Ilha Reunião
+Choices-ru.UTF-8: Антананариву, Чагос, Остров Рождества, Кокосовые острова, Коморские острова, Кергелен, Маэ, Мальдивы, Маврикий, Майотта, Реюньон
+Choices-sq.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-sv.UTF-8: Antananarivo, Chagosöarna, Christmas Island, Cocosöarna, Komorerna, Kerguelenöarna, Mahé, Maldiverna, Mauritius, Mayotte, Réunion
+Choices-tr.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Komoro, Kerguelen, Mahe, Maldivler, Mauritius, Mayotte, Reunion
+Choices-vi.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+Choices-wo.UTF-8: Antananarivo, Chagos, Christmas, Cocos, Komoor, Kerguelen, Mahe, Maldiif, Mooris, Mayot, Reunion
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Pacific
+Type: select
+Choices: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-be.UTF-8: Апія, Оўклэнд, Чатам, Востраў Пасхі, Эфат, Эндарбары, Факаёфа, Фіджы, Фунафуці, Галапагос, Гамбер, Гуядалканал, Гуям, Ганалулу, Джонстан, Кірытымаці, Косра, Кваялэйн, Маджура, Маркізы, Мідвэй, Наўру, Ніў, Норфалк, Нумэя, Пага-Пага, Палаў, Піткэрн, Панап, Порт-Морзбі, Раратонга, Сайпан, Samoa, Таіці, Тарава, Тангатапу, Трук, Ўэйк, Ўэліс, Яп
+Choices-bg.UTF-8: Апия, Окланд, о-ви Чатам, Великденски остров, Ефат, Ендербъри, Факаофо, Фиджи, Фунафути, Галапагоски о-ви, о-ви Гамбир, Гуадалканал, Гуам, Хонолулу, Джонстън, Киритимати, Косрае, Куаджалейн, Маджуро, Маркизки о-ви, Мидуей, Науру, Ниуе, Норфолк, Нумеа, Паго Паго, Палау, Питкейрн, Понапе, Порт Морзби, Раротонга, Сейпан, Самоа, Таити (Дружествени о-ви), Тарава (Гилбертски о-ви), Тонгатапу, Трък, Уейк, Уелис, Яп
+Choices-ca.UTF-8: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Naurà, Niue, Norfolk, Noumea, Pago Pago, Palau, Pitcairn, Ponape, Port Moresby, Rarotonga, Saipan, Samoa, Tahití, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-cs.UTF-8: Apia, Auckland, Chathamské ostrovy, Velikonoční ostrov, Efate, Enderbury (Phoenixovy ostrovy), Fakaofo, Fidži, Funafuti, Galapágy, Gambierovy ostrovy, Guadalcanal, Guam, Honolulu, Atol Johnston, Kiritimati (Vánoční ostrov), Kosrae, Atol Kwajalein, Majuro, Markézy, Midwayské ostrovy, Nauru, Niue, Norfolk, Nouméa, Pago Pago, Palau, Pitcairnovy ostrovy, Ponape, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa (Gilbertovy ostrovy), Tongatapu, Truk, Ostrov Wake, Ostrov Walis, Yap
+Choices-de.UTF-8: Apia, Auckland, Chatham, Easter, Éfaté, Enderbury, Fakaofo, Fidschi, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Nouméa, Pago Pago, Palau, Pitcairn, Pohnpei, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-en.UTF-8: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago Pago, Palau, Pitcairn, Ponape, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-es.UTF-8: Apia, Auckland, Chatham, Isla de Pascua, Efate, Enderbury, Fakaofo, Fiyi, Funafuti, Galápagos, Gambier, Guadalcanal, Guam, Honolulú, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Numea, Pago Pago, Palau, Pitcairn, Ponape, Puerto Moresby, Rarotonga, Saipán, Samoa, Tahití, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-eu.UTF-8: Apia, Auckland, Chatham, Ekialdea, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagoak, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-fi.UTF-8: Apia, Auckland, Chathamsaaret, Pääsiäissaari, Efate, Enderbury, Fakaofo, Fidži, Funafuti, Galápagossaaret, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midwaysaaret, Nauru, Niue, Norfolk, Nouméa, Pago Pago, Palau, Pitcairn, Pohnpei, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Chuuk, Wakensaari, Wallis, Yap
+Choices-fr.UTF-8: Apia, Auckland, îles Chatham, Île de Pâques, Efate, Enderbury (îles Phoenix), Fakaofo, Fidji, Funafuti, Îles Galapagos, Îles Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati (îles Line), Kosrae, Kwajalein, Majuro, Îles Marquises, îles Midway, Nauru, Niue, Norfolk, Nouméa, Pago Pago, Palau, Pitcairn, Ponape, Port-Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa (îles Gilbert), Tongatapu, Truk, Wake (île), Wallis, Yap
+Choices-gl.UTF-8: Apia, Auckland, Illas Chatham, Illa de Pascua, Efate, Enderbury (Illas Phoenix), Fakaofo, Fixi, Funafuti, Galápagos, Illas Gambier, Guadalcanal, Guam, Honolulú, Atol de Johnston, Kiritimati (Illas Line), Kosrae, Kwajalein, Majuro, Illas Marquesas, Illas Midway, Nauru, Niue, Norfolk, Noumea, Pago Pago, Palau, Pitcairn, Ponape, Port Moresby, Rarotonga, Saipán, Samoa, Tahití, Tarawa (Illas Gilbert), Tongatapu, Truk, Illa de Wake, Wallis, Yap
+Choices-gu.UTF-8: અપિઆ, ઓકલેન્ડ, ચેથામ, ઇસ્ટર, ઇફાટે, એન્ડરબરી, ફાકાઓફો, ફિજી, ફુનાફુટી, ગાલાપાગોસ, ગામ્બેઇર, ગુઆડાલ્કેનાલ, ગુઆમ, હોનોલુલુ, જોહ્નસ્ટન, કીરીમાતી, કોસ્રે, ક્વાજાલેઇન, માજુરો, માર્કેસસ, મિડવે, નાઉરુ, નિયુ, નોર્ફોક, નાઉમે, પાગો પાગો, પાલુઆ, પિટકેર્ન, પોનાપે, પોર્ટ મોર્સબે, રારોટોન્ગા, સાઇપાન, સમોઆ, તાહિતિ, તારાવા, ટોન્ગાટાપુ, ટ્રૂક, વેક, વાલ્લિસ, યેપ
+Choices-hr.UTF-8: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-hu.UTF-8: Apia, Auckland, Chatham-szigetek, Húsvét-szigetek, Efate, Enderbury (Főnix-szigetek), Fakaofo, Fidzsi, Funafuti, Galápagos-szigetek, Gambier-szigetek, Guadalcanal, Guam, Honolulu, Johnston Atoll, Kiritimati (Line-szigetek), Kosrae, Kwajalein, Majuro, Marquesas-szigetek, Midway-szigetek, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Szamoa, Tahiti, Tarawa (Gilbert-szigetek), Tongatapu, Truk, Wake sziget, Wallis, Yap
+Choices-id.UTF-8: Apia, Auckland, Kepulauan_Chatham, Pulau_Easter, Efate, Enderbury (Kep. Phoenix), Fakaofo, Fiji, Funafuti, Galapagos, Kep_Gambier, Guadalcanal, Guam, Honolulu, Atol Johnston, Kiritimati_(Kep_Line), Kosrae, Kwajalein, Majuro, Kep_Marquesas, Kep_Midway-Islands, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti_(Kep_Society), Tarawa_(Kep_Gilbert), Tongatapu, Truk, Pulau_Wake, Wallis, Yap
+Choices-ja.UTF-8: アピア, オークランド, チャタム島, イースター島, エファーテ, エンダーベリー, ファカオフォ, フィジー, フナフティ, ガラパゴス, ガンビア, ガダルカナル, グアム, ホノルル, ジョンストン, キリティマティ, コスラエ, クアジャリン, マジュロ, マルケサス, ミッドウェー, ナウル, ニウエ, ノーフォーク, ヌーメア, パゴパゴ, パラオ, ピトケアン島, ポナペ, ポルトモーズビー, ラロトンガ, サイパン, サモア, タヒチ, タラワ, トンガタプ, トラック, ウェーク, ヴァリス, ヤップ
+Choices-ku.UTF-8: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fîjî, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-lt.UTF-8: Apija, Oklandas, Chatham_salos, Velykų_sala, Efate_sala, Enderberis, Fakaofo_sala, Fidžis, Funafutis, Galapagos, Gambier_salos, Gvadalkanalio_sala, Guamas, Honolulu, Džonstono_atolas, Kiritimati, Kosrae, Kvadželeino_atolas, Madžūras, Markizo_salos, Midvėjaus_salos, Nauru, Niuė, Norfolkas, Nomea, Pago_Pago, Palau, Pikterno_salos, Ponapė, Port_Morsbis, Rarotonga, Saipanas, Samoa, Taitis, Tarava, Tongatapu, Trukas, Veiko_sala, Valis, Japas
+Choices-ml.UTF-8: അപിയ, ഓക്‍ലണ്ട് ‍ , ചാതം, ഈസ്റ്റര്‍, ഇഫേറ്റ്, എന്‍ഡെര്‍ബറി, ഫകവോഫോ, ഫിജി, ഫുനാഫുട്ടി, ഗാലപ്പഗോസ്, ഗാമ്പിയര്‍, ഗ്വാഡല്‍കനാല്‍, ഗുാവാം, ഹോണോലുലു, ജോണ്‍സണ്‍, ക്രിതിമാതി, കൊസ്രേ, ക്വജാലൈന്‍, മജൂറോ, മാര്‍‌ക്വേസാസ്, മിഡ്‌വേ, നൌറു, നിയു, നോര്‍ഫോക്ക്, നൌമിയ, പാഗോ_പാഗോ, പലാവു, പിറ്റ്കയേണ്‍, പൊനാപേ, മോര്‍സ്ബി_തുറമുഖം, രരോടോങ്ക, സായിപാന്‍, സമോവ, താഹിതി, തരാവ, ടോങ്കടാപു, ട്രക്, വേയ്ക്ക്, വാളിസ്, യാപ്
+Choices-nl.UTF-8: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-pt.UTF-8: Apia, Auckland, Chatham, Ilha da Páscoa, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galápagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Nouméa, Pago Pago, Palau, Pitcairn, Ponape, Porto Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-ru.UTF-8: Апиа, Окленд, Чатем, Остров Пасхи, Эфате, Эндербери, Факаофо, Фиджи, Фунафути, Галапагосские острова, Остров Гамбье, Гуадалканал, Гуам, Гонолулу, Джонстон, Киритимати, Кусаие, Кваджалейн, Маджуро, Маркизские острова, Мидуэй, Науру, Ниуэ, Норфолк, Нумеа, Паго-Паго, Палау, Питкэрн, Понпей, Порт-Морсби, Раротонга, Сайпан, Самоа, Таити, Тарава, Тонгатапу, Трук, Уэйк, Уоллис, Яп
+Choices-sq.UTF-8: Apia, Auckland, Chatham, Easter, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+Choices-sv.UTF-8: Apia, Auckland, Chathamöarna, Påskön, Éfaté, Enderburyatollen, Fakaofo, Fiji, Funafuti, Galapagosöarna, Gambieröarna, Guadalcanal, Guam, Honolulu, Johnston Island, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesasöarna, Midwayöarna, Nauru, Niue Island, Norfolk Island, Nouméa, Pago Pago, Palau, Pitcairnöarna, Pohnpei, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Chuuk, Wakeöarna, Wallisön, Yap
+Choices-tr.UTF-8: Apia, Auckland, Chatham, Paskalya, Efate, Enderbury, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Markiz, Midway, Nauru, Nie, Norfolk, Noumea, Pago Pago, Palau, Pitcairn, Ponape, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti-Faaa, Tarawa, Tongatapu, Truk, Wake, Valais, Yap
+Choices-vi.UTF-8: Apia, Auckland, Chatham Islands, Easter Island, Efate, Enderbury, Fakaofo, Phi-gi, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kiritimati, Kosrae, Kwajalein, Majuro, Quần đảo Marquesas, Quần Đảo Midway, Nauru, Niue, Norfolk, Noumea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa (Quần đảo trong Thái Bình Dương), Tahiti (Quần đảo Society), Tarawa (Quần đảo Gilbert), Tongatapu, Truk, Đảo Wake, Wallis, Yap
+Choices-wo.UTF-8: Apia, Auckland (cas général), îles Chatham, Île de Pâques, Efate, Enderbury (îles Phoenix), Fakaofo, Fiji, Funafuti, Îles Galapagos, Îles Gambier, Guadalcanal, Guam, Honolulu, Atoll Johnston, Kiritimati (îles Line), Kosrae, Kwajalein, Majuro, Îles Marquises, îles Midway, Nauru, Niue, Norfolk, Numea, Pago_Pago, Palau, Pitcairn, Ponape, Port_Moresby, Rarotonga, Saipan, Samoa, Tahiti (îles de la Société), Tarawa (îles Gilbert), Tongatapu, Truk, île Wake, Wallis, Yap
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/SystemV
+Type: select
+Choices: AST4, AST4ADT, CST6, CST6CDT, EST5, EST5EDT, HST10, MST7, MST7MDT, PST8, PST8PDT, YST9, YST9YDT
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+
+Template: tzdata/Zones/Etc
+Type: select
+Choices: GMT, GMT+0, GMT+1, GMT+10, GMT+11, GMT+12, GMT+2, GMT+3, GMT+4, GMT+5, GMT+6, GMT+7, GMT+8, GMT+9, GMT-0, GMT-1, GMT-10, GMT-11, GMT-12, GMT-13, GMT-14, GMT-2, GMT-3, GMT-4, GMT-5, GMT-6, GMT-7, GMT-8, GMT-9, GMT0, Greenwich, UCT, UTC, Universal, Zulu
+Description: Time zone:
+ Please select the time zone corresponding to your location.
+Description-be.UTF-8: Часавы пояс:
+ Выберыце часавы пояс адпаведна вашаму знаходжанню.
+Description-bg.UTF-8: Часови пояс:
+ Изберете часовия пояс, в който се намирате.
+Description-ca.UTF-8: Fus horari:
+ Si us plau, seleccioneu el fus horari corresponent a la vostra ubicació.
+Description-cs.UTF-8: Časové pásmo:
+ Zvolte prosím časové pásmo odpovídající vašemu umístění.
+Description-de.UTF-8: Zeitzone:
+ Bitte wählen Sie die Zeitzone aus, die zu Ihrem Standort passt.
+Description-en.UTF-8: Time zone:
+ Please select the time zone corresponding to your location.
+Description-es.UTF-8: Zona horaria:
+ Por favor, elija la zona horaria que corresponde a su ubicación.
+Description-eu.UTF-8: Ordu zonaldea:
+ Mesedez hautatu zure kokapenari dagokion ordu zonaldea.
+Description-fi.UTF-8: Aikavyöhyke:
+ Valitse aikavyöhyke, joka vastaa sijaintiasi.
+Description-fr.UTF-8: Fuseau horaire :
+ Veuillez choisir le fuseau horaire correspondant à votre emplacement géographique.
+Description-gl.UTF-8: Fuso horario:
+ Escolla o fuso horario correspondente á súa ubicación.
+Description-gu.UTF-8: સમય વિસ્તાર:
+ મહેરબાની કરી તમારા સ્થળને અનુરુપ સમય વિસ્તાર પસંદ કરો.
+Description-he.UTF-8: אזור זמן:
+ בחר בבקשה את אזור הזמן שמתאים למקום שלך:
+Description-hr.UTF-8: Vremenska zona:
+ Molim odaberite vremensku zonu koja odgovara vaÄšÄoj lokaciji.
+Description-hu.UTF-8: Időzóna:
+ Kérlek, válaszd ki a helyzetednek megfelelő időzónát:
+Description-id.UTF-8: Daerah Waktu:
+ Silakan pilih daerah waktu yang bersesuaian dengan tempat Anda.
+Description-it.UTF-8: Fuso orario:
+ Per favore, scegli il fuso orario corrispondente al tuo luogo.
+Description-ja.UTF-8: 時間帯:
+ あなたの居住地に一致する時間帯を選択してください。
+Description-ku.UTF-8: Herêma saetê:
+ Ji kerema xwe re herêma xwe ya saetê hilbijêre.
+Description-lt.UTF-8: Lako zona:
+ Pasirinkite laiko zoną, atitinkančią Jūsų vietovę.
+Description-ml.UTF-8: സമയ മേഘല:
+ ദയവായി നിങ്ങളുടെ സ്ഥലത്തിന്റെ സമയ മേഘല തിരഞ്ഞെടുക്കുക.
+Description-nl.UTF-8: Tijdzone:
+ Wat is de tijdzone die met uw lokatie overeenkomt?
+Description-pt.UTF-8: Fuso horário:
+ Por favor escolha o fuso horário do sítio onde se encontra.
+Description-ru.UTF-8: Часовой пояс:
+ Выберите часовой пояс, соответствующий вашему местоположению.
+Description-sq.UTF-8: Zona kohore:
+ Të lutem zgjidh zonën kohore që i përket vendndodhjes tënde.
+Description-sv.UTF-8: Tidszon:
+ Välj den tidszon som motsvarar din plats.
+Description-th.UTF-8: เขตเวลา:
+ โปรดระบุเขตเวลาที่ตรงกับตำแหน่งที่คุณอยู่
+Description-tr.UTF-8: Saat dilimi:
+ Lütfen konumunuza karşılık gelen saat dilimini seçin.
+Description-vi.UTF-8: Múi giờ :
+ Hãy chọn múi giờ đại diện với chỗ bạn.
+Description-wo.UTF-8: Goxu waxtu:
+ Tannal goxu waxtu bi dëppóo ak barab bi nga nekk.
+

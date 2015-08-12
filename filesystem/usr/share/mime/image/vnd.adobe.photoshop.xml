@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="image/vnd.adobe.photoshop">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>Photoshop image</comment>
+  <comment xml:lang="da">Photoshop-billede</comment>
+  <comment xml:lang="el">εικόνα Photoshop</comment>
+  <comment xml:lang="eo">Photoshop-bildo</comment>
+  <comment xml:lang="ms">Imej Photoshop</comment>
+  <comment xml:lang="pt">imagem do Photoshop</comment>
+  <comment xml:lang="sr">Фотошоп слика</comment>
+  <comment xml:lang="zh_CN">Photoshop 图像</comment>
+  <comment xml:lang="zh_TW">Photoshop 圖片</comment>
+  <alias type="image/x-psd"/>
+</mime-type>

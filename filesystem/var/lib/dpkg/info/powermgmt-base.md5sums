@@ -1,0 +1,9 @@
+0e3e49f51ebc3bb2a74033d641cb6246  sbin/apm_available
+c57336ccf5a03f781a0f40f7f4db9f09  sbin/acpi_available
+538cdc660f80053c39486fb7a792744c  sbin/on_ac_power
+475a60b41329f2ab5b4a4edd6f9d5a4c  usr/share/doc/powermgmt-base/copyright
+80f8b98f75b66a04f4063719c7dbea7a  usr/share/doc/powermgmt-base/changelog.gz
+a49e4aee986723da3e1d018862c9b959  usr/share/doc/powermgmt-base/README.Debian
+54fa91522bdb6e75b722166accbd8c2d  usr/share/man/man1/acpi_available.1.gz
+b668039ded2043ea439663eb5ce3e638  usr/share/man/man1/on_ac_power.1.gz
+745a30178fe9ca98e0733a42625821a9  usr/share/man/man1/apm_available.1.gz

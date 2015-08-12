@@ -1,0 +1,114 @@
+=head1 NAME
+
+Gnome2::Canvas::Shape
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::Canvas::Shape
+
+
+=head1 METHODS
+
+=head2 pathdef = $shape-E<gt>B<get_path_def> 
+
+=over
+
+=back
+
+=head2 $shape-E<gt>B<set_path_def> ($path_def)
+
+=over
+
+=over
+
+=item * $path_def (Gnome2::Canvas::PathDef) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'cap-style' (Gtk2::Gdk::CapStyle : readable / writable)
+
+=item 'dash' (gpointer : readable / writable)
+
+=item 'fill-color' (string : writable)
+
+=item 'fill-color-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+=item 'fill-color-rgba' (Glib::UInt : readable / writable)
+
+=item 'fill-stipple' (Gtk2::Gdk::Drawable : readable / writable)
+
+=item 'join-style' (Gtk2::Gdk::JoinStyle : readable / writable)
+
+=item 'miterlimit' (double : readable / writable)
+
+=item 'outline-color' (string : writable)
+
+=item 'outline-color-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+=item 'outline-color-rgba' (Glib::UInt : readable / writable)
+
+=item 'outline-stipple' (Gtk2::Gdk::Drawable : readable / writable)
+
+=item 'width-pixels' (Glib::UInt : readable / writable)
+
+=item 'width-units' (double : readable / writable)
+
+=item 'wind' (Glib::UInt : readable / writable)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::Gdk::CapStyle
+
+=over
+
+=item * 'not-last' / 'GDK_CAP_NOT_LAST'
+
+=item * 'butt' / 'GDK_CAP_BUTT'
+
+=item * 'round' / 'GDK_CAP_ROUND'
+
+=item * 'projecting' / 'GDK_CAP_PROJECTING'
+
+=back
+
+
+=head2 enum Gtk2::Gdk::JoinStyle
+
+=over
+
+=item * 'miter' / 'GDK_JOIN_MITER'
+
+=item * 'round' / 'GDK_JOIN_ROUND'
+
+=item * 'bevel' / 'GDK_JOIN_BEVEL'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

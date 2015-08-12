@@ -1,0 +1,13 @@
+538904e14cb89efaf82c5c208be8ace3  usr/share/doc/libgconf2-4/copyright
+b709793427c1eb6175162f773d168179  usr/share/doc/libgconf2-4/changelog.Debian.gz
+173cf1c644baa2dbba589fef018a13cb  usr/share/doc/libgconf2-4/TODO
+a0c92dea68d9e57cdfa4a6a336387c83  usr/share/doc/libgconf2-4/README
+7b8bad6fdfa48c701eb8f27a6d261559  usr/share/doc/libgconf2-4/NEWS.gz
+4507c7b209896c38b6866b601c93fb21  usr/share/doc/libgconf2-4/AUTHORS
+0e2f9ae09198895b39322c063f86c8c3  usr/lib/libgconf-2.so.4.1.5
+86ca450f045ce2eb8709df16451eabc0  usr/lib/libgconf2-4/gconfd-2
+8deb08ee2a8ef4b821792ce8c8ee72fe  usr/lib/libgconf2-4/gconf-defaults-mechanism
+29be298c5031bbc1bb5da7ab1f722348  usr/lib/libgconf2-4/gconf-sanity-check-2
+cb5097c0ba789b961b4bd135f6feb787  usr/lib/libgconf2-4/2/libgconfbackend-oldxml.so
+347915b68b571b7f91a22e8fb2a7fb25  usr/lib/libgconf2-4/2/libgconfbackend-xml.so
+a02099fb31cf1fcf402292494376d869  usr/lib/libgconf2-4/2/libgconfbackend-evoldap.so

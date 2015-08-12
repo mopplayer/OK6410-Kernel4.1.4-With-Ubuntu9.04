@@ -1,0 +1,10 @@
+51f8ba03835df34b0c384080b8f26aa7  usr/share/doc/liborbit2/copyright
+3fcae7f3ff863682beb889636d93007f  usr/share/doc/liborbit2/changelog.Debian.gz
+48e87d41ee360d196659ec749dd2f89a  usr/share/doc/liborbit2/TODO
+935f75322d3aeacd8f44fd32a9d9267a  usr/share/doc/liborbit2/README
+5cbf013f3da47c7082dffcefb8732636  usr/share/doc/liborbit2/NEWS.gz
+65aada1d249f324262e1f55965d2bd8e  usr/share/doc/liborbit2/AUTHORS
+13a83deeef7a124e24603d473f8a1bff  usr/lib/libORBit-2.so.0.1.0
+33a9492543d88a9b7d925ead868b35bd  usr/lib/libORBit-imodule-2.so.0.0.0
+688d22427b7c825c81b43a38a5948bcd  usr/lib/orbit-2.0/Everything_module.so
+eb9b10e13c253445e531fb05057c9de7  usr/lib/libORBitCosNaming-2.so.0.1.0

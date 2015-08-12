@@ -1,0 +1,7 @@
+#! /bin/sh -e
+
+if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ] ; then
+	rm -f /var/lib/update-notifier/user.d/user-must-execute-asoundconf-set-default-card
+fi
+
+

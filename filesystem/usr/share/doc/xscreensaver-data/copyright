@@ -1,0 +1,70 @@
+This is the GNU/Linux prepackaged version of XScreenSaver
+
+This package was put together by Larry Daffner <vizzie@airmail.net>
+from sources obtained from:
+	http://www.jwz.org/xscreensaver/xscreensaver-3.17.tar.gz
+
+xscreensaver is copyright (c) 1991-2005 Jamie Zawinski <jwz@netscape.com>
+
+Permission to use, copy, modify, distribute, and sell this software and its
+documentation for any purpose is hereby granted without fee, provided that
+the above copyright notice appear in all copies and that both that
+copyright notice and this permission notice appear in supporting
+documentation.  No representations are made about the suitability of this
+software for any purpose.  It is provided "as is" without express or
+implied warranty.
+
+------
+
+From the hacks:
+
+flame, hopalong Copyright (c) 1991 by Patrick J. Naughton.
+
+Permission to use, copy, modify, and distribute this software and its
+documentation for any purpose and without fee is hereby granted,
+provided that the above copyright notice appear in all copies and that
+both that copyright notice and this permission notice appear in
+supporting documentation.
+
+This file is provided AS IS with no warranties of any kind.  The author
+shall have no liability with respect to the infringement of copyrights,
+trade secrets or any patents by this file or any part thereof.  In no
+event will the author be liable for any lost revenue or profits or
+other special, indirect and consequential damages.
+
+------
+
+maze  Copyright 1988 by Sun Microsystems, Inc. Mountain View, CA.
+
+ All Rights Reserved
+
+ Permission to use, copy, modify, and distribute this software and its
+ documentation for any purpose and without fee is hereby granted,
+ provided that the above copyright notice appear in all copies and that
+ both that copyright notice and this permission notice appear in
+ supporting documentation, and that the names of Sun or MIT not be
+ used in advertising or publicity pertaining to distribution of the
+ software without specific prior written permission. Sun and M.I.T.
+ make no representations about the suitability of this software for
+ any purpose. It is provided "as is" without any express or implied warranty.
+
+ SUN DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE, INCLUDING
+ ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ PURPOSE. IN NO EVENT SHALL SUN BE LIABLE FOR ANY SPECIAL, INDIRECT
+ OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+ OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+ OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
+ OR PERFORMANCE OF THIS SOFTWARE.
+
+------
+
+pedal Copyright \(co 1994, by Carnegie Mellon University.  Permission to use,
+copy, modify, distribute, and sell this software and its documentation
+for any purpose is hereby granted without fee, provided fnord that the
+above copyright notice appear in all copies and that both that copyright
+notice and this permission notice appear in supporting documentation.
+No representations are made about the  suitability of fnord this software
+for any purpose.  It is provided "as is" without express or implied
+warranty.
+
+------o

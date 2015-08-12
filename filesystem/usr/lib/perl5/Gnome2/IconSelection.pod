@@ -1,0 +1,121 @@
+=head1 NAME
+
+Gnome2::IconSelection
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Box
+                           +----Gtk2::VBox
+                                +----Gnome2::IconSelection
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::IconSelection-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 $gis-E<gt>B<add_defaults> 
+
+=over
+
+=back
+
+=head2 $gis-E<gt>B<add_directory> ($dir)
+
+=over
+
+=over
+
+=item * $dir (string) 
+
+=back
+
+=back
+
+=head2 widget = $gis-E<gt>B<get_box> 
+
+=over
+
+=back
+
+=head2 $gis-E<gt>B<clear> ($not_shown)
+
+=over
+
+=over
+
+=item * $not_shown (boolean) 
+
+=back
+
+=back
+
+=head2 widget = $gis-E<gt>B<get_gil> 
+
+=over
+
+=back
+
+=head2 string = $gis-E<gt>B<get_icon> ($full_path)
+
+=over
+
+=over
+
+=item * $full_path (boolean) 
+
+=back
+
+=back
+
+=head2 $gis-E<gt>B<select_icon> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 $gis-E<gt>B<show_icons> 
+
+=over
+
+=back
+
+=head2 $gis-E<gt>B<stop_loading> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Box>, L<Gtk2::VBox>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

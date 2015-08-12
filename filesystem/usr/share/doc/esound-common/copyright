@@ -1,0 +1,19 @@
+This package was debianized by Brian M. Almeida bma@debian.org on
+Mon,  8 Jun 1998 13:35:35 -0400.
+
+It was downloaded from ftp://ftp.gnome.org/pub/GNOME/stable/sources/esound/
+
+Author: Eric Mitchell <ricdude@toad.net>
+
+Copyright:
+
+The software in this package falls into several categories, and is
+licensed under either the Gnu GPL or Gnu LGPL as appropriate:
+
+The Enlightened Sound Daemon (esd) - GPL v2
+The Enlightened Sound Daemon Client Library (libesd.so, libesd.a) - LGPL v2
+The ESD-DSP wrapper script and support library (esddsp, libesddsp.so) - LGPL v2
+The Example programs and command line utilities - LGPL v2
+
+You can find the full text of the GPL in /usr/share/common-licenses/GPL-2 and
+the full text of the LGPL in /usr/share/common-licenses/LGPL-2

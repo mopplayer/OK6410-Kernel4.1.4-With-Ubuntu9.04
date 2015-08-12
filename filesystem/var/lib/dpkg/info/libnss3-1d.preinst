@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+migratious_files="libssl3.so libsmime3.so libnssutil3.so libnss3.so"
+
+if [ "$1" = "upgrade" ]; then
+	for f in $migratious_files; do
+		# before new binaries get installed, we move the links
+		if [ -L /usr/lib/$f ]; then
+			rm -f /usr/lib/XNOLDCONFIG_$f.new-migration
+			mv /usr/lib/$f /usr/lib/XNOLDCONFIG_$f.new-migration
+		fi
+		# before the new links get installed, we move the old binaries
+		if [ -r /usr/lib/$f.1d -a ! -L /usr/lib/$f.1d ]; then
+			rm -f /usr/lib/XNOLDCONFIG_$f.1d.new-migration
+			mv /usr/lib/$f.1d /usr/lib/XNOLDCONFIG_$f.1d.new-migration
+		fi
+	done
+fi

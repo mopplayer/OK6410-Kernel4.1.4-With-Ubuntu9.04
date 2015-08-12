@@ -1,0 +1,10 @@
+a99cedce59ed32df35bc519ba306afd1  usr/lib/libmagic.so.1.0.0
+4b0325ca515bcc18a98fb826b691c47a  usr/share/man/man5/magic.5.gz
+924596592976aa94871610d308892176  usr/share/doc/libmagic1/changelog.Debian.gz
+042348e217715df348db3b1a678a7050  usr/share/doc/libmagic1/changelog.gz
+69d76d7735cdf47962dacf323009839a  usr/share/doc/libmagic1/copyright
+891e25bc611b3f3bee6570261856a49f  usr/share/bug/libmagic1/presubj
+8ef93f51cd6f0f15b49d64a0f0f8d551  usr/share/bug/libmagic1/control
+29052d6696d4e9a2e1b03b9f87eaff43  usr/share/file/magic.mgc
+6ccc4178731ab01e1cbaafd0afed2ccc  usr/share/file/magic.mime
+1dd570918963abe042eb03d93e6013f9  usr/share/file/magic

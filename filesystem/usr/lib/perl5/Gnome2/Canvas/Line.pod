@@ -1,0 +1,116 @@
+=head1 NAME
+
+Gnome2::Canvas::Line - Lines as CanvasItems
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::Canvas::Line
+
+=for object Gnome2::Canvas::Line - Lines as CanvasItems
+
+=cut
+
+
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'arrow-shape-a' (double : readable / writable)
+
+=item 'arrow-shape-b' (double : readable / writable)
+
+=item 'arrow-shape-c' (double : readable / writable)
+
+=item 'cap-style' (Gtk2::Gdk::CapStyle : readable / writable)
+
+=item 'fill-color' (string : readable / writable)
+
+=item 'fill-color-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+=item 'fill-color-rgba' (Glib::UInt : readable / writable)
+
+=item 'fill-stipple' (Gtk2::Gdk::Drawable : readable / writable)
+
+=item 'first-arrowhead' (boolean : readable / writable)
+
+=item 'join-style' (Gtk2::Gdk::JoinStyle : readable / writable)
+
+=item 'last-arrowhead' (boolean : readable / writable)
+
+=item 'line-style' (Gtk2::Gdk::LineStyle : readable / writable)
+
+=item 'points' (Gnome2::Canvas::Points : readable / writable)
+
+=item 'smooth' (boolean : readable / writable)
+
+=item 'spline-steps' (Glib::UInt : readable / writable)
+
+=item 'width-pixels' (Glib::UInt : readable / writable)
+
+=item 'width-units' (double : readable / writable)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::Gdk::CapStyle
+
+=over
+
+=item * 'not-last' / 'GDK_CAP_NOT_LAST'
+
+=item * 'butt' / 'GDK_CAP_BUTT'
+
+=item * 'round' / 'GDK_CAP_ROUND'
+
+=item * 'projecting' / 'GDK_CAP_PROJECTING'
+
+=back
+
+
+=head2 enum Gtk2::Gdk::JoinStyle
+
+=over
+
+=item * 'miter' / 'GDK_JOIN_MITER'
+
+=item * 'round' / 'GDK_JOIN_ROUND'
+
+=item * 'bevel' / 'GDK_JOIN_BEVEL'
+
+=back
+
+
+=head2 enum Gtk2::Gdk::LineStyle
+
+=over
+
+=item * 'solid' / 'GDK_LINE_SOLID'
+
+=item * 'on-off-dash' / 'GDK_LINE_ON_OFF_DASH'
+
+=item * 'double-dash' / 'GDK_LINE_DOUBLE_DASH'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

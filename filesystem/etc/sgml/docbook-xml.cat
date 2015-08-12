@@ -1,0 +1,14 @@
+-- 
+## ======================================================================
+## /etc/sgml/docbook-xml.cat : SGML Open Style centralized catalog
+## ======================================================================
+## Please use update-catalog(8) to modify this file.
+## ======================================================================
+--
+CATALOG /usr/share/xml/docbook/schema/dtd/catalog
+CATALOG /usr/share/xml/docbook/schema/dtd/4.0/catalog
+CATALOG /usr/share/xml/docbook/schema/dtd/4.1.2/catalog
+CATALOG /usr/share/xml/docbook/schema/dtd/4.2/catalog
+CATALOG /usr/share/xml/docbook/schema/dtd/4.3/catalog
+CATALOG /usr/share/xml/docbook/schema/dtd/4.4/catalog
+CATALOG /usr/share/xml/docbook/schema/dtd/4.5/catalog

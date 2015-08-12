@@ -1,0 +1,50 @@
+#!/bin/sh
+# sgml-data postinst
+#   jobs: remove old catalog entry in transitional.cat
+
+set -e
+
+PACKAGE=sgml-data
+
+if [ "$1" = configure ]; then
+    # remove legacy SGML catalog
+    update-catalog --quiet --remove "/etc/sgml/${PACKAGE}.cat" /usr/share/sgml/html/dtd/xml/1.0/xhtml.soc
+fi
+
+# automatically generated debhelper commands
+# Automatically added by dh_installcatalogs
+if [ "$1" = "configure" ]; then
+	rm -f /etc/sgml/sgml-data.cat
+	for ordcat in /usr/share/sgml/dtd/catalog /usr/share/sgml/entities/ArborText/catalog /usr/share/sgml/entities/Hewlett-Packard/catalog /usr/share/sgml/entities/sgml-iso-entities-8879.1986/catalog /usr/share/sgml/entities/sgml-iso-entities-9573-13.1991/catalog /usr/share/sgml/html/dtd/catalog /usr/share/sgml/html/dtd/4.0/catalog /usr/share/sgml/html/dtd/4.01/catalog /usr/share/sgml/html/dtd/iso-15445/catalog /usr/share/sgml/html/entities/catalog /usr/share/xml/qaml/catalog /usr/share/xml/svg/catalog /usr/share/xml/entities/xml-iso-entities-8879.1986/catalog; do
+		update-catalog --quiet --add /etc/sgml/sgml-data.cat ${ordcat}
+	done
+	update-catalog --quiet --add --super /etc/sgml/sgml-data.cat
+fi
+# End automatically added section
+# Automatically added by dh_installxmlcatalogs
+if [ "$1" = "configure" ]; then
+	update-xmlcatalog --add --type public --id "+//IDN faq.org//DTD Frequently Asked Questions" --package sgml-data --local /usr/share/xml/qaml/catalog.xml
+	update-xmlcatalog --add --type system --id "http://xml.ascc.net/xml/resource/qaml-xml" --package sgml-data --local /usr/share/xml/qaml/catalog.xml
+	update-xmlcatalog --add --type public --id "+//ISBN 82-7640-023//DTD Frequently Asked Questions//EN" --package sgml-data --local /usr/share/xml/qaml/catalog.xml
+	update-xmlcatalog --add --type system --id "/usr/share/sgml/dtd/qaml-xml.dtd" --package sgml-data --local /usr/share/xml/qaml/catalog.xml
+	update-xmlcatalog --add --type public --id "-//W3C//DTD SVG" --package sgml-data --local /usr/share/xml/svg/catalog.xml
+	update-xmlcatalog --add --type system --id "http://www.w3.org/TR/2001/REC-SVG-20010904/" --package sgml-data --local /usr/share/xml/svg/catalog.xml
+	update-xmlcatalog --add --type system --id "http://www.w3.org/Graphics/SVG/1.1/" --package sgml-data --local /usr/share/xml/svg/catalog.xml
+	update-xmlcatalog --add --type system --id "/usr/share/sgml/dtd/svg" --package sgml-data --local /usr/share/xml/svg/catalog.xml
+	update-xmlcatalog --add --type public --id "ISO 8879:1986//ENTITIES" --package sgml-data --local /usr/share/xml/entities/xml-iso-entities-8879.1986/catalog.xml
+
+	update-xmlcatalog --add --type public --id "+//IDN faq.org//DTD Frequently Asked Questions" --package sgml-data --root
+	update-xmlcatalog --add --type system --id "http://xml.ascc.net/xml/resource/qaml-xml" --package sgml-data --root
+	update-xmlcatalog --add --type public --id "+//ISBN 82-7640-023//DTD Frequently Asked Questions//EN" --package sgml-data --root
+	update-xmlcatalog --add --type system --id "/usr/share/sgml/dtd/qaml-xml.dtd" --package sgml-data --root
+	update-xmlcatalog --add --type public --id "-//W3C//DTD SVG" --package sgml-data --root
+	update-xmlcatalog --add --type system --id "http://www.w3.org/TR/2001/REC-SVG-20010904/" --package sgml-data --root
+	update-xmlcatalog --add --type system --id "http://www.w3.org/Graphics/SVG/1.1/" --package sgml-data --root
+	update-xmlcatalog --add --type system --id "/usr/share/sgml/dtd/svg" --package sgml-data --root
+	update-xmlcatalog --add --type public --id "ISO 8879:1986//ENTITIES" --package sgml-data --root
+
+fi
+# End automatically added section
+
+
+exit 0

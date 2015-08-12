@@ -1,0 +1,409 @@
+=head1 NAME
+
+Gnome2::App
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gtk2::Window
+                                +----Gnome2::App
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::App-E<gt>B<new> ($appname, $title=undef)
+
+=over
+
+=over
+
+=item * $appname (string) 
+
+=item * $title (string) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<accel_group> 
+
+=over
+
+=back
+
+=head2 $app-E<gt>B<add_dock_item> ($item, $placement, $band_num, $band_position, $offset)
+
+=over
+
+=over
+
+=item * $item (Gnome2::Bonobo::DockItem) 
+
+=item * $placement (Gnome2::Bonobo::DockPlacement) 
+
+=item * $band_num (integer) 
+
+=item * $band_position (integer) 
+
+=item * $offset (integer) 
+
+=back
+
+=back
+
+=head2 widget = $app-E<gt>B<add_docked> ($widget, $name, $behavior, $placement, $band_num, $band_position, $offset)
+
+=over
+
+=over
+
+=item * $widget (Gtk2::Widget) 
+
+=item * $name (string) 
+
+=item * $behavior (Gnome2::Bonobo::DockItemBehavior) 
+
+=item * $placement (Gnome2::Bonobo::DockPlacement) 
+
+=item * $band_num (integer) 
+
+=item * $band_position (integer) 
+
+=item * $offset (integer) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<add_toolbar> ($toolbar, $name, $behavior, $placement, $band_num, $band_position, $offset)
+
+=over
+
+=over
+
+=item * $toolbar (Gtk2::Toolbar) 
+
+=item * $name (string) 
+
+=item * $behavior (Gnome2::Bonobo::DockItemBehavior) 
+
+=item * $placement (Gnome2::Bonobo::DockPlacement) 
+
+=item * $band_num (integer) 
+
+=item * $band_position (integer) 
+
+=item * $offset (integer) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<contents> 
+
+=over
+
+=back
+
+=head2 $app-E<gt>B<set_contents> ($contents)
+
+=over
+
+=over
+
+=item * $contents (Gtk2::Widget) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<create_menus> ($uiinfo)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<create_toolbar> ($uiinfo)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<dock> 
+
+=over
+
+=back
+
+=head2 dock = $app-E<gt>B<get_dock> 
+
+=over
+
+=back
+
+=head2 dockitem = $app-E<gt>B<get_dock_item_by_name> ($name)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<enable_layout_config> ($enable)
+
+=over
+
+=over
+
+=item * $enable (boolean) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<get_enable_layout_config> 
+
+=over
+
+=back
+
+=head2 $app-E<gt>B<insert_menus> ($path, $menuinfo)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $menuinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<install_menu_hints> ($uiinfo)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<layout> 
+
+=over
+
+=back
+
+=head2 scalar = $app-E<gt>B<menubar> 
+
+=over
+
+=back
+
+=head2 $app-E<gt>B<set_menus> ($menubar)
+
+=over
+
+=over
+
+=item * $menubar (Gtk2::MenuBar) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<prefix> 
+
+=over
+
+=back
+
+=head2 $app-E<gt>B<remove_menu_range> ($path, $start, $items)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $start (integer) 
+
+=item * $items (integer) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<remove_menus> ($path, $items)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $items (integer) 
+
+=back
+
+=back
+
+=head2 Gnome2::App-E<gt>B<setup_toolbar> ($toolbar, $dock_item)
+
+=over
+
+=over
+
+=item * $toolbar (Gtk2::Toolbar) 
+
+=item * $dock_item (Gnome2::Bonobo::DockItem) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<statusbar> 
+
+=over
+
+=back
+
+=head2 $app-E<gt>B<set_statusbar_custom> ($container, $statusbar)
+
+=over
+
+=over
+
+=item * $container (Gtk2::Widget) 
+
+=item * $statusbar (Gtk2::Widget) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<set_statusbar> ($statusbar)
+
+=over
+
+=over
+
+=item * $statusbar (Gtk2::Widget) 
+
+=back
+
+=back
+
+=head2 $app-E<gt>B<set_toolbar> ($toolbar)
+
+=over
+
+=over
+
+=item * $toolbar (Gtk2::Toolbar) 
+
+=back
+
+=back
+
+=head2 scalar = $app-E<gt>B<vbox> 
+
+=over
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'app-id' (string : readable / writable / construct)
+
+The application ID string
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::Bonobo::DockItemBehavior
+
+=over
+
+=item * 'normal' / 'BONOBO_DOCK_ITEM_BEH_NORMAL'
+
+=item * 'exclusive' / 'BONOBO_DOCK_ITEM_BEH_EXCLUSIVE'
+
+=item * 'never-floating' / 'BONOBO_DOCK_ITEM_BEH_NEVER_FLOATING'
+
+=item * 'never-vertical' / 'BONOBO_DOCK_ITEM_BEH_NEVER_VERTICAL'
+
+=item * 'never-horizontal' / 'BONOBO_DOCK_ITEM_BEH_NEVER_HORIZONTAL'
+
+=item * 'locked' / 'BONOBO_DOCK_ITEM_BEH_LOCKED'
+
+=back
+
+
+=head2 enum Gnome2::Bonobo::DockPlacement
+
+=over
+
+=item * 'top' / 'BONOBO_DOCK_TOP'
+
+=item * 'right' / 'BONOBO_DOCK_RIGHT'
+
+=item * 'bottom' / 'BONOBO_DOCK_BOTTOM'
+
+=item * 'left' / 'BONOBO_DOCK_LEFT'
+
+=item * 'floating' / 'BONOBO_DOCK_FLOATING'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>, L<Gtk2::Window>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

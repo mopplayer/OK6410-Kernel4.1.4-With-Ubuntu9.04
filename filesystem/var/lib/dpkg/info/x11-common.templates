@@ -1,0 +1,767 @@
+
+Template: x11-common/xwrapper/allowed_users
+Type: select
+Choices: Root Only, Console Users Only, Anybody
+Choices-ar.UTF-8: المستخدم root فقط, مستخدمي الطرفية فقط, أي أحد
+Choices-be.UTF-8: Толькі Root, Толькі карыстальнікі кансолі, Усе
+Choices-bg.UTF-8: Само root, Само потребители на конзолата, Всички потребители на системата
+Choices-bs.UTF-8: Samo root, Samo konzolni korisnici, Svako
+Choices-ca.UTF-8: Només root, Només usuaris de la consola, Qualsevol
+Choices-cs.UTF-8: Pouze root, Pouze konzoloví uživatelé, Kdokoliv
+Choices-da.UTF-8: Kun root, Kun konsolbrugere, Alle
+Choices-de.UTF-8: Nur Superuser, Nur Konsolenbenutzer, Jeder
+Choices-dz.UTF-8: རྩ་བ་རྐྱངམ་ཅིག་, མ་སྒྲོམ་ལག་ལེན་པ་ཚུ་རྐྱངམ་ཅིག, ག་འབད་རུང་།
+Choices-el.UTF-8: Μόνο ο χρήστης root, Μόνο από την κονσόλα, Οποιοσδήποτε
+Choices-es.UTF-8: Sólo root, Sólo usuarios de consola, Cualquiera
+Choices-eu.UTF-8: Root bakarrik, Kontsola erabiltzaileak bakarrik, Edozein
+Choices-fi.UTF-8: Vain pääkäyttäjä, Vain konsolikäyttäjät, Kaikki
+Choices-fr.UTF-8: Superutilisateur seulement, Depuis la console, N'importe qui
+Choices-gl.UTF-8: Só o administrador, Só os usuarios da consola, Todos
+Choices-gu.UTF-8: ફક્ત રૂટ, ફક્ત કોન્સોલ વપરાશકર્તાઓ, કોઇપણ
+Choices-he.UTF-8: משתמש-על בלבד, משתמשי מסוף בלבד, כל המשתמשים
+Choices-hr.UTF-8: Samo root, Samo konzolni korisnici, Bilo tko
+Choices-hu.UTF-8: Csak rendszergazda, Csak konzol felhasználók, Bárki
+Choices-id.UTF-8: Hanya Root, Hanya pengguna Konsol, Siapa saja
+Choices-it.UTF-8: Solo root, Solo gli utenti della console, Chiunque
+Choices-ja.UTF-8: Root のみ, コンソールユーザのみ, だれでも
+Choices-km.UTF-8: បាន​តែ Root, បាន​តែ​អ្នក​ប្រើ​កុងសូល​, ផ្សេងទៀត
+Choices-ko.UTF-8: 루트 사용자만, 콘솔 사용자만, 아무나
+Choices-ku.UTF-8: Tenê Root, Tenê Bikarhênerên Konsoleyê, Her Kes
+Choices-lt.UTF-8: Tik administratorius, Tik konsolės naudotojai, Visi
+Choices-ml.UTF-8: റൂട്ട് മാത്രം, കണ്‍സോള്‍ ഉപയോക്താക്കള്‍ മാത്രം, ആരും
+Choices-mr.UTF-8: फक्त मूल, फक्त कन्सोल वापरकर्ते, कोणीही
+Choices-nb.UTF-8: Bare root, Bare konsoll-brukere, Alle
+Choices-ne.UTF-8: मूल मात्र, कन्सोल प्रयोगकर्ता मात्र, कोहि
+Choices-nl.UTF-8: Enkel root, Enkel console-gebruikers, Iedereen
+Choices-nn.UTF-8: Berre root, Berre konsollbrukarar, Alle
+Choices-no.UTF-8: Bare root, Bare konsoll-brukere, Alle
+Choices-pl.UTF-8: Tylko root, Tylko użytkownicy konsoli, Każdy użytkownik
+Choices-pt.UTF-8: Apenas Root, Apenas Utilizadores de Consola, Todos
+Choices-pt_BR.UTF-8: Somente Root, Somente Usuários de Console, Qualquer Um
+Choices-ro.UTF-8: Doar root, Doar utilizatorii de consolă, Oricine
+Choices-ru.UTF-8: Только суперпользователь, Только пользователи из консоли, Кто угодно
+Choices-sk.UTF-8: Len root, Len konzoloví používatelia, Ktokoľvek
+Choices-sq.UTF-8: Vetëm Root, Vetëm Përdorues Konsoli, Çdokush
+Choices-sv.UTF-8: Endast root, Endast konsollanvändare, Alla
+Choices-ta.UTF-8: மூலம் (ரூட்) மட்டும், முனைய பயனாளர்களுக்கு மட்டும், எல்லாருக்கும்
+Choices-th.UTF-8: root เท่านั้น, ผู้ใช้คอนโซลเท่านั้น, ใครก็ได้
+Choices-tr.UTF-8: Sadece Root, Sadece Konsol Kullanıcıları, Herhangi Birisi
+Choices-vi.UTF-8: Chỉ người chủ, Chỉ người dùng bàn giáo tiếp, Bất kỳ ai
+Choices-wo.UTF-8: Root Rekk, Jëfandikukat yu Konsol Rekk, Kumu mana doon
+Choices-zh_CN.UTF-8: 仅根(root)用户, 仅控制台(console)用户, 任何用户
+Choices-zh_TW.UTF-8: 僅限 Root, 僅限 Console 使用者, 無限制
+Default: Console Users Only
+Description: Users allowed to start the X server:
+ Because the X server runs with superuser privileges, it may be unwise to
+ permit any user to start it, for security reasons.  On the other hand, it is
+ even more unwise to run general-purpose X client programs as root, which is
+ what may happen if only root is permitted to start the X server.  A good
+ compromise is to permit the X server to be started only by users logged in to
+ one of the virtual consoles.
+Description-ar.UTF-8: المستخدمين المسموح لهم تشغيل خادم X:
+ لأن خادم X يعمل بصلاحية المستخدم الخارق، فقد لا يكون من الحكمة السماح لأي مستخدم بتشغيله، لأسباب أمنية. من ناحية أخرى، فليس من الحكمة أيضاً تشغيل برامج X العامة كمستخدم root، والذي قد يحدث إن كان المستخدم root هو الوحيد الذي يمكنه تشغيل خادم X. لذا، فإن الحل الأمثل لهذه المعضلة هو السماح فقط لمستخدمي النظام عبر أحد الطرفيات الوهمية.
+Description-be.UTF-8: Карыстальнікі, якім дазволена запускаць X-сервер:
+ X-сервер працуе з прывілеямі супер-карыстальніка, таму з прычын бяспекі лепш не дазваляць запускаць яго любому карыстальніку. З іншага боку, яшчэ горш сітуацыя, калі ўсе кліенцкія X-праграмы працуюць з прывілеямі супер-карыстальніка - так будзе, калі толькі супер-карыстальніку будзе дазволена стартаваць X-сервер. Найлепшае выйсце - дазволіць запуск X-сервера толькі тым карыстальнікам, што зайшлі ў адну з віртуальных кансоляў.
+Description-bg.UTF-8: Потребители, на които им е разрешено да стартират X-сървъра:
+ Понеже X-сървърът се изпълнява с администраторски привилегии, идеята всеки потребител да може да го стартира не е много добра от гледна точка на сигурността. От друга страна, вършенето на ежедневната работа като администратор е още по-лоша идея. Добър компромис е да се разреши стартирането на X-сървъра само на потребители, които работят на системната конзола.
+Description-bs.UTF-8: Korisnici kojima je dopušteno pokretanje X severa:
+ Zbog činjenice što X server radi s privilegijama administratorskog korisnika, nije pametno dopustiti svakom korisniku da ga pokreće iz sigurnosnih razloga.  S druge strane, još manje je pametno pokretati X klijentske programe opšte namjene kao root, a što se može dogoditi ako samo root korisniku dopustite pokretanje X servera.  Dobar kompromis je dozvoliti pokretanje X servera samo korisnicima koji su ulogirani na jednu od virtuelnih konzola.
+Description-ca.UTF-8: Usuaris que poden iniciar el servidor X:
+ Com que el servidor X corre amb privilegis de superusuari, podria no ser assenyat que qualsevol usuari l’iniciara, per motius de seguretat.  D’altra banda, encara té menys seny emprar programes client X de propòsit general com a root, cosa que ocorreria si només root puguera iniciar el servidor X.  Un bon compromís és deixar iniciar el servidor X només a aquells usuaris que hagen entrat al sistema per una de les consoles virtuals.
+Description-cs.UTF-8: Uživatelé, kteří mohou spustit X server:
+ Protože X server běží se superuživatelskými právy, z bezpečnostního hlediska není rozumné dát uživatelům možnost jej spouštět. Na druhou stranu, ještě nebezpečnější je spouštět obecného X klienta jako root, což by se mohlo stát, kdybyste start X serveru povolili pouze rootovi. Rozumným kompromisem je povolit spouštění X serveru pouze uživatelům přihlášeným na virtuální konzoli.
+Description-da.UTF-8: Brugere, der må starte X-serveren:
+ Da X-serveren kører med superbruger-rettigheder kan det af sikkerhedsgrunde være en dårlig idé at tillade enhver at starte den. På den anden side er det endnu dårligere at køre normale X-programmer som root, hvilket netop er, hvad der kan blive resultatet, hvis kun root må starte X-serveren. Et godt kompromis er at kun tillade brugere der er logget ind på en virtuel konsol at starte X-serveren.
+Description-de.UTF-8: Benutzer, die den X-Server starten dürfen:
+ Weil der X-Server mit Superuser-Rechten läuft, kann es unter Sicherheitsaspekten unklug sein, jedem Benutzer das Starten zu erlauben. Andererseits ist es noch unklüger, allgemeine X-Programme als Superuser auszuführen, was passieren könnte, wenn nur der Superuser den X-Server starten darf. Ein guter Kompromiss kann sein, nur den Personen das Starten des X-Servers zu erlauben, die auf einer der virtuellen Konsolen angemeldet sind.
+Description-dz.UTF-8: ལག་ལེན་པ་ཚུ་ཨེགསི་སར་བར་འགོ་བཙུགས་ཆོག:
+ ཨེགསི་སར་བར་འདི་ ལག་ལེན་པ་གཙོ་བོའི་ཁེ་དབང་ཚུ་གི་ཐོག་ལས་ གཡོག་བཀོལཝ་ཨིནམ་ལས་ སྲུང་སྐྱོབས་ཀྱི་རྒྱུ་མཚན་ལུ་བརྟེན་ཏེ་ འགོ་བཙུགས་ནིའི་དོན་ལས་ ལག་ལེན་པ་གང་རུང་ཅིག་ལུ་གནང་བ་བྱིན་ནིའི་དོན་ལུ་ འདི་ལེགས་ཤོམ་མེན་འོང་། གཅིག་ལས་འབད་བ་ཅིན་ འདི་ཡོངས་ཁྱབ་དགོས་དོན་ ཨེགསི་ཞབས་ཏོག་སྤྱོད་མིའི་ལས་རིམ་འདི་ རྩ་བ་སྦེ་གཡོག་བཀོལ་ནིའི་དོན་ལུ་ ཧེང་བཀལ་རང་ལེགས་ཤོམ་མེེདཔ་ཨིན་ དེ་ཡང་ ཨེགསི་སར་བར་འགོ་བཙུགས་ནིའི་དོན་ལུ་ རྩ་བ་རྐྱངམ་ཅིག་ལུ་གནང་བ་བྱིན་ཏེ་ཡོད་པ་ཅིན་ ག་ཅི་འབད་འོང་། ནང་འགྲིགས་ལེགས་ཤོམ་འདི་ཡང་ བར་ཅུ་ཡལ་མ་སྒྲོམ་གཅིག་ལུ་ ནང་བསྐྱོད་འབད་ཡོད་པའི་ལག་ལེན་པ་གིས་རྐྱངམ་ཅིག་འགོ་བཙུགས་ནི་ལུ་ ཨེགསི་སར་བར་ལུ་གནང་བ་བྱིན་ནི་འདི་ཨིན།
+Description-el.UTF-8: Χρήστες που επιτρέπεται να ξεκινούν τον εξυπηρετητή Χ:
+ Λόγω του ότι ο εξυπηρετητής X τρέχει ως χρήστης root, με τα αντίστοιχα δικαιώματα, για λόγους ασφαλείας δε συνιστάται η εκκίνησή του από άπλό χρήστη.  Ωστόσο, ακόμη πιο επικίνδυνο για την ασφάλεια είναι η εκτέλεση απλών προγραμμάτων στα X ως χρήστης root, το οποίο μπορεί να συμβεί αν ο χρήστης root επιτρέπεται να εκκινήσει τον εξυπηρετητή X.  Μια μέση οδός είναι να επιτρέπεται η εκκίνηση του εξυπηρετητή X μόνο από τους χρήστες που έχουν συνδεθεί στο σύστημα σε μία από τις εικονικές κονσόλες.
+Description-es.UTF-8: Usuarios a los que se permite arrancar el servidor de X:
+ Debido a que el servidor X se ejecuta con privilegios de superusuario, puede no ser muy prudente permitir que cualquier usuario lo arranque, por razones de seguridad. Por otra parte, es aún más imprudente ejecutar programas cliente de X de forma general como root, lo cual puede suceder si sólamente se permite a root iniciar el servidor X. Un compromiso entre ambos casos es permitir que el servidor X lo inicien sólo usuarios que hayan entrado por una de las consolas virtuales.
+Description-eu.UTF-8: X zerbitzaria abiarazteko gaitasuna duten erabiltzaileak:
+ X zerbitzaria supererabiltzaile baimenez abiarazten denez, segurtasun arrazoiak direla eta ez da zentzuzkoa edozeini abiarazteko baimena ematea.  Beste aldetik ez da zentzuzkoa ere X bezero programa arruntak root bezala abiaraztea, root-ek bakarrik X zerbitzari abiarazteko baimena duenean gertatzen dena.  Gomendagarriena X zerbitzaria kontsola birtual batetan saioa abiarazirik duen edozeini abiarazten uztea da.
+Description-fi.UTF-8: Käyttäjät, jotka saavat käynnistää X-palvelimen:
+ Tietoturvasyistä on huono ajatus antaa kaikille oikeudet X-palvelimen käynnistämiseen, koska sitä ajetaan pääkäyttäjän oikeuksilla. Toisaalta on vielä huonompi ajatus suorittaa yleiskäyttöisiä X:n asiakasohjelmia pääkäyttäjänä, mikä on tilanne, jos vain pääkäyttäjä saa käynnistää X-palvelimen. Hyvä ratkaisu on sallia X-palvelimen käynnistys ainoastaan käyttäjille, jotka ovat kirjautuneet jollekin virtuaalikonsolille.
+Description-fr.UTF-8: Utilisateurs autorisés à lancer un serveur X :
+ Le serveur X étant lancé avec des droits privilégiés, il n'est pas très prudent pour des raisons de sécurité de permettre à n'importe qui de le lancer. D'un autre côté, il est encore moins prudent de lancer les logiciels clients X en tant que superutilisateur, ce qui risque d'arriver si seul le superutilisateur est autorisé à lancer un serveur X. Un bon compromis est que seuls les utilisateurs connectés sur une des consoles virtuelles puissent lancer un serveur X.
+Description-gl.UTF-8: Usuarios aos que se lles permite iniciar o servidor X:
+ Como o servidor X se executa con privilexios de superusuario, pode non ser unha boa idea permitir que calquera usuario o inicie, por motivos de seguridade. Por outro lado, pode ser aínda unha peor idea executar programas cliente X de propósito xeral coma administrador, que é o que podería ocorrer se só root pode iniciar o servidor X. Un bo compromiso consiste en permitir que o servidor X o inicien só os usuarios que traballen nunha consola virtual.
+Description-gu.UTF-8: X સર્વર શરૂ કરવા માટે માન્ય વપરાશકર્તાઓ:
+ X સર્વર સુપરયુઝર હક સાથે ચાલવાનાં કારણે, કોઇપણ વપરાશકર્તા તેને ચાલુ કરી શકે તે, સલામતીનાં કારણોસર સલાહ ભર્યું નથી.  બીજી બાજુ, સામાન્ય-વપરાશનાં X ક્લાયન્ટ કાર્યક્રમો રૂટ તરીકે ચલાવવા એ પણ ડહ્યાપણભર્યું નથી, જે મોટાભાગે રૂટને X સર્વર શરૂ કરવાની પરવાનગી આપવામાં આવે ત્યારે થાય છે.  સારી સમજૂતી એ છે કે માત્ર પ્રવેશ કરેલ વપરાશકર્તાઓને તેમનાં વર્ચ્યુઅલ કોન્સોલ્સ વડે X સર્વર શરૂ કરવાની પરવાનગી આપવામાં આવે.
+Description-he.UTF-8: משתמשים הרשאים לאתחל את שרת ה-X:
+ מכיוון ששרת ה-X רץ עם הרשאות משתמש-על, זה כנראה יהיה לא חכם להרשות לכל משתמש לאתחל אותו, מסיבות אבטחה.  מצד שני, יהיה זה לא חכם להריץ תוכניות לקוח X כמשתמש-על, שזה מה שעלול לקרות אם רק משתמש-העל יהיה מורשה לאתחל את שרת ה-X.  פשרה טובה תהיה להרשות לשרת ה-X להיות מאותחל רק ע"י משתמשים שמחוברים לאחד מהמסופים הווירטואליים.
+Description-hr.UTF-8: Korisnici koji smiju pokrenuti X server:
+ Zbog činjenice što X server radi s privilegijama administratorskog korisnika, vjerojatno nije pametno dopustiti svakom korisniku da ga pokreće, iz sigurnosnih razloga. S druge strane, još manje je pametno pokretati X klijentske programe opće namjene kao root, a to se može dogoditi ako samo root korisniku dopustite pokretanje X servera. Dobar kompromis je dozvoliti pokretanje X servera samo korisnicima koji su ulogirani na jednu od virtualnih konzola.
+Description-hu.UTF-8: Az X kiszolgáló indítására jogosult felhasználók:
+ Mivel az X kiszolgáló rendszergazda kiváltságokkal fut, nem biztonságos bármilyen felhasználónak engedélyezni a futtatását, de szintén nem biztonságos általános-célú X kliens programokat rendszergazdaként futtatni, pedig ez történik, ha csak a rendszergazdának van joga az X kiszolgáló indításához. Megfelelő középút az X kiszolgáló indítását csak konzolról bejelentkezett felhasználóknak engedélyezni.
+Description-id.UTF-8: Pengguna yang boleh menjalankan server X:
+ Oleh karena server X berjalan dengan kewenangan superuser, sangat riskan bila membolehkan siapa saja menjalankannya. Di sisi lain, teramat sangat riskan menjalankan program client X sebagai root, yang akan terjadi bila hanya root yang boleh menjalankan server X. Kompromi yang baik adalah menjalankan server X hanya oleh pengguna yang masuk ke salah satu konsol virtual.
+Description-it.UTF-8: Utenti con il permesso di avviare il server X:
+ Dato che il server X viene eseguito con i privilegi di super utente, può essere poco consigliabile, per ragioni di sicurezza, permettere a qualsiasi utente di eseguirlo. D'altra parte, se solo a root fosse permesso di avviare il server X, sarebbe necessario eseguire come root i programmi client X (e ciò sarebbe ancora peggio). Un buon compromesso consiste nel permettere che il server X possa essere avviato solo dagli utenti collegati a una delle console virtuali.
+Description-ja.UTF-8: X サーバの起動を許可するユーザ:
+ X サーバはスーパーユーザ権限で動作するため、任意のユーザからの実行を許可するのはセキュリティ上好ましくないでしょう。一方 X サーバの起動許可を root に限ると、一般的な用途の X クライアントプログラムを実行する場合でも root が必要となり、これも好ましくありません。よりよい妥協点は、 仮想コンソールのうちの 1 つにログインしたユーザにのみ X サーバの起動を許可することでしょう。
+Description-km.UTF-8: អ្នក​ប្រើ​បាន​អនុញ្ញាត​ឲ្យ​ចាប់​ផ្តើម​ម៉ាស៊ីន​បម្រើ​ X ៖
+ ដោយសារ​ម៉ាស៊ីន​បម្រើ​ X រត់ជាមួយ​​សិទ្ធ​អ្នក​ប្រើ​ជាន់​ខ្ពស់​, ​ចំពោះ​មូលហេតុ​ដែលមាន​សុវត្ថិភាព វា​ប្រហែល​ជា​​មិន​អនុញ្ញាត​ឲ្យ​អ្នក​ប្រើ​ណាមួយ​​ចាប់​ផ្តើម​វា​ទេ ​។ មួយ​វិញ​ទៀត​ គោលបំណង​ទូទៅ​នៃ​កម្មវិធី​ម៉ាស៊ីន​ភ្ញៀវ​ X មាន​សិទ្ធ​ជា root ដែល​នឹង​មាន​អ្វីអាចនឹង​កើត​ឡើង​ ប្រសិនបើ មានតែ​ root ដែល​អាច​អនុញ្ញាត​ឲ្យ​ចាប់ផ្តើ​ម​ម៉ាស៊ីន​បម្រើ​ X បាននោះ ។ ការព្រមព្រៀង​​ល្អ​បានអនុញ្ញាត​ឲ្យ​ម៉ាស៊ីន​បម្រើ X ត្រូវបាន​ចាប់​ផ្តើម​តាម​​អ្នក​ប្រើ​ដែល​បាន​ចូល​ក្នុង​កុងសូល​និម្មិត​មួយ​ ។
+Description-ko.UTF-8: X 서버를 띄울 권한이 있는 사용자:
+ X 서버는 수퍼유저 권한을 가진 채로 실행되기 때문에 보안상 아무 사용자나 X 서버를 실행시킬 수 있도록 하는 것이 안 좋을 수 있습니다. 반면, 루트 사용자만 X 서버를 실행시킬 수 있을 경우 일반적인 X 클라이언트 프로그램도 루트 사용자로 실행되기 때문에 더 안 좋을 수 있습니다. 버추얼 콘솔로 로그인된 사용자만 X 서버를 실행시킬 수 있도록 하는 것이 적당할 수 있습니다.
+Description-lt.UTF-8: Naudotojai, kuriems leidžiama įkrauti X serverį:
+ Kadangi X serveris veikia administratoriaus teisėmis, saugumo sumetimais gali būti neprotinga leisti jį įkrauti bet kuriam naudotojui.  Iš kitos pusės, dar blogiau yra vykdyti standartines X programas administratoriaus teisėmis (tai gali atsitikti, jei tik administratoriui leidžiama įkrauti X serverį).  Neblogas kompromisas yra leisti įkrauti X serverį tik tiems naudotojams, kurie prisijungę prie vienos iš virtualių konsolių.
+Description-ml.UTF-8: എക്സ് സേവകന്‍ തുടങ്ങാന്‍ അനുമതിയുള്ള ഉപയോക്താക്കള്‍:
+ എക്സ് സേവകന്‍ സൂപര്‍ ഉപയോക്താവിന്റെ പദവികളോടെയാണ് ഓടുന്നത് എന്നതിനാല്‍ സുരക്ഷാ കാരണങ്ങളാല്‍ ഏത് ഉപയോക്താവിനും ഇത് തുടങ്ങാന്‍ അനുമതി നല്കുന്നത് ബുദ്ധിശുന്യമായേക്കാം. എന്നാല്‍ പൊതുവായുള്ള-കാര്യങ്ങള്‍ക്കുള്ള എക്സ് ക്ലയന്റ് പ്രോഗ്രാമുകള്‍ റൂട്ടായി ഓടിക്കുന്നത് ഇതിലധികം ബുദ്ധിശുന്യമാണ്, അതാണ് റൂട്ടിന് മാത്രം എക്സ് സേവകന്‍ തുടങ്ങാന്‍ അനുമതി നല്കിയാല്‍ സംഭവിക്കാന്‍ പോകുന്നത്. ഒരു നല്ല വിട്ടുവീഴ്ച വിര്‍ച്വല്‍ കണ്‍സോളിലേതെങ്കിലുമൊന്നില്‍ ലോഗിന്‍ ചെയ്തിട്ടുള്ള ഉപയോക്താക്കള്‍ക്ക് മാത്രം എക്സ് സേവകന്‍ തുടങ്ങാന്‍ അനുമതി നല്കുക എന്നത്.
+Description-mr.UTF-8: वापरकर्त्यांना एक्स परिसेवक सुरू करता येईल:
+ एक्स परिसेवक सुपरयुझरचे हक्क असणारा कोणीही सुरू करू शकत असल्याने, सर्वच वापरकर्त्यांना तो सुरू करण्याची अनुमती देणे सुरक्षिततेच्या दृष्टीकोनातून उचित होणार नाही.  तथापी, सामान्य वापराचे एक्स अशील प्रोग्राम मूल असताना चालवणे अधिकच अनुचित होईल, जे एक्स परिसेवक सुरू करण्याची परवानगी फक्त मूल लाच दिल्यास घडू शकेल. अाभासी कन्सोलांपैकी एकावर सत्रारंभ केलेल्या वापरकर्त्यांनाच एक्स परिसेवक सुरू करण्याची अनुमती देणे ही यातील चांगली तडजोड ठरू शकेल.
+Description-nb.UTF-8: Brukere som har lov til å starte X-tjeneren:
+ Fordi X-tjeneren kjører med priviliegier som superbruker, er det kanskje uklokt av sikkerhetsgrunner å la alle starte den. På den annen side er det enda mer uklokt å kjøre alminnelige X klientprogrammer som root, og det kan skje dersom bare root får lov til å starte X-tjeneren. En god middelvei er å tillate bare brukere som er logget inn på et av de virtuelle konsollene å starte X-tjeneren.
+Description-ne.UTF-8: प्रयोगकर्तालाई एक्स सर्भर सुरू गर्न अनुमति दिइयो:
+ किनभने एक्स सर्भर सुपर प्रयोगकर्ताको बिशेषाधिकारमा चल्दछ, यदि यसलाई कुनै प्रयोगकर्ताले सुरू गर्न अनुमति दिन नचाहेमा, सुरक्षाको कारणले ।  अर्को तर्फ, अझ यो एक्स ग्राहक कार्यक्रमको रुपमा साधारण-उद्देश्य चलाउन अनिच्छुक छ, यदि मूललाई मात्र एक्स सर्भर सुरू गर्न अनुमति दिइयो भने के होला जुन चाहि ।  एउटा राम्रो सम्झौता चाहि एक्स सर्भर केबल अवास्तविक कन्सोलहरुमा एक प्रयोगकर्ता लगइन द्धारा सुरू हुने हुन्छ ।
+Description-nl.UTF-8: Gebruikers die de X-server mogen starten:
+ Omdat de X-server met de rechten van de supergebruiker draait is het, voor beveiligingsredenen, dikwijls onverstandig om deze te laten opstarten door eender welke gebruiker. Daar staat tegenover dat het nog onverstandiger is om de algemene grafische programma's te gebruiken als root, wat mogelijk het gevolg is wanneer enkel de root gebruiker de X-server kan opstarten. Een goed compromis is om de X-server alleen te laten opstarten door gebruikers die aangemeld zijn via één van de virtuele consoles.
+Description-nn.UTF-8: Brukarar som har lov til å starte X-tenaren:
+ Sidan X-tenaren køyrer med priviliegiar som superbrukar, er det kanskje uklokt av tryggingsgrunner å la alle starte han. På den andre sida er det endå meir uklokt å køyre alminnelege X klientprogram som root, og det kan skje dersom berre root får lov til å starte X-tenaren. Ein god middelveg er å tillate berre brukarar som er logga inn på eit av dei virituelle konsolla å starte X-tenaren.
+Description-no.UTF-8: Brukere som har lov til å starte X-tjeneren:
+ Fordi X-tjeneren kjører med priviliegier som superbruker, er det kanskje uklokt av sikkerhetsgrunner å la alle starte den. På den annen side er det enda mer uklokt å kjøre alminnelige X klientprogrammer som root, og det kan skje dersom bare root får lov til å starte X-tjeneren. En god middelvei er å tillate bare brukere som er logget inn på et av de virtuelle konsollene å starte X-tjeneren.
+Description-pl.UTF-8: Użytkownicy mogący uruchamiać serwer X:
+ Ponieważ serwer X działa z przywilejami sperużytkownika, ze względu na bezpieczeństwo systemu nierozsądnie jest dawać prawa jego uruchamiania każdemu użytkownikowi. Z drugiej zaś strony, jeszcze mniej rozsądnie jest uruchamianie programów klienckich X ogólnego przeznaczenia jako użytkownik root, co może się zdarzyć jeśli tylko root będzie mógł uruchomić serwer X. Dobrym kompromisem jest zezwolenie na uruchamianie serwera X tylko użytkownikom zalogowanym na jednej z wirtualnych konsol (użytkownik konsoli).
+Description-pt.UTF-8: Utilizadores autorizados a iniciar o servidor X:
+ Como o servidor X corre com privilégios de super-utilizador, por razões de segurança, pode ser imprudente permitir que qualquer utilizador o inicie.  Por outro lado, é ainda mais imprudente correr programas clientes de X de carácter geral como root, que é o que poderá acontecer se apenas o root tiver permissões para iniciar o servidor X.  Um bom compromisso é permitir que o servidor X seja iniciado apenas por utilizadores que tenham iniciado uma sessão numa das consolas virtuais.
+Description-pt_BR.UTF-8: Usuários que podem iniciar o servidor X:
+ Devido ao servidor X ser executado com privilégios de superusuário, pode não ser muito sábio permitir que qualquer usuário o inicie, por questões de segurança. Por outro lado, é menos sábio ainda executar programas clientes X de propósito geral como root, que é o que pode acontecer se somente o root tiver permissão de iniciar o servidor X. Um bom compromisso é permitir o servidor X ser iniciado somente por usuários logados em um dos consoles virtuais.
+Description-ro.UTF-8: Utilizatori cărora le este permis să pornească serverul X:
+ Deoarece serverul X rulează cu privilegii de superutilizator, nu este probabil înțelept să i se permită oricărui utilizator să-l pornească, din motive de securitate. Pe de altă parte, este și mai puțin înțelept să se ruleze clienții X de uz general ca și root, lucru probabil dacă se permite doar ca root să pornească serverul X. Un bun compromis este permiterea pornirii pentru utilizatorii autentificați la una din consolele virtuale.
+Description-ru.UTF-8: Пользователи, которым разрешено запускать X сервер:
+ Поскольку X сервер запускается с привилегиями суперпользователя, то из соображений безопасности, вероятно, не очень хорошо позволять любым пользователям запускать его. С другой стороны, ещё хуже запускать клиентские X-программы общего назначения от имени суперпользователя; это может случиться, если право запускать сервер X имеет только суперпользователь. Наилучшее решение заключается в том, чтобы позволять запускать сервер X только пользователям, зарегистрированным на одной из виртуальных консолей.
+Description-sk.UTF-8: Používatelia,ktorí môžu spustiť X server:
+ Pretože X server je spustený s právami superpoužívateľa, nie je z hľadiska bezpečnosti veľmi rozumné dať možnosť jeho spustenia používateľom. Na druhej strane ešte horšie je spustenie všeobecného X klienta pod rootom, čo sa stane vtedy, ak povolíte spustenie X servera iba rootovi. Rozumným kompromisom je teda povolenie spustenia X servera iba používateľom prihláseným na virtuálnej konzole.
+Description-sq.UTF-8: Përdorues të lejuar të nisin shërbyesin X:
+ Meqë shërbyesi X xhiron me pronësi administruesi, mund të jetë mendjelehtësi të lejosh çdo përdorues ta nisë atë, për arsye sigurie.  Nga ana tjetër, është ende më mendjelehtësi të xhirosh programe klientë nën X si root, gjë që ndodh nëse vetëm root lejohet të nisë shërbyesin X.  Një marrëveshje e mirë është të lejosh shërbyesin X të niset vetëm nga përdorues të kyçur në një nga konsolet virtuale.
+Description-sv.UTF-8: Användare som är behöriga att starta X-servern:
+ Då X-servern körs med superanvändarens rättigheter kan det vara otillbörligt att, ur säkerhetssynpunkt, låta vilken användare som helst starta den. Å andra sidan är det ännu värre att köra de flesta X-program som root, vilket är det som kan hända om endast root tillåts starta X-servern. A bra kompromiss är att endast tillåta användare som är inloggade på en av de virtuella konsollerna.
+Description-ta.UTF-8: எக்ஸ் சேவையகத்தை துவக்க அனுமதியுள்ள பயனாளர்கள்:
+ எக்ஸ் சேவையகம் சூப்பர் பயனர் அனுமதிகளுடன் இயங்குவதால் பாதுகாப்பு கருதி எல்லா பயனர்களையும் அதை இயக்க அனுமதிப்பது உசிதமில்லை. அதே சமயம் பொதுவான எக்ஸ் கிளையன் நிரல்களை ரூட்டாக இயக்குவது அதை விட உசிதமில்லாதது. ரூட்டை மட்டும் எக்ஸ் சேவையகத்தை இயக்க அனுமதித்தால் அப்படித்தான் நடக்கும். ஆகவே ஒரு நல்ல வழி பயனர்களால் துவக்கப் பட்ட மெய்நிகர் முனையங்களில் ஒன்றில் எக்ஸ் சேவையகத்தை துவக்க அனுமதிப்பதுதான்.
+Description-th.UTF-8: ผู้ใช้ที่อนุญาตให้เรียกเซิร์ฟเวอร์เอ็กซ์ขึ้นมาทำงานได้:
+ เนื่องจากเซิร์ฟเวอร์เอ็กซ์ทำงานด้วยอภิสิทธิ์ผู้ดูแลระบบ จึงอาจไม่ฉลาดนักที่จะให้ใครก็ได้เรียกใช้งาน ด้วยเหตุผลเรื่องการรักษาความปลอดภัย แต่ในทางกลับกัน อาจจะไม่ฉลาดยิ่งกว่า ที่จะเรียกโปรแกรมไคลเอนต์ของเอ็กซ์วินโดว์ด้วยผู้ใช้ root ซึ่งเป็นสิ่งที่อาจเกิดขึ้นถ้าอนุญาตให้ root เท่านั้นที่เรียกเซิร์ฟเวอร์เอ็กซ์ได้ การประนีประนอมที่ดีที่สุด คืออนุญาตให้เฉพาะผู้ใช้ที่เข้าระบบที่คอนโซลเท่านั้นเรียกเซิร์ฟเวอร์เอ็กซ์ได้
+Description-tr.UTF-8: X sunucuyu çalıştırabilecek kullanıcılar:
+ X sunucusu süper-kullanıcı haklarıyla çalıştırıldığından herhangi bir kullanıcının sunucuyu başlatmasına izin vermek güvenlik gerekçeleriyle tavsiye edilmez.  Öte yandan X uygulamalarını root olarak çalıştırmak daha da yanlış  olacaktır.  Makul bir seçim, X sunucusunu sadece sanal konsollara giriş yapmış kullanıcılar tarafından kullanılacak şekilde ayarlamaktır.
+Description-vi.UTF-8: Người dùng có quyền khởi chạy trình phục vụ X:
+ Vì trình phục vụ X chạy với quyền của người siêu dùng (superuser), có thể không phải là ý kiến tốt nếu bạn cho phép bất cứ người dùng nào khởi chạy nó, vì lý do bảo mật. Mặt khác, cũng là nguy hiểm khi chạy chương trình khách X thường dụng dưới người chủ — kết quả nếu chỉ người chủ có quyền khởi chạy trình phục vụ X. Một sự nhân nhượng hợp lý là cho phép trình phục vụ X được khởi chạy chỉ bởi người dùng đã đăng nhập vào một của những bàn giao tiếp ảo.
+Description-wo.UTF-8: Jëfandikukat yiñu may ñu tambule serwóor X:
+ Binga xamee ne serwóor X dafay dox ak sañsañu superuser, doonul lu xellu di may ñéppu ñukoy mana tambule, ngir kaaraangey sistem bi. Ba tay doonul yit lu xellu rugge root ba noppi di doxal prograam kiliyaŋ yu X, ta loolu mooy am bu fekkee dangaa def ne root rekk mooy mana tambule serwóor X. Jubna lool nak nga def ne serwóor X kikoy mana tambule day doon ku duggee ci benn ci konsol wirtuwel yi.
+Description-zh_CN.UTF-8: 允许启动 X 服务器的用户：
+ 因为 X 服务器是以超级用户权限运行，所以从安全角度来说，允许任何用户启动它不是一个明智的选择。在另一方面，以根(root)用户身份运行一般用途的 X 客户端程序则是更加愚蠢的做法，这在仅允许根(root)用户启动 X 服务器时可能会发生。较好的解决办法是允许那些能登录到虚拟控制台的用户启动 X 服务器。
+Description-zh_TW.UTF-8: 可以啟動 X Server 的使用者：
+ 因為 X Server 是以管理者的權限在運行的，所以從安全角度而言，允許任何使用者啟動它並非明智之舉。但從另一角度而言，若在此設定為只有 root 才能啟動 X Server，那麼將會導致所有一般用途的 X 用戶端程式都會是以 root 身份執行，而這可是更為不智的做法。折衷的方案是只允許那些能登入到虛擬主控台 (Virtual console) 的使用者才能啟動 X Server。
+
+Template: x11-common/xwrapper/actual_allowed_users
+Type: string
+Description: internal use only
+ This template is never shown to the user and does not require translation.
+
+Template: x11-common/xwrapper/nice_value
+Type: string
+Description: Nice value for the X server:
+ When using operating system kernels with a particular scheduling strategy,
+ it has been widely noted that the X server's performance improves when it
+ is run at a higher process priority than the default; a process's priority
+ is known as its "nice" value.  These values range from -20 (extremely high
+ priority, or "not nice" to other processes) to 19 (extremely low
+ priority).  The default nice value for ordinary processes is 0, and this
+ is also the recommend value for the X server.
+ .
+ Values outside the range of -10 to 0 are not recommended; too negative,
+ and the X server will interfere with important system tasks.  Too
+ positive, and the X server will be sluggish and unresponsive.
+Description-ar.UTF-8: قيمة nice لخادم X:
+ عند استخدام نواة نظام تشغيل ذات استراتيجية جدولة معينة، لوحظ بشكل كبير بأن كفاءة خادم X تتحسن عند تشغيله بأولوية عملية أعلى من الافتراضية، والتي تعرف بقيمة "nice". وتتراوح هذه القيمة بين -20 (والتي هي الأولوية المرتفعة جداً، أو التي "ليست لطيفة" للعمليات الأخرى) إلى 19 (والتي هي الأولوية المنخفضة جداً). تكون قيمة nice للعمليات العادية هي 0، وهذه هي القيمة المستحسنة أيضاً لخادم X.
+ .
+ القيم التي تقل عن -10 أو تزيد عن 0 ليست مستحسنة؛ فإن كانت أقل من -10 فإن خادم X سيتعارض مع مهام النظام الضرورية. وإن كانت أكبر من 0 فستبطئ عمل خادم X وتثبطه.
+Description-be.UTF-8: Значэнне прыярытэту для X-сервера:
+ Шмат хто заўважаў, што пры выкарыстанні ядраў з пэўнай стратэгіяй планіроўшчыка  прадукцыйнасць X-сервера павялічваецца пры вызначэнні ўзроўню яго прыярытэту вышается вышэй за звычайны. Прыярытэт працэсу вядомы як значэнне "nice". Інтэрвал гэтых значэнняў ад -20 (найвышэйшы прыярытэт або "not nice" для іншых працэсаў) да 19 (найніжэйшы прыярытэт). Стандартнае значэнне для звычайных працэсаў 0, і такое ж раіцца для X-сервера.
+ .
+ Значэнні па-за дыяпазонам ад -10 да 0 не рэкамендуюцца; пры надта нізкіх X-сервер будзе замінаць важным сістэмным працэсам, а пры занадта вялікіх сервер будзе марудна працаваць і дрэнна адукацца.
+Description-bg.UTF-8: Стойност на параметъра „nice“ за X-сървъра:
+ При някои схеми на управление на задачите се забелязва подобряване на бързодействието на X-сървъра ако приоритетът му е по-висок от този на обикновените процеси. Приоритетът на даден процес се управлява от параметъра „nice“. Стойностите варират между „-20“ (най-висок приоритет) до „19“ (най-нисък приоритет). Обикновените процеси имат стойност на параметъра „nice“ 0, което е и препоръчителната стойност за X-сървъра.
+ .
+ Не се препоръчват стойности по-малки от -10 и по-големи от 0. При по-малки стойности се нарушава бързодействието на важни системни задачи. При по-големи X-сървърът започва да реагира твърде бавно.
+Description-bs.UTF-8: Optimalna vrijednost za X server:
+ Pri korištenju kernela operativnog sistema s određenim strategijama raspoređivanja redoslijeda poslova, primijećeno je kako se performanse X servera poboljšavaju ako se pokreće sa prioritetom procesa višim od pretpostavljene vrijednosti; prioritet procesa se naziva "optimalnu" vrijednost.  Ove vrijednosti se kreću od -20 (iznimno visok prioritet) do 19 (iznimno nizak prioritet).  Podrazumijevana optimalna vrijednost za obične procese je 0, a to je i preporučena vrijednost za X server.
+ .
+ Vrijednosti izvan raspona od -10 do 0 nisu preporučene; previše negativne vrijednosti će uzrokovati da X server smeta važnim sistemskim zadacima, a previše pozitivne vrijednosti će ga učiniti tromim, slabo će reagovati.
+Description-ca.UTF-8: Valor de prioritat («nice») del servidor X:
+ En emprar nuclis de sistema operatiu que posseeixen una estratègia particular de planificació, a sovint s’ha notat que el rendiment del servidor X millora si s’executa amb una prioritat de procés major que l’habitual; la prioritat d’un procés es coneix com el seu valor de «nice».  Aquest varia entre -20 (prioritat extremadament alta, «desagradable» als altres processos) i 19 (prioritat extremadament baixa).  El valor de «nice» d’un procés ordinari és 0, valor també recomanat per al servidor X.
+ .
+ No es recomanen valors fora del rang entre -10 i 0; massa negatius, i el servidor X interferirà amb tasques importants del sistema.  Massa positius, i el servidor X serà peresós i de resposta lenta.
+Description-cs.UTF-8: 'nice' hodnota X serveru:
+ Bylo zjištěno, že při použití jádra operačního systému s určitou plánovací strategií se výkon X serveru zlepší, pokud je spuštěn s vyšší prioritou, než standardní. Priorita procesu je známá jako hodnota 'nice'. Může nabývat hodnot od -20 (velmi vysoká priorita) až po 19 (velmi nízká priorita). Standardní hodnota nice obyčejného procesu je 0, což je doporučená hodnota i pro X server.
+ .
+ Hodnoty mimo rozsah -10..0 nejsou doporučeny. Příliš záporná hodnota bude ovlivňovat důležité systémové úlohy, příliš kladná hodnota způsobí, že X server bude líný a pomalý.
+Description-da.UTF-8: X-serverens nice-værdi:
+ Når man bruger operativsystemkerner med en bestemt prioriterings-strategi, forøges X-serverens ydelse tydeligt hvis den kører med en højere prioritet end normalt. En proces's prioritet defineres ved dens "nice" værdi. Denne går fra -20 (ekstremt høj prioritet) til 19 (ekstremt lav prioritet). Den normale nice-værdi for almindelige processer er 0, og denne værdi anbefales også til X-serveren.
+ .
+ Værdier udenfor området -10 til 0 anbefales ikke. Med for negative værdierkan X-serveren forstyrre vigtige systemopgaver. Med for positive værdier kører X-serveren langsomt.
+Description-de.UTF-8: »nice«-Wert für den X-Server:
+ Es wurde festgestellt, dass sich bei Verwendung von Betriebssystemkernen mit einer bestimmten Scheduling-Strategie die Geschwindigkeit des X-Servers verbessert, wenn er mit einer höheren Prozesspriorität als normal läuft. Die Prozesspriorität wird als »nice« (nett)-Wert bezeichnet. Dieser reicht von -20 (extrem hohe Priorität bzw. »nicht nett« zu anderen Prozessen) bis 19 (extrem niedrige Priorität). Der Standardwert für normale Prozesse ist 0 und dies wird auch für den X-Server empfohlen.
+ .
+ Werte außerhalb von -10 bis 0 werden nicht empfohlen; zu niedrig und der X-Server blockiert wichtige Systemarbeiten, zu hoch und der X-Server wird langsam und träge.
+Description-dz.UTF-8: ཨེགསི་སར་བར་གྱི་དོན་ལུ་ བེ་ལུ་ལེགས་ཤོམ་:
+ བྱེ་བྲག་འཆར་རིམ་ཐབས་འཇུས་དང་བཅས་ བཀོལ་སྤྱོད་རིམ་ལུགས་ཀར་ནེལསི་ ལག་ལེན་འཐབ་པའི་སྐབས་ལུ་ རྒྱ་ཆེ་དྲགས་སྦེ་དྲན་ཐོ་བཀོད་དེ་ཡོད་མི་འདི་ཡང་ སྔོན་སྒྲིག་ལས་ལྷག་པར་ལས་སྦྱོར་གཙོ་རིམ་མཐོ་ཤོས་ཀྱི་སྒོ་ལས་ གཡོག་བཀོལ་བའི་སྐབས་ལུ་ ཨེགསི་སར་བར་གྱི་ལཱ་ཤུགས་འདི་ལེགས་ཤོམ་བཟོཝ་ཨིན་ ལས་སྦྱོར་གྱི་གཙོ་རིམ་འདི་   "nice" བེ་ལུ་ཟེར་སླབ་ཨིན། བེ་ལུསི་འདི་ཚུ་ -༢༠ (གཙོ་རིམ་ཤིན་ཏུ་མཐོ་བ་ ཡང་ན་ ལས་སྦྱོར་གཞན་ཚུ་ལུ་ "not nice")ལས་ ༡༩འི་བར་(གཙོ་རིམ་ཤིན་ཏུ་དམའ་བ་)ཁྱབ་ཨིན། ལས་སྦྱོར་དཀྱུ་མ་ཚུའི་དོན་ལུ་ སྔོན་སྒྲིག་བེ་ལུ་ལེགས་ཤོམ་འདི་ ༠ ཨིནམ་མ་ཚད་ འདི་ཨེགསི་སར་བར་གྱི་དོན་ལུ་ འོས་སྦྱོར་བེ་ལུ་ཨིན།
+ .
+ -༡༠ ལས་ ༠ གི་བར་ན་ཡོད་པའི་ཁྱབ་ཚད་ཀྱི་ཕྱི་ཁར་ཡོད་པའི་བེ་ལུསི་ཚུ་ འོས་སྦྱོར་མ་འབད་ ཤིན་ཏུ་མེད་ཆ་དང་ ཨེགསི་སར་བར་གྱིས་ ཁག་ཆེ་བའི་རིམ་ལུགས་ལས་ཀ་ཚུ་གི་ཐོག་ལས་ བར་དཀྲོགས་འབད་འོང་། ཤིན་ཏུ་ཡོད་ཆ་དང་ ཨེགསི་སར་བར་འདི་ ལྷོད་ལྷོད་དང་ལན་གསལ་འབད་བཏུབ་མེན་འོང་།
+Description-el.UTF-8: Τιμή προτεραιότητας 'nice' για τον εξυπηρετητή X:
+ Όταν χρησιμοποιούνται πυρήνες λειτουργικών συστημάτων που έχουν μια συγκεκριμένη στρατηγική διαμοιρασμού χρόνου των διεργασιών (scheduling), έχει παρατηρηθεί ευρέως ότι η απόδοση του εξυπηρετητή X βελτιώνεται όταν αυτός εκτελείται με προτεραιότητα μεγαλύτερη από την προκαθορισμένη. Η προτεραιότητα μιας διεργασίας είναι επίσης γνωστή ως η τιμή "nice" της διεργασίας. Οι τιμές αυτές κυμαίνονται από το -20 (πολύ υψηλή προτεραιότητα ή καθόλου "nice" στις άλλες διεργασίες) έως 19 (πολύ χαμηλή προτεραιότητα). Η προκαθορισμένη τιμή προτεραιότητας nice για τις συνηθισμένες διεργασίες είναι 0 και αυτή είναι επίσης η προτεινόμενη τιμή για τον εξυπηρετητή Χ.
+ .
+ Τιμές πέραν των ορίων -10 και 0 δεν συνιστώνται. Οι πολύ αρνητικές τιμές θα δημιουργήσουν παρεμβολές του εξυπηρετητή X σε σημαντικές εργασίες του συστήματος.   Οι πολύ θετικές τιμές θα καταστήσουν το εξυπηρετητή X, αργό στην απόκρισή του.
+Description-es.UTF-8: Valor deseado de «nice» (prioridad) para el servidor de X.
+ Cuando se usan núcleos del sistema operativo configurados con una estrategia particular de planificación de procesos, está ampliamente demostrado que el rendimiento del servidor X mejora si se ejecuta con una prioridad mayor que la predeterminada; la prioridad de un proceso se conoce como su valor de «nice» (amabilidad). Éste puede variar desde -20 (una prioridad extremadamente alta, o nada amable («not nice») con el resto de procesos) hasta 19 (una prioridad extremadamente baja). El valor por defecto de «nice» para los procesos ordinarios es 0, y este valor es un buen valor recomendado para el servidor de X.
+ .
+ No se recomiendan los valores fuera del rango de -10 a 0: demasiado bajo, y el servidor X interferirá con tareas importantes del sistema; demasiado alto, y el servidor X parecerá perezoso y aletargado.
+Description-eu.UTF-8: X zerbitzariaren balio egokia:
+ Programaketa berezi bat duen sistema eragile kernel bat erabiltzean, Kontutan izan behar da X zerbitzariaren performantzia hobetzen dela lehenetsirikoa baino prozesu lehentasun handiagoa ezartzen; prozesu lehentasuna balio "zuzena" bezala ezagutzen da.  Hau -02 (lehentasun handiena edo "ez egokia" beste prozesuentzat) eta 19 (lehentasun oso txikia) tartean egon behar da.  Prozesu arruntentzat lehenetsiriko lehentasuna 0 da, hau izaten ere X zerbitzariarentzat balio gomendatua.
+ .
+ -10 eta 0 eremuz kanpoko balioak ez dira gomendagarriak; negatiboegiaz, X zerbitzaria sistema ataza garrantzitsuekin elkar jo daiteke. Positiboegiaz, ordea X zerbitzaria geldoegi eta erantzungakoa gerta daiteke.
+Description-fi.UTF-8: X-palvelimen nice-arvo:
+ X-palvelimen suorituskykyä voidaan tiettyjä vuorotusjärjestelmiä käyttäviä käyttöjärjestelmän ytimiä käytettäessä parantaa ajamalla sitä oletusarvoa korkeammalla prioriteetilla. Prosessin prioriteetti ilmaistaan sen ”nice”-arvolla. Arvoalueen ääripäät ovat -20 (erittäin korkea prioriteetti) ja 19 (erittäin alhainen prioriteetti). Tavallisten prosessien oletusarvo on 0 ja se on myös X-palvelimelle suositeltu arvo.
+ .
+ Lukua -10 pienempiä tai lukua 0 suurempia arvoja ei suositella, koska liian negatiivisella arvolla X-palvelin häiritsee tärkeitä järjestelmäprosesseja ja liian suuret positiiviset arvot tekevät X-palvelimesta jähmeän ja hitaan reagoimaan.
+Description-fr.UTF-8: Priorité du serveur X :
+ Lorsqu'on utilise un système d'exploitation ayant un noyau avec une stratégie spéciale d'ordonnancement, les performances du serveur X sont largement améliorées s'il est exécuté avec une priorité plus haute que celle par défaut. Elle prend des valeurs entre -20 (priorité extrêmement haute) et 19 (priorité très faible). La priorité par défaut d'un processus quelconque est de 0, c'est également la valeur recommandée pour le serveur X.
+ .
+ Choisir une valeur en dehors de la fourchette de -10 à 0 n'est pas recommandé ; une valeur inférieure et le serveur X interférera avec des tâches importantes du système, une valeur trop grande et son fonctionnement sera lent et peu réactif.
+Description-gl.UTF-8: Valor de amabilidade para o servidor X:
+ Cando se empregan núcleos de sistemas operativos cunha estratexia de planificación determinada, tense observado en moitas ocasións que o rendemento do servidor X mellora cando se executa cunha prioridade superior á prioridade por defecto. A prioridade dun proceso coñécese coma o seu valor de amabilidade ("nice"). Este valor pode ir de -20 (prioridade moi alta, ou "non amable" con outros procesos) a 19 (prioridade moi baixa). A amabilidade por defecto para os procesos normais é 0, e tamén é o valor recomendado para o servidor X.
+ .
+ Non se recomendan os valores fóra do rango -10 a 0. Se é negativo de máis, o servidor X ha interferir con tarefas importantes do sistema. Se é positivo de máis, o servidor X ha ir moi lento.
+Description-gu.UTF-8: X સર્વર માટે નાઇસ કિંમત:
+ ચોક્કસ શેડ્યુલિંગ નીતિ સાથેનાં ઓપરેટિંગ સિસ્ટમ કર્નલ્સ વાપરતી વખતે, એ બહોળા પ્રમાણમાં નોંધવામાં આવ્યું છે કે X સર્વરની કાર્યક્ષમતા જ્યારે તે મૂળભૂત કરતાં વધુ ક્રિયા અગ્રતા સાથે ચલાવવામાં આવે ત્યારે વધે છે; ક્રિયા અગ્રતા તેની "nice" કિંમત તરીકે જાણીતી છે. આ કિંમતો -20 (એકદમ ઉંચી અગ્રતા, અથવા બીજી ક્રિયાઓ માટે "not nice") થી 19 (એકદમ નીચી અગ્રતા) અવધિ વચ્ચે હોય છે.  સામાન્ય ક્રિયા માટે મૂળભૂત નાઇસ કિંમત 0 છે, અને તે X સર્વર પણ માટે સલાહભરી કિંમત છે.
+ .
+ -10 અને 0 વચ્ચેની બહારની કિંમત સલાહભરી નથી; વધારે પડતી ઋણ, અને X સર્વર મહત્વનાં સિસ્ટમ કાર્યોમાં દખલ કરશે.  વધારે પડતી ધન, અને X સર્વર ઘણું ધીમું અને જવાબ ન આપતું બની જશે.
+Description-he.UTF-8: ערך ה-nice לשרת ה-X:
+ כאשר משתמשים במערכת הפעלה עם אסטרטגיית תזמון, זהו דבר ידוע שביצועי שרת ה-X משתפרים כאשר הוא רץ בתהליך בעדיפות גבוהה יותר מברירת המחדל; עדיפות תהליך ידועה כערך ה-"nice" שלו.  ערכים אלו נעים בין -20 (עדיפות גבוהה ביותר, או "not nice" לתהליכים אחרים) ל-19 (עדיפות נמוכה ביותר).  ברירת המחדל לערך ה-nice לתהליכים רגילים היא 0, וזהו גם הערך המומלץ לשרת ה-X.
+ .
+ ערכים שמחוץ לטווח של -10 עד 0 אינם מומלצים;  ערכים שליליים מדי יגרמו לשרת ה-X להתערב עם משימות מערכת חשובות.  ערכים חיוביים מדי יגרמו לשרת ה-X להיות אטי ולא מגיב.
+Description-hr.UTF-8: 'Nice' vrijednost za X server:
+ Pri korištenju jezgri operacijskih sustava sa određenim strategijama raspoređivanja redoslijeda poslova, primijećeno je kako se performanse X servera poboljšavaju ako se pokreće sa prioritetom procesa višim od pretpostavljene vrijednosti; prioritet procesa se naziva 'nice' vrijednost. Ove vrijednosti se kreću od -20 (iznimno visok prioritet) do 19 (iznimno nizak prioritet). Pretpostavljena vrijednost za obične procese je 0, a to je i preporučena vrijednost za X server.
+ .
+ Vrijednosti izvan raspona od -10 do 0 nisu preporučene; previše negativne vrijednosti će uzrokovati da X server smeta važnim zadacima sustava, a previše pozitivne vrijednosti će ga učiniti tromim, slabo će reagirati.
+Description-hu.UTF-8: Az X kiszolgáló nice értéke:
+ Operációs rendszer kernelek ütemezővel való használatakor fontos tudni, hogy az X kiszolgáló teljesítménye megnő, ha magasabb folyamat elsőbbséget kap az alapértelmezettnél, ezt "nice" értéknek hívjuk. Az értékek -20 (extrém magas elsőbbség, vagyis nem érzékeny más folyamatokra) és 19 (extrém alacsony elsőbbség) köztiek. A hétköznapi folyamatok alap nice értéke 0, ez az X kiszolgálóhoz ajánlott érték is.
+ .
+ A -10 és 0 közötti tartományon kívül eső értékek nem ajánlottak; ha túl kicsi, az X kiszolgáló elnyom más fontos rendszerfeladatokat. Ha túl nagy, akkor lassú és elérhetetlen lesz.
+Description-id.UTF-8: Nilai nice untuk server X:
+ Saat menggunakan kernel sistem operasi dengan strategi penjadwalan tertentu, sudah sering dicatat bahwa kinerja server X bertambah bila dijalankan dengan prioritas proses lebih tinggi dari biasanya. Prioritas ini dikenal dengan nilai "nice". Nilainya berkisar dari -20 (prioritas tertinggi) hingga 19 (prioritas terendah). Nilai standar untuk nice adalah 0 dan ini adalah nilai nice yang disarankan untuk server X.
+ .
+ Nilai di luar rentang -10 ke 0 tidak dianjurkan. Terlalu negatif, server X akan mengganggu proses-proses sistem yang penting. Terlalu positif, server X akan lambat responnya.
+Description-it.UTF-8: Valore di nice per il server X:
+ Quando si usano kernel di sistema con particolari strategie di schedulazione, è stato spesso notato che le prestazioni del server X migliorano se questo viene eseguito a una priorità di processo più alta di quella predefinita; la priorità di un processo è conosciuta come il valore di «nice», che varia tra -20 (priorità estremamente alta, che penalizza gli altri processi) e 19 (priorità estremamente bassa). Il valore di nice predefinito per i processi ordinari è 0 ed è anche raccomandato per il server X.
+ .
+ Valori al di fuori dal'intervallo tra -10 e 0 non sono raccomandati. Per uno troppo negativo, il server X interferirebbe con processi di sistema importanti, per uno troppo positivo, il server X sarebbe lento e poco reattivo.
+Description-ja.UTF-8: X サーバの nice 値:
+ 特別なスケジューリング戦略を持つオペレーティングシステムカーネルを使っている場合、「nice」値として知られているプロセスの優先度をデフォルトより高い値に設定することで、X サーバのパフォーマンスが向上することは広く知られています。「nice」値の範囲は -20 (非常に高い優先度、もしくはほかのプロセスにとって「よくない (『not nice』な)」優先度) から 19 まで (非常に低い優先度)  です。通常のプロセスに対するデフォルトの nice 値は 0 であり、これは X サーバでの推奨値でもあります。
+ .
+ -10 から 0 の範囲以外の値を与えるのは推奨しません。小さすぎる値を用いると、X サーバは重要なシステムタスクの邪魔をするでしょう。大きすぎる値を用いると、X サーバは活発に動作せず反応が悪くなるでしょう。
+Description-km.UTF-8: តម្លៃដែល​ល្អប្រសើរ​​​សម្រាប់​ម៉ាស៊ីន​បម្រើ​ X ៖
+ ពេល​ប្រើ​ប្រព័ន្ធ​ប្រតិបត្តិការ​ខឺណែល​ជា​មួយនឹង​យុទ្ធសាស្ត្រ​កំណត់​ពេលត្រឹមត្រូវ​ វាត្រូវបានកំណត់​ចំណាំ​យ៉ាងទូលំទូលាយថា​ ដំណើរការ​របស់​ម៉ាស៊ីន​បម្រើ​ X បាន​ជម្រុញ ​នៅពេលដែល​វា​រត់នៅចំណុច​ដែលមាន​អទិភាព​ដំណើរការខ្ពស់ជាង​លំនាំដើម​ អទិភាព​របស់​ការដំណើរការ​ ត្រូវបានគេស្គាល់ថា​ជាតម្លៃ "ល្អប្រសើ​" របស់វា ។  ជួរ​តម្លៃដែល​ចាប់​ពី​ -២0 (អាទិភាព​ខ្ពស់​បំផុត ឬ "មិនល្អ" សម្រាប់​ដំណើរការ​ផ្សេងទៀត​) ទៅ ១៩ (អាទិភាពទាប​បំផុត​) ។តម្លៃ​ល្អប្រសើ​លំនាំ​ដើម ​សម្រាប់ដំណើរការ​ធម្មតា​គឺ​ ០ ហើយ​នេះ​ក៏​ជា​តម្លៃ​ដែល​​ផ្តល់​អនុសាសន៍សម្រាប់​ម៉ាស៊ីន​បម្រើ​​ X ។
+ .
+ តម្លៃ​ដែលនៅខាងក្រៅ​ជួរ​នៃ -១០ ទៅ​ ០ មិន​ត្រូវ​បាន​ផ្តល់​អនុសាសន៍​ទេ ។ ​អវិជ្ជមាន និង ម៉ាស៊ីន​បម្រើ​ X នឹង​បង្អាក់​​ជា​មួយ​ភារកិច្ច​ប្រព័ន្ធ​ដែល​សំខាន់ ។ វិជ្ជមាន​ និង ​ម៉ាស៊ីន​បម្រើ​​ X នឹង​ មិន​ធ្វើ​សកម្មភាព ​និង មិនឆ្លើយតប ​​។
+Description-ko.UTF-8: X 서버의 nice값:
+ 특정 스케쥴링 방식을 사용하는 커널의 경우 X 서버의 프로세스 우선 순위를 기본 우선 순위보다 높게 잡을 경우 일반적으로 X 서버의 성능이 좋아진다고 알려져 있습니다. 프로세스의 우선 순위는 "nice"값이라고 합니다. nice 값은 -20(굉장히 높은 우선 순위로, 다른 프로세스에게 "nice"하지 않음)에서 19(굉장히 낮은 우선 순위)까지 있습니다. 일반적인 프로세스의 기본 nice값은 0이며, X 서버도 이 값을 사용하기를 권장합니다.
+ .
+ -10에서 0 사이의 값 이외에는 사용하지 말 것을 권장합니다. 너무 낮은 값을 사용할 경우 X 서버가 중요한 시스템 작업과 간섭을 일으킬 수 있습니다. 너무 높은 값을 사용할 경우 X 서버의 반응이 너무 느릴 수 있습니다.
+Description-lt.UTF-8: X serverio prioritetas (nice reikšmė):
+ X serveris kai kuriais atvejais pagreitėja, kai jis vykdomas aukštesniu prioritetu negu standartinis. Prioritetų reikšmės yra nuo -20 (ypatingai aukštas prioritetas) iki 19 (ypatingai žemas prioritetas). Įprastas prioritetas yra 0, ir toks prioritetas taip pat rekomenduojamas ir X serveriui.
+ .
+ Nerekomenduojamos reikšmės ne iš intervalo -10 iki 0. Jei reikšmė per daug žema, X serveris trukdys svarbioms sistemos užduotims, o jei per aukšta, X serveris veiks lėtai.
+Description-ml.UTF-8: എക്സ് സേവകനു വേണ്ട നൈസ് വില:
+ ഒരു പ്രത്യേക ഷെഡ്യൂളിങ്ങ് നയമുള്ള കെര്‍ണലുകളുള്ള ഓപറേറ്റിങ്ങ് സിസ്റ്റം ഉപയോഗിക്കുമ്പോള്‍ എക്സ് സേവകന്റെ പ്രവര്‍ത്തനം, അത് ഡിഫാള്‍ട്ടിനേക്കാള്‍ ഉയര്‍ന്ന പ്രക്രിയാ മുന്‍ഗണനയില്‍ ഓടിക്കുകയാണെങ്കില്‍ മെച്ചപ്പെടുമെന്നത് പരക്കെ ശ്രദ്ധിക്കപ്പെട്ടിട്ടുള്ള ഒരു കാര്യമാണ്; ഒരു പ്രക്രിയയുടെ മുന്‍ഗണന അതിന്റെ "നൈസ്" വിലയായി അറിയപ്പെടുന്നു. ഈ വിലകളുടെ പരിധി -20 (വളരെ ഉയര്‍ന്ന മുന്‍ഗണന അല്ലെങ്കില്‍ മറ്റു പ്രക്രിയളോട് "നൈസല്ല" എന്ന്) മുതല്‍ 19 വരെ (വളരെ താഴ്ന മുന്‍ഗണന). സാധാരണ പ്രക്രിയകളുടെ നൈസ് വില 0 ആണ്, ഇതാണ് എക്സ് സേവകനും ശുപാര്‍ശ ചെയ്തിട്ടുള്ള വില.
+ .
+ -10 മുതല്‍ 0 ന് പുറത്തുള്ള വിലകള്‍ ശുപാര്‍ശ ചെയ്തിട്ടില്ല; വളരെ നെഗറ്റിവായാല്‍ എക്സ് സേവകന്‍ പ്രധാന സിസ്റ്റം ജോലികളുമായി തടസ്സമുണ്ടാക്കും. വളരെ പോസിറ്റീവായാല്‍ എക്സ് സേവകന്‍ ഒച്ചിനെ പോലെയും പ്രതികരിക്കാതെയുമാകും.
+Description-mr.UTF-8: एक्स परिसेवकासाठी चांगले मूल्य:
+ विशिष्ठ वेळापत्रकीय धोरण असलेले प्रचालन प्रणालीचे कर्नेलस् वापरताना सर्वत्र असे लक्षात आले आहे की, जेंव्हा एक्स परिसेवक मूलनिर्धारित प्रक्रिया अग्रक्रमापेक्षा अधिक मूल्याने चालवला जातो, तेंव्हा त्याच्या कामगिरीत सुधारणा होते; प्रक्रियेचा अग्रक्रम त्याचे "चांगले" मूल्य म्हणून ओळखला जातो. या मूल्यांचा पल्ला -२० (अतिशय उच्च अग्रक्रम किंवा इतर प्रक्रियांसाठी "चांगले नाही") पासून १९ (अतिशय नीच अग्रक्रम) पर्यंत आहे. सामान्य प्रक्रियांसाठी मूलनिर्धारित चांगले मूल्य ० आहे, आणी हे एक्स परिसेवकाकरिता शिफारसपात्र मूल्यही आहे.
+ .
+ -१० ते ० या टप्प्याबाहेरील मूल्ये शिफारसपात्र नाहीत; जास्त ऋण, आणी एक्स परिसेवक प्रणालीच्या महत्वाच्या कार्यांच्या आड येईल. जास्त धन, आणी एक्स परिसेवक सुस्त आणी प्रतिसादहीन होईल.
+Description-nb.UTF-8: Nice-verdi for X-tjeneren:
+ Når det brukes operativsystemer der kjernen har en bestemt strategi for tidstildeling, er det velkjent at X-tjeneren får bedre ytelse når den får en høyere prosessprioritet enn standarden. Prioriteten til en prosess kalles dens «nice»-verdi. Verdien kan settes fra -20 (meget høy prioritet, eller ikke vennlig - «nice» - mot andre prosesser)  til 19 (meget lav prioritet). Standardverdien for vanlige prosesser er 0, og det er også anbefalt verdi for X-tjeneren.
+ .
+ Verdier utenfor området -10 til 0 anbefales ikke - er det for negativt vil X-tjeneren lage vansker for viktige systemoppgaver, er det for positivt blir X-tjeneren treg og reagerer sent.
+Description-ne.UTF-8: एक्स सर्भरका लागि निस मान:
+ कुनै विशेष कार्यतालिकबद्ध रणनितिसंग सञ्चालन प्रणाली कर्नलहरू प्रयोग गर्दा, यो विस्तार पूर्वक याद गरिन्छ कि एक्स सर्भरको कार्यसम्पादन यो पूर्वनिर्धारित भन्दा एउटा उच्च प्रक्रियामा चलेको बेलामा सुध्रिन्छ; एउटा प्रक्रियाको प्राथमिकता यसको "nice" मानको रुपमा चिनिन्छ ।  ति मानहरुको दायरा -20 (अति धेरै प्राथमिकता, वा "not nice" अन्य प्राथमिकता मा) देखि 19 (सबभन्दा तल्लो प्राथमिकता) ।  पूर्वनिर्धारित राम्रो मान सामान्य प्रक्रियाको लागि 0, र यो एक्स सर्भरका लागि सिफारिश गरिएको मान पनि हो ।
+ .
+ दायरा -10 देखि 0 बाहिरका मानहरू सिफारिश गरिदैन ।; धेरै नकरात्मक, र एक्स सर्भर महत्वपूर्ण प्रणाली कार्यहरुसंग इन्टरफेस गर्नेछ ।  धेरै सकारात्मक, र एक्स सर्भर ढिला वा प्रतिक्रिया नजनाउने हुन् सक्दछ ।
+Description-nl.UTF-8: Hoffelijkheidswaarde (nice value) voor het grafisch systeem:
+ Bij het gebruik van bestuursysteem-kernels met een gegeven 'scheduling'-strategie is het algemeen opgemerkt dat de prestatie van de X-server verbeterd wanneer deze met een hoger dan standaard prioriteit gedraaid wordt. De prioriteit van een proces staat bekend als de hoffelijkheidswaarde en varieert van -20 (minst hoffelijk probeert altijd voor te dringen) tot 19 (extreem hoffelijk, laat alles voorgaan). De standaard hoffelijkheidswaarde voor gewone processen is 0 en is ook de aangeraden waarde voor uw X-server.
+ .
+ Waarden buiten het -10 tot 0 bereik zijn niet aangeraden; bij een te lage waarde stoort de X-server belangrijke systeemprocessen, terwijl bij een te hoge waarde de X-server langzaam zal reageren.
+Description-nn.UTF-8: Nice-verdi for X-tenaren:
+ Når det vert brukt operativsystem der kjerna har ein bestemt strategi for tidstildeling, er det velkjent at X-tenaren får betre ytelse når han får ein høgare prosessprioritet enn standarden. Prioriteten til ein prosess kalla for «nice-verdien» til prosessen. Verdien kan setjast fra -20 (svært høg prioritet, eller ikkje venleg - «nice» - mot andre prosessar) til 19 (svært låg prioritet). Standardverdien for vanlege prosessar er 0, og det er også tilrådd verdi for X-tenaren.
+ .
+ Verdiar utanfor området -10 til 0 er ikkje tilrådd. Er det for negativt vil X-tenaren lage vanskar for viktige systemoppgåver, er det for positivt blir X-tenaren treg og reagerer seint.
+Description-no.UTF-8: Nice-verdi for X-tjeneren:
+ Når det brukes operativsystemer der kjernen har en bestemt strategi for tidstildeling, er det velkjent at X-tjeneren får bedre ytelse når den får en høyere prosessprioritet enn standarden. Prioriteten til en prosess kalles dens «nice»-verdi. Verdien kan settes fra -20 (meget høy prioritet, eller ikke vennlig - «nice» - mot andre prosesser)  til 19 (meget lav prioritet). Standardverdien for vanlige prosesser er 0, og det er også anbefalt verdi for X-tjeneren.
+ .
+ Verdier utenfor området -10 til 0 anbefales ikke - er det for negativt vil X-tjeneren lage vansker for viktige systemoppgaver, er det for positivt blir X-tjeneren treg og reagerer sent.
+Description-pl.UTF-8: Wartość nice dla serwera X.
+ Powszechnie wiadomo, że wydajność X serwera jest lepsza, jeśli jest on uruchomiony z wyższym od standardowego priorytetem. Priorytet jest określany przez tzw. wartość "nice" (ang. uprzejmy). Może ona przyjmować wartości od -20 (najwyższy priorytet, czyli najmniej "uprzejmy" dla innych procesów) do 19 (najniższy priorytet). Standardową wartością "nice" jest 0 i to jest zalecana wartość dla serwera X.
+ .
+ Nie są zalecane wartości spoza zakresu -10 do 0; zbyt duża wartość ujemna spowoduje, iż serwer X będzie zakłócał pracę innych ważnych procesów systemowych. Zbyt duża wartość dodatnia sprawi, że serwer X będzie powolny i nie będzie odpowiadał na żądania użytkownika.
+Description-pt.UTF-8: Valor da prioridade de execução (nice) para o servidor de X:
+ Quando se utilizam kernels de sistemas operativos com uma estratégia específica de 'scheduling', tem sido largamente observado que o desempenho do servidor X melhora quando executado com uma prioridade de processo maior que por omissão; a prioridade de um processo é conhecida como o seu valor "nice".  Estes valores Variam de -20 (prioridade extremamente alta, ou "não simpática" para os outros processos) a 19 (prioridade extremamente baixa).  O valor por omissão para processos comuns é 0, e este é também o valor recomendado para o servidor de X.
+ .
+ Não são recomendados valores fora do intervalo de -10 a 0; demasiado negativos, e o servidor X irá interferir com tarefas importantes do sistema.  Demasiado positivos, e o servidor X apresentará uma resposta lenta.
+Description-pt_BR.UTF-8: Valor do nice para o servidor X:
+ Quando usamos kernels do sistema operacional com uma estratégia de agendamento (scheduling) particular, é notório que o desempenho do servidor X melhora se o mesmo é executado como um processo de prioridade maior que o padrão; uma prioridade de processo é conhecida como seu valor "nice". Elas vão de -20 (prioridade extremamente alta, ou "não boa" (nice) para outros processos) até 19 (prioridade extremamente baixa). O valor nice padrão para processos comuns é 0 e esse é também o valor recomendado para o servidor X.
+ .
+ Valores fora da faixa de -10 até 0 não são recomendados; ao usar valores muito negativos o servidor X irá interferir com tarefas importantes do sistema. Ao usar valores muito positivos o servidor X ficará lento e demorará para responder.
+Description-ro.UTF-8: Introduceți valoarea nice pe care doriți să o folosească serverul X:
+ S-a observat că, în general, atunci când se folosesc nuclee de sisteme de operare cu anumite strategii de programare, performanțele serverului X se îmbunătățesc atunci când este rulat la o prioritate mai mare decât cea implicită; prioritatea unui proces este cunoscută sub numele de valoarea sa "nice". Ea poate lua valori între -20 (prioritate extrem de ridicată, sau bădăran cu celelalte procese) până la 19 (prioritate extrem de scăzută). Valoarea implicită nice pentru procesele obișnuite este 0, iar aceasta e valoarea recomandată și pentru serverul X.
+ .
+ Valorile din afara plajei -10, 0 nu sunt recomandate; prea negativ, serverul X va interfera cu sarcini importante ale sistemului. Prea pozitiv, serverul X se va mișca greu și nu va fi prompt.
+Description-ru.UTF-8: Значение параметра nice для работы X сервера:
+ Многими было замечено, что при использовании ядер операционной системы с определённой стратегией планировщика производительность X сервера повышается при установке уровня приоритета его процесса выше, чем приоритет по умолчанию; приоритет процесса известен как значение "nice". Интервал этих значений от -20 (высший приоритет или "not nice" для других процессов) до 19 (низший приоритет). Значение по умолчанию для обычных процессов 0, и также оно рекомендуется для X сервера).
+ .
+ Значения вне диапазона от -10 до 0 не рекомендуются; при слишком низких сервер X будет мешать важным системным процессам. А слишком большие значения приведут к тому, что сервер будет медленно работать и плохо отзываться.
+Description-sk.UTF-8: 'nice' hodnota X servera:
+ Je známe, že pri použití jadra operačného systému s určitou plánovacou stratégiou sa výkon X servera zlepší, ak je spustený s vyššou prioritou ako štandartnou. Priorita procesu je známa ako hodnota 'nice'. Môže mať hodnoty od -20 (veľmi vysoká priorita) až do 19 (veľmi nízka priorita). Štandartná hodnota 'nice' obyčajného procesu je 0, čo je odporúčaná hodnota aj pre X server.
+ .
+ Neodporúčajú sa hodnoty mimo rozsahu -10..0. Príliš záporná hodnota bude ovplyvňovať dôležité systémové úlohy, príliš kladná hodnota spôsobí pomalosť a lenivosť X servera.
+Description-sq.UTF-8: Vlera e përparësisë për shërbyesin X:
+ Kur përdoren kernela sistemesh operativë me një strategji të veçantë skedulimi, dihet mirë që puna e shërbyesit X përmirësohet kur xhiron me përparësi më të lartë sesa ajo e parazgjedhura, një përparësi proçesi njihet si vlera e tij "nice".  Këto vlera shkojnë nga -20 (shumë e lartë, ose "jo e mirë" për proçeset e tjerë) deri tek 19 (përparësi shumë e ulët).  Vlera "nice" e parazgjedhur për proçese të zakonshëm është 0, dhe kjo këshillohet për shërbyesin X.
+ .
+ Vlera jashtë intervalit -10 deri në 0 nuk këshillohen; shumë negative, dhe shërbyesi X do të ndërhyjë në detyra të rëndësishme sistemi.  Shumë pozitive, dhe shërbyesi X do të jetë i fjetur dhe i ngadaltë në përgjigje.
+Description-sv.UTF-8: Prioritetsvärde för X-servern:
+ När man använder operativsystemskärnor med en specifik schemaläggningsstrategi,  är det vida känt att X-serverns prestanda ökar när den kör med en högre processprioritet än standard; prioriteten för en process är känd som dess "nice"-värde.  Dessa värden sträcker sig från -20 (extremt hög prioritet, eller "inte snäll" mot andra processer) till 19 (extremt låg prioritet).  Standardvärdet för vanliga processer är 0 och det är också det rekommenderade värdet för X-servern.
+ .
+ Värden utanför intervallet -10 till 0 är inte rekommenderat, för negativt och X-servern kommer att inkräkta på viktiga systemuppgifter.  För positivt och X-servern kommer att trög och trött på att svara på anrop.
+Description-ta.UTF-8: எக்ஸ் சேவையகத்துக்கு நல்ல மதிப்பு:
+ ஒரு குறிப்பிட்ட காலவரையரை திட்டத்துடன் இயங்கு தள உட்கூறுகளை பயன் படுத்தும் போது பரவலாக கவனிக்கப் படுள்ளது என்னவென்றால் முன்னிருப்பை விட அதிக செயலாக்க முன்னுரிமையுடன் வேலை செய்யும் போது எக்ஸ் சேவையகத்தின் செயல்பாடு அதிகமாகிறது. இந்த செயலாக்க முன்னுரிமை "நல்ல" மதிப்பு எனப் படுகிறது. இந்த மதிப்பு -20 முதல் (மிக அதிக முன்னுரிமை அல்லது மற்ற செயல்பாடுகளுக்கு "நல்லதல்லாத" முன்னுரிமை) முதல் 19 (மிகக் குறைந்த முன்னுரிமை) வரை இருக்கக் கூடும். இந்த நல்ல மதிப்புக்கு முன்னிருப்பு 0. எக்ஸ் சேவையகத்திற்கு இதுவே பரிந்துரைக்கப் பட்ட மதிப்பாகும்.
+ .
+ -10 முதல் 0 வரையான மதிப்பு வீச்சுக்கு வெளியே உள்ள மதிப்புகள் பரிந்துரைக்கப் படாதவை. அதிகமாக - பக்கம் சென்றால் எக்ஸ் சேவையகம் முக்கியமான கணினி அமைப்பு வேலைகளில் தலையிடும். அதிகமாக + பக்கம் சென்றால் எக்ஸ் சேவையகம் மெதுவாகவும் சோம்பேறித்தனத்துடனும் செயல் படும்.
+Description-th.UTF-8: ค่า nice สำหรับเซิร์ฟเวอร์เอ็กซ์:
+ เมื่อใช้เคอร์เนลระบบปฏิบัติการที่มีการปรับแนวทางการสลับงานได้ จะเป็นที่รู้กันโดยทั่วไปว่า ประสิทธิภาพของเซิร์ฟเวอร์เอ็กซ์จะดีขึ้น เมื่อทำงานด้วยลำดับความสำคัญสูงกว่าค่าปกติ ลำดับความสำคัญของโพรเซสนี้ รู้จักกันในนามของ "ค่า nice" ค่านี้ีช่วงตั้งแต่ -20 (ลำดับความสำคัญสูงสุด หรือ "ไม่ nice" สำหรับโพรเซสอื่น) ไปจนถึง 19 (ลำดับความสำคัญต่ำสุด) ค่าปริยายของค่า nice สำหรับโพรเซสปกติคือ 0 และเป็นค่าแนะนำสำหรับเซิร์ฟเวอร์เอ็กซ์ด้วย
+ .
+ ไม่ขอแนะนำให้ใช้ค่าที่อยู่นอกช่วง -10 ถึง 0 เพราะถ้าติดลบมากเกินไป เซิร์ฟเวอร์เอ็กซ์จะไปรบกวนงานสำคัญของระบบ และถ้าเป็นบวกมากเกินไป เซิร์ฟเวอร์เอ็กซ์จะช้าและไม่ตอบสนอง
+Description-tr.UTF-8: X sunucusu için öncelik değeri (nice):
+ Belirli bir zamanlama (scheduling) stratejisi kullanan işletim sistemi çekirdeklerinde X sunucusunun öntanımlı değerden daha yüksek bir öncelikte (bu öncelik "nice" değeri olarak da bilinir) çalışması halinde başarımın arttığı gözlenmiştir.  "nice" değeri -20 (en yüksek öncelik veya diğer işlemlere göre "not nice") ile 19 değerleri (en düşük öncelik) arasında olabilir.  Sıradan süreçler için öntanımlı 'nice' değeri 0'dır ve X sunucu için de bu değer önerilir.
+ .
+ -10'dan 0'a kadar olan aralığın dışına çıkmak tavsiye edilmez; çok negatif bir değer verirseniz X sunucusu önemli sistem görevleriyle karışabilir, çok pozitif bir değer ise X sunucusunu yavaşlatacak ve tepkisiz hale getirecektir.
+Description-vi.UTF-8: Ưu tiên cho trình phục vụ X:
+ Khi sử dụng hạt nhân hệ điều hành nào có chiến lược định thời riêng, rất nhiều người đã thấy biết rằng hiệu suất của trình phục vụ X tăng lên khi nó được chạy ở mức ưu tiên tiến trình cao hơn giá trị mặc định; ưu tiên của tiến trình cũng được biết như là giá trị "nice". Những giá trị này nằm trong phạm vị -20 (ưu tiên rất cao) đến 19 (ưu tiên rất thấp). Giá trị "nice" mặc định cho các tiến trình chuẩn là 0 : giá trị này cũng được khuyến khích cho trình phục vụ X.
+ .
+ Không khuyên bạn sử dụng giá trị ở ngoại phạm vị -10 đến 0 : giá trị này quá âm, gây ra trình phục vụ gây trở ngạy cho các công việc hệ thống quan trọng. Còn giá trị quá dương sẽ gây ra trình phục vụ X chạy quá chậm, đáp ứng trễ.
+Description-wo.UTF-8: Walóor nice bu serwóor X:
+ Booy jëfandikoo kernel bu sistemu doxaliin bu yore yenn estrateji bu nos waxtuy liggéey, seetlu nañu bubaax ne liggéeyu serwóor X bi dana gana rafet bu fekkee dafay dox ak piriyorite liggéey (process) bu gëna kawe bu defóo bi; piriyorite bi ab liggéey di am (maanaa ab process) lañuy tudde walóoru "nice".  Walóor yooyu mingi tambulee ci -20 (piriyorite bu kawe lool, maanaa  "not nice" ci yaneen liggéey yi) baci 19 (piriyorite bu suufe lool).  Walóor nice bu defóo bu liggéy ordineer moooy 0, ta moom yit lañuy laabiire ñu jox ko serwóor X.
+ .
+ Walóor yi génn diggante -10 ba 0 laabiirewuñu kukoy joxe, dañoo negatif bamu ëppu, dañuy tax serwóor X bi di duggante ak yenn liggéey yu sistem yu am solo yi. Bu doonee lu positif bamu ëppu, konn serwóor X bi dafay tayyeel lool ba nga xamne daanaka du wuyyu ci liñukoy woo.
+Description-zh_CN.UTF-8: X 服务器使用的 nice 值 (即优先值)：
+ 如果在操作系统内核中使用某种调度策略，一个很普遍的看法是让 X 服务器在比默认优先级更高的进程中运行能够提升其表现；一个进程的优先级也叫做它的“nice”值。优先级的范围从 -20 (极高的优先级，或者说对其它进程“不 nice”) 到 19 (极低的优先级)。普通进程的默认 nice 值是 0，这也是 X 服务器的推荐值。
+ .
+ 不推荐使用超出 -10 到 0 范围的值。如果设置太小，X 服务器会干扰其它重要的系统任务；如果设置得太大，X 服务器就会变得缓慢和迟钝。
+Description-zh_TW.UTF-8: X Server 的 nice（優先）值：
+ 在作業系統的 Kernel 和特定的調度策略搭配運作時，一個很普遍的看法是讓 X Server 以比預設值更高的程序優先權來運行時將能提高它的效能；而程序的優先權也就是它的“nice”值。優先值的範圍從 -20（極高的優先級，或者說對其它程序“不 nice）到 19 (極低的優先級)。一般程序的預設 nice 值是 0，而這也同時是 X Server 的推薦值。
+ .
+ 推薦使用介於 -10 到 0 之間的值。如果設置太小，X Server 會干擾到其它重要的系統工作；如果設置得太大，X Server 就會變得既緩慢又遲鈍。
+
+Template: x11-common/xwrapper/nice_value/error
+Type: note
+Description: Incorrect nice value
+ Please enter an integer between -20 and 19.
+Description-ar.UTF-8: قيمة nice  غير صالحة
+ الرجاء إدخال قيمة صحيحة بين -20 و 19
+Description-be.UTF-8: Некарэктнае значэчнне прыярытэту.
+ Калі ласка, увядзіце лічбу паміж -20 і 18.
+Description-bg.UTF-8: Неправилна стойност за параметъра „nice“
+ Въведете цяло число между -20 и 19 включително.
+Description-bs.UTF-8: Neispravna optimalna vrijednost
+ Molim unesite cijeli broj između -20 i 19.
+Description-ca.UTF-8: El valor de prioritat («nice») no és correcte
+ Per favor, entreu un enter entre -20 i 19.
+Description-cs.UTF-8: Chybné hodnota nice
+ Zadejte celé číslo mezi -20 a 19.
+Description-da.UTF-8: Ugyldig nice-værdi
+ Angiv et heltal mellem -20 og 19.
+Description-de.UTF-8: Falscher »nice«-Wert
+ Bitte geben Sie eine Ganzzahl zwischen -20 und 19 ein.
+Description-dz.UTF-8: བདེན་མེད་ཀྱི་བེ་ལུ་ལེགས་ཤོམ།
+ -༢༠ དང་ ༡༩ གི་བར་ནའི་ཧྲིལ་ཨང་འདི་ བཙུགས་གནང་།
+Description-el.UTF-8: Λάθος τιμή προτεραιότητας nice
+ Παρακαλώ εισάγετε έναν ακέραιο από το -20 έως το 19.
+Description-es.UTF-8: Valor de «nice» inválido.
+ Por favor, introduzca un entero entre -20 y 19.
+Description-eu.UTF-8: Okerreko balio egokia
+ Mesedez sar -20 eta 19 arteko zenbaki oso bat.
+Description-fi.UTF-8: Virheellinen nice-arvo
+ Anna kokonaisluku lukujen -20 ja 19 väliltä.
+Description-fr.UTF-8: Valeur de priorité non valable
+ Veuillez entrer un nombre entier entre -20 et 19.
+Description-gl.UTF-8: Valor de amabilidade incorrecto
+ Introduza un número enteiro entre -20 e 19.
+Description-gu.UTF-8: અયોગ્ય નાઇસ કિંમત
+ મહેરબાની કરી -20 અને 19 વચ્ચેની પૂર્ણાંક સંખ્યા દાખલ કરો.
+Description-he.UTF-8: ערך nice שגוי
+ יש להכניס מספר שלם בין -20 ל 19.
+Description-hr.UTF-8: Neispravna 'nice' vrijednost
+ Molim unesite cijeli broj između -20 i 19.
+Description-hu.UTF-8: Hibás nice érték
+ Most egy -20 és 19 közti egészet kell megadni.
+Description-id.UTF-8: Nilai nice tidak benar.
+ Mohon masukkan nilai antara -20 dan 19.
+Description-it.UTF-8: Valore di nice errato
+ Inserire un intero compreso tra -20 e 19.
+Description-ja.UTF-8: 無効な nice 値です
+ -20 〜 19 の間の整数を入力して下さい。
+Description-km.UTF-8: តម្លៃ​ល្អប្រសើ​មិនត្រឹមត្រូវ
+ សូម​បញ្ចូល​ចំនួន​គត់​រវាង ​-២០ និង​ ១៩ ។
+Description-ko.UTF-8: nice 값이 잘못됨:
+ -20에서 19 사이에 있는 정수를 입력해주십시오.
+Description-lt.UTF-8: Netaisyklinga prioriteto reikšmė
+ Įveskite sveiką skaičių tarp -20 ir 19.
+Description-ml.UTF-8: തെറ്റായ നൈസ് വില
+ ദയവായി -20 ക്കും 19 നും ഇടയിലുള്ള ഒരു എണ്ണല്‍ സംഖ്യ നല്കുക.
+Description-mr.UTF-8: चुकीचे चांगले मूल्य
+ -२० व १९ यांमधील पूर्णांक निवडा.
+Description-nb.UTF-8: Ukorrekt nice-verdi
+ Oppgi et heltall mellom -20 og 19.
+Description-ne.UTF-8: गलत निस मान
+ कृपया इन्टिजर -२० र १९को बिचमा प्रविष्ट गर्नुहोस् ।
+Description-nl.UTF-8: Ongeldige hoffelijkheidswaarde
+ Gelieve een geheel getal tussen -20 en 19 op te geven.
+Description-nn.UTF-8: Ukorrekt nice-verdi
+ Oppgje eit heiltal mellom -20 og 19.
+Description-no.UTF-8: Ukorrekt nice-verdi
+ Oppgi et heltall mellom -20 og 19.
+Description-pl.UTF-8: Nieprawidłowa wartość nice
+ Wprowadź liczbę pomiędzy -20 a 19.
+Description-pt.UTF-8: Valor de prioridade do processo ("nice") incorrecto
+ Por favor introduza um número inteiro entre -20 e 19.
+Description-pt_BR.UTF-8: Valor nice incorreto
+ Por favor informe um inteiro entre -20 e 19.
+Description-ro.UTF-8: Valoare "nice" incorectă
+ Sunteți rugat/rugată să introduceți un întreg între -20 și 19.
+Description-ru.UTF-8: Неверное значение nice
+ Пожалуйста, введите целое число между -20 и 19.
+Description-sk.UTF-8: Chybná hodnota 'nice'
+ Zadajte celé číslo medzi -20 a 19.
+Description-sq.UTF-8: Vlerë përparësie e gabuar
+ Të lutem fut një numër të plotë midis -20 dhe 19.
+Description-sv.UTF-8: Felaktigt prioritetsvärde
+ Ange ett heltal mellan -20 och 19.
+Description-ta.UTF-8: தவறான நல்ல மதிப்பு
+ -20 முதல் 19 வரை ஒரு முழு எண்ணை உள்ளிடவும்.
+Description-th.UTF-8: ค่า nice ไม่ถูกต้อง
+ กรุณาป้อนค่าจำนวนเต็มระหว่าง -20 และ 19
+Description-tr.UTF-8: Geçersiz öncelik değeri
+ Lütfen -20 ve 19 arasında bir tam sayı girin.
+Description-vi.UTF-8: Giá trị ưu tiên không đúng
+ Hãy nhập một số nguyên nằm giữa -20 và 19.
+Description-wo.UTF-8: Walóor nice bi baajul
+ Joxeel ab numero bu wér digga -20 ak 19.
+Description-zh_CN.UTF-8: 错误的 nice 值
+ 请输入一个大于 -20 且小于 19 的整数。
+Description-zh_TW.UTF-8: 不正確的 nice 值
+ 請輸入一個介於 -20 到 19 間的整數。
+
+Template: x11-common/upgrade_issues
+Type: note
+Description: Major possible upgrade issues
+ Some users have reported that upon upgrade to the current package set,
+ their xserver package was no longer installed. Because there is no easy
+ way around this problem, you should be sure to check that the xserver-xorg
+ package is installed after upgrade. If it is not installed and you require
+ it, it is recommended that you install the xorg package to make sure you
+ have a fully functional X setup.
+Description-ar.UTF-8: قد تكون هناك مشاكل عامة في الترقية
+ أبلغنا بعض المستخدمين بأنه عند الترقية إلى مجموعة الحزم الحالية، فإن حزمة xserver لا يتم تثبيتها. ولإنه ليست هناك طريقة سهلة لحل هذه المعضلة، فعليك بالتأكد من تثبيت حزمة xserver-xorg بعد الترقية. إن تكن الحزمة مثبتةً وكنت بحاجة لها، فمن المستحسن أن تقوم بتثبيت حزمة xorg كي تضمن الحصول على إعداد لخادم X يمكنك العمل به.
+Description-be.UTF-8: Магчымыя праблемы пры абнаўленні
+ Некаторыя карыстальнікі паведамлялі, што падчас абнаўлення да бягучай версіі іх пакет xserver стае неўсталяваным. Такую праблему цяжка адсачыць, пасля абнаўлення праверце, што пакет xserver-xorg усталяваўся. Калі ён неўсталяваны, але вам патрэбны, раім усталяваць пакет xorg, каб атрымаць цалкам прыдатны да выкарыстання X-сервер.
+Description-bg.UTF-8: Възможни проблеми при обновяване
+ При някои комбинации от пакети е възможно след обновяване да се окаже, че пакетът, съдържащ X-сървъра е премахнат. Понеже няма лесен начин за автоматично откриване на проблема, съветваме Ви да проверите дали пакетът „xserver-xorg“ е инсталиран след обновяването.
+Description-bs.UTF-8: Mogući ozbiljni problemi s nadogradnjom
+ Neki korisnici su prijavili da se nakon nadogradnje na trenutni skup paketa dogodilo da im nedostaje xserver paket. Budući da nema jednostavnog načina kako ovaj problem zaobići, obavezno trebate provjeriti da je nakon nadogradnje instaliran paket xserver-xorg. Ako nije instaliran, a trebate ga, preporučuje se da instalirate paket xorg tako da osigurate postojanje potpuno funkcionalne X postave.
+Description-ca.UTF-8: Problemes potencials de l’actualització
+ Alguns usuaris han informat de que en actualitzar al conjunt de paquets actual, el seu paquet «xserver» ja no estava instaŀlat.  Com que aquest problema no es pot evitar fàcilment, confirmeu que el paquet «xserver-xorg» està instaŀlat en acabar l’actualització.  Si no ho està i el necessiteu, es recomana instaŀlar el paquet «xorg» per a assegurar‐vos de que teniu un sistema X completament funcional.
+Description-cs.UTF-8: Možné problémy s aktualizací
+ Někteří uživatelé ohlásili, že při aktualizaci na současnou sadu balíků se jim nenainstaloval balík xserver. Protože neexistuje jednoduché řešení tohoto problému, měli byste se po aktualizaci ujistit, že máte nainstalovaný balík xserver-xorg. Pokud tomu tak není, ale pro svou práci jej potřebujete, je doporučeno nainstalovat balík xorg, který zajistí že budete mít všechny potřebné části pro funkční X.
+Description-da.UTF-8: Større potentielle opgraderingsproblemer
+ Nogle brugere har rapporteret, at deres xserver-pakke ikke længere var installeret efter opgradering til den nyeste pakkesamling. Da der ikke er nogen let måde at imødegå dette problem, bør du sikre dig at pakken xserver-org er installeret efter opgraderingen. Hvis den ikke er installeret, og du har brug for den, anbefales det at du installerer pakken xorg, så du er sikker på at have en fuldt funktionsdygtig X-opsætning.
+Description-de.UTF-8: Bedeutende mögliche Aktualisierungsprobleme
+ Einige Benutzer berichteten, dass bei einer Aktualisierung auf das aktuelle Paketset, ihr xserver-Paket nicht länger installiert war. Da es keinen einfachen Weg gibt, das Problem zu umgehen, sollten Sie sichergehen, dass das Paket xserver-xorg nach der Aktualisierung installiert ist. Sollte es nicht installiert sein und Sie es benötigen, wird empfohlen, das Paket xorg zu installieren, um sicherzustellen, dass Sie eine vollfunktionsfähige X-Einrichtung haben.
+Description-dz.UTF-8: ཡར་བསྐྱེད་སྦོམ་འབད་ཚུགས་པའི་འགྲེམས་པ།
+ ལག་ལེན་པ་ལ་ལོ་ཅིག་གིས་ ད་ལྟོའི་ཐུམ་སྒྲིལ་གཞི་སྒྲིག་གུ་ཡར་བསྐྱེད་འབདཝ་ད་ དེ་ཚུའི་ཨེགསི་སར་བར་ཐུམ་སྒྲིལ་འདི་ ད་ལས་ཕར་གཞི་བཙུགས་མ་འབད་བས་ཟེར་སྙན་ཞུ་འབད་ནུག ག་ཅི་སྨོ་ཟེར་བ་ཅིན་ དཀའ་ངལ་འདི་ལུ་ཐབས་ཤེས་འཇམ་ཏོང་ཏོ་མེདཔ་ལས་ ཁྱོད་ཀྱིས་ xserver-xorg ཐུམ་སྒྲིལ་འདི་ ཡར་བསྐྱེད་འབད་བའི་ཤུལ་ལུ་གཞི་བཙུགས་འབད་ཡི་ཟེར་ ངེས་པར་ཞིབ་དཔྱད་འབད་དགོ གལ་སྲིད་ག་དེམ་ཅིག་སྦེ་འདི་ གཞི་བཙུགས་མ་འབདཝ་དང་དགོསཔ་ཡོད་པ་ཅིན་ ཁྱོད་ལུ་ལས་འགན་ཆ་ཚང་གི་ ཨེགསི་ གཞི་སྒྲིག་ཅིག་ངེས་པར་ཡོད་དགོསཔ་ལས་ xorg གཞི་བཙུགས་འབད་བའི་འོས་སྦྱོར་འབད་དེ་ཡོད།
+Description-el.UTF-8: Σημαντικά πιθανά προβλήματα αναβάθμισης
+ Μερικοί χρήστες έχουν αναφέρει ότι κατά την αναβάθμιση στο παρόν σύνολο πακέτων, το πακέτο xserver δεν ήταν πια εγκατεστημένο. Επειδή δεν υπάρχει εύκολος τρόπος αντιμετώπισης αυτού του προβλήματος, θα πρέπει να βεβαιωθείτε ότι το πακέτο xserver-xorg είναι εγκατεστημένο μετά την αναβάθμιση. Αν δεν είναι και το χρειάζεστε, σας συνιστούμε να εγκαταστήσετε το πακέτο xorg για να σιγουρευτείτε ότι έχετε μια πλήρως λειτουργική εγκατάσταση του συστήματος Χ.
+Description-es.UTF-8: Problemas conocidos de actualización
+ Algunos usuarios nos han informado de que tras la actualización a la versión actual de este paquete, el paquete de xserver no estaba instalado. Dado que no hay una manera fácil de resolver este problema, le recomendamos que revise tras la instalación que el paquete xserver-xorg esté instalado. Si no lo está y lo necesita, se recomienda que instale el paquete xorg para asegurarse de que tiene una configuración de X funcional.
+Description-eu.UTF-8: Eguneraketa arazo aukera handiak
+ Zenbait erabiltzailek ohartu digutenez pakete bilduma honetara eguneratzean, beren xserver paketea ez zela instalatu. Ez Denez erraza arazo hau kokatzea eguneraketa ondoren xserver-xorg paketea instalatua dagoela ziurtatu. Instalaturik ez badago eta zuk honen beharra baduzu gomendagarria da xorg paketea instalatzea funtzionatuko duen X konfigurazio bat duzula ziurtatzeko.
+Description-fi.UTF-8: Vakavat päivitysongelmat mahdollisia
+ Eräät käyttäjät ovat raportoineet, että paketti xserver ei ollut enää asennettuna heidän päivitettyään nykyiseen pakettijoukkoon. Tätä ongelmaa ei voida helposti ratkaista. Tarkista päivityksen jälkeen, että paketti xserver-xorg on asennettuna. Jos paketti ei ole asennettuna ja sitä tarvitaan, on suositeltavaa asentaa paketti xorg. Tämä varmistaa, että käytössä on toimiva X-järjestelmä.
+Description-fr.UTF-8: Difficultés possibles lors de la mise à jour majeure
+ Certains utilisateurs ont indiqué que lors de la mise à jour vers l'ensemble actuel de paquets pour X, le paquet du serveur X n'était plus installé. Comme il n'existe pas de méthode simple pour contourner ce problème, vous devriez vérifier si le paquet xserver-xorg est toujours installé après la mise à jour. Si ce n'est pas le cas et que vous en avez besoin, vous devriez installer le paquet « xorg » pour garantir une configuration opérationnelle de X.
+Description-gl.UTF-8: Posiblemente haxa problemas importantes
+ Algúns usuarios informaron de que, trala actualización ao conxunto de paquetes actual, o seu paquete xserver xa non estaba instalado. Como non hai un xeito doado de evitar este problema, debería comprobar que o paquete xserver-xorg estea instalado trala actualización. Se non o está e lle fai falla, recoméndase que instale o paquete xorg para se asegurar de ter unha configuración de X totalmente funcional.
+Description-gu.UTF-8: મહત્વનાં શક્ય સુધારા પરિણામો
+ કેટલાંક વપરાશકર્તાઓએ એવો અહેવાલ આપ્યો છે કે હાલનાં પેકેજ સમૂહમાં સુધારો કરતાં, તેમનું xserver પેકેજ સ્થાપન કરેલ હોતું નથી. કારણકે આ મુશ્કેલીનો કોઇ સહેલો રસ્તો નથી, તમારે ચોકસાઇ કરવી પડશે કે સુધારા પછી xserver-xorg પેકેજ સ્થાપિત થયેલ છે. જો તે સ્થાપિત ન હોય તો, તેવી સલાહ આપવામાં આવે છે કે તમારે xorg પેકેજ પૂર્ણ રીતે કાર્યક્ષમ X ડેસ્કટોપ માટે સ્થાપિત કરવું જોઇએ.
+Description-he.UTF-8: בעיות שדרוג רציניות אפשריות
+ משתמשים מסוימים דיווחו שלאחר שדרוג מערכת החבילות הנוכחית, חבילות ה-xserver שלהם כבר לא היו מותקנות. מכיוון שאין דרך קלה לעקוף את הבעיה הזאת, עליך לבדוק שהחבילה xserver-xorg מותקנת לאחר השדרוג. אם היא לא מותקנת ויש לך צורך בה, מומלץ להתקין את החבילה xorg כדי לוודא שיש לך התקנה מתפקדת של X.
+Description-hr.UTF-8: Mogući bitni problemi pri nadogradnji
+ Neki korisnici su prijavili da se nakon nadogradnje na trenutni set paketa dogodilo da im nedostaje xserver paket. Budući da nema jednostavnog načina kako ovaj problem zaobići, obavezno trebate provjeriti da je nakon nadogradnje instaliran paket xserver-xorg. Ako on nije instaliran a trebate ga, preporučuje se da instalirate paket xorg tako da osigurate postojanje sasvim funkcionalnog X sustava.
+Description-hu.UTF-8: Fontos frissítési figyelmeztetés
+ Az Xorg-ra való áttéréskor egyes felhasználóknál előfordulhat, hogy X kiszolgáló nélkül maradnak. Ezt nem lehet biztosan kikerülni, ezért az frissítés után győződj meg arról, hogy a xserver-xorg csomag telepítve van. Ha hiányzik, például az xorg csomag telepítésével biztosítható, hogy egy teljesen működő X telepítés legyen.
+Description-id.UTF-8: Masalah pembaharuan yang mungkin
+ Beberapa pengguna melaporkan bahwa setelah proses pembaharuan kumpulan paket, paket xserver mereka tidak lagi terpasang. Oleh karena tidak ada cara yang mudah untuk mengatasi ini, Anda harus memastikan paket xserver-xorg terpasang setelah proses pembaharuan. Jika tidak, dan Anda membutuhkannya, disarankan Anda memasang paket xorg untuk mendapatkan konfigurasi X yang dapat beroperasi penuh.
+Description-it.UTF-8: Possibili gravi problemi di aggiornamento
+ Alcuni utenti hanno riportato che durante l'aggiornamento all'attuale insieme di pacchetti, il loro pacchetto xserver non era più installato. Dato che non c'è una soluzione facile a questo problema, verificare che il pacchetto xserver-xorg sia ancora installato dopo l'aggiornamento. Se così non fosse ed è necessario, installare il pacchetto xorg per essere sicuri di avere una configurazione di X completamente funzionante.
+Description-ja.UTF-8: アップグレードに関する問題の主な可能性
+ 複数のユーザが、彼らの X サーバパッケージがもうインストールされていない現在のパッケージセットへのアップグレードについて報告しています。この問題に対する簡単な方法はないため、xserver-xorg パッケージがアップグレード後にインストールされているかどうかよく確認すべきです。もしこれがインストールされておらず、かつ必要なのであれば、完全に機能する X セットアップを保有していることを確認するために、xorg パッケージをインストールすることをお勧めします。
+Description-km.UTF-8: អាច​ធ្វើ​ឲ្យ​បញ្ហា​ប្រសើរ​ឡើងបាន​​ច្រើន​
+ អ្នក​ប្រើមួយ​ចំនួន​​បាន​រាយការណ៍​ពីការធ្វើ​ឲ្យ​ប្រសើ​ខាង​លើទៅកាន់សំណុំកញ្ចប់​បច្ចុប្បន្ន កញ្ចប់​ xserver របស់​ពួក​គេ​មិនត្រូវបាន​ដំឡើង​បានតទៅ​ទៀត​ទេ​ ។ ព្រោះ​គ្មាន​វិធី​ដោះស្រាយជុំវិញ​បញ្ហា​នេះ​ទេ​ អ្នកគួរ​តែ​ប្រាកដក្នុងចិត្ត ​​​ដើម្បី​ពិនិត្យ​កញ្ចប់​ xserver-xorg នោះ ដែលត្រូវ​បាន​ដំឡើង​បន្ទាប់​ពី​ធ្វើ​ឲ្យ​ប្រសើរ ។ ប្រសិនបើ​វា​មិន​បាន​ដំឡើងទេ​ ហើយ អ្នក​ត្រូវការវា វានឹងត្រូវ​​បាន​ផ្តល់​អនុសាសន៍​​ថា​ អ្នក​ដំឡើង​កញ្ចប់​ xorg ដើម្បី​ប្រាកដ​ថា អ្នក​បាន​រៀបចំ​មុខងារ​ X ពេញលេញ ។
+Description-ko.UTF-8: 업그레이드 중 발생할 수 있는 심각한 문제점
+ 현재 패키지 세트로 업그레이드를 하자 xserver 패키지가 더 이상 설치되지 않게 된 사용자 보고가 일부 있었습니다. 이 문제를 해결하기가 쉽지 않기 때문에 업그레이드 후 xserver-xorg 패키지가 설치되어있는지 확인해주십시오. 필요한데도 설치되어있지 않을 경우, X 설정이 온전히 동작하도록 하기 위해서는 xorg 패키지를 설치할 것을 권장합니다.
+Description-lt.UTF-8: Galimos atnaujinimo problemos
+ Kai kurie naudotojai pastebėjo, kad po atnaujinimo paketas „xserver“ buvo išinstaliuotas. Rekomenduojame rankniu būdu įsitikinti, kad paketas xserver-xorg po atnaujinimo vis dar instaliuotas. Jei jis neinstaliuotas, tačiau Jums reikalingas, rekomenduojama instaliuoti xorg paketą.
+Description-ml.UTF-8: സാധ്യതയുള്ള വലിയ അപ്​ഗ്രേഡ് പ്രശ്നങ്ങള്‍
+ ഇപ്പോഴുള്ള പാക്കേജ് സെറ്റിലേക്ക് അപ്​ഗ്രേഡ് ചെയ്തതിനു ശേഷം അവരുടെ xserver പാക്കേജ് ഇന്‍സ്റ്റാള്‍ ചെയ്തിട്ടില്ല എന്ന് ചില ഉപയോക്താക്കള്‍ പറഞ്ഞിട്ടുണ്ട്. ഇത് മറികടക്കാന്‍ വേറൊരു വഴിയും ഇല്ലാത്തത് കാരണം നിങ്ങള്‍ അപ്​ഗ്രേഡിനു ശേഷം xserver-xorg പാക്കേജ് ഇന്‍സ്റ്റാള്‍ ചെയ്തിട്ടുണ്ടെന്ന് നിങ്ങള്‍ പരിശോദിച്ചുറപ്പാക്കേണ്ടതുണ്ട്. ഇത് ഇന്‍സ്റ്റാള്‍ ചെയ്യാതിരിക്കുകയും നിങ്ങള്‍ക്ക് ഇതാവശ്യം വരികയുമാണെങ്കില്‍ മുഴുവന്‍ കഴിവുകളുമുള്ള ഒരു X സജ്ജീകരണമുണ്ടെന്നുറപ്പു വരുത്താന്‍ നിങ്ങള്‍ xorg പാക്കേജ് ഇന്‍സ്റ്റാള്‍ ചെയ്യണമെന്ന് ശുപാര്‍ശ ചെയ്യുന്നു.
+Description-mr.UTF-8: श्रेणीवर्धनातील संभाव्य महत्वाचे मुद्दे
+ काही वापरकर्त्यांनी असे कळवले आहे की सध्याच्या पॅकेज संचात श्रेणीवर्धित केल्यानंतर त्यांचे एक्स परिसेवक पॅकेज अधिष्टापित राहिले नाही. या समस्येवर सोपा तोडगा नसल्याने, श्रेणीवर्धनानंतर एक्सपरिसेवक-एक्सआॅर्ग पॅकेज अधिष्टापित असल्याची आपण तपासून निश्चिती केली पाहिजे. जर ते अधिष्टापित नसेल आणी तुम्हाला ते हवे असेल, तर आपण एक्सआॅर्ग पॅकेज पुन्हा अधिष्टापित करा, जेणेकरून तुम्हाला पूर्णपणे कार्यरत एक्स संरचना उपलब्ध होईल.
+Description-nb.UTF-8: Muligens store problemer med oppgradering
+ Noen brukere har meldt at ved oppgradering til siste pakkesett ble ikke xserver-pakken installert. Fordi det ikke er lett å omgå dette problemet, bør du passe på at pakka xserver-xorg er installert etter oppgradering. Hvis den ikke er installert og du trenger den, så anbefales det at du installerer xorg-pakka for å sikre at du har et fullstendig X-oppsett.
+Description-ne.UTF-8: महत्वपूर्ण संभव स्तरवृद्धि निकासहरू
+ केहि प्रयोगकर्ताले हालको प्याकेज सेटमा माथि स्तरवृद्धिको प्रतिवेदन गरेको छ, तिनिहरूको एक्स सर्भर प्याकेज स्थापित हुने थिएन । किनभने यो समस्याको लागि कुनै सजिलो बाटो छैन, तपाईँ स्तर वृद्धि पछि एक्स सर्भर-एक्ड अर्ग प्याकेज भएकोमा जाँच गर्न निश्चित हुनुपर्दछ । यदि यो स्थापना भएको छैन र यो तपाईँलाई आवश्यक परेमा, तपाईँलाई सम्पूर्ण एक्स सेटअप कार्यगत रेहेकोमा निश्चित बनाउन एक्स अर्ग प्याकेज स्थापना गर्न सिफारिश गरिन्छ ।
+Description-nl.UTF-8: Grote mogelijke opwaarderingsmoeilijkheden
+ Sommige gebruikers melden dat hun xserver-pakket na het opwaarderen naar de huidige pakketset niet meer geïnstalleerd was. Omdat er geen makkelijke manier is om dit probleem heen kunt u best na de opwaardering controleren of het xserver-xorg-pakket geïnstalleerd is. Als dit niet het geval is, is het aan te raden om het xorg-pakket te installeren en zo te verzekeren dat u een volledig werkende X-opzet heeft.
+Description-nn.UTF-8: Det kan vere store problem med oppgraderinga
+ Nokre brukarar har meldt at ved oppgradering til siste pakkesett blei ikkje xserver-pakka installert. Fordi det ikkje er lett å omgå dette problemet, bør du passe på at pakka xserver-xorg er installert etter oppgradering. Viss ho ikkje er installert og du treng ho, så er det tilrådd at du installerer xorg-pakka for å sikre at du har eit fullstendig X-oppsett.
+Description-no.UTF-8: Muligens store problemer med oppgradering
+ Noen brukere har meldt at ved oppgradering til siste pakkesett ble ikke xserver-pakken installert. Fordi det ikke er lett å omgå dette problemet, bør du passe på at pakka xserver-xorg er installert etter oppgradering. Hvis den ikke er installert og du trenger den, så anbefales det at du installerer xorg-pakka for å sikre at du har et fullstendig X-oppsett.
+Description-pl.UTF-8: Możliwe poważne problemy podczas aktualizacji
+ Część użytkowników zgłosiła, że podczas aktualizacji zestawów pakietów ich pakiet xserver przestał być dostępny w systemie. Ponieważ nie istnieje prosty sposób na ominięcie tego problemu, upewnij się, że po aktualizacji Twój system zawiera pakiet xserver-xorg. Jeśli go nie ma, a potrzebujesz go, zalecane jest samodzielne go zainstalowanie.
+Description-pt.UTF-8: Problemas de maior possíveis com a actualização
+ Alguns utilizadores relataram que com a actualização para o conjunto de pacotes actuais, o seu pacote xserver deixou de estar instalado. Como não existe nenhuma forma fácil de contornar este problema, assegure-se que verifica se o pacote xserver-xorg está instalado após a actualização. Se não estiver instalado e necessitar dele, é recomendado que instale o pacote xorg para ter a certeza que tem uma instalação do X completamente funcional.
+Description-pt_BR.UTF-8: Possíveis grandes problemas de atualização
+ Alguns usuários relataram que após a atualização para o conjunto de pacotes atual, seus pacotes de servidor X não estavam mais instalados. Devido a não existir uma maneira fácil de contornar este problema, você deverá certificar-se de que o pacote xserver-xorg esteja instalado após a atualização. Caso o mesmo não esteja instalado, é recomendado que você instale o pacote xorg para certificar-se de possuir um ambiente X completamente funcional.
+Description-ro.UTF-8: Posibile probleme majore la actualizare
+ Unii utilizatori au raportat că după actualizarea cu setul curent de pachete, pachetul lor pentru xserver nu mai era instalat. Deoarece nu există nici o soluție facilă de ocolire a acestei probleme, ar trebui să vă asigurați că pachetul xserver-xorg este instalat după actualizare. Dacă nu este instalat și aveți nevoie de el, se recomandă să instalați pachetul xorg pentru a asigura o configurație X funcțională.
+Description-ru.UTF-8: Возможные проблемы при обновлении
+ Некоторые пользователи сообщают, что при обновлении до текущей версии пакет xserver не остаётся установленным. Так как такую проблему не легко отследить, после обновления вы должны убедиться, что пакет xserver-xorg установился. Если он не установлен и он вам необходим, рекомендуется установить пакет xorg, чтобы получить полностью функциональную установку X сервера.
+Description-sk.UTF-8: Možné problémy s aktualizáciou
+ Niektorí používatelia pri aktualizácii na súčasnú sadu balíkov zistili, že sa im nenainštaloval balík xserver. Pretože nejestvuje jednoduché riešenie tohto problému, mali by ste si po aktualizácii overiť, že máte nainštalovaný balík xserver-xorg. Ak nie je nainštalovaný a vy ho potrebujete, odporúča sa inštalácia balíka xorg, ktorý zabezpečí plne funkčné X prostredie.
+Description-sq.UTF-8: Probleme upgrade madhore të mundshme
+ Disa përdorues kanë raportuar që gjatë freskimit të setit të tanishëm të paketave, shërbyesi i tyre xserver nuk u instalua më. Ngaqë nuk ka një zgjidhje të lehtë për këtë problem, duhet të sigurohesh që paketa xserver-xorg është instaluar pas freskimit. Nëse nuk është instaluar dhe të duhet, këshillohet që të instalosh paketin xorg për t'u siguruar që ke një ambjent X plotësisht funksional.
+Description-sv.UTF-8: Större möjliga uppgraderingsproblem
+ Några användare har rapporterat att när de uppgraderade till aktuell paketuppsättning var inte deras xserver-paket installerat längre. På grund av att det inte finns något enkelt sätt att lösa detta problem på bör du se till att kontrollera att paketet xserver-xorg är installerat efter uppgradering. Om det inte är installerat och du kräver det, rekommenderas det att du installerar xorg-paketet för att se till att du har en fullständigt fungerande X-konfiguration.
+Description-ta.UTF-8: பெரிய மேம்படுத்தல் சமாசாரங்கள் 
+ சில பயனர்கள் தற்போதைய பொதி தொகுப்புக்கு மேம் படுத்தும் போது அவர்களது எக்ஸ் சேவையக பொதி நிறுவப்பட்டு இருக்கவில்லை என தெரிவித்துள்ளார்கள். இந்த பிரச்சினைக்கு சுலபமான தீர்வில்லை. ஆகவே நீங்கள் பொதி மேம்பாட்டுக்குப் பின் எக்ஸ் சேவையக- எக்ஸ் ஆர்க் (xserver-xorg) பொதி நிறுவப்பட்டு இருக்கிறதா என சோதிக்க வேண்டும். இல்லையெனில், உங்களுக்கு அது தேவை எனில் முழுமையாக வேலை செய்யும் எக்ஸ் அமைப்புக்கு நீங்கள் எக்ஸ் ஆர்க் பொதியை நிறுவ வேண்டும்.
+Description-th.UTF-8: ประเด็นใหญ่ที่อาจเกิดขึ้นในการปรับรุ่น
+ ผู้ใช้บางคนได้รายงานว่า เมื่อปรับรุ่นเป็นชุดแพกเกจปัจจุบัน ปรากฏว่าแพกเกจ xserver ได้หายไปจากระบบ และเนื่องจากไม่มีทางแก้ที่ง่ายสำหรับปัญหานี้ คุณควรตรวจสอบให้แน่ใจ ว่าแพกเกจ xserver-xorg ถูกติดตั้งอยู่ในระบบหลังจากการปรับรุ่นนี้ ถ้าแพกเกจดังกล่าวไม่ถูกติดตั้ง และคุณต้องการใช้ ก็ขอแนะนำให้ติดตั้งแพกเกจ xorg เพื่อให้แน่ใจว่าคุณมีเอ็กซ์วินโดว์ที่ใช้การได้
+Description-tr.UTF-8: Önde gelen muhtemel yükseltme sorunları
+ Bazı kullanıcılar yeni paketlere yükseltme sonrasında xserver paketinin artık kurulmadığını bildirmişlerdir.  Bu sorunun kolay bir çözümü olmadığından yükseltme sonrasında xserver-xorg paketinin kurulduğuna emin olun.  Eğer siz belirttiğiniz halde bu paket kurulmamışsa sorunsuz bir X yapılandırmasına sahip olmak için xorg paketini kurmanız önerilir.
+Description-vi.UTF-8: Vấn đề nâng cấp quan trọng có thể
+ Một số người dùng đã thông báo rằng khi nâng cấp lến bộ gói hiện thời, gói cung cấp trình phục vụ X không còn được cài đặt lại. Vì không có cách dễ dàng chỉnh sửa vấn đề này, bạn nên kiểm tra xem gói « xserver-xorg » vẫn còn được cài đặt sau khi nâng cấp. Nếu nó không được cài đặt và bạn cần nó, khuyên bạn cài đặt gói « xorg » để chắc là bạn có thiết lập X có chức năng đầy đủ.
+Description-wo.UTF-8: Yenn probleem yukk daraja (upgrade)
+ Yenn jëfandikukat yi waxnañu ne buñu yokkee daraja seen sistem bi andiko ci bii paket. seeni paket yu xserver deesootuko istale. Ginnaaw problem boobu yoombula lijjanti, kon warngaa seet baxam paketu xserver-xorg istaleesna ko ginaaaw boo yokkee daraja ba noppi. Bu fekkee istaleesu ko ta nga soxla ko, kon ñingi lay laabiire nga istale paket bu xorg ngir mu wóor la ne da nga am istalaasioŋ bu X buy dox.
+Description-zh_CN.UTF-8: 严重的升级问题
+ 有些用户报告过，在升级到当前最新的软件集后，他们的 xserver 软件包却没有被安装。由于对此问题并没有一个简单的解决办法，您应该在升级后检查 xserver-xorg 软件包是否被安装。如果没有安装而且您需要它，推荐您安装 xorg 软件包以确保您拥有一个全功能的 X 设置。
+Description-zh_TW.UTF-8: 可能會遇到的重大升級問題
+ 有些使用者回報說，在將相關套件升級到當前最新版本後，他們的 xserver 套件卻沒有被安裝到。但對於這個問題卻沒有什麼簡單的解決辦法，您應該在升級後檢查是否有安裝到 xserver-xorg 套件。如果真沒有安裝但您有需要，推薦您安裝 xorg 套件以確保您擁有全功能的 X 設置。
+
+Template: x11-common/x11r6_bin_not_empty
+Type: note
+Description: Cannot remove /usr/X11R6/bin directory
+ This upgrade requires that the /usr/X11R6/bin directory be removed and
+ replaced with a symlink. An attempt was made to do so, but it failed, most
+ likely because the directory is not yet empty. You must move the files
+ that are currently in the directory out of the way so that the
+ installation can complete. If you like, you may move them back after the
+ symlink is in place.
+ .
+ This package installation will now fail and exit so that you can do this.
+ Please re-run your upgrade procedure after you have cleaned out the
+ directory.
+Description-ar.UTF-8: لا يمكن إزالة الدليل /usr/X11R6/bin
+ تتطلب عملية الترقية هذه إزالة الدليل /usr/X11R6/bin و استبداله برابط رمزي. لقد حاولنا القيام بذلك، ولكن العملية فشلت، ويبدو أن هذا بسبب أن الدليل غير فارغ. عليك بنقل الملفات الموجودة حالياً في الدليل كي يتمكن برنامج التثبيت من إتمام هذه العملية. إن أردت، يمكن إعادة الملفات إلى حيث كانت بعد إنشاء الرابط الرمزي.
+ .
+ ستفشل عملية تثبيت الحزمة هذه وتتوقف كي تستطيع القيام بهذا. الرجاء إعادة تشغيل عملية الترقية بعد أن تنتهي من تنظيف الدليل.
+Description-be.UTF-8: Немагчыма выдаліць каталог /usr/X11R6/bin
+ Абнаўленне патрабуе, каб каталог /usr/X11R6/bin быў заменены на сімвалічную спасылку. Такая спроба была здзейснена, але не атрымалася, хутчэй за ўсё ад таго, што каталог не пусты. Вы павінны перамясціць файлы з каталогу, тады ўсталяванне скончыцца. Калі хочаце, можаце потым вярнуць іх назад, калі сімвалічная спасылка будзе зроблена.
+ .
+ Усталяванне пакета лічыцца няўдалым і будзе скончана. Пасля ачысткі каталога зноў запусціце працэдуру абнаўлення.
+Description-bg.UTF-8: Директорията „/usr/X11R6/bin“ не може да бъде премахната
+ Обновяването изисква директорията „/usr/X11R6/bin“ да бъде премахната и на нейно място да бъде поставена символна връзка. Понеже директорията не е празна, опитът за нейното премахване не успя. За да завърши обновяването е нужно да преместите съдържанието на директорията другаде. След поставянето на символната връзка можете да върнете съдържанието обратно.
+ .
+ Инсталацията на пакета ще спре за да можете да направите необходимото. След почистване на директорията стартирайте отново процеса на обновяване.
+Description-bs.UTF-8: Ne mogu ukloniti /usr/X11R6/bin direktorij
+ Ova nadogradnja zahtijeva da se /usr/X11R6/bin direktorij ukloni i zamjeni simboličkim linkom. Pokušaj da se to uradi je napravljen, ali nije uspjeo, najvjerovatnije zato što direktorij nije prazan. Morate ukloniti datoteke koje su trenutno u direktoriju van njega kako bi se instalacija mogla dovršiti. Ako želite, možete ih vratiti nazad nakon što se postavi simbolički link.
+ .
+ Instalacija ovog paketa će se sada prekinuti tako da možete uraditi to. Molim ponovo pokrenite postupak nadogradnje (upgrade) nakon što očistite direktorij.
+Description-ca.UTF-8: No s’ha pogut eliminar el directori «/usr/X11R6/bin».
+ Aquesta actualització necessita eliminar el directori «/usr/X11R6/bin» i reemplaçar‐lo per un enllaç simbòlic.  S’ha provat de fer‐ho però s’ha fallat, molt probablement perquè el directori no està encara buit.  Cal que lleveu d’emmig els fitxers que s’hi troben actualment, de forma que es puga completar la instaŀlació.  Si voleu, podeu tornar‐los al lloc quan s’haja creat l’enllaç simbòlic.
+ .
+ La instaŀlació d’aquest paquet fallarà i eixirà per a que pugueu fer‐ho.  Per favor, torneu a executar el procediment d’actualització una volta hàgeu netejat el directori.
+Description-cs.UTF-8: Nelze odstranit adresář /usr/X11R6/bin
+ Tato aktualizace vyžaduje, aby byl adresář /usr/X11R6/bin odstraněn a nahrazen symbolickým odkazem. Skript se to pokusil provést automaticky, ale selhal (nejspíše proto, že adresář ještě není prázdný). Aby se mohla instalace dokončit, musíte přesunout soubory z adresáře někam mimo. Pokud budete chtít, můžete je po vytvoření symbolického odkazu vrátit zpět.
+ .
+ Instalace tohoto balíku nyní skončí s chybou, abyste mohli provést potřebný zásah. Po vyčištění adresáře prosím znovu spusťte aktualizační proceduru.
+Description-da.UTF-8: Kan ikke fjerne mappen /usr/X11R6/bin
+ Denne opgradering kræver at mappen /usr/X11R6/bin fjernes og erstattes af en symbolsk lænke. Dette blev forsøgt, men mislykkedes, sandsynligvis fordi mappen endnu ikke er tom. Du skal flytte filerne i denne mappe væk, så installationen kan afsluttes. Hvis du vil, kan du flytte dem tilbage, når den symbolske lænke er kommet på plads.
+ .
+ Denne pakkeinstallation vil nu fejle og afslutte, så du kan gøre dette. Kør opgraderingsproceduren igen, når du har tømt mappen.
+Description-de.UTF-8: Kann das Verzeichnis /usr/X11R6/bin nicht entfernen
+ Diese Aktualisierung erfordert, dass das Verzeichnis /usr/X11R6/bin entfernt und durch einen symbolischen Link ersetzt wird. Ein Versuch wurde diesbezüglich unternommen, schlug aber fehl, wahrscheinlich weil das Verzeichnis noch nicht leer ist. Sie müssen die Dateien, die sich zurzeit in dem Verzeichnis befinden, daraus verschieben, so dass die Installation beendet werden kann. Wenn Sie möchten, können Sie sie später wieder zurückverschieben, nachdem der symbolische Link eingerichtet wurde.
+ .
+ Diese Paketinstallation wird nun fehlschlagen und beenden, so dass Sie dies tun können. Bitte starten Sie die Aktualisierung neu, nachdem Sie das Verzeichnis geleert haben.
+Description-dz.UTF-8:  /usr/X11R6/bin སྣོད་ཐོ་འདི་རྩ་བསྐྲད་གཏང་མི་ཚུགས།
+ ཡར་བསྐྱེད་འབད་ནི་ལུ་  /usr/X11R6/bin སྣོད་ཐོ་འདི་སིམ་ལིངཀ་གི་ཐོག་ལས་ རྩ་བསྐྲད་དང་ཚབ་མ་བཙུགས་ཏེ་དགོཔ་ཨིན། དེ་འབད་ནིའི་དོན་ལས་ ཧེ་མ་ལས་དཔའ་བཅམས་ཏེ་ཡོད་རུང་འཐུས་ཤོར་་བྱུང་ནུག་ ག་ཅི་འབད་ཟེར་བ་ཅིན་ སྣོད་ཐོ་འདི་ད་ལྟོའི་བར་ཡང་སྟོངམ་མེན་པས། ཁྱོད་ཀྱིས་ད་ལྟོ་སྣོད་ཐོ་ནང་ཡོད་པའི་ཡིག་སྣོད་ཚུ་སྤོ་བཤུད་འབད་བ་ཅིན་ གཞི་བཙུགས་འབད་ནི་མཇུག་བསྡུ་འོང་། ཁྱོད་ཀྱིས་འབད་དགོ་མནོ་བ་ཅིན་ སིམ་ལིངཀ་འདི་ས་གནས་ནང་ཡོད་པའི་ཤུལ་ལུ་ དེ་ཚུ་རྒྱབ་ཁར་སྤོ་ཚུགས།
+ .
+ ཐུམ་སྒྲིལ་གཞི་བཙུགས་འདི་འཐུས་ཤོར་དང་ཕྱིར་འཐོན་འབད་ནི་ཨིནམ་ལས་ཁྱོད་ཀྱིས་འབད་ཚུགས། ཁྱོད་ཀྱིས་སྣོད་ཐོ་འདི་ཧིང་སང་སང་བཟོ་བའི་ཤུལ་ལས་ ཡར་བསྐྱེད་འབད་བའི་ལས་སྦྱོར་འདི་ལོག་གཡོག་བཀོལ།
+Description-el.UTF-8: Δεν μπορώ να αφαιρέσω τον κατάλογο /usr/X11R6/bin
+ Αυτή η αναβάθμιση απαιτεί την αφαίρεση του καταλόγου /usr/X11R6/bin και την αντικατάστασή του από έναν συμβολικό σύνδεσμο. Έγινε μια προσπάθεια γι' αυτό η οποία όμως απέτυχε, το πιο πιθανό επειδή ο κατάλογος δεν είναι ακόμα άδειος. Θα πρέπει να μετακινήσετε τα αρχεία που βρίσκονται στον κατάλογο αυτή τη στιγμή ώστε να μπορεί να ολοκληρωθεί η εγκατάσταση. Αν θέλετε, μπορείτε να τα ξαναφέρετε στον κατάλογο αργότερα, μετά την δημιουργία του συμβολικού συνδέσμου.
+ .
+ Η εγκατάσταση αυτού του πακέτου θα αποτύχει τώρα και υα τερματιστεί ώστε να μπορέσετε να το κάνετε αυτό. Παρακαλώ, ξανατρέξτε τξν διαδικασία αναβάθμισης αφού έχετε απομακρύνει τον κατάλογο.
+Description-es.UTF-8: No se pudo eliminar el directorio /usr/X11R6/bin
+ Esta actualización requiere que se reemplace el directorio /usr/X11R6/bin por un enlace simbólico. Esta operación se ha intentado realizar, pero ha fallado, probablemente debido a que el directorio no estaba vacío. Debe quitar los ficheros que hay en este directorio para que la instalación pueda completarse. Si lo desea, puede moverlos al mismo sitio una vez que se haya creado el enlace simbólico.
+ .
+ La instalación de este paquete terminará con un error ahora para que pueda hacerlo. Por favor, ejecute de nuevo su procedimiento de actualización una vez que haya vaciado el directorio.
+Description-eu.UTF-8: Ezin da/usr/X11R6/bin direktorioa ezabatu
+ Eguneraketa honek /usr/X11R6/bin direktorioa eta lotura sinboliko bategatik ordeztea behar du. Hau egiteko saiakera bat egin da, baina huts egin du, ziurrenik direktorioa ez dagoelako hutsik. Direktorio horretan dauden fitxategiak hortik kanpora mugitu behar dituzu instalazioa aurrera eramateko . Nahi izan ezkero berri hor ipini ditzakezu behin lotura sinbolikoa sortua izan denean.
+ .
+ Pakete instalazioa orain huts egin eta irten egingo da. Mesedez eguneraketa prozedura berriz abiarazi behin direktorio hori hustu duzunean.
+Description-fi.UTF-8: Hakemistoa /usr/X11R6/bin ei voida poistaa
+ Tämä asennus vaatii, että hakemisto /usr/X11R6/bin poistetaan ja korvataan symbolisella linkillä. Tätä yritettiin, mutta yritys epäonnistui. Todennäköisin syy on se, että hakemisto ei ole vielä tyhjä. Hakemistossa nyt olevat tiedostot on siirrettävä pois tieltä, jotta asennus voidaan saattaa loppuun. Haluttaessa tiedostot voidaan siirtää takaisin, kun symbolinen linkki on luotu.
+ .
+ Tämän paketin asennus päättyy nyt virheeseen, jotta edellämainittu voidaan tehdä. Käynnistä päivitys uudestaan, kun hakemisto on siivottu.
+Description-fr.UTF-8: Impossible de supprimer le répertoire /usr/X11R6/bin
+ La mise à jour rend indispensable la suppression du répertoire /usr/X11R6/bin afin de le remplacer par un lien symbolique. Cette opération a échoué, très probablement parce que ce répertoire n'est pas vide. Il est nécessaire de déplacer les fichiers qui y restent afin que l'installation puisse se terminer. Il sera possible de les remettre en place une fois que le lien symbolique aura été créé.
+ .
+ L'installation du paquet va s'interrompre afin de vous permettre d'effectuer cette opération. Veuillez relancer la procédure de mise à jour après avoir nettoyé le répertoire.
+Description-gl.UTF-8: Non se pode eliminar o directorio /usr/X11R6/bin
+ Para esta actualización hai que eliminar o directorio /usr/X11R6/bin e substituílo por unha ligazón simbólica. Tentouse facelo, pero non se puido; posiblemente porque o directorio non estea baleiro xa. Debe apartar os ficheiros que haxa no directorio para que se poida completar a instalación. Se quere, pode volver deixalos no seu sitio despois de ter feita a ligazón simbólica.
+ .
+ Agora hase saír da instalación deste paquete para que o poida facer. Repita o procedemento de actualización despois de limpar o directorio.
+Description-gu.UTF-8: /usr/X11R6/bin ડિરેક્ટરી દૂર કરી શકાતી નથી
+ આ સુધારાને જોઇએ છે કે /usr/X11R6/bin ડિરેક્ટરી દૂર કરવામાં આવે છે અને સિમલિંક વડે બદલવામાં આવે. પ્રયત્ન કરવામાં આવ્યો હતો, પણ તે નિષ્ફળ ગયો છે, મોટાભાગે ડિરેક્ટરી ખાલી ન હોવાનાં કારણે. તમારે અત્યારે ડિરેક્ટરીમાં રહેલ ફાઇલોને ખસેડવી જોઇએ જેથી સ્થાપન પૂર્ણ થઇ શકે. જો તમે ઇચ્છો તો, તેને સિમલિંક કર્યા પછી ફરી પાછી મૂકી શકો છો.
+ .
+ આ પેકેજ સ્થાપન હવે નિષ્ફળ જશે અને તમે તમે આ કરી શકો તે માટે બહાર નીકળશે. ડિરેક્ટરી સાફ કર્યા પછી મહેરબાની કરી તમારી સુધારા પધ્ધતિ ફરી ચાલુ કરો.
+Description-he.UTF-8: לא יכול להסיר את הספרייה /usr/X11R6/bin
+ השדרוג דורש שהספרייה /usr/X11R6/bin תוסר ותוחלף בקישור סמלי. נעשה ניסיון לעשות זאת אך הוא נכשל, כנראה משום שהספרייה עדיין לא ריקה. חובה עליך להזיז למקום אחר את הקבצים שנמצאים כרגע בספרייה כדי שניתן יהיה להשלים את ההתקנה. אחרי שהקישור הסמלי ייווצר ניתן יהיה להזיז אותם בחזרה.
+ .
+ תהליך התקנת חבילה זו ייכשל עכשיו ויסתיים כדי שיהיה באפשרותך לעשות זאת. יש להריץ מחדש את הליך השדרוג אחרי שניקית את הספרייה כנדרש.
+Description-hr.UTF-8: Nemoguće obrisati direktorij /usr/X11R6/bin
+ Ova nadogradnja zahtijeva da se obriše direktorij /usr/X11R6/bin i da se on zamijeni sa simboličkim linkom. Procedura je to pokušala napraviti, ali nije uspjela, najvjerojatnije zato što direktorij još nije prazan. Morate premjestiti datoteke koje su trenutno u njemu negdje gdje neće smetati, tako da se instalacija može dovršiti. Ako žeite, možete ih vratiti natrag nakon što se postavi simbolički link.
+ .
+ Instalacija ovog paketa će sada izaći sa greškom kako biste ovo mogli napraviti. Molim ponovo pokrenite proceduru nadogradnje nakon što ste očistili direktorij.
+Description-hu.UTF-8: A /usr/X11R6/bin könyvtár nem törölhető
+ A frissítés megköveteli a /usr/X11R6/bin könyvtár törlését és jlánccá alakítását. Ez meghiúsult, valószínűleg azért, mert a könyvtár még mindig nem üres. El kell mozdítanod e fájlokat, így a telepítés sikerülhet. Később visszateheted őket.
+ .
+ E csomag telepítése most leáll, így megteheted ezt. A könyvtár törlése után futtasd újra ezt a frissítést.
+Description-id.UTF-8: Tidak dapat menghapus direktori /usr/X11R6/bin
+ Proses pembaharuan ini mengharuskan penghapusan direktori /usr/X11R6/bin dan menggantinya dengan link simbolik. Hal ini sudah dicoba, tetapi gagal. Penyebab utama biasanya karena direktori ini belum dikosongkan. Anda harus memindahkan berkas-berkas yang ada di direktori tersebut ke tempat lain sehingga proses instalasi dapat diselesaikan. Jika Anda mau, Anda dapat memindahkan kembali berkas-berkas tersebut setelah link simbolik dibuat.
+ .
+ Pemasangan paket ini akan dihentikan sekarang agar Anda dapat melakukan hal ini. Mohon jalankan kembali proses pembaharuan setelah Anda mengosongkan direktori tersebut.
+Description-it.UTF-8: Impossibile rimuovere la directory /usr/X11R6/bin
+ Questo aggiornamento richiede che la directory /usr/X11R6/bin venga rimossa e sostituita da un collegamento simbolico. È stato fatto un tentativo ma non è riuscito, molto probabilmente perché la directory non è vuota. Spostare i file che sono nella directory in modo che l'installazione possa essere completata. Una volta creato il collegamento simbolico è possibile spostare nuovamente i file.
+ .
+ L'installazione di questo pacchetto sarà terminata in modo che si possa farlo. Eseguire nuovamente la procedura dopo aver ripulito la directory.
+Description-ja.UTF-8: /usr/X11R6/bin ディレクトリを削除できません
+ この更新では /usr/X11R6/bin ディレクトリが削除されていて、シンボリックリンクで置き換えられていることを前提としています。そのように試行が行われましたが、失敗しました。もっとも考えられる理由は、ディレクトリが空でないことです。インストールが完了するように、ディレクトリ内に現在あるファイルを別の場所に移動する必要があります。望むなら、シンボリックリンクを張ったあとにこの場所に戻すことができます。
+ .
+ このパッケージのインストールは、上記の作業ができるよう、ただちに失敗し、終了します。ディレクトリを清掃したあと、更新処理を再実行してください。
+Description-km.UTF-8: មិន​អាច​យក​ថត /usr/X11R6/bin ចេញ
+ ការ​ធ្វើ​ឲ្យ​ប្រសើរ​នេះ​តម្រូវ​ឲ្យ​យក​ថត /usr/X11R6/bin ចេញ និង​ជំនួស​ដោយ​តំណ​និមត្ត​សញ្ញា ។ ការ​ប៉ុនប៉ង​មួយ​ត្រូវ​បាន​ធ្វើ​ឡើង​ដូច្នេះ ប៉ុន្តែ​វា​បាន​បរាជ័យ ពិត​ជា​ដូច​នេះ​មែន ពីព្រោះ​ថត​មិន​ទទេ​នៅ​ឡើយ​ទេ ។ អ្នក​ត្រូវ​តែ​ផ្លាស់ទី​ឯកសារ​ថ្មីៗ​ដែល​នៅ​ក្នុង​ថត​ចេញ ដូច្នេះ​ការ​ដំឡើង​អាច​បញ្ចប់ ។ ប្រសិន​បើ​អ្នក​ចូលចិត្ត អ្នក​អាច​ផ្លាស់ទី​ពួក​វា​មក​វិញ បន្ទាប់​ពី​តំណ​និមិត្តសញ្ញា​កើត​ឡើង ។
+ .
+ ការ​ដំឡើង​កញ្ចប់​នេះ​ឥឡូវ​នឹង​បរាជ័យ និង​បិទ ដូច្នេះ​អ្នក​អាច​ធ្វើ​ដូច​នេះ​បាន ។ សូម​រត់​បែបបទ​ធ្វើ​ឲ្យ​ប្រសើរ​ម្ដង​ទៀត បន្ទាប់​ពី​អ្នក​បាន​សម្អាត​ថត ។
+Description-ko.UTF-8: /usr/X11R6/bin 디렉토리를 지울 수 없습니다.
+ 이 업그레이드를 하기 위해서는 /usr/X11R6/bin 디렉토리를 지우고 symlink로 대체해야 합니다. 대체하려고 했으나 실패했으며, 디렉토리가 아직 비어있지 않아서 실패했을 가능성이 높습니다. 그 디렉토리에 있는 파일을 다른 곳으로 옮겨야 설치가 끝날 수 있습니다. 원하신다면 symlink로 대체한 후 그 파일을 다시 원위치로 옮기실 수 있습니다.
+ .
+ 이 작업을 할 수 있도록 패키지 설치는 이제 실패로 끝냅니다. 디렉토리를 모두 정리한 후에 업그레이드 작업을 다시 실행하십시오.
+Description-lt.UTF-8: Nepavyko ištrinti aplanko /usr/X11R6/bin
+ Sistemai atnaujinti aplankas /usr/X11R6/bin aplankas turi būti ištrintas ir pakeistas simboline nuoroda. Bandymas tai padaryti buvo nesėkmingas, greičiausiai dėl to, kad šis aplankas netuščias.  Iškelkite rinkmenas iš šio aplanko, kad būtų galima tęsti atnaujinimą. Jei norite, galite juos įkelti atgal atnaujinimo procesui pasibaigus.
+ .
+ Paketo instaliavimas užsibaigs su klaidos kodu, kad turėtumėte progą tai padaryti. Išvalę aplanką, įvykdykite atnaujinimo procedūrą iš naujo.
+Description-ml.UTF-8: /usr/X11R6/bin ഡയറക്റ്ററി എടുത്ത് മാറ്റാന്‍ സാധ്യമല്ല
+ ഈ അപ്​ഗ്രേഡിന് /usr/X11R6/bin ഡയറക്റ്ററി എടുത്ത് മാറ്റിയതിനു ശേഷം ഒരു സിംലിങ്ക് പകരം വയ്കേണ്ടതാവശ്യമാണ്. അങ്ങനെ ചെയ്യാന്‍ ഒരു ശ്രമം നടത്തിയതാണ്, പക്ഷേ പരാജയപ്പെട്ടു, ഇതു വരെയും ഡയറക്റ്ററി കാലിയല്ല എന്നതാണ് ഏറ്റവും സാധ്യതയോറിയ കാരണം. ഇന്‍സ്റ്റളേഷന്‍ പൂര്‍ത്തിയാക്കാനായി നിങ്ങള്‍ ഇപ്പോള്‍ ആ ഡയറക്റ്ററിയിലുള്ള ഫയലുകള്‍ വഴിയില്‍ നിന്നും മാറ്റണം. നിങ്ങളാഗ്രഹിക്കുന്നെങ്കില്‍ സിംലിങ്ക് വന്നതിന് ശേഷം അവ തിരിച്ച് വയ്കാവുന്നതാണ്.
+ .
+ നിങ്ങള്‍ക്കു് ഇതു് ചെയ്യാനായി ഈ പാക്കേജ് ഇന്‍സ്റ്റളേഷന്‍ ഇപ്പോള്‍ പരാജയപ്പെട്ട് പുറത്ത് വരും. ദയവായി ഡയറക്റ്ററി കാലിയാക്കിയതിനു ശേഷം അപ്​ഗ്രേഡ് നടപടി ക്രമങ്ങള്‍ വീണ്ടും ഓടിക്കുക.
+Description-mr.UTF-8: /वापरकर्ता/एक्स११आर६/बिन निर्देशिका काढून टाकता येत नाही
+ या श्रेणीवर्धनाकरिता /वापरकर्ता/एक्स११आर६/बिन निर्देशिका काढून टाकून ती सिमलिंकने बदलणे गरजेचे आहे. हे करण्याचा प्रयत्न केला, पण तो अयशस्वी झाला. ही निर्देशिका अजून रिक्त झाली नाही, हे यामागचे संभाव्य कारण असावे. आपणाला या निर्देशिकेत सध्या असलेल्या फायली बाजूला हलवाव्या लागतील, जेणेकरून अधिष्टापना पूर्ण होऊ शकेल. सिमलिंक झाल्यानंतर वाटल्यास, आपण त्या परत मूळ जागी आणू शकता.
+ .
+ या पॅकेजची अधिष्टापना आता फसेल आणी बंद होईल, जेणेकरून आपण हे करू शकाल. निर्देशिका संपूर्ण साफ केल्यावर श्रेणीवर्धन प्रक्रिया पुन्हा चालू करा.
+Description-nb.UTF-8: Kan ikke slette mappa /usr/X11R6/bin
+ Denne oppgraderingen krever at mappa /usr/X11R6/bin slettes og erstattes med en symbolsk lenke. Det ble forsøkt gjort, men lyktes ikke, mest trolig fordi mappa ikke er tom ennå. Du må flytte de filene som er igjen i mappa ut av veien slik at installasjonen kan fortsette. Hvis du vil kan du flytte dem tilbake etter at lenka er på plass.
+ .
+ Denne pakkeinstallasjonen vil nå avslutte som mislykket slik at du kan gjøre dette. Kjør oppgraderingen om igjen etter at du har tømt mappa.
+Description-ne.UTF-8: /usr/X11R6/बिन डाइरेक्टी हटाउन सकिदैन
+ यो स्तर वृद्धिलाई /usr/X11R6/बिन डाइरेक्टरी हटेको र सिमलिङ्क संग बदलिएको हुन आवश्यक पर्दछ । एक चोटि त्यस्तो गर्ने कोशिस गर्नुहोस्, तर यो असफल , हुनसक्ने देखिन्छ किनभने डाइरेक्टरी अझ सम्म रित्तो छैन । तपाईँले स्थापना पुर्ण हुने गरि हालैमा डाइरेक्टरीका फाइलहरू बाटोबाट बाहरि हटाउनुपर्दछ । यदि तपाईँले चाहनु भएमा, सिमलिङ्कको स्थान पछाडि तिनिहरुलाई सार्न सक्नुहुन्छ ।
+ .
+ यो प्याकेज स्थापना असफल हुनेछ र बाहिर निस्कने छ त्यसैले तपाईँले यो गर्न सक्नुहुन्छ । कृपया तपाईँले डाइरेक्टरी खाली गरे पछि स्तरबृद्धि कार्य बिधि पुन चलाउनुहोस् ।
+Description-nl.UTF-8: Kan de map /usr/X11R6/bin niet verwijderen
+ De opwaardering vereist dat de map /usr/X11R6/bin verwijderd wordt en vervangen door een symbolische koppeling. De poging om dit uit te voeren is mislukt, waarschijnlijk omdat deze map niet leeg was. Voordat de installatie kan verdergaan dient u de bestanden in deze map uit de weg te halen; desgewenst kunt u ze eens de symbolische koppeling aangemaakt is terugplaatsen.
+ .
+ Deze pakketinstallatie breekt nu af zodat u dit kunt doen. Gelieve de opwaarderingsprocedure opnieuw uit te voeren eens u deze map opgeschoond heeft.
+Description-nn.UTF-8: Kan ikkje slette mappa /usr/X11R6/bin
+ Denne oppgraderinga krev at mappa /usr/X11R6/bin vert sletta og erstatta med ei symbolsk lenkje. Det ble forsøkt gjort, men lukkast ikkje, mest truleg fordi mappa ikkje er tom enno. Du må flytte dei filene som er igjen i mappa ut av vegen slik at installasjonen kan halde fram. Viss du vil kan du flytte dei tilbake etter at lenkja er på plass.
+ .
+ Denne pakkeinstallasjonen vil no avslutte som mislukka slik at du kan gjere dette. Køyr oppgraderinga om igjen etter at du har tømt mappa.
+Description-no.UTF-8: Kan ikke slette mappa /usr/X11R6/bin
+ Denne oppgraderingen krever at mappa /usr/X11R6/bin slettes og erstattes med en symbolsk lenke. Det ble forsøkt gjort, men lyktes ikke, mest trolig fordi mappa ikke er tom ennå. Du må flytte de filene som er igjen i mappa ut av veien slik at installasjonen kan fortsette. Hvis du vil kan du flytte dem tilbake etter at lenka er på plass.
+ .
+ Denne pakkeinstallasjonen vil nå avslutte som mislykket slik at du kan gjøre dette. Kjør oppgraderingen om igjen etter at du har tømt mappa.
+Description-pl.UTF-8: Nie mogę usunąć katalogu /usr/X11R6/bin
+ Proces aktualizacji wymaga usunięcia katalogu /usr/X11R6/bin i utworzenia w jego miejsce dowiązania symbolicznego. Nastąpiła próba wykonania tej operacji, ale się nie powiodła (najprawdopodobniej dlatego, że katalog nie był pusty). Musisz przenieść pliki znajdujące się w tym katalogu, by można było kontynuować instalację. Po tej operacji możesz je przenieść w tę lokalizację z powrotem.
+ .
+ Instalacja pakietu zostanie teraz przerwana by można było wykonać tę operację. Uruchom ponownie aktualizację gdy wyczyścisz ten katalog.
+Description-pt.UTF-8: Não é possível remover o directório /usr/X11R6/bin
+ Esta actualização necessita que o directório /usr/X11R6/bin seja removido e substituído por um link simbólico. Foi feita uma tentativa para o fazer, mas falhou, provavelmente por o directório ainda não estar vazio. Tem de mover para fora do caminho os ficheiros que estão actualmente no directório para que a instalação possa ser completada. Se quiser, pode movê-los novamente de volta após o link simbólico estar no lugar.
+ .
+ Esta instalação de pacote irá agora falhar e terminar de modo a que você possa fazer isto. Por favor corra novamente o procedimento de actualização após ter limpo o directório.
+Description-pt_BR.UTF-8: Não foi possível remover o diretório /usr/X11R6/bin
+ Esta atualização requer que o diretório /usr/X11R6/bin seja removido e substituído por uma ligação simbólica. Uma tentativa de fazer esse procedimento foi feita, mas falhou, provavelmente devido ao diretório em questão não estar vazio. Você deve mover os arquivos que estão atualmente nesse diretório para outro local para que a instalação possa ser finalizada. Caso deseje, você poderá mover os arquivos de novo para o local de onde foram retirados após a ligação simbólica ter sido criada.
+ .
+ A instalação deste pacote irá agora falhar e finalizar, de forma que você possa fazer isso. Por favor, execute o procedimento de atualização novamente após você ter o diretório em questão limpo.
+Description-ro.UTF-8: Directorul /usr/X11R6/bin nu poate fi șters
+ Această actualizare necesită ca directorul /usr/X11R6/bin să fie șters și înlocuit cu o legătură simbolică. Acest lucru a fost încercat, dar nu a reușit, cel mai probabil din pricina faptului că directorul nu e încă gol. Trebuie să mutați fișierele care se află acum în director astfel încât instalarea să fie finalizată. Dacă doriți, acestea pot fi mutate înapoi după ce legătura simbolică va fi fost creată.
+ .
+ Acestă instalare a pachetului va eșua și se va ieși astfel încât să puteți să faceți acest lucru. Se recomandă să curățați directorul și să rulați din nou procedura de actualizare.
+Description-ru.UTF-8: Не удалось удалить каталог /usr/X11R6/bin
+ Для данного обновления требуется удаление каталога /usr/X11R6/bin и замена на символическую ссылку. Попытка сделать это не удалась, скорее всего из-за того, что этот каталог всё ещё не пустой. Вы должны переместить файлы из этого каталога для завершения установки. Если нужно, вы можете переместить их обратно, после того как будет создана символическая ссылка.
+ .
+ Пока установка считается неудачной и прерывается, чтобы вы могли сделать это. После очистки каталога запустите процедуру обновления ещё раз.
+Description-sk.UTF-8: Adresár /usr/X11R6/bin sa nedá odstrániť
+ Táto aktualizácia vyžaduje odstránenie adresára /usr/X11R6/bin a jeho náhradu symbolickým odkazom. Inštalačný skript sa o to pokusil, ale zlyhal zrejme kvôli tomu, že daný adresár nie je prázdny. Na dokončenie inštalácie je potrebné, aby ste tieto súbory presunuli na iné miesto. Po vytvorení symbolického odkazu ich podľa potreby môžete presunúť naspäť.
+ .
+ Inštalácia tohto balíka teraz skončí s chybou, aby ste mohli vykonať potrebný zásah. Po vyčistení adresára musíte znovu spustiť aktualizačnú procedúru.
+Description-sq.UTF-8: Nuk mund të fshij dosjen /usr/X11R6/bin
+ Ky freskim kërkon që dosja /usr/X11R6/bin të fshihet dhe të zëvendësohet me një lidhje simbolike. U bë një përpjekje për këtë, por dështoi, ngjan që dosja të mos jetë bosh. Duhet të lëvizësh skedat që ndodhen në dosje kështu që instalimi të përfundojë. Nëse dëshiron, mund t'i lëvizësh aty ku ishin pasi të krijohet lidhja simbolike.
+ .
+ Ky instalim pakete do të ndërpritet dhe do dalësh në mënyrë që të bësh këtë. Të lutem ri-nis proçedurën e freskimit pasi të kesh pastruar dosjen.
+Description-sv.UTF-8: Kan inte ta bort katalogen /usr/X11R6/bin
+ Denna uppgradering kräver att katalogen /usr/X11R6/bin tas bort och ersätts med en symbolisk länk. Ett försök att göra det gjordes men det misslyckades, antagligen på grund av att katalogen inte är tom. Du måste flytta bort filerna som för närvarande finns i katalogen så att installationen kan färdigställas. Om du vill kan du flytta tillbaka filerna efter att den symboliska länken är på plats.
+ .
+ Denna paketinstallation kommer nu att misslyckas och avslutas så att du kan göra detta. Kör uppgraderingsprocessen igen efter att du har rensat ut katalogen.
+Description-ta.UTF-8: /usr/X11R6/bin அடைவை நீக்க இயலாது.
+ இந்த மேம்பாட்டுக்கு /usr/X11R6/bin அடைவை நீக்கி பதிலாக ஒரு சிம்லிங்க் அமைக்க வேண்டும். அதை செய்ய முயன்ற போது அது தோல்வி அடைந்தது. அனேகமாக அதன் காரணம் அது காலியாக இல்லாததுதான். தற்போது அந்த அடைவில் உள்ள கோப்புகளை நீங்கள் நகர்த்த வேண்டும். அப்போதுதான் நிறுவல் முழுமையடையும். நீங்கள் விரும்பினால் பின்னல் அந்த கோப்புகளை மீண்டும் அதே இடத்துக்கு நகர்த்திக் கொள்ளலாம்.
+ .
+ இதை நீங்கள் செய்வதற்காக இந்த பொதி நிறுவல் இப்போது தோல்வியடைந்து வெளியேறும் அடைவை சுத்தம் செய்தபின் மேம் படுத்தும் செயலை மீண்டும் செய்க.
+Description-th.UTF-8: ไม่สามารถลบไดเรกทอรี /usr/X11R6/bin
+ การปรับรุ่นนี้ จำเป็นต้องลบไดเรกทอรี /usr/X11R6/bin ออกจากระบบ และแทนที่ด้วย symlink แต่ปรากฏว่าความพยายามดังกล่าวล้มเหลว ซึ่งเป็นได้มากว่าไดเรกทอรีดังกล่าวยังไม่ว่าง คุณต้องย้ายแฟ้มต่างๆ ที่อยู่ในไดเรกทอรีดังกล่าวออกไปก่อน เพื่อให้การติดตั้งเสร็จสมบูรณ์ และถ้าคุณต้องการ ก็สามารถย้ายแฟ้มเหล่านั้นกลับมาได้ หลังจากที่ symlink ถูกสร้างเรียบร้อยแล้ว
+ .
+ การติดตั้งแพกเกจนี้จะหยุดตัวเองแบบล้มเหลว เพื่อให้คุณสามารถจัดแจงตามที่กล่าวข้างต้นได้ กรุณาดำเนินการปรับรุ่นใหม่อีกครั้ง หลังจากที่คุณได้เก็บกวาดไดเรกทอรีดังกล่าวเรียบร้อยแล้ว
+Description-tr.UTF-8: /usr/X11R6/bin dizini silinemiyor
+ Bu yükseltme işlemi, /usr/X11R6/bin dizininin silinerek bir sembolik bağla değiştirilmesini gerektirmektedir.  Bu şartı sağlamak için bir girişimde bulunulmuş fakat büyük olasılıkla bu dizin boş olmadığından girişim başarısızlıkla sonuçlanmıştır.  Kurulumun tamamlanabilmesi için dizindeki bütün dosyaları başka bir yere taşımalısınız.  Sembolik bağ oluşturulduktan sonra dilerseniz bu dosyaları tekrar eski yerine taşıyabilirsiniz.
+ .
+ Bu paketin kurulumu başarısızlıkla sonlanacak ve kurulumdan çıkılacaktır, böylece bunu yapabileceksiniz. Lütfen, dizini sildikten sonra güncelleme işleminizi yeniden başlatın.
+Description-vi.UTF-8: Không thể gỡ bỏ thư mục « /usr/X11R6/bin »
+ Việc nâng cấp này cần thiết thư mục « /usr/X11R6/bin » được gỡ bỏ và được thay thế bằng một liên kết tượng trưng. Mới thử làm việc này, nhưng nó bị lỗi, rất có thể vì thư mục đó chưa rỗng. Bạn cần phải chuyển ra các tập tin hiện thời nằm trong thư mục đó, để cài đặt chạy xong được. Nếu bạn muốn, bạn cũng có thể chuyển chúng về sau khi liên kết tượng trưng đã được chèn.
+ .
+ Tiến trình cài đặt gói này sẽ thất bại và thoát ngay bây giờ để cho bạn làm việc này. Hãy chạy lại thủ tục nâng cấp sau khi làm sạch thư mục đó.
+Description-wo.UTF-8: Manula dindi kaggu bu /usr/X11R6/bin
+ Yokku daraja bi dafay laaj ñu dindi kaggu bu /usr/X11/R6/bin wottee ko ak ab simlink. Loolu jéemnanukoo def waaye antuwul, likoy waral amaana moodi kaggu bi dafa am lu ci nekk ba leegi. Da ngaa wara dindi fiise yi nekk ci kaggu bi ngir istalaasioŋ bi man egg. Bula neexee sax mannga leena delloosi ginnaaw bu simlink bi istalewoo ba noppi.
+ .
+ Kon istalaasioŋ bu bii paket antuwl ta mingi nii di génn ngir nga mana def loolii. Kon nanga dellu defaat yokku daraja bi ginnaaw boo setalee kaggu bi ba noppi.
+Description-zh_CN.UTF-8: 无法移除 /usr/X11R6/bin 目录
+ 本升级过程需要将 /usr/X11R6/bin 目录删除并将其替换为一个符号链接。程序已经尝试这样做，却遭到失败，最可能的原因是该目录并未清空。您必须将该目录下目前所有的文件移出，让安装程序可以顺利完成。如果您想的话，也可以在符号链接创建后将文件移回来。
+ .
+ 本软件包安装失败并将退出，以让您完成所述的工作。请在清除目录后重新运行您的升级程序。
+Description-zh_TW.UTF-8: 無法移除 /usr/X11R6/bin 目錄
+ 在升級過程中需要將 /usr/X11R6/bin 目錄刪除並將其替換為一個符號連結。雖已試著這麼做，但卻失敗了，很可能是因為這個目錄並不是空的。您必須移走目前位於該目錄下的所有的檔案，讓安裝程序可以順利完成。如有必要，您也可以在符號連結建立之後再將這些檔案移回來。
+ .
+ 本套件安裝程序失敗並將退出，以便能讓您完成上述工作。請在清除目錄後重新執行這個升級程序。

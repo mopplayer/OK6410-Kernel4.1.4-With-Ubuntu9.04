@@ -1,0 +1,22 @@
+This package was debianized by Stephen Quinney <sjq@debian.org> on
+Thu, 06 Mar 2003 12:07:07 +0000
+
+It was downloaded from http://www.cpan.org/modules/by-module/Class/
+
+Upstream Maintainer: Marty Pauley <marty@kasei.com>
+Author: Michael G Schwern <schwern@pobox.com>
+
+Copyright:
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of either:
+
+    a) the GNU General Public License as published by the Free Software
+       Foundation; either version 1, or (at your option) any later
+       version, or
+
+    b) the "Artistic License" which comes with Perl.
+
+    On Debian GNU/Linux systems, the complete text of the GNU General
+    Public License can be found in `/usr/share/common-licenses/GPL' and
+    the Artistic Licence in `/usr/share/common-licenses/Artistic'.

@@ -1,0 +1,6 @@
+# Lines can be of the forms:
+#
+# <edid-md5sum> <pci-id>[-<pci-id>] [driver]
+# <edid-md5sum> ANY
+# ANY <pci-id>[-<pci-id>] [driver]
+

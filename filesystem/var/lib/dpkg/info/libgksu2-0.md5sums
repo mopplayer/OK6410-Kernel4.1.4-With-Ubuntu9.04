@@ -1,0 +1,12 @@
+297e52c4359931e1a83267d4be2fc32b  usr/bin/gksu-properties
+b15674b3d44938c9f68b9b0d7d0984e2  usr/lib/libgksu2.so.0.0.2
+73a1a8d7709f7e72a038ef282e139c81  usr/lib/libgksu/gksu-run-helper
+4d4004d791bd10ff0b9a6ef29527f831  usr/share/pixmaps/gksu.png
+ccb3208ef57aba567379c5ef454c7d57  usr/share/doc/libgksu2-0/AUTHORS
+f43bed7f03a512e76613d2c586fa5b5e  usr/share/doc/libgksu2-0/README.Debian
+d2cb378ac9c95d87a447aaffd817fc90  usr/share/doc/libgksu2-0/changelog.Debian.gz
+b3998225071d0e706c96a4c4dbba11c7  usr/share/doc/libgksu2-0/copyright
+ddc554c186fecf0724422df657c3d3e7  usr/share/gconf/schemas/gksu.schemas
+c723e5eaad66fd74999b2f3f66fb4add  usr/share/libgksu/gksu-properties.glade
+6c9f68c8355b70a39264f1f5ea3cef26  usr/share/libgksu/debian/gconf-defaults.libgksu-sudo
+d7bfc4386d260d82e28a77fa9ca89610  usr/share/libgksu/debian/gconf-defaults.libgksu-su

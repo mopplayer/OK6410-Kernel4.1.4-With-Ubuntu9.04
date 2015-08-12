@@ -1,0 +1,28 @@
+gnome-keyring for Debian
+========================
+
+ Password caching
+ ----------------
+GNOME keyring caches the passwords in memory, and when asked to, it will 
+store them on disk (in .gnome2/keyrings). They are encrypted with the
+AES128 cipher, using a master password as key.
+
+ Login keyring
+ -------------
+If you use GDM, the GNOME keyring daemon is spawned directly at the time 
+of authentication, and the keyring named "login" is unlocked. This 
+keyring uses the authentication token as a master password.
+
+If you change your authentication password, you need to change the 
+password for the login keyring as well. This can be done from 
+seahorse-preferences (System->Preferences->Encryption and Keyrings). You 
+can also automate this process by adding the following line to
+/etc/pam.d/common-password:
+    password        optional        pam_gnome_keyring.so
+
+ SSH agent
+ ---------
+The GNOME keyring includes the functionality of the SSH agent, and it 
+can break some setups, especially if ssh-agent is started by hand. If 
+you want to disable it, you can set the 
+/apps/gnome-keyring/daemon-components/ssh GConf key to false.

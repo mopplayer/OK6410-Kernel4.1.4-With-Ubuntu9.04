@@ -1,0 +1,63 @@
+=head1 NAME
+
+Gnome2::Util
+
+
+=head1 METHODS
+
+=head2 string = Gnome2::Util-E<gt>B<extension> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Util-E<gt>B<home_file> ($file)
+
+=over
+
+=over
+
+=item * $file (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Util-E<gt>B<prepend_user_home> ($file)
+
+=over
+
+=over
+
+=item * $file (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Util-E<gt>B<user_shell> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

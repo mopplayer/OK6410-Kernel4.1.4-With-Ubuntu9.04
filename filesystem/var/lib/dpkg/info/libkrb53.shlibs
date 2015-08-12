@@ -1,0 +1,6 @@
+libk5crypto 3 libkrb53 (>= 1.6.dfsg.2)
+libkrb4 2 libkrb53 (>= 1.6.dfsg.2)
+libdes425 3 libkrb53 (>= 1.6.dfsg.2)
+libgssapi_krb5 2 libkrb53 (>= 1.6.dfsg.2)
+libkrb5 3 libkrb53 (>= 1.6.dfsg.2)
+libkrb5support 0 libkrb53 (>= 1.6.dfsg.2)

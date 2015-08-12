@@ -1,0 +1,114 @@
+Linux version 2.6.28-6-versatile (buildd@kahikatea) (gcc version 4.3.3 (Ubuntu 4.3.3-3ubuntu1) ) #17-Ubuntu Fri Jan 30 19:18:31 UTC 2009 (Ubuntu 2.6.28-6.17-versatile)
+CPU: ARM926EJ-S [41069265] revision 5 (ARMv5TEJ), cr=00093177
+CPU: VIVT data cache, VIVT instruction cache
+Machine: ARM-Versatile PB
+Memory policy: ECC disabled, Data cache writeback
+On node 0 totalpages: 65536
+free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+  Normal zone: 512 pages used for memmap
+  Normal zone: 0 pages reserved
+  Normal zone: 65024 pages, LIFO batch:15
+  Movable zone: 0 pages used for memmap
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 65024
+Kernel command line: root=/dev/sda mem=256M
+PID hash table entries: 1024 (order: 10, 4096 bytes)
+Console: colour dummy device 80x30
+console [tty0] enabled
+Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+Memory: 256MB = 256MB total
+Memory: 256128KB available (3132K code, 237K data, 136K init)
+Calibrating delay loop... 276.88 BogoMIPS (lpj=1384448)
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+net_namespace: 288 bytes
+NET: Registered protocol family 16
+PCI core found (slot 11)
+pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+PCI: bus0: Fast back to back transfers disabled
+PCI map irq: slot 0, pin 1, devslot 12, irq: 27
+SCSI subsystem initialized
+libata version 3.00 loaded.
+NET: Registered protocol family 2
+IP route cache hash table entries: 2048 (order: 1, 8192 bytes)
+TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+TCP bind hash table entries: 8192 (order: 3, 32768 bytes)
+TCP: Hash tables configured (established 8192 bind 8192)
+TCP reno registered
+NET: Registered protocol family 1
+NetWinder Floating Point Emulator V0.97 (double precision)
+Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+JFFS2 version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+msgmni has been set to 500
+io scheduler noop registered
+io scheduler anticipatory registered (default)
+io scheduler deadline registered
+io scheduler cfq registered
+CLCD: unknown LCD panel ID 0x00001000, using VGA
+CLCD: Versatile hardware, VGA display
+Clock CLCDCLK: setting VCO reg params: S=1 R=99 V=98
+Console: switching to colour frame buffer device 80x30
+Serial: AMBA PL011 UART driver
+dev:f1: ttyAMA0 at MMIO 0x101f1000 (irq = 12) is a AMBA/PL011
+dev:f2: ttyAMA1 at MMIO 0x101f2000 (irq = 13) is a AMBA/PL011
+dev:f3: ttyAMA2 at MMIO 0x101f3000 (irq = 14) is a AMBA/PL011
+fpga:09: ttyAMA3 at MMIO 0x10009000 (irq = 38) is a AMBA/PL011
+brd: module loaded
+loop: module loaded
+tun: Universal TUN/TAP device driver, 1.6
+tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+smc91x.c: v1.1, sep 22 2004 by Nicolas Pitre <nico@cam.org>
+eth0: SMC91C11xFD (rev 1) at d08d6000 IRQ 25 [nowait]
+eth0: Ethernet addr: 52:54:00:12:34:56
+eth0: No PHY found
+sym0: <895a> rev 0x0 at pci 0000:00:0c.0 irq 27
+sym0: No NVRAM, ID 7, Fast-40, LVD, parity checking
+sym0: SCSI BUS has been reset.
+scsi0 : sym-2.2.3
+scsi 0:0:0:0: Direct-Access     QEMU     QEMU HARDDISK    0.10 PQ: 0 ANSI: 3
+ target0:0:0: tagged command queuing enabled, command queue depth 16.
+ target0:0:0: Beginning Domain Validation
+ target0:0:0: Domain Validation skipping write tests
+ target0:0:0: Ending Domain Validation
+scsi 0:0:2:0: CD-ROM            QEMU     QEMU CD-ROM      0.10 PQ: 0 ANSI: 3
+ target0:0:2: tagged command queuing enabled, command queue depth 16.
+ target0:0:2: Beginning Domain Validation
+ target0:0:2: Domain Validation skipping write tests
+ target0:0:2: Ending Domain Validation
+Driver 'sd' needs updating - please use bus_type methods
+sd 0:0:0:0: [sda] 4194304 512-byte hardware sectors: (2.14 GB/2.00 GiB)
+sd 0:0:0:0: [sda] Write Protect is off
+sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+sd 0:0:0:0: [sda] 4194304 512-byte hardware sectors: (2.14 GB/2.00 GiB)
+sd 0:0:0:0: [sda] Write Protect is off
+sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+ sda: unknown partition table
+sd 0:0:0:0: [sda] Attached SCSI disk
+mice: PS/2 mouse device common for all mice
+rtc-pl031 dev:e8: rtc core: registered pl031 as rtc0
+md: linear personality registered for level -1
+md: multipath personality registered for level -4
+md: faulty personality registered for level -5
+device-mapper: ioctl: 4.14.0-ioctl (2008-04-23) initialised: dm-devel@redhat.com
+TCP cubic registered
+NET: Registered protocol family 17
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+VFP support v0.3: implementor 41 architecture 1 part 10 variant 9 rev 0
+rtc-pl031 dev:e8: setting system clock to 2009-05-09 06:15:47 UTC (1241849747)
+input: AT Raw Set 2 keyboard as /class/input/input0
+input: ImExPS/2 Generic Explorer Mouse as /class/input/input1
+md: Waiting for all devices to be available before autodetect
+md: If you don't use raid, use raid=noautodetect
+md: Autodetecting RAID arrays.
+md: Scanned 0 and added 0 devices.
+md: autorun ...
+md: ... autorun DONE.
+VFS: Mounted root (ext2 filesystem) readonly.
+Freeing init memory: 136K
+eth0: link up
+EXT2-fs warning: mounting unchecked fs, running e2fsck is recommended

@@ -1,0 +1,37 @@
+#! /bin/sh
+#
+# Run a program disconnected from debconf, in a usable terminal. Used to
+# start aptitude when running within d-i.
+#
+# This is similar to debian-installer-utils/start-shell, but modified for
+# tasksel: for example, we cope with already being disconnected from
+# debconf, handle templates differently, and can expect that the terminal
+# plugin is available if we're connected to debconf.
+
+set -e
+
+if [ -z "$DEBIAN_HAS_FRONTEND" ] && [ -z "$DEBCONF_READFD" ]; then
+	# We're already disconnected from debconf. Just run the program.
+	exec "$@"
+	exit 127
+fi
+
+# This is only used following Test-Debconf: false, so we can assume that we
+# must have the terminal plugin.
+
+. /usr/share/debconf/confmodule
+
+db_capb
+db_subst tasksel/terminal TITLE "$1"
+# Specific to d-i; for the moment, we assume that if we're outside d-i then
+# we won't need to use the terminal plugin. We have to do some manual
+# passthrough of environment variables as in-target can't be used
+# re-entrantly; it would be nice to fix this at some point.
+db_subst tasksel/terminal COMMAND_LINE \
+	"chroot /target env http_proxy=$http_proxy DEBIAN_PRIORITY=$DEBIAN_PRIORITY LANG=$LANG DEBCONF_ADMIN_EMAIL= APT_LISTCHANGES_FRONTEND=none $*"
+db_fset tasksel/terminal seen false
+db_input critical tasksel/terminal
+db_go || true
+db_capb backup
+
+exit 0

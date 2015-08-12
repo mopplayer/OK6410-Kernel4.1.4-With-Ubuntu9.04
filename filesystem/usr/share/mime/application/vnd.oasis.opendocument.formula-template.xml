@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/vnd.oasis.opendocument.formula-template">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment>ODF template</comment>
+  <acronym>ODF</acronym>
+  <expanded-acronym>OpenDocument Formula</expanded-acronym>
+  <sub-class-of type="application/zip"/>
+  <generic-icon name="x-office-document"/>
+</mime-type>

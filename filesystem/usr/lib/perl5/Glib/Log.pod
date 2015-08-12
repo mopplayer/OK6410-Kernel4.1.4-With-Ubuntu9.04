@@ -1,0 +1,199 @@
+=head1 NAME
+
+Glib::Log -  A flexible logging mechanism
+
+=for object Glib::Log A flexible logging mechanism
+=cut
+
+=for object Glib::Log
+=cut
+
+=for object Glib::Log
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 scalar = Glib::Log-E<gt>B<set_always_fatal> ($fatal_mask)
+
+=over
+
+=over
+
+=item * $fatal_mask (scalar) 
+
+=back
+
+=back
+
+=head2 Glib-E<gt>B<critical> ($domain, $message)
+
+=over
+
+=over
+
+=item * $domain (string or undef) 
+
+=item * $message (string) 
+
+=back
+
+=back
+
+=head2 Glib-E<gt>B<error> ($domain, $message)
+
+=over
+
+=over
+
+=item * $domain (string or undef) 
+
+=item * $message (string) 
+
+=back
+
+=back
+
+=head2 scalar = Glib::Log-E<gt>B<set_fatal_mask> ($log_domain, $fatal_mask)
+
+=over
+
+=over
+
+=item * $log_domain (string) 
+
+=item * $fatal_mask (scalar) 
+
+=back
+
+=back
+
+=head2 integer = Glib::Log-E<gt>B<set_handler> ($log_domain, $log_levels, $log_func, $user_data=undef)
+
+=over
+
+=over
+
+=item * $log_domain (string or undef) name of the domain to handle with this callback.
+
+=item * $log_levels (Glib::LogLevelFlags) log levels to handle with this callback
+
+=item * $log_func (subroutine) handler function
+
+=item * $user_data (scalar) 
+
+=back
+
+
+
+
+
+
+=back
+
+=head2 Glib-E<gt>B<log> ($log_domain, $log_level, $message)
+
+=over
+
+=over
+
+=item * $log_domain (string or undef) 
+
+=item * $log_level (scalar) 
+
+=item * $message (string) 
+
+=back
+
+=back
+
+=head2 Glib-E<gt>B<message> ($domain, $message)
+
+=over
+
+=over
+
+=item * $domain (string or undef) 
+
+=item * $message (string) 
+
+=back
+
+=back
+
+=head2 Glib::Log-E<gt>B<remove_handler> ($log_domain, $handler_id)
+
+=over
+
+=over
+
+=item * $log_domain (string or undef) 
+
+=item * $handler_id (integer) as returned by C<set_handler>
+
+=back
+
+
+
+=back
+
+=head2 Glib-E<gt>B<warning> ($domain, $message)
+
+=over
+
+=over
+
+=item * $domain (string or undef) 
+
+=item * $message (string) 
+
+=back
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Glib::LogLevelFlags
+
+
+
+=over
+
+=item * 'recursion' / 'G_LOG_FLAG_RECURSION'
+
+=item * 'fatal' / 'G_LOG_FLAG_FATAL'
+
+=item * 'error' / 'G_LOG_LEVEL_ERROR'
+
+=item * 'critical' / 'G_LOG_LEVEL_CRITICAL'
+
+=item * 'warning' / 'G_LOG_LEVEL_WARNING'
+
+=item * 'message' / 'G_LOG_LEVEL_MESSAGE'
+
+=item * 'info' / 'G_LOG_LEVEL_INFO'
+
+=item * 'debug' / 'G_LOG_LEVEL_DEBUG'
+
+=item * 'fatal-mask' / 'G_LOG_FATAL_MASK'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Glib>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,11 @@
+86bf613c7f9ea4d70c4b39b9225ff263  usr/share/doc/libproxy0/copyright
+75856b85e767d4df803b04b988ade8a1  usr/share/doc/libproxy0/changelog.Debian.gz
+5191e1fed4694e9c53653c77347c45bf  usr/share/doc/libproxy0/README
+66b36d540822fd7dd81ddce9bf40be67  usr/share/doc/libproxy0/AUTHORS
+d4cc9295eb62fc77affe0b8e2380081b  usr/lib/libproxy.so.0.0.0
+20efc609952128c80abd50a2862753e3  usr/lib/libproxy/0.2.3/plugins/webkit.so
+f788707cbb879f3fc94037c6439508f5  usr/lib/libproxy/0.2.3/plugins/file.so
+ab59885ebc74e63e454cf579b6d50e74  usr/lib/libproxy/0.2.3/plugins/networkmanager.so
+880d6057ca06146f4562a0f3d8f6b1e3  usr/lib/libproxy/0.2.3/plugins/kde.so
+7d668ad8370ab5d5263b1f99c81b1512  usr/lib/libproxy/0.2.3/plugins/envvar.so
+c2025e56d8b15af7f87ecb1ce5a9e2a3  usr/lib/libproxy/0.2.3/plugins/gnome.so

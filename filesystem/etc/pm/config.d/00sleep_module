@@ -1,0 +1,9 @@
+# The sleep/wake system to use.  Valid values are:
+#   kernel    The built-in kernel suspend/resume support.
+#             Use this if nothing else is supported on your system.
+#   uswsusp   If your system has support for the userspace
+#             suspend programs (s2ram/s2disk/s2both), then use this.
+#   tuxonice  If your system has support for tuxonice, use this.
+#
+# The system defaults to "kernel" if this is commented out.
+# SLEEP_MODULE="kernel"

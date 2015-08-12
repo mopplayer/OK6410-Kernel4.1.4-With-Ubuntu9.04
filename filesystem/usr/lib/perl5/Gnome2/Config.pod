@@ -1,0 +1,743 @@
+=head1 NAME
+
+Gnome2::Config
+
+
+=head1 METHODS
+
+=head2 boolean = Gnome2::Config-E<gt>B<get_bool> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = Gnome2::Config::Private-E<gt>B<get_bool> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<set_bool> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (boolean) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<set_bool> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (boolean) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config-E<gt>B<get_bool_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+
+Returns a boolean indicating whether the default was used and the actual value.
+
+
+=back
+
+=head2 list = Gnome2::Config::Private-E<gt>B<get_bool_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<clean_file> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<clean_file> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<clean_key> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<clean_key> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<clean_section> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<clean_section> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<drop_all> 
+
+=over
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<drop_file> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<drop_file> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 double = Gnome2::Config-E<gt>B<get_float> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 double = Gnome2::Config::Private-E<gt>B<get_float> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<set_float> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (double) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<set_float> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (double) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config-E<gt>B<get_float_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+
+Returns a boolean indicating whether the default was used and the actual value.
+
+
+=back
+
+=head2 list = Gnome2::Config::Private-E<gt>B<get_float_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = Gnome2::Config-E<gt>B<has_section> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = Gnome2::Config::Private-E<gt>B<has_section> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 scalar = Gnome2::Config-E<gt>B<init_iterator> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 scalar = Gnome2::Config::Private-E<gt>B<init_iterator> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 scalar = Gnome2::Config-E<gt>B<init_iterator_sections> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 scalar = Gnome2::Config::Private-E<gt>B<init_iterator_sections> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 integer = Gnome2::Config-E<gt>B<get_int> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 integer = Gnome2::Config::Private-E<gt>B<get_int> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<set_int> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (integer) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<set_int> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (integer) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config-E<gt>B<get_int_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+
+Returns a boolean indicating whether the default was used and the actual value.
+
+
+=back
+
+=head2 list = Gnome2::Config::Private-E<gt>B<get_int_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<pop_prefix> 
+
+=over
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<push_prefix> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Config-E<gt>B<get_real_path> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Config::Private-E<gt>B<get_real_path> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Config-E<gt>B<get_string> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Config::Private-E<gt>B<get_string> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<set_string> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<set_string> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (string) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config-E<gt>B<get_string_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+
+Returns a boolean indicating whether the default was used and the actual value.
+
+
+=back
+
+=head2 list = Gnome2::Config::Private-E<gt>B<get_string_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = Gnome2::Config-E<gt>B<sync> 
+
+=over
+
+=back
+
+=head2 boolean = Gnome2::Config-E<gt>B<sync_file> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 boolean = Gnome2::Config::Private-E<gt>B<sync_file> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Config-E<gt>B<get_translated_string> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 string = Gnome2::Config::Private-E<gt>B<get_translated_string> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<set_translated_string> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<set_translated_string> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (string) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config-E<gt>B<get_translated_string_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config::Private-E<gt>B<get_translated_string_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 scalar = Gnome2::Config-E<gt>B<get_vector> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 scalar = Gnome2::Config::Private-E<gt>B<get_vector> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config-E<gt>B<set_vector> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (scalar) 
+
+=back
+
+=back
+
+=head2 Gnome2::Config::Private-E<gt>B<set_vector> ($path, $value)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=item * $value (scalar) 
+
+=back
+
+=back
+
+=head2 list = Gnome2::Config-E<gt>B<get_vector_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+
+Returns a boolean indicating whether the default was used and the actual value.
+
+
+=back
+
+=head2 list = Gnome2::Config::Private-E<gt>B<get_vector_with_default> ($path)
+
+=over
+
+=over
+
+=item * $path (string) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

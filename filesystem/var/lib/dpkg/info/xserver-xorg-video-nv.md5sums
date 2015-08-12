@@ -1,0 +1,7 @@
+eab78e4358c2659abb73bea931f8180c  usr/share/xserver-xorg/pci/nv.ids
+db4d7c7659e4c0057003d85c447d81a8  usr/share/doc/xserver-xorg-video-nv/copyright
+43d0a3d733b3dc2d9ec3c8589b40835c  usr/share/doc/xserver-xorg-video-nv/README.G80
+1bf5c90888329aeccc82aa01285d4c2d  usr/share/doc/xserver-xorg-video-nv/changelog.gz
+814043a99c4df96de2f876a4fa776fd1  usr/share/doc/xserver-xorg-video-nv/changelog.Debian.gz
+6bca9a51c49322b868c62f330919b24b  usr/share/man/man4/nv.4.gz
+eb8da1d8cf6e60732adbe5707de90f66  usr/lib/xorg/modules/drivers/nv_drv.so

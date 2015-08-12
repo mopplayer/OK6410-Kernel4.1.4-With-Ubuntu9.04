@@ -1,0 +1,2 @@
+sudo: setuid-binary usr/bin/sudo 4755 root/root
+sudo: setuid-binary usr/bin/sudoedit 4755 root/root

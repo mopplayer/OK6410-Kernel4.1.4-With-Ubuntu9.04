@@ -1,0 +1,6 @@
+75da66945980a43adf1e1856271b9d4a  usr/share/doc/xserver-xorg-video-mach64/copyright
+f9a194a028b79ec0826590e6881bb441  usr/share/doc/xserver-xorg-video-mach64/changelog.gz
+b37025ae4071fdf43c81dd0285c169ec  usr/share/doc/xserver-xorg-video-mach64/changelog.Debian.gz
+94b2b3acf8d9a64ce91a2f98bc616de6  usr/share/doc/xserver-xorg-video-mach64/NEWS.Debian.gz
+c9ca47abbbd6a14ec55f51468af1b585  usr/share/xserver-xorg/pci/mach64.ids
+42c01e5081081a46845848d1707363d9  usr/lib/xorg/modules/drivers/mach64_drv.so

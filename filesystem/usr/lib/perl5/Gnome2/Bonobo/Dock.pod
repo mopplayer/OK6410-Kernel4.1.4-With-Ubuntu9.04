@@ -1,0 +1,186 @@
+=head1 NAME
+
+Gnome2::Bonobo::Dock
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gnome2::Bonobo::Dock
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::Bonobo::Dock-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 $dock-E<gt>B<add_floating_item> ($widget, $x, $y, $orientation)
+
+=over
+
+=over
+
+=item * $widget (Gnome2::Bonobo::DockItem) 
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=item * $orientation (Gtk2::Orientation) 
+
+=back
+
+=back
+
+=head2 boolean = $dock-E<gt>B<add_from_layout> ($layout)
+
+=over
+
+=over
+
+=item * $layout (Gnome2::Bonobo::DockLayout) 
+
+=back
+
+=back
+
+=head2 $dock-E<gt>B<add_item> ($item, $placement, $band_num, $position, $offset, $in_new_band)
+
+=over
+
+=over
+
+=item * $item (Gnome2::Bonobo::DockItem) 
+
+=item * $placement (Gnome2::Bonobo::DockPlacement) 
+
+=item * $band_num (integer) 
+
+=item * $position (integer) 
+
+=item * $offset (integer) 
+
+=item * $in_new_band (boolean) 
+
+=back
+
+=back
+
+=head2 $dock-E<gt>B<allow_floating_items> ($enable)
+
+=over
+
+=over
+
+=item * $enable (boolean) 
+
+=back
+
+=back
+
+=head2 widget = $dock-E<gt>B<get_client_area> 
+
+=over
+
+=back
+
+=head2 $dock-E<gt>B<set_client_area> ($widget)
+
+=over
+
+=over
+
+=item * $widget (Gtk2::Widget) 
+
+=back
+
+=back
+
+=head2 list = $dock-E<gt>B<get_item_by_name> ($name)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=back
+
+
+Returns a BonoboDockItem, a BonoboDockPlacement and three unsigned integers
+correspoding to num_band, band_position and offset.
+
+
+=back
+
+=head2 docklayout = $dock-E<gt>B<get_layout> 
+
+=over
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<layout-changed> (Gnome2::Bonobo::Dock)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::Bonobo::DockPlacement
+
+=over
+
+=item * 'top' / 'BONOBO_DOCK_TOP'
+
+=item * 'right' / 'BONOBO_DOCK_RIGHT'
+
+=item * 'bottom' / 'BONOBO_DOCK_BOTTOM'
+
+=item * 'left' / 'BONOBO_DOCK_LEFT'
+
+=item * 'floating' / 'BONOBO_DOCK_FLOATING'
+
+=back
+
+
+=head2 enum Gtk2::Orientation
+
+=over
+
+=item * 'horizontal' / 'GTK_ORIENTATION_HORIZONTAL'
+
+=item * 'vertical' / 'GTK_ORIENTATION_VERTICAL'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,5 @@
+6b2bea29522da7cbb81cadde3235024d  usr/share/doc/xserver-xorg-video-s3/copyright
+20befeaffb0ad77b9637c483b4e114a3  usr/share/doc/xserver-xorg-video-s3/changelog.gz
+d9f6cd7d493ed9c73583c791cd416831  usr/share/doc/xserver-xorg-video-s3/changelog.Debian.gz
+1b572f5c17883ce00fb866a3c6b241b9  usr/share/xserver-xorg/pci/s3.ids
+fc7ddc8d565d1c5662031a44cff78f51  usr/lib/xorg/modules/drivers/s3_drv.so

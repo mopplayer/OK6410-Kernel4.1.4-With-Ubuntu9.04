@@ -1,0 +1,175 @@
+#!/bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+
+MYNAME="${0##*/}"
+
+report() { echo "${MYNAME}: $*" ; }
+report_warn() { report "Warning: $*" >&2 ; }
+report_err() { report "Error: $*" >&2 ; }
+
+ATTEMPT_CONVERSION=false
+if [ "$1" = "configure" ] && [ "$2" != "" ] &&
+        dpkg --compare-versions "$2" le "0.6.2pr-3"
+then
+  # Get answers to questions
+  db_get ifupdown/convert-interfaces;    ATTEMPT_CONVERSION="$RET"
+fi
+
+# Update /etc/network/interfaces from "noauto" to "auto"
+if [ "$ATTEMPT_CONVERSION" = "true" ]; then
+  echo
+  echo -n "Automatically converting /etc/network/interfaces"
+  (
+    cd /etc/network;
+    if /usr/share/ifupdown/upgrade-from-0.5.x.pl \
+      < interfaces > interfaces.dpkg-new 2>/dev/null
+    then
+      echo " succeeded."
+      mv interfaces interfaces.dpkg-old
+      mv interfaces.dpkg-new interfaces
+      echo "Old interfaces file saved as interfaces.dpkg-old."
+    else
+      echo " failed."
+      echo
+      echo "If you wish to reattempt the conversion you may run"
+      echo "    cat /etc/network/interfaces |"
+      echo "         /usr/share/ifupdown/upgrade-from-0.5.x.pl"
+      echo
+    fi
+  )
+fi
+
+
+ATTEMPT_CONVERSION=false
+if [ "$1" = "configure" ] && [ "$2" != "" ] &&
+	dpkg --compare-versions "$2" lt "0.6.7ubuntu7"
+then
+  # Get answers to questions
+  db_get ifupdown/convert-interfaces-hotplug;    ATTEMPT_CONVERSION="$RET"
+fi
+
+# Update /etc/network/interfaces from "mapping hotplug" to "auto"
+if [ "$ATTEMPT_CONVERSION" = "true" ]; then
+  echo
+  echo -n "Automatically converting /etc/network/interfaces"
+  (
+    cd /etc/network;
+    if /usr/share/ifupdown/upgrade-from-hotplug.pl \
+      < interfaces > interfaces.dpkg-new 2>/dev/null
+    then
+      echo " succeeded."
+      mv interfaces interfaces.dpkg-old
+      mv interfaces.dpkg-new interfaces
+      echo "Old interfaces file saved as interfaces.dpkg-old."
+    else
+      echo " failed."
+      echo
+      echo "If you wish to reattempt the conversion you may run"
+      echo "    cat /etc/network/interfaces |"
+      echo "         /usr/share/ifupdown/upgrade-from-hotplug.pl"
+      echo
+    fi
+  )
+fi
+
+
+# For every active ifupdown-controlled dhclient interface, copy
+# /var/run/dhclient.pid, so that the new ifdown is able to kill
+# dhclient.
+#
+# the old version had a bug with more than one DHCP iface anyway,
+# so we don't know which one the PID file actually belongs to.
+if [ "$1" = "configure" -a "$2" != "" ] &&
+     dpkg --compare-versions "$2" le "0.6.4-4.1" &&
+     [ -f /etc/network/run/ifstate -a -x /sbin/dhclient ]
+then
+
+  sed -e 's/^.*=//' /etc/network/run/ifstate |
+    while read iface; do
+      # handle \<newline>-continued lines
+      if sed -e '/^[[:space:]]*#/b;:g /\\$/{N;s/\\\n//;bg;}' /etc/network/interfaces | grep -qe "^[[:space:]]*iface[[:space:]]*\\b${iface}\\b[[:space:]]*.*\\bdhcp\\b.*" &&
+          [ -f "/var/run/dhclient.pid" ] &&
+          [ ! -f "/var/run/dhclient.${iface}.pid" ]
+      then
+        # copy original file.  If dhclient was started
+        # manually, one can still use dhclient.pid, if started
+        # by ifupdown, the new ifupdown can take it down with 
+        # dhclient.${iface}.pid.  Obsolete files are removed during
+        # next boot (bootmisc.sh).
+        cp /var/run/dhclient.pid "/var/run/dhclient.${iface}.pid"
+      fi
+    done
+fi
+
+# Move /etc/network/ifstate or /etc/network/run/ifstate to
+# /var/run/network/ifstate if that has been turned into a tmpfs already
+if [ "$1" = configure -a "$2" != "" ] &&
+     dpkg --compare-versions "$2" lt "0.6.7ubuntu4"
+then
+    if mountpoint -q /var/run; then
+	[ -d /var/run/network ] || mkdir /var/run/network
+	[ ! -e /etc/network/ifstate ] || mv -f /etc/network/ifstate /var/run/network/ifstate
+	[ ! -e /etc/network/run/ifstate ] || mv -f /etc/network/run/ifstate /var/run/network/ifstate
+    else
+	# Yes, this will break things, but only until reboot <g>
+	rm -f /etc/network/ifstate /etc/network/run/ifstate
+	if [ -x /usr/share/update-notifier/notify-reboot-required ]; then
+	    /usr/share/update-notifier/notify-reboot-required
+	fi
+    fi
+    [ ! -d /etc/network/run ] || rmdir /etc/network/run 2>/dev/null || true
+fi
+
+# Remove the ifupdown and ifupdown-clean init script symlinks
+if [ "$1" = "configure" -a "$2" != "" ] &&
+     dpkg --compare-versions "$2" lt "0.6.7ubuntu4"
+then
+    rm -f /etc/init.d/ifupdown /etc/init.d/ifupdown-clean
+    rm -f /etc/default/ifupdown
+	
+    update-rc.d -f ifupdown remove
+    update-rc.d -f ifupdown-clean remove
+fi
+
+# Remove the loopback init script symlinks
+if [ "$1" = "configure" -a "$2" != "" ] &&
+     dpkg --compare-versions "$2" lt "0.6.8ubuntu19"
+then
+    update-rc.d -f loopback remove
+fi
+
+# Generic stuff done on all configurations
+if [ "$1" = "configure" ] ; then
+  if [ -f /etc/network/interfaces ] ; then
+    # TODO: This should be handled with debconf and the script
+    # could introduce the line there directly
+    if ! grep -q "^[[:space:]]*iface[[:space:]]\+lo[[:space:]]\+inet[[:space:]]\+loopback\>" /etc/network/interfaces ; then
+      report_warn "No 'iface lo' definition found in /etc/network/interfaces"
+    fi
+    if ! grep -q "^[[:space:]]*auto[[:space:]].*\<lo\>" /etc/network/interfaces ; then
+      report_warn "No 'auto lo' statement found in /etc/network/interfaces"
+    fi
+  else  # ! -f /etc/network/interfaces
+    echo "Creating /etc/network/interfaces."
+    echo "# interfaces(5) file used by ifup(8) and ifdown(8)" > /etc/network/interfaces
+    echo "auto lo" >> /etc/network/interfaces
+    echo "iface lo inet loopback" >> /etc/network/interfaces
+  fi
+fi
+
+db_stop
+
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/ifupdown.rules" ]; then
+		echo "Preserving user changes to /lib/udev/rules.d/85-ifupdown.rules ..."
+		if [ -e "/lib/udev/rules.d/85-ifupdown.rules" ]; then
+			mv -f "/lib/udev/rules.d/85-ifupdown.rules" "/lib/udev/rules.d/85-ifupdown.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/ifupdown.rules" "/lib/udev/rules.d/85-ifupdown.rules"
+	fi
+fi
+# End automatically added section
+

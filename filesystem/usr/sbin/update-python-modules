@@ -1,0 +1,389 @@
+#! /usr/bin/python
+#
+# copyright (c) 2006 Josselin Mouette <joss@debian.org>
+# Licensed under the GNU Lesser General Public License, version 2.1
+# See COPYING for details
+
+import sys,os,shutil
+from optparse import OptionParser
+from py_compile import compile, PyCompileError
+sys.path.append("/usr/lib/python-support/private/")
+import pysupport
+from pysupport import py_supported,py_installed,py_oldversions
+
+basepath='/var/lib/python-support'
+sourcepath='/usr/share/python-support'
+extensionpath='/usr/lib/python-support'
+
+parser = OptionParser(usage="usage: %prog [-v] [-c] package_directory [...]\n"+
+                            "       %prog [-v] [-c] package.dirs [...]\n"+
+                            "       %prog [-v] [-a|-f|-p]")
+parser.add_option("-v", "--verbose", action="store_true", dest="verbose",
+                  help="verbose output", default=False)
+parser.add_option("-c", "--clean", action="store_true", dest="clean_mode",
+                  help="clean modules instead of compiling them",
+                  default=False)
+parser.add_option("-a", "--rebuild-all", action="store_true",
+                  dest="rebuild_all", default=False,
+                  help="rebuild all private modules for a new default python version")
+parser.add_option("-f", "--force-rebuild-all", action="store_true",
+                  dest="rebuild_everything", default=False,
+                  help="rebuild all modules, including public modules for all python versions")
+parser.add_option("-p", "--post-install", action="store_true", dest="post_install",
+                  help="run post-installation operations, common to many packages",
+                  default=False)
+parser.add_option("-b", "--bytecompile", action="store_true", dest="force_private",
+                  help="[deprecated] byte-compilation mode: only handle private modules",
+                  default=False)
+parser.add_option("-i", "--install", action="store_true", dest="force_public",
+                  help="[deprecated] installation mode: only handle public modules",
+                  default=False)
+(options, args) = parser.parse_args()
+
+def debug(x):
+  if(options.verbose):
+    print x
+
+# I should use the sets type instead
+def isect(l1,l2):
+  return [i for i in l1 if i in l2]
+  
+def concat(l1,l2):
+  return l1 + [i for i in l2 if i not in l1]
+
+versions_dict={}
+
+def dir_versions(dir):
+  if dir not in versions_dict:
+    verfile=os.path.join(dir,'.version')
+    if dir.startswith(extensionpath):
+      # Directory in /usr/lib: only one version
+      vers=os.path.split(dir)[1]
+      if vers in py_supported:
+        versions_dict[dir]=[vers]
+      else:
+        versions_dict[dir]=[]
+    elif dir.startswith(sourcepath):
+      # Directory in /usr/share
+      extdir=dir.replace(sourcepath,extensionpath,1)
+      if os.path.exists(verfile):
+        # If we have a .version, use it
+        versions_dict[dir]=pysupport.version_list(file(verfile).readline())
+      elif os.path.isdir(extdir):
+        # Try to obtain the list of supported versions
+        # from the extensions in /usr/lib
+        versions_dict[dir]=isect(py_supported,os.listdir(extdir))
+      else:
+        # Otherwise, support all versions
+        versions_dict[dir]=py_supported
+    else:
+      raise "[Internal error] %s: unsupported path for byte-compilation."
+  return versions_dict[dir]
+
+def bytecompile_only(basedir,dir,file):
+  if file.endswith('.py'):
+    fullpath=os.path.join(basedir,dir,file)
+    debug("compile "+fullpath+'c')
+    try:
+      # Note that compile doesn't raise PyCompileError by default
+      compile(fullpath, doraise=True)
+    except IOError, (errno, strerror):
+      sys.stderr.write("WARNING: I/O error while trying to byte-compile %s (%s): %s\n" % (fullpath, errno, strerror))
+    except PyCompileError, inst:
+      sys.stderr.write("WARNING: compile error while trying to byte-compile %s: %s\n" % (fullpath, inst.msg))
+    except:
+      sys.stderr.write("WARNING: unexpected error while trying to byte-compile %s: %s\n" % (fullpath, sys.exc_info()[0]))
+
+def clean_simple(basedir,dir,file):
+  if file.endswith('.py'):
+    for ext in ['c','o']:
+      fullpath=os.path.join(basedir,dir,file+ext)
+      if os.path.exists(fullpath):
+        debug("remove "+fullpath)
+        os.remove(fullpath)
+
+def install_modules(versions):
+  def install_modules_func(basedir,dir,file):
+    if file == '.version':
+      return
+    fullpath=os.path.join(basedir,dir,file)
+    for py in isect(dir_versions(basedir),versions):
+      destpath=os.path.join(basepath,py,dir,file)
+      try:
+        os.makedirs(os.path.join(basepath,py,dir))
+      except OSError:
+        pass
+      if file[-4:] not in ['.pyc','.pyo']:
+        debug("link "+destpath)
+        # os.path.exists returns False for broken symbolic links
+        if os.path.exists(destpath) or os.path.islink(destpath):
+          if file!="__init__.py" or (os.path.exists(destpath) and os.path.getsize(destpath)):
+            # Oops, the file already exists and is not empty.
+            # Check whether we are conflicting with something else.  
+            for otherdir in dirs_i:
+              otherextdir = os.path.join(otherdir.replace(sourcepath,extensionpath,1),py)
+              if basedir in [otherdir,otherextdir]:
+                continue
+              if os.path.exists(os.path.join(otherdir,dir,file)) or os.path.exists(os.path.join(otherextdir,dir,file)):
+                sys.stderr.write("Package %s is trying to overwrite %s which is already provided by %s\n"%(os.path.basename(basedir),os.path.join(dir,file),os.path.basename(otherdir)))
+                sys.exit(1)
+            # The file is already here, probably from the previous version. 
+            # Let's proceed.
+            debug("overwrite "+destpath)
+          else:
+            debug("overwrite namespace "+destpath)
+          os.remove(destpath)
+        os.symlink(fullpath,destpath)
+      # Files are NOT byte-compiled here, this will be done later.
+  return install_modules_func
+
+def process(basedir,func):
+  debug("Looking at %s..."%(basedir))
+  for dir, dirs, files in os.walk(basedir):
+    dir = dir[len(basedir):].lstrip('/')
+    for file in files:
+      func(basedir, dir, file)
+    for file in dirs:
+      if os.path.islink(os.path.join(basedir,dir,file)):
+        func(basedir, dir, file)
+
+def process_extensions(basedir,func,version=None):
+  basedir=basedir.replace(sourcepath,extensionpath,1)
+  if os.path.isdir(basedir):
+    for vers in os.listdir(basedir):
+      if version and vers != version:
+        continue
+      verdir=os.path.join(basedir,vers)
+      if os.path.isdir(verdir):
+        process(verdir,func([vers]))
+
+def dirlist_file(f):
+  return [ l.rstrip('\n') for l in file(f) if len(l)>1 ]
+
+def bytecompile_all(py,path=None):
+  if not path:
+    path=os.path.join(basepath,py)
+  if not os.path.isdir(path):
+    return
+  debug("Byte-compilation of whole %s..."%path)
+  os.spawnl(os.P_WAIT, '/usr/bin/'+py, py,
+            os.path.join('/usr/lib/',py,'compileall.py'), '-q', path)
+
+def bytecompile_privatedir(basedir):
+  versionfile=os.path.join(basedir,".pyversion")
+  if os.path.isfile(versionfile):
+    specific_version=file(versionfile).readline().rstrip('\n')
+    bytecompile_all("python"+specific_version,basedir)
+  else:
+    process(basedir,bytecompile_only)
+
+def create_dotpath(py,dirhash=None):
+  path=os.path.join(basepath,py)
+  pathfile=os.path.join(path,".path")
+  debug("Generation of %s..."%pathfile)
+  pathlist=[path]
+  for f in os.listdir(path):
+    f=os.path.join(path,f)
+    if f.endswith(".pth") and os.path.isfile(f):
+      for l in file(f):
+        l=l.rstrip('\n')
+        if l.startswith('import'):
+          # Do not ship lines starting with "import", they are executed! (complete WTF)
+          continue
+        pathlist.append(l)
+        l2=os.path.join(path,l)
+        pathlist.append(l2)
+        if dirhash:
+          dirhash[l2]=False
+  fd=file(pathfile,"w")
+  fd.writelines([l+'\n' for l in pathlist])
+  fd.close()
+
+def post_change_stuff(py):
+  # All the changes that need to be done after anything has changed
+  # in a /var/lib/python-support/pythonX.Y directory
+  # * Cleanup of all dangling symlinks that are left out after a package
+  #   is upgraded/removed.
+  # * The namespace packages are here because python doesn't consider a
+  #   directory to be able to contain packages if there is no __init__.py
+  #   file (yes, this is completely stupid).
+  # * The .path file must be created by concatenating all those .pth
+  #   files that extend sys.path (this also badly sucks).
+  # * Byte-compilation of all .py files that haven't already been
+  path=os.path.join(basepath,py)
+  if not os.path.isdir(path):
+    return
+  # First, remove any dangling symlinks.
+  # In the same loop, we find which directories may need a namespace package
+  dirhash={}
+  for dir, dirs, files in os.walk(path):
+    dirhash[dir]=False
+    files.sort() # We need the .py to appear before the .pyc
+    for f in files+dirs:
+      # We also examine dirs as some symlinks are dirs
+      abspath=os.path.join(dir,f)
+      islink=os.path.islink(abspath)
+      if islink:
+        if not os.path.exists(abspath):
+          # We refer to a file that was removed
+          debug("remove "+abspath)
+          os.remove(abspath)
+          continue
+        srcfile = os.readlink (abspath)
+        # Remove links left here after a change in the supported python versions for a package
+        if srcfile.startswith(sourcepath):
+          if py not in dir_versions (os.path.join(sourcepath,srcfile[len(sourcepath)+1:].split("/",1)[0])):
+            debug("remove "+abspath)
+            os.remove(abspath)
+            continue
+      if f[-4:] in ['.pyc', '.pyo']:
+        if not os.path.exists(abspath[:-1]):
+          debug("remove "+abspath)
+          os.remove(abspath)
+          continue
+      elif f[-3:] in ['.py', '.so']:
+        if islink or f!='__init__.py':
+          # List the directory as maybe needing a namespace packages
+          d=dir
+          while dirhash.has_key(d) and not dirhash[d]:
+            dirhash[d]=True
+            d=os.path.dirname(d)
+    # Remove the directory if it is empty after our crazy removals
+    try:
+      os.removedirs(dir)
+    except OSError:
+      pass
+  dirhash[path]=False
+  # Then, find which directories belong in a .pth file
+  # These directories don't need a namespace package, so we
+  # pass the dirhash
+  create_dotpath(py,dirhash)
+  # Finally, create/remove namespace packages
+  for dir in dirhash:
+    initfile=os.path.join(dir,"__init__.py")
+    noinitfile=os.path.join(dir,".noinit")
+    if dirhash[dir] and not os.path.exists(noinitfile):
+      if not os.path.exists(initfile):
+        debug("create namespace "+initfile)
+        file(initfile,"w").close()
+    else:
+      for e in ['','c','o']:
+        if os.path.exists(initfile+e):
+          debug('remove namespace '+initfile+e)
+          os.remove(initfile+e)
+      try:
+        os.removedirs(dir)
+      except OSError:
+        pass
+  bytecompile_all(py)
+
+# Parse arguments
+do_dirs_i=[]
+do_dirs_b=[]
+for arg in args:
+  if os.path.isabs(arg):
+    if not arg.startswith(sourcepath):
+      parser.error("%s is not in the python-support directory."%arg)
+  else:
+    arg=os.path.join(sourcepath,arg)
+  if not os.path.exists(arg):
+    if options.clean_mode:
+      sys.stderr.write("WARNING: %s does not exist.\n         Some bytecompiled files may be left behind.\n"%arg)
+      continue
+    else:
+      parser.error("%s does not exist"%arg)
+  if arg.endswith('.dirs'):
+    do_dirs_b+=dirlist_file(arg)
+    if options.force_public:
+      parser.error("Option -i cannot be used with a private module .dirs file.")
+  elif os.path.isdir(arg):
+    do_dirs_i.append(arg)
+    if options.force_private:
+      parser.error("Option -b cannot be used with a public module directory.")
+  else:
+    parser.error("%s is not a directory"%arg)
+
+
+# Read full list from the source directory
+# directories are stuff to be installed
+# foo.dirs files list directories to bytecompile in place
+dirs_b = []
+dirs_i = []
+for f in os.listdir(sourcepath):
+  f=os.path.join(sourcepath,f)
+  if os.path.isdir(f):
+    dirs_i.append(f)
+  elif f.endswith('.dirs'):
+    dirs_b+=dirlist_file(f)
+
+if not os.path.isdir(basepath):
+  os.mkdir(basepath)
+
+if options.rebuild_everything:
+  options.rebuild_all = True
+  for pyver in py_supported:
+    dir = os.path.join(basepath,pyver)
+    if os.path.isdir(dir):
+      shutil.rmtree(dir)
+
+# Check for changes in installed python versions
+for pyver in py_oldversions+py_supported:
+  dir = os.path.join(basepath,pyver)
+  # Check for ".path" because sometimes the directory already exists 
+  # while the python version isn't installed, because of some .so's.
+  if pyver in py_installed and not os.path.isfile(os.path.join(dir,".path")):
+    debug("Building all modules in %s..."%(dir))
+    for basedir in dirs_i:
+      process(basedir,install_modules([pyver]))
+      process_extensions(basedir,install_modules,pyver)
+    # Here we need to launch post_change_stuff because otherwise we could
+    # end up without the .path file that is checked 6 lines earlier
+    post_change_stuff (pyver)
+  if pyver not in py_installed and os.path.isdir(dir):
+    debug("Removing obsolete directory %s..."%(dir))
+    shutil.rmtree(dir)
+
+if options.rebuild_all:
+  for basedir in dirs_b:
+    process(basedir,clean_simple)
+    bytecompile_privatedir(basedir)
+
+
+# Now for the processing of what was handed on the command line
+for basedir in do_dirs_b:
+  if not options.clean_mode:
+    bytecompile_privatedir(basedir)
+  else:
+    process(basedir,clean_simple)
+
+need_dotpath = False
+need_postinstall = []
+for basedir in do_dirs_i:
+  need_postinstall = concat(need_postinstall,isect(dir_versions(basedir),py_installed))
+  if not options.clean_mode:
+    process(basedir,install_modules(py_installed))
+    process_extensions(basedir,install_modules)
+    for f in os.listdir(basedir):
+      if f.endswith(".pth"):
+        need_dotpath = True
+
+# Only do the funny and time-consuming things when the -p option is
+# given, e.g when python-support is triggered.
+if need_postinstall and 'DPKG_RUNNING_VERSION' in os.environ and not options.post_install:
+  ret = os.spawnlp(os.P_WAIT, 'dpkg-trigger', 'dpkg-trigger', '--no-await', 'pysupport')
+  if ret:
+    sys.stderr.write("ERROR: dpkg-trigger failed\n")
+    sys.exit(1)
+  need_postinstall = []
+
+if options.post_install:
+  # Now the trigger is activated, do it for all installed versions
+  need_postinstall = py_installed
+if need_postinstall:
+  need_dotpath = False
+  for py in need_postinstall:
+    post_change_stuff(py)
+
+if need_dotpath:
+  for py in need_postinstall:
+    create_dotpath (py)

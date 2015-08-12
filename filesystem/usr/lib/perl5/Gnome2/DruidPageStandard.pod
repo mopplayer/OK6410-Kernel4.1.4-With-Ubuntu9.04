@@ -1,0 +1,232 @@
+=head1 NAME
+
+Gnome2::DruidPageStandard
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gnome2::DruidPage
+                                +----Gnome2::DruidPageStandard
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::DruidPageStandard-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 widget = Gnome2::DruidPageStandard-E<gt>B<new_with_vals> ($title, $logo=undef, $top_watermark=undef)
+
+=over
+
+=over
+
+=item * $title (string) 
+
+=item * $logo (Gtk2::Gdk::Pixbuf or undef) 
+
+=item * $top_watermark (Gtk2::Gdk::Pixbuf or undef) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<append_item> ($question, $item, $additional_info)
+
+=over
+
+=over
+
+=item * $question (string) 
+
+=item * $item (Gtk2::Widget) 
+
+=item * $additional_info (string) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_background> ($color)
+
+=over
+
+=over
+
+=item * $color (Gtk2::Gdk::Color) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_contents_background> ($color)
+
+=over
+
+=over
+
+=item * $color (Gtk2::Gdk::Color) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_logo_background> ($color)
+
+=over
+
+=over
+
+=item * $color (Gtk2::Gdk::Color) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_logo> ($logo_image)
+
+=over
+
+=over
+
+=item * $logo_image (Gtk2::Gdk::Pixbuf or undef) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_title_foreground> ($color)
+
+=over
+
+=over
+
+=item * $color (Gtk2::Gdk::Color) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_title> ($title)
+
+=over
+
+=over
+
+=item * $title (string) 
+
+=back
+
+=back
+
+=head2 $druid_page_standard-E<gt>B<set_top_watermark> ($top_watermark_image)
+
+=over
+
+=over
+
+=item * $top_watermark_image (Gtk2::Gdk::Pixbuf or undef) 
+
+=back
+
+=back
+
+=head2 widget = $druid_page_standard-E<gt>B<vbox> 
+
+=over
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'background' (string : writable)
+
+Background color
+
+=item 'background-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+Background color as a GdkColor
+
+=item 'background-set' (boolean : readable / writable)
+
+Background color is set
+
+=item 'contents-background' (string : writable)
+
+Contents Background color
+
+=item 'contents-background-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+Contents Background color as a GdkColor
+
+=item 'contents-background-set' (boolean : readable / writable)
+
+Contents Background color is set
+
+=item 'logo' (Gtk2::Gdk::Pixbuf : readable / writable)
+
+Logo image
+
+=item 'logo-background' (string : writable)
+
+Logo Background color
+
+=item 'logo-background-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+Logo Background color as a GdkColor
+
+=item 'logo-background-set' (boolean : readable / writable)
+
+Logo Background color is set
+
+=item 'title' (string : readable / writable)
+
+Title of the druid
+
+=item 'title-foreground' (string : writable)
+
+Foreground color of the title
+
+=item 'title-foreground-gdk' (Gtk2::Gdk::Color : readable / writable)
+
+Foreground color of the title as a GdkColor
+
+=item 'title-foreground-set' (boolean : readable / writable)
+
+Foreground color of the title is set
+
+=item 'top-watermark' (Gtk2::Gdk::Pixbuf : readable / writable)
+
+Watermark image for the top
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>, L<Gnome2::DruidPage>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

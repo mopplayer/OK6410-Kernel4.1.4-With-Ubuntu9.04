@@ -1,0 +1,2 @@
+libpopt 0 libpopt0 (>= 1.14)
+udeb: libpopt 0 libpopt0-udeb (>= 1.14)

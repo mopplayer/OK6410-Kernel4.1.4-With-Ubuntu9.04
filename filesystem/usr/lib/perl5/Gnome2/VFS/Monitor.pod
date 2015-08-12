@@ -1,0 +1,57 @@
+=head1 NAME
+
+Gnome2::VFS::Monitor
+
+
+=head1 METHODS
+
+=head2 list = Gnome2::VFS::Monitor-E<gt>B<add> ($text_uri, $monitor_type, $func, $data=undef)
+
+=over
+
+=over
+
+=item * $text_uri (string) 
+
+=item * $monitor_type (Gnome2::VFS::MonitorType) 
+
+=item * $func (scalar) 
+
+=item * $data (scalar) 
+
+=back
+
+
+Returns a GnomeVFSResult and a GnomeVFSMonitorHandle.
+
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::VFS::MonitorType
+
+=over
+
+=item * 'file' / 'GNOME_VFS_MONITOR_FILE'
+
+=item * 'directory' / 'GNOME_VFS_MONITOR_DIRECTORY'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,24 @@
+#!/bin/sh -e
+# initramfs hook for dmsetup
+
+PREREQ="udev"
+
+# Output pre-requisites
+prereqs()
+{
+	echo "$PREREQ"
+}
+
+case "$1" in
+    prereqs)
+	prereqs
+	exit 0
+	;;
+esac
+
+
+. /usr/share/initramfs-tools/hook-functions
+
+copy_exec /sbin/dmsetup /sbin
+
+cp -p /lib/udev/rules.d/65-dmsetup.rules ${DESTDIR}/lib/udev/rules.d

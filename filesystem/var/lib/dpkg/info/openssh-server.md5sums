@@ -1,0 +1,6 @@
+0e6dfa737335fbea2dc924a1936a4e39  usr/sbin/sshd
+8c5592e0d522fa0f8f55f3c104479ef5  usr/share/lintian/overrides/openssh-server
+71a51cbb514da3044b277e05a3ceaf0b  usr/share/man/man8/sshd.8.gz
+222d4da61fcb3c65b4e6e83944752f20  usr/share/man/man8/sftp-server.8.gz
+cfcb67f58bcd1edcaa5a770863e49304  usr/share/man/man5/sshd_config.5.gz
+45d3a13426754e31a05e35e315e74754  usr/lib/openssh/sftp-server

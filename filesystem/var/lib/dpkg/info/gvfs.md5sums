@@ -1,0 +1,15 @@
+9edb30c4978349c9ae65d402ad0d783f  usr/lib/gio/modules/libgvfsdbus.so
+883279a1e5f63ffd8eabca3b4365e1cf  usr/lib/gio/modules/libgioremote-volume-monitor.so
+ec56973bac2368e71d50eb3eacfeedec  usr/lib/gio/modules/libgiogconf.so
+4b1cdbe84513802a15291ad47c7b7da5  usr/lib/gvfs/gvfs-hal-volume-monitor
+8f620ba029f7099f7a4fe88058e4645f  usr/lib/gvfs/gvfsd
+627ecf32dbc8a89aaba62f5bd6079374  usr/lib/gvfs/gvfsd-trash
+b53bec2c31a18cca59ad7920a0be7128  usr/lib/gvfs/gvfsd-localtest
+c022227ba1d7f6cb140a6530ddf448de  usr/lib/gvfs/gvfsd-computer
+821d656fb924968a92662b3767c4727f  usr/share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
+4bf5b8a17aa02a32a7cdbd28e77d9cea  usr/share/dbus-1/services/gvfs-daemon.service
+8624bfa53288d9ee72452159a6fae41d  usr/share/doc/gvfs/copyright
+59bd05c42f7851fb15358bb25ed30940  usr/share/gvfs/mounts/localtest.mount
+82f8705ae778c671a28346db7f1b1c80  usr/share/gvfs/mounts/computer.mount
+b0a9c64c0fe792096fab4368c7ef4c6d  usr/share/gvfs/mounts/trash.mount
+b80135bbf386334bc9cfb4e79b2504dc  usr/share/gvfs/remote-volume-monitors/hal.monitor

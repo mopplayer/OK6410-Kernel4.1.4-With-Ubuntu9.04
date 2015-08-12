@@ -1,0 +1,189 @@
+
+``apt.progress`` --- Classes for progress reporting
+***************************************************
+
+progress reporting classes.
+
+This module provides classes for progress reporting. They can be used
+with e.g., for reporting progress on the cache opening process, the
+cache update progress, or the package install progress.
+
+Warning: This class is currently under re-organisation. Therefore, the API
+  may change soon. The old names will still be kept until it is safe
+  to remove them.
+
+
+Classes without output
+======================
+
+class apt.progress.FetchProgress
+
+   Report the download/fetching progress.
+
+   Subclass this class to implement fetch progress reporting
+
+   mediaChange(medium, drive)
+
+      react to media change events.
+
+   pulse()
+
+      Called periodically to update the user interface.
+
+      Return True to continue or False to cancel.
+
+   start()
+
+      Called when the fetching starts.
+
+   stop()
+
+      Called when all files have been fetched.
+
+   updateStatus(uri, descr, shortDescr, status)
+
+      Called when the status of an item changes.
+
+      This happens eg. when the downloads fails or is completed.
+
+class apt.progress.OpProgress
+
+   Abstract class to implement reporting on cache opening.
+
+   Subclass this class to implement simple Operation progress
+   reporting.
+
+   done()
+
+      Called once an operation has been completed.
+
+   update(percent)
+
+      Called periodically to update the user interface.
+
+class apt.progress.CdromProgress
+
+   Report the cdrom add progress.
+
+   Subclass this class to implement cdrom add progress reporting.
+
+   askCdromName()
+
+      Called to ask for the name of the cdrom.
+
+   changeCdrom()
+
+      Called to ask for the cdrom to be changed.
+
+   update(text, step)
+
+      Called periodically to update the user interface.
+
+class apt.progress.DumbInstallProgress
+
+   Report the install progress.
+
+   Subclass this class to implement install progress reporting.
+
+   finishUpdate()
+
+      Called when update has finished.
+
+   run(pm)
+
+      Start installation.
+
+   startUpdate()
+
+      Start update.
+
+   updateInterface()
+
+      Called periodically to update the user interface
+
+
+Implementing classes for text output
+====================================
+
+class apt.progress.TextFetchProgress
+
+   Ready to use progress object for terminal windows
+
+   mediaChange(medium, drive)
+
+      react to media change events.
+
+   pulse()
+
+      Called periodically to update the user interface.
+
+      Return True to continue or False to cancel.
+
+   stop()
+
+      Called when all files have been fetched.
+
+   updateStatus(uri, descr, shortDescr, status)
+
+      Called when the status of an item changes.
+
+      This happens eg. when the downloads fails or is completed.
+
+class apt.progress.OpTextProgress
+
+   A simple text based cache open reporting class.
+
+   done()
+
+      Called once an operation has been completed.
+
+   update(percent)
+
+      Called periodically to update the user interface.
+
+class apt.progress.InstallProgress
+
+   An InstallProgress that is pretty useful.
+
+   It supports the attributes 'percent' 'status' and callbacks for the
+   dpkg errors and conffiles and status changes.
+
+   conffile(current, new)
+
+      Called when a conffile question from dpkg is detected.
+
+   error(pkg, errormsg)
+
+      Called when a error is detected during the install.
+
+   fork()
+
+      Fork.
+
+   run(pm)
+
+      Start installing.
+
+   statusChange(pkg, percent, status)
+
+      Called when the status changed.
+
+   updateInterface()
+
+      Called periodically to update the interface.
+
+   waitChild()
+
+      Wait for child progress to exit.
+
+class apt.progress.DpkgInstallProgress
+
+   Progress handler for a local Debian package installation.
+
+   run(debfile)
+
+      Start installing the given Debian package.
+
+   updateInterface()
+
+      Process status messages from dpkg.

@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+XUL_VERSION=1.9
+
+if [ "$1" = "remove" ] || [ "$1" = upgrade ]; then
+        /usr/sbin/update-alternatives --remove xulrunner /usr/bin/xulrunner-$XUL_VERSION
+        if [ "$(update-alternatives --list xulrunner | wc -l)" = "0" ]; then
+                 /usr/sbin/update-alternatives --remove-all xulrunner
+        fi
+fi
+
+

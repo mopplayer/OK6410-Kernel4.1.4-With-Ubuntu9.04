@@ -1,0 +1,25 @@
+This is the debian package for the Gtk2 module.
+It was created by Marc Brockschmidt <marc@dch-faq.de>.
+
+The sources where downloaded from http://gtk2-perl.sourceforge.net/.
+
+The upstream authors are  muppet <scott@asofyet.org>
+                          Ross McFarland <rwmcfa1@neces.com>
+						  Torsten Schoenfeld <kaffeetisch@web.de>
+                          Jörn Reder <joern@zyn.de>
+                          Goran Thyni <gthyni@kirra.net>
+                          Chas Owens <alas@wilma.widomaker dot com>
+                          Guillaume Cottenceau <gc@mandrakesoft.com>
+                          Marc Lehmann <pcg@goof.com>
+                          [the gtk2-perl team]
+
+Copyright (C) 2003-2008 by the gtk2-perl team
+
+This library is free software; you can redistribute it and/or modify it under
+the terms of the GNU Library General Public License as published by the Free
+Software Foundation; either version 2.1 of the License, or (at your option) any
+later version.
+
+A copy of the LGPL-2.1 can be found at /usr/share/common-licenses/LGPL-2 on
+any Debian system.
+

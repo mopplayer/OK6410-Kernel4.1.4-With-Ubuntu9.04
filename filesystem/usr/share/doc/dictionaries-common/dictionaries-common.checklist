@@ -1,0 +1,84 @@
+dictionaries-common:
+====================
+
+1.0.0:
+  * Support for hunspell dicts registration for use under emacsen.
+
+0.98.14:
+  * Deal with OOo>=3 obsoleted dictionary.lst, removing it if appropriate.
+
+0.98.0:
+  * If a previous non dictionaries-common /usr/share/dict/words
+    exists it is diverted. This (with more changes) is the base
+    for allowing standalone wamerican be installed without
+    dictionaries-common.
+
+0.81.0:
+  * New support for squirrelmail through sqspell.php file
+
+0.60.0:
+  * Added cp1251 as a coding system alias to windows-1251
+    for xemacs.
+
+0.50.0:
+  * aspell-autobuildhash is now considered stable and working.
+
+0.25.0:
+  * Put a list of installed ispell dicts in file
+    /var/cache/dictionaries-common/ispell-dicts-list.txt.
+
+0.24.0:
+  * policy/dsdt-policy.xml.in,debian/patches/800_ispell.el.dpatch:
+    - Allow any charset supported by {x}emacs as a possible value of
+      Coding-System. Thanks to Joao Cachopo for the patch.
+    - Warn about possible problems about that in the policy document,
+      and explain when is a new dependency needed.
+
+0.22.30:
+  * ispell-autobuildhash is working since some versions ago, but
+    here are some (mostly cosmetic) changes.
+
+0.10.0:
+  * Added update-openoffice-dicts, including myspell support
+
+dictionaries-common-dev:
+========================
+
+1.0.0:
+  * installdeb-hunspell helper and associated debhelper snippets.
+
+0.98.13:
+  * Do not add path for maintainer scripts
+
+0.96.0:
+  * New installdeb-{ispell,wordlist}options for elanguages and future
+    dictionaries-common migration to optional:
+    --write-elanguages     Create the elanguages stuff.
+    --no-installdebconf   Do not run dh_installdebconf nor remove templates
+			  and config file.
+    --no-pre-post         Do not install {pre,post}{inst,rm} snippets.
+
+
+0.70.0:
+  * Added support for CDBS
+
+0.63.7:
+  * scripts/debhelper/installdeb-myspell:
+    - Do not try to automatically set mozilla symlinks if
+      debian/$myspell_dict_package.links exists. Those
+      symlinks were previously set unconditionally.
+
+0.50.1:
+  * scripts/debhelper/installdeb-myspell:
+    - Make --srcdir option work also with thesaurus files.
+
+0.30.0:
+  * scripts/debhelper/installdeb-myspell:
+    - Will also install openoffice hyphenation files if
+      called from the hyphenation package
+
+0.16.0:
+  * Included installdeb-myspell script and associated debhelper
+    snippets. --srcdir option is available in this branch from
+    this version on.
+

@@ -1,0 +1,9 @@
+libts-0.0.so.0 libts-0.0-0 #MINVER#
+ ts_close@Base 1.0
+ ts_config@Base 1.0
+ ts_fd@Base 1.0
+ ts_load_module@Base 1.0
+ ts_open@Base 1.0
+ ts_read@Base 1.0
+ ts_read_raw@Base 1.0
+ tslib_parse_vars@Base 1.0

@@ -1,0 +1,36 @@
+#! /bin/sh -e
+
+# Remove a no-longer used conffile
+rm_conffile()
+{
+	CONFFILE="$1"
+	ACTION="$2"
+
+	if [ "$ACTION" = rename ]; then
+		if [ -e "$CONFFILE" ]; then
+			echo "Removing obsolete conffile $CONFFILE"
+			rm -f "$CONFFILE"
+		fi
+	elif [ "$ACTION" = remove ]; then
+		if [ -e "$CONFFILE".moved-by-preinst ]; then
+			rm -f "$CONFFILE".moved-by-preinst
+		fi
+	fi
+}
+
+case $1 in
+	configure)
+		if dpkg --compare-versions "$2" lt 1.14.1-4ubuntu3; then
+			rm_conffile /etc/init.d/console-screen.kbd.sh remove
+			update-rc.d -f console-screen.kbd.sh remove
+		fi
+		;;
+esac
+
+if type update-initramfs >/dev/null 2>&1; then
+	update-initramfs -u
+fi
+
+
+
+exit 0

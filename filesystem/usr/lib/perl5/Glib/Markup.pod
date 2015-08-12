@@ -1,0 +1,40 @@
+=head1 NAME
+
+Glib::Markup -  Wrapper for markup handling functions in GLib
+
+=for object Glib::Markup Wrapper for markup handling functions in GLib
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 string = Glib::Markup::escape_text ($text)
+
+=over
+
+=over
+
+=item * $text (string) 
+
+=back
+
+
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Glib>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2008 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Glib> for a full notice.
+
+
+=cut
+

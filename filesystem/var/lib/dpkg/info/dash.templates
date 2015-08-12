@@ -1,0 +1,81 @@
+Template: dash/sh
+Type: boolean
+Default: true
+Description: Install dash as /bin/sh?
+ The default /bin/sh shell on Debian and Debian-based systems is bash.
+ .
+ However, since the default shell is required to be POSIX-compliant,
+ any shell that conforms to POSIX, such as dash, can serve as /bin/sh.
+ You may wish to do this because dash is faster and smaller than bash.
+Description-bg.UTF-8: Инсталиране на dash като /bin/sh?
+ Обвивката по подразбиране (/bin/sh) е bash.
+ .
+ Тъй като изискването към обвивката по подразбиране е единствено да бъде съвместима с POSIX, всяко обвивка, която отговаря на това условие, като например dash, може да изпълнява тази роля. Възможна причина да предпочетете dash пред bash е, че е по-малка и по-бърза.
+Description-cs.UTF-8: Nainstalovat dash jako /bin/sh?
+ Výchozím shellem /bin/sh je v Debianu a systémech z něj odvozených bash.
+ .
+ Protože však politika distribuce vyžaduje, aby byly všechny shellové skripty využívající /bin/sh kompatibilní s POSIXem, můžete jako /bin/sh použít jakýkoliv shell splňující normu POSIX, například shell dash. Určitě to stojí za vyzkoušení, protože dash je rychlejší a menší než bash.
+Description-de.UTF-8: Dash als /bin/sh installieren?
+ Standardmäßig ist bash als /bin/sh in Debian und auf Debian-basierten Systemen installiert.
+ .
+ Da die Standardshell allerdings POSIX-konform sein muss, kann jede Shell, die (wie Dash) POSIX-konform ist als /bin/sh dienen. Eventuell wollen Sie Dash verwenden, da Dash schneller und kleiner als Bash ist.
+Description-eu.UTF-8: Dash instalatu /bin/sh gisa?
+ Debian banaketan, eta Debian-en oinarriturikoetan, bash da lehenetsitako /bin/sh shell-a.
+ .
+ Alabaina, lehenetsitako shell-ak POSIX-ekin bateragarria izan behar duenez, POSIX-ekin bat datorren edozein shell, hala nola dash, /bin/sh gisa ezar daiteke. Aldaketa hau egitea nahi izan dezakezu, dash bizkorragoa eta txikiagoa baita bash baino.
+Description-fi.UTF-8: Asennetaanko dash linkitettynä tiedostoon /bin/sh?
+ Debianissa ja Debianiin pohjautuvissa järjestelmissä oletuskomentotulkkina /bin/sh toimii bash.
+ .
+ Koska oletuskomentotulkin tulee olla POSIX-yhteensopiva, mikä tahansa POSIXin vaatimukset täyttävä komentotulkki, esimerkiksi dash, voi toimia /bin/sh:na. Saatat haluta käyttää dashia, koska se on nopeampi ja pienempi kuin bash.
+Description-fr.UTF-8: Faut-il mettre en place un lien de /bin/sh vers dash ?
+ Par défaut, sur un système Debian ou un système basé sur Debian , /bin/sh est un lien vers bash.
+ .
+ Cependant, comme l'interpréteur de commandes (« shell ») par défaut du système doit être conforme à la norme POSIX, /bin/sh peut être n'importe quel interpréteur de commandes conforme à cette norme, notamment dash. Il peut être préférable de choisir cette option car dash est plus rapide et plus petit que bash.
+Description-gl.UTF-8: ¿Instalar dash coma /bin/sh?
+ O intérprete de ordes /bin/sh por defecto dos sistemas Debian e baseados en Debian é bash.
+ .
+ Nembargantes, como o intérprete de ordes por defecto ten que ser compatible con POSIX, calquera shell que siga POSIX, coma dash, pode servir coma /bin/sh. Pode ser unha boa idea facelo, xa que dash é máis rápido e máis pequeno que bash.
+Description-it.UTF-8: Installare dash come /bin/sh?
+ La shell predefinita per /bin/sh su sistemi Debian o basati su Debian è bash.
+ .
+ Tuttavia, poiché è richiesto che la shell predefinita sia conforme con POSIX, qualunque shell conforme a POSIX, come dash, può essere usata come /bin/sh. Si può preferire dash perché è più piccola e veloce di bash.
+Description-ja.UTF-8: dash を /bin/sh としてインストールしますか?
+ Debian および Debian ベースのシステムのデフォルトの /bin/sh シェルは bash です。
+ .
+ Debian システムでは bash がデフォルトの /bin/sh です。しかし、Debian のポリシーによって、/bin/sh を用いる全てのシェルスクリプトは POSIX 準拠でなければならないため、POSIX を満たすシェルはどれでも /bin/sh となることができます。dash は POSIX 準拠ですので、/bin/sh として使うことができます。dash は bash より速くて小さいので、そうしたいと思うかもしれません。
+Description-ko.UTF-8: dash를 /bin/sh로 설치할까요?
+ 데비안과 데비안 기반 시스템은 모두 bash를 기본 /bin/sh용 셸로 사용합니다.
+ .
+ 하지만 기본 셸은 모두 POSIX 호환이어야 하므로, dash와 같이 POSIX 호환 셸이기만 하면 /bin/sh로 사용할 수 있습니다. dash는 bash보다 작고 빠르기 때문에 dash를 사용하길 원하실 수 있습니다.
+Description-nl.UTF-8: dash als /bin/sh installeren?
+ De standaard /bin/sh shell voor Debian en voor op Debian-gebaseerde systemen is bash.
+ .
+ Echter, Debian-beleid eist dat elke shell die zich conformeert aan POSIX, zoals dash, kan worden gebruikt voor /bin/sh. Een reden om dit te overwegen is dat dash sneller en compacter is dan bash.
+Description-pt.UTF-8: Instalar dash como /bin/sh?
+ A shell em /bin/sh por omissão em sistemas Debian e baseados em Debian é a bash.
+ .
+ No entanto, uma vez que a shell por omissão tem de ser compatível com POSIX, qualquer shell que o seja, tal como a dash, pode servir como /bin/sh. Você pode querer fazer isto uma vez que a dash é mais pequena e rápida que a bash.
+Description-pt_BR.UTF-8: Instalar o dash como /bin/sh?
+ O shell /bin/sh padrão no Debian e em sistemas baseados no Debian é o bash.
+ .
+ Contudo, como é requerido que o shell padrão seja compatível com o padrão POSIX, qualquer shell que esteja em conformidade com o padrão POSIX, tal como o dash, pode servir como /bin/sh. Você pode desejar fazer isto porque o dash é mais rápido e menor que o bash.
+Description-ro.UTF-8: Se instalează dash ca /bin/sh?
+ Shell-ul implicit /bin/sh pe sistemele Debian și bazate pe Debian este bash.
+ .
+ Totuși, deoarece shell-ul implicit trebuie să respecte standardul POSIX, orice alt shell conform cu POSIX, precum dash, poate fi folosit ca /bin/sh. Ați putea dori acest lucru deoarece dash este mai rapid și mai mic decât bash.
+Description-ru.UTF-8: Установить dash как /bin/sh?
+ Оболочкой командной строки /bin/sh в Debian и основанных на Debian системах по умолчанию является bash.
+ .
+ Однако, так как от оболочки командной строки по умолчанию требуется только соответствовать POSIX, то любая оболочка, соответствующая POSIX, типа dash, может работать в качестве /bin/sh. Причинами, по которым вам стоит рассмотреть переход на dash, являются большая скорость и меньший размер по сравнению с bash.
+Description-sv.UTF-8: Installera dash som /bin/sh?
+ Standardvalet för skalet /bin/sh på Debian och Debianbaserade system är bash.
+ .
+ Eftersom standardskalet måste vara POSIX-kompatibelt, kan dock vilket POSIX-kompatibelt skal som helst, såsom dash, tjänstgöra som /bin/sh. Du kanske önskar detta eftersom dash är snabbare och mindre än bash.
+Description-tr.UTF-8: dash /bin/sh olarak kurulsun mu?
+ Debian tabanlı sistemlerdeki öntanımlı /bin/sh kabuğu bash'tir.
+ .
+ Ama, öntanımlı kabuğun POSIX uyumlu olması gerektiğinden, POSIX standartlarına uyan herhangi bir kabuk, örneğin dash, /bin/sh olarak kullanılabilir. dash bash'ten daha küçük ve daha hızlı olduğundan dash'i /bin/sh olarak kullanmak isteyebilirsiniz.
+Description-vi.UTF-8: Cài đặt dash làm « /bin/sh » không?
+ Trên hệ thống Debian và dựa trên Debian, trình bao « /bin/sh » mặc định là bash.
+ .
+ Tuy nhiên, vì trình bao mặc định phải tuân theo POSIX, bất cứ trình bào nào làm cho phù hợp với POSIX, v.d. dash, có khả năng làm « /bin/sh ». Có ích vì dash nhỏ hơn và chạy nhanh hơn bash.

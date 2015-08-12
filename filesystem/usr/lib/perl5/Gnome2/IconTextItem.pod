@@ -1,0 +1,142 @@
+=head1 NAME
+
+Gnome2::IconTextItem
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::IconTextItem
+
+
+=head1 METHODS
+
+=head2 $iti-E<gt>B<configure> ($x, $y, $width, $fontname, $text, $is_editable, $is_static)
+
+=over
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=item * $width (integer) 
+
+=item * $fontname (string) 
+
+=item * $text (string) 
+
+=item * $is_editable (boolean) 
+
+=item * $is_static (boolean) 
+
+=back
+
+=back
+
+=head2 editable = $iti-E<gt>B<get_editable> 
+
+=over
+
+=back
+
+=head2 $iti-E<gt>B<focus> ($focused)
+
+=over
+
+=over
+
+=item * $focused (boolean) 
+
+=back
+
+=back
+
+=head2 $iti-E<gt>B<select> ($sel)
+
+=over
+
+=over
+
+=item * $sel (boolean) 
+
+=back
+
+=back
+
+=head2 $iti-E<gt>B<setxy> ($x, $y)
+
+=over
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+=back
+
+=head2 $iti-E<gt>B<start_editing> 
+
+=over
+
+=back
+
+=head2 $iti-E<gt>B<stop_editing> ($accept)
+
+=over
+
+=over
+
+=item * $accept (boolean) 
+
+=back
+
+=back
+
+=head2 string = $iti-E<gt>B<get_text> 
+
+=over
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item boolean = B<text-changed> (Gnome2::IconTextItem)
+
+=item B<height-changed> (Gnome2::IconTextItem)
+
+=item B<width-changed> (Gnome2::IconTextItem)
+
+=item B<editing-started> (Gnome2::IconTextItem)
+
+=item B<editing-stopped> (Gnome2::IconTextItem)
+
+=item B<selection-started> (Gnome2::IconTextItem)
+
+=item B<selection-stopped> (Gnome2::IconTextItem)
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,21 @@
+# ldconfig must be executable even when the libc is not configured, and
+# thus must be linked statically
+libc6: statically-linked-binary ./sbin/ldconfig
+
+# libpthread must be stripped specially; GDB needs the non-dynamic 
+# symbol table in order to load the thread debugging library.
+libc6: unstripped-binary-or-object ./lib/libpthread-2.9.so
+
+# ld.so must be executable, otherwise the system will not work
+libc6: shlib-with-executable-bit lib/ld-2.9.so 0755
+
+# pt_chown must be setuid root, otherwise non-root users won't be able
+# to login
+libc6: setuid-binary usr/lib/pt_chown 4755 root/root
+
+# It is normal that the ELF dynamic linker does not need any other 
+# library
+libc6: shared-lib-without-dependency-information ./lib/ld-2.9.so
+
+# dependency on debconf is not needed, as glibc has a fallback to tty 
+libc6: missing-debconf-dependency-for-preinst

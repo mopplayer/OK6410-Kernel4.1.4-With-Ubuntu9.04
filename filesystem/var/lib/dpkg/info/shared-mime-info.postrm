@@ -1,0 +1,35 @@
+#!/bin/sh
+
+set -e
+
+# Automatically added by dh_installmime
+if [ -x "`which update-mime-database 2>/dev/null`" ]; then
+	update-mime-database /usr/share/mime
+fi
+# End automatically added section
+
+
+if [ "$1" = purge ]; then
+	MIMEDIR="/usr/share/mime"
+	if [ -d $MIMEDIR ]; then
+		rm -f "$MIMEDIR/globs" \
+		      "$MIMEDIR/magic" \
+		      "$MIMEDIR/XMLnamespaces" \
+		      "$MIMEDIR/subclasses" \
+		      "$MIMEDIR/aliases" \
+		      "$MIMEDIR/mime.cache"
+
+		rm -fr /usr/share/mime/text \
+		       /usr/share/mime/inode \
+		       /usr/share/mime/image \
+		       /usr/share/mime/video \
+		       /usr/share/mime/message \
+		       /usr/share/mime/model \
+		       /usr/share/mime/multipart \
+		       /usr/share/mime/audio \
+		       /usr/share/mime/application
+	
+		rmdir --ignore-fail-on-non-empty /usr/share/mime
+	fi
+fi
+

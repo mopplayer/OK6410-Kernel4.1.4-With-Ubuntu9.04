@@ -1,0 +1,52 @@
+This package was debianized by Andres Salomon <dilinger@voxel.net> on
+Mon, 18 Feb 2002 15:46:08 -0500.
+
+It was downloaded from ftp://sources.redhat.com/pub/dm/.
+
+Upstream Author: LVM Development Team <dm-devel@redhat.com>
+
+Copyright (C) 2001-2004 Sistina Software (UK) Limited.
+Copyright (C) 2004 Red Hat, Inc.
+
+device-mapper has portions licensed under the GPLv2, and other
+portions licensed under the LGPLv2.1.
+
+
+The following license applies to dmsetup: 
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as
+published by the Free Software Foundation.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the full text of the GPLv2 can be found in
+/usr/share/common-licenses/GPL-2.
+
+
+The following license applies to the device-mapper library (libdevmapper),
+and all headers included in this package (including kernel headers):
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License version 2.1 as published by the Free Software Foundation.
+                                                                                
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the full text of the LGPLv2.1 can be found in
+/usr/share/common-licenses/LGPL-2.1.
+

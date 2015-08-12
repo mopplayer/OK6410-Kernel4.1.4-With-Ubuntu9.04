@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libgvfscommon-dnssd.so.0.0.0
+/usr/lib/libgvfscommon.so.0.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libgvfscommon0
+/usr/share/doc/libgvfscommon0/AUTHORS
+/usr/share/doc/libgvfscommon0/TODO
+/usr/share/doc/libgvfscommon0/changelog.Debian.gz
+/usr/share/doc/libgvfscommon0/copyright
+/usr/share/doc/libgvfscommon0/NEWS.gz
+/usr/share/doc/libgvfscommon0/README
+/usr/lib/libgvfscommon-dnssd.so.0
+/usr/lib/libgvfscommon.so.0

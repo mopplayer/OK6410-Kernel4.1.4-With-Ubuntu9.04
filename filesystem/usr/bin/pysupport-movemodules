@@ -1,0 +1,143 @@
+#! /usr/bin/python
+#
+# copyright (c) 2006 Josselin Mouette <joss@debian.org>
+# Licensed under the GNU Lesser General Public License, version 2.1
+# See COPYING for details
+
+from optparse import OptionParser
+import os,os.path,re,sys
+from hashlib import md5
+
+sourcepath='usr/share/python-support'
+extensionpath='usr/lib/python-support'
+
+parser = OptionParser(usage="usage: %prog [options] [directory [...]]")
+
+parser.add_option("-v", "--verbose", action="store_true", dest="verbose",
+                  help="verbose output", default=False)
+parser.add_option("-p", "--package", dest="package")
+
+(options, args) = parser.parse_args()
+
+sys.path.append("/usr/lib/python-support/private/")
+from pysupport import py_supported,py_supported_short
+
+# Set the umask so that directories are created with correct permissions
+os.umask(022)
+
+if not args:
+  parser.error("No directory to process.")
+
+for basedir in args:
+  if not os.path.isdir(basedir):
+    parser.error("%s is not a directory."%basedir)
+
+class filelist:
+  def __init__(self):
+    self.d={}
+    self.pylist=[]
+  def addsum(self,file,pyver,sum):
+    if file not in self.d:
+      self.d[file]={}
+    self.d[file][pyver]=sum
+  def addpyver(self,pyver):
+    self.pylist.append(pyver)
+  def isallthesame(self,file):
+    if file.endswith(".so"):
+      # If there is a .so, no need to even check, it must be moved
+      return False
+    elif re.search('\.so(?:\.\d+){0,3}$', file):
+      print "%s: this shared object should not be versioned"%file
+      return False
+    try:
+      s=[ self.d[file][pyver] for pyver in self.pylist ]
+    except KeyError:
+      return False
+    return (s.count(s[0]) == len(self.pylist))
+  def list(self,file):
+    return self.d[file].keys()
+  def __iter__(self):
+    return iter(self.d)
+
+def do_move (basedir, package, pybasedir, suffixdir=""):
+  file_dict=filelist()
+  for pyvers in py_supported:
+    pydir=os.path.join(basedir,pybasedir,pyvers,suffixdir)
+    if not os.path.isdir(pydir):
+      continue
+    file_dict.addpyver(pyvers)
+    for dir, dirs, files in os.walk(pydir):
+      reldir = dir[len(pydir):].lstrip('/')
+      for curfile in files:
+        relfile = os.path.join(reldir,curfile)
+        absfile = os.path.join(pydir,relfile)
+        # remove bytecompiled files and libtool cruft
+        if relfile.split('.')[-1] in ["pyc", "pyo", "a", "la"]:
+          os.remove(absfile)
+        else:
+          file_dict.addsum(relfile,pyvers,md5(file(absfile).read()).digest())
+
+  for relfile in file_dict:
+    splitfile=not file_dict.isallthesame(relfile)
+    destdir=os.path.join(sourcepath,package)
+    for pyver in file_dict.list(relfile):
+      sourcefile=os.path.join(basedir,pybasedir,pyver,suffixdir,relfile)
+      if splitfile:
+        destdir=os.path.join(extensionpath,package,pyver)
+      os.renames(sourcefile,os.path.join(basedir,destdir,relfile))
+
+# Remove the -py$(VERSION) part of the egg directories
+def do_eggrename (basedir, package, pybasedir, suffixdir=""):
+  for vers in py_supported_short:
+    pydir=os.path.join(basedir,pybasedir,"python"+vers,suffixdir)
+    suffix="-py"+vers+".egg-info"
+    if not os.path.isdir(pydir):
+      continue
+    for item in os.listdir(pydir):
+      item=os.path.join(pydir,item)
+      if os.path.isdir(item) and item.endswith(suffix):
+       new_item = item[:-len(suffix)]+".egg-info"
+       if not os.path.exists(new_item): # You never know
+         os.rename(item, new_item)
+
+def move_sitedirs(basedir, package):
+  import shutil, subprocess
+  for pyvers in py_supported:
+    destdir = os.path.join(basedir,'usr/lib',pyvers,'site-packages')
+    for pybasedir in ('usr/lib', 'usr/local/lib'):
+      sitedir = os.path.join(basedir,pybasedir,pyvers,'dist-packages')
+      if os.path.isdir(sitedir):
+        try:
+          os.makedirs(destdir)
+        except OSError:
+          pass
+        rv = subprocess.call(['tar -c -f - -C ' + sitedir + ' . | tar -x -f - -C '+ destdir], shell=True)
+        if rv != 0:
+          sys.exit(1)
+        shutil.rmtree(sitedir)
+        while sitedir:
+          sitedir=os.path.dirname(sitedir)
+          try:
+            os.rmdir(sitedir)
+          except OSError:
+            break
+
+first_dir=True
+for basedir in args:
+  basedir=basedir.rstrip('/')
+  package=options.package
+  if not package:
+    package=os.path.split(basedir)[1]
+  if not package:
+    raise "Unable to extract the package name."
+  if first_dir:
+    move_sitedirs(basedir, package)
+    first_dir = False
+  do_eggrename (basedir, package, "usr/lib", "site-packages")
+  do_move (basedir, package, "usr/lib", "site-packages")
+  do_eggrename (basedir, package, "var/lib/python-support")
+  do_move (basedir, package, "var/lib/python-support")
+
+  # Handle the case when there are only .so files
+  if os.path.isdir(os.path.join(basedir,extensionpath)) and not os.path.isdir(os.path.join(basedir,sourcepath,package)):
+    os.makedirs(os.path.join(basedir,sourcepath,package))

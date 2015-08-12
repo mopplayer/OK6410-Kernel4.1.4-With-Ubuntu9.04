@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/libxapian15
+/usr/share/doc/libxapian15/copyright
+/usr/share/doc/libxapian15/changelog.gz
+/usr/share/doc/libxapian15/changelog.Debian.gz
+/usr/share/doc/libxapian15/TODO.Debian
+/usr/lib
+/usr/lib/libxapian.so.15.5.1
+/usr/lib/libxapian.so.15

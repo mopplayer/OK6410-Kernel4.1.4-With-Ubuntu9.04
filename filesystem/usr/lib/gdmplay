@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/bin/aplay -q -N "$@" 2> /dev/null

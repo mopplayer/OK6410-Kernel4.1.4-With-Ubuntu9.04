@@ -1,0 +1,14 @@
+radeontool for Debian
+---------------------
+
+WARNING: Radeontool code has not been completely audited and may contain bugs
+that could damage your hardware. Use at your own risk.
+
+radeontool needs to access /dev/mem in RW mode, so it must be executed by root.
+This is why it's goin' to stay in /usr/sbin.
+
+A useful perl script that dumps registers and can monitors xscreensaver
+status and powers off/on backlight when the screen saver kicks in. See
+  /usr/share/doc/radeontool/lightwatch.pl
+
+ -- Bryce Harrington <bryce@ubuntu.com>, Fri,  2 Jan 2009 16:30:20 -0800

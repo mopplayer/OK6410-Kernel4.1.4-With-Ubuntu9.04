@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  remove)
+      update-alternatives --remove screensaver-preferences /usr/share/xscreensaver/gnome-screensaver-properties.desktop
+  ;;
+esac
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  remove)
+      update-alternatives --remove screensaver-preferences /usr/share/xscreensaver/gnome-screensaver-properties.desktop
+  ;;
+esac

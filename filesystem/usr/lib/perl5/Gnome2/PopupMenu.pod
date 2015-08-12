@@ -1,0 +1,137 @@
+=head1 NAME
+
+Gnome2::PopupMenu
+
+=for object Gnome2::PopupMenu
+=cut
+
+=for object Gnome2::PopupMenu
+=cut
+
+
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::PopupMenu-E<gt>B<new> ($uiinfo, $accelgroup=undef)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=item * $accelgroup (Gtk2::AccelGroup) 
+
+=back
+
+=back
+
+=head2 widget = Gnome2::PopupMenu-E<gt>B<new_with_accelgroup> ($uiinfo, $accelgroup=undef)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=item * $accelgroup (Gtk2::AccelGroup) 
+
+=back
+
+=back
+
+=head2 $widget-E<gt>B<add_popup_items> ($uiinfo, $user_data=undef)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=item * $user_data (scalar) 
+
+=back
+
+=back
+
+=head2 $popup-E<gt>B<append_from> ($uiinfo)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+=head2 $popup-E<gt>B<attach_to> ($widget, $user_data=undef)
+
+=over
+
+=over
+
+=item * $widget (Gtk2::Widget) 
+
+=item * $user_data (scalar) 
+
+=back
+
+=back
+
+=head2 $popup-E<gt>B<do_popup> ($pos_func, $pos_data, $event, $user_data, $for_widget)
+
+=over
+
+=over
+
+=item * $pos_func (scalar) 
+
+=item * $pos_data (scalar) 
+
+=item * $event (Gtk2::Gdk::Event) 
+
+=item * $user_data (scalar) 
+
+=item * $for_widget (Gtk2::Widget) 
+
+=back
+
+=back
+
+=head2 integer = $popup-E<gt>B<do_popup_modal> ($pos_func, $pos_data, $event, $user_data, $for_widget)
+
+=over
+
+=over
+
+=item * $pos_func (scalar) 
+
+=item * $pos_data (scalar) 
+
+=item * $event (Gtk2::Gdk::Event) 
+
+=item * $user_data (scalar) 
+
+=item * $for_widget (Gtk2::Widget) 
+
+=back
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

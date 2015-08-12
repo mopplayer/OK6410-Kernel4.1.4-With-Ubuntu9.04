@@ -1,0 +1,13 @@
+b7bb4466e3e0ff7124171be0af9c53d3  usr/share/doc-base/fontconfig-user
+b9a75282059f3efdb4d06ea07332ade9  usr/share/doc/libfontconfig1/fontconfig-user.html
+4e06337aa152d7cfe1da2f10a25d6851  usr/share/doc/libfontconfig1/fontconfig-user.pdf.gz
+7a7ceff67129b8f31950311668f9a5b3  usr/share/doc/libfontconfig1/fontconfig-user.txt.gz
+b46026aaf9d3cb630f00aac3f5cf8eb9  usr/share/man/man1/fc-match.1.gz
+2eb2f8606dac555d9ca89f1b3cdaaece  usr/share/man/man1/fc-cat.1.gz
+bc8664f9089b901d77fd5eb05795253f  usr/share/man/man1/fc-cache.1.gz
+2d0ad06c5c1a7467ba787a80f2b532c2  usr/share/man/man1/fc-list.1.gz
+96c3a614e8ce382f5d84abfd3302e019  usr/share/defoma/scripts/fontconfig.defoma
+e720bec8a4cf87804d9e127d3c59d8ed  usr/bin/fc-list
+ca471cd439c4707de54eeef8284bda46  usr/bin/fc-cache
+c1db29a7e4e9302f7c82f59fb84fbeee  usr/bin/fc-cat
+2790131e728d9fcdff60269658ddf034  usr/bin/fc-match

@@ -1,0 +1,226 @@
+category truetype
+
+# Sans
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Oblique.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Oblique
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Medium
+  Width = Variable
+  Shape = NoSerif Oblique
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-BoldOblique.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Bold-Oblique
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Bold
+  Width = Variable
+  Shape = NoSerif Oblique
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-ExtraLight.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-ExtraLight
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Light
+  Width = Variable
+  Shape = NoSerif Upright
+  Foundry = DejaVu
+  Priority = 20
+end
+
+# Sans Condensed
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Condensed
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Medium
+  Width = Variable
+  Shape = NoSerif Upright Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Oblique.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Condensed-Oblique
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Medium
+  Width = Variable
+  Shape = NoSerif Oblique Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-Bold.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Condensed-Bold
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Bold
+  Width = Variable
+  Shape = NoSerif Upright Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansCondensed-BoldOblique.ttf
+  Family = DejaVu-Sans
+  FontName = DejaVu-Sans-Condensed-Bold-Oblique
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = SansSerif
+  Weight = Bold
+  Width = Variable
+  Shape = NoSerif Oblique Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+
+# Serif
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-Italic.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Italic
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Medium
+  Width = Variable
+  Shape = Serif Italic
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerif-BoldItalic.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Bold-Italic
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Bold
+  Width = Variable
+  Shape = Serif Italic
+  Foundry = DejaVu
+  Priority = 20
+end
+
+# Serif Condensed
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Condensed
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Medium
+  Width = Variable
+  Shape = Serif Upright Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Condensed-Bold
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Bold
+  Width = Variable
+  Shape = Serif Upright Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Italic.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Condensed-Italic
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Medium
+  Width = Variable
+  Shape = Serif Italic Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-BoldItalic.ttf
+  Family = DejaVu-Serif
+  FontName = DejaVu-Serif-Condensed-Bold-Italic
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Roman
+  Weight = Bold
+  Width = Variable
+  Shape = Serif Italic Condensed
+  Foundry = DejaVu
+  Priority = 20
+end
+
+# Mono
+
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Oblique.ttf
+  Family = DejaVu-Sans-Mono
+  FontName = DejaVu-Sans-Mono-Oblique
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Typewriter
+  Weight = Medium
+  Width = Fixed
+  Shape = NoSerif Oblique
+  Foundry = DejaVu
+  Priority = 20
+end
+begin /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-BoldOblique.ttf
+  Family = DejaVu-Sans-Mono
+  FontName = DejaVu-Sans-Mono-Bold-Oblique
+  Encoding = Unicode
+  Location = English
+  Charset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 ISO10646-1 KOI8-R
+  UniCharset = ISO8859-1 ISO8859-2 ISO8859-7 ISO8859-9 ISO8859-15 KOI8-R
+  GeneralFamily = Typewriter
+  Weight = Bold
+  Width = Fixed
+  Shape = NoSerif Oblique
+  Foundry = DejaVu
+  Priority = 20
+end

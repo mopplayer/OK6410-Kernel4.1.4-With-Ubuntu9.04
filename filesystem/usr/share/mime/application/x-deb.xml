@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="application/x-deb">
+  <!--Created automatically by update-mime-database. DO NOT EDIT!-->
+  <comment xml:lang="az">Debian paketi</comment>
+  <comment xml:lang="be@latin">Pakunak Debian</comment>
+  <comment xml:lang="bg">Пакет — Debian</comment>
+  <comment xml:lang="ca">paquet Debian</comment>
+  <comment xml:lang="cy">Pecyn Debian</comment>
+  <comment xml:lang="el">πακέτο Debian</comment>
+  <comment xml:lang="en_GB">Debian package</comment>
+  <comment xml:lang="eo">Debian-pakaĵo</comment>
+  <comment xml:lang="eu">Debian paketea</comment>
+  <comment xml:lang="ga">pacáiste Debian</comment>
+  <comment xml:lang="ja">Debian パッケージ</comment>
+  <comment xml:lang="lt">Debian paketas</comment>
+  <comment xml:lang="ms">Pakej Debian</comment>
+  <comment xml:lang="nb">Debian pakke</comment>
+  <comment xml:lang="nn">Debian pakke</comment>
+  <comment xml:lang="sq">Paketë Debian</comment>
+  <comment xml:lang="sr">Debian пакет</comment>
+  <comment xml:lang="uk">Пакет Debian</comment>
+  <comment xml:lang="vi">Gói Debian</comment>
+  <comment xml:lang="zh_CN">Debian 软件包</comment>
+  <comment xml:lang="zh_TW">Debian 套件</comment>
+  <alias type="application/x-debian-package"/>
+  <generic-icon name="package-x-generic"/>
+  <comment>Software package</comment>
+  <comment xml:lang="bn">সফটওয়্যার প্যাকেজ</comment>
+  <comment xml:lang="cs">Softwarový balík</comment>
+  <comment xml:lang="da">Softwarepakke</comment>
+  <comment xml:lang="de">Software-Paket</comment>
+  <comment xml:lang="es">Paquete de software</comment>
+  <comment xml:lang="fi">Ohjelmapaketti</comment>
+  <comment xml:lang="fr">Paquet logiciel</comment>
+  <comment xml:lang="hr">Paket</comment>
+  <comment xml:lang="hu">Szoftvercsomag</comment>
+  <comment xml:lang="id">Paket perangkat lunak</comment>
+  <comment xml:lang="it">Pacchetto software</comment>
+  <comment xml:lang="ko">소프트웨어 패키지</comment>
+  <comment xml:lang="ku">Paketa nivîsbariyê</comment>
+  <comment xml:lang="nl">Softwarepakket</comment>
+  <comment xml:lang="pl">Pakiet oprogramowania</comment>
+  <comment xml:lang="pt">Pacote de software</comment>
+  <comment xml:lang="pt_BR">Pacote</comment>
+  <comment xml:lang="ru">Пакет</comment>
+  <comment xml:lang="sk">Softvérový balík</comment>
+  <comment xml:lang="sv">Programvarupaket</comment>
+  <comment xml:lang="tr">Yazılım paketi</comment>
+</mime-type>

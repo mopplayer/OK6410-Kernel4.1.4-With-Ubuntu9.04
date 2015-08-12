@@ -1,0 +1,94 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          hal
+# Required-Start:    $remote_fs dbus
+# Required-Stop:     $remote_fs dbus
+# Should-Start:	     $syslog acpid
+# Should-Stop:       $syslog acpid
+# Default-Start:     2 3 4 5
+# Default-Stop:      1
+# Short-Description: Hardware abstraction layer
+# Description:       The HAL daemon collects and maintains information about
+#                    your hardware.
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/sbin/hald
+PIDDIR=/var/run/hald
+PIDFILE=$PIDDIR/hald.pid
+NAME=hald
+DAEMONUSER=haldaemon
+DESC="Hardware abstraction layer"
+
+. /lib/lsb/init-functions
+
+test -x $DAEMON || exit 0
+
+# Include hal defaults if available
+if [ -f /etc/default/hal ] ; then
+	. /etc/default/hal
+fi
+
+set -e
+
+do_start() {
+	if [ ! -d $PIDDIR ]; then
+		mkdir -p $PIDDIR
+		chown $DAEMONUSER:$DAEMONUSER $PIDDIR
+	fi
+	start-stop-daemon --start --oknodo --pidfile $PIDFILE \
+		--exec $DAEMON -- $DAEMON_OPTS
+}
+
+do_stop() {
+	start-stop-daemon --stop --oknodo --quiet --pidfile $PIDFILE \
+		--exec $DAEMON 
+}
+
+case "$1" in
+  start)
+	if [ ! -d /proc/sys/fs/inotify ]; then
+		log_failure_msg "Can't start $DESC - enable inotify support in your kernel"
+		exit 0
+	fi
+	if [ ! -e /var/run/dbus/system_bus_socket ]; then
+		log_failure_msg "Can't start $DESC - please ensure dbus is running"
+		exit 0
+	fi
+	
+	if [ ! -d /sys/kernel ]; then
+		log_failure_msg "Can't start $DESC - sysfs not mounted on /sys"
+		exit 0
+	fi
+	
+	if [ "$(stat -c %d/%i /)" != "$(stat -Lc %d/%i /proc/1/root 2>/dev/null)" ]; then
+		log_failure_msg "Can't start $DESC - detected chrooted session"
+		exit 0
+	fi
+	
+	log_daemon_msg "Starting $DESC" "$NAME"
+	do_start
+	log_end_msg $?
+	;;
+  stop)
+	log_daemon_msg "Stopping $DESC" "$NAME"
+	do_stop
+	log_end_msg $?
+	;;
+  restart|force-reload)
+	log_daemon_msg "Restarting $DESC" "$NAME"
+	do_stop
+	sleep 1
+	do_start
+	log_end_msg $?
+	;;
+  status)
+	status_of_proc -p $PIDFILE $DAEMON $NAME && exit 0 || exit $?
+	;;
+  *)
+	log_success_msg "Usage: $0 {start|stop|restart|force-reload|status}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/busybox-initramfs
+/usr/share/doc/busybox-initramfs/copyright
+/usr/share/doc/busybox-initramfs/changelog.Debian.gz
+/usr/lib
+/usr/lib/initramfs-tools
+/usr/lib/initramfs-tools/bin
+/usr/lib/initramfs-tools/bin/busybox

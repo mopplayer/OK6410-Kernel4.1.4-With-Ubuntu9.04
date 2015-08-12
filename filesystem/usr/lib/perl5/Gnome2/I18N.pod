@@ -1,0 +1,49 @@
+=head1 NAME
+
+Gnome2::I18N
+
+
+=head1 METHODS
+
+=head2 list = Gnome2::I18N-E<gt>B<get_language_list> ($category_name=undef)
+
+=over
+
+=over
+
+=item * $category_name (string) 
+
+=back
+
+
+Returns a list of languages.
+
+
+=back
+
+=head2 Gnome2::I18N-E<gt>B<pop_c_numeric_locale> 
+
+=over
+
+=back
+
+=head2 Gnome2::I18N-E<gt>B<push_c_numeric_locale> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,6 @@
+6f23ff566f12d9979625c1f6d259aa7d  usr/share/doc/xserver-xorg-input-kbd/copyright
+9a3cacffa234157f4ea9ffb275e830b3  usr/share/doc/xserver-xorg-input-kbd/changelog.gz
+7be82e5c9ce2fec53ef183432f0631ba  usr/share/doc/xserver-xorg-input-kbd/changelog.Debian.gz
+7567b4912c032892bfb43f3a926e1b82  usr/share/doc/xserver-xorg-input-kbd/NEWS.Debian.gz
+ed9a46e90c87a4e8f322fa8cd912a0c5  usr/share/man/man4/kbd.4.gz
+cfddee37b035fec4f68468148e0fa1b2  usr/lib/xorg/modules/input/kbd_drv.so

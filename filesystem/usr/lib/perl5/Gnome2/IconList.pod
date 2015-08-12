@@ -1,0 +1,492 @@
+=head1 NAME
+
+Gnome2::IconList
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Layout
+                           +----Gnome2::Canvas
+                                +----Gnome2::IconList
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::IconList-E<gt>B<new> ($icon_width, $adj, $flags)
+
+=over
+
+=over
+
+=item * $icon_width (integer) 
+
+=item * $adj (Gtk2::Adjustment) 
+
+=item * $flags (Gnome2::IconListFlags) 
+
+=back
+
+=back
+
+=head2 integer = $gil-E<gt>B<append> ($icon_filename, $text)
+
+=over
+
+=over
+
+=item * $icon_filename (string) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 integer = $gil-E<gt>B<append_pixbuf> ($im, $icon_filename, $text)
+
+=over
+
+=over
+
+=item * $im (Gtk2::Gdk::Pixbuf) 
+
+=item * $icon_filename (string) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<clear> 
+
+=over
+
+=back
+
+=head2 $gil-E<gt>B<set_col_spacing> ($pixels)
+
+=over
+
+=over
+
+=item * $pixels (integer) 
+
+=back
+
+=back
+
+=head2 integer = $gil-E<gt>B<find_icon_from_filename> ($filename)
+
+=over
+
+=over
+
+=item * $filename (string) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<focus_icon> ($idx)
+
+=over
+
+=over
+
+=item * $idx (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<freeze> 
+
+=over
+
+=back
+
+=head2 $gil-E<gt>B<set_hadjustment> ($hadj)
+
+=over
+
+=over
+
+=item * $hadj (Gtk2::Adjustment) 
+
+=back
+
+=back
+
+=head2 integer = $gil-E<gt>B<get_icon_at> ($x, $y)
+
+=over
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<set_icon_border> ($pixels)
+
+=over
+
+=over
+
+=item * $pixels (integer) 
+
+=back
+
+=back
+
+=head2 string = $gil-E<gt>B<get_icon_filename> ($idx)
+
+=over
+
+=over
+
+=item * $idx (integer) 
+
+=back
+
+=back
+
+=head2 visibility = $gil-E<gt>B<icon_is_visible> ($pos)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=back
+
+=back
+
+=head2 object = $gil-E<gt>B<get_icon_pixbuf_item> ($idx)
+
+=over
+
+=over
+
+=item * $idx (integer) 
+
+=back
+
+=back
+
+=head2 icontextitem = $gil-E<gt>B<get_icon_text_item> ($idx)
+
+=over
+
+=over
+
+=item * $idx (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<set_icon_width> ($w)
+
+=over
+
+=over
+
+=item * $w (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<insert> ($pos, $icon_filename, $text)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=item * $icon_filename (string) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<insert_pixbuf> ($pos, $im, $icon_filename, $text)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=item * $im (Gtk2::Gdk::Pixbuf) 
+
+=item * $icon_filename (string) 
+
+=item * $text (string) 
+
+=back
+
+=back
+
+=head2 integer = $gil-E<gt>B<get_items_per_line> 
+
+=over
+
+=back
+
+=head2 $gil-E<gt>B<moveto> ($pos, $yalign)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=item * $yalign (double) 
+
+=back
+
+=back
+
+=head2 integer = $gil-E<gt>B<get_num_icons> 
+
+=over
+
+=back
+
+=head2 $gil-E<gt>B<remove> ($pos)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<set_row_spacing> ($pixels)
+
+=over
+
+=over
+
+=item * $pixels (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<select_all> 
+
+=over
+
+Since: libgnomeui 2.8
+
+=back
+
+=head2 $gil-E<gt>B<select_icon> ($pos)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=back
+
+=back
+
+=head2 list = $gil-E<gt>B<get_selection> 
+
+=over
+
+
+Returns a list of integers.
+
+
+=back
+
+=head2 selectionmode = $gil-E<gt>B<get_selection_mode> 
+
+=over
+
+=back
+
+=head2 $gil-E<gt>B<set_selection_mode> ($mode)
+
+=over
+
+=over
+
+=item * $mode (Gtk2::SelectionMode) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<set_separators> ($sep)
+
+=over
+
+=over
+
+=item * $sep (string) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<set_text_spacing> ($pixels)
+
+=over
+
+=over
+
+=item * $pixels (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<thaw> 
+
+=over
+
+=back
+
+=head2 integer = $gil-E<gt>B<unselect_all> 
+
+=over
+
+=back
+
+=head2 $gil-E<gt>B<unselect_icon> ($pos)
+
+=over
+
+=over
+
+=item * $pos (integer) 
+
+=back
+
+=back
+
+=head2 $gil-E<gt>B<set_vadjustment> ($vadj)
+
+=over
+
+=over
+
+=item * $vadj (Gtk2::Adjustment) 
+
+=back
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<select-icon> (Gnome2::IconList, integer, Gtk2::Gdk::Event)
+
+=item B<unselect-icon> (Gnome2::IconList, integer, Gtk2::Gdk::Event)
+
+=item B<focus-icon> (Gnome2::IconList, integer)
+
+=item boolean = B<text-changed> (Gnome2::IconList, integer, string)
+
+=item B<move-cursor> (Gnome2::IconList, Gtk2::DirectionType, boolean)
+
+=item B<toggle-cursor-selection> (Gnome2::IconList)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::DirectionType
+
+=over
+
+=item * 'tab-forward' / 'GTK_DIR_TAB_FORWARD'
+
+=item * 'tab-backward' / 'GTK_DIR_TAB_BACKWARD'
+
+=item * 'up' / 'GTK_DIR_UP'
+
+=item * 'down' / 'GTK_DIR_DOWN'
+
+=item * 'left' / 'GTK_DIR_LEFT'
+
+=item * 'right' / 'GTK_DIR_RIGHT'
+
+=back
+
+
+=head2 enum Gtk2::SelectionMode
+
+=over
+
+=item * 'none' / 'GTK_SELECTION_NONE'
+
+=item * 'single' / 'GTK_SELECTION_SINGLE'
+
+=item * 'browse' / 'GTK_SELECTION_BROWSE'
+
+=item * 'multiple' / 'GTK_SELECTION_MULTIPLE'
+
+=item * 'extended' / 'GTK_SELECTION_EXTENDED'
+
+=back
+
+
+=head2 enum Gtk2::Visibility
+
+=over
+
+=item * 'none' / 'GTK_VISIBILITY_NONE'
+
+=item * 'partial' / 'GTK_VISIBILITY_PARTIAL'
+
+=item * 'full' / 'GTK_VISIBILITY_FULL'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Layout>, L<Gnome2::Canvas>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

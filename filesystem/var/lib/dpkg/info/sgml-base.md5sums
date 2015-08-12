@@ -1,0 +1,14 @@
+ab7656cf1ad031f975b5c51368ff7168  usr/share/sgml-base/catalog.super
+983209a74921cbe6286e1e7cd4aa15bf  usr/share/sgml-base/catalog.centralized
+000f6973f39e533d5663b0450fc063ef  usr/share/sgml-base/transitional.cat
+74570f0a5454409161a59bd01eb52d76  usr/share/man/man8/update-catalog.8.gz
+960bbdcea245f0c9ef5eed4e6a0ab8c6  usr/share/man/man8/install-sgmlcatalog.8.gz
+b2ccbd94f349a6b03b3a0894d2702979  usr/share/doc/sgml-base/README.Debian
+08869a145ab87027534e36d6891aa735  usr/share/doc/sgml-base/TODO
+5769f940fadf00bd5cdb1f3ec9fad00e  usr/share/doc/sgml-base/copyright
+b3353e4b8ded5ea3d513ec89f19dfdb5  usr/share/doc/sgml-base/examples/postinst
+a09ff886485748f7e34fd757a4dc8e40  usr/share/doc/sgml-base/examples/postrm
+82c0a2337830f715f6dde18547b9f105  usr/share/doc/sgml-base/examples/prerm
+e6e72a32d23790a3b8bbd1d2c0ac519a  usr/share/doc/sgml-base/changelog.gz
+9beb046cb33bf13b238989ad5be0c64f  usr/sbin/update-catalog
+b270fc01aa7eb0551a9156726430c73e  usr/sbin/install-sgmlcatalog

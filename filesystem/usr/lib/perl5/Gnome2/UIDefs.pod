@@ -1,0 +1,327 @@
+=head1 NAME
+
+Gnome2::UIDefs
+
+
+=head1 METHODS
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_clear> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_close> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_close_window> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_copy> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_cut> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_find> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_find_again> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_new> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_new_game> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_new_window> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_open> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_paste> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_pause_game> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_print> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_print_setup> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_quit> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_redo> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_redo_move> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_replace> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_save> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_save_as> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_select_all> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_undo> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_mod_undo_move> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_clear> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_close> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_close_window> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_copy> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_cut> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_find> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_find_again> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_new> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_new_game> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_new_window> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_open> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_paste> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_pause_game> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_print> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_print_setup> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_quit> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_redo> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_redo_move> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_replace> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_save> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_save_as> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_select_all> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_undo> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<key_name_undo_move> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<pad> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<pad_big> 
+
+=over
+
+=back
+
+=head2 scalar = Gnome2::UIDefs-E<gt>B<pad_small> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,11 @@
+c9d1c075aab40781f2b72d8593b0397f  sbin/initctl
+f3429a2d0b8d70ebf72f733b418e54f5  sbin/init
+b0803a9bb93e1b4c05cbda1085f1299b  usr/share/man/man8/init.8.gz
+68dabecd3815a48a977d7a38ece97da3  usr/share/man/man8/initctl.8.gz
+af2338169cf797895f3b1c6defd8902a  usr/share/doc/upstart/AUTHORS
+af33443311673b3bdecffe85b0d3408e  usr/share/doc/upstart/changelog.nih.gz
+5e470a6b73610066c784a9693389e899  usr/share/doc/upstart/changelog.Debian.gz
+aba9a81fa593b8eeaa17d60e7a53df6e  usr/share/doc/upstart/changelog.gz
+c289bed77a01a7ff1e7319593a4f224c  usr/share/doc/upstart/copyright
+badf65733f1522ba3e6ffa0ea1bc85fa  usr/share/doc/upstart/README.Debian.gz
+1c4bceca00002d35c752c1b2b568d66a  usr/share/doc/upstart/NEWS.gz

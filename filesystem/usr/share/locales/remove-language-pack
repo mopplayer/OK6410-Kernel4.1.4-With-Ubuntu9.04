@@ -1,0 +1,25 @@
+#!/bin/sh -e
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 <language code> <class> [<version>]"
+    exit 0
+fi
+
+# remove binary locales
+# do nothing for gnome/kde
+if [ -z "$2" ]; then
+    # do not remove locales if we merely remove language-support-* without
+    # removing language-pack-*
+    if [ ! -e /var/lib/locales/supported.d/$1 ]; then
+	rm -rf /usr/lib/locale/$1 /usr/lib/locale/$1[._@]*
+    fi
+fi
+
+# reload gdm to make it aware of new locales
+if [ -x /etc/init.d/gdm ]; then
+    if [ -x "`which invoke-rc.d 2>/dev/null`" ]; then
+        invoke-rc.d gdm reload || exit 0
+    else
+        /etc/init.d/gdm reload || exit 0
+    fi
+fi

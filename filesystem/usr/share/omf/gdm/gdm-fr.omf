@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Martin K. Petersen)</creator>
+    <creator>(George Lebl)</creator>
+    <creator>(Brian Cameron)</creator>
+    <creator>(Bill Haneman)</creator>
+    <maintainer>(Brian Cameron)</maintainer>
+    <title>Manuel de référence du gestionnaire de connexions GNOME</title>
+    <date>01/2007</date>
+    <version identifier="0.0" date="01/2007"/>
+    <subject category="GNOME|System"/>
+    <description>
+      GDM est le gestionnaire de connexions de GNOME, une application graphique pour s'identifier
+    </description>
+    <type>manual</type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/gdm/fr/gdm.xml"/>
+    <language code="fr"/>
+    <relation seriesid="61d86786-ba0d-11d7-9eda-8a77bf52d52a"/>
+    <rights type="GNU FDL" license.version="1.1" holder="George Lebl and Martin K. Petersen"/>
+  </resource>
+</omf>

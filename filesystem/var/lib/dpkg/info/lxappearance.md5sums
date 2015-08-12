@@ -1,0 +1,9 @@
+91201e41f46f81130ac2a9dc89c102c6  usr/share/locale/zh_TW/LC_MESSAGES/lxappearance.mo
+fde07e7b94e691dda988b190c88b5759  usr/share/applications/lxappearance.desktop
+7337a12291d45395254c48d4b50bdd34  usr/share/lxappearance/install-icon-theme.sh
+857795179e460e33cad9d979f2be60ad  usr/share/doc/lxappearance/NEWS.gz
+45aa9bfd8cf5a1666aae681e8db326b4  usr/share/doc/lxappearance/copyright
+953bb1a72df27a3f8e2459c104187ce9  usr/share/doc/lxappearance/README
+1a2037d49a2f6d3f8d4c3a7eb7779e28  usr/share/doc/lxappearance/changelog.Debian.gz
+8a55f969ab374ae7f98a9b557f171701  usr/share/man/man1/lxappearance.1.gz
+51bb64dc737b0b6f846aa37f03440899  usr/bin/lxappearance

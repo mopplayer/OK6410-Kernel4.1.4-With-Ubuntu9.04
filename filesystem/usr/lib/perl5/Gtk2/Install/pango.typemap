@@ -1,0 +1,12 @@
+#
+# Copyright (C) 2004 by the gtk2-perl team (see the file AUTHORS)
+# 
+# Licensed under the LGPL, see LICENSE file for more information.
+#
+# $Header: /cvsroot/gtk2-perl/gtk2-perl-xs/Gtk2/pango.typemap,v 1.1 2004/04/19 19:20:29 kaffeetisch Exp $
+#
+
+TYPEMAP
+
+PangoGlyph		T_UV
+PangoRectangle *	T_GPERL_GENERIC_WRAPPER

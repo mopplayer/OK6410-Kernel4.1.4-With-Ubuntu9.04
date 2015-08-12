@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- -*- SGML -*- -->
+
+<deviceinfo version="0.2">
+  <device>
+    <match key="volume.fsusage" string="crypto">
+      <match key="@block.storage_device:storage.hotpluggable" bool="false">
+        <match key="@block.storage_device:storage.removable" bool="false">
+          <merge key="volume.ignore" type="bool">true</merge>
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

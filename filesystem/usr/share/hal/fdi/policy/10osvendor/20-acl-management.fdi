@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deviceinfo version="0.2">
+  <device>
+
+    <!-- NOTE: if you add a new access.type value, remember to update policy/org.freedesktop.hal.device-access.policy -->
+
+    <!-- classification of devices where access can be controlled goes here -->
+
+    <!-- sound card (ALSA) -->
+    <match key="info.capabilities" contains="alsa">
+      <match key="alsa.device_file" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">alsa.device_file</merge>
+        <merge key="access_control.type" type="string">sound</merge>
+      </match>
+    </match>
+
+    <!-- sound card (OSS) -->
+    <match key="info.capabilities" contains="oss">
+      <match key="oss.device_file" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">oss.device_file</merge>
+        <merge key="access_control.type" type="string">sound</merge>
+      </match>
+    </match>
+
+    <!-- video4linux devices -->
+    <match key="info.capabilities" contains="video4linux">
+      <match key="video4linux.device" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">video4linux.device</merge>
+        <merge key="access_control.type" type="string">video4linux</merge>
+      </match>
+    </match>
+
+
+    <!-- scsi generic devices -->
+    <match key="info.capabilities" contains="scsi_generic">
+      <match key="scsi_generic.device" exists="true">
+        <match key="info.capabilities" contains="scanner">
+  	  <addset key="info.capabilities" type="strlist">access_control</addset>
+	  <merge key="access_control.file" type="copy_property">scsi_generic.device</merge>
+	  <merge key="access_control.type" type="string">scanner</merge>
+        </match>
+      </match>
+    </match>
+
+    <!-- DVB cards -->
+    <match key="info.capabilities" contains="dvb">
+      <match key="dvb.device" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">dvb.device</merge>
+        <merge key="access_control.type" type="string">dvb</merge>
+      </match>
+    </match>
+
+    <!-- support for Linux USB stack where device node is on a child of the main USB device -->
+    <match key="info.capabilities" contains="usbraw">
+      <match key="usbraw.device" exists="true">
+        <match key="info.capabilities" sibling_contains="camera">
+  	  <addset key="info.capabilities" type="strlist">access_control</addset>
+	  <merge key="access_control.file" type="copy_property">usbraw.device</merge>
+          <merge key="access_control.type" type="string">camera</merge>
+        </match>
+        <match key="info.capabilities" sibling_contains="scanner">
+	  <addset key="info.capabilities" type="strlist">access_control</addset>
+	  <merge key="access_control.file" type="copy_property">usbraw.device</merge>
+	  <merge key="access_control.type" type="string">scanner</merge>
+        </match>
+        <match key="info.capabilities" sibling_contains="biometic.fingerprint_reader">
+	  <addset key="info.capabilities" type="strlist">access_control</addset>
+	  <merge key="access_control.file" type="copy_property">usbraw.device</merge>
+	  <merge key="access_control.type" type="string">fingerprint-reader</merge>
+        </match>
+      </match>
+    </match>
+
+    <!-- support for Linux USB stack where linux.device_file is set (e.g. device node is on the main usb device) -->
+    <match key="info.subsystem" string="usb">
+      <match key="@info.parent:linux.device_file" exists="true">
+        <match key="info.capabilities" contains="camera">
+          <addset key="info.capabilities" type="strlist">access_control</addset>
+          <merge key="access_control.type" type="string">camera</merge>
+          <merge key="access_control.file" type="copy_property">@info.parent:linux.device_file</merge>
+        </match>
+        <match key="info.capabilities" contains="scanner">
+          <addset key="info.capabilities" type="strlist">access_control</addset>
+          <merge key="access_control.type" type="string">scanner</merge>
+          <merge key="access_control.file" type="copy_property">@info.parent:linux.device_file</merge>
+        </match>
+        <match key="info.capabilities" contains="portable_audio_player">
+          <addset key="info.capabilities" type="strlist">access_control</addset>
+          <merge key="access_control.type" type="string">audio-player</merge>
+          <merge key="access_control.file" type="copy_property">@info.parent:linux.device_file</merge>
+        </match>
+        <match key="info.capabilities" contains="obex">
+          <addset key="info.capabilities" type="strlist">access_control</addset>
+          <merge key="access_control.type" type="string">obex</merge>
+          <merge key="access_control.file" type="copy_property">@info.parent:linux.device_file</merge>
+        </match>
+        <match key="info.capabilities" contains="biometric.fingerprint_reader">
+          <addset key="info.capabilities" type="strlist">access_control</addset>
+          <merge key="access_control.type" type="string">fingerprint-reader</merge>
+          <merge key="access_control.file" type="copy_property">@info.parent:linux.device_file</merge>
+        </match>
+      </match>
+    </match>
+
+    <!-- Firewire devices are mostly driven by userspace libraries -->
+    <match key="info.capabilities" contains="ieee1394_unit.iidc">
+      <match key="@ieee1394_unit.originating_device:ieee1394.device" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">@ieee1394_unit.originating_device:ieee1394.device</merge>
+        <merge key="access_control.type" type="string">ieee1394-iidc</merge>
+      </match>
+    </match>
+    <match key="info.capabilities" contains="ieee1394_unit.avc">
+      <match key="@ieee1394_unit.originating_device:ieee1394.device" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">@ieee1394_unit.originating_device:ieee1394.device</merge>
+        <merge key="access_control.type" type="string">ieee1394-avc</merge>
+      </match>
+    </match>
+
+    <!-- serial devices are assumed to be modems by default (no access) -->
+    <match key="info.category" string="serial">
+      <match key="serial.device" exists="true">
+	<addset key="info.capabilities" type="strlist">access_control</addset>
+	<merge key="access_control.file" type="copy_property">serial.device</merge>
+	<merge key="access_control.type" type="string">modem</merge>
+      </match>
+    </match>
+
+    <!-- serial devices are assumed to be modems by default (no access) -->
+    <match key="info.category" string="ppdev">
+      <match key="linux.device_file" exists="true">
+	<addset key="info.capabilities" type="strlist">access_control</addset>
+	<merge key="access_control.file" type="copy_property">linux.device_file</merge>
+	<merge key="access_control.type" type="string">ppdev</merge>
+      </match>
+    </match>
+
+    <!-- after serial to be able to override restrictive default -->
+    <match key="info.capabilities" contains="pda">
+      <!-- PalmOS PDAs -->
+      <addset key="info.capabilities" type="strlist">access_control</addset>
+      <merge key="access_control.type" type="string">pda</merge>
+      <match key="pda.platform" string="palm">
+        <merge key="access_control.file" type="copy_property">pda.palm.hotsync_interface</merge>
+      </match>
+      <!-- PocketPC PDAs -->
+      <match key="pda.platform" string="pocketpc">
+        <merge key="access_control.file" type="copy_property">pda.pocketpc.hotsync_interface</merge>
+      </match>
+    </match>
+
+    <!-- linux input devices (needed e.g. for games) -->
+    <match key="linux.subsystem" string="input">
+      <match key="input.device" exists="true">
+        <!-- joysticks -->
+        <match key="info.capabilities" contains="input.joystick">
+	  <addset key="info.capabilities" type="strlist">access_control</addset>
+	  <merge key="access_control.file" type="copy_property">input.device</merge>
+	  <merge key="access_control.type" type="string">joystick</merge>
+        </match>
+        <!-- mice -->
+        <match key="info.capabilities" contains="input.mouse">
+	  <addset key="info.capabilities" type="strlist">access_control</addset>
+ 	  <merge key="access_control.file" type="copy_property">input.device</merge>
+	  <merge key="access_control.type" type="string">mouse</merge>
+        </match>
+      </match>
+    </match>
+
+    <!-- graphics cards, e.g. for 3d accelleration -->
+    <match key="info.capabilities" contains="drm">
+      <match key="linux.device_file" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">linux.device_file</merge>
+        <merge key="access_control.type" type="string">video</merge>
+      </match>
+    </match>
+
+    <!-- printer devices -->
+    <match key="info.capabilities" contains="printer">
+      <match key="printer.device" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">printer.device</merge>
+        <merge key="access_control.type" type="string">printer</merge>
+      </match>
+    </match>
+
+
+    <!-- keep all storage/block devices in this section together to prevent trouble -->
+    <!-- optical drives -->
+    <match key="info.capabilities" contains="storage.cdrom">
+      <match key="block.device" exists="true">
+        <addset key="info.capabilities" type="strlist">access_control</addset>
+        <merge key="access_control.file" type="copy_property">block.device</merge>
+        <merge key="access_control.type" type="string">cdrom</merge>
+      </match>
+    </match>
+    <!-- plain old floppy -->
+    <match key="storage.drive_type" string="floppy">
+      <match key="block.device" exists="true">
+        <match key="storage.no_partitions_hint" bool="true">
+	  <match key="access_control.type" exists="false">
+	    <addset key="info.capabilities" type="strlist">access_control</addset>
+	    <merge key="access_control.file" type="copy_property">block.device</merge>
+	    <merge key="access_control.type" type="string">floppy</merge>
+	  </match>
+	</match>
+      </match>
+    </match>
+    <!-- scsi generic block device -->
+    <match key="info.capabilities" contains="scsi_generic">
+      <match key="scsi_generic.device" exists="true">
+        <match key="@info.parent:scsi.type" string="cdrom">
+	  <addset key="info.capabilities" type="strlist">access_control</addset>
+	  <merge key="access_control.file" type="copy_property">scsi_generic.device</merge>
+	  <merge key="access_control.type" type="string">cdrom</merge>
+        </match>
+        <!-- usb floppy bnc#336327 -->
+        <match key="@info.parent:@info.parent:@info.parent:usb.interface.class" int="8">
+ 	  <match key="@info.parent:@info.parent:@info.parent:usb.interface.subclass" int="4">
+	    <addset key="info.capabilities" type="strlist">access_control</addset>
+	    <merge key="access_control.file" type="copy_property">scsi_generic.device</merge>
+	    <merge key="access_control.type" type="string">floppy</merge>
+	  </match>
+        </match>
+      </match>
+    </match>
+
+    <!-- Removable block devices -->
+    <match key="info.capabilities" contains="block">
+      <!-- Don't set removable-block policy to devices which have already another policy 
+           as e.g. floppy devices !!! -->
+      <match key="access_control.type" exists="false">
+        <match key="block.device" exists="true">
+          <match key="@block.storage_device:storage.removable" bool="true">
+            <!-- do not set acls on unpartitioned volumes, parent gets them -->
+            <match key="block.is_volume" bool="true"> 
+              <match key="volume.is_partition" bool="true"> 
+                <addset key="info.capabilities" type="strlist">access_control</addset>
+                <merge key="access_control.file" type="copy_property">block.device</merge>
+                <merge key="access_control.type" type="string">removable-block</merge>
+              </match>
+            </match>
+            <match key="block.is_volume" bool="false"> 
+              <addset key="info.capabilities" type="strlist">access_control</addset>
+              <merge key="access_control.file" type="copy_property">block.device</merge>
+              <merge key="access_control.type" type="string">removable-block</merge>
+            </match>
+          </match>
+        </match>
+      </match>
+    </match>
+
+    <!-- enforcement of policy goes here -->
+
+    <!-- add / remove ACL's when devices are added and removed -->
+    <match key="info.capabilities" contains="access_control">
+      <addset key="info.callouts.add" type="strlist">hal-acl-tool --add-device</addset>
+      <addset key="info.callouts.remove" type="strlist">hal-acl-tool --remove-device</addset>
+    </match>
+
+    <match key="info.udi" string="/org/freedesktop/Hal/devices/computer">
+
+      <!-- remove all previously added ACL's on start-up -->
+      <addset key="info.callouts.add" type="strlist">hal-acl-tool --remove-all</addset>
+
+      <!-- reconfigure all ACL's sessions are added and removed -->
+      <addset key="info.callouts.session_add" type="strlist">hal-acl-tool --reconfigure</addset>
+      <addset key="info.callouts.session_remove" type="strlist">hal-acl-tool --reconfigure</addset>
+
+      <!-- reconfigure all ACL's when a session becomes active -->
+      <addset key="info.callouts.session_active" type="strlist">hal-acl-tool --reconfigure</addset>
+
+      <!-- reconfigure all ACL's when a session becomes inactive -->
+      <addset key="info.callouts.session_inactive" type="strlist">hal-acl-tool --reconfigure</addset>
+
+    </match>
+
+  </device>
+</deviceinfo>

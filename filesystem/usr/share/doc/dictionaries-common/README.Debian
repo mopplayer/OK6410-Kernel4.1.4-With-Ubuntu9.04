@@ -1,0 +1,96 @@
+dictionaries-common and dictionaries-common-dev for Debian
+==========================================================
+
+This packages contain the common support structure implementing the policy
+proposal for ispell dictionaries and wordlists. For more information please
+see
+
+ http://dict-common.alioth.debian.org/
+ http://alioth.debian.org/projects/dict-common
+
+dictionaries-common
+-------------------
+
+This is the basic package. All ispell dictionaries and wordlists must
+pre-depend on it. It provides the common structure for the use of the
+system. These are some commands of interest for the superuser or for
+normal users. For more details or developers information, please see
+the dictionaries-common-dev package.
+
+select-default-ispell:
+select-default-wordlist:
+
+    (root only)
+    Although at installation time the system administrator has been asked (if
+    there is more that one dictionary or wordlist installed in the system)
+    which one will be the system default, these commands allow changing the
+    default value for ispell dictionary or wordlist at any time.
+
+ispell-wrapper:
+
+    The system provides a wrapper to ispell (named ispell-wrapper) with an
+    enhanced command line interface that will take care of passing to ispell
+    the appropriate options for a language.
+
+    This command will accept all the ispell options plus -L <language>, where
+    language must correspond to one of the languages installed in the system
+    (Perl regular expressions will be probably available here, such that
+    calling ispell-wrapper -L ".*brasil.*" will select
+    "Português Brasileiro").
+
+select-default-iwrap:
+
+    This is an interactive selection script for selecting the user-specific
+    default ispell dictionary for ispell-wrapper. The result will be placed
+    in ~/.default-ispell.
+
+    The system wide default value for ispell-wrapper will be the globally
+    selected one at installation time or through select-default-ispell.
+
+dictionaries-common-dev
+-----------------------
+
+This is the package for developers. It contains the complete policy
+document, as well as debhelper like support scripts. Use of these is
+strongly recommended.
+
+The text of the policy is available at the documentation directory for this
+package as dsdt-policy.html or dsdt-policy.txt.gz
+
+Other notes regarding these packages:
+=====================================
+
+ispell dicts and wordlists naming and availability
+--------------------------------------------------
+
+Note that you will find two types of dictionaries :
+
+ * dictionaries for ispell spellchecker, whose package names are of the
+   form i<language>, e.g. iamerican (for ispell)
+
+ * simple alphabetic lists of words, application-independent
+   (also known as "wordlists") whose package names are mostly of the form
+   w<language>, e.g. wspanish (with the exception of "miscfiles" that
+   also provides a wordlist as well as some many other things)
+
+Since ispell dictionaries must provide 'ispell-dictionary' and
+wordlists 'wordlist', if you want to know a list of the available ispell
+dictionaries or wordlists please try
+
+$ apt-cache search --names-only ispell-dictionary
+$ apt-cache search --names-only wordlist
+
+Templates localization:
+-----------------------
+
+As of 0.9.5 templates handling has been migrated to po-debconf. It will
+store the templates in the preferred encoding and they will be shown in
+the user's encoding by means of libtext-iconv-perl if installed. Note
+that this sometimes need changing the LANG value from a thing like
+'spanish' to something like 'es_ES'. Check if this is your case.
+
+----------------------------------
+ -- Agustin Martin Domingo <agmartin@debian.org>, Fri Mar 18 13:46:18 2005
+
+ LocalWords:  debian debconf usr alioth org wordlists wordlist debhelper http
+ LocalWords:  iamerican wspanish miscfiles xemacs wbritish var html dpkg

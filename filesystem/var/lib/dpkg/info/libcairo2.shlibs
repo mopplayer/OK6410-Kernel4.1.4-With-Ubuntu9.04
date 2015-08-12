@@ -1,0 +1,2 @@
+libcairo 2 libcairo2 (>= 1.8.0-2)
+udeb: libcairo 2 libcairo-directfb2-udeb (>= 1.8.0-2)

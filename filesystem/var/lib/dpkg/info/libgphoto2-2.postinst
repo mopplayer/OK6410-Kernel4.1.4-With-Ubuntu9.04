@@ -1,0 +1,37 @@
+#!/bin/sh
+set -e
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+PACKAGE="libgphoto2"
+
+case "$1" in
+    configure)
+	# create FDI file
+	mkdir -p /usr/share/hal/fdi/preprobe/10osvendor/ || true
+	/usr/lib/$PACKAGE/print-camera-list hal-fdi > \
+		/usr/share/hal/fdi/preprobe/10osvendor/20-$PACKAGE.fdi
+	
+	# remove old fdi files
+	rm -f /usr/share/hal/fdi/information/10freedesktop/10-camera-$PACKAGE.fdi
+	rm -f /usr/share/hal/fdi/information/20thirdparty/$PACKAGE.fdi
+	rm -f /usr/share/hal/fdi/information/10freedesktop/10-camera-$PACKAGE-device.fdi
+	;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+
+exit 0
+

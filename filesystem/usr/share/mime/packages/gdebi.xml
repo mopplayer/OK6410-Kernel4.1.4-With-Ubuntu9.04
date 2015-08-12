@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+	<mime-type type="application/x-deb">
+		<comment>Software package</comment>
+		<comment xml:lang="bn">সফটওয়্যার প্যাকেজ</comment>
+		<comment xml:lang="cs">Softwarový balík</comment>
+		<comment xml:lang="da">Softwarepakke</comment>
+		<comment xml:lang="de">Software-Paket</comment>
+		<comment xml:lang="es">Paquete de software</comment>
+		<comment xml:lang="fi">Ohjelmapaketti</comment>
+		<comment xml:lang="fr">Paquet logiciel</comment>
+		<comment xml:lang="hr">Paket</comment>
+		<comment xml:lang="hu">Szoftvercsomag</comment>
+		<comment xml:lang="id">Paket perangkat lunak</comment>
+		<comment xml:lang="it">Pacchetto software</comment>
+		<comment xml:lang="ko">소프트웨어 패키지</comment>
+		<comment xml:lang="ku">Paketa nivîsbariyê</comment>
+		<comment xml:lang="nl">Softwarepakket</comment>
+		<comment xml:lang="pl">Pakiet oprogramowania</comment>
+		<comment xml:lang="pt">Pacote de software</comment>
+		<comment xml:lang="pt_BR">Pacote</comment>
+		<comment xml:lang="ru">Пакет</comment>
+		<comment xml:lang="sk">Softvérový balík</comment>
+		<comment xml:lang="sv">Programvarupaket</comment>
+		<comment xml:lang="tr">Yazılım paketi</comment>
+		<glob pattern="*.deb"/>
+	</mime-type>
+</mime-info>

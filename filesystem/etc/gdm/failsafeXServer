@@ -1,0 +1,147 @@
+#!/bin/bash
+
+# $Id:$
+#
+# This provides a stripped down 'failsafe' mode for situations
+# where X is failing to start up.
+
+# Author: Bryce W. Harrington <bryce@canonical.com>
+
+# Copyright 2007 Canonical, Ltd
+#
+# This is free software; you may redistribute it and/or modify
+# it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2,
+# or (at your option) any later version.
+#
+# This is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License with
+# the Debian operating system, in /usr/share/common-licenses/GPL;  if
+# not, write to the Free Software Foundation, Inc., 59 Temple Place,
+# Suite 330, Boston, MA 02111-1307 USA
+
+xorg_conf_failsafe=${BPX_XORG_CONF_FAILSAFE:-"/etc/X11/xorg.conf.failsafe"}
+xorg_conf=${BPX_XORG_CONF:-"/etc/X11/xorg.conf"}
+run_dexconf=${BPX_RUN_DEXCONF:-"yes"}
+fallback_driver=${BPX_FALLBACK_DRIVER:-"vesa"}
+client=${BPX_CLIENT:-"/etc/gdm/failsafeXinit"}
+clientargs=${BPX_CLIENTARGS:-$xorg_conf_failsafe}
+blacklist=${BPX_BLACKLIST:-"/etc/gdm/failsafeBlacklist"}
+main_driver=${BPX_DRIVER:-"vesa"}
+checkduration=${BPX_CHECK_DURATION:-30}
+failsafe_log=${BPX_LOG:-"/var/log/gdm/failsafe.log"}
+
+server=${BPX_SERVER:-/usr/bin/X}
+serverargs=${BPX_SERVERARGS:-"$*"}
+serverargs="${serverargs} -br -once -config $xorg_conf_failsafe -logfile /var/log/Xorg.failsafe.log"
+   # -br:      Black background
+   # -once:    Terminate server after one session
+   # -config:  Specify location of xorg.conf file to use
+   #           Note: Only root can specify absolute paths
+   # -logfile: Don't overwrite Xorg.0.log
+
+warn() {
+    echo "Warning:  $1" 1>&2
+}
+
+is_installed() {
+    prog=$1
+    need=$2
+    /usr/bin/which $prog > /dev/null 2>&1
+    err=$?
+    if [ ! $err = 0 ]; then
+	warn "Could not $need because $prog is not installed ($err)"
+	return $err
+    fi
+    return 0
+}
+
+# Tests if the given pciids are in numerical order from least to greatest
+# (e.g., $a <= $b <= $c <= ...)
+pciids_in_order() {
+    lastid=0
+    for pciid in $* ; do
+        # Strip embedded : and convert hex to dec
+        id=$((0x${pciid/:/}))
+        if [ $id -lt $lastid ]; then
+            return 1
+        fi
+        lastid=$id
+    done
+    return 0
+}
+
+get_driver() {
+    machine=$(uname -m)
+    if [ $machine = "ppc" ]; then
+        echo "fbdev"
+    elif [ $machine = "powerpc" ]; then
+        echo "fbdev"
+    elif [ $machine = "ppc64" ]; then
+        echo "fbdev"
+    else
+        echo $fallback_driver
+    fi
+    return 0
+}
+
+# Check if we've already attempted a failsafe session without success
+if [ -e "$failsafe_log" ]; then
+    cur_time=$(date +"%s")
+    last_run=$(tail -n 1 $failsafe_log | cut -d' ' -f1)
+    time_diff=$(expr $cur_time - $last_run)
+    if [ $time_diff -lt $checkduration ]; then
+        warn "Failsafe mode was already attempted within $checkduration seconds."
+        warn "Falling back to gdm to report the issue."
+        exit 1
+    fi
+fi
+
+# When failsafe mode is activated, check the blacklist for systems we
+# know do not support VESA 800x600/256
+#      Use EDID + PCI IDs as key to lookup (Can get PCI IDs from discover)
+#      If the display does not give EDID info, then use VGA 640x480/16 mode
+#      If a matching entry is found, then use VGA 640x480/16 mode
+driver=$(get_driver)
+
+if [ "x${run_dexconf}" = "xyes" ]; then
+    # Generate an appropriate xorg.conf
+    /etc/gdm/failsafeDexconf $driver $xorg_conf_failsafe
+    if [ ! -s $xorg_conf_failsafe ]; then
+        warn "Could not generate $xorg_conf_failsafe for $driver driver"
+        exit 1
+    fi
+elif [ ! -s $xorg_conf_failsafe ]; then
+    warn "Requested to use $xorg_conf_failsafe for $driver driver, but it does not exist"
+    exit 1
+fi
+
+md5xorg=$(md5sum $xorg_conf)
+date +"%s $md5xorg" >> $failsafe_log
+if [ $? -ne 0 ]; then
+    warn "Cannot write to $failsafe_log"
+fi
+
+# TODO:  Start up the failsafe X session using their regular user account
+
+if pidof /usr/sbin/gdm ; then
+    clientargs="${clientargs} with-gdm"
+fi
+
+echo "xinit $client $clientargs -- $server $serverargs"
+xinit $client $clientargs -- $server $serverargs &
+
+sleep 3
+
+# Stop gdm if it's running, otherwise it will attempt to manage the display
+# out from under us
+if pidof /usr/sbin/gdm ; then
+    exec kill -STOP $PPID
+fi
+
+# This seems to cause gdm to attempt to start a new x session
+#exec kill -USR1 `cat /var/run/gdm.pid`

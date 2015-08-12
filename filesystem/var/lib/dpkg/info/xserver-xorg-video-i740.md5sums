@@ -1,0 +1,6 @@
+853df8466f2b7f6b4067be8dfa81635f  usr/lib/xorg/modules/drivers/i740_drv.so
+6d1d7be1bf4b1eb18f54b2fc77921009  usr/share/man/man4/i740.4.gz
+43e2ff353a97b2109e06aaba9d811b2e  usr/share/doc/xserver-xorg-video-i740/changelog.Debian.gz
+1c65b54ac8110d811ec3a502c28cef2b  usr/share/doc/xserver-xorg-video-i740/changelog.gz
+23a6d421e7529393969df8b65e88d607  usr/share/doc/xserver-xorg-video-i740/copyright
+3a1dcef109c3c3901b1c2b087cdaa6fd  usr/share/xserver-xorg/pci/i740.ids

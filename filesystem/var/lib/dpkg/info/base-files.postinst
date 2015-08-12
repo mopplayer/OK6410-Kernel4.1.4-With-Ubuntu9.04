@@ -1,0 +1,208 @@
+#!/bin/sh
+set -e
+
+install_local_dir() {
+  if [ ! -d $1 ]; then
+    mkdir -p $1
+  fi
+  #chown root:staff $1 2> /dev/null || true
+  #chmod 2775 $1 2> /dev/null || true
+}
+
+install_from_default() {
+  if [ ! -f $2 ]; then
+    cp -p $1 $2
+  fi
+}
+
+install_directory() {
+  if [ ! -d /$1 ]; then
+    mkdir /$1
+    chown root:$3 /$1
+    chmod $2 /$1
+  fi
+}
+
+preserve_directory() {
+  if [ -f /etc/base-files.create-$1 ]; then
+    install_directory $1 755 root
+    rm -f /etc/base-files.create-$1
+  fi
+}
+
+if [ "$1" = "configure" ] && [ "$2" = "" ]; then
+  install_from_default /usr/share/base-files/nsswitch.conf /etc/nsswitch.conf
+  install_from_default /usr/share/base-files/dot.profile   /root/.profile
+  install_from_default /usr/share/base-files/dot.bashrc    /root/.bashrc
+  install_from_default /usr/share/base-files/profile       /etc/profile
+  install_from_default /usr/share/base-files/motd          /etc/motd
+  install_from_default /usr/share/base-files/networks      /etc/networks
+  install_directory srv       755 root
+  install_directory opt       755 root
+  install_directory etc/opt   755 root
+  install_directory var/opt   755 root
+  install_directory media     755 root
+  install_directory var/mail 2775 mail
+  if [ ! -L /var/spool/mail ]; then
+    ln -s ../mail /var/spool/mail
+  fi
+
+  install_local_dir /usr/local
+  install_local_dir /usr/local/share
+  install_local_dir /usr/local/share/man
+  install_local_dir /usr/local/bin
+  install_local_dir /usr/local/games
+  install_local_dir /usr/local/lib
+  install_local_dir /usr/local/include
+  install_local_dir /usr/local/sbin
+  install_local_dir /usr/local/src
+  install_local_dir /usr/local/etc
+  ln -sf share/man /usr/local/man
+
+  if [ ! -f /var/log/wtmp ]; then
+    echo -n>/var/log/wtmp
+  fi
+  if [ ! -f /var/log/btmp ]; then
+    echo -n>/var/log/btmp
+  fi
+  if [ ! -f /var/log/lastlog ]; then
+    echo -n>/var/log/lastlog
+  fi
+  chown root:utmp /var/log/wtmp /var/log/btmp /var/log/lastlog
+  chmod 664 /var/log/wtmp /var/log/btmp /var/log/lastlog
+fi
+
+if [ "$1" = "configure" ] && [ "$2" != "" ]; then
+  if [ ! -d /var/spool/mail ] && [ ! -L /var/spool/mail ]; then
+    if [ -f /etc/base-files.mailsymlink ]; then
+      ln -sf `cat /etc/base-files.mailsymlink` /var/spool/mail
+    else
+      install_directory var/spool/mail 2775 mail
+    fi
+  fi
+  if [ ! -L /var/mail ] && [ ! -d /var/mail ]; then
+    ln -sf spool/mail /var/mail
+  fi
+fi
+
+preserve_directory floppy
+preserve_directory cdrom
+preserve_directory initrd
+
+if [ ! -f /var/run/utmp ]; then
+  echo -n>/var/run/utmp
+fi
+chown root:utmp /var/run/utmp
+chmod 664 /var/run/utmp
+
+if [ ! -d /var/lib/dpkg ]; then
+  mkdir -m 755 -p /var/lib/dpkg
+  chown root:root /var/lib/dpkg
+fi
+if [ ! -f /var/lib/dpkg/status ]; then
+  echo > /var/lib/dpkg/status
+  chmod 644 /var/lib/dpkg/status
+  chown root:root /var/lib/dpkg/status
+fi
+
+if [ ! -f /usr/info/dir ] && [ ! -f /usr/share/info/dir ]; then
+  install_from_default /usr/share/base-files/info.dir /usr/share/info/dir
+  chmod 644 /usr/share/info/dir
+  chown root:root /usr/share/info/dir
+fi
+rm -f /etc/base-files.mailsymlink
+
+if [ "$1" = "configure" ] && [ "$2" != "" ]; then
+  newmd=`awk 'NR > 2' /usr/share/base-files/motd | md5sum | awk '{print $1}'`
+  if [ -f /etc/motd.tail ]; then
+    oldmd=`awk 'NR > 1' /etc/motd.tail | md5sum | awk '{print $1}'`
+    if [ "$oldmd" != "$newmd" ]; then
+      if grep -q "$oldmd" /usr/share/base-files/motd.md5sums; then
+        mv /etc/motd.tail /etc/motd.tail.old
+        awk 'NR > 1' /usr/share/base-files/motd > /etc/motd.tail
+      fi
+    fi
+  elif [ -f /etc/motd ] && [ ! -L /etc/motd ]; then
+    oldmd=`awk 'NR > 2' /etc/motd | md5sum | awk '{print $1}'`
+    if [ "$oldmd" != "$newmd" ]; then
+      if grep -q "$oldmd" /usr/share/base-files/motd.md5sums; then
+        awk 'NR <= 2' /etc/motd > /etc/motd.new
+        awk 'NR > 2' /usr/share/base-files/motd >> /etc/motd.new
+        mv /etc/motd /etc/motd.old
+        mv /etc/motd.new /etc/motd
+      fi
+    fi
+  fi
+
+  if [ -f /etc/profile ]; then
+    md5=`md5sum /etc/profile | cut -f 1 -d\ `
+    if grep -qw "$md5" /usr/share/base-files/profile.md5sums; then
+        cp /usr/share/base-files/profile /etc/profile
+    fi
+  fi
+fi
+
+# Ubiquity 1.9.4 thru 1.10.9 failed to set kernel permissions after
+# copying from the Live CD, leaving the file globally writable.
+if dpkg --compare-versions "$2" le-nl "4.0.4ubuntu2" &&
+   dpkg --compare-versions "$2" ge "4.0.1ubuntu5"
+then
+  find -L /boot -name "vmlinu[zx]-*" -perm /g+w,o+w -print0 |
+	xargs -0rt chmod g-w,o-w || true
+fi
+
+# Ubiquity 1.7.5 thru 1.10.9 failed to restore the group id of
+# the process to root after doing work as the Live CD user, creating
+# files with that user's group as a result.
+if dpkg --compare-versions "$2" le-nl "4.0.4ubuntu2" &&
+   dpkg --compare-versions "$2" ge "4.0.1ubuntu1"
+then
+  NINER_NINER_PATHS="				\
+	/boot					\
+	/etc					\
+	/usr/lib/locale				\
+	/var/backups				\
+	/var/cache/apt				\
+	/var/cache/debconf			\
+	/var/cache/fontconfig			\
+	/var/cache/fonts			\
+	/var/cache/ldconfig			\
+	/var/cache/anthy			\
+	/var/lib/apt				\
+	/var/lib/dpkg				\
+	/var/lib/belocs				\
+	/var/lib/gconf				\
+	/var/lib/defoma				\
+	/var/lib/locales			\
+	/var/log/installer			"
+
+  NINER_NINER_SYMLINKS="			\
+	/initrd.img				\
+	/vmlinuz				\
+	/cdrom					\
+	/media/cdrom				\
+	/etc/alternatives			\
+	/usr/share/fonts			\
+	/var/lib/anthy				\
+	/var/lib/defoma				"
+
+  find -L $NINER_NINER_PATHS -gid 999 -print0 |
+	xargs -0rt chgrp -h 0 || true
+  find $NINER_NINER_SYMLINKS -gid 999 -print0 |
+	xargs -0rt chgrp -h 0 || true
+  find /media -maxdepth 1 -name "cdrom[0-9]*" -gid 999 -print0 |
+	xargs -0rt chgrp -h 0 || true
+fi
+
+if [ -f /var/lib/dpkg/info/base.list ]; then
+  :> /var/lib/dpkg/info/base.list
+  rm -f /var/lib/dpkg/info/base.conffiles
+  echo
+  echo "Note: You have the old \`base' package installed"
+  echo "It is very important that you do not try to remove this package"
+  echo "using dpkg. Please read /usr/share/doc/base-files/README.base to"
+  echo "get rid of the \`base' package completely in a safe way."
+  echo
+  echo -n "Press <Return> to continue "
+  read dummy
+fi

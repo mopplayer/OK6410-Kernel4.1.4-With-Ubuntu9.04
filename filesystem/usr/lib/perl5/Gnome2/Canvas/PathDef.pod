@@ -1,0 +1,248 @@
+=head1 NAME
+
+Gnome2::Canvas::PathDef
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Gnome2::Canvas::PathDef
+
+
+=head1 METHODS
+
+=head2 pathdef = Gnome2::Canvas::PathDef-E<gt>B<new> 
+
+=over
+
+=back
+
+=head2 pathdef = Gnome2::Canvas::PathDef-E<gt>B<new_sized> ($length)
+
+=over
+
+=over
+
+=item * $length (integer) 
+
+=back
+
+=back
+
+=head2 boolean = $path-E<gt>B<all_closed> 
+
+=over
+
+=back
+
+=head2 boolean = $path-E<gt>B<all_open> 
+
+=over
+
+=back
+
+=head2 boolean = $path-E<gt>B<any_closed> 
+
+=over
+
+=back
+
+=head2 boolean = $path-E<gt>B<any_open> 
+
+=over
+
+=back
+
+=head2 pathdef = $path-E<gt>B<close_all> 
+
+=over
+
+=back
+
+=head2 pathdef = $path-E<gt>B<closed_parts> 
+
+=over
+
+=back
+
+=head2 $path-E<gt>B<closepath> 
+
+=over
+
+=back
+
+=head2 $path-E<gt>B<closepath_current> 
+
+=over
+
+=back
+
+=head2 pathdef = Gnome2::Canvas::PathDef-E<gt>B<concat> (...)
+
+=over
+
+=over
+
+=item * ... (list) Gnome2::Canvas::PathDef objects to concatenate
+
+=back
+
+
+
+=back
+
+=head2 $dst-E<gt>B<copy> ($src)
+
+=over
+
+=over
+
+=item * $src (Gnome2::Canvas::PathDef) 
+
+=back
+
+Copy the path from I<$src> into I<$dst>.
+
+Note: this method has very different semantics than the copy provided
+by Glib::Boxed.   C<duplicate> is the analog there.
+
+=back
+
+=head2 $path-E<gt>B<curveto> ($x0, $y0, $x1, $y1, $x2, $y2)
+
+=over
+
+=over
+
+=item * $x0 (double) 
+
+=item * $y0 (double) 
+
+=item * $x1 (double) 
+
+=item * $y1 (double) 
+
+=item * $x2 (double) 
+
+=item * $y2 (double) 
+
+=back
+
+=back
+
+=head2 pathdef = $path-E<gt>B<duplicate> 
+
+=over
+
+=back
+
+=head2 $path-E<gt>B<ensure_space> ($space)
+
+=over
+
+=over
+
+=item * $space (integer) 
+
+=back
+
+=back
+
+=head2 $path-E<gt>B<finish> 
+
+=over
+
+=back
+
+=head2 boolean = $path-E<gt>B<has_currentpoint> 
+
+=over
+
+=back
+
+=head2 boolean = $path-E<gt>B<is_empty> 
+
+=over
+
+=back
+
+=head2 integer = $path-E<gt>B<length> 
+
+=over
+
+=back
+
+=head2 $path-E<gt>B<lineto> ($x, $y)
+
+=over
+
+=over
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=back
+
+=back
+
+=head2 $path-E<gt>B<lineto_moving> ($x, $y)
+
+=over
+
+=over
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=back
+
+=back
+
+=head2 $path-E<gt>B<moveto> ($x, $y)
+
+=over
+
+=over
+
+=item * $x (double) 
+
+=item * $y (double) 
+
+=back
+
+=back
+
+=head2 pathdef = $path-E<gt>B<open_parts> 
+
+=over
+
+=back
+
+=head2 $path-E<gt>B<reset> 
+
+=over
+
+=back
+
+=head2 @pathdefs = $path->B<split>
+
+=over
+
+
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Boxed>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

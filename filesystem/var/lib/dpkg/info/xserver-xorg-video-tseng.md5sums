@@ -1,0 +1,6 @@
+ec92ff17b8c67d27ae3581aadbf42892  usr/lib/xorg/modules/drivers/tseng_drv.so
+0dd6b4f3312000770f9aa00942c75c37  usr/share/man/man4/tseng.4.gz
+4af0ea59719339e593e6af2fda97bc27  usr/share/doc/xserver-xorg-video-tseng/changelog.Debian.gz
+0516fa252b9358233c7d8b13e4736e36  usr/share/doc/xserver-xorg-video-tseng/changelog.gz
+bbe08e313aade4747713be3de42dc6d0  usr/share/doc/xserver-xorg-video-tseng/copyright
+0b017e1958963351a187411e41ed98a9  usr/share/xserver-xorg/pci/tseng.ids

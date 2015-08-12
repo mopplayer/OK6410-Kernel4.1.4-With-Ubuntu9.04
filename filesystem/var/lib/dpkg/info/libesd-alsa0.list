@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libesd.so.0.2.39
+/usr/lib/esound
+/usr/lib/esound/libesddsp.so.0.2.39
+/usr/share
+/usr/share/doc
+/usr/lib/libesd.so.0
+/usr/lib/esound/libesddsp.so.0
+/usr/share/doc/libesd-alsa0

@@ -1,0 +1,4 @@
+?package(leafpad):needs="X11" section="Applications/Editors"\
+  title="LeafPad" command="/usr/bin/leafpad"\
+  longtitle="GTK+ based simple text editor"\
+  icon="/usr/share/pixmaps/leafpad.xpm"

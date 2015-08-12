@@ -1,0 +1,7 @@
+59a770bccfcba27fcfc948c970178c2b  usr/share/applications/polkit-gnome-authorization.desktop
+7141c029098bd8b3de175836dbd2a15f  usr/share/dbus-1/services/org.gnome.PolicyKit.service
+1e819eceb28fab52ac9aac05bad0e3f2  usr/share/dbus-1/services/org.gnome.PolicyKit.AuthorizationManager.service
+1521814797c59e4a2bfd6aabdb792906  usr/share/dbus-1/services/gnome-org.freedesktop.PolicyKit.AuthenticationAgent.service
+1c524e7a05ca5ae996596d7bd39bf456  usr/share/doc/policykit-gnome/copyright
+c8b766d6fc2e6256ca659a9c0f93f0fb  usr/bin/polkit-gnome-authorization
+d479973754d6d04deaddfc9041384b56  usr/lib/policykit-gnome/polkit-gnome-manager

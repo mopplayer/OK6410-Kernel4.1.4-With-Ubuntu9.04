@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/lib
+/usr/lib/libmpfr.so.1.2.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmpfr1ldbl
+/usr/share/doc/libmpfr1ldbl/README
+/usr/share/doc/libmpfr1ldbl/README.Debian
+/usr/share/doc/libmpfr1ldbl/changelog.gz
+/usr/share/doc/libmpfr1ldbl/NEWS.gz
+/usr/share/doc/libmpfr1ldbl/changelog.Debian.gz
+/usr/share/doc/libmpfr1ldbl/copyright
+/usr/share/doc/libmpfr1ldbl/BUGS
+/usr/share/doc/libmpfr1ldbl/TODO.gz
+/usr/lib/libmpfr.so.1

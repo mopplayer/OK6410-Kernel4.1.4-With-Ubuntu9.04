@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<omf>
+  <resource>
+    <creator>(Sun Java Desktop System Documentation Team)</creator>
+    <creator>(Glynn Foster)</creator>
+    <maintainer>(Glynn Foster)</maintainer>
+    <contributor>(Nicholas Curran)</contributor>
+    <title>Handbok för Zenity</title>
+    <date>Januari 2003</date>
+    <version identifier="Handbok för Zenity v1.0" date="Januari 2003"/>
+    <subject category="GNOME|Utilities"/>
+    <description>
+            Zenity är en vidareutveckling av gdialog, GNOME-porteringen av dialog som låter dig visa dialogrutor från kommandoraden och skalskript.
+    </description>
+    <type>
+       user's guide
+     </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="file:///usr/share/gnome/help/zenity/sv/zenity.xml"/>
+    <language code="sv"/>
+    <relation seriesid="1e4f989c-287a-11d7-84e2-b1f3b939ba73"/>
+    <rights type="GNU FDL" license.version="1.1" holder="Sun Microsystems"/>
+  </resource>
+</omf>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deviceinfo version="0.2">
+
+  <!-- Brightness of LCDs on nVidia GeForce 7/8/9-based Sony laptops is
+       currently handled with smartdimmer, a userspace tool to poke at
+       the video card directly.  Handle brightness change requests using
+       a hardware-specific laptop_panel access method.
+       See https://bugs.launchpad.net/bugs/277589 for details. -->
+  <device>
+    <match key="info.category" string="laptop_panel">
+      <match key="/org/freedesktop/Hal/devices/computer:system.chassis.manufacturer" string="Sony Corporation">
+        <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.vendor" int="0x10de"> <!-- nVidia Corporation -->
+
+	  <!-- 0098 G70 [GeForce Go 7800] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0098">
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+	  <!-- 0099 G70 [GeForce Go 7800 GTX] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0099">
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+	  <!-- 00c8  NV41.8 [GeForce Go 6800] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x00c8">
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+	  <!-- 00c9  NV41.9 [GeForce Go 6800 Ultra] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x00c9">
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+	  <!-- 0144  NV43 [GeForce Go 6600] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0144">
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+	  <!--  0146  NV43 [Geforce Go 6600TE/6200TE] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0146">
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0148  NV43 [GeForce Go 6600] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0148" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0149  NV43 [GeForce Go 6600 GT] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0149" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0164  NV44 [GeForce Go 6200] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0164" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0166  NV43 [GeForce Go 6400] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0166" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0167  NV43 [GeForce Go 6200/6400] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0167" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0168  NV43 [GeForce Go 6200/6400] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0168" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 01d6  GeForce Go 7200 -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x01d6" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 01d7  G72M [Quadro NVS 110M/GeForce Go 7300] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x01d7" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 01d8  G72M [GeForce Go 7400] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x01d8" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0247  MCP51 PCI-X GeForce Go 6100 -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0247" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0297  GeForce Go 7950 GTX -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0297" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0298  GeForce Go 7900 GS -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0298" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0299  GeForce Go 7900 GTX -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0299" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0397  GeForce Go 7700 -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0397" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0398  G70 [GeForce Go 7600] -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0398" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 0399  GeForce Go 7600 GT -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x0399" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+          <!-- 039b  GeForce Go 7900 SE -->
+          <match key="/org/freedesktop/Hal/devices/computer:system.hardware.primary_video.product" int="0x039b" >\n
+            <merge key="laptop_panel.num_levels" type="int">86</merge>
+            <merge key="laptop_panel.access_method" type="string">sony-nvidia</merge>
+          </match>
+
+        </match>
+      </match>
+    </match>
+  </device>
+</deviceinfo>

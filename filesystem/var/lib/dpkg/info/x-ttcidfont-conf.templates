@@ -1,0 +1,224 @@
+
+Template: x-ttcidfont-conf/tt_backend
+Type: select
+Choices: freetype, xtt
+Default: freetype
+Description: Backend to use for TrueType handling on X:
+ Two backends can handle TrueType fonts: FreeType and X-TT.
+ .
+ The standard FreeType has simple features, while X-TT
+ offers a TrueType fonts decoration mechanism that can create bold and
+ oblique faces from a single font.
+ .
+ If in doubt, you should choose FreeType.
+Description-cs.UTF-8: Mechanismus pro zpracování TrueType:
+ Pro zpracování TrueType fontů existují dva mechanismy: FreeType a X-TT.
+ .
+ Standardní FreeType má jen základní možnosti, X-TT umí z jednoho fontu vytvářet jeho tučné a skloněné varianty.
+ .
+ Pokud si nejste jisti, vyberte FreeType.
+Description-de.UTF-8: Zur TrueType-Handhabung unter X zu verwendendes Backend:
+ Zwei Backends können mit TrueType-Schriften umgehen: FreeType und X-TT.
+ .
+ Das Standard-Backend FreeType hat nur einfache Funktionen, während X-TT einen Mechanismus zur Darstellung von TrueType-Schriften anbietet, der fette und schräge Typen aus einer einzigen Schriftart erzeugen kann.
+ .
+ Wenn Sie nicht sicher sind, sollten Sie FreeType wählen.
+Description-es.UTF-8: Gestor que se usa para el manejo de TrueType en las X:
+ Pueden utilizarse dos gestores para gestionar las tipografías TrueType: FreeType y X-TT.
+ .
+ El gestor estándar FreeType tiene funcionalidades sencillas, mientras que X-TT dispone de un mecanismo de decoración de tipografías TrueType que permite la creación de letras en negrita y cursiva a partir de una sola tipografía.
+ .
+ Debería escoger FreeType si tiene dudas.
+Description-eu.UTF-8: X-etan TrueType kudeaketarako erabiliko den interfazea:
+ B interfaze dira TrueType letra-tipoak kudeatzeko gai: FreeType eta X-TT.
+ .
+ FreeType estandarrak ezaugarri sinpleak ditu, X-TT estandarrak aldiz letra-tipo soil baten etzandako eta lodituriko letra-tipoak sortzeko gai diren letra-tipo dekorazioak eskaintzen ditu.
+ .
+ Zalantza kasuan FreeType hautatu beharko zenuke.
+Description-fi.UTF-8: Taustaohjelma TrueType-fonttien käsittelyyn X-ympäristössä:
+ TrueType-fonttien käsittelyyn on kaksi taustaohjelmaa: FreeType ja X-TT.
+ .
+ Standardi FreeType tarjoaa vaatimattomat ominaisuudet, kun taas X-TT sisältää TrueType-fonttien koristelumekanismin, jolla yhdestä fontista voidaan luoda myös lihavoitu tai vino tyyli.
+ .
+ Jos olet epävarma, valitse FreeType.
+Description-fr.UTF-8: Interface pour la gestion des polices TrueType sous X :
+ Deux interfaces peuvent gérer les polices TrueType : FreeType et X-TT.
+ .
+ FreeType est une interface simple et standard ; X-TT est une autre possibilité et possède un mécanisme pour décorer les polices : on peut ainsi créer des caractères gras ou penchés à  partir d'une seule police.
+ .
+ En cas de doute, vous devriez choisir FreeType.
+Description-gl.UTF-8: Motor a empregar para o manexo de TrueType en X:
+ Hai dous motores que poden xestionar os tipos TrueType: FreeType e X-TT.
+ .
+ FreeType ten características simples, mentres que X-TT ofrece un mecanismo de decoracións de tipos de letra que pode crear tipos en negrito e inclinados a partires dun só tipo.
+ .
+ Se ten dúbidas debería escoller FreeType.
+Description-it.UTF-8: Motore per la gestione dei TrueType su X:
+ I caratteri TrueType possono essere gestiti da due motori: FreeType e X-TT.
+ .
+ FreeType è quello standard ed è più semplice, invece X-TT dispone di un meccanismo di decorazione dei caratteri TrueType che permette di creare gli aspetti grassetto e inclinato da un singolo tipo di carattere.
+ .
+ In caso di dubbi scegliere FreeType.
+Description-ja.UTF-8: X 上での TrueType フォントハンドリングに使うバックエンド:
+ TrueType フォントを扱うバックエンドとして 2 つあります: FreeType と X-TT です。
+ .
+ FreeType は標準でシンプルなバックエンドです。X-TT は TrueType フォントを装飾することで 1 つのフォントから太字 (bold) や斜体 (oblique) などの複数書体を生成する機能を持っています。
+ .
+ よくわからなければ、FreeType を選ぶのがよいでしょう。
+Description-pl.UTF-8: Backend TrueType dla X:
+ Fonty TrueType mogą być obsługiwane przez: FreeType i X-TT.
+ .
+ Standardowy FreeType ma tylko kilka podstawowych opcji. 
+ X-TT jest alternatywnym backendem umożliwiającym dodatkowe dekowanie fontów. Dzięki niemu można mieć dodatkowe pogrubione i ukośne fonty.
+ .
+ W razie wątpliwości wybierz FreeType.
+Description-pt.UTF-8: Gestor de fundo utilizado para gerir tipos de letra TrueType no servidor X:
+ Dois 'backends' podem gerir tipos de letra TrueType: FreeType e X-TT.
+ .
+ O standard Freetype tem funcionalidades simples, enquanto que os tipos de letra TrueType oferecem um mecanismo de decoração que pode criar faces em negrito e oblíquas a partir de um simples tipo de letra.
+ .
+ Se tiver dúvidas, deverá escolher FreeType.
+Description-ru.UTF-8: Серверная часть, которую нужно использовать для обработки шрифтов TrueType в X:
+ Для обработки шрифтов TrueType существует две серверные части: FreeType и X-TT.
+ .
+ Стандартный FreeType поддерживает только основные возможности, а в X-TT реализован механизм декорирования шрифтов, позволяющий из одного шрифта создавать варианты жирного и наклонного начертания.
+ .
+ Если не уверены, выберите FreeType.
+Description-sv.UTF-8: Baksystem att använda för Truetype-hantering i X:
+ Två baksystem kan hantera Truetype-fonter: FreeType och X-TT.
+ .
+ FreeType är standard och har enklare funktioner, medan X-TT har en mekanism för att dekorera TrueType-typsnitt som kan skapa fet och kursiv text från ett enda typsnitt.
+ .
+ Om du är osäker, välj FreeType.
+Description-vi.UTF-8: Hậu phương cần dùng để xử lý phông TrueType trên X:
+ Có hai hậu phương có khả năng xử lý phông TrueType: FreeType và X-TT.
+ .
+ FreeType chuẩn có tính năng đơn giản, còn X-TT cung cấp một cơ chế trang trí phông TrueType có thể tạo các mặt in đậm và in xiên đều từ cùng một phông riêng lẻ.
+ .
+ Chưa chắc nên chọn FreeType.
+Description-zh_CN.UTF-8: X 环境下 TrueType 字体处理后端：
+ 有两种后端可以处理 TrueType 字体，分别是：FreeType 和 X-TT
+ .
+ 标准的 FreeType 功能比较简单，而 X-TT 则提供了一套 TrueType 字体的渲染机制，这个机制能够从一个字体产生对应的粗体和斜体。
+ .
+ 如果不确定，请选择 FreeType。
+
+Template: x-ttcidfont-conf/xtt_vl
+Type: boolean
+Description: Prefer speed over quality while rendering?
+ There are two ways for X-TT to calculate the font metrics:
+ .
+  - user header info:      fast and lightweight but fallible;
+  - calculate every glyph: slow and heavyweight but reliable.
+ .
+ With a fast CPU and enough memory, you should decline this option and
+ X-TT will calculate every glyph.
+Description-cs.UTF-8: Upřednostňujete rychlost před kvalitou zobrazování?
+ Existují dva způsoby, jakými X-TT počítá metriky fontů:
+ .
+  - informace z hlavičky:   rychlé, nenáročné, ale omylné;
+  - spočítat každou křivku: pomalé, těžkotonážní, ale spolehlivé.
+ .
+ S rychlým procesorem a dostatkem paměti byste měli tuto možnost zamítnout a X-TT spočítá každou křivku.
+Description-de.UTF-8: Bei der Darstellung Geschwindigkeit gegenüber Qualität bevorzugen?
+ X-TT kennt zwei Arten, die Schrift-Metriken zu berechnen:
+ .
+  - Header-Informationen verwenden: schnell und sparsam, aber Fehl-
+    berechnungen möglich;
+  - jedes Zeichen berechnen:        langsam und ressourcen-hungrig,
+    aber verlässlich.
+ .
+ Bei einer schnellen CPU und genügend Speicher sollten Sie diese Option ablehnen; X-TT wird dann jedes Zeichen einzeln berechnen.
+Description-es.UTF-8: ¿Prefiere velocidad antes que calidad mientras se está renderizando?
+ XTT tiene dos formas de calcular la métrica de las tipografías:
+ .
+  - información de cabeceras de usuario: rápido y ligero, pero no fiable
+  - calcular cada trazo:                 lento y pesado, pero fiable.
+ .
+ Debería rechazar esta opción si tiene un procesador rápido y memoria suficiente de forma que X-TT recalcule cada trazo.
+Description-eu.UTF-8: Abiadura lehenetsi kalitatearen aurrean errenderizazioan?
+ Bi modu daude X-TT-ek letra-tipo metrikak kalkulatzeko:
+ .
+  - erabiltzaile goiburu argibideak: Azkar eta arina baina fidagarritasun baxukoa;
+  - glifo bakoitza kalkulatu:        Geldo eta pisutsua baina fidagarria.
+ .
+ CPU arin eta memoria nahikoaz aukera hau baztertu beharko zenuke X-TT erabiltzean glifo guztiak kalkulatzeko.
+Description-fi.UTF-8: Suositaanko nopeutta laadun kustannuksella piirrettäessä fontteja?
+ X-TT voi laskea fonttien mitat kahdella eri tavalla:
+ .
+  - käyttäen otsaketietoja:           nopea ja kevyt, mutta erehtyväinen
+  - laskien erikseen jokaisen merkin: hidas ja raskas, mutta luotettava
+ .
+ Jos koneessa on nopea suoritin ja tarpeeksi muistia, älä valitse tätä vaihtoehtoa. Tällöin X-TT laskee jokaisen merkin ulkoasun.
+Description-fr.UTF-8: Préférez-vous la vitesse de la transformation à sa qualité ?
+ X-TT peut calculer la métrique d'une police de deux manières :
+ .
+  - informations d'en-têtes : rapide et léger, mais faillible ;
+   - calculer chaque glyphe : lent et lourd, mais fiable.
+ .
+ Avec un processeur rapide et suffisamment de mémoire, vous ne devriez pas choisir cette option. X-TT calculera ainsi tous les glyphes.
+Description-gl.UTF-8: ¿Primar a velocidade sobre a calidade ao debuxar?
+ X-TT ten dous sistemas para calcular as métricas dos tipos:
+ .
+  - información da cabeceira do usuario: rápida pero pode fallar;
+  - calcular cada glifo: lento pero fiable.
+ .
+ Cunha CPU rápida e memoria dabondo, debería rexeitar esta opción, e X-TT ha calcular cada glifo.
+Description-it.UTF-8: Il rendering deve preferire la velocità alla qualità?
+ X-TT dispone di due modalità per calcolare le metriche dei caratteri:
+ .
+  - usando le informazioni di testata: veloce e leggero ma impreciso;
+  - calcolando ogni glifo: lento e pesante ma accurato.
+ .
+ Con una CPU veloce e abbastanza memoria si dovrebbe scartare questa opzione e far calcolare a X-TT ogni glifo.
+Description-ja.UTF-8: レンダリングにおいて速度を品質に優先しますか?
+ X-TT のフォントメトリックの計算には 2 種類の方法があります:
+ .
+  - ユーザヘッダ情報: 高速で軽量だが誤認しやすい;
+  - グリフごとに計算: 遅く重量だが信頼できる
+ .
+ 高速な CPU と大容量のメモリがあるのであれば、この選択肢で「いいえ」と答えれば、X-TT がすべてのグリフを計算するようになります。
+Description-pl.UTF-8: Preferowane szybkie renderowanie bardziej niż wysoka jakość
+ Są dwa sposoby w jaki X-TT może obliczać odpowiednie kształty fontów:
+ .
+  - na podstawie nagłówka:                     metoda szybka, ale nie zawsze dokładna;
+  - obliczanie kształtu każdej krzywej: metoda powolna, ale dokładna.
+ .
+ Wybierz tę opcję Jeżeli masz szybki procesor i dużo pamięci.
+Description-pt.UTF-8: Prefere rapidez à qualidade durante o desenho dos tipos de letra?
+ Existem dois modos de cálculo das 'font metrics' para o X-TT:
+ .
+  - user header info:      rápido e leve mas falível;
+  - calculate every glyph: lento e pesado mas fiável.
+ .
+ Com um CPU rápido e suficiente memória, deverá recusar esta opção e o X-TT irá calcular cada glyph ('calculate every glyph').
+Description-ru.UTF-8: Оптимизировать отрисовку шрифтов по скорости, в ущерб качеству?
+ Есть два способа того, как X-TT может просчитывать метрики шрифтов:
+ .
+ - используя информацию заголовка: быстрый и незатратный способ,
+                                   но неточный;
+ - вычисляя каждый образ символа:  медленный, требует мощного ЦП,
+                                   но качественный.
+ .
+ Если у вас достаточно быстрый центральный процессор и много свободной памяти, ответьте отрицательно и X-TT будет вычислять каждый образ символа.
+Description-sv.UTF-8: Föredra hastighet framför kvalitet under uppritning?
+ Det finns två sätt för X-TT att räkna fram mätvärden för typsnitt:
+ .
+  - användarhuvudinformation:   snabb och lättviktig men felkänslig;
+  - beräkna varje teckenbild:   långsam och tung men pålitlig.
+ .
+ Med en snabb CPU och tillräckligt minne bör du avstå från detta val och låta X-TT beräkna varje teckenbild.
+Description-vi.UTF-8: Có thích tốc độ hơn chất lượng khi vẽ không?
+ XTT có hai cách tính các đơn vị đo của phông chữ :
+ .
+  • thông tin phần đầu người dùng	nhanh và nhỏ gọn, còn có thể sai lầm
+  • tính mỗi hình tượng		chậm và phức tạp, còn đáng tin cậy.
+ .
+ Máy tính có CPU nhanh và đủ bộ nhớ nên bạn từ chối tùy chọn này, rồi X-TT sẽ tính mỗi hình tượng.
+Description-zh_CN.UTF-8: 当渲染字体时，您是否更注重速度而非质量？
+ X-TT 计算字体量度的方法有两种：
+ .
+  - 用户头信息：     快速而且轻量级，但是容易出错；\n<
+  - 计算每一个字形： 速度慢而且比较复杂，不过较为可靠。 
+ .
+ 如果您 CPU 速度比较快而且内存足够大的话，您最好拒绝这个选项，X-TT 会帮你计算每个字形的。

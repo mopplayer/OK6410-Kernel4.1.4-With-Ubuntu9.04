@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdefoma
+case "$1" in
+	upgrade)
+		test -x /usr/bin/defoma-app && \
+			/usr/bin/defoma-app clean x-ttcidfont-conf
+		;;
+	remove)
+		test -x /usr/bin/defoma-app && \
+			/usr/bin/defoma-app purge x-ttcidfont-conf
+		;;
+esac
+# End automatically added section

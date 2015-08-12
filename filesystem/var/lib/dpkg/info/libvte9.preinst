@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+# doc dir is now a symlink to libvte9
+if [ "$1" = upgrade ] && [ ! -L /usr/share/doc/libvte9 ]; then
+    rm -rf /usr/share/doc/libvte9
+fi

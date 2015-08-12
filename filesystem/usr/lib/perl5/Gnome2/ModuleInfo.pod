@@ -1,0 +1,68 @@
+=head1 NAME
+
+Gnome2::ModuleInfo
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Gnome2::ModuleInfo
+
+
+=head1 METHODS
+
+=head2 moduleinfo = Gnome2::ModuleInfo-E<gt>B<bonobo> 
+
+=over
+
+=back
+
+=head2 scalar = $module_info-E<gt>B<description> 
+
+=over
+
+=back
+
+=head2 moduleinfo = Gnome2::ModuleInfo-E<gt>B<libgnome> 
+
+=over
+
+=back
+
+=head2 moduleinfo = Gnome2::ModuleInfo-E<gt>B<libgnomeui> 
+
+=over
+
+=back
+
+=head2 scalar = $module_info-E<gt>B<name> 
+
+=over
+
+=back
+
+=head2 scalar = $module_info-E<gt>B<opt_prefix> 
+
+=over
+
+=back
+
+=head2 scalar = $module_info-E<gt>B<version> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Boxed>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

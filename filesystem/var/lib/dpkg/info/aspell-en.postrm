@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+# Automatically added by installdeb-aspell
+case "$1" in abort-install|remove)
+
+    if [ -x /usr/sbin/update-dictcommon-aspell ]; then
+	/usr/sbin/update-dictcommon-aspell
+    fi
+esac
+
+# End automatically added section

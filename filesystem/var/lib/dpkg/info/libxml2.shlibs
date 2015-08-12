@@ -1,0 +1,2 @@
+libxml2 2 libxml2 (>= 2.6.32)
+udeb: libxml2 2 libxml2-udeb (>= 2.6.32)

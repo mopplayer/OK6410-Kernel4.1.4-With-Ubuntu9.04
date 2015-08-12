@@ -1,0 +1,3 @@
+/etc/logrotate.d/aptitude
+/etc/cron.daily/aptitude
+/etc/apt/apt.conf.d/05aptitude

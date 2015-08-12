@@ -1,0 +1,33 @@
+docbook-xml -- DocBook XML
+----------------------------------------------------------
+
+DocBook is pretty much the standard for software documentation.  It is
+managed by a committee formed at OASIS, the Organization for the
+Advancement of Structured Information Standards
+<URL:http://www.oasis-open.org/docbook/>.  More information on
+DocBook, including the user support community for it, can be found at
+<URL:http://www.docbook.org/>.
+
+This package contains the XML versions of the DTDs.  The 'docbook'
+package contains the SGML DTDs.  A number of customization packages
+are also available, generally used to mark up specialized subsets or
+special applications of DocBook XML.  Rather than list them here,
+please do 'apt-cache search docbook-xml'.
+
+A wonderful introduction and reference is available in the
+docbook-defguide package, which can also be read online at
+<URL:http://www.docbook.org/tdg/>.
+
+If you wish to format DocBook documents, you'll want to apply a
+stylesheet to the document, in conjunction with a processor which
+applies the style.  The available stylesheets for DocBook are the
+'docbook-dsssl' and 'docbook-xsl' packages, for DSSSL and XSL
+stylesheets, respectively.  Instructions on operating those
+stylesheets and DSSSL or XSL processors is beyond the scope of this
+README, but there is a Debian SGML/XML HOWTO at
+<URL:http://www.debian.org/doc/misc-manuals#sgml-howto> which should
+give some guidance.
+
+--
+Adam Di Carlo <aph@debian.org>
+

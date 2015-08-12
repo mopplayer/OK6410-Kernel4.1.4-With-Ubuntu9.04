@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY author1 "Sun">
+<!ENTITY author2 "Java Desktop System Documentation Team">
+<!ENTITY publisher "Sun Microsystems, Inc.">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.6.0">
+<!ENTITY app "<application>Zenity</application>">
+<!ENTITY appname "Zenity">
+<!ENTITY date "August 2004">
+<!ENTITY manrevision "2.0">
+]>
+<!-- ================ Document Header ================= -->
+<article id="index" lang="fi">
+
+  <articleinfo>
+    <title>Zenityn ohje</title>
+    <subtitle>Zenity-työpöytäsovelluksen ohje v2.0</subtitle>
+    <copyright>
+	    <year>2003</year>
+	    <year>2004</year>
+	    <holder>Sun Microsystems, Inc.</holder>
+    </copyright><copyright><year>2008.</year><holder>Tommi Vainikainen (thv@iki.fi)</holder></copyright>
+
+    <!-- Translators: uncomment this
+    <copyright>
+	    <year>2004</year>
+	    <holder>ME_THE_TRANSLATOR</holder>
+    </copyright>
+    -->
+
+    <publisher>
+	    <publishername>Sun Microsystems, Inc.</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para>Tätä asiakirjaa saa kopioida, jakaa edelleen ja/tai muokata Free Software Foundationin julkaiseman GNU Free Documentation Licensen (GFDL) version 1.1 tai valinnaisesti myöhemmän version mukaisesti, ilman vaatimuksia muuttamattomista osioista ja etu- tai takakansiteksteistä. Kopion GFDL:stä voi nähdä napsauttamalla <ulink type="help" url="ghelp:fdl">tätä linkkiä</ulink>, tai lukemalla ohjeen mukana toimitetun COPYING-DOCS-nimisen tiedoston.</para>
+         <para>Tämä käyttöohje on osa Gnomen käyttöohjekokoelmaa, jota levitetään GFDL-lisenssin alaisena. Jos haluat levittää tätä käyttöohjetta erillään kokoelmasta, voit tehdä sen liittämällä lisenssin kopion ohjeen mukaan, kuten lisenssin luku 6 sanelee.</para>
+
+	<para>Monet nimistä, joita yhtiöt käyttävät tuotteistansa ja palveluistansa, ovat tuotemerkkejä. Gnomen dokumentointiprojektissa nämä nimet pyritään kirjoittamaan suuraakkosin tai isolla alkukirjaimella, sikäli kun projektin jäsenet tietävät kyseisistä tuotemerkeistä.</para>
+
+	<para>ASIAKIRJA JA SEN MUOKATUT VERSIOT TARJOTAAN GNU FREE DOCUMENTATION LICENSEN EHTOJEN MUKAISESTI YMMÄRTÄEN ETTÄ: <orderedlist>
+		<listitem>
+		  <para>ASIAKIRJA TARJOTAAN "SELLAISENAAN", ILMAN MINKÄÄN LAISTA TAKUUTA, NIIN ILMAISTUA KUIN IMPLISIITTISTÄ, SISÄLTÄEN ILMAN RAJOITUKSIA TAKUUTA SIITÄ, ETTÄ ASIAKIRJA TAI SEN MUOKATTU VERSIO OLISI ILMAN VIRHEITÄ, MYYNTIKELPOINEN, SOVELTUVAT JOHONKIN TARKOITUKSEEN TAI EI-LOUKKAAVA. TÄYSI RISKI ASIAKIRJAN TAI SEN MUOKATUN VERSION LAADUSTA, TARKKUUDESTA TAI HYÖDYLLISYYDESTÄ ON SINULLA. MIKÄLI ASIAKIRJA TAI SEN MUOKATTU VERSIO OSOITTAUTUU VIALLISEKSI MISSÄÄN MIELESSÄ, SINÄ (EI ALKUPERÄINEN KIRJOITTAJA, TEKIJÄ TAI MUU MYÖTÄVAIKUTTAJA) VASTAAT KAIKKIEN TARPEELLISTEN PALVELUIDEN, KORJAUSTEN TAI OIKAISUJEN KULUISTA. TÄMÄ VASTUUVAPAUSLAUSEKE MUODOSTAA OLEELLISEN OSAN TÄSTÄ LISENSSISTÄ. MIHINKÄÄN ASIAKIRJAN TAI SEN MUOKATUN VERSION KÄYTTÖÖN EI OLE MYÖNNETTY LUPAA TÄSSÄ PAITSI TÄMÄN VASTUUVAPAUSLAUSEKKEEN MUKAISESTI; JA</para>
+		</listitem>
+		<listitem>
+		  <para>EI MISSÄÄN OLOSUHTEISSA TAI MINKÄÄN LAKITEORIAN ALAISUUDESSA, OIKEUDENLOUKKAUKSEN (SISÄLTÄEN HUOLIMATTOMUUDEN), SOPIMUKSEN TAI MUUTOIN, ASIAKIRJAN TAI SEN MUOKATUN VERSION ALKUPERÄISTÄ KIRJOITTAJAA, KETÄÄN MYÖTÄVAIKUTTAJAA TAI KETÄÄN JAKELIJAA, TAI KETÄÄN MINKÄÄN NÄISTÄ OSAPUOLISTA TOIMITTAJAA, OLE VASTUUSSA KENELLEKÄÄN HENKILÖLLE MISTÄÄN SUORASTA, EPÄSUORASTA, ERITYISESTÄ, VÄLITTÖMISTÄ TAI VÄLILLISISTÄ MINKÄÄN SORTIN VAHINGOISTA SISÄLTÄEN ILMAN RAJOITUSTA VAHINGOT MAINEEN MENETYKSESTÄ, TYÖN SEISAUKSISTA, TIETOKONEVAHINGOISTA TAI -VIRHEISTÄ, TAI MISTÄÄN  MUUSTAKAAN VAHINGOSTA TAI TAPPIOISTA, JOTKA LIITTYVÄT ASIAKIRJAN JA SEN MUOKATTUJEN VERSIOIDEN KÄYTTÖÖN, EI EDES SILLOIN KUN OSAPUOLELLE ON KERROTTU TÄLLAISTEN VAHINKOJEN MAHDOLLISUUDESTA.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Java-työpöytäjärjestelmän dokumentointiryhmä</surname>
+        <affiliation><orgname>Sun Microsystems, Inc.</orgname></affiliation>
+      </author>
+      <author role="maintainer">
+        <firstname>Glynn</firstname>
+        <surname>Foster</surname>
+        <affiliation>
+          <orgname>GNOME-dokumentointiprojekti</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Nicholas</firstname>
+        <surname>Curran</surname>
+        <affiliation>
+          <orgname>GNOME-dokumentointiprojekti</orgname>
+        </affiliation>
+      </editor>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Zenity-työpöytäsovelluksen ohje v2.0</revnumber>
+        <date>Elokuu 2004</date>
+        <revdescription>
+          <para role="author">Sun Java -työpöytäjärjestelmän dokumentointiryhmä</para>
+          <para role="publisher">Sun Microsystems, Inc.</para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Zenityn ohje v1.0</revnumber>
+        <date>Tammikuu 2003</date>
+        <revdescription>
+          <para role="author">Glynn Foster</para>
+          <para role="publisher">GNOME-dokumentointiprojekti</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Tämä ohjekirja kuvaa Zenityn versiota 2.6.0.</releaseinfo>
+
+    <legalnotice>
+	    <title>Palaute</title>
+	    <para>Palautetta voi lähettää seuraamalla ohjeita <ulink url="ghelp:gnome-feedback" type="help">palautesivulla</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+
+    </legalnotice>
+    <abstract role="description">
+            <para>Zenity on uudelleenkirjoitettu gdialog, GNOME-siirros dialog-ohjelmasta, joka mahdollistaa valintalaatikoiden näyttämisen komentoriviltä ja kuoriskripteistä.</para>
+    </abstract>
+  </articleinfo>
+  
+  <indexterm>
+    <primary>zenity-komento</primary>
+  </indexterm>
+  <indexterm>
+    <primary>valintaikkunan luonti</primary>
+  </indexterm>
+<!-- ================ Document Body ================= -->
+
+<!-- ==== Introduction ====== -->
+
+  <sect1 id="zenity-introduction">
+    <title>Johdanto</title>
+
+    <para><application>Zenity</application> mahdollistaa seuraavan tyyppisten yksinkertaisten ikkunoiden luomisen:</para>
+
+    <itemizedlist>
+        <listitem><para>Kalenteri</para></listitem>
+	<listitem><para>Tiedoston valinta</para></listitem>
+	<listitem><para>Luettelo</para></listitem>
+	<listitem><para>Ilmoituskuvake</para></listitem>
+        <listitem><para>Viesti</para>
+            <itemizedlist>
+	        <listitem><para>Virhe</para></listitem>
+		<listitem><para>Tiedoksi</para></listitem>
+		<listitem><para>Kysymys</para></listitem>
+		<listitem><para>Varoitus</para></listitem>
+	    </itemizedlist>
+	</listitem>
+	<listitem><para>Edistyminen</para></listitem>
+        <listitem><para>Tekstisyöte</para></listitem>
+	<listitem><para>Tekstihuomatus</para></listitem>
+    </itemizedlist>
+
+  </sect1>
+
+<!-- ==== Usage ====== -->
+
+  <sect1 id="zenity-usage">
+    <title>Käyttö</title>
+
+    <para>Skriptejä kirjoitettaessa voi <application>Zenityä</application> käyttää yksinkertaisten valintaikkunoiden luomiseen, jotka pyytävät käyttäjältä syötettä graafisesti, kuten seuraavissa tapauksissa:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Voit luoda valintaikkunan keräämään tietoa käyttäjältä. Voit esimerkiksi pyytää käyttäjää valitsemaan päivän kalenteri-ikkunasta tai valitsemaan tiedoston tiedoston valintaikkunalla.</para>
+      </listitem>
+      <listitem>
+        <para>Voit luoda ikkunan, joka kertoo käyttäjälle tietoa. Voit esimerkiksi näyttää edistymisikkunassa operaation edistymisen tilanteen tai varoitusviesti-ikkunassa varoittaa käyttäjää.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Kun käyttäjä sulkee ikkunan, <application>Zenity</application> tulostaa ikkunaan syötetyn tekstin vakiovirhevirtaan.</para>
+
+    <note>
+      <para>Kun kirjoitat <application>Zenity</application>-komentoja, ole tarkkana lainausmerkkien sijoittelussa jokaisen argumentin ympärillä.</para>
+      <para>Käytä esimerkiksi: <screen><userinput><command>zenity --calendar --title="Loman suunnittelu"</command></userinput></screen> Älä sen sijaan käytä: <screen><userinput><command>zenity --calendar --title=Loman suunnittelu</command></userinput></screen></para>
+      <para>Mikäli et käytä lainausmerkkejä, saatat saada odottamattomia tuloksia.</para>
+    </note>
+
+    <sect2 id="zenity-usage-mnemonics">
+      <title>Valintanäppäimet</title>
+	<para>Valintanäppäin on näppäin, joka antaa mahdollisuuden suorittaa toiminto näppäimistöltä sen sijaan, että komento valittaisiin hiirellä valikosta tai ikkunasta. Jokainen valintanäppäin identifioidaan alleviivaamalla kirjain valikossa tai ikkunan kohdassa.</para>
+	<para>Jotkut <application>Zenity</application>-ikkunan tukevat valintanäppäinten käyttöä. Määrittääksesi kirjaimen valintanäppäimeksi, anna alaviiva ennen kirjainta ikkunan tekstissä. Seuraava esimerkki valaisee kuinka kirjain "V" määritetään valintanäppäimeksi:</para>
+	<screen><userinput>"_Valitse nimi".</userinput></screen>
+    </sect2>
+
+    <sect2 id="zenity-usage-exitcodes">
+      <title>Päättymiskoodit</title>
+    <para><application>Zenity</application> palauttaa seuraavia päättymiskoodeja:</para>
+
+    <informaltable frame="all">
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="COLSPEC0" colwidth="50*"/>
+        <colspec colname="COLSPEC1" colwidth="50*"/>
+        <thead>
+          <row valign="top">
+            <entry colname="COLSPEC0">
+              <para>Päättymiskoodi</para></entry>
+            <entry colname="COLSPEC1">
+              <para>Kuvaus</para></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row valign="top">
+            <entry>
+              <para><varname>0</varname></para>
+            </entry>
+            <entry>
+              <para>Käyttäjä painoi joko <guibutton>OK</guibutton> tai <guibutton>Sulje</guibutton>.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>1</varname></para>
+            </entry>
+            <entry>
+              <para>Käyttäjä painoi <guibutton>Peru</guibutton> tai käytti ikkunapainikkeita sulkemaan valintaikkunan.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>-1</varname></para>
+            </entry>
+            <entry>
+              <para>Tapahtui odottamaton virhe.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>5</varname></para>
+            </entry>
+            <entry>
+              <para>Ikkuna suljettiin aikarajan päätyttyä.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    </sect2>
+
+
+  <!-- ==== General Options ====== -->
+
+  <sect2 id="zenity-usage-general-options">
+    <title>Yleiset valitsimet</title>
+
+    <para>Kaikki <application>Zenity</application>-ikkunat tukevat seuraavia yleisiä valitsimia:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--title</option>=<replaceable>otsikko</replaceable></term>
+	<listitem>
+	  <para>Määrittää ikkunan otsikon.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--window-icon</option>=<replaceable>kuvakepolku</replaceable></term>
+	<listitem>
+	  <para>Määrittää kuvakkeen, joka näytetään ikkunan kehyksessä. Saatavilla on myös neljä valmista kuvaketta, jotka saa käyttöön seuraavilla avainsanoilla - "info" (tietoa), "warning" (varoitus), "question" (kysymys) ja "error" (virhe).</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--width</option>=<replaceable>leveys</replaceable></term>
+	<listitem>
+	  <para>Määrittää ikkunan leveyden.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--height</option>=<replaceable>korkeus</replaceable></term>
+	<listitem>
+	  <para>Määrittää ikkunan korkeuden.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--timeout</option>=<replaceable>aikaraja</replaceable></term>
+	<listitem>
+	  <para>Määrittää aikarajan sekunteina, jonka jälkeen ikkuna suljetaan.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-help-options">
+    <title>Ohjevalitsimet</title>
+
+    <para><application>Zenity</application> tarjoaa seuraavat ohjevalitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--help</option></term>
+	<listitem>
+	  <para>Näyttää lyhennetyn ohjetekstin.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--help-all</option></term>
+	<listitem>
+	  <para>Näyttää täyden ohjetekstin kaikista ikkunatyypeistä.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-general</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin yleisistä ikkunavalitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-calendar</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin kalenteri-ikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-entry</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin tekstisyöttöikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-error</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin virheikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-info</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin tietoikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-file-selection</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin tiedoston valintaikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-list</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin luetteloikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-notification</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin ilmoituskuvakkeiden valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-progress</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin edistymisikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-question</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin kysymysikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-warning</option></term>
+	<listitem>
+	  <para>Näyttää ohjetekstin varoitusikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-text-info</option></term>
+	<listitem>
+	  <para>Näyttää ohjeen tietoikkunan valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-misc</option></term>
+	<listitem>
+	  <para>Näyttää ohjeen sekalaisista valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-gtk</option></term>
+	<listitem>
+	  <para>Näyttää ohjeen GTK+-valitsimista.</para>
+	</listitem>
+      </varlistentry>
+ 
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-miscellaneous-options">
+    <title>Sekalaisia valitsimia</title>
+
+    <para><application>Zenity</application>llä on myös seuraavat sekalaiset valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--about</option></term>
+	<listitem>
+	  <para>Näyttää <guilabel>Tietoja Zenitystä</guilabel> -ikkunan, joka sisältää tiedot <application>Zenity</application>n versiosta, tekijänoikeuksista ja kehittäjistä.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--version</option></term>
+	<listitem>
+	  <para>Näyttää <application>Zenityn</application> versionumeron.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== GTK+ Options ====== -->
+
+  <sect2 id="zenity-gtk-options">
+    <title>GTK+-valitsimet</title>
+
+    <para><application>Zenity</application> tarjoaa tavanomaiset GTK+-valitsimet. Lisätietoa GTK+-valitsimista saa komennolla <command>zenity -?</command>.</para>
+
+  </sect2>
+
+  </sect1>
+<!-- ==== Calendar Options ====== -->
+
+  <sect1 id="zenity-calendar-options">
+    <title>Kalenteri-ikkuna</title>
+
+    <para>Käytä valitsinta <option>--calendar</option> luomaan kalenteri-ikkuna. <application>Zenity</application> palauttaa valitun päivämäärään vakiovirheeseen. Mikäli päivämäärää ei määritetty komentorivillä, ikkuna avataan sen hetkisen päivän kohdalta.</para>
+    <para>Kalenteri-ikkuna tarjoaa seuraavat valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>teksti</replaceable></term>
+	<listitem>
+	  <para>Määrittää tekstin, joka näkyy kalenteri-ikkunassa.</para>
+	</listitem>
+      </varlistentry>
+     	
+      <varlistentry>
+        <term><option>--day</option>=<replaceable>päivä</replaceable></term>
+	<listitem>
+	  <para>Määrittää päivän, joka on aluksi valittuna kalenteri-ikkunassa. <replaceable>päivä</replaceable> tulee korvata numerolla 1—31.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--month</option>=<replaceable>kuukausi</replaceable></term>
+	<listitem>
+	  <para>Määrittää kuukauden, joka on aluksi valittuna kalenteri-ikkunassa. <replaceable>kuukausi</replaceable> tulee korvata numerolla 1—12.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--year</option>=<replaceable>vuosi</replaceable></term>
+	<listitem>
+	  <para>Määrittää vuoden, joka on aluksi valittuna kalenteri-ikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--date-format</option>=<replaceable>muoto</replaceable></term>
+	<listitem>
+	  <para>Määrittää muotoilun, jossa kalenteri-ikkuna palauttaa päivämäärän valinnan jälkeen. Oletusmuotoilu riippuu maa-asetuksista. <replaceable>muoto</replaceable> täytyy koostua muotoilukoodeista, joita <command>strftime</command>-funktio hyväksyy, kuten <literal>%A %Y-%m-%d</literal>.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan kalenteri-ikkuna: <programlisting>
+        #!/bin/sh
+
+
+        if zenity --calendar \
+        --title="Valitse päivä" \
+        --text="Napsauta päivämäärää valitsemaan päivä." \
+        --day=10 --month=8 --year=2004
+          then echo $?
+          else echo "Päivää ei valittu"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-calendar-screenshot">
+      <title>Esimerkki kalenteri-ikkunasta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-calendar-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase>Esimerkki <application>Zenity</application>-kalenteri-ikkunasta</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+
+<!-- ==== File Selection Options ====== -->
+
+  <sect1 id="zenity-file-selection-options">
+    <title>Tiedoston valintaikkuna</title>
+
+    <para>Käytä valitsinta <option>--file-selection</option> luomaan tiedoston valintaikkuna. <application>Zenity</application> palauttaa valitut tiedostot tai hakemistot vakiovirheeseen. Oletusmoodi tiedoston valintaikkunalle on avaus.</para>
+    <para>Tiedoston valintaikkuna tarjoaa seuraavat valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>tiedostonimi</replaceable></term>
+	<listitem>
+	  <para>Määrittää tiedoston tai hakemiston, joka on aluksi ikkunan tullessa näkyviin valittuna tiedoston valintaikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--multiple</option></term>
+	<listitem>
+	  <para>Sallii valita kerralla useamman tiedoston tiedoston valintaikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--directory</option></term>
+	<listitem>
+	  <para>Sallii vain hakemistojen valitsemisen tiedoston valintaikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--save</option></term>
+	<listitem>
+	  <para>Asettaa tiedoston valintaikkunan tallennustilaan.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--separator</option>=<replaceable>erotin</replaceable></term>
+	<listitem>
+	  <para>Määrittää merkkijonon, jota käytetään erottamaan tiedostot palautettavassa tiedostonimien luettelossa.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan tiedoston valintaikkuna: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection --title="Valitse tiedosto"`
+
+        case $? in
+                 0)
+                        echo "\"$FILE\" valittu.";;
+                 1)
+                        echo "Tiedostoa ei valittu.";;
+                -1)
+                        echo "Tiedostoa ei valittu.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-fileselection-screenshot">
+      <title>Esimerkki tiedoston valintaikkunasta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-fileselection-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Esimerkki <application>Zenity</application>n tiedoston valintaikkunasta</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Notification Options ====== -->
+  <sect1 id="zenity-notification-options">
+    <title>Ilmoituskuvake</title>
+
+    <para>
+    </para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>teksti</replaceable></term>
+	<listitem>
+	  <para>Määrittää tekstin, joka näkyy ilmoitusalueella.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan ilmoituskuvake: <programlisting>
+        #!/bin/sh
+
+        zenity --notification\
+          --window-icon="info" \
+          --text="Järjestelmän päivitys on välttämätön!"
+      </programlisting></para>
+
+    <figure id="zenity-notification-screenshot">
+      <title>Esimerkki ilmoituskuvakkeesta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-notification-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase>Esimerkki <application>Zenity</application>-ilmoituskuvakkeesta</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+<!-- ==== List Options ====== -->
+
+  <sect1 id="zenity-list-options">
+    <title>Luetteloikkuna</title>
+
+    <para>Käytä valitsinta <option>--list</option> luomaan luetteloikkuna. <application>Zenity</application> palauttaa valittujen rivien ensimmäisten sarakkeiden tiedot vakiovirheeseen.</para>
+
+    <para>Ikkunan sisältö tulee määrittää sarake sarakkeelta ja rivi riviltä. Tiedot voidaan syöttää ikkunaan vakiosyötteen kautta. Jokainen tietue pitää erottaa rivinvaihtomerkillä. </para>
+
+    <para>Mikäli käytössä on valitsin <option>--checklist</option> tai <option>--radiolist</option>, jokaisen rivin tulee alkaa joko 'TRUE' (tosi) tai 'FALSE' (epätosi).</para>
+
+    <para>Luetteloikkuna tarjoaa seuraavat valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--column</option>=<replaceable>sarake</replaceable></term>
+	<listitem>
+	  <para>Määrittää luetteloikkunassa näkyvien sarakkeiden otsakkeet. Määritä valitsin <option>--column</option> jokaiselle sarakkeelle, jonka haluat näkyvän ikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--checklist</option></term>
+	<listitem>
+	  <para>Määrittää, että ensimmäinen sarake luetteloikkunassa sisältää valintaruutuja.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--radiolist</option></term>
+	<listitem>
+	  <para>Määrittää, että ensimmäinen sarake luetteloikkunassa sisältää radiovalitsimia.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+	<listitem>
+	  <para>Sallii näytettävien tietuiden muokaamisen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--separator</option>=<replaceable>erotin</replaceable></term>
+	<listitem>
+	  <para>Määrittää mitä merkkijonoa käytetään kun luetteloikkuna palauttaa valitut tietueet.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--print-column</option>=<replaceable>sarake</replaceable></term>
+	<listitem>
+	  <para>Määrittää mitkä sarakkeet tulostetaan valinnan jälkeen. Oletussarake on "1". "ALL" (kaikki) tarkoittaa, että kaikki luettelon sarakkeet tulostetaan.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan luetteloikkuna: <programlisting>
+        #!/bin/sh
+
+        zenity --list \
+          --title="Valitse viat joita haluat katsoa" \
+          --column="Vikanumero" --column="Vakavuus" --column="Kuvaus" \
+            992383 normaali "GtkTreeView kaatuu monivalinnoissa" \
+            293823 korkea "GNOME-sanakirja ei osaa käyttää välipalvelinta" \
+            393823 kriittinen "Valikkojen muokaus ei toimi GNOME 2.0:ssa"
+      </programlisting></para>
+
+    <figure id="zenity-list-screenshot">
+      <title>Esimerkki luetteloikkunasta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-list-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Esimerkki <application>Zenity</application>-luetteloikkunasta</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Message Options ====== -->
+
+  <sect1 id="zenity-message-options">
+    <title>Viesti-ikkunat</title>
+
+    <para><application>Zenity</application> voi luoda neljän tyyppisia viesti-ikkunoita:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Virhe</para>
+      </listitem>
+      <listitem>
+        <para>Tiedoksi</para>
+      </listitem>
+      <listitem>
+        <para>Kysymys</para>
+      </listitem>
+      <listitem>
+        <para>Varoitus</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Kaikille ikkunatyypeille valitsin <option>--text</option> määrittää ikkunassa näytettävän tekstin.</para>
+
+    <sect2 id="zenity-error-dialog">
+      <title>Virheikkuna</title>
+
+      <para>Käytä valitsinta <option>--error</option> luomaan virheikkuna.</para>
+
+      <para>Seuraava esimerkkiskripti näyttää kuinka luodaan virheikkuna: <programlisting>
+          #!/bin/bash
+
+          zenity --error \
+          --text="Tiedostoa /var/log/syslog ei löytynyt."
+        </programlisting></para>
+
+      <figure id="zenity-error-screenshot">
+        <title>Esimerkki virheikkunasta</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-error-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Esimerkki <application>Zenity</application>-virheikkuna</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-info-dialog">
+      <title>Tietoikkuna</title>
+
+      <para>Käytä valitsinta <option>--info</option> luomaan tietoikkuna.</para>
+
+      <para>Seuraava esimerkkiskripti näyttää kuinka luodaan tietoikkuna: <programlisting>
+          #!/bin/bash
+
+          zenity --info \
+          --text="Yhdistäminen valmis. Päivitetty 3/10 tiedostoa."
+        </programlisting></para>
+
+      <figure id="zenity-information-screenshot">
+        <title>Esimerkki tietoikkunasta</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-information-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Esimerkki <application>Zenity</application>-tietoikkunasta</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-question-dialog">
+      <title>Kysymysikkuna</title>
+
+      <para>Käytä valitsinta <option>--question</option> luomaan kysymysikkuna.</para>
+
+      <para>Seuraava esimerkki näyttää kuinka luodaan kysymysikkuna: <programlisting>
+          #!/bin/bash
+
+          zenity --question \
+          --text="Haluatko varmasti jatkaa?"
+        </programlisting></para>
+
+      <figure id="zenity-question-screenshot">
+        <title>Esimerkki kysymysikkunasta</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-question-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Esimerkki <application>Zenity</application>-kysymysikkunasta</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-warning-dialog">
+      <title>Varoitusikkuna</title>
+
+      <para>Käytä valitsinta <option>--warning</option> luomaan varoitusikkuna.</para>
+
+      <para>Seuraava esimerkki näyttää kuinka luodaan varoitusikkuna: <programlisting>
+          #!/bin/bash
+        
+          zenity --warning \
+          --text="Irrota virtajohto sähköiskujen välttämiseksi."
+        </programlisting></para>
+
+      <figure id="zenity-warning-screenshot">
+        <title>Esimerkki varoitusikkunasta</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-warning-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase>Esimerkki <application>Zenity</application>-varoitusikkunasta</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+  </sect1>
+
+<!-- ==== Progress Options ====== -->
+
+  <sect1 id="zenity-progress-options">
+    <title>Edistymisikkuna</title>
+
+    <para>Käytä valitsinta <option>--progress</option> luomaan edistymisikkuna.</para>
+
+    <para><application>Zenity</application> lukee datan vakiosyötteestä rivi kerrallaan. Mikäli rivi alkaa #-merkillä, teksti päivitetään rivin tekstillä. Mikäli rivi sisältää vain numeron, edistymisprosentiksi päivitetään annettu numero.</para>
+	
+    <para>Edistymisikkuna tarjoaa seuraavat valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>teksti</replaceable></term>
+	<listitem>
+	  <para>Määrittää tekstin, joka näytetään edistymisikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--percentage</option>=<replaceable>prosentit</replaceable></term>
+	<listitem>
+	  <para>Määrittää prosentuaalisen osuuden alussa, joka asetetaan edistymisikkunaan.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--auto-close</option></term>
+	<listitem>
+	  <para>Edistymisikkuna suljetaan automaattisesti kun 100 % saavutetaan.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--pulsate</option></term>
+	<listitem>
+	  <para>Määrittää, että edistymisikkuna sykkii kunnes EOF-merkki (tiedoston loppumerkki) luetaan vakiosyötteestä.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan edistymisikkuna: <programlisting>
+        #!/bin/sh
+        (
+        echo "10" ; sleep 1
+        echo "# Päivitetään postilokeja" ; sleep 1
+        echo "20" ; sleep 1
+        echo "# Nollataan cron-töitä" ; sleep 1
+        echo "50" ; sleep 1
+        echo "Tämä rivi vain ohitetaan" ; sleep 1
+        echo "75" ; sleep 1
+        echo "# Uudelleenkäynnistetään järjestelmä" ; sleep 1
+        echo "100" ; sleep 1
+        ) |
+        zenity --progress \
+          --title="Päivitetään järjestelmälokeja" \
+          --text="Tutkitaan postilokeja..." \
+          --percentage=0
+
+        if [ "$?" = -1 ] ; then
+                zenity --error \
+                  --text="Päivitys keskeytetty."
+        fi
+
+      </programlisting></para>
+
+    <figure id="zenity-progress-screenshot">
+      <title>Esimerkki edistymisikkunasta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-progress-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Esimerkki <application>Zenity</application>-edistymisikkunasta</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Text Entry Options ====== -->
+
+  <sect1 id="zenity-text-entry-options">
+    <title>Tekstinsyöttöikkuna</title>
+
+    <para>Käytä valitsinta <option>--entry</option> luomaan tekstinsyöttöikkuna. <application>Zenity</application> palauttaa syöttökentän sisällön vakiovirheeseen.</para>	
+    <para>Tekstinsyöttöikkuna tarjoaa seuraavat valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>teksti</replaceable></term>
+	<listitem>
+	  <para>Määrittää tekstin, joka näkyy tekstinsyöttöikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--entry-text</option>=<replaceable>teksti</replaceable></term>
+	<listitem>
+	  <para>Määrittää tekstin, joka näytetään syöttökentässä teksinsyöttöikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--hide-text</option></term>
+	<listitem>
+	  <para>Piilottaa tekstin syöttökentässä tekstinsyöttöikkunassa.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan tekstinsyöttöikkuna: <programlisting>
+        #!/bin/sh
+
+        if zenity --entry \
+        --title="Lisää syöte" \
+        --text="Syötä _salasanasi:" \
+        --entry-text "salasana" \
+        --hide-text
+          then echo $?
+          else echo "Salasanaa ei syötetty"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-entry-screenshot">
+      <title>Esimerkki tekstinsyöttöikkunasta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-entry-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Esimerkki <application>Zenity</application>-tekstinsyöttöikkunasta</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+
+<!-- ==== Text Information Options ====== -->
+
+  <sect1 id="zenity-text-options">
+    <title>Tekstitietoikkuna</title>
+
+    <para>Käytä valitsinta <option>--text-info</option> luomaan tekstitietoikkuna.</para>
+	
+    <para>Tekstitietoikkuna tarjoaa seuraavat valitsimet:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>tiedostonimi</replaceable></term>
+	<listitem>
+	  <para>Määrittää tiedoston, joka ladataan tekstitietoikkunaan.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+        <listitem>
+          <para>Sallii näytettävän tekstin muokkaamisen. Muokattu teksti palautetaan vakiovirheeseen kun ikkuna suljetaan.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Seuraava esimerkkiskripti näyttää kuinka luodaan tekstitietoikkuna: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection \
+          --title="Valitse tiedosto"`
+
+        case $? in
+                 0)
+                        zenity --text-info \
+                          --title=$FILE \
+                          --filename=$FILE \
+                          --editable 2&gt;/tmp/tmp.txt;;
+                 1)
+                        echo "Tiedostoa ei valittu.";;
+                -1)
+                        echo "Tiedostoa ei valittu.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-text-screenshot">
+      <title>Esimerkki tekstilaatikkoikkunasta</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-text-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase>Esimerkki <application>Zenity</application>-tekstilaatikkoikkunasta</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+</article>

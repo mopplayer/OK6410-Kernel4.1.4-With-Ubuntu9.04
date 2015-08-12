@@ -1,0 +1,95 @@
+TrueType/ and CID/ subdirectories are created under
+/var/lib/defoma/x-ttcidfont-conf.d/dirs. 
+Symlinks to the font files and dynamically generated fonts.scale|alias
+are put under these subdirectories.
+
+What font packages have to do is:
+ 1) prepare Defoma hintfile for the fonts.
+ 2) modify the postinst and prerm as defoma-doc describes.
+The .scale and .alias file, calling update-fonts-scale and
+mkfontdir is no more needed, and should not appear.
+
+Then how to specify the XLFD and aliases?
+You can specify the elements of XLFD and aliases through Defoma
+hintfile.
+Following is the list of the hinttypes and equivalent XLFD elements 
+used to specify the elements of XLFD.
+
+NOTE: Replace space ( ) with underscore (_) if the value contains space.
+X allows space in XLFD like -arphic-AR PL Mingti2L Big5-medium-, but
+space is interpreted as a separater in Defoma, so things becomes complicated.
+
+X-Foundry: fndry
+X-Family: fmly
+X-Weight: wght
+X-Slant: slant
+X-SetWidth: sWdth
+X-Style: adstyl
+X-PixelSize: pxlsz
+X-PointSize: ptSz
+X-Resolution: resx-resy
+X-Spacing: spc
+X-AverageWidth: avgWdth
+X-RegistryEncoding: rgstry-encdng
+
+Note that X-Resolution affects both resx and resy, and that X-RegistryEncoding
+affects both rgstry and encdng.
+You can specify several values for the X-RegistryEncoding and X-Spacing
+hinttypes, and you must specify only one value for the others.
+
+The spacing of XLFD is decided in the following way.
+
+  1) If X-Spacing is not specified:
+	If Width is set to Variable, the spacing becomes -p-.
+	If Width is set to Fixed, the spacing becomes -c- and -m-, and which
+	one is prior is decided in /etc/defoma/config/x-ttcidfont-conf.conf.
+  2) If X-Spacing is specified:
+	If X-Spacing contains multiple values like "X-Spacing = c m p",
+	the first value (in this case 'c') is the most prior. Specified
+	spacing letters (in this case c, m, and p) are all generated.
+
+XLFDs with the most prior spacing letter are registered to defoma in xfont
+category so that they'll be used in font configuration of applications.
+
+Following is the list of the hinttypes used to specify aliases.
+
+X-Alias:
+	This hinttype takes a part of an alias of XLFD, from fndry to 
+	adstyl, in XLFD syntax. The value for this hinttyle goes like:
+	 -default-kai-medium-r-normal-
+
+X-SimpleAlias:
+	This hinttype specifies a non-XLFD alias. The value for this 
+	hinttype goes like: lucidasans-bold
+
+X-ElementAlias:
+	This hinttype specifies aliases for each of the XLFD elements.
+	For example, if you want an alias like default as fndry, kai
+	as family and 72 as resx and resy, the value becomes:
+	foundry=default:family=kai:resx=72:resy=72
+	The syntax is <xlfd-element>=<value>[:<xlfd-element>=<value>:[...]]
+	Allowed <xlfd-element> are: foundry, family, weight, slant, setwidth,
+	style, pixel, point, resx, resy, spacing, avwsidth, encoding.
+
+There're some xtt-specific issues.
+First, X-Alias and X-SimpleAlias are ignored.
+Second, -medium-r-, -medium-i-, -medium-ri-, -medium-o-, -medium-ro-, 
+-bold-r-, -bold-i-, -bold-ri-, -bold-o-, -bold-ro- are created unless 
+Transform hinttype is set to NotBoldize or NotSlant.
+The default angle for 'o' and 'ro' is 0.2 and -0.2 respectively, and
+that for 'i' and 'ri' is 0.4 and -0.4 respectively. You can control
+its behavior by TTCap hinttype.
+
+TTCap hinttype takes the following values.
+
+halfwidth-sw=<value> .. specifies the sw value for halfwidth glyphs.
+halfwidth-bw=<value> .. specifies the bw value for halfwidth glyphs.
+italic-angle=<value> .. specifies the ai value for -i- and -ri-.
+oblique-angle=<value> .. specifies the ai value for -o- and -ro-.
+bold-string=<value> .. specifies the wght XLFD element for bold.
+no-bold .. do not generate bold.
+no-italic .. do not generate -i-.
+no-ritalic .. do not generate -ri-.
+no-oblique .. do not generate -o-.
+no-roblique .. do not generate -ro-.
+

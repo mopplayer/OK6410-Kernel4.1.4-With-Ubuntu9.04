@@ -1,0 +1,4 @@
+89b254a4618b0de9c52969709ed9ba7e  lib/security/pam_ck_connector.so
+f21b6d42be4ac10391c47cf4acc76bd0  usr/share/pam-configs/consolekit
+d4adc61f0875f8ca141c1710660a035d  usr/share/doc/libpam-ck-connector/copyright
+d9fe6a5161473a2ee1fe34d99493858a  usr/share/man/man8/pam_ck_connector.8.gz

@@ -1,0 +1,3 @@
+audio/basic; /usr/bin/esdplay %s
+audio/x-wav; /usr/bin/esdplay %s
+audio/x-aiff; /usr/bin/esdplay %s

@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY author1 "Sun">
+<!ENTITY author2 "Java Desktop System Documentation Team">
+<!ENTITY publisher "Sun Microsystems, Inc.">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.6.0">
+<!ENTITY app "<application>Zenity</application>">
+<!ENTITY appname "Zenity">
+<!ENTITY date "August 2004">
+<!ENTITY manrevision "2.0">
+]>
+<!-- ================ Document Header ================= -->
+<article id="index" lang="de">
+
+  <articleinfo>
+    <title>Zenity-Handbuch</title>
+    <subtitle>Zenity-Desktop-Anwenderhandbuch V2.0</subtitle>
+    <copyright>
+	    <year>2003</year>
+	    <year>2004</year>
+	    <holder>Sun Microsystems, Inc.</holder>
+    </copyright><copyright><year>2008, 2009</year><holder>Mario Blättermann (mariobl@gnome.org)</holder></copyright>
+
+    <!-- Translators: uncomment this
+    <copyright>
+	    <year>2004</year>
+	    <holder>ME_THE_TRANSLATOR</holder>
+    </copyright>
+    -->
+
+    <publisher>
+	    <publishername>Sun Microsystems, Inc.</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para>Das vorliegende Dokument kann gemäß den Bedingungen der GNU Free Documentation License (GFDL), Version 1.1 oder jeder späteren, von der Free Software Foundation veröffentlichten Version ohne unveränderbare Abschnitte sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <ulink type="help" url="ghelp:fdl">Link</ulink> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS.</para>
+         <para>Dieses Handbuch ist Teil einer Sammlung von GNOME-Handbüchern, die unter der GFDL veröffentlicht werden. Wenn Sie dieses Handbuch getrennt von der Sammlung weiterverbreiten möchten, können Sie das tun, indem Sie eine Kopie der Lizenz zum Handbuch hinzufügen, wie es in Abschnitt 6 der Lizenz beschrieben ist.</para>
+
+	<para>Viele der Namen, die von Unternehmen verwendet werden, um ihre Produkte und Dienstleistungen von anderen zu unterscheiden, sind eingetragene Warenzeichen. An den Stellen, an denen diese Namen in einer GNOME-Dokumentation erscheinen, werden die Namen in Großbuchstaben oder mit einem großen Anfangsbuchstaben geschrieben, wenn das GNOME-Dokumentationsprojekt auf diese Warenzeichen hingewiesen wird.</para>
+
+	<para>DAS DOKUMENT UND VERÄNDERTE FASSUNGEN DES DOKUMENTS WERDEN UNTER DEN BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM WEITERGEHENDEN VERSTÄNDNIS, DASS: <orderedlist>
+		<listitem>
+		  <para>DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT GESTATTET AUßER UNTER BEACHTUNG DIESES HAFTUNGSAUSSCHLUSSES UND</para>
+		</listitem>
+		<listitem>
+		  <para>UNTER KEINEN UMSTÄNDEN UND AUF BASIS KEINER RECHTSGRUNDLAGE, EGAL OB DURCH UNERLAUBTEN HANDLUNGEN (EINSCHLIEßLICH FAHRLÄSSIGKEIT), VERTRAG ODER ANDERWEITIG KANN DER AUTOR, URSPRUNGSAUTOR, EIN MITWIRKENDER ODER EIN VERTRIEBSPARTNER DIESES DOKUMENTS ODER EINER VERÄNDERTEN FASSUNG DES DOKUMENTS ODER EIN ZULIEFERER EINER DIESER PARTEIEN, HAFTBAR GEMACHT WERDEN FÜR DIREKTE, INDIREKTE, SPEZIELLE, VERSEHENTLICHE ODER FOLGESCHÄDEN JEGLICHER ART, EINSCHLIEßLICH UND OHNE EINSCHRÄNKUNGEN SCHÄDEN DURCH VERLUST VON KULANZ, ARBEITSAUSFALL, COMPUTERVERSAGEN ODER COMPUTERFEHLFUNKTIONEN ODER ALLE ANDEREN SCHÄDEN ODER VERLUSTE, DIE SICH AUS ODER IN VERBINDUNG MIT DER VERWENDUNG DES DOKUMENTS UND VERÄNDERTER FASSUNGEN DES DOKUMENTS ERGEBEN, AUCH WENN DIE OBEN GENANNTEN PARTEIEN ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WAREN.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Java-Desktopsystem-Dokumentationsteam</surname>
+        <affiliation><orgname>Sun Microsystems, Inc.</orgname></affiliation>
+      </author>
+      <author role="maintainer">
+        <firstname>Glynn</firstname>
+        <surname>Foster</surname>
+        <affiliation>
+          <orgname>GNOME-Dokumentationsprojekt</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Nicholas</firstname>
+        <surname>Curran</surname>
+        <affiliation>
+          <orgname>GNOME-Dokumentationsprojekt</orgname>
+        </affiliation>
+      </editor>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Zenity-Desktop-Anwenderhandbuch V2.0</revnumber>
+        <date>August 2004</date>
+        <revdescription>
+          <para role="author">Sun Java-Desktopsystem-Dokumentationsteam</para>
+          <para role="publisher">Sun Microsystems, Inc.</para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Zenity-Handbuch V1.0</revnumber>
+        <date>Januar 2003</date>
+        <revdescription>
+          <para role="author">Glynn Foster</para>
+          <para role="publisher">GNOME-Dokumentationsprojekt</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Dieses Handbuch beschreibt Version 2.6.0 von Zenity.</releaseinfo>
+
+    <legalnotice>
+	    <title>Rückmeldungen</title>
+	    <para>Zum Senden von Rückmeldungen folgen Sie den Anweisungen auf der <ulink url="ghelp:gnome-feedback" type="help">GNOME-Seite für Rückmeldungen</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+
+    </legalnotice>
+    <abstract role="description">
+            <para>Zenity entstand aus »gdialog«, der GNOME-Variante von »dialog«, welches Ihnen erlaubt, Dialogfenster über die Befehlszeile und mittels Shell-Skripten anzuzeigen.</para>
+    </abstract>
+  </articleinfo>
+  
+  <indexterm>
+    <primary>Zenity-Befehl</primary>
+  </indexterm>
+  <indexterm>
+    <primary>Dialog-Erzeuger</primary>
+  </indexterm>
+<!-- ================ Document Body ================= -->
+
+<!-- ==== Introduction ====== -->
+
+  <sect1 id="zenity-introduction">
+    <title>Einführung</title>
+
+    <para><application>Zenity</application> erlaubt Ihnen die Erzeugung der folgenden Typen simpler Dialoge:</para>
+
+    <itemizedlist>
+        <listitem><para>Kalender</para></listitem>
+	<listitem><para>Dateiauswahl</para></listitem>
+	<listitem><para>Liste</para></listitem>
+	<listitem><para>Benachrichtigungssymbol</para></listitem>
+        <listitem><para>Meldung</para>
+            <itemizedlist>
+	        <listitem><para>Fehler</para></listitem>
+		<listitem><para>Information</para></listitem>
+		<listitem><para>Frage</para></listitem>
+		<listitem><para>Warnung</para></listitem>
+	    </itemizedlist>
+	</listitem>
+	<listitem><para>Fortschritt</para></listitem>
+        <listitem><para>Textfeld</para></listitem>
+	<listitem><para>Textinformation</para></listitem>
+    </itemizedlist>
+
+  </sect1>
+
+<!-- ==== Usage ====== -->
+
+  <sect1 id="zenity-usage">
+    <title>Benutzung</title>
+
+    <para>Wenn Sie Skripte schreiben, können Sie <application>Zenity</application> zur Erzeugung einfacher Dialoge zur Interaktion mit dem Benutzer verwenden, wie folgende:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Sie können einen Dialog erzeugen, der die Eingabe von Informationen durch den Benutzer erfordert. Beispielsweise können Sie den Benutzer anweisen, ein Datum aus einem Kalenderdialog oder eine Datei aus einem Dateiauswahldialog zu wählen.</para>
+      </listitem>
+      <listitem>
+        <para>Sie können einen Dialog erzeugen, um dem Benutzer Informationen zur Verfügung zu stellen. Beispielsweise können Sie einen Fortschrittsanzeige-Dialog erzeugen, um auf den aktuellen Status eines Vorgangs hinzuweisen, oder einen Warndialog, um den Benutzer zu warnen.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Wenn der Benutzer den Dialog schließt, schreibt <application>Zenity</application> den vom Dialog ausgegebenen Text in die Standardausgabe.</para>
+
+    <note>
+      <para>Wenn Sie <application>Zenity</application>-Befehle schreiben, stellen Sie bitte sicher, dass Sie jedes Argument stets in Anführungszeichen einschließen.</para>
+      <para>Benutzen Sie beispielsweise: <screen><userinput><command>zenity --calendar --title="Urlaubsplaner"</command></userinput></screen> Benutzen Sie nicht: <screen><userinput><command>zenity --calendar --title=Urlaubsplaner</command></userinput></screen></para>
+      <para>Wenn Sie keine Anführungszeichen verwenden, könnten Sie unerwartete Ergebnisse erhalten.</para>
+    </note>
+
+    <sect2 id="zenity-usage-mnemonics">
+      <title>Zugriffstasten</title>
+	<para>Eine Zugriffstaste ist eine Taste, die Ihnen die Ausführung einer Aktion mit der Tastatur zur Auswahl eines Befehls aus einem Menü oder einem Dialog erlaubt, anstatt dafür die Maus zu benutzen.</para>
+	<para>Einige <application>Zenity</application>-Dialoge unterstützen die Verwendung von Zugriffstasten. Um das Zeichen für den Tastaturzugriff festzulegen, setzen Sie einen Unterstrich vor das Zeichen im Dialogtext. Das folgende Beispiel zeigt, wie Sie den Buchstaben »W« als Zugriffstaste festlegen.</para>
+	<screen><userinput>"_Wählen Sie einen Namen"</userinput></screen>
+    </sect2>
+
+    <sect2 id="zenity-usage-exitcodes">
+      <title>Rückgabewerte</title>
+    <para><application>Zenity</application> erzeugt die folgenden Rückgabewerte:</para>
+
+    <informaltable frame="all">
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="COLSPEC0" colwidth="50*"/>
+        <colspec colname="COLSPEC1" colwidth="50*"/>
+        <thead>
+          <row valign="top">
+            <entry colname="COLSPEC0">
+              <para>Rückgabewert</para></entry>
+            <entry colname="COLSPEC1">
+              <para>Beschreibung</para></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row valign="top">
+            <entry>
+              <para><varname>0</varname></para>
+            </entry>
+            <entry>
+              <para>Der Benutzer hat entweder auf <guibutton>OK</guibutton> oder auf <guibutton>Schließen</guibutton> gedrückt.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>1</varname></para>
+            </entry>
+            <entry>
+              <para>Der Benutzer hat entweder auf <guibutton>Abbrechen</guibutton> gedrückt oder die Fensterfunktionen zum Schließen des Dialogs benutzt.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>-1</varname></para>
+            </entry>
+            <entry>
+              <para>Es ist ein unerwarteter Fehler aufgetreten.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>5</varname></para>
+            </entry>
+            <entry>
+              <para>Der Dialog wurde geschlossen, weil die Wartezeit verstrichen ist.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    </sect2>
+
+
+  <!-- ==== General Options ====== -->
+
+  <sect2 id="zenity-usage-general-options">
+    <title>Allgemeine Einstellungen</title>
+
+    <para>Alle <application>Zenity</application>-Dialoge unterstützen die folgenden allgemeinen Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--title</option>=<replaceable>Titel</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie den Titel des Dialogs fest.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--window-icon</option>=<replaceable>Symbolpfad</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie das Symbol fest, das im Fensterrahmen des Dialogs angezeigt wird. Es gibt 4 Standardsymbole, die auch über die Schlüsselwörter »info«, »warning«, »question« und »error« bereitgestellt werden.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--width</option>=<replaceable>Breite</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie die Breite des Dialogs fest.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--height</option>=<replaceable>Höhe</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie die Höhe des Dialogs fest.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--timeout</option>=<replaceable>timeout</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie die Wartezeit in Sekunden bis zum Schließen des Dialogs fest.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-help-options">
+    <title>Hilfeoptionen</title>
+
+    <para><application>Zenity</application> stellt die folgenden Hilfeoptionen bereit:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--help</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie einen Hilfetext in Kurzform an.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--help-all</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den kompletten Hilfetext für alle Dialoge an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-general</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für allgemeine Dialogoptionen an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-calendar</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Kalenderdialogoptionen an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-entry</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Texteingabedialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-error</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Fehlerdialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-info</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Informationsdialogoptionen an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-file-selection</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Dateiauswahldialogs.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-list</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Listendialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-notification</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Benachrichtigungsymbols an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-progress</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Fortschrittsanzeige-Dialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-question</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Fragedialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-warning</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für die Optionen des Warndialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-text-info</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für Optionen des Informationsdialogs an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-misc</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für nicht auf einen bestimmten Dialog bezogene Optionen an.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-gtk</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den Hilfetext für die GTK+-Optionen an.</para>
+	</listitem>
+      </varlistentry>
+ 
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-miscellaneous-options">
+    <title>Verschiedene Optionen</title>
+
+    <para><application>Zenity</application> stellt außerdem die folgenden verschiedenen Optionen zur Verfügung:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--about</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie den <guilabel>Info zu Zenity</guilabel>-Dialog an, der Versionsinformationen, Copyright-Informationen und Entwicklerinformationen über <application>Zenity</application> enthält.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--version</option></term>
+	<listitem>
+	  <para>Damit zeigen Sie die Versionsnummer von <application>Zenity</application> an.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== GTK+ Options ====== -->
+
+  <sect2 id="zenity-gtk-options">
+    <title>GTK+-Optionen</title>
+
+    <para><application>Zenity</application> unterstützt die Standardoptionen von GTK+. Um weitere Informationen über die GTK+-Optionen anzuzeigen, führen Sie den Befehl <command>zenity -?</command> aus.</para>
+
+  </sect2>
+
+  </sect1>
+<!-- ==== Calendar Options ====== -->
+
+  <sect1 id="zenity-calendar-options">
+    <title>Kalenderdialog</title>
+
+    <para>Benutzen Sie die Option <option>--calendar</option> zur Erzeugung eines Kalenderdialogs. <application>Zenity</application> gibt das gewählte Datum an die Standardausgabe zurück. Wenn kein Datum auf der Befehlszeile angegeben wird, verwendet der Dialog das aktuelle Datum.</para>
+    <para>Der Kalenderdialog unterstützt die folgenden Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>Text</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie den Text fest, der im Kalenderdialog angezeigt wird.</para>
+	</listitem>
+      </varlistentry>
+     	
+      <varlistentry>
+        <term><option>--day</option>=<replaceable>Tag</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie den im Kalenderdialog ausgewählten Tag fest. <replaceable>Tag</replaceable> muss eine Zahl von 1 bis 31 sein.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--month</option>=<replaceable>Monat</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie den im Kalenderdialog ausgewählten Monat fest. <replaceable>Monat</replaceable> muss eine Zahl zwischen 1 und 12 sein.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--year</option>=<replaceable>Jahr</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie das im Kalenderdialog ausgewählte Jahr fest.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--date-format</option>=<replaceable>Format</replaceable></term>
+	<listitem>
+	  <para>Damit legen Sie das Format fest, das vom Kalenderdialog nach der Auswahl des Datums zurückgegeben wird. Das Standardformat ist abhängig von Ihren Spracheinstellungen. <replaceable>Format</replaceable> muss ein Format sein, das von der <command>strftime</command>-Funktion unterstützt wird, zum Beispiel <literal>%A %d/%m/%y</literal>.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie einen Kalenderdialog erzeugen können: <programlisting>
+        #!/bin/sh
+
+
+        if zenity --calendar \
+        --title="Datum auswählen" \
+        --text="Klicken Sie auf ein Datum, um es auszuwählen." \
+        --day=9 --month=4 --year=2008
+          then echo $?
+          else echo "Kein Datum ausgewählt"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-calendar-screenshot">
+      <title>Beispiel für einen Kalenderdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-calendar-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> Beispiel für einen Kalenderdialog</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+
+<!-- ==== File Selection Options ====== -->
+
+  <sect1 id="zenity-file-selection-options">
+    <title>Dateiauswahldialog</title>
+
+    <para>Verwenden Sie die Option <option>--file-selection</option> zur Erzeugung eines Dateiauswahldialogs. <application>Zenity</application> gibt die ausgewählten Dateien oder Ordner an die Standardausgabe zurück. Der Standardmodus für den Dateiauswahldialog ist »Öffnen«. </para>
+    <para>Der Dateiauswahldialog unterstützt die folgenden Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>Dateiname</replaceable></term>
+	<listitem>
+	  <para>Legt die Datei oder den Ordner fest, die oder der bei der ersten Anzeige des Dateiauswahldialogs angezeigt wird.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--multiple</option></term>
+	<listitem>
+	  <para>Erlaubt die Mehrfachauswahl von Dateien im Dateiauswahldialog.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--directory</option></term>
+	<listitem>
+	  <para>Erlaubt nur die Auswahl von Ordnern im Dateiauswahldialog.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--save</option></term>
+	<listitem>
+	  <para>Setzt den Dateiauswahldialog in den Modus »Speichern«.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--separator</option>=<replaceable>Trenner</replaceable></term>
+	<listitem>
+	  <para>Legt die Zeichenkette fest, die für die Trennung der zurückgegebenen Liste der Dateinamen verwendet wird.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie einen Dateiauswahldialog erzeugen können: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection --title="Wählen Sie eine Datei"`
+
+        case $? in
+                 0)
+                        echo "\"$FILE\" ausgewählt.";;
+                 1)
+                        echo "Keine Datei ausgewählt.";;
+                -1)
+                        echo "Keine Datei ausgewählt.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-fileselection-screenshot">
+      <title>Beispiel für einen Dateiauswahldialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-fileselection-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> Beispiel für einen Dateiauswahldialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Notification Options ====== -->
+  <sect1 id="zenity-notification-options">
+    <title>Benachrichtigungssymbol</title>
+
+    <para>
+    </para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>Text</replaceable></term>
+	<listitem>
+	  <para>Legt den Text fest, der im Benachrichtigungsfeld angezeigt wird.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie ein Benachrichtigungssymbol erzeugen: <programlisting>
+        #!/bin/sh
+
+        zenity --notification\
+          --window-icon="info" \
+          --text="Wichtige Systemaktualisierungen sind verfügbar!"
+      </programlisting></para>
+
+    <figure id="zenity-notification-screenshot">
+      <title>Beispiel für ein Benachrichtigungssymbol</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-notification-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> Beispiel für ein Benachrichtigungssymbol</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+<!-- ==== List Options ====== -->
+
+  <sect1 id="zenity-list-options">
+    <title>Listendialog</title>
+
+    <para>Verwenden Sie die Option <option>--list</option>, um einen Listendialog zu erzeugen. <application>Zenity</application> gibt die Einträge in der ersten Spalte der ausgewählten Zeile an die Standardausgabe zurück.</para>
+
+    <para>Die Daten für den Dialog müssen Spalte für Spalte und Zeile für Zeile angegeben werden. Die Daten können dem Dialog durch die Standardeingabe zur Verfügung gestellt werden. Die einzelnen Einträge müssen durch ein Newline-Zeichen voneinander getrennt werden.</para>
+
+    <para>Wenn Sie die Optionen <option>--checklist</option> oder <option>--radiolist</option> verwenden, muss jede Zeile entweder mit 'TRUE' oder mit 'FALSE' beginnen.</para>
+
+    <para>Der Listendialog unterstützt die folgenden Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--column</option>=<replaceable>Spalte</replaceable></term>
+	<listitem>
+	  <para>Legt die Spaltenüberschriften fest, die im Listendialog angezeigt werden sollen. Sie müssen eine <option>--column</option>-Option für jede Spalte angeben, die Sie im Listendialog anzeigen wollen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--checklist</option></term>
+	<listitem>
+	  <para>Legt fest, dass die erste Spalte im Listendialog Ankreuzfelder enthält.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--radiolist</option></term>
+	<listitem>
+	  <para>Legt fest, dass die erste Spalte im Listendialog Radioknöpfe enthalten soll.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+	<listitem>
+	  <para>Erlaubt die Bearbeitung der angezeigten Objekte.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--separator</option>=<replaceable>Trenner</replaceable></term>
+	<listitem>
+	  <para>Legt fest, welche Zeichenkette verwendet wird, wenn der Listendialog die ausgewählten Einträge zurück gibt.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--print-column</option>=<replaceable>Spalte</replaceable></term>
+	<listitem>
+	  <para>Dies legt fest, welche Spalte Ihrer Auswahl ausgegeben werden soll. Die Vorgabe ist »1«. Sie können »ALL« verwenden, um alle Spalten der Liste ausgeben zu lassen.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie einen Listendialog erzeugen: <programlisting>
+        #!/bin/sh
+
+        zenity --list \
+          --title="Fehlerberichte auswählen" \
+          --column="Kennung" --column="Wichtigkeit" --column="Beschreibung" \
+            992383 Normal "GtkTreeView crashes on multiple selections" \
+            293823 High "GNOME Dictionary does not handle proxy" \
+            393823 Critical "Menu editing does not work in GNOME 2.0"
+      </programlisting></para>
+
+    <figure id="zenity-list-screenshot">
+      <title>Beispiel für einen Listendialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-list-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> Beispiel für einen Listendialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Message Options ====== -->
+
+  <sect1 id="zenity-message-options">
+    <title>Meldungsdialoge</title>
+
+    <para><application>Zenity</application> kann vier verschiedene Typen von Meldungsdialogen erzeugen:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Fehler</para>
+      </listitem>
+      <listitem>
+        <para>Information</para>
+      </listitem>
+      <listitem>
+        <para>Frage</para>
+      </listitem>
+      <listitem>
+        <para>Warnung</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Für jeden dieser Typen geben Sie mit der Option <option>--text</option> an, welcher Text im Dialog angezeigt werden soll.</para>
+
+    <sect2 id="zenity-error-dialog">
+      <title>Fehlerdialog</title>
+
+      <para>Verwenden Sie die Option <option>--error</option>, um einen Fehlerdialog zu erzeugen.</para>
+
+      <para>Das folgende Beispielskript zeigt, wie Sie einen Fehlerdialog erzeugen: <programlisting>
+          #!/bin/bash
+
+          zenity --error \
+          --text="/var/log/syslog wurde nicht gefunden."
+        </programlisting></para>
+
+      <figure id="zenity-error-screenshot">
+        <title>Beispiel für einen Fehlerdialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-error-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> Beispiel für einen Fehlerdialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-info-dialog">
+      <title>Informationsdialog</title>
+
+      <para>Verwenden Sie die Option <option>--info</option>, um einen Informationsdialog zu erzeugen.</para>
+
+      <para>Das folgende Beispielskript zeigt, wie Sie einen Informationsdialog erzeugen: <programlisting>
+          #!/bin/bash
+
+          zenity --info \
+          --text="Die Aktualisierung wurde ausgeführt.\n3 von 10 Dateien wurden aktualisiert."
+        </programlisting></para>
+
+      <figure id="zenity-information-screenshot">
+        <title>Beispiel für einen Informationsdialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-information-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> Beispiel für einen Informationsdialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-question-dialog">
+      <title>Fragedialog</title>
+
+      <para>Verwenden Sie die Option <option>--question</option>, um einen Fragedialog zu erzeugen.</para>
+
+      <para>Das folgende Beispielskript zeigt, wie Sie einen Fragedialog erzeugen: <programlisting>
+          #!/bin/bash
+
+          zenity --question \
+          --text="Wollen Sie wirklich fortsetzen?"
+        </programlisting></para>
+
+      <figure id="zenity-question-screenshot">
+        <title>Beispiel für einen Fragedialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-question-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> Beispiel für einen Fragedialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-warning-dialog">
+      <title>Warndialog</title>
+
+      <para>Verwenden Sie die Option <option>--warning</option>, um einen Warndialog zu erzeugen.</para>
+
+      <para>Das folgende Beispielskript zeigt, wie Sie einen Warndialog erzeugen: <programlisting>
+          #!/bin/bash
+        
+          zenity --warning \
+          --text="Ziehen Sie den Netzstecker, um einen elektrischen Schlag zu vermeiden."
+        </programlisting></para>
+
+      <figure id="zenity-warning-screenshot">
+        <title>Beispiel für einen Warndialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-warning-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> Beispiel für einen Warndialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+  </sect1>
+
+<!-- ==== Progress Options ====== -->
+
+  <sect1 id="zenity-progress-options">
+    <title>Fortschrittsanzeige-Dialog</title>
+
+    <para>Verwenden Sie die Option <option>--progress</option>, um einen Fortschrittsanzeige-Dialog zu erzeugen.</para>
+
+    <para><application>Zenity</application> liest die Daten aus der Standardeingabe zeilenweise. Wenn einer Zeile ein Raute-Zeichen (#) vorangestellt ist, wird der angezeigte Text durch den Text in dieser Zeile aktualisiert, bei einem angezeigten Prozentsatz durch die angegebene Zahl.</para>
+	
+    <para>Der Fortschrittsanzeige-Dialog unterstützt die folgenden Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>Text</replaceable></term>
+	<listitem>
+	  <para>Legt den Text fest, der im Fortschrittsanzeige-Dialog angezeigt wird.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--percentage</option>=<replaceable>Prozentsatz</replaceable></term>
+	<listitem>
+	  <para>Legt den anfänglich im Fortschrittsanzeige-Dialog angezeigten Prozentsatz fest.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--auto-close</option></term>
+	<listitem>
+	  <para>Schließt den Fortschrittsanzeige-Dialog, wenn 100% erreicht sind.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--pulsate</option></term>
+	<listitem>
+	  <para>Legt fest, dass die Fortschrittsleiste pulsiert, bis ein EOF-Zeichen von der Standardeingabe gelesen wird.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie einen Fortschrittsanzeige-Dialog erzeugen: <programlisting>
+        #!/bin/sh
+        (
+        echo "10" ; sleep 1
+        echo "# Mail-Logdateien werden aktualisiert" ; sleep 1
+        echo "20" ; sleep 1
+        echo "# Cronjobs werden zurückgesetzt" ; sleep 1
+        echo "50" ; sleep 1
+        echo "Diese Zeile wird ignoriert" ; sleep 1
+        echo "75" ; sleep 1
+        echo "# Neustart des Systems" ; sleep 1
+        echo "100" ; sleep 1
+        ) |
+        zenity --progress \
+          --title="Logdateien aktualisieren" \
+          --text="Mail-Logdateien werden untersucht …" \
+          --percentage=0
+
+        if [ "$?" = -1 ] ; then
+                zenity --error \
+                  --text="Aktualisierung wurde abgebrochen."
+        fi
+
+      </programlisting></para>
+
+    <figure id="zenity-progress-screenshot">
+      <title>Beispiel für einen Fortschrittsanzeige-Dialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-progress-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> Beispiel für einen Fortschrittsanzeige-Dialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Text Entry Options ====== -->
+
+  <sect1 id="zenity-text-entry-options">
+    <title>Texteingabe-Dialog</title>
+
+    <para>Verwenden Sie die Option <option>--entry</option>, um einen Texteingabedialog zu erzeugen. <application>Zenity</application> gibt den Inhalt des Texts an die Standardausgabe zurück.</para>	
+    <para>Der Texteingabedialog unterstützt die folgenden Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>Text</replaceable></term>
+	<listitem>
+	  <para>Legt den Text fest, der im Texteingabedialog angezeigt wird.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--entry-text</option>=<replaceable>Text</replaceable></term>
+	<listitem>
+	  <para>Legt den Text fest, der im Eingabefeld des Texteingabedialogs angezeigt wird.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--hide-text</option></term>
+	<listitem>
+	  <para>Dadurch wird der Text im Eingabefeld des Textreingabedialogs verborgen.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie einen Texteingabedialog erzeugen: <programlisting>
+        #!/bin/sh
+
+        if zenity --entry \
+        --title="Eintrag hinzufügen" \
+        --text="Geben Sie Ihr _Passwort ein:" \
+        --entry-text "Passwort" \
+        --hide-text
+          then echo $?
+          else echo "Es wurde kein Passwort eingegeben"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-entry-screenshot">
+      <title>Beispiel für einen Texteingabe-Dialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-entry-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> Beispiel für einen Texteingabedialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+
+<!-- ==== Text Information Options ====== -->
+
+  <sect1 id="zenity-text-options">
+    <title>Text-Informationsdialog</title>
+
+    <para>Verwenden Sie die Option <option>--text-info</option>, um einen Textinformationsdialog zu erzeugen.</para>
+	
+    <para>Der Textinformationsdialog unterstützt die folgenden Optionen:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>Dateiname</replaceable></term>
+	<listitem>
+	  <para>Legt eine Datei fest, die im Textinformationsdialog geladen wird.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+        <listitem>
+          <para>Ermöglicht die Bearbeitung des angezeigten Texts. Der bearbeitete Text wird an die Standardausgabe zurückgegeben, wenn der Dialog geschlossen wird.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Das folgende Beispielskript zeigt, wie Sie einen Textinformationsdialog erzeugen: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection \
+          --title="Wählen Sie eine Datei"`
+
+        case $? in
+                 0)
+                        zenity --text-info \
+                          --title=$FILE \
+                          --filename=$FILE \
+                          --editable 2&gt;/tmp/tmp.txt;;
+                 1)
+                        echo "Keine Datei ausgewählt.";;
+                -1)
+                        echo "Keine Datei ausgewählt.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-text-screenshot">
+      <title>Beispiel für einen Text-Informationsdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-text-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> Beispiel für einen Textinformationsdialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+</article>

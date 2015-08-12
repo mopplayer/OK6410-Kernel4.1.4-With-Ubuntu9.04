@@ -1,0 +1,11 @@
+/.
+/lib
+/lib/libz.so.1.2.3.3
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/zlib1g
+/usr/share/doc/zlib1g/copyright
+/usr/share/doc/zlib1g/changelog.gz
+/usr/share/doc/zlib1g/changelog.Debian.gz
+/lib/libz.so.1

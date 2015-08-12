@@ -1,0 +1,5 @@
+31e65e1f218e8d4bb6718b07ec67dfda  usr/share/lintian/overrides/libklibc
+d136b6cbf492014a0acc4abd90555303  usr/share/doc/libklibc/README
+306578ba44a853f8b711c92fa054bbe6  usr/share/doc/libklibc/changelog.Debian.gz
+e2668eff3b2f10dcd921def304d53867  usr/share/doc/libklibc/copyright
+c9f833231c1aacc301fc96b969624085  lib/klibc-w-Zvs4JmJk74i-iB3H7oljqjrjw.so

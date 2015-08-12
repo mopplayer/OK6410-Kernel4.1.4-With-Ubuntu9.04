@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY author1 "Sun">
+<!ENTITY author2 "Java Desktop System Documentation Team">
+<!ENTITY publisher "Sun Microsystems, Inc.">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.6.0">
+<!ENTITY app "<application>Zenity</application>">
+<!ENTITY appname "Zenity">
+<!ENTITY date "August 2004">
+<!ENTITY manrevision "2.0">
+]>
+<!-- ================ Document Header ================= -->
+<article id="index" lang="sv">
+
+  <articleinfo>
+    <title>Handbok för Zenity</title>
+    <subtitle>Handbok för skrivbordsprogrammet Zenity v2.0</subtitle>
+    <copyright>
+	    <year>2003</year>
+	    <year>2004</year>
+	    <holder>Sun Microsystems, Inc.</holder>
+    </copyright><copyright><year>2006, 2009</year><holder>Daniel Nylander (po@danielnylander.se)</holder></copyright>
+
+    <!-- Translators: uncomment this
+    <copyright>
+	    <year>2004</year>
+	    <holder>ME_THE_TRANSLATOR</holder>
+    </copyright>
+    -->
+
+    <publisher>
+	    <publishername>Sun Microsystems, Inc.</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para>Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges under villkoren i GNU Free Documentation License (GFDL), version 1.1 eller senare, utgivet av Free Software Foundation utan standardavsnitt och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type="help" url="ghelp:fdl">länk</ulink> eller i filen COPYING-DOCS som medföljer denna handbok.</para>
+         <para>Denna handbok utgör en av flera GNOME-handböcker som distribueras under villkoren i GFDL.  Om du vill distribuera denna handbok separat från övriga handböcker kan du göra detta genom att lägga till en kopia av licensavtalet i handboken enligt instruktionerna i avsnitt 6 i licensavtalet.</para>
+
+	<para>Flera namn på produkter och tjänster är registrerade varumärken. I de fall dessa namn förekommer i GNOME-dokumentation - och medlemmarna i GNOME-dokumentationsprojektet är medvetna om dessa varumärken - är de skrivna med versaler eller med inledande versal.</para>
+
+	<para>DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET TILLHANDAHÅLLS UNDER VILLKOREN I GNU FREE DOCUMENTATION LICENSE ENDAST UNDER FÖLJANDE FÖRUTSÄTTNINGAR: <orderedlist>
+		<listitem>
+		  <para>DOKUMENTET TILLHANDAHÅLLS I "BEFINTLIGT SKICK" UTAN NÅGRA SOM HELST GARANTIER, VARE SIG UTTRYCKLIGA ELLER UNDERFÖRSTÅDDA, INKLUSIVE, MEN INTE BEGRÄNSAT TILL, GARANTIER ATT DOKUMENTET ELLER EN MODIFIERAD VERSION AV DOKUMENTET INTE INNEHÅLLER NÅGRA FELAKTIGHETER, ÄR LÄMPLIGT FÖR ETT VISST ÄNDAMÅL ELLER INTE STRIDER MOT LAG. HELA RISKEN VAD GÄLLER KVALITET, EXAKTHET OCH UTFÖRANDE AV DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET LIGGER HELT OCH HÅLLET PÅ ANVÄNDAREN. OM ETT DOKUMENT ELLER EN MODIFIERAD VERSION AV ETT DOKUMENT SKULLE VISA SIG INNEHÅLLA FELAKTIGHETER I NÅGOT HÄNSEENDE ÄR DET DU (INTE DEN URSPRUNGLIGA SKRIBENTEN, FÖRFATTAREN ELLER NÅGON ANNAN MEDARBETARE) SOM FÅR STÅ FÖR ALLA EVENTUELLA KOSTNADER FÖR SERVICE, REPARATIONER ELLER KORRIGERINGAR. DENNA GARANTIFRISKRIVNING UTGÖR EN VÄSENTLIG DEL AV DETTA LICENSAVTAL. DETTA INNEBÄR ATT ALL ANVÄNDNING AV ETT DOKUMENT ELLER EN MODIFIERAD VERSION AV ETT DOKUMENT BEVILJAS ENDAST UNDER DENNA ANSVARSFRISKRIVNING.</para>
+		</listitem>
+		<listitem>
+		  <para>UNDER INGA OMSTÄNDIGHETER ELLER INOM RAMEN FÖR NÅGON LAGSTIFTNING, OAVSETT OM DET GÄLLER KRÄNKNING (INKLUSIVE VÅRDSLÖSHET), KONTRAKT ELLER DYLIKT, SKA FÖRFATTAREN, DEN URSPRUNGLIGA SKRIBENTEN ELLER ANNAN MEDARBETARE ELLER ÅTERFÖRSÄLJARE AV DOKUMENTET ELLER AV EN MODIFIERAD VERSION AV DOKUMENTET ELLER NÅGON LEVERANTÖR TILL NÅGON AV NÄMNDA PARTER STÄLLAS ANSVARIG GENTEMOT NÅGON FÖR NÅGRA DIREKTA, INDIREKTA, SÄRSKILDA ELLER OFÖRUTSEDDA SKADOR ELLER FÖLJDSKADOR AV NÅGOT SLAG, INKLUSIVE, MEN INTE BEGRÄNSAT TILL, SKADOR BETRÄFFANDE FÖRLORAD GOODWILL, HINDER I ARBETET, DATORHAVERI ELLER NÅGRA ANDRA TÄNKBARA SKADOR ELLER FÖRLUSTER SOM KAN UPPKOMMA PÅ GRUND AV ELLER RELATERAT TILL ANVÄNDNINGEN AV DOKUMENTET ELLER MODIFIERADE VERSIONER AV DOKUMENTET, ÄVEN OM PART SKA HA BLIVIT INFORMERAD OM MÖJLIGHETEN TILL SÅDANA SKADOR.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Java Desktop System Documentation Team</surname>
+        <affiliation><orgname>Sun Microsystems, Inc.</orgname></affiliation>
+      </author>
+      <author role="maintainer">
+        <firstname>Glynn</firstname>
+        <surname>Foster</surname>
+        <affiliation>
+          <orgname>Dokumentationsprojekt för GNOME</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Nicholas</firstname>
+        <surname>Curran</surname>
+        <affiliation>
+          <orgname>Dokumentationsprojekt för GNOME</orgname>
+        </affiliation>
+      </editor>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Handbok för skrivbordsprogrammet Zenity v2.0</revnumber>
+        <date>Augusti 2004</date>
+        <revdescription>
+          <para role="author">Sun Java Desktop System Documentation Team</para>
+          <para role="publisher">Sun Microsystems, Inc.</para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Handbok för Zenity v1.0</revnumber>
+        <date>Januari 2003</date>
+        <revdescription>
+          <para role="author">Glynn Foster</para>
+          <para role="publisher">Dokumentationsprojekt för GNOME</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Den här handboken beskriver version 2.6.0 av Zenity.</releaseinfo>
+
+    <legalnotice>
+	    <title>Återkoppling</title>
+	    <para>För att skicka in kommentarer eller förslag, följ instruktionerna på <ulink url="ghelp:gnome-feedback" type="help">återkopplingssidan</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+
+    </legalnotice>
+    <abstract role="description">
+            <para>Zenity är en vidareutveckling av gdialog, GNOME-porteringen av dialog som låter dig visa dialogrutor från kommandoraden och skalskript.</para>
+    </abstract>
+  </articleinfo>
+  
+  <indexterm>
+    <primary>zenity-kommando</primary>
+  </indexterm>
+  <indexterm>
+    <primary>dialogskapare</primary>
+  </indexterm>
+<!-- ================ Document Body ================= -->
+
+<!-- ==== Introduction ====== -->
+
+  <sect1 id="zenity-introduction">
+    <title>Introduktion</title>
+
+    <para><application>Zenity</application> låter dig skapa följande typer av enkla dialoger:</para>
+
+    <itemizedlist>
+        <listitem><para>Kalender</para></listitem>
+	<listitem><para>Filval</para></listitem>
+	<listitem><para>Lista</para></listitem>
+	<listitem><para>Notifieringsikon</para></listitem>
+        <listitem><para>Meddelande</para>
+            <itemizedlist>
+	        <listitem><para>Fel</para></listitem>
+		<listitem><para>Information</para></listitem>
+		<listitem><para>Fråga</para></listitem>
+		<listitem><para>Varning</para></listitem>
+	    </itemizedlist>
+	</listitem>
+	<listitem><para>Förlopp</para></listitem>
+        <listitem><para>Textinmatning</para></listitem>
+	<listitem><para>Textinformation</para></listitem>
+    </itemizedlist>
+
+  </sect1>
+
+<!-- ==== Usage ====== -->
+
+  <sect1 id="zenity-usage">
+    <title>Användning</title>
+
+    <para>När du skriver skript kan du använda <application>Zenity</application> för att skapa enkla dialogrutor som interagerar grafiskt med användaren. Här är några exempel:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Du kan skapa en dialogruta för att hämta in information från användaren. Till exempel kan du fråga användaren om att välja ett datum från en kalenderdialog, eller att välja en fil från en filväljardialog.</para>
+      </listitem>
+      <listitem>
+        <para>Du kan skapa en dialogruta för att tillhandahålla information till användaren. Till exempel kan du använda en förloppsdialog för att indikera aktuell status för en åtgärd, eller använda en varningsdialog för att larma användaren.</para>
+      </listitem>
+    </itemizedlist>
+    <para>När användaren stängerdialogrutan, skriver <application>Zenity</application> ut texten som producerats av dialogrutan till standard fel.</para>
+
+    <note>
+      <para>Var noga med att skriva citationstecken runt varje argument när du skriver <application>Zenity</application>-kommandon.</para>
+      <para>Till exempel, använd: <screen><userinput><command>zenity --calendar --title="Semesterplanerare"</command></userinput></screen> Använd inte: <screen><userinput><command>zenity --calendar --title=Semesterplanerare</command></userinput></screen></para>
+      <para>Om du inte använder citationstecken kan du få oväntade resultat.</para>
+    </note>
+
+    <sect2 id="zenity-usage-mnemonics">
+      <title>Snabbtangenter</title>
+	<para>En snabbtangent är en tangent som låter dig genomföra en åtgärd från tangentbordet istället för att använda musen för att välja ett kommando från en meny eller dialog. Varje snabbtangent identifieras av en understruken bokstav i en meny eller dialogflagga.</para>
+	<para>Vissa dialoger i <application>Zenity</application> har stöd för användningen av snabbtangenter. För att specificera tecknet som ska användas som snabbtangenten, placera ett understreck före den bokstaven i dialogens text. Följande exempel visar hur man specificerar bokstaven "V" som en snabbtangent:</para>
+	<screen><userinput>"_Välj ett namn".</userinput></screen>
+    </sect2>
+
+    <sect2 id="zenity-usage-exitcodes">
+      <title>Avslutningskoder</title>
+    <para><application>Zenity</application> returnerar följande avslutningskoder:</para>
+
+    <informaltable frame="all">
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="COLSPEC0" colwidth="50*"/>
+        <colspec colname="COLSPEC1" colwidth="50*"/>
+        <thead>
+          <row valign="top">
+            <entry colname="COLSPEC0">
+              <para>Avslutningskod</para></entry>
+            <entry colname="COLSPEC1">
+              <para>Beskrivning</para></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row valign="top">
+            <entry>
+              <para><varname>0</varname></para>
+            </entry>
+            <entry>
+              <para>Användaren har antingen tryckt på <guibutton>OK</guibutton> eller <guibutton>Stäng</guibutton>.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>1</varname></para>
+            </entry>
+            <entry>
+              <para>Användaren har antingen tryckt på <guibutton>Avbryt</guibutton>, eller använt fönsterfunktioner för att stänga dialogrutan.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>-1</varname></para>
+            </entry>
+            <entry>
+              <para>Ett oväntat fel har inträffat.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>5</varname></para>
+            </entry>
+            <entry>
+              <para>Dialogrutan har stängts därför att tidsgränsen har nåtts.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    </sect2>
+
+
+  <!-- ==== General Options ====== -->
+
+  <sect2 id="zenity-usage-general-options">
+    <title>Allmänna alternativ</title>
+
+    <para>Alla dialoger i <application>Zenity</application> har stöd för följande allmänna flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--title</option>=<replaceable>titel</replaceable></term>
+	<listitem>
+	  <para>Anger titeln på en dialogruta.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--window-icon</option>=<replaceable>ikonsökväg</replaceable></term>
+	<listitem>
+	  <para>Anger ikonen som visas i fönsterramen för dialogen. Det finns 4 standardikoner som finns tillgängliga genom att ange något av följande nyckelord - "info", "warning", "question" och "error".</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--width</option>=<replaceable>bredd</replaceable></term>
+	<listitem>
+	  <para>Anger bredden på dialogrutan.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--height</option>=<replaceable>höjd</replaceable></term>
+	<listitem>
+	  <para>Anger höjden på dialogrutan.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--timeout</option>=<replaceable>tidsgräns</replaceable></term>
+	<listitem>
+	  <para>Anger tidsgränsen i sekunder efter vilken dialogrutan stängs.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-help-options">
+    <title>Hjälpflaggor</title>
+
+    <para><application>Zenity</application> tillhandahåller följande hjälpflaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--help</option></term>
+	<listitem>
+	  <para>Visar förkortad hjälptext.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--help-all</option></term>
+	<listitem>
+	  <para>Visar fullständig hjälptext för alla dialoger.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-general</option></term>
+	<listitem>
+	  <para>Visar hjälptext för allmänna dialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-calendar</option></term>
+	<listitem>
+	  <para>Visar hjälptext för kalenderdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-entry</option></term>
+	<listitem>
+	  <para>Visar hjälptext för textinmatningsdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-error</option></term>
+	<listitem>
+	  <para>Visar hjälptext för feldialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-info</option></term>
+	<listitem>
+	  <para>Visar hjälptext för informationsdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-file-selection</option></term>
+	<listitem>
+	  <para>Visar hjälptext för filväljardialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-list</option></term>
+	<listitem>
+	  <para>Visar hjälptext för listdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-notification</option></term>
+	<listitem>
+	  <para>Visar hjälptext för notifieringsikonflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-progress</option></term>
+	<listitem>
+	  <para>Visar hjälptext för förloppsdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-question</option></term>
+	<listitem>
+	  <para>Visar hjälptext för frågedialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-warning</option></term>
+	<listitem>
+	  <para>Visar hjälptext för varningsdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-text-info</option></term>
+	<listitem>
+	  <para>Visar hjälp för textinformationsdialogflaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-misc</option></term>
+	<listitem>
+	  <para>Visar hjälp för diverse flaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-gtk</option></term>
+	<listitem>
+	  <para>Visar hjälp för GTK+-flaggor.</para>
+	</listitem>
+      </varlistentry>
+ 
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-miscellaneous-options">
+    <title>Diverse flaggor</title>
+
+    <para><application>Zenity</application> tillhandahåller även följande diverse flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--about</option></term>
+	<listitem>
+	  <para>Visar dialogrutan <guilabel>Om Zenity</guilabel>, vilken innehåller versionsinformation, copyrightinformation, och utvecklarinformation om <application>Zenity</application>.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--version</option></term>
+	<listitem>
+	  <para>Visar versionsnumret för <application>Zenity</application>.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== GTK+ Options ====== -->
+
+  <sect2 id="zenity-gtk-options">
+    <title>GTK+-flaggor</title>
+
+    <para><application>Zenity</application> har stöd för standard-GTK+-flaggor. För mer information om GTK+-flaggorna, kör kommandot <command>zenity -?</command>.</para>
+
+  </sect2>
+
+  </sect1>
+<!-- ==== Calendar Options ====== -->
+
+  <sect1 id="zenity-calendar-options">
+    <title>Kalenderdialog</title>
+
+    <para>Använd flaggan <option>--calendar</option> för att skapa en kalenderdialog. <application>Zenity</application> returnerar det markerade datumet till standard fel. Om inget datum har angivits på kommandoraden, kommer dialogrutan att använda dagens datum.</para>
+    <para>Kalenderdialogen har stöd för följande flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>text</replaceable></term>
+	<listitem>
+	  <para>Anger texten som visas i kalenderdialogen.</para>
+	</listitem>
+      </varlistentry>
+     	
+      <varlistentry>
+        <term><option>--day</option>=<replaceable>dag</replaceable></term>
+	<listitem>
+	  <para>Anger dagen som är markerad i kalenderdialogen. <replaceable>dag</replaceable> måste vara ett tal mellan 1 och 31.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--month</option>=<replaceable>månad</replaceable></term>
+	<listitem>
+	  <para>Anger månaden som är markerad i kalenderdialogen. <replaceable>månad</replaceable> måste vara ett tal mellan 1 och 12.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--year</option>=<replaceable>år</replaceable></term>
+	<listitem>
+	  <para>Anger året som är markerat i kalenderdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--date-format</option>=<replaceable>format</replaceable></term>
+	<listitem>
+	  <para>Anger formatet som returneras från kalenderdialogen efter en datummarkering. Standardformatet beror på din lokalinställning. <replaceable>format</replaceable> måste vara ett format som är acceptabelt för funktionen <command>strftime</command>, till exempel <literal>%A %d/%m/%y</literal>.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en kalenderdialog: <programlisting>
+        #!/bin/sh
+
+
+        if zenity --calendar \
+        --title="Välj ett datum" \
+        --text="Klicka på ett datum för att det välja datumet." \
+        --day=10 --month=8 --year=2004
+          then echo $?
+          else echo "Inget datum har valts"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-calendar-screenshot">
+      <title>Exempel på kalenderdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-calendar-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> exempel på kalenderdialog</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+
+<!-- ==== File Selection Options ====== -->
+
+  <sect1 id="zenity-file-selection-options">
+    <title>Filväljardialog</title>
+
+    <para>Använd flaggan <option>--file-selection</option> för att skapa en filväljardialog. <application>Zenity</application> returnerar de valda filerna eller katalogerna till standard fel. Standardläget för filväljardialogen är öppna.</para>
+    <para>Filväljardialogen har stöd för följande flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>filnamn</replaceable></term>
+	<listitem>
+	  <para>Anger filen eller katalogen som är markerad i filväljardialogen när dialogen först visas.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--multiple</option></term>
+	<listitem>
+	  <para>Tillåter markering av flera filnamn i filväljardialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--directory</option></term>
+	<listitem>
+	  <para>Tillåter endast markering av kataloger i filväljardialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--save</option></term>
+	<listitem>
+	  <para>Ställ in filväljardialogen till sparningsläge.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--separator</option>=<replaceable>avgränsare</replaceable></term>
+	<listitem>
+	  <para>Anger strängen som används för att avgränsa den returnerade listan över filnamn.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en filväljardialog: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection --title="Välj en fil"`
+
+        case $? in
+                 0)
+                        echo "\"$FILE\" vald.";;
+                 1)
+                        echo "Ingen fil vald.";;
+                -1)
+                        echo "Ingen fil vald.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-fileselection-screenshot">
+      <title>Exempel på filväljardialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-fileselection-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> exempel på filväljardialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Notification Options ====== -->
+  <sect1 id="zenity-notification-options">
+    <title>Notifieringsikon</title>
+
+    <para>
+    </para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>text</replaceable></term>
+	<listitem>
+	  <para>Anger texten som visas i notifieringsytan.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en notifieringsikon: <programlisting>
+        #!/bin/sh
+
+        zenity --notification\
+          --window-icon="info" \
+          --text="Det finns nödvändiga systemuppdateringar!"
+      </programlisting></para>
+
+    <figure id="zenity-notification-screenshot">
+      <title>Exempel på notifieringsikon</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-notification-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> exempel på notifieringsikon</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+<!-- ==== List Options ====== -->
+
+  <sect1 id="zenity-list-options">
+    <title>Listdialog</title>
+
+    <para>Använd flaggan <option>--list</option> för att skapa en listdialog. <application>Zenity</application> returnerar posterna i den första textkolumnen av markerade rader till standard fel.</para>
+
+    <para>Data för dialogen måste anges kolumn för kolumn, rad för rad. Data kan tillhandahållas till dialogen genom standard in. Varje post måste separeras med ett nyradstecken.</para>
+
+    <para>Om du använder flaggorna <option>--checklist</option> eller <option>--radiolist</option>, måste varje rad börja med antingen "TRUE" eller "FALSE".</para>
+
+    <para>Listdialogen har stöd för följande flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--column</option>=<replaceable>kolumn</replaceable></term>
+	<listitem>
+	  <para>Anger kolumnhuvuden som visas i listdialogen. Du måste ange flaggan <option>--column</option> för varje kolumn som du vill visa i dialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--checklist</option></term>
+	<listitem>
+	  <para>Anger att den första kolumnen i listdialogen innehåller kryssrutor.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--radiolist</option></term>
+	<listitem>
+	  <para>Anger att första kolumnen i listdialogen innehåller radioknappar.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+	<listitem>
+	  <para>Tillåter att de visade posterna kan redigeras.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--separator</option>=<replaceable>avgränsare</replaceable></term>
+	<listitem>
+	  <para>Anger vilken sträng som används när listdialogen returnerar de markerade posterna.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--print-column</option>=<replaceable>kolumn</replaceable></term>
+	<listitem>
+	  <para>Anger vilken kolumn som ska skrivas ut vid markering. Standardkolumnen är "1". "ALL" kan användas för att skriva ut alla kolumner i listan.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en listdialog: <programlisting>
+        #!/bin/sh
+
+        zenity --list \
+          --title="Välj de fel som du önskar att se" \
+          --column="Felnummer" --column="Allvarlighetsgrad" --column="Beskrivning" \
+            992383 Normal "GtkTreeView kraschar vid flera markeringar" \
+            293823 Hög "GNOME-ordboken kan inte hantera proxyservrar" \
+            393823 Kritisk "Menyredigering fungerar inte i GNOME 2.0"
+      </programlisting></para>
+
+    <figure id="zenity-list-screenshot">
+      <title>Exempel på listdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-list-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> exempel på listdialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Message Options ====== -->
+
+  <sect1 id="zenity-message-options">
+    <title>Meddelandedialoger</title>
+
+    <para><application>Zenity</application> kan skapa fyra typer av meddelandedialoger:</para>
+    <itemizedlist>
+      <listitem>
+        <para>Fel</para>
+      </listitem>
+      <listitem>
+        <para>Information</para>
+      </listitem>
+      <listitem>
+        <para>Fråga</para>
+      </listitem>
+      <listitem>
+        <para>Varning</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>För varje typ, använd flaggan <option>--text</option> för att ange texten som visas i dialogrutan.</para>
+
+    <sect2 id="zenity-error-dialog">
+      <title>Feldialog</title>
+
+      <para>Använd flaggan <option>--error</option> för att skapa en feldialog.</para>
+
+      <para>Följande exempelskript visar hur man skapar en feldialog: <programlisting>
+          #!/bin/bash
+
+          zenity --error \
+          --text="Kunde inte hitta /var/log/syslog."
+        </programlisting></para>
+
+      <figure id="zenity-error-screenshot">
+        <title>Exempel på feldialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-error-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> exempel på feldialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-info-dialog">
+      <title>Informationsdialog</title>
+
+      <para>Använd flaggan <option>--info</option> för att skapa en informationsdialog.</para>
+
+      <para>Följande exempelskript visar hur man skapar en informationsdialog: <programlisting>
+          #!/bin/bash
+
+          zenity --info \
+          --text="Sammanslagning färdig. Uppdaterade 3 av 10 filer."
+        </programlisting></para>
+
+      <figure id="zenity-information-screenshot">
+        <title>Exempel på informationsdialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-information-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> exempel på informationsdialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-question-dialog">
+      <title>Frågedialog</title>
+
+      <para>Använd flaggan <option>--question</option> för att skapa en frågedialog.</para>
+
+      <para>Följande exempelskript visar hur man skapar en frågedialog: <programlisting>
+          #!/bin/bash
+
+          zenity --question \
+          --text="Är du säker på att du vill fortsätta?"
+        </programlisting></para>
+
+      <figure id="zenity-question-screenshot">
+        <title>Exempel på frågedialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-question-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> exempel på frågedialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-warning-dialog">
+      <title>Varningsdialog</title>
+
+      <para>Använd flaggan <option>--warning</option> för att skapa en varningsdialog.</para>
+
+      <para>Följande exempelskript visar hur man skapar en varningsdialog: <programlisting>
+          #!/bin/bash
+        
+          zenity --warning \
+          --text="Koppla från strömkabeln för att undvika elektriska stötar."
+        </programlisting></para>
+
+      <figure id="zenity-warning-screenshot">
+        <title>Exempel på varningsdialog</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-warning-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> exempel på varningsdialog</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+  </sect1>
+
+<!-- ==== Progress Options ====== -->
+
+  <sect1 id="zenity-progress-options">
+    <title>Förloppsdialog</title>
+
+    <para>Använd flaggan <option>--progress</option> för att skapa en förloppsdialog.</para>
+
+    <para><application>Zenity</application> läser data rad för rad från standard in. Om en rad inleds med #, kommer texten att uppdateras med texten på den raden. Om en rad endast innehåller en siffra, kommer procenttalet att uppdateras med det talet.</para>
+	
+    <para>Förloppsdialogen har stöd för följande flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>text</replaceable></term>
+	<listitem>
+	  <para>Anger texten som visas i förloppsdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--percentage</option>=<replaceable>procenttal</replaceable></term>
+	<listitem>
+	  <para>Anger den initiala procenttalet som är inställt i förloppsdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--auto-close</option></term>
+	<listitem>
+	  <para>Stänger förloppsdialogen när 100% har nåtts.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--pulsate</option></term>
+	<listitem>
+	  <para>Anger att förloppsmätaren pulserar tills ett EOF-tecken läses in från standard in.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en förloppsdialog: <programlisting>
+        #!/bin/sh
+        (
+        echo "10" ; sleep 1
+        echo "# Uppdaterar e-postloggar" ; sleep 1
+        echo "20" ; sleep 1
+        echo "# Nollställer cron-jobb" ; sleep 1
+        echo "50" ; sleep 1
+        echo "Den här raden kommer att ignoreras" ; sleep 1
+        echo "75" ; sleep 1
+        echo "# Startar om systemet" ; sleep 1
+        echo "100" ; sleep 1
+        ) |
+        zenity --progress \
+          --title="Uppdaterar systemloggar" \
+          --text="Söker av e-postloggarna..." \
+          --percentage=0
+
+        if [ "$?" = -1 ] ; then
+                zenity --error \
+                  --text="Uppdatering avbruten."
+        fi
+
+      </programlisting></para>
+
+    <figure id="zenity-progress-screenshot">
+      <title>Exempel på förloppsdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-progress-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> exempel på förloppsdialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Text Entry Options ====== -->
+
+  <sect1 id="zenity-text-entry-options">
+    <title>Textinmatningsdialog</title>
+
+    <para>Använd flaggan <option>-entry</option> för att skapa en textinmatningsdialog. <application>Zenity</application> returnerar innehållet av textinmatningen till standard fel.</para>	
+    <para>Textinmatningsdialogen har stöd för följande flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>text</replaceable></term>
+	<listitem>
+	  <para>Anger texten som visas i textinmatningsdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--entry-text</option>=<replaceable>text</replaceable></term>
+	<listitem>
+	  <para>Anger texten som visas i inmatningsfältet för textinmatningsdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--hide-text</option></term>
+	<listitem>
+	  <para>Döljer texten i inmatningsfältet för textinmatningsdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en textinmatningsdialog: <programlisting>
+        #!/bin/sh
+
+        if zenity --entry \
+        --title="Lägg till en post" \
+        --text="Ange ditt _lösenord:" \
+        --entry-text "password" \
+        --hide-text
+          then echo $?
+          else echo "Inget lösenord angavs"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-entry-screenshot">
+      <title>Exempel på textinmatningsdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-entry-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> exempel på textinmatningsdialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+
+<!-- ==== Text Information Options ====== -->
+
+  <sect1 id="zenity-text-options">
+    <title>Textinformationsdialog</title>
+
+    <para>Använd flaggan <option>--text-info</option> för att skapa en textinformationsdialog.</para>
+	
+    <para>Textinformationsdialogen har stöd för följande flaggor:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>filnamn</replaceable></term>
+	<listitem>
+	  <para>Anger en fil som läses in i textinformationsdialogen.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+        <listitem>
+          <para>Tillåter att den visade texten redigeras. Den redigerade texten returneras till standard fel när dialogrutan stängs.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Följande exempelskript visar hur man skapar en textinformationsdialog: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection \
+          --title="Välj en fil"`
+
+        case $? in
+                 0)
+                        zenity --text-info \
+                          --title=$FILE \
+                          --filename=$FILE \
+                          --editable 2&gt;/tmp/tmp.txt;;
+                 1)
+                        echo "Ingen fil vald.";;
+                -1)
+                        echo "Ingen fil vald.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-text-screenshot">
+      <title>Exempel på textinformationsdialog</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-text-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> exempel på textinformationsdialog</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+</article>

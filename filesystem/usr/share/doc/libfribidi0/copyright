@@ -1,0 +1,15 @@
+This package was debianized by Changwoo Ryu <cwryu@debian.org> on
+Tue, 22 Aug 2000 02:13:16 +0900.
+
+It was downloaded from: http://www.fribidi.org/wiki/
+
+Upstream Authors:
+	Dov Grobgeld <dov.grobgeld@gmail.com>
+	Behdad Esfahbod <behdad@gnu.org>
+	Roozbeh Pournader <roozbeh@gnu.org>
+
+Copyright:
+
+  It may be redistributed under the terms of the GNU LGPL, Version 2 or
+  later, the license can be found in the file
+  /usr/share/common-licenses/LGPL-2.

@@ -1,0 +1,2 @@
+libfribidi 0 libfribidi0 (>= 0.10.9)
+udeb: libfribidi 0 libfribidi0-udeb (>= 0.10.9)

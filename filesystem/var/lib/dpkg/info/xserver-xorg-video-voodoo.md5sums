@@ -1,0 +1,6 @@
+86b6efbeff5b9bb7818b5f0002a1176a  usr/share/xserver-xorg/pci/voodoo.ids
+235f1f4be8fc98400bd84c3c9bd7d2ee  usr/share/doc/xserver-xorg-video-voodoo/copyright
+0cd4a47e36e318015fab6f7da00916cb  usr/share/doc/xserver-xorg-video-voodoo/changelog.gz
+28f7e0c3f1d732d1fa07a28bd4319591  usr/share/doc/xserver-xorg-video-voodoo/changelog.Debian.gz
+394a9deb91119e9597c3f669fcd28534  usr/share/man/man4/voodoo.4.gz
+66d5d7792a7717380d949ecb7abbf07d  usr/lib/xorg/modules/drivers/voodoo_drv.so

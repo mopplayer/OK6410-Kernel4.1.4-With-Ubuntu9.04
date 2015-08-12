@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    if [ -x /usr/bin/update-desktop-database ] ; then
+        /usr/bin/update-desktop-database
+    fi
+fi
+
+

@@ -1,0 +1,7 @@
+content,install,url,jar:resource:/chrome/cview.jar!/content/cview/
+locale,install,url,jar:resource:/chrome/cview.jar!/locale/en-US/cview/
+skin,install,url,jar:resource:/chrome/cview.jar!/skin/modern/cview/
+content,install,url,jar:resource:/chrome/tasks.jar!/content/tasks/
+locale,install,url,jar:resource:/chrome/tasks.jar!/locale/en-US/tasks/
+skin,install,url,jar:resource:/chrome/tasks.jar!/skin/classic/tasks/
+skin,install,url,jar:resource:/chrome/tasks.jar!/skin/modern/tasks/

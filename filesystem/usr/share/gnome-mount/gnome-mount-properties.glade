@@ -1,0 +1,736 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-interface SYSTEM "http://gazpacho.sicem.biz/gazpacho-0.1.dtd">
+<glade-interface>
+    <widget class="GtkWindow" id="gm_page_drive">
+        <property name="title" context="yes" translatable="yes"></property>
+        <child>
+            <widget class="GtkVBox" id="gm_page_drive_root">
+                <property name="visible">True</property>
+                <child>
+                    <widget class="GtkTable" id="table2">
+                        <property name="border_width">6</property>
+                        <property name="column_spacing">12</property>
+                        <property name="n_columns">2</property>
+                        <property name="n_rows">8</property>
+                        <property name="row_spacing">3</property>
+                        <property name="visible">True</property>
+                        <child>
+                            <widget class="GtkLabel" id="label38">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Vendor:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label39">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Model:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">2</property>
+                                <property name="top_attach">1</property>
+                                <property name="x_options">fill</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label17">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Serial:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">3</property>
+                                <property name="top_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label18">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Firmware:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">4</property>
+                                <property name="top_attach">3</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label23">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Connection:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">5</property>
+                                <property name="top_attach">4</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label24">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Media:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">6</property>
+                                <property name="top_attach">5</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label42">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Removable:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">7</property>
+                                <property name="top_attach">6</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label43">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;External:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">8</property>
+                                <property name="top_attach">7</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_vendor">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_model">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">2</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_serial">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">3</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_firmware">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">4</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">3</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_connection">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">5</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">4</property>
+                                <property name="x_options">fill</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_media">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">6</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">5</property>
+                                <property name="x_options">fill</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_removable">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">7</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">6</property>
+                                <property name="x_options">fill</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="drive_external">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">8</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">7</property>
+                                <property name="x_options">fill</property>
+                            </packing>
+                        </child>
+                    </widget>
+                    <packing>
+                        <property name="expand">False</property>
+                    </packing>
+                </child>
+                <child>
+                    <widget class="GtkExpander" id="drive_expander">
+                        <property name="is_focus">True</property>
+                        <property name="label" context="yes" translatable="yes">&lt;b&gt;Settings&lt;/b&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="visible">True</property>
+                        <child>
+                            <widget class="GtkHBox" id="hbox1">
+                                <property name="visible">True</property>
+                                <child>
+                                    <widget class="GtkLayout" id="layout1">
+                                        <property name="visible">True</property>
+                                        <child>
+                                            <placeholder/>
+                                        </child>
+                                    </widget>
+                                </child>
+                                <child>
+                                    <widget class="GtkVBox" id="vbox1">
+                                        <property name="visible">True</property>
+                                        <child>
+                                            <widget class="GtkTable" id="table1">
+                                                <property name="border_width">6</property>
+                                                <property name="column_spacing">12</property>
+                                                <property name="n_columns">2</property>
+                                                <property name="n_rows">3</property>
+                                                <property name="row_spacing">6</property>
+                                                <property name="visible">True</property>
+                                                <child>
+                                                    <widget class="GtkLabel" id="label8">
+                                                        <property name="label" context="yes" translatable="yes">&lt;b&gt;Mount Point:&lt;/b&gt;</property>
+                                                        <property name="use_markup">True</property>
+                                                        <property name="visible">True</property>
+                                                        <property name="xalign">1.0</property>
+                                                    </widget>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkLabel" id="label9">
+                                                        <property name="label" context="yes" translatable="yes">&lt;b&gt;File System:&lt;/b&gt;</property>
+                                                        <property name="use_markup">True</property>
+                                                        <property name="visible">True</property>
+                                                        <property name="xalign">1.0</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">2</property>
+                                                        <property name="top_attach">1</property>
+                                                    </packing>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkLabel" id="label10">
+                                                        <property name="label" context="yes" translatable="yes">&lt;b&gt;Mount Options:&lt;/b&gt;</property>
+                                                        <property name="use_markup">True</property>
+                                                        <property name="visible">True</property>
+                                                        <property name="xalign">1.0</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">3</property>
+                                                        <property name="top_attach">2</property>
+                                                    </packing>
+                                                </child>
+						<child>
+						    <widget class="GtkHBox" id="hbox2">
+							<property name="visible">True</property>
+							<child>
+							    <widget class="GtkLabel" id="label2">
+								<property name="visible">True</property>
+								<property name="xalign">0</property>
+								<property name="label">/media/</property>
+							    </widget>
+							    <packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							    </packing>
+							</child>
+                                                        <child>
+                                                            <widget class="GtkEntry" id="drive_mount_point_entry">
+                                                                <property name="is_focus">True</property>
+                                                                <property name="visible">True</property>
+                                                            </widget>
+                                                            <packing>
+								<property name="expand">True</property>
+								<property name="fill">True</property>
+								<property name="position">1</property>
+								<property name="padding">2</property>
+                                                            </packing>
+                                                        </child>
+						    </widget>
+						    <packing>
+							<property name="left_attach">1</property>
+							<property name="right_attach">2</property>
+						    </packing>
+						</child>
+                                                <child>
+                                                    <widget class="GtkEntry" id="drive_fstype_entry">
+                                                        <property name="visible">True</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">2</property>
+                                                        <property name="left_attach">1</property>
+                                                        <property name="right_attach">2</property>
+                                                        <property name="top_attach">1</property>
+                                                    </packing>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkEntry" id="drive_mount_options_entry">
+                                                        <property name="visible">True</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">3</property>
+                                                        <property name="left_attach">1</property>
+                                                        <property name="right_attach">2</property>
+                                                        <property name="top_attach">2</property>
+                                                    </packing>
+                                                </child>
+                                            </widget>
+                                        </child>
+                                        <child>
+                                            <widget class="GtkLabel" id="label1">
+                                                <property name="label" context="yes" translatable="yes">&lt;small&gt;&lt;i&gt;Settings for a drive affect all volumes inserted in
+the drive. This can be overridden for individual 
+ volumes using the "Volume" tab.&lt;/i&gt;&lt;/small&gt;</property>
+                                                <property name="use_markup">True</property>
+                                                <property name="visible">True</property>
+                                                <property name="wrap">True</property>
+                                                <property name="ypad">5</property>
+                                            </widget>
+                                            <packing>
+                                                <property name="position">1</property>
+                                            </packing>
+                                        </child>
+                                    </widget>
+                                    <packing>
+                                        <property name="position">1</property>
+                                    </packing>
+                                </child>
+                            </widget>
+                        </child>
+                    </widget>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">1</property>
+                    </packing>
+                </child>
+            </widget>
+        </child>
+    </widget>
+    <widget class="GtkWindow" id="gm_page_volume">
+        <property name="title" context="yes" translatable="yes">window1</property>
+        <property name="visible">True</property>
+        <child>
+            <widget class="GtkVBox" id="gm_page_volume_root">
+                <property name="visible">True</property>
+                <child>
+                    <widget class="GtkTable" id="table5">
+                        <property name="border_width">6</property>
+                        <property name="column_spacing">12</property>
+                        <property name="n_columns">2</property>
+                        <property name="n_rows">5</property>
+                        <property name="row_spacing">3</property>
+                        <property name="visible">True</property>
+                        <child>
+                            <widget class="GtkLabel" id="label74">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Label:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label67">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Size:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">2</property>
+                                <property name="top_attach">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label68">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Media:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">3</property>
+                                <property name="top_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label69">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;UUID:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">4</property>
+                                <property name="top_attach">3</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label2">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;File System:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">5</property>
+                                <property name="top_attach">4</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_label">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_size">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">2</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_media">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">3</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_uuid">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">4</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">3</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_fs_type">
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">5</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">4</property>
+                            </packing>
+                        </child>
+                    </widget>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                    </packing>
+                </child>
+                <child>
+                    <widget class="GtkHSeparator" id="hseparator1">
+                        <property name="visible">True</property>
+                    </widget>
+                    <packing>
+                        <property name="position">1</property>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                    </packing>
+                </child>
+                <child>
+                    <widget class="GtkTable" id="table4">
+                        <property name="border_width">6</property>
+                        <property name="column_spacing">12</property>
+                        <property name="n_columns">2</property>
+                        <property name="n_rows">3</property>
+                        <property name="row_spacing">3</property>
+                        <property name="visible">True</property>
+                        <child>
+                            <widget class="GtkLabel" id="label3">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Mount Point:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label11">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;File System:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">2</property>
+                                <property name="top_attach">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="label12">
+                                <property name="label" context="yes" translatable="yes">&lt;b&gt;Mount Options:&lt;/b&gt;</property>
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">1.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">3</property>
+                                <property name="top_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_mount_point">
+                                <property name="use_markup">True</property>
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_mounted_fstype">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">2</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">1</property>
+                            </packing>
+                        </child>
+                        <child>
+                            <widget class="GtkLabel" id="volume_options">
+                                <property name="visible">True</property>
+                                <property name="xalign">0.0</property>
+                            </widget>
+                            <packing>
+                                <property name="bottom_attach">3</property>
+                                <property name="left_attach">1</property>
+                                <property name="right_attach">2</property>
+                                <property name="top_attach">2</property>
+                            </packing>
+                        </child>
+                    </widget>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">2</property>
+                    </packing>
+                </child>
+                <child>
+                    <widget class="GtkExpander" id="volume_expander">
+                        <property name="is_focus">True</property>
+                        <property name="label" context="yes" translatable="yes">&lt;b&gt;Settings&lt;/b&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="visible">True</property>
+                        <child>
+                            <widget class="GtkHBox" id="hbox2">
+                                <property name="visible">True</property>
+                                <child>
+                                    <widget class="GtkLayout" id="layout2">
+                                        <property name="visible">True</property>
+                                        <child>
+                                            <placeholder/>
+                                        </child>
+                                    </widget>
+                                </child>
+                                <child>
+                                    <widget class="GtkVBox" id="vbox2">
+                                        <property name="visible">True</property>
+                                        <child>
+                                            <widget class="GtkTable" id="table3">
+                                                <property name="border_width">6</property>
+                                                <property name="column_spacing">12</property>
+                                                <property name="n_columns">2</property>
+                                                <property name="n_rows">3</property>
+                                                <property name="row_spacing">6</property>
+                                                <property name="visible">True</property>
+                                                <child>
+                                                    <widget class="GtkLabel" id="label5">
+                                                        <property name="label" context="yes" translatable="yes">&lt;b&gt;Mount Point:&lt;/b&gt;</property>
+                                                        <property name="use_markup">True</property>
+                                                        <property name="visible">True</property>
+                                                        <property name="xalign">1.0</property>
+                                                    </widget>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkLabel" id="label6">
+                                                        <property name="label" context="yes" translatable="yes">&lt;b&gt;File System:&lt;/b&gt;</property>
+                                                        <property name="use_markup">True</property>
+                                                        <property name="visible">True</property>
+                                                        <property name="xalign">1.0</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">2</property>
+                                                        <property name="top_attach">1</property>
+                                                    </packing>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkLabel" id="label7">
+                                                        <property name="label" context="yes" translatable="yes">&lt;b&gt;Mount Options:&lt;/b&gt;</property>
+                                                        <property name="use_markup">True</property>
+                                                        <property name="visible">True</property>
+                                                        <property name="xalign">1.0</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">3</property>
+                                                        <property name="top_attach">2</property>
+                                                    </packing>
+                                                </child>
+                                                <child>
+
+						    <widget class="GtkHBox" id="hbox3">
+							<property name="visible">True</property>
+							<child>
+							    <widget class="GtkLabel" id="label3">
+								<property name="visible">True</property>
+								<property name="xalign">0</property>
+								<property name="label">/media/</property>
+							    </widget>
+							    <packing>
+								<property name="expand">False</property>
+								<property name="fill">False</property>
+								<property name="position">0</property>
+							    </packing>
+							</child>
+                                                        <child>
+                                                            <widget class="GtkEntry" id="volume_mount_point_entry">
+                                                                <property name="is_focus">True</property>
+                                                                <property name="visible">True</property>
+                                                            </widget>
+                                                            <packing>
+								<property name="expand">True</property>
+								<property name="fill">True</property>
+								<property name="position">1</property>
+								<property name="padding">2</property>
+                                                            </packing>
+                                                        </child>
+						    </widget>
+						    <packing>
+							<property name="left_attach">1</property>
+							<property name="right_attach">2</property>
+						    </packing>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkEntry" id="volume_fstype_entry">
+                                                        <property name="visible">True</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">2</property>
+                                                        <property name="left_attach">1</property>
+                                                        <property name="right_attach">2</property>
+                                                        <property name="top_attach">1</property>
+                                                    </packing>
+                                                </child>
+                                                <child>
+                                                    <widget class="GtkEntry" id="volume_mount_options_entry">
+                                                        <property name="visible">True</property>
+                                                    </widget>
+                                                    <packing>
+                                                        <property name="bottom_attach">3</property>
+                                                        <property name="left_attach">1</property>
+                                                        <property name="right_attach">2</property>
+                                                        <property name="top_attach">2</property>
+                                                    </packing>
+                                                </child>
+                                            </widget>
+                                        </child>
+                                        <child>
+                                            <widget class="GtkLabel" id="label4">
+                                                <property name="label" context="yes" translatable="yes">&lt;small&gt;&lt;i&gt;Changes in settings will not take effect until the
+volume is remounted.&lt;/i&gt;&lt;/small&gt;</property>
+                                                <property name="use_markup">True</property>
+                                                <property name="visible">True</property>
+                                                <property name="wrap">True</property>
+                                                <property name="ypad">5</property>
+                                            </widget>
+                                            <packing>
+                                                <property name="position">1</property>
+                                            </packing>
+                                        </child>
+                                    </widget>
+                                    <packing>
+                                        <property name="position">1</property>
+                                    </packing>
+                                </child>
+                            </widget>
+                        </child>
+                    </widget>
+                    <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">3</property>
+                    </packing>
+                </child>
+            </widget>
+        </child>
+    </widget>
+</glade-interface>

@@ -1,0 +1,71 @@
+
+``aptsources.distro`` --- Distribution abstraction of the sources.list
+**********************************************************************
+
+Note: This part of the documentation is created automatically.
+
+class aptsources.distro.DebianDistribution(id, codename, description, release)
+
+   Class to support specific Debian features
+
+   get_mirrors()
+
+   is_codename(name)
+
+      Compare a given name with the release codename and check if if
+      it can be used as a synonym for a development releases
+
+class aptsources.distro.Distribution(id, codename, description, release)
+
+   add_source(type=None, uri=None, dist=None, comps=None, comment='')
+
+      Add distribution specific sources
+
+   change_server(uri)
+
+      Change the server of all distro specific sources to a given host
+
+   disable_component(comp)
+
+      Disable a component in all main, child and source code sources
+      (excluding cdrom based sources)
+
+   enable_component(comp)
+
+      Enable a component in all main, child and source code sources
+      (excluding cdrom based sources)
+
+      comp:         the component that should be enabled
+
+   get_mirrors(mirror_template=None)
+
+      Provide a set of mirrors where you can get the distribution from
+
+   get_server_list()
+
+      Return a list of used and suggested servers
+
+   get_sources(sourceslist)
+
+      Find the corresponding template, main and child sources for the
+      distribution
+
+   is_codename(name)
+
+      Compare a given name with the release codename.
+
+exception aptsources.distro.NoDistroTemplateException
+
+class aptsources.distro.UbuntuDistribution(id, codename, description, release)
+
+   Class to support specific Ubuntu features
+
+   get_mirrors()
+
+aptsources.distro.get_distro(id=None, codename=None, description=None, release=None)
+
+   Check the currently used distribution and return the corresponding
+   distriubtion class that supports distro specific features.
+
+   If no paramter are given the distro will be auto detected via a
+   call to lsb-release

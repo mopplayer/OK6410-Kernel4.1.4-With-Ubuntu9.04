@@ -1,0 +1,20 @@
+This package was debianized by Wouter de Vries sax@debian.org on
+Fri, 20 Apr 2001 01:15:44 +0200.
+Currently maintained by Randall Donald <rdonald@debian.org>
+
+It was downloaded from http://www.linuxhardware.org/nvclock/
+
+Upstream Authors: 
+	Roderick Colenbrander <thunderbird2k@gmx.net>
+	Christian Zander <phoenix@minion.de>
+	Jan Prokop <jprokop@ibl.nospam.sk>
+
+Copyright 2001-2008 Roderick Colenbrander et al.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 2 of the License, or (at your
+option) any later version.
+
+On Debian systems, the complete text of the GNU General Public
+License can be found in /usr/share/common-licenses/GPL file.

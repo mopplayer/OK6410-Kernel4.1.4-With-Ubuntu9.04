@@ -1,0 +1,50 @@
+#! /bin/sh
+#
+# This script adjusts hard drive APM settings using hdparm. The hardware
+# defaults (usually hdparm -B 128) cause excessive head load/unload cycles
+# on many modern hard drives. We therefore set hdparm -B 254 while on AC
+# power. On battery we set hdparm -B 128, because the head parking is
+# very useful for shock protection.
+#
+# Refactored from acpi-support's 90-hdparm.sh for pm-utils
+
+resume_hdparm_apm()
+{
+	if [ -e /usr/sbin/laptop_mode ] ; then 
+		LMT_CONTROL_HD_POWERMGMT=$(. /etc/laptop-mode/laptop-mode.conf && echo "$CONTROL_HD_POWERMGMT")
+		if [ "$LMT_CONTROL_HD_POWERMGMT" != 0 ] \
+		   && [ -e /var/run/laptop-mode-tools/enabled ]
+		then
+			# Laptop mode controls hdparm -B settings, we don't.
+			return
+		fi
+	fi
+
+	# Determine the APM policy based on the AC state
+	level=254
+
+	if [ "$(get_power_status)" = battery ]
+	then
+		level=128
+	fi
+
+	for dev in /dev/sd? /dev/hd? ; do
+		if [ -b $dev ] ; then
+			# Check for APM support; discard errors since not all
+			# drives support HDIO_GET_IDENTITY (-i).
+			if hdparm -i $dev 2> /dev/null | grep -q 'AdvancedPM=yes'
+			then
+				hdparm -B $level $dev
+			fi
+		fi
+	done
+}
+
+case "$1" in
+	thaw|resume)
+		resume_hdparm_apm
+		;;
+	*)
+		exit 254
+		;;
+esac

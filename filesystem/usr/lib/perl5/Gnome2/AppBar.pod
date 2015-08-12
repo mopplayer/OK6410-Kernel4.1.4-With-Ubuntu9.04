@@ -1,0 +1,215 @@
+=head1 NAME
+
+Gnome2::AppBar
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Box
+                           +----Gtk2::HBox
+                                +----Gnome2::AppBar
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::AppBar-E<gt>B<new> ($has_progress, $has_status, $interactivity)
+
+=over
+
+=over
+
+=item * $has_progress (boolean) 
+
+=item * $has_status (boolean) 
+
+=item * $interactivity (Gnome2::PreferencesType) 
+
+=back
+
+=back
+
+=head2 $appbar-E<gt>B<clear_prompt> 
+
+=over
+
+=back
+
+=head2 $appbar-E<gt>B<clear_stack> 
+
+=over
+
+=back
+
+=head2 $appbar-E<gt>B<set_default> ($default_status)
+
+=over
+
+=over
+
+=item * $default_status (string) 
+
+=back
+
+=back
+
+=head2 $appbar-E<gt>B<install_menu_hints> ($uiinfo)
+
+=over
+
+=over
+
+=item * $uiinfo (Gnome2::UIInfo) 
+
+=back
+
+=back
+
+=head2 $appbar-E<gt>B<pop> 
+
+=over
+
+=back
+
+=head2 progressbar = $appbar-E<gt>B<get_progress> 
+
+=over
+
+=back
+
+=head2 $appbar-E<gt>B<set_progress_percentage> ($percentage)
+
+=over
+
+=over
+
+=item * $percentage (double) 
+
+=back
+
+=back
+
+=head2 $appbar-E<gt>B<set_prompt> ($prompt, $modal)
+
+=over
+
+=over
+
+=item * $prompt (string) 
+
+=item * $modal (boolean) 
+
+=back
+
+=back
+
+=head2 $appbar-E<gt>B<push> ($status)
+
+=over
+
+=over
+
+=item * $status (string) 
+
+=back
+
+=back
+
+=head2 $appbar-E<gt>B<refresh> 
+
+=over
+
+=back
+
+=head2 string = $appbar-E<gt>B<get_response> 
+
+=over
+
+=back
+
+=head2 widget = $appbar-E<gt>B<get_status> 
+
+=over
+
+=back
+
+=head2 $appbar-E<gt>B<set_status> ($status)
+
+=over
+
+=over
+
+=item * $status (string) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'has-progress' (boolean : readable / writable / construct)
+
+Create a progress widget.
+
+=item 'has-status' (boolean : readable / writable / construct)
+
+Create a status widget.
+
+=item 'interactivity' (Gnome2::PreferencesType : readable / writable / construct)
+
+Level of user activity required.
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<user-response> (Gnome2::AppBar)
+
+=item B<clear-prompt> (Gnome2::AppBar)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gnome2::PreferencesType
+
+=over
+
+=item * 'never' / 'GNOME_PREFERENCES_NEVER'
+
+=item * 'user' / 'GNOME_PREFERENCES_USER'
+
+=item * 'always' / 'GNOME_PREFERENCES_ALWAYS'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Box>, L<Gtk2::HBox>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+DOCDIR=/usr/share/gtk-doc/html/libbonoboui
+
+if [ -d $DOCDIR -a ! -L $DOCDIR ]; then
+    rmdir $DOCDIR && ln -s ../../doc/libbonoboui2-common/html $DOCDIR || true
+fi
+
+

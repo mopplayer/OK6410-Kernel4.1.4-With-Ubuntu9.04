@@ -1,0 +1,6 @@
+# We'll change this if the SONAME ever changes, but it's not worth the
+# pain of changing library names absent that.
+libkrb53: package-name-doesnt-match-sonames
+
+# This may not be necessary, but keeping it for now in case it is.
+libkrb53: package-contains-empty-directory usr/lib/krb5/plugins/krb5/

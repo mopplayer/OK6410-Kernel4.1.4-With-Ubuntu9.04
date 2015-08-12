@@ -1,0 +1,14 @@
+c601e4cd8e04a42ac29ba390c173edbb  usr/share/doc/findutils/copyright
+b08e155a7ccad6eb917463dccbe8946f  usr/share/doc/findutils/changelog.gz
+bbfc78bac02e384066f28d70fa0f57cd  usr/share/doc/findutils/changelog.Debian.gz
+017a509d9acbc8610aaf7f79701eaacb  usr/share/doc/findutils/TODO
+88363d97965746630624dc7a506b5774  usr/share/doc/findutils/README
+7e4eb67c0cc79c5d397a2920e7c0eae8  usr/share/doc/findutils/NEWS.gz
+140a9375dd7f8cbc270435d46f3a924a  usr/share/doc/findutils/NEWS.Debian.gz
+2bb72046b777cd8245155813c68b78d4  usr/share/man/man1/xargs.1.gz
+203af12fd33ac275c79394ea60f655cd  usr/share/man/man1/find.1.gz
+227a6a310e6cd1e7a3393b90a56d8335  usr/share/info/find.info.gz
+f78e2d4189be58135a915698efe1cd7a  usr/share/doc-base/findutils
+dfde464b863d97c29dfc898ffa691ae0  usr/bin/find
+a3b7be829967cb85990c21b64ded3f19  usr/bin/xargs
+3c9d729a292231004b3dc3d264fde22b  usr/bin/oldfind

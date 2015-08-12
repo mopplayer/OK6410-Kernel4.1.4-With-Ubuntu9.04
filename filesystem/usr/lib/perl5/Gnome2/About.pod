@@ -1,0 +1,106 @@
+=head1 NAME
+
+Gnome2::About
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gtk2::Window
+                                +----Gtk2::Dialog
+                                     +----Gnome2::About
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::About-E<gt>B<new> ($name, $version, $copyright, $comments, $authors, $documenters=undef, $translator_credits=undef, $logo_pixbuf=undef)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=item * $version (string) 
+
+=item * $copyright (string) 
+
+=item * $comments (string) 
+
+=item * $authors (scalar) - either a reference to an array of strings or a plain string
+
+=item * $documenters (scalar) - either a reference to an array of strings or a plain string
+
+=item * $translator_credits (string) 
+
+=item * $logo_pixbuf (Gtk2::Gdk::Pixbuf or undef) 
+
+=back
+
+
+
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'authors' (GValueArray : writable)
+
+List of authors of the programs
+
+=item 'comments' (string : readable / writable)
+
+Comments about the program
+
+=item 'copyright' (string : readable / writable)
+
+Copyright information for the program
+
+=item 'documenters' (GValueArray : writable)
+
+List of people documenting the program
+
+=item 'logo' (Gtk2::Gdk::Pixbuf : writable)
+
+A logo for the about box
+
+=item 'name' (string : readable / writable)
+
+The name of the program
+
+=item 'translator-credits' (string : readable / writable)
+
+Credits to the translators. This string should be marked as translatable
+
+=item 'version' (string : readable / writable)
+
+The version of the program
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>, L<Gtk2::Window>, L<Gtk2::Dialog>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

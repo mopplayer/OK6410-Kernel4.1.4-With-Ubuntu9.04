@@ -1,0 +1,87 @@
+=head1 NAME
+
+Gnome2::Help
+
+
+=head1 METHODS
+
+=head2 boolean = Gnome2::Help-E<gt>B<display> ($file_name, $link_id=undef)
+
+=over
+
+=over
+
+=item * $file_name (string) 
+
+=item * $link_id (string) 
+
+=back
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+=back
+
+=head2 boolean = Gnome2::Help-E<gt>B<display_desktop> ($program, $doc_id, $file_name, $link_id=undef)
+
+=over
+
+=over
+
+=item * $program (Gnome2::Program or undef) 
+
+=item * $doc_id (string) 
+
+=item * $file_name (string) 
+
+=item * $link_id (string) 
+
+=back
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+=back
+
+=head2 boolean = Gnome2::Help-E<gt>B<display_desktop_with_env> ($program, $doc_id, $file_name, $link_id, $env_ref)
+
+=over
+
+=over
+
+=item * $program (Gnome2::Program) 
+
+=item * $doc_id (string) 
+
+=item * $file_name (string) 
+
+=item * $link_id (string) 
+
+=item * $env_ref (scalar) 
+
+=back
+
+
+
+May croak with a L<Glib::Error> in $@ on failure.
+
+Since: libgnome 2.2
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

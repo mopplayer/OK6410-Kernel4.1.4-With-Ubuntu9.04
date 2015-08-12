@@ -1,0 +1,17 @@
+/etc/gdm/gdm.conf-custom
+/etc/gdm/Init/Default
+/etc/gdm/XKeepsCrashing
+/etc/gdm/PostLogin/Default.sample
+/etc/gdm/gdm.conf
+/etc/gdm/PreSession/Default
+/etc/gdm/Xsession
+/etc/gdm/gdmprefetchlist
+/etc/gdm/PostSession/Default
+/etc/gdm/locale.conf
+/etc/gdm/modules/factory-AccessKeyMouseEvents
+/etc/gdm/modules/AccessDwellMouseEvents
+/etc/gdm/modules/factory-AccessDwellMouseEvents
+/etc/gdm/modules/AccessKeyMouseEvents
+/etc/init.d/gdm
+/etc/pam.d/gdm
+/etc/pam.d/gdm-autologin

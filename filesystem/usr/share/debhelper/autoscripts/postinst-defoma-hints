@@ -1,0 +1,4 @@
+FILE='/etc/defoma/hints/#PACKAGE#.hints'
+if [ "$1" = configure ]; then
+	test -x /usr/bin/defoma-font && /usr/bin/defoma-font reregister-all $FILE
+fi

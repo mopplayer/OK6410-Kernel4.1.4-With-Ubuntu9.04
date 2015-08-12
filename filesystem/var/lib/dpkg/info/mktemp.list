@@ -1,0 +1,13 @@
+/.
+/bin
+/bin/mktemp
+/usr
+/usr/share
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/mktemp.1.gz
+/usr/share/doc
+/usr/share/doc/mktemp
+/usr/share/doc/mktemp/changelog.Debian.gz
+/usr/share/doc/mktemp/copyright
+/usr/share/doc/mktemp/README

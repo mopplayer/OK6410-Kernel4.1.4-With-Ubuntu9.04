@@ -1,0 +1,309 @@
+#!/bin/sh
+
+# dexconf: Debian X server configuration file writer for failsafe mode
+#
+# This tool is a backend which uses debconf database values.  It writes an
+# XFree86 X server configuration file based on the information in the database.
+#
+# This script is derived from the dexconf program, written by
+# Branden Robinson
+
+# Copyright 2007--2008 Canonical, Ltd.
+# Copyright 2000--2004 Progeny Linux Systems, Inc.
+#
+# This is free software; you may redistribute it and/or modify
+# it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; either version 2,
+# or (at your option) any later version.
+#
+# This is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License with
+# the Debian operating system, in /usr/share/common-licenses/GPL;  if
+# not, write to the Free Software Foundation, Inc., 59 Temple Place,
+# Suite 330, Boston, MA 02111-1307 USA
+
+set -e
+
+# source debconf library
+. /usr/share/debconf/confmodule
+
+# display a usage message
+usage () {
+  cat <<EOF
+Usage: $PROGNAME [OPTION ...]
+  write an Xorg X server configuration file based on debconf database values
+Options:
+  -h, --help                                 display this usage message and exit
+  -o FILE, --output=FILE                        write configuration file to FILE
+This help message is intended only as a quick reference.  For a description of
+the usage of $PROGNAME, see the $PROGNAME(1) manual page.
+EOF
+}
+
+# the error-out function
+bomb () {
+  echo "$PROGNAME: error: $*" | fold -s -w "${COLUMNS:-80}" >&2
+  exit 1
+}
+
+# wrapper around db_get to ensure that the info we try to retrieve exists; it
+# is (almost) always a fatal error for the values to be null
+fetch () {
+  db_get "$1" || true
+  if [ -z "$RET" ]; then
+    ERRMSG="cannot generate configuration file; $1 not set.  Aborting."
+    ERRMSG="$ERRMSG  Reconfigure the X server with \"dpkg-reconfigure"
+    ERRMSG="$ERRMSG xserver-xorg\" to correct this problem."
+    bomb "$ERRMSG"
+  fi
+}
+
+# convert a debconf comma-delimited list to a shell whitespace-delimited list
+list_convert () {
+  echo $(IFS=", "; set -- $RET; while [ $# -gt 0 ]; do echo \"$1\"; shift; done)
+}
+
+SERVER="xorg"
+XF86CONFIG=/etc/X11/xorg.conf.failsafe
+PROGNAME=${0##*/}
+SHOWHELP=
+EARLYEXIT=
+
+GETOPT_OUTPUT=$(getopt --options ho: \
+                       --longoptions help,output: \
+                       -n "$PROGNAME" -- "$@")
+
+if [ $? -ne 0 ]; then
+    bomb "error while getting options; use \"$PROGNAME --help\" for help"
+fi
+
+eval set -- "$GETOPT_OUTPUT"
+
+while :; do
+    case "$1" in
+        -f|--format)
+          bomb "This option, and XFree86 3.x output, are no longer supported."
+          ;;
+        -h|--help) SHOWHELP=yes EARLYEXIT=yes ;;
+        -o|--output) XF86CONFIG="$2"; shift ;;
+        --) shift; break ;;
+        *)
+          bomb "unrecognized option \"$1\"; use \"$PROGNAME --help\" for help"
+          ;;
+    esac
+    shift
+done
+
+if [ -n "$SHOWHELP" ]; then
+    usage
+fi
+
+if [ -n "$EARLYEXIT" ]; then
+    exit 0
+fi
+
+DEXCONFTMPDIR=
+
+trap 'if [ -e "$DEXCONFTMPDIR/backup" ] && [ -n "$XF86CONFIG" ]; then \
+        cat "$DEXCONFTMPDIR/backup" >"$XF86CONFIG"; \
+      fi; \
+      exec 4<&-; \
+      rm -rf "$DEXCONFTMPDIR"; \
+      bomb "received signal; aborting"' HUP INT QUIT TERM
+
+
+# Set up a temporary directory for the files we'll be writing.
+TDIR_PARENT="${TMPDIR:-/tmp}"
+TDIR="${TMPDIR:-/tmp}/dexconf-tmp-$$"
+
+if [ ! -d "$TDIR_PARENT" ]; then
+  bomb "cannot create temporary work directory; \"$TDIR_PARENT\" does not" \
+    "exist or is not a directory"
+fi
+
+if [ ! -w "$TDIR_PARENT" ]; then
+  bomb "cannot create temporary work directory in \"$TDIR_PARENT\"; directory" \
+    "not writable"
+fi
+
+rm -rf "$TDIR"
+
+if mkdir -m 0700 "$TDIR"; then
+  DEXCONFTMPDIR="$TDIR"
+else
+  bomb "creation of temporary work directory \"$TDIR\" failed"
+fi
+
+# xorg.conf sections:
+#   Files          File pathnames
+#   ServerFlags    Server flags                      NOT USED BY DEXCONF
+#   Module         Dynamic module loading            NOT USED BY DEXCONF
+#   InputDevice    Input device description
+#   Device         Graphics device description
+#   VideoAdaptor   Xv video adaptor description      NOT USED BY DEXCONF
+#   Monitor        Monitor description
+#   Modes          Video modes descriptions          NOT USED BY DEXCONF
+#   Screen         Screen configuration
+#   ServerLayout   Overall layout                    NOT USED BY DEXCONF
+#   DRI            DRI-specific configuration        NOT USED BY DEXCONF
+#   Vendor         Vendor-specific configuration     NOT USED BY DEXCONF
+
+### HEADER
+
+# Because debconf hijacks standard output and its confmodule uses file
+# descriptor 3 for its own purposes, we will write our output to file descriptor
+# 4 instead of standard output.
+
+exec 4>"$DEXCONFTMPDIR/Header"
+cat >&4 <<SECTION
+# xorg.conf.failsafe (X.Org X Window System server configuration file)
+#
+# This file was generated by dexconf, the Debian X Configuration tool, using
+# values from the debconf database.
+#
+# Edit this file with caution, and see the xorg.conf manual page.
+# (Type "man xorg.conf" at the shell prompt.)
+#
+# This file is automatically updated on xserver-xorg package upgrades *only*
+# if it has not been modified since the last upgrade of the xserver-xorg
+# package.
+#
+# If you have edited this file but would like it to be automatically updated
+# again, run the following command:
+#   sudo dpkg-reconfigure -phigh xserver-xorg
+SECTION
+
+### DEVICE
+
+db_get xserver-$SERVER/config/device/driver
+DEVICE_DRIVER="$RET"
+db_get xserver-$SERVER/config/device/bus_id
+DEVICE_BUSID="$RET"
+db_get xserver-$SERVER/config/device/use_fbdev
+DEVICE_USE_FBDEV="$RET"
+
+# Override device driver
+DEVICE_DRIVER=${1:-"vesa"}
+
+QEMU_KVM=$(grep "QEMU Virtual CPU" /proc/cpuinfo || true)
+if [ -n "$QEMU_KVM" ]; then
+    DEVICE_DRIVER="cirrus"
+fi
+VBOX_VIDEO=$(grep -e "^vbox " /proc/modules || true)
+if [ -n "$VBOX_VIDEO" ]; then
+    DEVICE_DRIVER="vboxvideo"
+fi
+
+exec 4>"$DEXCONFTMPDIR/Device"
+cat >&4 <<SECTION
+Section "Device"
+	Identifier	"Configured Video Device"
+SECTION
+if [ -n "$DEVICE_DRIVER" ]; then
+  printf "\tDriver\t\t\"$DEVICE_DRIVER\"\n" >&4
+fi
+PS3_FB=$(grep -i PS3 /proc/fb 2>/dev/null || true)
+if [ -n "$PS3_FB" ]; then
+  printf "\tOption\t\t\"ShadowFB\"\t\t\"false\"\n" >&4
+fi
+if [ -n "$DEVICE_BUSID" ]; then
+  printf "\tBusID\t\t\"$DEVICE_BUSID\"\n" >&4
+fi
+if [ "$DEVICE_USE_FBDEV" = "true" ]; then
+  printf "\tOption\t\t\"UseFBDev\"\t\t\"$DEVICE_USE_FBDEV\"\n" >&4
+fi
+printf "EndSection\n" >&4
+
+### MONITOR
+
+exec 4>"$DEXCONFTMPDIR/Monitor"
+cat >&4 <<SECTION
+Section "Monitor"
+	Identifier	"Configured Monitor"
+SECTION
+
+if [ -n "$QEMU_KVM" ]; then
+  printf "\tHorizSync\t30-70\n" >&4
+  printf "\tVertRefresh\t50-160\n" >&4
+fi
+cat >&4 <<SECTION
+EndSection
+SECTION
+
+### SCREEN
+
+exec 4>"$DEXCONFTMPDIR/Screen"
+cat >&4 <<SECTION
+Section "Screen"
+	Identifier	"Default Screen"
+	Monitor		"Configured Monitor"
+	Device		"Configured Video Device"
+SECTION
+if [ -n "$PS3_FB" ]; then
+  printf "\tDefaultFbBpp 32\n" >&4
+fi
+if [ -n "$QEMU_KVM" ]; then
+cat >&4 <<SUBSECTION
+	DefaultDepth	24
+	SubSection "Display"
+		Depth	24
+		Modes	"1280x800" "1152x768" "1024x768" "800x600" "640x480"
+	EndSubSection
+SUBSECTION
+fi
+printf "EndSection\n" >&4
+
+# Close file descriptor 4 before we delete temporary files
+exec 4<&-
+
+# Tell debconf to stop listening to us.
+db_stop
+
+# Write the configuration file.  Put a blank line before every section we write
+# except the first.
+
+OUTFILE="$DEXCONFTMPDIR/dexconf-out"
+umask 022
+: >"$OUTFILE"
+
+SPACER=
+for SECTION in Header Files InputDeviceKeyboard InputDeviceMouse \
+               Device Monitor Screen; do
+  if [ -e "$DEXCONFTMPDIR/$SECTION" ]; then
+    eval $SPACER
+    cat "$DEXCONFTMPDIR/$SECTION" >>"$OUTFILE"
+    SPACER='echo "" >>"$OUTFILE"'
+  fi
+done
+
+# Ensure we can write to our destination if it already exits.
+if [ -e "$XF86CONFIG" ]; then
+  if [ ! -w "$XF86CONFIG" ]; then
+    bomb "unable to write to \"$XF86CONFIG\""
+  fi
+fi
+
+BACKUP=
+# Create a backup of the existing configuration file if it already exists.
+if [ -e "$XF86CONFIG" ]; then
+  cat "$XF86CONFIG" >"$DEXCONFTMPDIR/backup"
+  BACKUP=true
+fi
+
+# Move the new file into place.
+if ! cat "$OUTFILE" >"$XF86CONFIG"; then
+  # Failed; try to restore the backup.
+  if [ -n "$BACKUP" ]; then
+    cat "$DEXCONFTMPDIR/backup" >"$XF86CONFIG"
+  fi
+fi
+
+rm -rf "$DEXCONFTMPDIR"
+
+exit 0
+
+# vim:set ai et sts=2 sw=2 tw=80:

@@ -1,0 +1,2 @@
+libesd 0 libesd-alsa0 (>= 0.2.35) | libesd0 (>= 0.2.35)
+libesddsp 0 libesd-alsa0 (>= 0.2.35) | libesd0 (>= 0.2.35)

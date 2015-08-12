@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Clean up cdbs damage
+rm -f /etc/udev/rules.d/50-hdparm.rules
+
+
+if dpkg --compare-versions "$2" lt "8.6-1ubuntu1"; then
+	update-rc.d -f hdparm remove
+fi
+
+if [ -n "$2" ] && dpkg --compare-versions "$2" lt 8.9-2; then
+  rm -fv /etc/rc0.d/K75hdparm /etc/rc6.d/K75hdparm
+fi
+# Automatically added by dh_installudev
+if [ "$1" = configure ]; then
+	if [ -e "/etc/udev/hdparm.rules" ]; then
+		echo "Preserving user changes to /lib/udev/rules.d/85-hdparm.rules ..."
+		if [ -e "/lib/udev/rules.d/85-hdparm.rules" ]; then
+			mv -f "/lib/udev/rules.d/85-hdparm.rules" "/lib/udev/rules.d/85-hdparm.rules.dpkg-new"
+		fi
+		mv -f "/etc/udev/hdparm.rules" "/lib/udev/rules.d/85-hdparm.rules"
+	fi
+fi
+# End automatically added section
+

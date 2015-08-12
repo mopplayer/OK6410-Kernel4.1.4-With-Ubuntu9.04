@@ -1,0 +1,12 @@
+#! /bin/sh
+
+set -e
+
+if [ "$1" = purge ]; then
+  /bin/rmdir /etc/defoma/config > /dev/null 2>&1 || true
+  /bin/rmdir /etc/defoma/hints > /dev/null 2>&1 || true
+  /bin/rmdir /etc/defoma > /dev/null 2>&1 || true
+  /bin/rm -fr /var/lib/defoma
+fi
+
+

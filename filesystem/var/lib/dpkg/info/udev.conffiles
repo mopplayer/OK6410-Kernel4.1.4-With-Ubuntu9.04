@@ -1,0 +1,5 @@
+/etc/scsi_id.config
+/etc/udev/rules.d/README
+/etc/udev/udev.conf
+/etc/init.d/udev-finish
+/etc/init.d/udev

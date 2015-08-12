@@ -1,0 +1,194 @@
+=head1 NAME
+
+Gnome2::Bonobo::DockItem
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gtk2::Widget
+                 +----Gtk2::Container
+                      +----Gtk2::Bin
+                           +----Gnome2::Bonobo::DockItem
+
+=head1 INTERFACES
+
+  Glib::Object::_Unregistered::AtkImplementorIface
+  Gtk2::Buildable
+
+
+=head1 METHODS
+
+=head2 widget = Gnome2::Bonobo::DockItem-E<gt>B<new> ($name, $behavior)
+
+=over
+
+=over
+
+=item * $name (string) 
+
+=item * $behavior (Gnome2::Bonobo::DockItemBehavior) 
+
+=back
+
+=back
+
+=head2 dockitembehavior = $dock_item-E<gt>B<get_behavior> 
+
+=over
+
+=back
+
+=head2 widget = $dock_item-E<gt>B<get_child> 
+
+=over
+
+=back
+
+=head2 string = $dock_item-E<gt>B<get_name> 
+
+=over
+
+=back
+
+=head2 orientation = $dock_item-E<gt>B<get_orientation> 
+
+=over
+
+=back
+
+=head2 boolean = $dock_item-E<gt>B<set_orientation> ($orientation)
+
+=over
+
+=over
+
+=item * $orientation (Gtk2::Orientation) 
+
+=back
+
+=back
+
+=head2 shadowtype = $dock_item-E<gt>B<get_shadow_type> 
+
+=over
+
+=back
+
+=head2 $dock_item-E<gt>B<set_shadow_type> ($type)
+
+=over
+
+=over
+
+=item * $type (Gtk2::ShadowType) 
+
+=back
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'orientation' (Gtk2::Orientation : readable / writable)
+
+Orientation
+
+=item 'preferred-height' (Glib::UInt : readable)
+
+Preferred height
+
+=item 'preferred-width' (Glib::UInt : readable)
+
+Preferred width
+
+=item 'shadow' (Gtk2::ShadowType : readable / writable)
+
+Shadow type
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<dock-drag-begin> (Gnome2::Bonobo::DockItem)
+
+=item B<dock-drag-motion> (Gnome2::Bonobo::DockItem, integer, integer)
+
+=item B<dock-drag-end> (Gnome2::Bonobo::DockItem)
+
+=item B<dock-detach> (Gnome2::Bonobo::DockItem)
+
+=item B<orientation-changed> (Gnome2::Bonobo::DockItem, Gtk2::Orientation)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 flags Gnome2::Bonobo::DockItemBehavior
+
+=over
+
+=item * 'normal' / 'BONOBO_DOCK_ITEM_BEH_NORMAL'
+
+=item * 'exclusive' / 'BONOBO_DOCK_ITEM_BEH_EXCLUSIVE'
+
+=item * 'never-floating' / 'BONOBO_DOCK_ITEM_BEH_NEVER_FLOATING'
+
+=item * 'never-vertical' / 'BONOBO_DOCK_ITEM_BEH_NEVER_VERTICAL'
+
+=item * 'never-horizontal' / 'BONOBO_DOCK_ITEM_BEH_NEVER_HORIZONTAL'
+
+=item * 'locked' / 'BONOBO_DOCK_ITEM_BEH_LOCKED'
+
+=back
+
+
+=head2 enum Gtk2::Orientation
+
+=over
+
+=item * 'horizontal' / 'GTK_ORIENTATION_HORIZONTAL'
+
+=item * 'vertical' / 'GTK_ORIENTATION_VERTICAL'
+
+=back
+
+
+=head2 enum Gtk2::ShadowType
+
+=over
+
+=item * 'none' / 'GTK_SHADOW_NONE'
+
+=item * 'in' / 'GTK_SHADOW_IN'
+
+=item * 'out' / 'GTK_SHADOW_OUT'
+
+=item * 'etched-in' / 'GTK_SHADOW_ETCHED_IN'
+
+=item * 'etched-out' / 'GTK_SHADOW_ETCHED_OUT'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gtk2::Widget>, L<Gtk2::Container>, L<Gtk2::Bin>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2> for a full notice.
+
+
+=cut
+

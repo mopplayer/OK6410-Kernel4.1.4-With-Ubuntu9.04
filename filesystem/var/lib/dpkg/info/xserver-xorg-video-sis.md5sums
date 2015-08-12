@@ -1,0 +1,6 @@
+04e222b6dff98ebaf10b6320ef5a618d  usr/share/xserver-xorg/pci/sis.ids
+020df0dddfb125482af1086db12268d7  usr/share/doc/xserver-xorg-video-sis/copyright
+b1dc47ea330ee5001ca50cd17af19aac  usr/share/doc/xserver-xorg-video-sis/changelog.gz
+310203b9da4bd85eb22366ea5be212bf  usr/share/doc/xserver-xorg-video-sis/changelog.Debian.gz
+8382a1dc6687e10e52cabbb2254a61b3  usr/share/man/man4/sis.4.gz
+b5c26da6a53c4c2147fda06675d527fa  usr/lib/xorg/modules/drivers/sis_drv.so

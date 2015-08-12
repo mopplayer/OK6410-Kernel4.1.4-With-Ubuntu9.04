@@ -1,0 +1,262 @@
+#!/usr/bin/perl -w
+
+# update-openoffice-dicts -- update OpenOffice.org's dictionary.lst
+#
+#   Copyright (C) 2003-2009 René Engelhard <rene@debian.org>,
+#   Copyright (C) 2003-2009 Agustin Martin Domingo <agmartin@debian.org>
+#
+# Public Domain
+
+use Debian::DictionariesCommon q(dico_checkroot);
+
+@print_comments=(
+"## ---------------------------------------------------------------------
+##       List of All Dictionaries to be Loaded by OpenOffice.org
+## ---------------------------------------------------------------------
+##                   ********** WARNING **********
+## ---------------------------------------------------------------------
+##  This file is only needed for spellchecking under OpenOffice.org <3.
+##  This file is not used at all by OpenOffice.org versions 3 and later.
+##     It will be removed as soon as OpenOffice.org >=3 is installed,
+##                   or no OpenOffice.org is present,
+##                    or Debian squeeze is released,
+##          or we decide that it should no longer be present,
+##            along with *all* your personal settings in it.
+## ---------------------------------------------------------------------
+## Each Entry in the list have the following space delimited fields
+##
+## Field 1: Entry Type \"DICT\" - spellchecking dictionary
+##                     \"HYPH\" - hyphenation dictionary
+##                     \"THES\" - thesaurus files
+##
+## Field 2: Language code from Locale \"en\" or \"de\" or \"pt\" ...
+##
+## Field 3: Country Code from Locale \"US\" or \"GB\" or \"PT\"
+##
+## Field 4: Root name of file(s) \"en_US\" or \"hyph_de\" or \"th_en_US\"
+##          (do not add extensions to the name)
+##
+## This file is automatically updated by update-openoffice-dicts script
+## ---------------------------------------------------------------------
+");
+
+# -------------------------------------------------------------------------
+sub write_manually_added() {
+# -------------------------------------------------------------------------
+# put all entries not in the automatic section in the new dictionary.lst
+# file (manually added dictionaries by the user)
+# -------------------------------------------------------------------------
+  my $line;
+  my $inheader = 1;
+  open(DL_ORIG, "$dictionary_lst") # open the existing file for reading...
+    or die("Opening $dictionary_lst failed.\n");
+  while (<DL_ORIG>) {
+    chomp;
+    $line = $_;
+    undef $inheader if not m/^\#/;
+
+    push @dictionary_orig,$line; # save original file
+
+    if ($line eq $begin_string) {
+      # if we find the start of the section; set the flag that we are
+      # in the automatic section, ignore the following lines ...
+      $we_are_in_auto=1;
+      next;
+    } elsif ($line eq $end_string) {
+      # ... until we find the end and set the flag back.
+      $we_are_in_auto=0;
+      next;
+    } elsif ($we_are_in_auto == 0) {
+      # we are in non-automatic section; copy the user added entries
+      # into the temporary array; but that only if the line is not a ##
+      # comment or no blank line
+      next if $line =~ /^\#\#/;
+      next if $line =~/^\s*$/;
+      if ($inheader) {
+	next if $line =~ /^\#/;
+      }
+      push @dictionary_new, $line;
+    }
+  }
+  close(DL_ORIG);
+}
+
+# -------------------------------------------------------------------------
+sub build_automatic_section() {
+# -------------------------------------------------------------------------
+# Read all files in $myspellinfos and $hunspellinfos and return their
+# contents verbatim for the new dictionary.lst, with $hunpellinfos prevailing
+# -------------------------------------------------------------------------
+  my $auto_text    = "";
+  my %auto_entries = ();
+  my @all_infos    = (<$myspellinfos/*>,<$hunspellinfos/*>);
+
+  foreach $infofile ( @all_infos ) {
+    next if $infofile =~ m/.*~$/; # Skip backup copies
+    my @tmpinfo = ();
+    my $locale  = $infofile;
+    $locale     =~ s/^.*\///;
+    $locale     =~ s/^(hunspell|myspell)-//;
+    open(ENTRY,"$infofile");
+    while (<ENTRY>){              # Some info files might have no final
+      chomp;                    # newline.
+      push @tmpinfo, $_;        # This should uniformize everything.
+    }
+    close(ENTRY);
+    $auto_entries{$locale} = join("\n",@tmpinfo);
+  }
+
+  $auto_text .= "$begin_string\n";
+  $auto_text .= "$str_instruct_add\n";
+  foreach ( sort keys %auto_entries ){
+    $auto_text .= $auto_entries{$_} . "\n";
+  }
+  $auto_text .= "$end_string\n\n";
+  return $auto_text;
+}
+
+# -------------------------------------------------------------------------
+sub write_dictionary_lst() {
+# -------------------------------------------------------------------------
+# Write dictionary.lst, make backup of previous one if present and fix
+# file permissions. If in dryrun mode will only print result to stdout.
+# -------------------------------------------------------------------------
+  push @dictionary_new, @print_comments;
+  push @dictionary_new, &build_automatic_section();
+
+  if ( -e $dictionary_lst ) {
+    $we_are_in_auto=0;
+    write_manually_added();
+  }
+
+  if ( $dryrun ){
+    open(NEWFILE, "> /dev/stdout") # Write results to stdout.
+      or die("Opening STDOUT failed.\n");
+  } else {
+    open(NEWFILE, "> $dictionary_lst") # open the existing file for writing.
+      or die("Opening $dictionary_lst failed.\n");
+  }
+  foreach (@dictionary_new) { print NEWFILE $_, "\n"; }
+  close(NEWFILE);
+
+  return if $dryrun;
+
+  open(OLDFILE, "> $dictionary_lst.old") # open the backup file for writing
+    or die("Opening $dictionary_lst.old failed.\n");
+  foreach (@dictionary_orig) { print OLDFILE $_, "\n"; }
+  close(OLDFILE);
+
+  # make sure the file has the right permissions
+  chown(0, 0, $dictionary_lst);
+  chmod(0644, $dictionary_lst);
+}
+
+# -------------------------------------------------------------------------
+sub get_ooo_version (){
+# -------------------------------------------------------------------------
+# Check installed OOo version. If no OOOBaseVersion info is present, OOo is
+# ancient, so we set version to 0. Return nil if OOo is not installed or
+# version otherwise.
+# -------------------------------------------------------------------------
+  my $ooo_version_major;
+
+  if ( -e "/usr/lib/openoffice/program/versionrc" ) {
+    open(VERSIONRC, "/usr/lib/openoffice/program/versionrc")
+      or die("Opening /usr/lib/openoffice/program/versionrc failed.\n");
+
+    while (<VERSIONRC>) {
+      chomp;
+      if ( $_ =~ /^OOOBaseVersion=(\d)\.(\d)/ ) {
+	$ooo_version_major = $1;
+	last;
+      }
+    }
+    close(VERSIONRC);
+
+    # If versionrc is present but no match is found OOo is ancient. Set version to 0.
+    $ooo_version_major = 0 unless $ooo_version_major;
+  }
+  return $ooo_version_major;
+}
+
+# --------------------------------------------------------------------
+# The main program
+# --------------------------------------------------------------------
+
+$dictionary_lst    = "/etc/openoffice/dictionary.lst";
+$myspellinfos      = "/usr/share/myspell/infos/ooo";
+$hunspellinfos     = "/usr/share/openoffice/infos";
+$begin_string      = "## !!! BEGIN AUTOMATIC SECTION -- DO NOT CHANGE !!!";
+$end_string        = "## !!! END AUTOMATIC SECTION -- DO NOT CHANGE !!!";
+$str_instruct_add  = "## !!! ADD YOUR ADDITIONAL ENTRIES BELOW THIS SECTION !!!";
+@dictionary_orig   = (); # The array with the original strings from dictionary.lst
+@dictionary_new    = (); # The array with the strings to go to new dictionary.lst
+$dryrun            = '';
+$ooo_version_major = get_ooo_version();
+
+$dryrun = 1 if ( $ARGV[0] && $ARGV[0] =~ m/^(-d|--dryrun)$/ );
+
+$dryrun or dico_checkroot();
+
+if ($ooo_version_major && $ooo_version_major < 3) {
+  print STDOUT "Updating OpenOffice.org's dictionary list... ";
+
+  # We may need to create the dir...
+  unless ( -d "/etc/openoffice" or $dryrun ) {
+    mkdir("/etc/openoffice",0755) || die "can't mkdir /etc/openoffice: $!\n";;
+  }
+
+  write_dictionary_lst();
+
+  print STDOUT "done.\n";
+} else {
+  if ( -e "$dictionary_lst" ) {
+    my $reason = $ooo_version_major ? "obsolete" : "useless";
+    print STDERR "Removing $reason /etc/openoffice/dictionary.lst file.\n";
+    unlink("$dictionary_lst");
+    unlink("$dictionary_lst.old");
+  }
+}
+
+__END__
+
+=head1 NAME
+
+update-openoffice-dicts - rebuild dictionary.lst for OpenOffice.org
+
+=head1 SYNOPSIS
+
+update-openoffice-dicts
+
+=head1 DESCRIPTION
+
+update-openoffice-dicts can be used to regenerate dictionary.lst for
+openoffice.  This script is run by myspell dictionaries when they are
+installed or removed.
+
+It is not normally necessary to run update-openoffice-dicts by hand.
+Packages containing dictionaries create a file in /usr/share/myspell/infos
+and call this script automatically.
+
+update-openoffice-dicts will create a new dictionary.lst if it does not
+already exist.
+
+=head1 FILES
+
+/etc/openoffice/dictionary.lst, /usr/share/myspell/infos/ooo/*
+
+=head1 SEE ALSO
+
+openoffice(1), dictionary.lst(5)
+
+=head1 AUTHORS
+
+Rene Engelhard, Agustin Martin Domingo
+
+=cut
+
+# Local Variables:
+#  perl-indent-level: 2
+# End:
+
+#  LocalWords:  openoffice myspell dicts

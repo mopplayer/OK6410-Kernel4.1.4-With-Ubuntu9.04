@@ -1,0 +1,127 @@
+Template: tcpd/paranoid-mode
+Type: boolean
+Default: false
+description: Use paranoid settings in hosts.allow and hosts.deny?
+ New /etc/hosts.allow and /etc/hosts.deny files for the TCP wrapper
+ programs (tcpd) and the libwrap library will be created as they do
+ not exist yet.
+ .
+ You can choose between a generic and permissive configuration which
+ will allow any incoming connection or a paranoid configuration which
+ will not allow remote connections regardless of where they originate
+ from. The latter, even if more secure, will block out all
+ communication, including, for example, remote administration.
+ .
+ Both files can be modified later to suit your needs as explained in
+ the hosts_access(5) manpage. These settings will only affect network
+ services that use the libwrap library: restrictions for other services
+ may be established by using package-specific configuration directives
+ or firewall rules.
+description-ca.UTF-8: Voleu utilitzar una configuració paranoica a «hosts.allow» i «hosts.access»?
+ Es crearan els fitxers «/etc/hosts.allow» i «/etc/hosts.deny» (utilitzats pels programes basats en tcpd i la biblioteca libwrap), ja que encara no existeixen.
+ .
+ Podeu triar entre una configuració genèrica i permissiva que permeti qualsevol connexió entrant, o una configuració paranoica que no permeti connexions remotes, independentment del seu origen. La darrera opció, encara que és més segura, bloquejarà tota comunicació, incloent per exemple l'administració remota.
+ .
+ Ambdós fitxers es poden modificar més endavant per tal d'adaptar-los a les vostres necessitats tal i com s'explica a la pàgina del manual hosts_access(5). Tingueu en compte que aquesta configuració només afectarà els serveis de la xarxa que utilitzin la biblioteca libwrap; podeu establir restriccions per a altres serveis mitjançant la configuració específica de cada paquet o utilitzant un tallafoc.
+description-cs.UTF-8: Použít v hosts.allow a hosts.deny paranoidní nastavení?
+ Pro daemon TCP wrapper (tcpd) a knihovnu libwrap budou vytvořeny nové soubory /etc/hosts.allow a /etc/hosts.deny, protože dosud neexistují.
+ .
+ Můžete si vybrat mezi otevřeným nastavením, které povolí všechna příchozí spojení, a mezi paranoidním nastavením, které zakáže vzdálená spojení bez ohledu na původ. Druhé nastavení je bezpečnější, ovšem zablokuje veškerou komunikaci včetně např. vzdálené správy.
+ .
+ Oba soubory můžete později upravit podle svých potřeb podle pokynů v manuálové stránce hosts_access(5). Toto nastavení ovlivní pouze síťové služby používající knihovnu libwrap. Omezení přístupu k ostatním službám můžete řešit pomocí konfiguračních souborů jednotlivých balíků nebo pomocí firewallu.
+description-da.UTF-8: Benyt paranoide indstillinger i hosts.allow og hosts.access op?
+ Der vil blive oprettet nye /etc/hosts.allow og /etc/hosts.deny til TCP-indpakningsprogrammerne (tcpd) ligesom biblioteket bliver oprettet, da ingen af dem eksister.
+ .
+ Du kan vælge mellem en som udgangspunkt eftergivende opsætning, der vil tillade alle indkommende forbindelser, eller en paranoid opsætning, der ikke vil tillade forbindelser udefra uanset hvorfra de stammer. Den sidstenævnte vil, selvom den er mere sikker, udelukke al kommunikation, herunder f.eks. fjernadministration.
+ .
+ Begge filer kan tilrettes senere, så de svarer til dine behov, som forklaret på manualsiden hosts_access(5). Disse indstillinger vil kun påvirke de netværksservices, der benytter biblioteket libwrap: restriktioner for andre services kan etableres med pakke-specifik opsætning eller brandmurs-regler.
+description-de.UTF-8: Paranoide Einstellungen in hosts.allow und hosts.deny verwenden?
+ Es werden neue Dateien /etc/hosts.allow und /etc/hosts.deny für die TCP-Wrappers-Programme (tcpd) und die libwrap-Bibliothek erstellt, da sie noch nicht existieren.
+ .
+ Sie können zwischen einer generische und freizügige Konfiguration, die jede eingehende Verbindungen erlaubt, oder einer paranoiden Konfiguration, die keine eingehende Verbindung erlaubt, egal woher sie kommt, wählen. Letztere, obwohl auch sicherer, wird alle Kommunikation, darunter beispielsweise Administration aus der Ferne, blocken.
+ .
+ Beide Dateien können später nach Ihren Bedürfnissen angepasst werden, wie dies in der Handbuchseite hosts_access(5) erklärt ist. Diese Einstellungen betreffen nur Netz-Anwendungen, die die libwrap-Bibliothek verwenden. Begrenzungen für andere Dienste können über Paket-spezifische Konfigurationsanweisungen oder mittels Firewall-Regeln eingerichtet werden.
+description-es.UTF-8: ¿Debería tcpd configurar los archivos hosts.allow y hosts.access de forma «paranoica»?
+ Se crearán nuevos ficheros «/etc/hosts.allow» y «/etc/hosts.deny» para los programas TCP wrapper (tcpd) y para la librería libwrap ya que no tiene ninguno de estos archivos aún.
+ .
+ Puede elegir entre una configuración genérica y permisiva que permita cualquier conexión entrante o una configuración paranoica que no permita ninguna conexión entrante independientemente de dónde se origine. La última opción, aunque sea la más segura, bloqueará cualquier comunicación incluyendo, por ejemplo, la administración remota.
+ .
+ Puede modificar ambos ficheros más adelante para ajustarlos a sus necesidades tal y como se describe en la página de manual host_access(5). Esta configuración sólo afectará a los servidores de red que utilicen la librería «libwrap». Puede restringir el acceso a otros servicios utilizando directivas específicas de cada paquete o reglas de cortafuegos.
+description-fi.UTF-8: Käytetäänkö vainoharhaisia asetuksia tiedostoissa hosts.allow ja hosts.deny?
+ Uudet tiedostot /etc/hosts.allow ja /etc/hosts.deny luodaan TCP-kääreohjelmien (tcpd) ja libwrap-kirjaston käyttöön, koska niitä ei vielä ole.
+ .
+ Voit valita yleisten ja sallivien, kaikki sisäänpäin tulevat yhteydet hyväksyvien asetusten, ja vainoharhaisten, kaikki yhteydet ulkoapäin kieltävien asetusten väliltä. Jälkimmäiset, vaikka ovatkin turvallisemmat, estävät kaiken viestinnän, mukaan lukien esimerkiksi etähallinnan.
+ .
+ Molempia tiedostoja voidaan myöhemmin muokata vastaamaan tarpeita man-ohjesivun hosts_access(5) ohjeiden mukaisesti. Nämä asetukset vaikuttavat vain verkkopalveluihin, jotka käyttävät libwrap-kirjastoa. Muita palveluita koskevat rajoitukset voidaan asettaa käyttäen pakettikohtaisia asetusohjeita tai palomuurisääntöjä.
+description-fr.UTF-8: Faut-il configurer hosts.allow et hosts.deny en mode « paranoïaque » ?
+ De nouveaux fichiers /etc/hosts.allow et /etc/hosts.deny, destinés aux programmes « TCP wrappers » (tcpd) et à la bibliothèque libwrap vont être créés car ils n'existent pas encore.
+ .
+ Vous pouvez choisir entre une configuration permissive générique qui autorise toutes les connexions entrantes, et une configuration « paranoïaque » qui refuse toute connexion de l'extérieur quelle qu'en soit l'origine. Cette dernière, plus sécurisée, bloque cependant toutes les communications y compris (par exemple) celles pouvant servir à l'administration distante.
+ .
+ Ces deux fichiers peuvent ultérieurement être modifiés pour qu'ils correspondent à vos besoins, comme expliqué dans la page de manuel host_access(5). Ces restrictions ne s'appliquent qu'aux services réseau qui utilisent la bibliothèque libwrap. Les restrictions éventuelles pour les autres services devront être établies avec des règles de pare-feu ou des options de configurations propres à ces services.
+description-gl.UTF-8: ¿Empregar unha configuración paranoica de hosts.allow e hosts.deny?
+ Hanse crear uns novos ficheiros /etc/hosts.allow e /etc/hosts.deny para os programas envoltorios TCP (tcpd) e para a biblioteca libwrap, xa que aínda non existen.
+ .
+ Pode escoller entre unha configuración xenérica e permisiva que ha permitir calquera conexión entrante e unha configuración paranoica que non ha permitir conexións remotas independentemente da súa procedencia. Esta configuración, aínda que sexa máis segura, ha bloquear tódalas comunicacións, incluíndo, por exemplo, a administración remota.
+ .
+ Pódense modificar os dous ficheiros máis tarde para axustalos ás súas necesidades tal como se explica na páxina de manual hosts_access(5). Esta configuración só ha afectar aos servizos de rede que empregan a biblioteca libwrap; pódense establecer as restriccións para outros servizos empregando directivas de configuración específicas para cada paquete ou regras de devasa.
+description-it.UTF-8: Configurare hosts.allow e hosts.deny in modo paranoico?
+ Poiché non esistono ancora, saranno creati i file /etc/hosts.allow e /etc/hosts.deny usati dai programmi TCP wrapper e dalla libreria libwrap.
+ .
+ Si può scegliere tra una configurazione generica e permissiva che permetta qualsiasi connessione in ingresso e una paranoica che non permetta nessuna connessione remota indipentemente dalla sua origine. Anche se è più sicura, la seconda impedirà ogni tipo di comunicazione, compresa per esempio l'amministrazione remota.
+ .
+ È comunque possibile modificare in seguito i file come spiegato nella man page hosts_access(5). Queste impostazioni avranno effetto solo sui servizi di rete che usano la libreria libwrap: è possibile configurare restrizioni per gli altri servizi usando direttive specifiche dei pacchetti o regole del firewall.
+description-ja.UTF-8: hosts.allow と hosts.deny に paranoid な設定を使いますか?
+ TCP wrappers プログラム (tcpd) および libwrap ライブラリ用の新しい /etc/hosts.allow と /etc/hosts.deny のファイルは、まだ存在しないので新規に作成します。
+ .
+ すべての入力接続を許可する一般的で寛大な設定と、それがどこから来たのかを問わずリモート接続を許可しない paranoid 設定のいずれかを選ぶことができます。後者はよりセキュアではありますが、リモート接続も含むすべての接続をブロックすることになります。
+ .
+ hosts_access(5) man ページに書かれているように、両方のファイルはあなたの必要に応じて後で編集できます。これらの設定は、libwrap ライブラリを使うネットワークサービスのみに影響します。その他のサービスの制限は、パッケージ固有の設定ディレクティブやファイアウォールルールを使って確立すべきです。
+description-ko.UTF-8: hosts.allow와 hosts.deny에 과민설정(paranoid)을 적용할까요?
+ TCP wrappers 데몬(tcpd)과 libwrap 라이브러리를 위한 /etc/hosts.allow와 /etc/hosts.deny 파일이 아직 없으므로 새로 생성합니다.
+ .
+ 들어오는 통신을 허용하는 일반적이고 관용적인 설정을 선택하거나 들어오는 통신은 근원에 상관없이 무조건 막는 과민적인 설정을 선택하실 수 있습니다. 과민설정을 사용하면 보안 수준이 더 높을 지는 모르나 원격 관리를 포함한 모든 통신을 막아버립니다.
+ .
+ hosts_access(5) 맨페이지에 적혀있는 대로 이 파일들을 원하시는 대로 변경하실 수 있습니다. 이 설정들은 libwrap 라이브러리를 사용하는 네트워크 서비스에만 적용됩니다. 이에 해당되지 않는 다른 서비스들에 대한 제약은 각 꾸러미별 설정이나 방화벽 규칙을 통해 변경하십시오.
+description-nl.UTF-8: Paranoïde instellingen gebruiken in hosts.allow en hosts.access?
+ Nieuwe bestanden /etc/hosts.allow en /etc/hosts.deny voor de "TCP wrapper" programma's en de libwrap bibliotheek zullen worden aangemaakt, omdat ze nog niet bestaan.
+ .
+ U kunt ofwel een algemene, permissieve instelling hebben die iedere inkomende verbinding toelaat, ofwel een paranoïde instelling die geen inkomende verbindingen toelaat ongeacht waar ze vandaan komen. De paranoïde instelling is veiliger, maar blokkeert alle verkeer, inclusief bijvoorbeeld voor beheer op afstand.
+ .
+ Beide bestanden kunnen later naar wens worden aangepast zoals uitgelegd in de hosts_access(5) man-pagina. Deze instellingen zullen slechts die netwerkdiensten beïnvloeden die de libwrap bibliotheek gebruiken; voor andere diensten kunnen beperkingen worden gedaan door pakket-specifieke instellingen of firewallregels.
+description-pt.UTF-8: Utilizar definições paranoícas no hosts.allow e hosts.deny?
+ Serão criados novos ficheiros /etc/hosts.allow e /etc/hosts.deny para os programas do daemon TCP wrappers (tcpd) e da biblioteca libwrap pois eles não existem.
+ .
+ Pode escolher entre uma configuraçao genérica e uma configuração permissiva que permitirão a chegada de uma ligação ou uma configuração paranoíca que não permitirá ligações remotas independentemente da sua origem. A última, ainda que mais segura, bloqueará qualquer comunicação, inluíndo, por exemplo, administração remota.
+ .
+ Ambos os ficheiros podem ser modificados posteriormente para servir as suas necessidades como explicado na manpage hosts_access(5). Estas definições apenas afectrão os serviços de rede que usem a biblioteca libwrap. As definições para outros serviçoes devem ser definidas utilizando directivas de configurações específicas de cada pacote ou regras de firewall.
+description-ro.UTF-8: Se folosesc configurațiile paranoice în hosts.allow și hosts.deny?
+ Vor fi create noile fișiere /etc/hosts.allow și /etc/hosts.deny pentru serviciul TCP (tcpd) deoarece ele nu există.
+ .
+ Puteți alege între o configurație generică și permisivă care va permite orice conexiune de la distanță, sau o configurație de securitate extremă care nu va permite nici o conexiune de la distanță indiferent de unde a fost inițiată. Cea dea doua configurație, deși mai sigură, va împiedica orice comunicație, inclusiv administrarea de la distanță.
+ .
+ Ambele fișiere pot fi modificate ulterior pentru a se potrivi nevoilor dumneavoastră, după cum este explicat și în pagina de manual hosts_acces(5). Aceste configurări vor afecta doar serviciile de rețea care folosesc biblioteca libwrap: pentru alte servicii restricțiile ar trebui impuse folosind directive specifice pachetului sau reguli de firewall.
+description-ru.UTF-8: Использовать параноидальные настройки в hosts.allow и hosts.deny?
+ Будут созданы новые файлы /etc/hosts.allow и /etc/hosts.deny для программ TCP-оболочек (tcpd) и библиотеки libwrap, так как эти файлы ещё не существуют.
+ .
+ Вы можете выбрать между общей (generic) и разрешающей (permissive) настройками, которые позволят любые входящие соединения, или параноидальной (paranoid) настройкой, которая не позволит удалённые соединения вне зависимости от их происхождения. Последняя настройка, хотя и более безопасная, будет блокировать все соединения, включая, например, удалённое администрирование.
+ .
+ Оба файла могут быть изменены позже в соответствии с вашими требованиями так, как объясняется в man-странице hosts_access(5). Эти настройки повлияют только на сетевые сервисы, которые используют библиотеку libwrap; ограничения для прочих сервисов могут быть установлены с использованием специфических для пакета команд настройки или правил межсетевого экрана (firewall).
+description-sk.UTF-8: Použiť  paranoidné nastavenia v hosts.allow a hosts.deny?
+ Keďže súbory /etc/hosts.allow a /etc/hosts.deny pre program TCP wrapper (tcpd) a knižnicu libwrap zatiaľ neexistujú, budú vytvorené.
+ .
+ Môžete si vybrať medzi všeobecnou a liberálnou politikou, ktorá povolí akékoľvek prichádzajúce spojenie; alebo paranoidnou konfiguráciou, ktorá nepovolí žiadne vzdialené spojenia bez ohľadu na to odkiaľ pochádzajú. Táto druhá politika, hoci je bezpečnejšia, zablokuje všetku komunikáciu vrátane, napríklad, vzdialenej správy.
+ .
+ Oba súbory môžete neskôr zmeniť, aby vyhovovali vašim potrebám, podľa vysvetlenia na manuálovej stránke hosts_access(5). Tieto nastavenia ovplyvnia iba sieťové služby, ktoré využívajú knižnicu libwrap: iné služby je možné obmedziť špecifickými nastaveniami balíkov alebo pravidlami firewallu.
+description-sv.UTF-8: Använd paranoida inställningar i hosts.allow och hosts.access?
+ Nya /etc/hosts.allow och /etc/hosts.deny för TCP wrappers-demonen (tcpd) kommer att skapas eftersom de ännu inte finns.
+ .
+ Du kan välja mellan en allmän och regelmässig konfiguration som kommer att tillåta inkommande anslutningar eller en paranoid konfiguration som inte kommer att tillåta fjärranslutningar oavsett var de kommer från. Den senare, även om den är mer säker, kommer att blockera alla kommunikation, inklusive, till exempel, fjärradministration.
+ .
+ Båda filerna kan ändras senare för att passa dina behov och förklaras av manualsidan hosts_access(5). Dessa inställningar kommer endast att påverka nätverkstjänster som använder biblioteket libwrap. Restriktioner för andra tjänster bör etableras genom användningen av brandväggsregler.
+description-vi.UTF-8: Có nên dùng thiết lập rất cẩn thận trong hai tập tin « hosts.allow » (cho phép máy) và « hosts.deny » (từ chối máy) không?
+ Tập tin « /etc/hosts.allow » và « /etc/hosts.deny » mới cho những chương trình bao bọc TCP (tcpd) và thư viện libwrap sẽ được tạo, vì chưa có.
+ .
+ Bạn có thể chọn hoặc cấu hình chung cho phép bất cứ kết nối gửi đến nào, hoặc cấu hình rất cẩn thận không cho phép kết nối từ xa bất chấp gốc. Cấu hình rất cẩn thận là bảo mật hơn, nhưng cũng chặn toàn bộ giao thông, gồm (thí dụ) việc quản trị từ xa.
+ .
+ Để thích hợp cho yêu cầu của bạn, cũng có thể sửa đổi mỗi tập tin, như được giải thích trên trang hướng dẫn hosts_access(5). Thiết lập hiện thời chỉ có tác động tới dịch vụ mạng có phải sử dụng thư viện libwrap. Cũng có thể giới hạn dịch vụ khác bằng cách dùng chỉ thị đặc trưng cho gói hay quy tắc bức tường lửa.

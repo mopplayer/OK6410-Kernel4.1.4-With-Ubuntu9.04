@@ -1,0 +1,130 @@
+May  9 11:22:09 ubuntu kernel: On node 0 totalpages: 65536
+May  9 11:22:09 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 11:22:09 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 11:22:09 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 11:22:09 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 11:22:09 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 11:22:09 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x00-0xff]
+May  9 11:22:09 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x000000-0x0003ff]
+May  9 11:22:09 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x000000-0x001fff]
+May  9 11:22:09 ubuntu kernel: libata version 3.00 loaded.
+May  9 11:22:09 ubuntu kernel: eth0: No PHY found
+May  9 11:22:10 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 11:22:10 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 11:28:02 ubuntu kernel: On node 0 totalpages: 65536
+May  9 11:28:02 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 11:28:02 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 11:28:02 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 11:28:02 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 11:28:02 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 11:28:02 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x00-0xff]
+May  9 11:28:02 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x000000-0x0003ff]
+May  9 11:28:02 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x000000-0x001fff]
+May  9 11:28:02 ubuntu kernel: libata version 3.00 loaded.
+May  9 11:28:02 ubuntu kernel: eth0: No PHY found
+May  9 11:28:02 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 11:28:02 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 12:11:57 ubuntu kernel: On node 0 totalpages: 65536
+May  9 12:11:57 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 12:11:57 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 12:11:57 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 12:11:57 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 12:11:57 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 12:11:57 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+May  9 12:11:57 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+May  9 12:11:57 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+May  9 12:11:57 ubuntu kernel: libata version 3.00 loaded.
+May  9 12:11:57 ubuntu kernel: eth0: No PHY found
+May  9 12:11:57 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 12:11:57 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 12:23:55 ubuntu kernel: On node 0 totalpages: 65536
+May  9 12:23:55 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 12:23:55 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 12:23:55 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 12:23:55 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 12:23:55 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 12:23:55 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x00-0xff]
+May  9 12:23:55 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x000000-0x0003ff]
+May  9 12:23:55 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x000000-0x001fff]
+May  9 12:23:55 ubuntu kernel: libata version 3.00 loaded.
+May  9 12:23:56 ubuntu kernel: eth0: No PHY found
+May  9 12:23:56 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 12:23:56 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 13:29:43 ubuntu kernel: On node 0 totalpages: 65536
+May  9 13:29:43 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 13:29:43 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 13:29:43 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 13:29:43 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 13:29:43 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 13:29:43 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+May  9 13:29:43 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+May  9 13:29:43 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+May  9 13:29:43 ubuntu kernel: libata version 3.00 loaded.
+May  9 13:29:43 ubuntu kernel: eth0: No PHY found
+May  9 13:29:43 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 13:29:43 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 13:42:26 ubuntu kernel: On node 0 totalpages: 65536
+May  9 13:42:26 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 13:42:26 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 13:42:26 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 13:42:26 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 13:42:26 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 13:42:26 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+May  9 13:42:26 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+May  9 13:42:26 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+May  9 13:42:26 ubuntu kernel: libata version 3.00 loaded.
+May  9 13:42:26 ubuntu kernel: eth0: No PHY found
+May  9 13:42:26 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 13:42:26 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 13:50:35 ubuntu kernel: On node 0 totalpages: 65536
+May  9 13:50:35 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 13:50:35 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 13:50:35 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 13:50:35 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 13:50:35 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 13:50:36 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+May  9 13:50:36 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+May  9 13:50:36 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+May  9 13:50:36 ubuntu kernel: libata version 3.00 loaded.
+May  9 13:50:36 ubuntu kernel: eth0: No PHY found
+May  9 13:50:36 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 13:50:36 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 14:02:46 ubuntu kernel: On node 0 totalpages: 65536
+May  9 14:02:46 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 14:02:46 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 14:02:46 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 14:02:46 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 14:02:46 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 14:02:46 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+May  9 14:02:46 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+May  9 14:02:46 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+May  9 14:02:46 ubuntu kernel: libata version 3.00 loaded.
+May  9 14:02:46 ubuntu kernel: eth0: No PHY found
+May  9 14:02:46 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 14:02:47 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 14:17:22 ubuntu kernel: On node 0 totalpages: 65536
+May  9 14:17:22 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 14:17:22 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 14:17:22 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 14:17:22 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 14:17:22 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 14:17:22 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x44000000-0x440000ff]
+May  9 14:17:22 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x50002000-0x500023ff]
+May  9 14:17:22 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x50000000-0x50001fff]
+May  9 14:17:22 ubuntu kernel: libata version 3.00 loaded.
+May  9 14:17:22 ubuntu kernel: eth0: No PHY found
+May  9 14:17:23 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 14:17:23 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 14:22:14 ubuntu kernel: On node 0 totalpages: 65536
+May  9 14:22:14 ubuntu kernel: free_area_init_node: node 0, pgdat c0355334, node_mem_map c0378000
+May  9 14:22:14 ubuntu kernel:   Normal zone: 512 pages used for memmap
+May  9 14:22:14 ubuntu kernel:   Normal zone: 0 pages reserved
+May  9 14:22:14 ubuntu kernel:   Normal zone: 65024 pages, LIFO batch:15
+May  9 14:22:14 ubuntu kernel:   Movable zone: 0 pages used for memmap
+May  9 14:22:14 ubuntu kernel: pci 0000:00:0c.0: reg 10 io port: [0x00-0xff]
+May  9 14:22:14 ubuntu kernel: pci 0000:00:0c.0: reg 14 32bit mmio: [0x000000-0x0003ff]
+May  9 14:22:14 ubuntu kernel: pci 0000:00:0c.0: reg 18 32bit mmio: [0x000000-0x001fff]
+May  9 14:22:14 ubuntu kernel: libata version 3.00 loaded.
+May  9 14:22:14 ubuntu kernel: eth0: No PHY found
+May  9 14:22:14 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00
+May  9 14:22:14 ubuntu kernel: sd 0:0:0:0: [sda] Mode Sense: 14 00 00 00

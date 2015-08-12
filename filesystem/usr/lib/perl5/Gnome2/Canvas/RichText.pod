@@ -1,0 +1,279 @@
+=head1 NAME
+
+Gnome2::Canvas::RichText
+
+=head1 HIERARCHY
+
+  Glib::Object
+  +----Glib::InitiallyUnowned
+       +----Gtk2::Object
+            +----Gnome2::Canvas::Item
+                 +----Gnome2::Canvas::RichText
+
+
+=head1 METHODS
+
+=head2 textbuffer = $text-E<gt>B<get_buffer> 
+
+=over
+
+=back
+
+=head2 $text-E<gt>B<set_buffer> ($buffer)
+
+=over
+
+=over
+
+=item * $buffer (Gtk2::TextBuffer) 
+
+=back
+
+=back
+
+=head2 $text-E<gt>B<copy_clipboard> 
+
+=over
+
+=back
+
+=head2 $text-E<gt>B<cut_clipboard> 
+
+=over
+
+=back
+
+=head2 textiter = $text-E<gt>B<get_iter_at_location> ($x, $y)
+
+=over
+
+=over
+
+=item * $x (integer) 
+
+=item * $y (integer) 
+
+=back
+
+=back
+
+=head2 rectangle = $text-E<gt>B<get_iter_location> ($iter)
+
+=over
+
+=over
+
+=item * $iter (Gtk2::TextIter) 
+
+=back
+
+=back
+
+=head2 $text-E<gt>B<paste_clipboard> 
+
+=over
+
+=back
+
+
+=head1 PROPERTIES
+
+=over
+
+=item 'anchor' (Gtk2::AnchorType : readable / writable)
+
+Anchor point for text
+
+=item 'cursor-blink' (boolean : readable / writable)
+
+Does the cursor blink in this rich text item?
+
+=item 'cursor-visible' (boolean : readable / writable)
+
+Is the cursor visible in this rich text item?
+
+=item 'direction' (Gtk2::DirectionType : readable / writable)
+
+Text direction
+
+=item 'editable' (boolean : readable / writable)
+
+Is this rich text item editable?
+
+=item 'grow-height' (boolean : readable / writable)
+
+Should the text box height grow if the text does not fit?
+
+=item 'height' (double : readable / writable)
+
+Height for text box
+
+=item 'indent' (integer : readable / writable)
+
+Number of pixels for indentation
+
+=item 'justification' (Gtk2::Justification : readable / writable)
+
+Justification mode
+
+=item 'left-margin' (integer : readable / writable)
+
+Number of pixels in the left margin
+
+=item 'pixels-above-lines' (integer : readable / writable)
+
+Number of pixels to put above lines
+
+=item 'pixels-below-lines' (integer : readable / writable)
+
+Number of pixels to put below lines
+
+=item 'pixels-inside-wrap' (integer : readable / writable)
+
+Number of pixels to put inside the wrap
+
+=item 'right-margin' (integer : readable / writable)
+
+Number of pixels in the right margin
+
+=item 'text' (string : readable / writable)
+
+Text to display
+
+=item 'visible' (boolean : readable / writable)
+
+Is this rich text item visible?
+
+=item 'width' (double : readable / writable)
+
+Width for text box
+
+=item 'wrap-mode' (Gtk2::WrapMode : readable / writable)
+
+Wrap mode for multiline text
+
+=item 'x' (double : readable / writable)
+
+X position
+
+=item 'y' (double : readable / writable)
+
+Y position
+
+=back
+
+
+=head1 SIGNALS
+
+=over
+
+=item B<tag-changed> (Gnome2::Canvas::RichText, Glib::Object)
+
+=back
+
+
+=head1 ENUMS AND FLAGS
+
+=head2 enum Gtk2::AnchorType
+
+=over
+
+=item * 'center' / 'GTK_ANCHOR_CENTER'
+
+=item * 'north' / 'GTK_ANCHOR_NORTH'
+
+=item * 'north-west' / 'GTK_ANCHOR_NORTH_WEST'
+
+=item * 'north-east' / 'GTK_ANCHOR_NORTH_EAST'
+
+=item * 'south' / 'GTK_ANCHOR_SOUTH'
+
+=item * 'south-west' / 'GTK_ANCHOR_SOUTH_WEST'
+
+=item * 'south-east' / 'GTK_ANCHOR_SOUTH_EAST'
+
+=item * 'west' / 'GTK_ANCHOR_WEST'
+
+=item * 'east' / 'GTK_ANCHOR_EAST'
+
+=item * 'n' / 'GTK_ANCHOR_N'
+
+=item * 'nw' / 'GTK_ANCHOR_NW'
+
+=item * 'ne' / 'GTK_ANCHOR_NE'
+
+=item * 's' / 'GTK_ANCHOR_S'
+
+=item * 'sw' / 'GTK_ANCHOR_SW'
+
+=item * 'se' / 'GTK_ANCHOR_SE'
+
+=item * 'w' / 'GTK_ANCHOR_W'
+
+=item * 'e' / 'GTK_ANCHOR_E'
+
+=back
+
+
+=head2 enum Gtk2::DirectionType
+
+=over
+
+=item * 'tab-forward' / 'GTK_DIR_TAB_FORWARD'
+
+=item * 'tab-backward' / 'GTK_DIR_TAB_BACKWARD'
+
+=item * 'up' / 'GTK_DIR_UP'
+
+=item * 'down' / 'GTK_DIR_DOWN'
+
+=item * 'left' / 'GTK_DIR_LEFT'
+
+=item * 'right' / 'GTK_DIR_RIGHT'
+
+=back
+
+
+=head2 enum Gtk2::Justification
+
+=over
+
+=item * 'left' / 'GTK_JUSTIFY_LEFT'
+
+=item * 'right' / 'GTK_JUSTIFY_RIGHT'
+
+=item * 'center' / 'GTK_JUSTIFY_CENTER'
+
+=item * 'fill' / 'GTK_JUSTIFY_FILL'
+
+=back
+
+
+=head2 enum Gtk2::WrapMode
+
+=over
+
+=item * 'none' / 'GTK_WRAP_NONE'
+
+=item * 'char' / 'GTK_WRAP_CHAR'
+
+=item * 'word' / 'GTK_WRAP_WORD'
+
+=item * 'word-char' / 'GTK_WRAP_WORD_CHAR'
+
+=back
+
+
+
+=head1 SEE ALSO
+
+L<Gnome2::Canvas>, L<Glib::Object>, L<Glib::InitiallyUnowned>, L<Gtk2::Object>, L<Gnome2::Canvas::Item>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2004 by the Gtk2-Perl Team.
+
+This software is licensed under the LGPL; see L<Gnome2::Canvas> for a full notice.
+
+=cut
+

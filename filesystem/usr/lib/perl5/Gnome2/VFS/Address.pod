@@ -1,0 +1,80 @@
+=head1 NAME
+
+Gnome2::VFS::Address
+
+=head1 HIERARCHY
+
+  Glib::Boxed
+  +----Gnome2::VFS::Address
+
+
+=head1 METHODS
+
+=head2 address = Gnome2::VFS::Address-E<gt>B<new_from_string> ($address)
+
+=over
+
+=over
+
+=item * $address (string) 
+
+=back
+
+=back
+
+=head2 boolean = $a-E<gt>B<equal> ($b)
+
+=over
+
+=over
+
+=item * $b (Gnome2::VFS::Address) 
+
+=back
+
+Since: vfs 2.13
+
+=back
+
+=head2 integer = $address-E<gt>B<get_family_type> 
+
+=over
+
+=back
+
+=head2 boolean = $a-E<gt>B<match> ($b, $prefix)
+
+=over
+
+=over
+
+=item * $b (Gnome2::VFS::Address) 
+
+=item * $prefix (integer) 
+
+=back
+
+Since: vfs 2.13
+
+=back
+
+=head2 string = $address-E<gt>B<to_string> 
+
+=over
+
+=back
+
+
+=head1 SEE ALSO
+
+L<Gnome2::VFS>, L<Glib::Boxed>
+
+=head1 COPYRIGHT
+
+Copyright (C) 2003-2007 by the gtk2-perl team.
+
+This software is licensed under the LGPL.  See L<Gnome2::VFS> for a full notice.
+
+
+=cut
+

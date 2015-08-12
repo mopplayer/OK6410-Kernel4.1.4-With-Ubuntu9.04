@@ -1,0 +1,10 @@
+b0eca0ebf3e3ef011d88b0264fee703f  lib/udev/check_driver
+7db2028f4143922506d73e53f53026a8  lib/udev/rules.d/40-xserver-xorg-input-wacom.rules
+f4efdd6bbf5e3de1004976f68f652da0  usr/lib/xorg/modules/input/wacom_drv.so
+38ddcdfea30579b053164bcae2c8fa16  usr/lib/hal/hal-setup-wacom
+a8bc33cc4df1f4b7a6a120d80c432bbe  usr/share/man/man1/check_driver.1.gz
+75b9f231556f7b041413cd7397e884c3  usr/share/man/man4/wacom.4x.gz
+d10003920e59a5fdeff1504dd2781f60  usr/share/hal/fdi/policy/20thirdparty/10-wacom.fdi
+cd3be9b7895944251ae6cf228bd63137  usr/share/doc/xserver-xorg-input-wacom/changelog.Debian.gz
+4b6510bb937976d314cce86d04a41db2  usr/share/doc/xserver-xorg-input-wacom/copyright
+e2e4be20e914fc48a749439199b825ab  usr/share/lintian/overrides/xserver-xorg-input-wacom

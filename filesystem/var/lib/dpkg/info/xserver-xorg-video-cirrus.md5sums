@@ -1,0 +1,8 @@
+95616cfdd62db3555e427d653310d0ca  usr/share/xserver-xorg/pci/cirrus.ids
+b9b570ac5c03f1fbe3e0cee5fe884b82  usr/share/doc/xserver-xorg-video-cirrus/copyright
+d4952dddcd1d895f9bda140622ba37d5  usr/share/doc/xserver-xorg-video-cirrus/changelog.gz
+5eeddc3e9e3c529968bbe0b78c7f1740  usr/share/doc/xserver-xorg-video-cirrus/changelog.Debian.gz
+75f5bb319e500077d8874ac7eacab508  usr/share/man/man4/cirrus.4.gz
+5b7593d036c9bbfc29bee0f81ef4c5cd  usr/lib/xorg/modules/drivers/cirrus_drv.so
+a3305271b8271b4ee345702a46f70158  usr/lib/xorg/modules/drivers/cirrus_laguna.so
+e80adc6453d5ba9e229f2fe304bdcef8  usr/lib/xorg/modules/drivers/cirrus_alpine.so

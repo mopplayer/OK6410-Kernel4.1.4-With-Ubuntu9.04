@@ -1,0 +1,39 @@
+#!/bin/sh
+
+exec >&3
+
+echo "-- /proc/cmdline"
+cat /proc/cmdline
+echo
+
+echo "-- /proc/filesystems"
+grep -v nodev /proc/filesystems
+echo
+
+echo "-- lsmod"
+lsmod
+echo
+
+if [ -r /etc/kernel-img.conf ]; then
+	echo "-- /etc/kernel-img.conf"
+	cat /etc/kernel-img.conf
+	echo
+fi
+
+if [ -r /etc/initramfs-tools/initramfs.conf ]; then
+	echo "-- /etc/initramfs-tools/initramfs.conf"
+	sed 's/#.*$//;/^[[:space:]]*$/d' /etc/initramfs-tools/initramfs.conf
+	echo
+fi
+
+if [ -r /etc/crypttab ]; then
+	echo "-- /etc/crypttab"
+	cat /etc/crypttab
+	echo
+fi
+
+if grep -q "MODULES=dep" /etc/initramfs-tools/initramfs.conf ; then
+	echo "-- /sys/block"
+	ls /sys/block
+	echo
+fi

@@ -1,0 +1,8 @@
+e6e052c3cedcce5aad64c2232b160ffa  lib/linux-sound-base/noOSS.modprobe.conf
+9d84a478bfd4c17632589f5e37a6c62c  lib/linux-sound-base/noALSA.modprobe.conf
+ff232c2eacbc73f9513ad1675fa714c3  usr/share/linux-sound-base/OSS-module-list
+e4809b1a6bbd09d686ddc3bf2db79c03  usr/share/linux-sound-base/ALSA-module-list
+8016066c99dd3398e41cc4abf8c605fe  usr/share/lintian/overrides/linux-sound-base
+3802d1ac47100d8219dcfc4f3dd03cfa  usr/share/doc/linux-sound-base/README.Debian
+f7c005c05acf0266ebca388bbf8ef381  usr/share/doc/linux-sound-base/copyright
+09b5b7187e64a74af633dd66b96c33d9  usr/share/doc/linux-sound-base/changelog.Debian.gz

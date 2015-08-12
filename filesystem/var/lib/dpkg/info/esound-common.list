@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/esound-common
+/usr/share/doc/esound-common/changelog.gz
+/usr/share/doc/esound-common/NEWS
+/usr/share/doc/esound-common/TODO
+/usr/share/doc/esound-common/changelog.Debian.gz
+/usr/share/doc/esound-common/README
+/usr/share/doc/esound-common/TIPS
+/usr/share/doc/esound-common/README.Debian
+/usr/share/doc/esound-common/copyright
+/etc
+/etc/esound
+/etc/esound/esd.conf

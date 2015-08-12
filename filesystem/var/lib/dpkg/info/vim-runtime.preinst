@@ -1,0 +1,53 @@
+#!/bin/sh
+set -e
+
+basedir=/usr/share/vim/vim72/doc
+
+# If we're upgrading from a version that had "vim-runtime Replaces vim-tiny"
+# and diversions haven't been setup, remove help.txt and tags to ensure
+# diversions get setup properly.
+#
+# OTOH, if we already have diversions setup, we may have a situation where
+# vim-tiny isn't installed but help.txt and tags have been diverted.  In that
+# case, remove the diverted files as they don't belong.
+check_diversion() {
+  if dpkg --compare-versions "$1" ge "1:7.1-056+1" \
+     && dpkg --compare-versions "$1" lt "1:7.1.314-1"; then
+    rm -f /usr/share/vim/vim71/doc/tags
+    rm -f /usr/share/vim/vim71/doc/help.txt
+  elif dpkg --compare-versions "$1" ge "1:7.1.314-1"; then
+    inst="$(dpkg-query -W -f='${Status}\n' vim-tiny | awk '{print $1}')"
+    if [ "$inst" != "install" ]; then
+      # 7.2a versioning was handled oddly
+      if echo "$1" | grep -q '~'; then
+        version="72a"
+      else
+        version="${1#?:}"
+        version="$(echo ${version%.*-*} | sed 's/\.//g')"
+      fi
+      rm -f /usr/share/vim/vim$version/doc/tags.vim-tiny
+      rm -f /usr/share/vim/vim$version/doc/help.txt.vim-tiny
+    fi
+  fi
+}
+
+add_diversion() {
+  dpkg-divert --package vim-runtime --add --rename \
+    --divert "$1.vim-tiny" "$1"
+}
+
+# Also run during upgrade to fix the botched handling of diversions in postrm
+# in the 1:71.314-{1,2} uploads.  This would need to be run during an upgrade
+# to a new major upstream version as well to handle removing the diversions in
+# previous versioned directories.
+if [ "$1" = "install" ] || [ "$1" = "upgrade" ]; then
+  if [ "$1" = "upgrade" ]; then
+    check_diversion "$2"
+  fi
+  add_diversion $basedir/help.txt
+  add_diversion $basedir/tags
+fi
+
+
+
+exit 0

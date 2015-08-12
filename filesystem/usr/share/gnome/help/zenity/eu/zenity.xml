@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY author1 "Sun">
+<!ENTITY author2 "Java Desktop System Documentation Team">
+<!ENTITY publisher "Sun Microsystems, Inc.">
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.6.0">
+<!ENTITY app "<application>Zenity</application>">
+<!ENTITY appname "Zenity">
+<!ENTITY date "August 2004">
+<!ENTITY manrevision "2.0">
+]>
+<!-- ================ Document Header ================= -->
+<article id="index" lang="eu">
+
+  <articleinfo>
+    <title>Zenity-ren eskuliburua</title>
+    <subtitle>Zenity mahaigaineko aplikazioaren eskuliburuaren 2.0 bertsioa</subtitle>
+    <copyright>
+	    <year>2003</year>
+	    <year>2004</year>
+	    <holder>Sun Microsystems Inc.</holder>
+    </copyright><copyright><year>2008.</year><holder>Hizkuntza Politikarako Sailburuordetza (hizpol@ej.gv.es)</holder></copyright>
+
+    <!-- Translators: uncomment this
+    <copyright>
+	    <year>2004</year>
+	    <holder>ME_THE_TRANSLATOR</holder>
+    </copyright>
+    -->
+
+    <publisher>
+	    <publishername>Sun Microsystems Inc.</publishername>
+    </publisher>
+
+      <legalnotice id="legalnotice">
+	<para>Baimena ematen da dokumentu hau kopiatu, banatu eta/edo aldatzeko Free Software Foundation-ek argitaratutako GNU Dokumentazio Librearen Lizentziaren 1.1. bertsioan edo berriago batean ezarritako baldintzetan, atal aldaezinik gabe, aurreko azaleko testurik gabe eta atzeko azaleko testurik gabe. GFDL lizentziaren kopia <ulink type="help" url="ghelp:fdl">esteka honetan</ulink> edo eskuliburu honekin batera ematen den COPYING-DOCS fitxategian aurkituko duzu.</para>
+         <para>Eskuliburu hau GFDL lizentziarekin banatzen diren GNOME eskuliburuen bildumakoa da. Eskuliburu hau bildumatik bereizita banatu nahi baduzu, banatu dezakezu, baina eskuliburuari lizentziaren kopia bat gehitu beharko diozu, lizentzian bertan 6. atalean azaltzen den bezala.</para>
+
+	<para>Enpresek beren produktuak eta zerbitzuak bereizteko erabiltzen dituzten izen asko marka erregistratu gisa hartu behar dira. Izen horiek GNOMEren edozein agiritan agertzen direnean, eta GNOMEren Dokumentazio Proiektuko kideak marka komertzialak direla konturatzen direnean, izen horiek osorik maiuskulaz edo hasierako letra maiuskulaz idatzi dituzte.</para>
+
+	<para>DOKUMENTUA ETA DOKUMENTUAREN BERTSIO ALDATUAK GNU DOKUMENTAZIO LIBREAREN LIZENTZIAREN BALDINTZEN ARABERA EMATEN DIRA, ETA ONDOREN ZEHAZTEN DIRENAK ONARTZERA BEHARTZEN DUTE: <orderedlist>
+		<listitem>
+		  <para>DOKUMENTUA "DAGOEN-DAGOENEAN" EMATEN DA, INOLAKO BERMERIK GABE, EZ ESPRESUKI ADIERAZITAKORIK ETA EZ INPLIZITURIK ERE; BESTEAK BESTE, EZ DA BERMATZEN DOKUMENTUA EDO BERTSIO ALDATUA AKATSIK GABEA DENIK, MERKATURATZEKO EDO XEDE JAKIN BATERAKO EGOKIA DENIK EDO ARAURIK HAUSTEN EZ DUENIK, HORI GUZTIA MUGARIK GABE. DOKUMENTUAREN EDO DOKUMENTUAREN BERTSIO ALDATUAREN KALITATEARI, ZEHAZTASUNARI ETA PERFORMANTZIARI BURUZKO ERANTZUKIZUN OSOA ZUREA DA. DOKUMENTUREN BATEK EDO BERTSIO ALDATUREN BATEK EDOZEIN MOTATAKO AKATSIK IZANEZ GERO, ZUK (EZ HASIERAKO IDAZLEAK, EZ EGILEAK ETA EZ INONGO KOLABORATZAILEK) ZEURE GAIN HARTU BEHARKO DUZU BERRIKUSTEKO, KONPONTZEKO EDO ZUZENTZEKO BEHAR DIREN ZERBITZU GUZTIEN KOSTUA. BERME-UKATZE HAU LIZENTZIA HONEN FUNTSEZKO ZATIA DA. EZ DA BAIMENIK EMATEN EZEIN DOKUMENTU EDO BERTSIO ALDATU ERABILTZEKO, BALDIN ETA EZ BADA BERME-UKATZE HAU ONARTZEN.</para>
+		</listitem>
+		<listitem>
+		  <para>EZIN IZANGO DA INONGO ZIRKUNSTANTZIARIK EDO LEGE-TEORIARIK OINARRI HARTU --EZ ERANTZUKIZUN ZIBILARI BURUZKORIK (ZABARKERIA BARNE HARTUTA), EZ KONTRATUARI BURUZKORIK, EZ BESTERIK-- DOKUMENTU HONEN EDO BERTSIO ALDATU BATEN EGILEA, HASIERAKO IDAZLEA, EDOZEIN KOLABORATZAILE EDO BANATZAILE, EDO ALDERDI HORIEN EDOZEIN HORNITZAILE BESTE PERTSONA BATEN AURREAN ERANTZULE EGITEKO, PERTSONA HORREK EDOZEIN MOTATAKO KALTEA JASAN DUELAKO (ZUZENEKOA, ZEHARKAKOA, BEREZIA, INTZIDENTALA EDO ONDORIOZKOA), HALA NOLA (ETA MUGARIK GABE) BEZEROAK GALTZEA, LANA ETEN BEHARRA, ORDENAGAILUAK EZ IBILTZEA EDO GAIZKI IBILTZEA, EDO DOKUMENTUA NAHIZ HAREN BERTSIO ALDATUAK ERABILTZETIK ONDORIOZTATZEN DIREN EDO ERABILERA HORREKIN ZERIKUSIA DUTEN KALTEAK EDO GALERAK, ALDERDIARI KALTE HORIEK GERTA ZITEZKEELA ADITZERA EMAN BAZAIO ERE.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+
+    <authorgroup>
+      <author>
+        <firstname>Sun</firstname>
+        <surname>Java Mahaigaineko Sistemaren dokumentazio-taldea</surname>
+        <affiliation><orgname>Sun Microsystems Inc.</orgname></affiliation>
+      </author>
+      <author role="maintainer">
+        <firstname>Glynn</firstname>
+        <surname>Foster</surname>
+        <affiliation>
+          <orgname>GNOMEren dokumentazio-proiektua</orgname>
+        </affiliation>
+      </author>
+      <editor>
+        <firstname>Nicholas</firstname>
+        <surname>Curran</surname>
+        <affiliation>
+          <orgname>GNOMEren dokumentazio-proiektua</orgname>
+        </affiliation>
+      </editor>
+    </authorgroup>
+
+    <revhistory>
+      <revision>
+        <revnumber>Zenity mahaigaineko aplikazioaren eskuliburuaren 2.0 bertsioa</revnumber>
+        <date>2004ko abuztua</date>
+        <revdescription>
+          <para role="author">Sun Java Mahaigaineko Sistemaren dokumentazio-taldea</para>
+          <para role="publisher">Sun Microsystems Inc.</para>
+        </revdescription>
+      </revision>
+
+      <revision>
+        <revnumber>Zenity-ren eskuliburuaren 1.0 bertsioa</revnumber>
+        <date>2003ko urtarrila</date>
+        <revdescription>
+          <para role="author">Glynn Foster</para>
+          <para role="publisher">GNOMEren dokumentazio-proiektua</para>
+        </revdescription>
+      </revision>
+    </revhistory>
+
+    <releaseinfo>Eskuliburu honetan Zenity-ren 2.6.0 bertsioa azaltzen da.</releaseinfo>
+
+    <legalnotice>
+	    <title>Ohar-bidaltzea</title>
+	    <para>Oharrak bidaltzeko, <ulink url="ghelp:gnome-feedback" type="help"> oharrak bidaltzeko orria</ulink>n aurkituko dituzu argibideak.</para>
+<!-- Translators may also add here feedback address for translations -->
+
+    </legalnotice>
+    <abstract role="description">
+            <para>Gdialog-en berridazketa da Zenity, hau da, GNOMEren dialog-en bertsioa; komando-lerrotik eta shell script-etik elkarrizketa-koadroak bistaratzeko aukera ematen dizu.</para>
+    </abstract>
+  </articleinfo>
+  
+  <indexterm>
+    <primary>zenity komandoa</primary>
+  </indexterm>
+  <indexterm>
+    <primary>elkarrizketa-koadroen sortzailea</primary>
+  </indexterm>
+<!-- ================ Document Body ================= -->
+
+<!-- ==== Introduction ====== -->
+
+  <sect1 id="zenity-introduction">
+    <title>Sarrera</title>
+
+    <para><application>Zenity</application> aplikazioak elkarrizketa-koadro sinple hauek sortzeko aukera ematen dizu:</para>
+
+    <itemizedlist>
+        <listitem><para>Egutegia</para></listitem>
+	<listitem><para>Fitxategi-hautapena</para></listitem>
+	<listitem><para>Zerrenda</para></listitem>
+	<listitem><para>Jakinarazpenaren ikonoa</para></listitem>
+        <listitem><para>Mezua</para>
+            <itemizedlist>
+	        <listitem><para>Errorea</para></listitem>
+		<listitem><para>Informazioa</para></listitem>
+		<listitem><para>Galdera</para></listitem>
+		<listitem><para>Abisua</para></listitem>
+	    </itemizedlist>
+	</listitem>
+	<listitem><para>Progresio-Barra</para></listitem>
+        <listitem><para>Testu-sarrera</para></listitem>
+	<listitem><para>Testu-informazioa</para></listitem>
+    </itemizedlist>
+
+  </sect1>
+
+<!-- ==== Usage ====== -->
+
+  <sect1 id="zenity-usage">
+    <title>Erabilera</title>
+
+    <para>Script-ak idazterakoan, <application>Zenity</application> erabil dezakezu erabiltzaileari grafikoki eragiten dioten elkarrizketa-koadro sinpleak sortzeko.</para>
+    <itemizedlist>
+      <listitem>
+        <para>Erabiltzaileagandik informazioa lortzeko, elkarrizketa-koadro bat sor dezakezu. Esaterako, erabiltzaileari eska diezaiokezu elkarrizketa-koadroko egutegitik data bat aukeratu dezan, edo elkarrizketa-koadroko fitxategi-hautapenetik fitxategi bat hauta dezan.</para>
+      </listitem>
+      <listitem>
+        <para>Erabiltzaileari informazioa emateko, elkarrizketa-koadro bat sor dezakezu. Esaterako, eragiketa baten egoera adierazteko, elkarrizketa-koadroko progresio-barra erabil dezakezu, edo, erabiltzailea ohartarazteko, elkarrizketa-koadroko abisu bat.</para>
+      </listitem>
+    </itemizedlist>
+    <para>Erabiltzaileak elkarrizketa-koadroa ixten duenean, elkarrizketa-koadroak errore estandarrerako sortutako testua bistaratzen du <application>Zenity</application> aplikazioak.</para>
+
+    <note>
+      <para><application>Zenity</application>ren komandoak idaztean, segurtatu argumentu bakoitza komatxo artean jartzen duzula.</para>
+      <para>Adibidez, erabili: <screen><userinput><command>zenity -–calendar –title="opor-planifikatzailea"</command></userinput></screen> Ez erabili: <screen><userinput><command>zenity -–calendar –title=Opor-planifikatzailea</command></userinput></screen></para>
+      <para>Komatxo artean jartzen ez baduzu, ustekabeko emaitzak lortuko dituzu.</para>
+    </note>
+
+    <sect2 id="zenity-usage-mnemonics">
+      <title>Tekla bizkortzaileak</title>
+	<para>Teklatua erabiliz menu bateko edo elkarrizketa-koadro bateko komando bat sagua erabili gabe aukeratzeko modua eskaintzen dizu tekla bizkortzaileak. Menu edo elkarrizketa-koadroetako aukera bakoitzean azpimarratuta dagoen letra da bizkortzailea.</para>
+	<para><application>Zenity</application> elkarrizketa-koadroek tekla bizkortzaileen erabilera onartzen dute. Tekla bizkortzaile moduan erabiliko den karakterea zehazteko, jarri azpimarra karakterearen aurretik elkarrizketa-koadroko testuan. Adibide hauetan ikusten da nola zehaztu behar den 'C' letra tekla bizkortzaile gisa:</para>
+	<screen><userinput>"_Aukeratu izen bat".</userinput></screen>
+    </sect2>
+
+    <sect2 id="zenity-usage-exitcodes">
+      <title>Irteera-kodeak</title>
+    <para><application>Zenity</application> aplikazioak irteera-kode hauek itzultzen ditu:</para>
+
+    <informaltable frame="all">
+      <tgroup cols="2" colsep="1" rowsep="1">
+        <colspec colname="COLSPEC0" colwidth="50*"/>
+        <colspec colname="COLSPEC1" colwidth="50*"/>
+        <thead>
+          <row valign="top">
+            <entry colname="COLSPEC0">
+              <para>Irteera-kodea</para></entry>
+            <entry colname="COLSPEC1">
+              <para>Azalpena</para></entry>
+          </row>
+        </thead>
+        <tbody>
+          <row valign="top">
+            <entry>
+              <para><varname>0</varname></para>
+            </entry>
+            <entry>
+              <para>Erabiltzaileak <guibutton>Ados</guibutton> edo <guibutton>Itxi</guibutton> sakatu du.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>1</varname></para>
+            </entry>
+            <entry>
+              <para>Erabiltzaileak <guibutton>Utzi</guibutton> sakatu du edo leihoen funtzioak erabili ditu elkarrizketa-koadroa ixteko.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>-1</varname></para>
+            </entry>
+            <entry>
+              <para>Ustekabeko errorea gertatu da.</para>
+            </entry>
+          </row>
+          <row valign="top">
+            <entry>
+              <para><varname>5</varname></para>
+            </entry>
+            <entry>
+              <para>The dialog has been closed because the timeout has been reached.</para>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+
+    </sect2>
+
+
+  <!-- ==== General Options ====== -->
+
+  <sect2 id="zenity-usage-general-options">
+    <title>Aukera orokorrak</title>
+
+    <para><application>Zenity</application> aplikazioaren elkarrizketa-koadro guztiek aukera orokor hauek onartzen dituzte:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--title</option>=<replaceable>titulua</replaceable></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroaren titulua zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--window-icon</option>=<replaceable>ikonoaren bide-izena</replaceable></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroaren leiho-markoetan bistaratu den ikonoa zehazten du. 4 ikono daude erabilgarri gako-hitz hauek sartuz gero - 'info', 'warning', 'question' eta 'error'.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--width</option>=<replaceable>zabalera</replaceable></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroaren zabalera zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--height</option>=<replaceable>altuera</replaceable></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroaren altuera zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--timeout</option>=<replaceable>timeout</replaceable></term>
+	<listitem>
+	  <para>Specifies the timeout in seconds after which the dialog is closed.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-help-options">
+    <title>Laguntza-aukerak</title>
+
+    <para><application>Zenity</application> aplikazioak laguntza-aukera hauek ematen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--help</option></term>
+	<listitem>
+	  <para>Laguntza-testu murriztua ematen du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--help-all</option></term>
+	<listitem>
+	  <para>Elkarrizketa-koadro guztietarako laguntza-testu osoa bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-general</option></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroen aukera orokorretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-calendar</option></term>
+	<listitem>
+	  <para>Egutegiaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-entry</option></term>
+	<listitem>
+	  <para>Hasierako testuaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-error</option></term>
+	<listitem>
+	  <para>Erroreen elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-info</option></term>
+	<listitem>
+	  <para>Informazioaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-file-selection</option></term>
+	<listitem>
+	  <para>Fitxategi-hautapenaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-list</option></term>
+	<listitem>
+	  <para>Zerrendaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-notification</option></term>
+	<listitem>
+	  <para>Jakinarazpen-ikonoaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-progress</option></term>
+	<listitem>
+	  <para>Progresio-barraren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-question</option></term>
+	<listitem>
+	  <para>Galderen elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-warning</option></term>
+	<listitem>
+	  <para>Abisuen elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-text-info</option></term>
+	<listitem>
+	  <para>Testu-informazioaren elkarrizketa-koadroko aukeretarako laguntza-testua bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-misc</option></term>
+	<listitem>
+	  <para>Aukera askotarako laguntza bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+      <varlistentry>
+        <term><option>--help-gtk</option></term>
+	<listitem>
+	  <para>GTK aukeretarako laguntza bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+ 
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== Miscellaneous Options ====== -->
+
+  <sect2 id="zenity-miscellaneous-options">
+    <title>Askotariko aukerak</title>
+
+    <para><application>Zenity</application> aplikazioak askotariko laguntza-aukera hauek ere eskaintzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--about</option></term>
+	<listitem>
+	  <para><guilabel>Zenity-ri buruz</guilabel> elkarrizketa-koadroa bistaratzen da eta hau aurkitu dezakezu: <application>Zenity</application> bertsioari buruzko informazioa, copyrightaren informazioa eta garatzaileen informazioa.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--version</option></term>
+	<listitem>
+	  <para><application>Zenity</application>ren bertsioaren zenbakia bistaratzen du.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+<!-- ==== GTK+ Options ====== -->
+
+  <sect2 id="zenity-gtk-options">
+    <title>GTK+ aukerak</title>
+
+    <para><application>Zenity</application> aplikazioak GTKren aukera estandarrak onartzen ditu. GTKren aukerei buruzko informazio gehiago nahi izanez gero, exekutatu <command>zenity -?</command> komandoa.</para>
+
+  </sect2>
+
+  </sect1>
+<!-- ==== Calendar Options ====== -->
+
+  <sect1 id="zenity-calendar-options">
+    <title>Egutegiaren elkarrizketa-koadroa</title>
+
+    <para>Erabili <option>--calendar</option> aukera, egutegiaren elkarrizketa-koadroa sortzeko. <application>Zenity</application> aplikazioak hautatutako data errore estandarrera itzultzen du. Komando-lerroan datarik zehaztu ez bada, elkarrizketa-koadroak uneko data erabiltzen du.</para>
+    <para>Egutegiaren elkarrizketa-koadroak aukera hauek onartzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>testua</replaceable></term>
+	<listitem>
+	  <para>Egutegiaren elkarrizketa-koadroan bistaratu den testua zehazten du.</para>
+	</listitem>
+      </varlistentry>
+     	
+      <varlistentry>
+        <term><option>--day</option>=<replaceable>eguna</replaceable></term>
+	<listitem>
+	  <para>Egutegiaren elkarrizketa-koadroan hautatu den eguna zehazten du. <replaceable>eguna</replaceable>k 1 eta 31 arteko zenbaki bat izan behar du (bi horiek barne).</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--month</option>=<replaceable>hilabetea</replaceable></term>
+	<listitem>
+	  <para>Egutegiaren elkarrizketa-koadroan hautatu den hilabetea zehazten du. <replaceable>hilabetea</replaceable>k 1 eta 12 arteko zenbaki bat izan behar du (bi horiek barne).</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--year</option>=<replaceable>urtea</replaceable></term>
+	<listitem>
+	  <para>Egutegiaren elkarrizketa-koadroan hautatu den urtea zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--date-format</option>=<replaceable>formatua</replaceable></term>
+	<listitem>
+	  <para>Data hautatu ondoren egutegiaren elkarrizketa-koadroak itzuli duen formatua zehazten du. Formatu lehenetsia ezarpen lokalen araberakoa da. <command>strftime</command> funtzioak <replaceable>formatua</replaceable> onartu behar du, <literal>%A %d/%m/%y</literal> esate baterako.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu egutegiaren elkarrizketa-koadroa: <programlisting>
+        #!/bin/sh
+
+
+        if zenity --calendar \
+        --title="Hautatu data" \
+        --text="Egin klik datan data hori hautatzeko." \
+        --day=10 --month=8 --year=2004
+          then echo $?
+          else echo "Ez da datarik hautatu"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-calendar-screenshot">
+      <title>Egutegiaren elkarrizketa-koadroaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-calendar-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> egutegiaren elkarrizketa-koadroaren adibidea</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+
+<!-- ==== File Selection Options ====== -->
+
+  <sect1 id="zenity-file-selection-options">
+    <title>Fitxategi-hautapenaren elkarrizketa-koadroa</title>
+
+    <para>Erabili <option>--file-selection</option> aukera, fitxategi-hautapenaren elkarrizketa-koadroa sortzeko. <application>Zenity</application> aplikazioak hautatutako fitxategiak edo direktorioak errore estandarrera itzultzen ditu. Fitxategi-hautapenaren elkarrizketa-koadroa lehenespenez dago irekia.</para>
+    <para>Fitxategi-hautapenaren elkarrizketa-koadroak aukera hauek onartzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>fitxategi-izena</replaceable></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroa lehenengoz erakusten denean, fitxategi-hautapenaren elkarrizketa-koadroan hautatutako fitxategia edo direktorioa zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--multiple</option></term>
+	<listitem>
+	  <para>Fitxategi-hautapenaren elkarrizketa-koadroan era askotako fitxategi-izenak hautatzeko aukera ematen du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--directory</option></term>
+	<listitem>
+	  <para>Fitxategi-hautapenaren elkarrizketa-koadroan dauden direktorioak hautatzea soilik baimentzen du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--save</option></term>
+	<listitem>
+	  <para>Fitxategi-hautapenaren elkarrizketa-koadroa gorde moduan jartzen du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--separator</option>=<replaceable>bereizlea</replaceable></term>
+	<listitem>
+	  <para>Itzulitako fitxategi-izenen zerrenda zatitzeko erabiltzen den katea zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu fitxategi-hautapenaren elkarrizketa-koadroa: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection --title="Hautatu fitxategia"`
+
+        case $? in
+                 0)
+                        echo "\"$FILE\" hautatua.";;
+                 1)
+                        echo "Ez da fitxategirik hautatu.";;
+                -1)
+                        echo "Ez da fitxategirik hautatu.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-fileselection-screenshot">
+      <title>Fitxategi-hautapenaren elkarrizketa-koadroaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-fileselection-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> fitxategi-hautapenaren elkarrizketa-koadroaren adibidea</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Notification Options ====== -->
+  <sect1 id="zenity-notification-options">
+    <title>Jakinarazpen-ikonoa</title>
+
+    <para>
+    </para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>testua</replaceable></term>
+	<listitem>
+	  <para>Jakinarazpen-arean bistaratu den testua zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu jakinarazpen-ikonoa: <programlisting>
+        #!/bin/sh
+
+        zenity --notification\
+          --window-icon="info" \
+          --text="Sistemarentzat beharrezkoak diren eguneratzeak daude"
+      </programlisting></para>
+
+    <figure id="zenity-notification-screenshot">
+      <title>Jakinarazpen-ikonoaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+              <imagedata fileref="figures/zenity-notification-screenshot.png" format="PNG"/>
+          </imageobject>
+          <textobject>
+              <phrase><application>Zenity</application> jakinarazpen-ikonoaren adibidea</phrase>
+          </textobject>
+        </mediaobject>
+      </screenshot>
+   </figure>
+													  
+  </sect1>
+
+<!-- ==== List Options ====== -->
+
+  <sect1 id="zenity-list-options">
+    <title>Zerrendaren elkarrizketa-koadroa</title>
+
+    <para>Erabili <option>--list</option> aukera, zerrendaren elkarrizketa-koadroa sortzeko. <application>Zenity</application> aplikazioak testuan hautatutako errenkadetako lehenengo zutabeetan dauden sarrerak errore estandarrera itzultzen ditu.</para>
+
+    <para>Elkarrizketa-koadroaren datuak zutabez zutabe eta errenkadaz errenkada zehaztu behar dira. Elkarrizketa-koadroak sarrera estandarraren bidez jaso ditzake datuak. Sarrera bakoitza lerro berriko karaktere batekin bereizi behar da.</para>
+
+    <para><option>--checklist</option> edo <option>--radiolist</option> aukerak erabiltzen badituzu, errenkada bakoitza 'TRUE' edo 'FALSE'-rekin hasi beharko da.</para>
+
+    <para>Zerrendaren elkarrizketa-koadroak aukera hauek onartzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--column</option>=<replaceable>zutabea</replaceable></term>
+	<listitem>
+	  <para>Elkarrizketa-koadroan bistaratzen diren zutabe-goiburuak zehazten ditu. <option>--column</option> aukera zehaztu behar duzu elkarrizketa-koadroan bistaratzea nahi duzun zutabe bakoitzarentzat.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--checklist</option></term>
+	<listitem>
+	  <para>Zerrendaren elkarrizketa-koadroko lehen zutabeak kontrol-laukiak dituela adierazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--radiolist</option></term>
+	<listitem>
+	  <para>Zerrendaren elkarrizketa-koadroko lehen zutabeak aukera-laukiak dituela zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+	<listitem>
+	  <para>Bistaratutako elementuak editatzeko aukera ematen du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--separator</option>=<replaceable>bereizlea</replaceable></term>
+	<listitem>
+	  <para>Zerrendaren elkarrizketa-koadroak hautatutako sarrerak itzultzen dituenean zer kate erabiltzen den zehazten da.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--print-column</option>=<replaceable>zutabea</replaceable></term>
+	<listitem>
+	  <para>Zer zutabe inprimatu behar den zehazten du, hautapenaren arabera. Zutabe lehenetsia '1' da. Zerrendako zutabe guztiak inprimatzeko 'ALL' erabil daiteke.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu zerrendaren elkarrizketa-koadroa: <programlisting>
+        #!/bin/sh
+
+        zenity --list \
+          --title="Aukeratu ikusi nahi dituzun erroreak" \
+          --column="Errorearen zenbakia" --column="Larritasuna" --column="Deskribapena" \
+            992383 Normala "GtkTreeView hainbat hautapenetan eteten da" \
+            293823 Altua "GNOMEren Hiztegiak ez ditu proxy-ak maneiatzen" \
+            393823 Kritikoa "Menu editatzailea ez dabil GNOMEren 2.0 bertsioan"
+      </programlisting></para>
+
+    <figure id="zenity-list-screenshot">
+      <title>Zerrendaren elkarrizketa-koadroaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-list-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> zerrendaren elkarrizketa-koadroaren adibidea</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Message Options ====== -->
+
+  <sect1 id="zenity-message-options">
+    <title>Mezuaren elkarrizketa-koadroak</title>
+
+    <para><application>Zenity</application> aplikazioak mezuaren lau elkarrizketa-koadro mota sor ditzake.</para>
+    <itemizedlist>
+      <listitem>
+        <para>Errorea</para>
+      </listitem>
+      <listitem>
+        <para>Informazioa</para>
+      </listitem>
+      <listitem>
+        <para>Galdera</para>
+      </listitem>
+      <listitem>
+        <para>Abisua</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>Mota bakoitzean, erabili <option>--text</option> aukera, elkarrizketa-koadroan bistaratutako testua zehazteko.</para>
+
+    <sect2 id="zenity-error-dialog">
+      <title>Erroreen elkarrizketa-koadroa</title>
+
+      <para>Erabili <option>--error</option> aukera, erroreen elkarrizketa-koadroa sortzeko.</para>
+
+      <para>Script-en adibide hauek erakusten dute nola sortu erroreen elkarrizketa-koadroa: <programlisting>
+          #!/bin/bash
+
+          zenity --error \
+          --text="Ezin izan da /var/log/syslog aurkitu."
+        </programlisting></para>
+
+      <figure id="zenity-error-screenshot">
+        <title>Erroreen elkarrizketa-koadroaren adibidea</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-error-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> erroreen elkarrizketa-koadroaren adibidea</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-info-dialog">
+      <title>Informazioaren elkarrizketa-koadroa</title>
+
+      <para>Erabili <option>--info</option> aukera, informazioaren elkarrizketa-koadroa sortzeko.</para>
+
+      <para>Script-en adibide hauek erakusten dute nola sortu informazioaren elkarrizketa-koadroa: <programlisting>
+          #!/bin/bash
+
+          zenity --info \
+          --text="Konbinatzen bukatu da. 10 fitxategitatik 3 eguneratuak."
+        </programlisting></para>
+
+      <figure id="zenity-information-screenshot">
+        <title>Informazioaren elkarrizketa-koadroaren adibidea</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-information-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> informazioaren elkarrizketa-koadroaren adibidea</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-question-dialog">
+      <title>Galderen elkarrizketa-koadroa</title>
+
+      <para>Erabili <option>--galdera</option> aukera, galderen elkarrizketa-koadroa sortzeko.</para>
+
+      <para>Script-en adibide hauek erakusten dute nola sortu galderen elkarrizketa-koadroa: <programlisting>
+          #!/bin/bash
+
+          zenity --question \
+          --text="Ziur al zaude aurrera egin nahi duzula?"
+        </programlisting></para>
+
+      <figure id="zenity-question-screenshot">
+        <title>Galderen elkarrizketa-koadroaren adibidea</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-question-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> galderen elkarrizketa-koadroaren adibidea</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+    <sect2 id="zenity-warning-dialog">
+      <title>Abisuen elkarrizketa-koadroa</title>
+
+      <para>Erabili <option>--warning</option> aukera, abisuen elkarrizketa-koadroa sortzeko.</para>
+
+      <para>Script-en adibide hauek erakusten dute nola sortu abisuen elkarrizketa-koadroa: <programlisting>
+          #!/bin/bash
+        
+          zenity --warning \
+          --text="Deskonektatu elektrizitate-kablea deskarga elektrikoa saihesteko."
+        </programlisting></para>
+
+      <figure id="zenity-warning-screenshot">
+        <title>Abisuen elkarrizketa-koadroa</title>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="figures/zenity-warning-screenshot.png" format="PNG"/>
+	    </imageobject>
+	    <textobject>
+	      <phrase><application>Zenity</application> abisuen elkarrizketa-koadroaren adibidea</phrase>
+	    </textobject>
+          </mediaobject>
+        </screenshot>
+      </figure>
+    </sect2>
+
+  </sect1>
+
+<!-- ==== Progress Options ====== -->
+
+  <sect1 id="zenity-progress-options">
+    <title>Progresioaren elkarrizketa-koadroa</title>
+
+    <para>Erabili <option>--progress</option> aukera, progresioaren elkarrizketa-koadroa sortzeko.</para>
+
+    <para><application>Zenity</application> aplikazioak errenkadaz errenkada irakurtzen ditu sarrera estandarreko datuak. Errenkada bat aurrez #rekin finkatzen bada, testua errenkada horretako testuarekin eguneratzen da. Errenkada batek zenbaki bakar bat soilik badu, ehunekoa zenbaki horrekin eguneratzen da.</para>
+	
+    <para>Progresioaren elkarrizketa-koadroak aukera hauek onartzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>testua</replaceable></term>
+	<listitem>
+	  <para>Progresioaren elkarrizketa-koadroan bistaratu den testua zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--percentage</option>=<replaceable>ehunekoa</replaceable></term>
+	<listitem>
+	  <para>Progresioaren elkarrizketa-koadroan finkatu den hasierako ehunekoa zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term><option>--auto-close</option></term>
+	<listitem>
+	  <para>% 100a lortu denean, progresioaren elkarrizketa-koadroa ixten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--pulsate</option></term>
+	<listitem>
+	  <para>Progresio-barra pultsuka luzatzen da sarrera estandarrean EOF karaktere bat irakurri arte.</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu progresioaren elkarrizketa-koadroa: <programlisting>
+        #!/bin/sh
+        (
+        echo "10" ; sleep 1
+        echo "# Posta-egunkariak eguneratzen" ; sleep 1
+        echo "20" ; sleep 1
+        echo "# Cron eragiketak berrezartzen" ; sleep 1
+        echo "50" ; sleep 1
+        echo "Errenkada honi ezikusi egingo zaio" ; sleep 1
+        echo "75" ; sleep 1
+        echo "# Sistema berrabiarazten" ; sleep 1
+        echo "100" ; sleep 1
+        ) |
+        zenity --progress \
+          --title="Sistemako egunkari-fitxategiak eguneratu" \
+          --text="Posta-egunkariak eskaneatzen..." \
+          --percentage=0
+
+        if [ "$?" = -1 ] ; then
+                zenity --error \
+                  --text="Eguneratzea bertan behera utzi da."
+        fi
+
+      </programlisting></para>
+
+    <figure id="zenity-progress-screenshot">
+      <title>Progresioaren elkarrizketa-koadroaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-progress-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> progresioaren elkarrizketa-koadroaren adibidea</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+<!-- ==== Text Entry Options ====== -->
+
+  <sect1 id="zenity-text-entry-options">
+    <title>Testu-sarreraren elkarrizketa-koadroa</title>
+
+    <para>Erabili <option>--entry</option> aukera, testu-sarreraren elkarrizketa-koadroa sortzeko. <application>Zenity</application> aplikazioak testu-sarrerako edukiak errore estandarrera itzultzen ditu.</para>	
+    <para>Testu-sarreraren elkarrizketa-koadroak aukera hauek onartzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--text</option>=<replaceable>testua</replaceable></term>
+	<listitem>
+	  <para>Testu-sarreraren elkarrizketa-koadroan bistaratu den testua zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--entry-text</option>=<replaceable>testua</replaceable></term>
+	<listitem>
+	  <para>Testu-sarreraren elkarrizketa-koadroko sarrera-eremuan bistaratu den testua zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--hide-text</option></term>
+	<listitem>
+	  <para>Testu-sarreraren elkarrizketa-koadroko sarrera-eremuan dagoen testua ezkutatzen du</para>
+	</listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu testu-sarreraren elkarrizketa-koadroa: <programlisting>
+        #!/bin/sh
+
+        if zenity --entry \
+        --title="Gehitu sarrera" \
+        --text="Sartu pasahitza:" \
+        --entry-text "pasahitza" \
+        --hide-text
+          then echo $?
+          else echo "Ez da pasahitza sartu"
+        fi
+      </programlisting></para>
+
+    <figure id="zenity-entry-screenshot">
+      <title>Testu-sarreraren elkarrizketa-koadroaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-entry-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> testu-sarreraren elkarrizketa-koadroaren adibidea</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+  </sect1>
+
+<!-- ==== Text Information Options ====== -->
+
+  <sect1 id="zenity-text-options">
+    <title>Testu-informazioaren elkarrizketa-koadroa</title>
+
+    <para>Erabili <option>--text-info</option> aukera, testu-informazioaren elkarrizketa-koadroa sortzeko.</para>
+	
+    <para>Testu-informazioaren elkarrizketa-koadroak aukera hauek onartzen ditu:</para>
+
+    <variablelist>
+
+      <varlistentry>
+        <term><option>--filename</option>=<replaceable>fitxategi-izena</replaceable></term>
+	<listitem>
+	  <para>Testu-informazioaren elkarrizketa-koadroan kargaturiko fitxategia zehazten du.</para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term><option>--editable</option></term>
+        <listitem>
+          <para>Bistaratutako testua editatzeko aukera ematen du. Elkarrizketa-koadroa itxitakoan, editatutako testua errore estandarrera itzultzen da.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+    <para>Script-en adibide hauek erakusten dute nola sortu testu-informazioaren elkarrizketa-koadroa: <programlisting>
+        #!/bin/sh
+
+        FILE=`zenity --file-selection \
+          --title="Hautatu fitxategi bat"`
+
+        case $? in
+                 0)
+                        zenity --text-info \
+                          --title=$FILE \
+                          --filename=$FILE \
+                          --editable 2&gt;/tmp/tmp.txt;;
+                 1)
+                        echo "Ez da fitxategirik hautatu.";;
+                -1)
+                        echo "Ez da fitxategirik hautatu.";;
+        esac
+      </programlisting></para>
+
+    <figure id="zenity-text-screenshot">
+      <title>Testu-informazioaren elkarrizketa-koadroaren adibidea</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="figures/zenity-text-screenshot.png" format="PNG"/>
+	  </imageobject>
+	  <textobject>
+	    <phrase><application>Zenity</application> testu-informazioaren elkarrizketa-koadroaren adibidea</phrase>
+	  </textobject>
+        </mediaobject>
+      </screenshot>
+    </figure>
+
+  </sect1>
+
+</article>

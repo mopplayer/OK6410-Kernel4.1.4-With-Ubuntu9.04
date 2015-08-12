@@ -1,0 +1,6 @@
+87fa05e46af68a095d38458494c747eb  usr/share/xserver-xorg/pci/s3virge.ids
+c0a38dfcd6288eff39322f7c584b8d1e  usr/share/doc/xserver-xorg-video-s3virge/copyright
+b0a3afe647535c6fad6774dc23b86419  usr/share/doc/xserver-xorg-video-s3virge/changelog.gz
+1969fefd02712467d27242277cf27e56  usr/share/doc/xserver-xorg-video-s3virge/changelog.Debian.gz
+6e1d07adec4758b24393001d50a3467d  usr/share/man/man4/s3virge.4.gz
+54143129229c8d2b4488fc75ed6458be  usr/lib/xorg/modules/drivers/s3virge_drv.so

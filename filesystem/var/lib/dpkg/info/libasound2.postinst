@@ -1,0 +1,27 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+configure)
+	# Remove very old cruft
+	if [ -L /usr/doc/alsalib0.3.0 ]; then
+		rm -f /usr/doc/alsalib0.3.0
+	fi
+	;;
+esac
+
+# Automatically added by dh_makeshlibs
+if [ "$1" = "configure" ]; then
+	ldconfig
+fi
+# End automatically added section
+
+
+unud=/var/lib/update-notifier/user.d
+
+if [ -d $unud ]; then
+    if [ -z "$GNOME_DESKTOP_SESSION_ID" ] && [ -w ~/.asoundrc ] && [ -w ~/.asoundrc.asoundconf ]; then
+	cp -f /usr/share/alsa/user-must-execute-asoundconf-set-default-card.update-notifier \
+	    "$unud/user-must-execute-asoundconf-set-default-card" 
+    fi
+fi

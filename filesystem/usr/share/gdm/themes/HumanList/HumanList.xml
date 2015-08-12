@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE greeter SYSTEM "greeter.dtd">
+<greeter>
+
+  <!-- background -->
+  <item type="pixmap">
+    <normal file="background.png"/>
+    <pos y="0" x="0" width="100%" height="100%"/>
+  </item>
+
+  <!-- ubuntu logo -->
+  <item type="pixmap">
+    <normal file="ubuntu.png" alpha="1.0"/>
+    <pos x="50%" y="19%" width="scale" height="16%" anchor="c"/>
+  </item>
+
+  
+  <!-- login box -->
+  <item type="rect">
+    <pos anchor="c" x="50%" y="52%" width="380" height="50%"/>
+<!--     <normal color="#DD0000"/> -->
+    <fixed>
+      <!-- The background is sliced into three pieces. Only the middle
+	   is scaled -->
+      <item type="pixmap">
+	<normal file="boundingbox-0-0.png"/>
+	<pos x="0" y="0" />
+      </item>
+
+      <item type="pixmap">
+	<normal file="boundingbox-0-1.png"/>
+	<!-- height-= 64 + 39 = -103 -->
+	<pos anchor="nw" x="0" y="64" height="-103"/>
+      </item>
+
+      <item type="pixmap">
+	<normal file="boundingbox-0-2.png"/>
+	<pos anchor="sw" x="0" y="-0" />
+      </item>
+
+      <!-- The list itself -->
+      <item type="rect">
+	<!--  height-= 30 + * + 8 + 30 + 54 + 30 = -->
+	<pos anchor="n" x="50%" y="30" width="320" height="-152"/>
+      	<fixed>
+	  <!-- The same background trick for userlist. -->
+	  <!-- top -->
+	  <item type="pixmap">
+	    <normal file="entry-0-0.png"/>
+	    <pos x="0" y="0" />
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-1-0.png"/>
+	    <pos x="10" width="-20" y="0" />
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-2-0.png"/>
+	    <pos x="-10" y="0" />
+	  </item>
+
+	  <!-- body -->
+	  <item type="pixmap">
+	    <normal file="entry-0-1.png"/>
+	    <pos x="0" y="10" height="-20"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-1-1.png"/>
+	    <pos x="10" y="10" width="-20" height="-20"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-2-1.png"/>
+	    <pos x="-10" y="10" height="-20"/>
+	  </item>
+
+	  <!-- bottom -->
+	  <item type="pixmap">
+	    <normal file="entry-0-2.png"/>
+	    <pos x="0" y="-10"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-1-2.png"/>
+	    <pos x="10" y="-10" width="-20"/>
+	  </item>
+
+	  <item type="pixmap">
+	    <normal file="entry-2-2.png"/>
+	    <pos x="-10" y="-10"/>
+	  </item>
+
+	  <item type="list" id="userlist">
+	    <pos anchor="c" x="50%" y="50%" width="-12" height="-12"/>
+	  </item>
+      	</fixed>
+      </item>
+      
+      <!-- timer warning -->
+      <item type="label" id="timed-label">
+      	<pos anchor="n" x="50%" width="-60" height="30"/>
+      	<show type="timed"/>
+      	<normal font="Sans Bold 9" color="#523921"/>
+      	<stock type="timed-label"/>
+      </item>
+
+      <!-- caps lock warning -->
+      <item type="label" id="caps-lock-warning">
+	<!-- y-= 8 + 30 + 54 -->
+      	<pos anchor="s" x="50%" y="-92" width="-60" height="30"/>
+      	<normal font="Sans Bold 10" color="#dc292b"/>
+      	<stock type="caps-lock-warning"/>
+      </item>
+
+      <item type="rect">
+	<pos anchor="s" x="50%" y="-30" width="260" height="54"/>
+        <box orientation="vertical" spacing="4">
+	  <!-- field label -->
+          <item type="label" id="pam-prompt">
+	    <pos height="20"/>
+	    <normal font="Sans Bold 10" color="#8a3000"/>
+	    <stock type="username-label" />
+<!-- 	    <text>Password or swipe your finger:</text> -->
+          </item>
+
+	  <!-- entry -->
+	  <item type="rect">
+	    <pos width="100%" height="30"/>
+      	    <fixed>
+	      <!-- The same background trick for entry. -->
+	      <!-- top -->
+	      <item type="pixmap">
+		<normal file="entry-0-0.png"/>
+		<pos x="0" y="0" />
+	      </item>
+
+	      <item type="pixmap">
+		<normal file="entry-1-0.png"/>
+		<pos x="10" width="-20" y="0" />
+	      </item>
+
+	      <item type="pixmap">
+		<normal file="entry-2-0.png"/>
+		<pos x="-10" y="0" />
+	      </item>
+
+	      <!-- body -->
+	      <item type="pixmap">
+		<normal file="entry-0-1.png"/>
+		<pos anchor="w" x="0" y="50%" height="-20"/>
+	      </item>
+
+	      <item type="entry" id="user-pw-entry">
+	      	<normal color="#000000" font="Sans 12"/>
+	        <pos y="50%" x="50%" width="-6" height="-6" anchor="c"/>
+	      </item>
+
+	      <item type="pixmap">
+		<normal file="entry-2-1.png"/>
+		<pos anchor="w" x="-10" y="50%" height="-20"/>
+	      </item>
+
+	      <!-- bottom -->
+	      <item type="pixmap">
+		<normal file="entry-0-2.png"/>
+		<pos x="0" y="-10"/>
+	      </item>
+
+	      <item type="pixmap">
+		<normal file="entry-1-2.png"/>
+		<pos x="10" y="-10" width="-20"/>
+	      </item>
+
+	      <item type="pixmap">
+		<normal file="entry-2-2.png"/>
+		<pos x="-10" y="-10"/>
+	      </item>
+      	    </fixed>
+	  </item>
+        </box>
+      </item>
+    </fixed>
+  </item>
+
+  <!-- pam error -->
+  <item type="label" id="pam-error">
+    <pos anchor="c" x="50%" y="80%" width="30%"/>
+    <normal font="Sans Bold 11" color="#dc292b"/>
+    <text/>
+  </item>
+
+
+
+  <!-- pam message (hidden, but required) -->
+  <item type="label" id="pam-message">
+    <pos x="50%" anchor="c" />
+    <normal alpha="0.00"/>
+    <text></text>
+  </item>
+
+  <!-- bottom bar -->
+  <item type="pixmap">
+    <normal file="bottom_bar.svg"/>
+    <pos y="100%" x="0" width="100%" height="100" anchor="sw"/>
+  </item>
+  <item type="rect">
+    <pos y="100%" x="0" width="100%" height="42" anchor="sw"/>
+    <box xpadding="10" spacing="10" orientation="horizontal">
+      <!-- reboot -->
+      <item type="rect" id="options_button" button="true">
+	<pos y="50%" width="box" height="box" anchor="w"/>
+	<box xpadding="0" spacing="2" orientation="horizontal">
+          <item type="pixmap">
+            <normal file="icon-session.png"/>
+            <prelight file="icon-session-prelight.png"/>
+            <active file="icon-session-active.png"/>
+          </item>
+          <item type="label">
+            <normal font="Sans 11" color="#ffffff"/>
+            <prelight font="Sans 11" color="#ff9c36"/>
+            <active font="Sans 11" color="#dc292b"/>
+            <pos y="50%" anchor="w"/>
+            <stock type="options"/>
+          </item>
+	</box>
+      </item>
+      <!-- halt -->
+      <item type="rect" id="halt_button" button="true">
+      </item>
+      <!-- quit / disconnect -->
+      <item type="rect" id="disconnect_button" button="true">
+      </item>
+    </box>
+  </item>
+
+  <!-- hostname and clock -->
+  <item type="rect">
+    <pos x="100%" y="100%" width="box" height="42" anchor="se"/>
+    <box xpadding="10" spacing="10" orientation="horizontal">
+      <item type="label">
+	<pos x="100%" y="50%" anchor="e"/>
+	<normal font="Sans Bold 11" color="#ffffff"/>
+	<text>%h //</text>
+      </item>
+      <item type="label" id="clock">
+	<pos x="100%" y="50%" anchor="e"/>
+	<normal font="Sans 11" color="#ffffff"/>
+	<text>%c</text>
+      </item>
+    </box>
+  </item>
+
+</greeter>
