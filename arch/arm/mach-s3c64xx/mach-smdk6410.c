@@ -149,21 +149,21 @@ static struct platform_device smdk6410_lcd_powerdev = {
 static struct s3c_fb_pd_win smdk6410_fb_win0 = {
 	.max_bpp	= 32,
 	.default_bpp	= 16,
-	.xres		= 800,
-	.yres		= 480,
-	.virtual_y	= 480 * 2,
-	.virtual_x	= 800,
+	.xres		= 480,
+	.yres		= 272,
+	.virtual_y	= 272 * 2,
+	.virtual_x	= 480,
 };
 
 static struct fb_videomode smdk6410_lcd_timing = {
-	.left_margin	= 8,
-	.right_margin	= 13,
-	.upper_margin	= 7,
-	.lower_margin	= 5,
-	.hsync_len	= 3,
-	.vsync_len	= 1,
-	.xres		= 800,
-	.yres		= 480,
+	.left_margin	= 2,
+	.right_margin	= 2,
+	.upper_margin	= 2,
+	.lower_margin	= 2,
+	.hsync_len	= 41,
+	.vsync_len	= 10,
+	.xres		= 480,
+	.yres		= 272,
 };
 
 /* 405566 clocks per frame => 60Hz refresh requires 24333960Hz clock */
